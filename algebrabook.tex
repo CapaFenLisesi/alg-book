@@ -1,7 +1,7 @@
-\documentclass{report}
+\documentclass{book}
 
 %%% Partial inclusion, for piecewise development
-\includeonly{numbers,glossary}
+\includeonly{intro,numbers,glossary}
 
 %%% Math formatting
 \usepackage{mathtools}
@@ -21,7 +21,7 @@
 	\newcommand{\@minipagerestore}{\setlength{\parskip}{\medskipamount}}
 \makeatother
 
-\numberwithin{figure}{chapter}
+%\numberwithin{figure}{chapter} %%% Done automatically in "book"
 
 \usepackage{enumitem}
 
@@ -88,23 +88,24 @@
 %\usepackage{multicol}
 %\usepackage[load-headings]{exsheets}
 
-\usepackage{tocvsec2}
+%\usepackage{tocvsec2}
 
 %% Number only subsections and above.
-\setcounter{secnumdepth}{2}
+%\setcounter{secnumdepth}{2} %%% Done automatically in "book"
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \begin{document}
 
 %%% Open output stream for to-do list
 \newwrite\outputstream
 \immediate\openout\outputstream=todolist.txt
 
-%%%--------------------------------------------------
-%%% Front matter
+%%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+%%% Title page & copyright information
 
 %%% Title page
-\title{ {\Huge {\bfseries The Algebranomicon}}}
+\title{{\Huge\textbf{The Algebranomicon}}}
 \author{Patty C. Hill \\ Jason L. Ermer}
 \date{Draft: \today}
 
@@ -112,9 +113,8 @@
 \maketitle
 
 %%% Copyright page
-\null\vfill
 \pagestyle{empty}
-\noindent
+\null\vfill\noindent
 \raisebox{-0.33\height}{\includegraphics[height=1cm]{by-sa}} Patty C. Hill and Jason L. Ermer, 2014
 
 \copyright{2014} by Patty C. Hill and Jason L. Ermer. Untitled Algebra Book is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
@@ -122,8 +122,11 @@
 To view a copy of this license, visit \url{http://creativecommons.org/licenses/by-sa/4.0/}.
 \clearpage
 
+%%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+%%% Front matter
+\frontmatter
 \pagestyle{plain}
-\pagenumbering{roman}
+%\pagenumbering{roman}
 
 %%% Table of contents
 \setcounter{tocdepth}{1}
@@ -132,11 +135,11 @@ To view a copy of this license, visit \url{http://creativecommons.org/licenses/b
 %%% Acknowledgements
 \include{acknowledgements}
 
-%%%--------------------------------------------------
-%%% Main matter
-
+%%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+%%% Main document
+\mainmatter
 \pagestyle{fancy}
-\pagenumbering{arabic}
+%\pagenumbering{arabic}
 
 \lhead{}
 \rhead{\leftmark}
@@ -145,12 +148,11 @@ To view a copy of this license, visit \url{http://creativecommons.org/licenses/b
 
 \include{glossary}
 
-%%% Make the introduction "Chapter 0"
-%\setcounter{chapter}{-1}
-
 %%% Introduction
-%\addcontentsline{toc}{chapter}{Introduction}
-%\include{intro}
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Introduction}
+\include{intro}
 
 %%% Part 1
 %\part{The Algebranomicon}
@@ -184,9 +186,9 @@ To view a copy of this license, visit \url{http://creativecommons.org/licenses/b
 %\include{app-pythag}
 %\include{app-roottwo}
 
-%--------------------------------------------------
+%%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 %%% Back matter
-
+\backmatter
 \pagestyle{plain}
 
 \cleardoublepage
@@ -206,12 +208,11 @@ To view a copy of this license, visit \url{http://creativecommons.org/licenses/b
 \cleardoublepage
 \phantomsection
 \addcontentsline{toc}{chapter}{Index}
-%\chapter*{Index}
 \printindex
 
 \clearpage
 
-%--------------------------------------------------
+%%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 %%% Close output stream for to-do list
 \immediate\closeout\outputstream
 
