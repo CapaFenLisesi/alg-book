@@ -1,0 +1,218 @@
+\documentclass{report}
+
+%%% Partial inclusion, for piecewise development
+\includeonly{numbers,glossary}
+
+%%% Math formatting
+\usepackage{mathtools}
+
+%%% Paper size and margins
+\usepackage[letterpaper, margin=1in]{geometry}
+
+%%% Set line spacing to 1.5
+\usepackage{setspace}
+\onehalfspacing
+
+%%% Use blank line and no indentation at paragraph break
+\usepackage{parskip}
+
+\setlength{\parskip}{\bigskipamount}
+\makeatletter
+	\newcommand{\@minipagerestore}{\setlength{\parskip}{\medskipamount}}
+\makeatother
+
+\numberwithin{figure}{chapter}
+
+\usepackage{enumitem}
+
+%%% Enable two-digit chapter and section numbering: "Section 02.05"
+%\usepackage{titlesec}
+%\newcommand{\sectionbreak}{\clearpage}
+%\makeatletter
+%	\renewcommand\thechapter{\two@digits{\value{chapter}}}
+%	\renewcommand\thesection{\thechapter.\two@digits{\value{section}}}
+%	%%% Adjust spacing in TOC
+%	\renewcommand{\l@section}{\@dottedtocline{1}{2em}{3em}}
+%\makeatother
+
+%%% Footnote formatting
+\usepackage[hang,bottom]{footmisc}
+\setlength{\footnotemargin}{1em}	% Footnote hanging indent
+\setlength{\footnotesep}{3ex}		% Space between two footnotes
+\setlength{\skip\footins}{5ex}		% Space between text and notes?
+
+%%% Enable fancy headings
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+
+%%% Enable clickable cross-references
+\usepackage[hidelinks]{hyperref}
+\usepackage{cleveref}
+\providecommand\phantomsection{}
+
+%%% Enable glossary creation
+\usepackage[nonumberlist, nopostdot]{glossaries}
+\setglossarystyle{listhypergroup}
+\renewcommand*{\glshypernavsep}{ $\cdot$ }
+\makeglossaries
+
+%%% Enable index creation
+\usepackage{makeidx}
+\makeindex
+
+%%% Redefine glossary commands to create index linkages
+\let\oldgls\gls
+\renewcommand*{\gls}[1]{\inlinedef{\oldgls{#1}}\index{#1}}
+\let\oldGls\Gls
+\renewcommand*{\Gls}[1]{\inlinedef{\oldGls{#1}}\index{#1}}
+\let\oldglspl\glspl
+\renewcommand*{\glspl}[1]{\inlinedef{\oldglspl{#1}}\index{#1}}
+\let\oldGlspl\Glspl
+\renewcommand*{\Glspl}[1]{\inlinedef{\oldGlspl{#1}}\index{#1}}
+%% TO DO -- gotta think about this.
+%\let\oldglslink\glslink
+%\renewcommand*{\glslink}[2]{\inlinedef{\oldgls{#1}}\index{#1}}
+
+%%% Enable to-do list creation
+\newcommand{\addtodoitem}[1]
+{%
+	%%% Print in the document
+	{\bfseries [TODO] #1}
+	%%% Add item to the file 'todolist.txt'
+	\immediate\write\outputstream{#1}
+}
+
+\newcommand{\exsoln}{\ifdim\lastskip>0pt \else \medskip\fi \inlineex{Solution:}}
+\newcommand{\expsoln}{\ifdim\lastskip>0pt \else \medskip\fi \inlineex{Partial solution:}}
+
+%\usepackage{multicol}
+%\usepackage[load-headings]{exsheets}
+
+\usepackage{tocvsec2}
+
+%% Number only subsections and above.
+\setcounter{secnumdepth}{2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+%%% Open output stream for to-do list
+\newwrite\outputstream
+\immediate\openout\outputstream=todolist.txt
+
+%%%--------------------------------------------------
+%%% Front matter
+
+%%% Title page
+\title{ {\Huge {\bfseries The Algebranomicon}}}
+\author{Patty C. Hill \\ Jason L. Ermer}
+\date{Draft: \today}
+
+\pagenumbering{Alph}
+\maketitle
+
+%%% Copyright page
+\null\vfill
+\pagestyle{empty}
+\noindent
+\raisebox{-0.33\height}{\includegraphics[height=1cm]{by-sa}} Patty C. Hill and Jason L. Ermer, 2014
+
+\copyright{2014} by Patty C. Hill and Jason L. Ermer. Untitled Algebra Book is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
+
+To view a copy of this license, visit \url{http://creativecommons.org/licenses/by-sa/4.0/}.
+\clearpage
+
+\pagestyle{plain}
+\pagenumbering{roman}
+
+%%% Table of contents
+\setcounter{tocdepth}{1}
+\tableofcontents
+
+%%% Acknowledgements
+\include{acknowledgements}
+
+%%%--------------------------------------------------
+%%% Main matter
+
+\pagestyle{fancy}
+\pagenumbering{arabic}
+
+\lhead{}
+\rhead{\leftmark}
+\cfoot{\thepage}
+%\rfoot{\ifnum\thepage=6{This is page 6!}\fi}
+
+\include{glossary}
+
+%%% Make the introduction "Chapter 0"
+%\setcounter{chapter}{-1}
+
+%%% Introduction
+%\addcontentsline{toc}{chapter}{Introduction}
+%\include{intro}
+
+%%% Part 1
+%\part{The Algebranomicon}
+\include{numbers}
+\include{sequences}
+\include{graphing}
+\include{functions}
+\include{equations}
+\include{proportions}
+\include{linear}
+\include{systems}
+\include{inequalities}
+\include{expoexpr}
+\include{expofunc}
+\include{radexpr}
+\include{quadfunc}
+\include{polynomials}
+
+%%% Part 2
+%\setcounter{chapter}{0} %% Restart chapter numbering
+%\settocdepth{chapter}
+%\part{Problems and Exercises}
+%\include{numbers-ex}
+%\include{sequences-ex}
+%\include{solutions}
+
+%%% Appendices
+%\appendix
+%\include{app-primes}
+%\include{app-primelist}
+%\include{app-pythag}
+%\include{app-roottwo}
+
+%--------------------------------------------------
+%%% Back matter
+
+\pagestyle{plain}
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Glossary}
+%\glossarystyle{listhypergroup}
+\glsaddall
+\printglossaries
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{plain}
+\nocite{*} %%% include all references, even those not cited
+\bibliography{algbookrefs}
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Index}
+%\chapter*{Index}
+\printindex
+
+\clearpage
+
+%--------------------------------------------------
+%%% Close output stream for to-do list
+\immediate\closeout\outputstream
+
+\end{document}
