@@ -6058,6 +6058,36 @@ parent={},%
 %
 }%
 }%
+\ifglsentryexists{sample space}{}%
+{%
+\gls@defglossaryentry{sample space}%
+{%
+name={sample space},%
+sort={sample space},%
+type={main},%
+first={sample space},%
+firstplural={sample spaces},%
+text={sample space},%
+plural={sample spaces},%
+description={The set of all possible outcomes of a probability experiment.},%
+descriptionplural={The set of all possible outcomes of a probability experiment.},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
 \ifglsentryexists{scatter plot}{}%
 {%
 \gls@defglossaryentry{scatter plot}%

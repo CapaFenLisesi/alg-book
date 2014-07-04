@@ -1,4 +1,18 @@
-Extend box method to mult of mixed numbers.
-Criteria for showing work.
-Michael suggested that making a pop-culture reference like Voldemort would make things dated (as opposed to Hitler, who will forever be known as evil). I kind of like the idea of sprinkling in various villains, as needed. Related: should we choose fictional characters throughout (even in the original Gandhi vs Hitler)? I wonder whether invoking Hitler may run the risk of being considered insensitive. Thoughts?
-Each chapter should probably have some sort of a closing remark that sets the stage for what comes next. These remarks could be derived from our thoughts on flow.
+Click here to visit the extended exploration: Sierpi«ski's Triangle
+Click here to visit the extended exploration: Koch Curve
+Click here to visit the extended exploration: Squares, Triangles, Segments
+Click here to visit the extended exploration: Big Graphs
+Criteria for high quality graphs.
+Click here to visit the extended exploration: Who Is the Best Age Guesser?
+Click here to visit the extended exploration: Interpreting Graphs with Distance Match
+Click here to visit the extended exploration: NAME
+Click here to visit the extended exploration: Mystery Numbers
+Click here to visit the extended exploration: Evil Mystery Numbers
+Click here to visit the extended exploration: Super Evil Mystery Numbers
+Click here to visit the extended exploration: Dreadful Mystery Numbers
+Click here to visit the extended exploration: Mixed Bag 'O Problems
+Remember: Since we moved transforming formulas before the linear equations formulae, we should add a bit about transforming standard from later.
+Click here to visit the extended exploration: Multiply and Conquer
+Click here to visit the extended exploration: Teeter Totter Nickels
+Click here to visit the extended exploration: Calculating Speed
+Click here to visit the extended exploration: Deriving the Point Slope Form

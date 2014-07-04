@@ -1,7 +1,8 @@
-\documentclass{book}
+\documentclass[oneside, openany]{book}
 
 %%% Partial inclusion, for piecewise development
-\includeonly{intro,numbers,glossary}
+\includeonly{numbers, sequences, graphs, functions, equations, proportions, linear, glossary}
+%\includeonly{functions, glossary}
 
 %%% Math formatting
 \usepackage{mathtools}
@@ -26,14 +27,32 @@
 \usepackage{enumitem}
 
 %%% Enable two-digit chapter and section numbering: "Section 02.05"
-%\usepackage{titlesec}
+\usepackage{titlesec}
 %\newcommand{\sectionbreak}{\clearpage}
 %\makeatletter
 %	\renewcommand\thechapter{\two@digits{\value{chapter}}}
 %	\renewcommand\thesection{\thechapter.\two@digits{\value{section}}}
 %	%%% Adjust spacing in TOC
 %	\renewcommand{\l@section}{\@dottedtocline{1}{2em}{3em}}
-%\makeatother
+%\makeatothter
+
+\newcommand{\trule}{\color{black!25}\titlerule[1pt]}
+\titleformat{\section}
+{\normalfont\bfseries\Large}
+{\thesection}{1em}{}[\trule]
+
+\usepackage{etoolbox}
+\newtoggle{afterpart}
+\pretocmd{\section}
+  {\iftoggle{afterpart}
+    {\global\togglefalse{afterpart}}% we're after a part
+    {\clearpage}% we're not immediately after a part
+  }{}{}
+\pretocmd{\chapter}
+  {\clearpage % do a page break
+   \global\toggletrue{afterpart}% tell \section we're just after a part
+  }
+  {}{}
 
 %%% Footnote formatting
 \usepackage[hang,bottom]{footmisc}
@@ -72,6 +91,9 @@
 %% TO DO -- gotta think about this.
 %\let\oldglslink\glslink
 %\renewcommand*{\glslink}[2]{\inlinedef{\oldgls{#1}}\index{#1}}
+
+\DeclareMathOperator{\OR}{~\underline{or}~}
+\newcommand{\solset}[1]{\mathcal{S}=\left\{#1\right\}}
 
 %%% Enable to-do list creation
 \newcommand{\addtodoitem}[1]
@@ -149,16 +171,16 @@ To view a copy of this license, visit \url{http://creativecommons.org/licenses/b
 \include{glossary}
 
 %%% Introduction
-\cleardoublepage
-\phantomsection
-\addcontentsline{toc}{chapter}{Introduction}
-\include{intro}
+%\cleardoublepage
+%\phantomsection
+%\addcontentsline{toc}{chapter}{Introduction}
+%\include{intro}
 
 %%% Part 1
 %\part{The Algebranomicon}
 \include{numbers}
 \include{sequences}
-\include{graphing}
+\include{graphs}
 \include{functions}
 \include{equations}
 \include{proportions}
