@@ -1,0 +1,892 @@
+\chapter{Linear Systems}
+\label{ch:systems}
+
+%%%
+\newcommand{\linearsys}[2]{\left\{\begin{array}{l}#1\\#2\end{array}\right.}
+%%%
+
+\chapquote{Still need to find a quote that works for this chapter. In the meantime, we have this.}{Author\\Description of author}
+
+%\begin{quote}
+%Still need to find a quote that works for this chapter. In the meantime, we have this.
+%\par \hfill --- Author, description of author
+%\end{quote}
+
+Every chapter should have a lead paragraph -- even just a short one -- that appears before the first heading. This is a placeholder paragraph which will at some point be replaces by actual content.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Mathematical Modeling}
+\label{sec:sysintro}
+
+Mathematics has many applications to the sciences, medicine, business, and economics. Often, though, we have to ``translate'' some problem in the real world so that it can be interpreted mathematically. It is usually necessary to break down the situation into a set of variables and equations, then look at them all together and see how they interact with each other. Doing this is called \inlinedef{mathematical modeling}.
+\index{mathematical modeling}
+
+We can model the financials of a business, weather patterns, transportation infrastructure, airline schedules, missile guidance systems, factory efficiency --- and many other phenomena --- in this way.
+
+\begin{boxedexplore}[Startup Exploration: I $\varheart$ YeardleighCorp]
+Yeardleigh is a good business woman. She realizes that in order to grow her business, she must brand her corporation by selling things like t-shirts with her company logo on it. She spends \$270 on a design. Since she plans on printing a huge number of shirts, she finds a supplier who will sell her blank cotton shirts in a variety of sizes and colors for \$3.00 per shirt, and a printer who will print the logo in full color for \$1.50 per shirt. If Yeardleigh decides to sell the shirts for \$12.00 each, how many shirts must Yeardleigh sell before she can start making a profit on t-shirt sales?
+\end{boxedexplore}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Simultaneous Equations}
+
+One approach to mathematical modeling is to model problems using multiple functions, and then exploring how those functions relate to one another. 
+
+\begin{boxeddef}[System of Equations]
+A set of two or more equations with the same variables is called a \gls{system of equations}. They are also sometimes called \textit{simultaneous equations}.
+\end{boxeddef}
+
+%Real graphic designers charge much more than \$270. Real businesses have hundreds, thousands, even millions of variables and just as many constraints/limits. The goal is always to maximize profits and be more efficient. 
+
+%Real graphic designers charge much more than \$270. Real businesses have hundreds, thousands, even millions of variables and just as many constraints/limits. The goal is always to maximize profits and be more efficient. You can't always just use one equation to do all of this. It is often easier to break down the situation into smaller equations and look at them all together and see how they interact with each other. Doing this is called ``modeling.'' You can model businesses, weather patterns, transportation infrastructure, airline schedules, missile guidance systems, how to run refineries in the most efficient way, etc. in this manner.
+
+In the startup exploration, the amount of money Yeardleigh earns will depend on how many t-shirts she buys and sells. So, suppose we let $x$, the independent variable, represent the number of t-shirts. Then we let $y$, the dependent variable, represent the amount of money that those t-shirts cost (or that they generate for the company).
+
+Yeadrleigh earns \$12.00 for every t-shirt she sells, so one equation involved with the scenario is \[y = 12.00x \qquad\text{Yeardleigh's income equation}.\] She has already spent \$270 on her design, and every t-shirt she prints costs an additional \$4.50 (that's \$3.00 for the shirt and \$1.50 for printing). So, another equation in the scenario is \[y = 270 + 4.50x\qquad\text{Yeardleigh's cost equation}.\]
+
+We now have to linear equations. Observe what happens when we graph these two equations on the same set of axes (\cref{fig:tshirts}). What does this graph tell us about the problem?
+
+\begin{figure}[!htbp]
+\centering
+\resizeplot{0}{50}{0}{500}
+\begin{tikzpicture}
+	\begin{axis}[
+			clip=false,
+			width=0.625\linewidth,
+			height=0.625\linewidth,
+			axis lines = middle,
+			axis line style={thick, ->, shorten >=-10pt, shorten <=-10pt},
+			xlabel={\large Number of t-shirts sold},
+			ylabel={\large Dollars spent/earned},
+			grid=both,
+			xlabel near ticks,
+			minor xtick={0,5,...,50},
+			ylabel near ticks,
+			minor ytick={0,50,...,500},
+		]
+		\addplot[algcurve, ->, red, domain=0:50] (\x,4.5*x+270);
+		\addplot[algcurve, ->, green!50!black, domain=0:42] (\x,12*x);
+		\addplot[algpoints, black] coordinates {(36,432)};
+		\draw[green!50!black] (axis cs:20,200,0)
+			node[rotate=50.2]{\large$y=12.00x$};
+		\draw[red] (axis cs:15,365,0)
+			node[rotate=24.2]{\large$y=4.50x+270$};
+		\draw (axis cs:36,432,0) node[below right]{\large$(36,432)$};
+	\end{axis}
+\end{tikzpicture}
+\caption{Graph showing both Yeardleigh's cost and income equations.}
+\label{fig:tshirts}
+\end{figure}
+
+On the graph in the figure, the red line is Yeardleigh's cost equation and the green line is Yeardleigh's income equation. The $x$-coordinate shows the independent variable (number of shirts), and the $y$-coordinate shows the dependent variable (amount of money spent or earned).
+
+Notice that these two lines intersect (in other words: they cross over one another). Does this intersection point have any special significance?
+
+The intersection shows that for a certain number of t-shirts, cost and income are the same. The points to the left of the intersection show where cost is greater than income, points to the right of the intersection show where income is greater than cost. So that intersection point is really important for the problem!
+
+The coordinates of the intersection point are $(36, 432)$. So, if Yeardleigh sells 36 t-shirts, she will make 432 in income\ldots\ and it will also cost her exactly that much to produce the t-shirts. If she sells more than 36 t-shirts, she will earn more than it costs to make the shirts.
+
+We have found Yeardleigh's \textit{break-even point}, a very important idea in economics and business. It is the point where a company's costs and income are the same. Before this point, the company will be losing money. After this point, the company will start to make a profit. In the context of our problem, Yeardleigh will make a profit on t-shirt sales only if she sells more than 36 shirts.
+
+\subsection{Writing a System of Equations}
+
+When we have two (or more) equations that we want to treat as a system, we usually write them stacked vertically, and we very often add a big curly brace (usually on the left-hand side only) to show that they are meant to be considered a group. In the case of the startup exploration, we write: \[\left\{\begin{array}{l}y=12.00x\\y=4.50x+270\end{array}\right.\]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Solving Systems of Linear Equations}
+
+\begin{boxeddef}[Solution to a System of Equations]
+The set of all points that are common to all equations in the system. Graphically, these are the points where all of the graphs of the functions intersect. Note: a system of equations may have no solution.
+\end{boxeddef}
+
+The solution to a system of linear equations is the intersection point of the graphs of those functions. Can a system of equations have more than one solution?
+
+Imagine that we have a system of two linear equations. Try to visualize the types of solutions we might get. What are the different ways that two straight lines in the plane can intersect?
+
+\begin{itemize}
+\item The lines might intersect at a single point. Such a system has a unique solution.
+
+\item The lines might be parallel and not intersect at all. In this case, the system has no solution.
+
+\item The lines might overlap completely (that is, the ``two lines'' might actually be the same line). In this case, the system has infinitely many solutions: every point one line is also on the other line --- they're the same line!
+\end{itemize}
+
+Since we have straight lines, these are the only possibilities. For example, a system of linear equations cannot have ``exactly two soltuions''. (Can you explain why not?) Later (in algebra 2, for instance), systems will get more complex. Then, we won't have to limit ourselves to linear equations! A system of two quadratic equations, for example, might have no solution, one solution, two solutions, or infinitely many solutions. (Can you picture how each of those might happen? Look back at some of the graphs we drew in \cref{ch:graphs} and \cref{ch:functions}.)
+
+
+\subsection{Checking a Solution to a System}
+
+Suppose we have a point that we think might be a solution to a system of equations. How can we check?
+
+\begin{boxedex}
+Determine whether or not the point $(-1,5)$ is a solution to each of the given systems.
+\[
+\text{System A: }\left\{%
+\begin{array}{l}
+x+y=4\\
+x=-1
+\end{array}
+\right.
+\qquad
+\text{System B: }\left\{%
+\begin{array}{l}
+y=-x+4\\
+y=-\tfrac{1}{5}x
+\end{array}
+\right.
+\] 
+
+To check whether the point is a solution to System A, we'll sustitute $x$ and $y$ into both equations. If the point makes both equations true, then the point is a solution to the system.
+
+Checking System A, we have:
+\[
+\begin{aligned}[t]
+x+y		&=4\\
+(-1)+5	&\overset{?}{=}4\\
+4 		&\overset{\checkmark}{=} 4\\
+\end{aligned}
+\qquad\text{and}\qquad
+\begin{aligned}[t]
+x 	&= -1\\
+-1	&\overset{\checkmark}{=}  -1
+\end{aligned}
+\]
+The given point makes both of the equations true, so yes, the point $(-1,5)$ is a solution to System A.
+
+Checking System B, we have:
+\[
+\begin{aligned}[t]
+y		&=-x+4\\
+5		&\overset{?}{=}-(-1)+4\\
+5 		&\overset{\checkmark}{=} 5\\
+\end{aligned}
+\qquad\text{and}\qquad
+\begin{aligned}[t]
+y 	&= -\tfrac{1}{5}x\\
+5	&\overset{?}{=} -\tfrac{1}{5}(-1)\\
+5	&\neq \tfrac{1}{5}
+\end{aligned}
+\] 
+The given point works for the first equation, but not for the second. To be a solution, the point has to satisfy both equations, so no, the point $(-1,5)$ is not a solution to System B.
+\end{boxedex}
+
+\subsection{Writing the Solution to a System}
+
+NEED SOME VISUALS HERE...?
+
+When we were solving equations --- meaning one equation at a time --- we use set notation to record our solutions. Since the solution to a system involves two numbers, we have to be mindful about how we write our answers.
+
+Two cases are pretty straightforward. If the system has a unique point as its solution, we can write that point as the solution set. For example, the solution to System A in the previous example is $\solset{(-1,5)}$. Note that we've just enclosed the point $(-1,5)$ inside the curly braces to show that the set includes that point.
+
+The second easy case is when a system has no solution. Then, we can use the same approach for when a single equation has no solution: $\solset{~}$ or $\mathcal{S}=\emptyset$.
+
+The trickier case is when two lines overlap completely. We can't say that the solutions in the case are ``all real numbers'' (as we said for a single equation). 
+
+\subsection{Techniques for solving linear systems}
+
+Over the next few sections, we will study three different techniques for solving systems of linear equations. A fourth technique, which we only mention here, will be an important topic in algebra 2.
+
+\begin{enumerate}
+\item \inlinedef{Graphing the system.} To solve a system by graphing, we graph the equations on the same set of coordinate axes and look for the intersection point. If we are lucky, we'll get ``nice'' points with integers for their coordinates. Graphing with technology works a little better, since trace functionality can give us good estimates for the coordinates if they are not integers.
+
+\item \inlinedef{Collapsing the system by substitution.} To collapse a system is to do something algebraically that fuses two equations into one. If done correctly, we can turn two equations in two variables into one equation in one variable! One method uses the property of substitution to achieve this.
+
+\item \inlinedef{Collapsing the system by elimination.} This is an alternative approach to collapsing a system, that is based on a mathematical structure called a matrix (although we won't go into detail about matrix operations.)
+
+\item \inlinedef{Modeling the system as a matrix.} A \textit{matrix} (plural: matrices) is a rectangular arrangment of numbers. Matrix operations are good for solving systems with more than two variables, which we won't see in algebra 1. We will learn much more about matrices (in general) in algebra 2, along with a number of ways of using them to solve systems.
+\end{enumerate}
+
+The different approaches have pros and cons, and you may find that you prefer a particular approach. Generally speaking, you should solve problems using whatever techniques make the most sense to you, and some assignments will be open and allow you to choose your own method. Other assignments may ask you to use a specific technique, though, so its important to read directions carefully.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Solving Linear Systems By Graphing}
+\label{sec:sysgraphing}
+
+We solved the startup exploration at the start of $\cref{sec:sysintro}$ by graphing two equations on the same set of axes. That's the idea behind this solution technique.
+
+Graphing is easy with the right technology.
+
+Graphing on the calculator is actually a good way to check your answer, not the only one though.
+
+However, you might not be able to get the exact answer if it is fractional. Don't become dependent on graphing. Some are actually solved easier and more accurately algebraically. Also, if you are prone to type things in wrong, you may have a problem. Scale can also be an issue. I'm not going to solve Yeardleigh's t-shirt problem via graphing.
+
+Things to be careful of:
+a. Be careful if you have to convert the equation from one form into another, like standard into slope-intercept
+b. Don't rely on ``trace'' if it appears that the answer is fractional.
+Technique: If you are given a word problem, write it as a system of equations. Then, graph the equations to find any intersection points. You can either graph by hand or with a graphing calculator. Your work is the graph. The answer is the intersection point!
+
+
+a.
+Graphing By Hand: Use graph paper. You can't use the short-cut way of graphing standard form either. The points will be ``nice'' if you are asked to graph by hand. Remember that the graph is not the answer. It is the work. This means that it doesn't need to be a high quality graph. Your answer is the intersection point.
+
+b. Graphing By Calculator: They have to be in function form for the graphing calculators that we have in class. The ``trace'' function is pretty useless as I expect exact answers. You should look at the table to find exact answers. On the table you will notice that the solution will show up as 1 x-value with the same y-value for the two equations.
+
+Example 2
+Problem: Solve these systems by graphing. If a system has infinite solutions, give one point that will satisfy the system.
+ y=1x 3+ (a)  3
+(b) y=x y=5x
+(c) y=1 y=x
+(d) 2x+y=3 (e) 3x−y=7 x−2y=4 y=3x 7−
+ y=1x 3 −  3
+
+Solution:
+ If you graph with the calculator, the equation has to be in function notation (either slope-intercept or point-slope). IF you do use a calculator, you must sketch a graph to show your work. If you do not use a calculator, you have to make sure to graph very precisely, using graph paper. If I ask you to solve with graphing, I will try to make sure your solutions are integers. If not, approximate them.
+(a) S = Null Set (lines are parallel) (b) S = \{(0,0)\}
+(c) S = \{(1,1)\}
+(d) S = \{(2, -1)\}
+(e) Any point on the line y = 3x-7, examples (0, -7); (1, -4) in set notation, the solution looks like
+S=$\forall$(x,y)$\in$ 3x− y= 7 . \{\}
+
+Please remember, I want you to think about the problem and map out your strategy before you jump right into the work. If you can determine, upon inspection, that lines are parallel, or if you transform some of the equations and notice that they are parallel or the same line, you don't have to do all of the work of graphing the lines (or in the future substitution or elimination). Just write the solution set and a little statement like ``upon inspection, the lines are parallel'' or ``the same line''.
+
+
+\subsection{Finding an intersection point using a calculator}
+
+When finding an intersection point using a calculator, we can use the \calc{trace} function on the calculator. But, \calc{trace} can only give us a decimal approximation, and this could be a problem for some solutions. (For example, a solution that is not whole numbers or a fraction with ``convenient'' denominator.)
+
+Using \calc{trace} is good for approximating a solution, but then we can use an alternative way: looking at the table. Here, we can search the table for a place where \calc{y1} and \calc{y2} are the same for a particular value of \calc{x}.
+
+For the t-shirt example, go to the \calc{table} screen on your calculator, and scroll to where \calc{x} is 36. You should see that both \calc{y1} and \calc{y2} are 432. This will be how the intersection point will show up in a table.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Solving Linear Systems By Substitution}
+\label{sec:syssubstitution}
+
+\begin{boxedexplore}[Startup Exploration: Ugly Graphing]
+Solve the following system by graphing.
+\[
+\left\{%
+\begin{array}{l}
+y=\frac{1}{3}x-4\\[1ex]
+y=5x-6
+\end{array}
+\right.
+\]
+What are the challenges that arise when solving this system by graphing?
+\end{boxedexplore}
+
+The challenge we uncover in the startup exploration is that the intersection point does not have integer coordinates. The $x$-coordinate is between 0 and 1, and the $y$-coordinate is between $-3$ and $-4$, but beyond that the going is pretty rough even using graphing technology (since the decimal values of the intersection point are not all that pretty).
+
+\resizeplot{-3}{7}{-8}{1}
+\begin{center}
+\begin{tikzpicture}
+	\begin{axis}[standard]
+		\addplot[algcurve, blue, domain=-3.5:7.25] (\x,\x/3-4);
+		\draw[blue] (axis cs:4,-3,0) node[right]{\large$y=\frac{1}{3}x-4$};
+		\addplot[algcurve, red, domain=-0.5:1.5] (\x,5*\x-6);
+		\draw[red] (axis cs:1.5,1,0) node[right]{\large$y=5x-6$};
+%		\addplot[algpoints, red] coordinates {(4,5)};
+	\end{axis}
+\end{tikzpicture}
+\end{center}
+
+%\begin{center}
+%\begin{tikzpicture}[scale=0.75]
+%		%% grid setup
+%		\draw[very thin, color=gray!25] (-3,-8) grid (6,1);
+%		\draw[<->,thick] (-3,0) -- (6,0);	% x-axis
+%		\draw[<->,thick] (0,-8) -- (0,1);	% y-axis
+%		\foreach \x in {-3,...,6}
+%			\draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+%		\foreach \y in {-8,...,1}
+%			\draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+%		%% graph
+%%		\draw[red] (-1,5) node[left] {\large$y=\umin3(x+1)+7$};
+%%		\draw[red] (-1,4) node[left] {\large$y=\umin3(x-2)-2$};
+%%		\draw[red] (2.5,0) -- node[above,sloped] {\large$y=2(x-4)+3$} (6,7);
+%		\draw[<->, ultra thick, blue, domain=-3:6] plot (\x,\x/3-4);
+%		\draw[<->, ultra thick, red, domain=-0.4:1.4] plot (\x,5*\x-6);
+%\end{tikzpicture}
+%\end{center}
+
+In this section we will explore the first of two algebraic methods for solving systems of equations. These algebraic approahes will avoid the challenges demonstrated by the startup exploration. The first algebraic technique is the \textit{substitution method}.
+
+We've been substituting numbers for variables for a long time. For example, given $f(x) = 3x + 1$, we know how to find $f(5)$ by substituting 5 for $x$ in the equation: \[f(x) = 3x+1 \quad\implies\quad f(5) = 3(5)+1 = 15 + 1 = 16\] The clever idea behind solving a system using substitution is that rather than just replacing variables with letters, we can substitute one algebraic expression for another.
+
+\begin{boxeddef}[Substitution Method]
+A method for solving a system of equations that involves solving one of the equations for one variable and substituting the resulting expression into a different equation.
+\end{boxeddef}
+
+%Remember what it means to find the solution to a linear system: we are looking for the point they have in common. This means we are trying to find a shared point $(x,y)$. The algebraic methods collapse the two equations in two variables into one equation in one variable. Let's see some examples.
+
+\begin{boxedex}
+Solve the following system using substitution.
+\[
+\left\{%
+\begin{array}{l}
+y=3x\\
+y=2x-4
+\end{array}
+\right.
+\] 
+
+\exsoln\ We are looking for a point where the two equations have the same $x$ value and the same $y$ value. So, let's assume that the $y$'s in these two equations  are equal. If the two $y$'s are equal, then it means ``$3x$'' is equal to ``$2x-4$'' and that is a Level 4 linear equation (one with variables on both sides)!
+\[\begin{aligned}
+3x &= 2x -4
+&& \quad\text{substitution}\\
+x &= -4
+&& \quad\text{SPOE: subtract $2x$ from both sides}\\
+\end{aligned}\]
+So, if the two $y$ values are equal, as we assumed they were, then it must be that $x=-4$. We just found the $x$-coordinate of the intersection point! How can we find the $y$-coordinate?
+
+Notice that the first equation says $y = 3x$. So, if $x=-4$, it must be that $y = 3x = 3(-4) = -12$. So, the solution to the system is the point $(-4, -12)$. Or we can write $\solset{(-4,-12)}$.
+
+To check out work, we can either graph the system, or plug the $x$ and $y$ values into the other equation to verify that equality holds.
+\[\begin{aligned}
+y &= 2x -4
+&& \quad\text{the second equation we were given}\\
+-12 &\overset{?}{=} 2(-4)-4
+&& \quad\text{substitute our proposed solution}\\
+-12 &\overset{?}{=} -8-4
+&& \quad\text{simplify right-hand side}\\
+-12 &\overset{\checkmark}{=} -12
+&& \quad\text{}\\
+\end{aligned}\]
+\end{boxedex}
+
+When we assume that the two $y$'s were equal --- as they must be if we have found a solution to the system --- then substitution means that we can replace one $y$ with the other.
+
+We can carry this out for the problem in the startup exploration. Since we have two equations in $y=$ format, and since any point that satisfies the system has a $y$-coordinate that satisfies both equations, we can set the equations equal to one another:
+\[\begin{aligned}
+\frac{1}{3}x - 4 &= 5x - 6
+&& \quad\text{substitution}\\[1ex]
+2 &= \frac{14}{3}x
+&& \quad\text{SPOE: variable terms to the right, constants to the left}\\[1ex]
+\frac{6}{14} &= x
+&& \quad\text{MPOE}\\[1ex]
+\frac{3}{7} &= x
+&& \quad\text{simplify the fraction}
+\end{aligned}\]
+Aha! Even though this $x$-value is inconvenient to graph by hand (since it's not an integer) or using technology (since it's not a very tidy decimal)\ldots\ it emerges with no trouble using substitution.
+
+To find the $y$-coordinate, we use our newly-discovered $x$-coordinate and one of the two original equations. Why not pick the second equation to minimize the fractions?
+\[\begin{aligned}
+y &= 5x - 6
+&& \quad\text{the second equation}\\[1ex]
+y &= 5\left(\frac{3}{7}\right)-6
+&& \quad\text{substitute in our new $x$-value}\\[1ex]
+y &= \frac{15}{7} - 6
+&& \quad\text{multiply fractions}\\[1ex]
+y &= \frac{15}{7}-\frac{42}{7}
+&& \quad\text{write with a common denominator}\\[1ex]
+y &= \frac{-27}{7}
+&& \quad\text{simplify the fraction}
+\end{aligned}\]
+To check our work, we can substitute our candidate values for $x$ and $y$ back into the first equation. Note that since we used the second equation already to figure out the answer, we use the first equation to check it.
+\[\begin{aligned}
+y &= \frac{1}{3}x - 4
+&& \quad\text{the first equation}\\[1ex]
+\frac{-27}{7} &\overset{?}{=} \frac{1}{3}\left(\frac{3}{7}\right)-4
+&& \quad\text{substitute in our candidate solution}\\[1ex]
+\frac{-27}{7} &\overset{?}{=} \frac{3}{21}-4
+&& \quad\text{multiply fractions}\\[1ex]
+\frac{-27}{7} &\overset{?}{=} \frac{3}{21}-\frac{84}{21}
+&& \quad\text{write with a common denominator}\\[1ex]
+\frac{-27}{7} &\overset{?}{=} \frac{-81}{21}
+&& \quad\text{subtract fractions}\\[1ex]
+\frac{-27}{7} &\overset{\checkmark}{=} \frac{-27}{7}
+&& \quad\text{simplify the right-hand side}
+\end{aligned}\]
+So, we have found our solution $\solset{\left(\frac{3}{7}, -\frac{27}{7}\right)}$.
+
+In the two examples we have seen so far, both equations have been in $y=$ format. This is not a requirement for using substitution, as the following two examples will demonstrate.
+
+\begin{boxedex}
+Solve the following system using substitution.
+\[
+\left\{%
+\begin{array}{l}
+y=3x-5\\
+x-y=4
+\end{array}
+\right.
+\] 
+
+\exsoln\ Here, we have one equation in point-intercept form, and one equation in standard form. No problem! We simply substitute $y$ from the first equation for $y$ in the second equation. It's a good idea to use patentheses when doing the substitution: watch what happens with the negative signs in this example.
+\[\begin{aligned}
+x-y &= 4
+&& \quad\text{start with the second equation}\\
+x-(3x-5) &= 4
+&& \quad\text{substitue $y$ from first equation, using parentheses}\\
+x - 3x + 5 &= 4
+&& \quad\text{distributive property}\\
+-2x + 5 &= 4
+&& \quad\text{combine like terms}\\
+-2x &= -1
+&& \quad\text{SPOE}\\[1ex]
+x &= \frac{1}{2}
+&& \quad\text{DPOE}
+\end{aligned}\]
+This tells us that if the $y$'s are equal, then it must be that $x=\frac{1}{2}$. To find the $y$-coordinate, we substitute the $x$ value we just found back into one of the original equations. Let's choose the second equation, which seems a bit easier:
+\[\begin{aligned}
+x-y &= 4
+&& \quad\text{the second equation}\\[1ex]
+\frac{1}{2}-y &= 4
+&& \quad\text{substitue $x = \tfrac{1}{2}$, which we just computed}\\[1ex]
+-y &= \frac{7}{2}
+&& \quad\text{SPOE}\\
+y &= -\frac{7}{2}
+&& \quad\text{MPOE}\\
+\end{aligned}\]
+So, $\solset{\left(\frac{1}{2}, -\frac{7}{2}\right)}$. To check we can plug these values back into the other equation (the first equation, in this case, since we used the second equation to find $y$).
+\[\begin{aligned}
+y &= 3x-5
+&& \quad\text{the first equation}\\[1ex]
+-\frac{7}{2} &\overset{?}{=} 3\left(\frac{1}{2}\right)-5
+&& \quad\text{substitue our proposed solution}\\[1ex]
+-\frac{7}{2} &\overset{?}{=} \frac{3}{2}-5
+&& \quad\text{simplify on the right-hand side}\\[1ex]
+-\frac{7}{2} &\overset{?}{=} \frac{3}{2}-\frac{10}{2}
+&& \quad\text{}\\[1ex]
+-\frac{7}{2} &\overset{\checkmark}{=} \frac{-7}{2}
+&& \quad\text{}
+\end{aligned}\]
+\end{boxedex}
+
+Notice that after our substitution step, we've been getting linear equations like the ones we saw in \cref{ch:equations}.
+
+In the first example in this section, we got an equation with the variable $x$ on both sides. Recall that when equations have variables on both sides, we sometimes find that the equation had one unique solution, sometimes ``no solution'', and sometimes ``infinitely many solutions''. Do you see how these correspond to the different possible solutions to a linear system?
+
+The key to the substitution method is that we need at least one equation to be in $x=$ or $y=$ form. What if neither equation is in this form? We can use our skills at transforming formulas to create what we want!
+
+\begin{boxedex}
+Solve the system by substitution.
+\[
+\left\{%
+\begin{array}{l}
+3x-12y=15\\
+x-4y=7
+\end{array}
+\right.
+\] 
+
+\exsoln\ We could transform either equation, but notice that there's less work to do in the second equation, since the $x$ term has coefficient 1. So, let's transform the second equation to $x=7+4y$ using APOE. Then, we can substitute that expression into the first equation.
+\[\begin{aligned}
+3x-12y &= 15
+&& \quad\text{the first equation}\\
+3(7+4y)-12y &= 15
+&& \quad\text{substitute our expression for $x$}\\
+21+12y-12y &= 15
+&& \quad\text{distributive property on the left-hand side}\\
+21 &= 15
+&& \quad\text{D'oh.}\\
+\end{aligned}\]
+We have arrived in one of those impossible situations that tells us the equation we created has no solution. In this case, it means that the system has no solution. In other words, that these lines were parallel all along. $\mathcal{S}=\emptyset$
+\end{boxedex}
+
+That was the first ``special case''. The other special case is when the two lines completely overlap. What do you suppose will happen when we solve the system that lets us know that we're in this special case?
+
+%\begin{boxedex}
+%Bob's favorite second-run movie theater charges \$8 for each adult ticket and \$4 for each child ticket. The theater sold 200 tickets for a certain showing of ``Cheese Quest 3'', and collected exactly \$1304. How many of each type of ticket were sold?
+%
+%Let $A$ represent the number of adult tickets sold, and let $C$ represent the numbe of child tickets sold. We know that the theater sold a total of 200 tickets, so $A+C = 200$. Plus, we know how much money they made: $8A + 4C = 1304$ (eight dollars for each adult ticket, and four dollars for each child ticket, for \$1304 total).
+%
+%So we have the system
+%\[
+%\left\{%
+%\begin{aligned}
+%&A+C=200\\
+%&8A + 4C = 1304
+%\end{aligned}
+%\right.
+%\] 
+%\end{boxedex}
+%
+% y=2x 3 − 4x−10 2x−3 =30
+%  5
+% 4x −10 y = 30
+% 5 4x − 4x + 30 = 30
+%Solution:
+%If these equations were in the same form, you will see the solution.
+%30=30
+%This means that we have the same line. S = any point on 4x- 10y=30
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Solving Linear Systems By Elimination}
+\label{sec:syselimination}
+
+\begin{boxedexplore}[Startup Exploration: Ugly Substitution]
+Study the following system of linear equations.
+\[\linearsys{4x+3y=22}{3x+5y=11}\]
+What challenges would you face if you tried to solve this system by graphing? What challenges would you face if you tried to solve it by substitution?
+\end{boxedexplore}
+
+The equations in the startup exploration would require quite a bit of work to graph them accurately by hand (even using our $x$- and $y$-intercept strategy for graphing lines in standard form), and we'd have to do some work so that one could be substituted into the other. The second algebraic approach to solving a system, called the \gls{elimination method}, addresses these concerns.
+
+This technique is particularly helpful when the given equations are both in standard form. The premise behind elimination is that we use the properties of equality to, say, add two equations together. Recall that the addition property of equality says that we can add the same quantity to both sides of an equation. If we know two things are equal, we can add one thing to one side of an equation and the other thing to the other side, and still maintian equality.
+
+\begin{boxedex}
+Solve the following system using elimination. \[\linearsys{y=3}{5x-y=12}\]
+
+\exsoln\ The first equation tells us that $y$ is equal to 3. Of course, we could add $y$ to both sides of an equation\ldots\ or we could add 3 to both sides of an equation\ldots but since we know $y$ and 3 are equal we can add $y$ to one side of an equation and 3 to the other side of that equation!
+
+In other words, we can add $y$ to the left-hand side of the second equation we are given while simultaneously add $3$ to the right-hand side. Since we know $y=3$, we know equality will be maintained! Watch what happens:
+\[
+\begin{aligned}
+5x-y &= 12
+&&\quad\text{the second equation}\\
+5x-y {\color{red}+y} &=12{\color{red}+3}
+&&\quad\text{add on the first equation}\\
+5x &=15
+&&\quad\text{combine like terms: $y$ has been eliminated!}\\
+x &=3
+&&\quad\text{DPOE}
+\end{aligned}
+\]
+Having found $x$, and having $y$ given in the original system, we have $\solset{(3,3)}$.
+\end{boxedex}
+
+\begin{boxeddef}[Elimination Method]
+A method for solving a system of equations that involves adding two equations to eliminate a variable.
+\end{boxeddef}
+
+The method is called ``elimination'' because it eliminates a variable.\footnote{This name is also related to a technique from the study of matrices called \textit{Gaussian elimination}.}
+
+\begin{boxedex}
+Solve the following system by elimination. \[\linearsys{2x + 2y = 7}{3x - 2y = 8}\]
+
+\exsoln\ Notice how the coefficients on the $y$ terms are opposites. If we add these two equations together, the $y$'s will be eliminated:
+\[
+\begin{aligned}
+		&&2x + 2y	&= 7\\
++~		&&3x - 2y	&= 8\\\hline
+		&&5x +0y	&= 15\\
+		&&5x 		&= 15\\
+		&&x 		&= 3
+\end{aligned}
+\]
+We then substitute $x=3$ back into one of the equations to find $y = \frac{1}{2}$. So, $\solset{\left(3,\frac{1}{2}\right)}$.
+\end{boxedex}
+
+The key to the elimination approach is to ``add the equations together'' so that one variable vanishes, just as the $y$ disappeared on the third in the previous example. In order to faciliatate this elimination, one or both of the equations must sometimes be multiplied by a constant before we add them (an application of MPOE).
+
+This approach is required to handle the startup exploration. Recall, that in that problem we were asked to solve the following system by elimination.\[\linearsys{4x+3y=22}{3x+5y=11}\]
+Adding these two equations won't eliminate any variables, as we have encountered in the earlier examples. But, with a few clever applicatons on MPOE, we can put ourselves into exactly the situation that we desire.
+
+Let's make it our goal to eliminate $x$. What could we do to these equations so that we have equivalent equations but ones in which the $x$ terms have opposite coefficients?
+
+One way (but not the only way) to accomplish this is to multiply the first equation by 3 and multiply the second equation by $-4$.
+\[\begin{array}{lcl}
+4x+3y=22
+& \quad \xrightarrow{\quad\text{multiply through by 3}\quad}
+& \quad 12x + 9y = 66
+\\
+3x+5y=11
+& \quad \xrightarrow{\quad\text{multiply through by -4}\quad}
+& \quad -12x - 20y = -44
+\end{array}\]
+Then, we add equations:
+\[
+\begin{aligned}
+		&&12x + 9y		&= 66\\
++~		&&-12x - 20y	&= -44\\\hline
+		&&-11y	& = 22\\
+		&&y	& = -2\\
+\end{aligned}
+\]
+Substituting $y=-2$ into the second of the original equations, we get $3x + 5(-2) = 11$. This implies that $x=7$. So, $\solset{(7,-2)}$.
+
+%\subsection{Elimination applications}
+%
+%Some word problems result in equations in standard form, which are good candidates for elimination.
+%
+%\begin{boxedex}[More Mystery Numbers]
+%The sum of two mystery numbers is 105. The difference between them is 67. What are the two numbers?
+%
+%{\bfseries Partial solution:} Let $x$ represent the first number, and let $y$ represent the second number. Then, our system is:
+%\[
+%\left\{%
+%\begin{aligned}
+%&x+y = 105\\
+%&x-y = 67
+%\end{aligned}
+%\right.
+%\]
+%Can you see how to take it from here?
+%\end{boxedex}
+%
+%\begin{boxedex}[La Tirelire]
+%Fran\c{c}ois has four more dimes than quarters. He has \$6.00 total. How many of each coin does he have?
+%
+%{\bfseries Partial solution:} We are looking for two pieces of information, and we will write two equations to help. Let $D$ represent the number of dimes, and let $Q$ represent the number of quarters. Then, our system is:
+%\[
+%\left\{%
+%\begin{aligned}
+%&D-Q = 4\\
+%&0.10D + 0.25Q = 6.00
+%\end{aligned}
+%\right.
+%\]
+%Note that our unit of money is ``dollars''. We could have used ``cents'' as the unit instead, in which case our second equation would have been $10D + 25Q = 600$.
+%\end{boxedex}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Applications of Systems}
+\label{sec:sysapplications}
+
+\addtodoitem{Systems: The word problems in this chapter should all connect into one story, IMHO... perhaps advancing the overall story.}
+
+``A train leaves New York traveling south at 180 miles per hour\ldots'' If you were to read that sentence out loud in a room full of adults, you might cause some folks to start sweating and mumbling nervously to themselves. People all over the world, for generations, have been scarred by algebra word problems.
+
+But, word problems have a bad reputation.
+
+Yes, word problems require us to ponder a bit, decipher the information we're given, and stumble around as we figure out how to proceed. But this is the process of problem solving! The algebra skills we have learned so far, along with a little determination and creativity, will serve us well as we tackle these algebra classics.
+
+We discuss several kinds of problems below. Our general pattern is this: We'll think about the unknown quantities and relevant facts given in the problem. We'll choose variables to represent the unknowns and model the situation using equations. (Drawing pictures and making charts might help!) Then, we'll solve the equations and check to ensure your answer makes sense.
+
+As we go along, and as you work on various assignments, remember to think back over these examples. If you have solved a similar problem before, that will give you a place to start when faced with something new.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Two unknowns, two facts}
+
+The first examples we did with substitution and elimination are of this type. We are given two unknowns and two different facts about them. The facts usually have different units, which hint at what two equations you need to write for your model.
+
+One way to approach this type of problem is by creating a table to organize the data.
+
+\begin{boxedex}[Evil Entertainment\ldots Eviltainment?]
+Yeardleigh receives a shipment of entertainment centers, the basic model weighing 30 kilograms each and the deluxe weighing 50 kilograms each, has a total weight of 880 kilograms. If there are 20 centers altogether, how many weigh 50 kilograms?
+\end{boxedex}
+
+The two unknowns are the number of 30kg and 50kg centers. One set of facts has to do with quantity, the other has to do with the weight. We make these into which are rows and columns in the table. I added ``total'' columns and rows. Let's use $T$ to represent the number of 30kg centers, and $F$ to represent the number of 50kg centers.
+
+\begin{center}
+\begin{tabular}{r|ccc}
+				& Number of centers	& Weight per unit	& Total Weight\\\hline
+30kg centers	& $T$					& 30				& $30T$\\
+50kg centers	& $F$					& 50				& $50F$\\
+Combined		& $20$					& --				& $880$\\
+\end{tabular}
+\end{center}
+
+Once the table is set up, out two equations are there in the second and fourth columns.
+\[
+\left\{%
+\begin{aligned}
+&T+F=20\\
+&30T + 50F = 880
+\end{aligned}
+\right.
+\] 
+We can now solve this system using our favorite method. It looks like a good candidate for elimination! (Why?)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Mixture problems}
+
+The type of mixture problem we have previously solved were very straight forward. Every number we needed was given to us directly in the problem. This is a different type of problem. There is information in the problem that is not directly stated that we will have to infer. This is where the table is really helpful.
+
+\begin{boxedex}[Evil Trail Mix]
+YeardleighCorp opens health food stores, which sell an Evil Trail Mix of raisins and roasted nuts. Raisins sell for \$3.50 per kg, and roasted nuts sell for \$4.75 per kg. How many kg of each should be mixed to make 20 kg of Evil Trail Mix worth \$4.00 per kg?
+\end{boxedex}
+
+Our unknowns are number of kg of raisins (let's call that $R$) and number of kg of nuts (let's call that $N$). We also have the prices of each ingredient per kg, but nothing about a total cost.
+
+\begin{center}
+\begin{tabular}{r|ccc}
+				& Amount (kg)			& Unit price			& Total price\\\hline
+Raisins			& $R$					& 3.50				& $3.50R$\\
+Nuts			& $N$					& 4.75				& $4.75N$\\
+Mixture			& 20					& 4.00				& {\color{red} ??}\\
+\end{tabular}
+\end{center}
+
+How can we figure out total cost? Well, look at that row of the table: 20 kg of Evil Trail Mix at \$4.00 per kg = \$80 worth of trail mix! We can calculate this value, even though that information is not given directly in the problem. Sneaky!
+
+\[
+\left\{%
+\begin{aligned}
+&R+N=20\\
+&3.50R + 4.75N = {\color{red} 80}
+\end{aligned}
+\right.
+\]
+
+And now, we can solve the system. Once again, this looks like a job for elimination. (Why?)
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RTD: Same direction}
+
+Rate-time-distance problems (RTD for short) come in a variety of flavors. In ``same direction'' RTD problems, the travelers are -- surprise! -- going in the same direction. The often involve a ``race'' of some kind where someone gets a head start, and our task is to determine when someone catches up or passes the other.
+
+It will be helpful to draw a simple picture at the start to understand how the problem is set up. Many times, there is something not directly stated that is important to the solution, but which you can figure out from the situation. The picture can help you with that.
+
+\begin{boxedex}[Same Direction]
+At 5:00 pm Bob leaves the Chtulhu-Chip factory driving 25 miles per hour. At 5:30, Yeardleigh leaves the Cthulhu-Chip factory and follows the same route, driving 40 miles per hour. At what time does Yeardleigh pass Bob?
+\end{boxedex}
+
+The problem is asks when Yeardleigh will pass Bob. In order to know when she will pass, we need to know when they have gone exactly the same amount of distance from the factory (this is the moment she passes him). So we'll write two distance equations, one for Bob and one for Yeardleigh, and compare them to try and figure out at what time their distances from the factories are equal.
+
+\addtodoitem{Systems: Some pictures of the word problems would be helpful.}
+
+Our table columns are -- naturally enough -- rate, time, and distance. The rows deal with the people driving. The problem asks a ``when'' question, so we must be solving for time. Let's use $t$ to represent the amount of time Bob has been driving, in hours.
+
+Note that we didn't make the variable represent actual time ``on the clock''. (Why not? What challenges would that introduce into the mathematics?)
+
+Yeardleigh started 30 minutes later, which means she has 30 minutes less travel time than Bob. Note that we have to be careful about units: 30 minutes is $1/2$ of an hour. Since the speeds are in miles \textit{per hour}, it makes sense to work in hours: $t-\frac{1}{2}$. If we want to use $t – 30$ instead, we can\ldots but we'll have to also convert the given speeds into miles \textit{per minute}.
+
+\begin{center}
+\begin{tabular}{r|ccc}
+				& Rate (mph)			& Time (hours)		& Distance (miles)\\\hline
+Bob				& 25					& $t$				& $25t$\\
+Yeardleigh		& 40					& $t - \frac{1}{2}$	& $40\left(t - \frac{1}{2}\right)$\\
+\end{tabular}
+\end{center}
+
+\[
+\left\{%
+\begin{aligned}
+&d = 25t\\
+&d = 40\left(t-\frac{1}{2}\right)
+\end{aligned}
+\right.
+\]
+
+Solving this system (substitution looks like a good choice!) will give us a value for $t$. What does that value represent? How can we use it to determine when (on the clock) Yeardleigh will pas Bob?
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RTD: Opposite directions}
+
+Here we might have travelers starting from the same location and traveling away from one another (in which case you usually are asked to determine when they will be a certain distance apart). Or, we might have travelers who are coming from two distinct locations and moving towards each other (in which we are usually asked to figure out when or where they will meet).
+
+A common mistake with this second type is assuming that the travelers will meet at exactly the half-way point. They don't necessarily. It depends on when they leave and speed at which they traveling!
+
+\begin{boxedex}[Opposite Directions]
+Yeardleigh hamster-naps Feta and holds her for ransom. The twins agree to meet in a neutral location. Bob and Yeardleigh each set out at noon from points 60 km apart and drive toward each other, meeting at 1:30pm. Bob's speed was 4 km/h greater than Yeardleigh's. How fast was each of them driving?
+\end{boxedex}
+
+We could choose either Bob's speed or Yeardleigh's speed as the reference point. Let's use Yeardleigh's speed and call it $v$ (for velocity). Then, Bob's speed is 4 km/h greater than that.
+
+\begin{center}
+\begin{tabular}{r|ccc}
+				& Rate (mph)			& Time (hours)		& Distance (miles)\\\hline
+Yeardleigh		& $v$					& $1.5$				& $1.5v$\\
+Bob				& $v+4$				& $1.5$				& $1.5(v+4)$\\
+\end{tabular}
+\end{center}
+
+Now, to figure out how to make that table into some helpful equations. Since we have one variable, we only need one equation. The missing key component is that the distance Bob and Yeardleigh traveled together is 60 km, which gives us the extra piece of the puzzle: The two distances add up to 60 km:
+\[
+1.5v + 1.5(v+4) = 60
+\]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{RTD: Roundtrip}
+``Round trip'' means that someone travels from a given location to some other location and back again, as in the following example.
+
+\begin{boxedex}[Round Trip]
+Yeardleigh uses the ransom money from hamster-napping Feta to go on an evil ski trip. An evil ski lift carries Yeardleigh up the slope at the rate of 6 km/h, and then she skies back down the same slope at 34 km/h. The round trip takes 30 minutes. How long is the ski slope, and much time does it take Yeardlight to ski down it?
+\end{boxedex}
+
+Let's let $t$ represent the amount of time that Yeardleigh spends skiing. The whole trip takes 30 minutes (that's $\frac{1}{2}$ hour, remember to watch out for the units!) so her time on the chair lift is $\frac{1}{2} - t$. Here we chop the total time into two pieces using one variable, just like we did with distance in the last problem.
+
+\begin{center}
+\begin{tabular}{r|ccc}
+				& Rate (km/h)			& Time (hours)		& Distance (km)\\\hline
+On the ski lift	& $6$					& $\frac{1}{2}-t$	& $6\left(\frac{1}{2}-t\right)$\\
+Skiing			& $34$					& $t$				& $34t$\\
+\end{tabular}
+\end{center}
+
+In a round trip problem, the traveler goes over the same path twice. So, the distance that Yeardleigh travels on the ski lift, is the same as when she is skiing. We don't know what that distance is (yet!) but we know the two distances in our table above are the same. So, our equation is:
+\[
+6\left(\frac{1}{2} - t\right) = 34t
+\]
+
+Solve this, and we'll get the amount of time she was skiing. Then, we can use this time, together with her skiing speed, to figure out the distance traveled.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Uniform motion in a current}
+
+Don't let that complicated-sounding name fool you, problems of this type are not that complicated to solve.
+
+Have you ever tried to walk \textit{up} the \textit{down} escalator at the mall? (Be honest!) When you walk down the down elevator -- that is, when you walk in the same direction that the escalator is moving -- the motion of the escalator helps you to go faster than if you were just walking down regular stairs. On the other hand, if you try walk in the wrong direction on an escalator, the motion of the escalator will make you go slower than you would walk on regular stairs.
+
+This is the idea of motion in a current. When you go ``with the current'' (or ``downstream'', if you're floating on a river) the current adds to your usual rate of motion. Going ``against the current'' (or ``upstream''), the current reduces your usual rate of motion.
+
+\begin{boxedex}[Motion in a Current]
+Bob decides to go on vacation. He takes a day trip on a river boat. The boat travels 60 km upstream (against the current) in 5 hours. The boat travels the same distance downstream in 3 hours. What is the rate of the boat in still water? What is the rate of the river's current?
+\end{boxedex}
+
+Notive that Bob makes a round trip journey. So, the distance upstream is the same as the distance downstream. We don't know the speed of the water or the speed of the boat. So, let's let $b$ represent the speed of the boat, and $c$ represent the speed of the current.
+
+The boat goes $b-c$ km/hour upstream, because the current is taking away from how fast the boat can go. The boat will go $b+c$ km/hour downstream, because the current will help the boat go faster!
+
+\begin{center}
+\begin{tabular}{r|ccc}
+				& Rate (km/h)			& Time (hours)		& Distance (km)\\\hline
+Upstream		& $b-c$				& 5					& 60\\
+Downstream	& $b+c$				& 3					& 60\\
+\end{tabular}
+\end{center}
+
+Our system is:
+\[
+\left\{%
+\begin{aligned}
+&5(b-c) = 60\\
+&3(b+c) = 60
+\end{aligned}
+\right.
+\]
+
+To solve this, we'll need the distributive property and the elimination method!
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection*{Work problems}
+
+In a work problem, a group of workers split up a job. The key is knowing that everyone does a fraction of the job, and that all together they complete one whole job. We will use an equation very similar to DRT:\[\text{work rate } \times { time } = \text{ work done}.\]
+The ``work rate'' we will think of ``number of jobs per unit of time''. If it takes me 3 days to paint an apartment, my work rate for painting is ``one third of an apartment per day''.
+
+Take a whack at this example:
+
+\begin{boxedex}[Work]
+Ivan can chop a cord of wood* in 4 days, and his father, Fran\c{c}ois, can chop a cord of wood in 2 days. How long will it take them to split a cord of wood if they work together?
+
+(One cord, which is a unit of measure of volume for firewood in the US and Canada, is about 128 cubic feet\ldots but that's not really important to this problem.)
+\end{boxedex}
+
+If we think of the ``job'' as ``chopping one cord of wood'', then Ivan's work rate is ``1 job in 4 days'', or ``$\frac{1}{4}$ job per day''. Similarly, Fran\c{c}ois's work rate is ``$\frac{1}{2}$ job per day''. When the two guys work together, they will finish the job in some amount of time. Let's call that $t$. The rows in our table are for the individual workers.
+
+\begin{center}
+\begin{tabular}{r|ccc}
+				& Work rate				& Work time			& Amount done\\\hline
+Ivan				& $\frac{1}{4}$			& $t$					& $\frac{t}{4}$\\
+Fran\c{c}ois		& $\frac{1}{2}$			& $t$					& $\frac{t}{2}$\\
+\end{tabular}
+\end{center}
+
+Together, they complete 1 whole job (they chop one whole cord of wood). This gives us the equation:
+\[
+\frac{t}{4} + \frac{t}{2} = 1
+\]
+
+\addtodoitem{Systems: Some conclusion might be good?}
+
+
+%\section{Extensions}
+%
+%Each of the vertices in the triangle below has been assigned a mystery number. Each edge is labeled with the sum of the mystery numbers at its endpoints. What are the mystery numbers?
+%
+%\begin{center}
+%\begin{tikzpicture}
+%	\draw (0,0) -- (2,0) -- (60:2) -- cycle;
+%	\draw[fill=white] (0,0) circle[radius=0.4cm];
+%	\draw[fill=white] (2,0) circle[radius=0.4cm];
+%	\draw[fill=white] (60:2) circle[radius=0.4cm];
+%	\draw (0.5,0.866) node[left]{25};
+%	\draw (1.5,0.866) node[right]{14};
+%	\draw (1,0) node[below]{19};
+%\end{tikzpicture}
+%\end{center}
+%
+%A beaker filled to the brim with water weight 5 pounds. The same beaker filled halfway weighs 3.25 pounds. How many pounds of water can the beaker hold?
+%
+%Helen and Gary simultaneously jump from a raft on a river and swim in opposite directions. Gary swims downstream wiht the current at one rate and Helen swims upstream against the currentat possibly a different rate. After 5 minutes they turn around and return to the raft, each maintaining their constant rate of swimming throughout. Who gets back to the raft first?
+%
+%``ambiguous systems''
+%Consider a similar setup to the pigs and chickens problem, but which gives us less information: In a barnyard that contains only pigs and chickens, a farmer counts 110 feet. How many pigs and how many chickens could there be? Is there more than one possible combination of animals? Find as many solutions as you can to this problem. Is there a pattern in these solutions?
+%
+%Here is another ``ambiguous'' problem:
+%A hobby shop sells model airplanes for 7 dollars each and model train sets for 18 dollars each. Yesterday they made 208 dollars selling only those two items. How many of each item could have been sold?
+%
+%How might you approach solving this problem? Is there a solution? Is there more than one possible solution?

@@ -1,0 +1,994 @@
+\chapter{Radical Expressions}
+\label{ch:radicals}
+
+\newcommand*\rfrac[2]{{}^{#1}\!/_{#2}}
+
+\chapquote{There is geometry in the humming of the strings, there is music in the spacing of the spheres.}{Pythagoras\\Ancient Greek philosopher}
+
+%\begin{quote}
+%There is geometry in the humming of the strings, there is music in the spacing of the spheres.
+%\par \hfill --- Pythagoras, Ancient Greek philosopher
+%\end{quote}
+
+In the last chapter, we found integer solutions to all of the equations that we studied. This was good for understanding the workings of quadratic equations, but not all equations will necessarily be so ``polite''. In this chapter we'll learn more about all of those square roots that don't come out evenly, plus other numbers as well. We'll begin by looking more closely at the sets $\Q$ and $\R$.
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Real numbers}
+\label{sec:radrealnumbers}
+
+\begin{boxedexplore}[Startup Exploration: TODO]
+TODO
+\end{boxedexplore}
+
+The set of real numbers, $\R$, includes every possible decimal number. In \cref{ch:numbers}, we noted the rational numbers, $\Q$, are all of the numbers that can be expressed in the form \[\frac{a}{b} \text{ where $a$ and $b$ are integers, and $b$ is not zero.}\]
+We also said that $\Q$ includes ``terminating decimals and repeating decimals''. 
+
+These statements raise a few questions. What is the relationship between ``fraction'' and ``terminating or repeating decimal''? What can we say about decimal numbers that are neither terminating nor repeating?
+
+\subsection{Fractions into decimals}
+
+Every fraction can be represented as a decimal. Recall that a fraction is simply a divison problem in disguise. If we execute the division problem, we can easily turn a fraction into a decimal. It's especially easy if we have a calculator handy.
+
+\begin{boxedex}
+Convert $\dfrac{3}{4}$ and $\dfrac{5}{6}$ into their decimal representations.
+
+\bigskip\inlineex{Solution:} Recall that the fraction three-fourths is equivalent to the division problem $3 \div 4$. To do this by long division, we put the dividend (that's 3) inside the ``division house'' and leave the divisor (that's 4) outside.
+\[
+\renewcommand\arraystretch{1.1}
+\begin{array}{*1r @{\hskip\arraycolsep}c@{\hskip\arraycolsep} *3r}
+	&&			& .7	& 5 \\
+\cline{2-5}
+4	&\big)&	3	& .0	& 0 \\
+	&&		2	&8		\\
+\cline{3-4}
+	&&			&2 & 0 \\
+	&&			&2 & 0 \\
+\cline{4-5}
+	&&			&& 0 \\
+\end{array}
+\]
+So the decimal representation of $\frac{3}{4} = 0.75$ (you may have known that already). To tackle five-sixths, we note that it is equivalent to $5 \div 6$. The long division starts out like this:
+\[
+\renewcommand\arraystretch{1.1}
+\begin{array}{*1r @{\hskip\arraycolsep}c@{\hskip\arraycolsep} *4r}
+	&&			& .8	& 3	& 3 \\
+\cline{2-6}
+6	&\big)&	5	& .0	& 0	& 0 \\
+	&&		4	&8		\\
+\cline{3-4}
+	&&			&2	& 0 \\
+	&&			&1	& 8 \\
+\cline{4-5}
+	&&			&	& 2	& 0 \\
+	&&			&	& 1	& 8 \\
+\cline{5-6}
+	&&			&	&	& 2
+\end{array}
+\]
+We might as well stop here, though, because we're stuck in a loop! The 3's in the answer are going to repeat forever. (Can you see why?) So, the decimal representation of $\frac{5}{6} = 0.8\overline{3}$.
+\end{boxedex}
+
+We say that $0.75$ is a terminating decimal, because the process of long division stops with a remainder of zero. On the other hand, $0.8\overline{3}$ is called a repeating decimal because the long division process gets stuck in a loop. Note that we've used a vinculum over the 3 to indicate which digits repeat.
+
+% In other words, \textit{no rational number ever} behaves like $\pi$ (which neither terminates nor repeats).
+
+This process of division leads us to make a pretty bold claim: every rational number can be represented \textit{either} as a terminating decimal or a repeating decimal. Note that this might not be an obvious statement. How can we be sure that every crazy fraction, for instance $\frac{19}{81}$, either terminates or repeats?
+
+Let's think about how long division works: the ``subtraction step'' in particular. Here's how the process of long division starts out for $\frac{3}{4}$:
+\[
+\renewcommand\arraystretch{1.1}
+\begin{array}{*1r @{\hskip\arraycolsep}c@{\hskip\arraycolsep} *3r}
+	&&			& .7	&	\\
+\cline{2-5}
+4	&\big)&	3	& .0	& 0 \\
+	&&		2	&8		\\
+\cline{3-4}
+	&&			&2 & 	\\
+\end{array}
+\]
+In the subtraction step, we get 2 as the remainder, and so we know that we have to keep dividing. If we ever get the remainder 0, then we know that we're done with division. This is what happens eventually with $\frac{3}{4}$. On the other hand, if we ever get a remainder that we've gotten before, then we know that we're stuck in a loop. This is what happened with $\frac{5}{6}$.
+
+Now here's a simple yet profound idea: the remainder is always less than the divisor. When dividing by 4, the remainder has to be less than 4. When dividing by 6, the remainder has to be less than 6. (Can you explain why that is? For example, what would it mean if we had a remainder of 5 when dividing by 4? What would it mean to get a remainder of 11 when dividing by 6?)
+
+The result is that we have a limited number of choices for the remainder. When dividing by 4, the remainder can only be 0, 1, 2, or 3. When dividing by 6, the remainder can only be : 0, 1, 2, 3, 4, or 5.
+
+Having a limited number of choices means that eventually we have to recycle one of those remainders! We can't go on forever without either using the remainder 0 (in which case the decimal terminates) or reusing one of the nonzero remainders (in which case the decimal repeats).
+
+Even when dividing something ugly like $1903 \div 8167$, the remainders in the subtraction steps will always be less than 8167. We might have to divide for a long time\ldots\ but we know it can't carry on forever. Eventually we'll either use the remainder 0, or reuse a remainder we've used already. So the fraction $\frac{1903}{8167}$ has a decimal representation that either terminates or repeats.
+
+Our argument applies to any denominator, and so to any rational number. Therefore, it's true that every rational number has a decimal representation that either terminates or repeats! Have we blown your mind yet? If not, stay tuned.
+
+\subsection{Decimals into fractions}
+
+What about the other way around? Does every terminating-or-repeating decimal have a corresponding fraction representation?
+
+\subsubsection{Terminating decimals into fractions}
+
+Consider a terminating decimal like $0.375$. Can we turn this decimal into a fraction, meaning a ratio of two integers? If so, how?
+
+Recall the notion of \textit{place value}, and how the individual digits in a number are each standing in some ``place'' that is named after a power of ten.\footnote{We really are blowing the cobwebs off of some old mathematics in this chapter: Long division! Place value! It goes to show that even simply mathematical ideas can have deep and meaningful consequences.} The key to turning a terminating decimal into a fraction is recalling how to read a decimal using its place value.
+
+\begin{center}
+\begin{tikzpicture}
+	\foreach \x in {0.75} {
+		\draw (-4*\x,0) node[below]{4};
+		\draw (-4*\x,0) node[above, anchor=south west, rotate=45]{thousands};
+		\draw (-3*\x,0) node[below]{1};
+		\draw (-3*\x,0) node[above, anchor=south west, rotate=45]{hundreds};
+		\draw (-2*\x,0) node[below]{2};
+		\draw (-2*\x,0) node[above, anchor=south west, rotate=45]{tens};
+		\draw (-1*\x,0) node[below]{6};
+		\draw (-1*\x,0) node[above, anchor=south west, rotate=45]{units};
+		\fill (0,-0.25) circle[radius=0.05];
+		\draw (1*\x,0) node[below]{3};
+		\draw (1*\x,0) node[above, anchor=south west, rotate=45]{tenths};
+		\draw (2*\x,0) node[below]{7};
+		\draw (2*\x,0) node[above, anchor=south west, rotate=45]{hundredths};
+		\draw (3*\x,0) node[below]{5};
+		\draw (3*\x,0) node[above, anchor=south west, rotate=45]{thousandths};
+		\draw (4*\x,0) node[below]{0};
+		\draw (4*\x,0) node[above, anchor=south west, rotate=45]{ten-thousandths};
+		\draw (5*\x,0) node[below]{9};
+		\draw (5*\x,0) node[above, anchor=south west, rotate=45]{hundred-thousandths};
+		\draw (6*\x,0) node[below]{8};
+		\draw (6*\x,0) node[above, anchor=south west, rotate=45]{millionths};
+	}
+\end{tikzpicture}
+\end{center}
+
+To read the decimal 0.375, we can say ``zero point three seven five'', but this isn't very helpful. Instead, we read the number using place value and say \[\text{three hundred seventy-five }thousandths\]
+We use ``thousandths'' because that's the rightmost place that the number extends to. Now, if someone were to say that number aloud, how would we know whether they were talking about \[0.375 \qquad\text{or}\qquad\frac{375}{1000}\text{  ?}\] In fact, this decimal number and this fraction represent exactly the same value. Of course, the fraction isn't in simplest form yet, but that's easy to fix: \[0.375 = \frac{375}{1000} = \frac{3}{8}\].
+
+We have accomplished the goal of turning a terminating decimal into a fraction. The technique is simply to read the decimal aloud using its place value, and then write down the fraction we hear.
+
+\subsubsection{Repeating decimals into fractions}
+
+The ``read the number with its place value'' technique won't work for repeating decimals. (Why not?) Instead, we'll need use some clever applications of the techniques we learned when solving equations.
+
+Suppose we try to write the repeating decimal $0.\overline{4}$ as a fraction. Let's give this number a name so that we can do some algebraic manipulations. \[x = 0.\overline{4}\] Our goal will be to find an alternative way of writing $x$. To do that, we're going to make two clever moves.
+
+The first clever move is to use MPOE: we will multiply both sides of this equation by 10. Multiplying $0.\overline{4}$ by 10 moves the decimal point one place to the right. But remember: the 4's repeat \textit{forever}, so there are \textit{still} infinitely many 4's to the right of the decimal point! We have: \[10x = 4.\overline{4}\]
+
+The second clever move is to use an idea from when we were solving systems of equations: the elimination method. Watch what happens when we subtact the first equation we wrote from the second equation:
+
+\[\begin{aligned}
+	&&	10x &= 4.\overline{4}\\
+- 	&& 	x 	&= 0.\overline{4}\\\hline
+	&&	9x 	&= 4.0
+\end{aligned}\]
+
+Notice that the two numbers on the righthand side of our equations are exactly four units apart. In other words: the infinitely long tail of 4's disappears when we subtract! Now all we have to do is use DPOE to isolate $x$: \[9x = 4 \quad\implies\quad x = \frac{4}{9}\] If you have a calculator handy, you can perform this division and see that we have accomplished the goal of turning our repeating decimal into a fraction:\[0.\overline{4} = \frac{4}{9}\]
+
+The clever two-step process that we used is sometimes called \textit{killing the tail}, since our goal is to subtract two different decimal forms that have the same repeating part, thereby eliminating the infintely long tail of digits.
+
+\begin{boxedex}
+Convert the repeating decimal $0.\overline{63}$ to its decimal representation.
+
+\bigskip\inlineex{Solution.} We'll kill the tail again, but note that we have two digits after the decimal which repeat. This will require a slight adjustment. We'll start as we did before, by assigning an algebraic name to our number:\[x = 0.6363\dotso\]
+If we multiply both sides by 10, we'll have \[10x = 6.3636\dotso\] which is also a repeating decimal, but with a \textit{different} repeating tail. We could work with this, but it's a bit easier to multiply by 10 again (in other words, to multiply the original equation by 100): \[100x = 63.6363\dotso\] Now we have an equation in which the number on the righthand side has exactly the same tail as in the original equation. So, we subtract:
+\[\begin{aligned}
+	&&	100x &= 63.\overline{63}\\
+- 	&& 	x 	&= 0.\overline{63}\\\hline
+	&&	99x 	&= 63.0
+\end{aligned}\] We divide both sides by 99, and then simplify our fraction to lowest terms. In the end, we have: \[0.\overline{63} = \frac{63}{99} = \frac{7}{11}\]
+\end{boxedex}
+
+The moral of the story is that we may have to adjust our method and choose the ``just right'' powers of 10. Consider how we might use kill the tail to turn $0.8\overline{3}$ back into $\frac{5}{6}$? (Note that the 3 repeats in the decimal form, but the 8 does not.)
+
+Let's pause to reflect. In the first part of this section, we explained why every fraction can be written as either a terminating or repeating decimal. We can make this conversion using long division. Then we went on to show the reverse: that every terminating decimal can be written as a fraction (by reading it with its place value) and every repeating decimal can be written as a fraction (by killing the tail).
+
+Armed with these tools, we might get the idea that \textit{every decimal} number can be turned into a fraction. Unfortunately (or fortunately, depending on how you look at it), this is not the case.
+
+\subsection{Existence of irrational numbers}
+
+The \glspl{irrational number} are all of the real numbers that are not rational numbers. In other words, those decimal numbers that cannot be expressed as either a terminating or repeating decimal.
+
+Back in \cref{ch:numbers} we gave an example of such a number: \[0.10\,110\,1110\,11110\,111110\ldots\]
+Now, this number clearly has a pattern. We might explain it by saying: ``After the decimal point write one, then zero, the 2 ones, then zero, then 3 ones, then zero, and so on, always writing 1 more one than you did the last time.'' The problem is that is does not terminate (our pattern will continue forever), but it doesn't repeat either. The strings of ones get longer and longer. There is never a set of always-repeating digits to group under a vinculum.
+
+This single number is enough to prove that irrational numbers exist. Of course, there are lots of them. The famous number $\pi$ is irrational, and in some sense is even more diabolical.
+\[\pi \approx 3. \, 1415926535 ~ 8979323846 ~ 2643383279 ~ 502884197 ~ 6939937510 ~ 5820974944 ~ 5923078164\ldots\]
+This number doesn't even have a pattern that we can use to describe it (as far as we know). The digits go on infinitely, and come in a random sequence.
+
+You may be wondering, ``How do we know $\pi$ is irrational?'' After all, it may be clear why the first number with the ones and zeros is irrational, but how to we know for sure that $\pi$ never terminates and never repeats?
+
+Unfortunately, explaining the irrationality of $\pi$ requires a bit more mathematics that we can get into here. However, we have learned enough to prove that certain other numbers are irrational. Those who are interested can explore the irrationality of $\sqrt{2}$ in APPENDIX SOMETHING.
+
+%\subsection{Problems and Exercises}
+%
+%When they first encounter the place value system, students sometimes believe there should be a ``oneths'' place to the right of the decimal point (before the tenths place). Why do you think they might believe this? Explain why there is no oneths place.
+%
+%Convert each of the following decimals into its fraction representation: $1.85$, $0.678$, $2.\overline{7}$, $0.\overline{35}$, $0.\overline{128}$.
+%
+%Sometimes, a decimal has a non-repeating part followed by a repeating part, for example $0.1\overline{6}$ or $3.9\overline{54}$. Use (or modify) the kill the tail approach to convert these numbers to fraction form.
+%
+%Does it makes sense for a decimal to have a repeating part followed by a non-repeating part? For example, does $0.\overline{5}6$ have any meaning? Why or why not?
+%
+%Explain why some form of kill the tail can be used to convert \textit{any} repeating decimal into a fraction.
+%
+%Use kill the tail to convert $0.\overline{9}$ to a fraction. Are you surprised by the result? Try $3.\overline{9}$ and $0.4\overline{9}$. What's going on here?
+%
+%As we saw, some irrational numbers have patterns. Use this idea to find an irrational number (a) between 0.6 and 0.7, (b) between 0.7 and 0.75, (c) between 0.75 and 0.76. How do you know the numbers you found are irrational?
+%
+%Do you believe the following statements always true, sometimes true, or never true? Explain your thinking.
+%
+%-- Between any two rational numbers there is an irrational number.
+%
+%-- Between any two irrational numbers there is a rational number.
+%
+%-- The sum of a rational number and an irrational number is a rational number.
+%
+%-- The sum of two irrational numbers is a rational number.
+%
+%Find the smallest value of $n$ such that the fraction $\frac{1}{n}$ has a decimal representation that repeats in a block of 5 digits.
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Square Roots}
+\label{sec:radsquareroots}
+
+We have worked a great deal with exponents already, but every exponent so far has been an integer. Could we have a rational number as an exponent? If so, what would it mean?
+
+\begin{boxedexplore}[Startup Exploration: TODO]
+TODO
+\end{boxedexplore}
+
+
+Let's explore the idea of using $\frac{1}{2}$ as an exponent, for example $9^{\frac{1}{2}}$. Suppose we let $x = 9^{\frac{1}{2}}$. We'd like to find an alternative way of expressing $x$ that uses only integer exponents.
+
+One approach we might take is to multiply each side of this equation by itself. Then we'd have
+\[\begin{aligned}
+x 			&= 9^{\frac{1}{2}}\\
+x\cdot x 	&= 9^{\frac{1}{2}} \cdot 9^{\frac{1}{2}}
+&&\quad\text{multiply each side by itself}\\
+x^2			&= 9^{\frac{1}{2}+\frac{1}{2}}
+&&\quad\text{product rule for exponents}\\
+x^2		&= 9^{1}\\
+x^2		&= 9
+\end{aligned}\]
+So, $x$ is the number that when multiplied by itself gives $9$ as the result. Easy! That could be either $3$ or $\umin3$, since $3\cdot 3 = \umin3 \cdot \umin3 = 9$. We say that $9^{\frac{1}{2}}$ is a \textit{square root} of $9$.
+
+\begin{boxeddef}[Square Root]
+A \gls{square root} of $a$ is a number $b$ such that $b \cdot b = a$.
+\end{boxeddef}
+
+The reason this is called a ``square root'' has to do with the geometric interpretation of this operation. If we have a square of side length $S$, then the area of the square is $S^2$. If we have a square with area $A$, then the square root of $A$ gives us the side length of the square. 
+
+\begin{center}\begin{tikzpicture}[scale=0.5]
+	\draw[fill=violet!50] (0,0) -- (4,1) -- (3,5) -- (-1,4) -- cycle;
+	\draw (3.5,3.25) node[right]{$S$};
+	\draw (1.5, 2.5) node{\Large$S^2$};
+	\draw[fill=green!50] (8,0) -- (12,1) -- (11,5) -- (7,4) -- cycle;
+	\draw (11.5,3.25) node[right]{$\sqrt{A}$};
+	\draw (9.5, 2.5) node{\Large$A$};
+\end{tikzpicture}\end{center}
+
+Positive numbers have two square roots: one positive, one negative. In the example above, we saw that both 3 and $\umin3$ are square roots of 9, since $(3 \cdot 3) = 9$ and $(\umin3 \cdot \umin3) = 9$. Similarly, the square roots of 25 are 5 and $\umin5$. Zero is the only number that has exactly one square root: the square root of 0 is 0. Negative numbers cause some problems when it comes to square roots (stay tuned for more on that).
+
+Most of the time, we'll be working with the positive square root of a number, called the \gls{principal square root} For example, the principal square root of 9 is 3 and the principal square root of 25 is 5.
+
+The symbol we use to denote the square root of $a$ is called the \gls{radical}: $\sqrt{a}$. This symbol means ``the principal square root of $a$''. So, $\sqrt{9} = 3$ and $\sqrt{25} = 5$. So, although $\umin3$ is a square root of 9, it is incorrect to write $\sqrt{9} = \umin3$ or $\sqrt{9} = \pm3$. This isn't quite rise to the level of \evilandwrong, but it's not right.\footnote{An algebra note from the future! When we simplify the expression $\sqrt{m^2}$, the result is $\abs{m}$, the absolute value of $m$. Do you see why? The value that comes out of the radical must be positive, because that notation gives the principal square root. Of course, we sometimes get two answers when solving an absolute value equation, as we saw in \cref{ch:equations}. So later on, we will sometimes get answers of the form $\pm3$.}
+
+When simplifying an expression or solving an equation, we won't always give both square roots.  A good guideline as we go along is to pay close attention and use the notation given in the problem. For example: \[\pm\sqrt{100} = \pm10 \qquad\text{and}\qquad -\sqrt{36} = \umin6\]
+In these cases, the notation specifically indicates that we want both the positive and negative square root, or only the negative square root.
+
+%%% Move to later, when solving equations?
+%An Issue of Notation Now, squaring a number does something special. It gets rid of any negatives that may be attached to the number. So, when you square a number, you eliminate the sign. So, when you ``undo'' the square and take the square root, especially when solving an equation, you don't know if the original was positive or negative and you really get two solutions that actually work!
+%
+%Since you don't know which to give you give both. Of course when using square roots with the Pythagorean theorem, we ignore the negative root because distances aren't negative.
+%
+%So, if you choose to add the square root into a problem, you have to put the +/- in it. When you see it written in an expression, you are told which one you have. You need to remember this when you are simplifying a radical or solving an equation with a radical in it.
+
+\subsection{Imaginary Numbers}
+
+Consider the expression $\sqrt{\umin16}$. This is a bit of a problem. We're meant to find the principal square root of $\umin16$, but the closest we can get is $4 \cdot \umin4 = \umin16$. It's true that $4$ and $\umin4$ have the same absolute value, but they're not the same number, which means we're not \textit{squaring} anything.
+
+So, there is no real number equal to $\sqrt{\umin16}$. Of course, $\umin16$ isn't special, the same argument applies to any negative number.
+
+\begin{boxeddef}[Square Root of a Negative Number]
+There is no real number equal to $\sqrt{a}$ for $a < 0$.
+\end{boxeddef}
+
+Note that this \textit{doesn't} mean that $\umin16$ doesn't have any square roots. It simply means that the square roots are not real numbers. The square roots of $\umin16$ are in a set of numbers called the \textit{complex numbers} $\C$, but not in the real numbers $\R$.
+
+To build up the complex numbers, we introduce the so-called imaginary unit $i$ which has the property that $i^2 = −1$. Remember, the domain of algebra 1 is the set real numbers. But, the domain of algebra 2 and beyond is the set of complex numbers. So, if you're intrigued about imaginary numbers, just hang in there.
+
+Our work in algebra 1 will bring us mostly in contact with \textit{square roots}, but other roots are possible. For example a ``cube root'' of a number $a$ is a number $b$ such that $b\cdot b\cdot b = a$. We write $\sqrt[3]{a}$ to denote the cube root of $a$. Negative numbers under the cube root symbol are no problem: \[\sqrt[3]{\umin8} = \umin2 \qquad\text{since}\qquad \umin2\cdot\umin2\cdot\umin2 = \umin8\]
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Simplified Radical Form}
+\label{sec:radsimplifiedform}
+
+\begin{boxedexplore}[Startup Exploration: TODO]
+TODO
+\end{boxedexplore}
+
+When we take the square root of a perfect square we get an integer as the answer. It may come in handy to memorize the first 25 or so perfect squares, so that you can recognize them when they come up in a problem.
+
+\begin{center}
+\begin{tabular}{*{5}{C{0.15\textwidth}}}
+1^2 = 1	 &
+2^2 = 4	 &
+3^2 = 9	 &
+4^2 = 16 &
+5^2 = 25 \\
+6^2 = 36 &
+7^2 = 49 &
+8^2 = 64 &
+9^2 = 81 &
+10^2 = 100 \\
+11^2 = 121 &
+12^2 = 144 &
+13^2 = 169 &
+14^2 = 196 &
+15^2 = 225 \\
+16^2 = 256 &
+17^2 = 289 &
+18^2 = 324 &
+19^2 = 361 &
+20^2 = 400 \\
+21^2 = 441 &
+22^2 = 484 &
+23^2 = 529 &
+24^2 = 576 &
+25^2 = 625 \\
+\end{tabular}
+\end{center}
+
+But, things may not be so easy when taking the square root of a number that is \textit{not} a perfect square. In fact, the square root of a non-square natural number will be an irrational number\index{irrational number}, like $\sqrt{2}$.
+
+The \textit{exact value} of such a number can only be represented using the radical symbol. Writing out a decimal value -- no matter how many decimals you write down -- will always be an approximation. So, it's a good habit of mind to think ``should I be giving an exact answer to this problem, or is a decimal approximation good enough''. Very often, the context (or the directions) will make this choice clear.
+
+To help us standardize the way we write radical expressions, we all agree to comply with:
+
+\begin{boxedcriteria}[Simplified Radical Form]
+An expression is in simplified radical form if:
+
+Like radical terms have been combined.
+\newline
+The expression under the radical has no perfect square factors other than 1.
+\newline
+There are no fractions under the radical.
+\newline
+There are no radicals in the denominator of a fraction.
+\end{boxedcriteria}
+
+Over the next few pages, we will discuss each of these criteria and the algebraic manipulations that we can use to make sure our expressions comply.
+
+\subsection{Like Radical Terms}
+
+The first criteria of simplified radical form states:
+
+\begin{boxedcriteria}[Simplified Radical Form: Criteria \#1]
+Like radical terms have been combined.
+\end{boxedcriteria}
+
+We combine radical terms as we do variable terms. For example, we are very familiar with the simplification $3x+4x = 7x$. With radicals, we have $3\sqrt{5}+4\sqrt{5} = 7\sqrt{5}$.
+
+\begin{boxedwarning}
+When we say like radical terms ``can be combined'', don't go thinking you can add the numbers under the radical. To add the values like this is \evilandwrong.
+\[ \sqrt{3} + \sqrt{3} \neq \sqrt{6}\]
+
+While we're at it, don't get any ideas about splitting the radical-of-a-sum into the sum-of-radicals. This, too, is \evilandwrong.
+\[\sqrt{2+14} \neq \sqrt{2} +\sqrt{14}\]
+\end{boxedwarning}
+
+%\subsection{Problems and Exercises}
+%
+%\setcounter{psetcounter}{0}
+%Express each of the following in simplified radical form:
+%\begin{problemset}{2}
+%	\item $\sqrt{10}-6\sqrt{10}+4\sqrt{10}$
+%	\item $8\sqrt{20}+11\sqrt{20}+\sqrt{20}$
+%	\item $\sqrt{27}-5\sqrt{3}+\sqrt{108}$
+%	\item $\sqrt{24}+\sqrt{30}-\sqrt{54}$
+%\end{problemset}
+%
+%Other things?
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Product Properties of Radicals}
+\label{sec:radproduct}
+
+\begin{boxedexplore}[Startup Exploration: TODO]
+TODO
+\end{boxedexplore}
+
+
+Let's look more closely at the second criteria for simplified radical form.
+
+\begin{boxedcriteria}[Simplified Radical Form: Criteria \#2]
+The expression under the radical has no perfect square factors other than 1.
+\end{boxedcriteria}
+
+This may seem strangely worded. It clearly handles the idea that there should be no perfect squares under the radical, and that makes sense. Expressions like $\sqrt{4}$ and $\sqrt{25}$ can pretty obviously be simplified.
+
+But, this criteria also catches expressions like $\sqrt{24}$ and $\sqrt{50}$ because those numbers, neither of which is a perfect square, each have a perfect square as a factor: 24 has 4 as a factor, and 50 has 25 as a factor.
+
+How can we simplify an expression like $\sqrt{50}$? For help, we turn to:
+
+\begin{boxeddef}[The Multiplication Property of Radicals]
+\begin{center}
+For any $a \geq 0$ and $b \geq 0$, $\sqrt{ab} = \sqrt{a} \cdot \sqrt{b}$
+\end{center}
+
+\addtodoitem{What's better "multiplication property" or "product property"? Division or Quotient property? We should choose and be consistent, here and with other rules (like exponente rules).}
+
+\bigskip\noindent
+Note: In algebra 1 we only use the square root version of this property, though in fact it applies to radicals of any degree: cube roots, fourth roots\ldots
+\end{boxeddef}
+
+This property looks an awful lot like the product rule for exponents. This makes sense, since here we are undoing the power of a product rule, where the power is a rational exponent!
+
+\begin{boxedex}
+Express $\sqrt{50}$ in simplified radical form.
+
+\bigskip\inlineex{Solution.}
+We know $\sqrt{50}$ is not yet in simplified radical form because 50 is divisible by a perfect square, $50 = 25 \cdot 2$. We apply the multiplication property of radicals like so:
+\[
+\begin{aligned}
+\sqrt{50} 	&= \sqrt{25 \cdot 2}
+&& \quad \text{rewrite 50 to show its perfect square factor}\\
+			&= \sqrt{25} \cdot \sqrt{2}
+&& \quad \text{apply the multiplication property of radicals}\\
+			&= 5 \cdot \sqrt{2}
+&& \quad \text{the principal square root of a perfect square is a natural number}
+\end{aligned}
+\]
+So, $\sqrt{50} = 5\sqrt{2}$. These two expressions are equal, but only the second expression satisfies the criteria of simplified radical form.
+\end{boxedex}
+
+\subsection{Different Approaches to Simplifying}
+
+There are a number of ways to go about applying this property to simplify expressions. Use whatever approach makes the most sense to you! Here are some alternatives, though you might find a different approach that fits you better. In any case, it will probably be helpful to learn a variety of methods to simplify the radicals. Depending on the problem, some methods may be easier to use than others.
+
+For example, let's express $\sqrt{108}$ in simplified radical form.
+
+\subsubsection{Strategy 1: Largest Square Factor}
+
+In this strategy, we find the largest perfect square factor and simplify it using the product rule for radicals. We might notice that $108 = 3 \times 36$: \[\sqrt{108} = \sqrt{36 \cdot 3} = \sqrt{36} \cdot \sqrt{3} = 6\sqrt{3}\]
+
+\subsubsection{Strategy 2: One Square at a Time}
+
+It might not be obvious what the largest perfect square is, so in this strategy we look for \textit{any} prefect square factor and work one square at a time. For instance, we might notice that 108 is divisible by 9 (how can we spot that easily?). Then: \[\sqrt{108} = \sqrt{9 \cdot 12} = \sqrt{9} \cdot \sqrt{12} = 3 \cdot \sqrt{12} = 3 \cdot \sqrt{4 \cdot 3} = 3 \cdot \sqrt{4} \cdot \sqrt{3} = 3 \cdot 2 \cdot \sqrt{3} = 6\sqrt{3}\]
+
+In this approach, we have to keep checking to see whether the number under the radical is ``square-free'' or not. After our first simplification, we have 12 under the radical. But 12 has 4 as a factor, so we have to do another simplification step.
+
+\subsubsection{Strategy 3: The Sniper Method}
+
+The idea here is to write the prime factorization of the number under the radical, and then look for pairs of factors. The factorization of $108 = 2 \cdot 2 \cdot 3 \cdot 3 \cdot 3$, so: \[\sqrt{108} = \sqrt{\underline{\color{blue}2 \cdot 2} \cdot \underline{\color{red}3 \cdot 3} \cdot 3} = \underline{\color{blue}2} \cdot \underline{\color{red}3} \cdot \sqrt{3} = 6\sqrt{3} \]
+
+We've given this strategy the clever (though perhaps gruesome) name the \textit{sniper method}. Think of the radical as a prison. There are snipers outside and any number that tries to escape needs to have a decoy. A single factor of 2 is stuck inside for life, but if the 2 has a partner (that is, if there's a $2 \cdot 2$ under the radical), then 2 can make a break for it!
+
+But, only one of the partners survives the jailbreak. The snipers take out the decoy.
+
+In the example above, one 2 makes it out, and so does one 3. The final factor of 3 is partnerless, and left trapped inside its radical prison.
+
+%\subsection{Problems and Exercises}
+%
+%Express each of the following in simplified radical form:
+%\begin{problemset}{2}
+%	\item $\sqrt{720}$
+%	\item $\pm\sqrt{486}$
+%	\item $\sqrt{r^8m^3}$
+%	\item $\sqrt{6} \cdot \sqrt{12}$
+%	\item $(\sqrt{8})^3$
+%	\item $\left( 3\sqrt{12x^3} \right)^3$
+%\end{problemset}
+%
+%How would the sniper method analogy work for cube-roots or fourth-roots? What if we think about higher-degree radicals as having a higher-degree of prison security?
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Quotient Properties of Radicals}
+\label{sec:radquotient}
+
+\begin{boxedexplore}[Startup Exploration: TODO]
+TODO
+\end{boxedexplore}
+
+
+Criteria \#3 and \#4 are both pretty antiquated. They came about in the pre-calculator days when folks had to do a lot more calculation by hand and use large data tables to approximate radical values. Yet, these last two properties are still considered ``standard'' for simplified radical form.
+
+Rules were made to be broken, though, and there will be times when it's OK to break away from these criteria (\#4 especially). But we'll burn that bridge when we come to it. For now, all four criteria are enforcable!
+
+\begin{boxedcriteria}[Simplified Radical Form: Criteria \#3]
+No fractions under the radical.
+\end{boxedcriteria}
+
+When faced with expressions like \[\sqrt{\frac{4}{49}} \text{\qquad or \qquad} \sqrt{\frac{24}{25}},\]we turn to:
+
+\begin{boxeddef}[The Division Property of Radicals]
+\begin{center}
+For any $a \geq 0$ and $b \geq 0$, \[\sqrt{\frac{a}{b}} = \dfrac{\sqrt{a}}{\sqrt{b}}\]
+\end{center}
+
+\bigskip\noindent
+Note: This property applies to radicals of any degree, though for now we'll focus on square roots.
+\end{boxeddef}
+
+This property is just like the quotient rule for exponents, but with a rational exponent. Let's look at an example:
+
+\begin{boxedex}
+Express $\sqrt{\frac{24}{25}}$ in simplified radical form.
+
+\bigskip\inlineex{Solution.}
+\[\begin{aligned}
+\sqrt{\frac{24}{25}}	&= \frac{\sqrt{24}}{\sqrt{25}}
+&& \text{\quad apply the division property of radicals}\\[3ex]
+					&= \frac{2\sqrt{6}}{5}
+&& \text{\quad simplify the sqaure roots}\\
+\end{aligned}
+\]
+\end{boxedex}
+
+\subsection{Rationalizing the Denominator}
+
+When simplifying an expression using the division property, we may encounter something like the following: \[\sqrt{\frac{9}{2}} = \frac{\sqrt{9}}{\sqrt{2}} = \frac{3}{\sqrt{2}}\]
+Back in the pre-calculator days, this led to the guideline:
+
+\begin{boxedcriteria}[Simplified Radical Form: Criteria \#4]
+No radicals in the denominator of a fraction.
+\end{boxedcriteria}
+
+When you have a radical in the denominator of a fraction you have an \textit{irrational denominator}. Our goal is to fix that by creating an equivalent fraction with a \textit{rational denominator}. The process of making this translation is called \inlinedef{\gls{rationalizing the denominator}}.
+
+We will employ the trusty \gls{identity property of multiplication}. Remember, multiplying a number by 1 does not change the value of the number. The trick will be to choose the way our version of 1 looks. We are going to choose a fancy version of 1 that when multiplied by our irrational denominator gives us a rational number (in fact, an integer).
+
+Study this example:
+
+\begin{boxedex}
+Write $\dfrac{3}{\sqrt{2}}$ in simplified radical form.
+
+\bigskip\inlineex{Solution.}
+\[\begin{aligned}
+\dfrac{3}{\sqrt{2}} &= \dfrac{3}{\sqrt{2}} \cdot 1
+&&\quad\text{identity property of multiplication}\\
+&= \dfrac{3}{\sqrt{2}} \cdot \dfrac{\sqrt{2}}{\sqrt{2}}
+&&\quad\text{substitute a fancy version of 1}\\
+&=~ \dfrac{3 \sqrt{2}}{\sqrt{2} \cdot \sqrt{2}}
+&&\quad\text{multiply fractions}\\
+&=~ \dfrac{3 \sqrt{2}}{2}
+&&\quad\text{product rule for radicals (in the denominator)}\\
+\end{aligned}
+\]
+\end{boxedex}
+
+Note that we chose as our fancy 1 \textit{exactly} what we needed to make the denominator of our fraction work out! This might seem like cheating, but it's a completely legal move, algebraically.
+
+Be sure to pay close attention. Sometimes we can use the division property in reverse to get rid of radicals in the denominator. We'll work the next example in two different ways:
+
+\begin{boxedex}
+Write $\dfrac{\sqrt{84}}{\sqrt{6}}$ in simplified radical form.
+
+\bigskip\inlineex{Solution 1.} We'll rationalize the denominator using a fancy version of 1.
+\[\begin{aligned}
+\dfrac{\sqrt{84}}{\sqrt{6}} &= \dfrac{\sqrt{84}}{\sqrt{6}} \cdot 1
+&&\quad\text{identity property of multiplication}
+\\[3ex]
+&= \dfrac{\sqrt{84}}{\sqrt{6}} \cdot \dfrac{\sqrt{6}}{\sqrt{6}}
+&&\quad\text{substitute a fancy version of 1}
+\\[3ex]
+&=~ \dfrac{\sqrt{84} \cdot \sqrt{6}}{\sqrt{6} \cdot \sqrt{6}}
+&&\quad\text{multiply fractions}
+\\[3ex]
+&=~ \dfrac{\sqrt{{\color{blue}84} \cdot {\color{red}6}}}{6}
+&&\quad\text{product rule for radicals}
+\\[3ex]
+&=~ \dfrac{\sqrt{{\color{blue}2 \cdot 2 \cdot 3 \cdot 7} \cdot {\color{red}3 \cdot 2}}}{6}
+&&\quad\text{simplify numerator using the sniper method}
+\\[3ex]
+&=~ \dfrac{2 \cdot 3 \sqrt{2 \cdot 7}}{6}
+&&\quad\text{}
+\\[3ex]
+&=~ \sqrt{14}
+&&\quad\text{}\\
+\end{aligned}
+\]
+
+\bigskip\inlineex{Solution 2.} We'll use the division property of radicals in reverse first, and then simplify the fraction under the radical.
+\[\begin{aligned}
+\dfrac{\sqrt{84}}{\sqrt{6}} &= \sqrt{\dfrac{84}{6}}
+&&\quad\text{division property of radicals}
+\\[3ex]
+&=~ \sqrt{\dfrac{14}{1}}
+&&\quad\text{simplify the fraction}
+\\[3ex]
+&=~ \sqrt{14}
+&&\quad\text{Voil\`a.}
+\end{aligned}
+\]
+\end{boxedex}
+
+The second approach is much easier, though it may not always be this easy. (Can you explain why? Under what circumstances will we be able to use the kind of shortcut we have here in Solution 2?)
+
+\begin{boxedwarning}
+Answers with fractions must be simplified, but folks sometimes get overly aggressive with the simplification. Consider the following: \[\frac{2}{\sqrt{6}} = \frac{2}{\sqrt{6}}\cdot\frac{\sqrt{6}}{\sqrt{6}} = \frac{2\sqrt{6}}{\sqrt{6}\cdot\sqrt{6}} = \frac{2\sqrt{6}}{6}\]
+At this point, we can do one more simplification: \[\frac{2\sqrt{6}}{6} = \frac{\sqrt{6}}{3} \qquad \text{Yes!}\]
+But we might be tempted to try and simplify even more: \[\frac{\sqrt{6}}{3} = \frac{\sqrt{2}}{1} \qquad \text{No!}\]
+It's tempting, but we can't simplify using things \textit{under} the radical and things \textit{outside} the radical. That 6 under the radical cannot cancel with the 3 outside! To attempt such a simplification is \evilandwrong.
+\end{boxedwarning}
+
+
+%\subsection{Problems and Exercises}
+%
+%\setcounter{psetcounter}{0}
+%Express each of the following in simplified radical form:
+%\begin{problemset}[4ex]{2}
+%	\item $\sqrt{\dfrac{4}{49}}$
+%	\item $\sqrt{\dfrac{48}{3x^2}}$
+%	\item $\sqrt{\dfrac{12x^5y}{3x^{\umin1}y^3}}$
+%	\item $\dfrac{\umin3\sqrt{2}}{\sqrt{7}}$
+%	\item $\sqrt{\dfrac{15}{18}}$
+%	\item $\dfrac{\sqrt{72}}{\sqrt{10}}$
+%	\item $\sqrt{\dfrac{42x^3}{6y}}$
+%	\item $\dfrac{3x\sqrt{18x^3}}{2\sqrt{12x}}$
+%\end{problemset}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Coordinate Geometry}
+\label{sec:coordgeometry}
+
+\begin{boxedexplore}[Startup Exploration: TODO]
+TODO
+\end{boxedexplore}
+
+
+As an application of radicals and radical expressions, which are closely connected to the side lengths of squares, it's natural to discuss concepts from geometry. We'll begin with one of the most famous and important statements in mathematics.
+
+\subsection{The Pythagorean Theorem}
+
+It's a good bet that have seen the Pythagorean Theorem before, and that you will see it in every high school mathematics class you take, and many of the mathematics classed you take in college. In fact, the Pythagorean theorem is a foundational piece of an entire branch of mathematics based on the properties of triangles called \textit{trigonometry}.\footnote{This seems like the right place for a footnote... Not sure what to say.}
+
+\begin{boxeddef}[The Pythagorean Theorem]
+The sum of the squares of the lengths of the \glspl{leg} of a right triangle is equal to the square of the length of the \gls{hypotenuse}.
+
+If $a$ and $b$ represent the lengths of the legs (the perpendicular sides) of a right triangle, and $c$ represents the length of the hypotenuse (the longest side, opposite the right angle), then \[a^2 + b^2 = c^2\]
+\end{boxeddef}
+
+The theorem is named after Greek philosopher and mathematician Pythagoras of Samos, who lived around 570--495 BCE. However, there is substantial evidence that the theorem was know (at least in part) to many different cultures from many different time periods. There is evidence, for instance, that the ancient Babylonians knew about Pythagorean triples (see the next section) more than 1000 years BCE.
+
+Let's jump in with a famous right triangle: one with legs of length 3 and 4, and with hypotenuse of length 5. If we draw squares on the sides of the triangle, we can see that the sums of the areas of the two smaller squares (9+16) is exactly equal to the area of the largest square (25).
+\begin{center}
+\begin{tikzpicture}[xscale=0.5,yscale=0.5]
+	%% grid setup
+	%\draw[very thin,color=gray!25] (0,0) grid (12,13);
+	\draw[thick] (1,5) grid (4,8);
+	\draw[thick] (4,1) grid (8,5);
+	\draw[thick,rotate around={53:(8,5)}] (8,5) grid (13,10);
+\end{tikzpicture}
+\end{center}
+
+This relationship holds true for all right triangles as does its \textit{converse}. In this case, that means if we have three numbers that satisfy the Pythagorean theorem, then we know that they must form the sides of a right triangle.
+
+You might be asking yourself, ``How do we know that the theorem is true for \textit{every right triangle ever}?'' Those who are curious might enjoy exploring this question in SOME APPENDIX.
+
+%\begin{boxedex}
+%Determine if the the given values form the sides of right triangles. 1. 5, 12,
+% 13 2. 1.5, 2.5, 4.5 Solution: Always start a problem like this by assuming that
+% the largest of the 3 numbers would possibly represent the hypotenuse. I say
+% possibly because if the relationship doesn't hold, the triangle is not a right
+% one and won't have a hypotenuse. 1. Determine if this is true 52+ 122 = 132
+% \$\$25 + 144 = 169\$\$169 = 169 it is true and therefore make up a right
+% triangle 2. Is 1.52 + 2.52 = 4.52 ? \$\$ 2.25+6.25 = 20.25\$\$No! So this can't
+% form a right triangle
+%\end{boxedex}
+
+\subsection{Pythagorean Triples}
+
+\begin{boxeddef}[Pythagorean Triple]
+A \textit{Pythagorean triple} is a set of three positive integers satisfying the Pythagorean theorem.
+\end{boxeddef}
+
+There are infinitely many Pythagorean triples, and it is quite handy to know a few by heart. (This is because they are used quite a bit in problems, and those delightful standardized tests we all know and love.)
+
+Handy Pythagorean triples:
+
+\begin{tabular}{*{5}{C{0.15\textwidth}}}
+$(3, 4, 5)$ &
+$(5, 12, 13)$ &
+$(7, 24, 25)$ &
+$(9, 40, 41)$ &
+$(8, 15, 17)$
+\end{tabular}
+
+The benefit of memorizing a few of these is that, if you see that a right triangle that has leg lengths of 7 and 24, you know that the hypotenuse has length 25 -- without having to do any calculation.
+
+The triples above are called \inlinedef{primitive Pythagorean triples} because the three values are relatively prime. You can generate new Pythagorean triples by scaling up a triple that you know. For example $(6, 8, 10)$ is a triple formed by scaling up the $(3, 4, 5)$ triple by a factor of 2.
+
+\subsection{Find-the-Missing-Side Problems}
+
+The classic application of the Pythagorean theorem is to find a missing side length, either a leg or a hypotenuse, and you may have solved problems like this before. Now that we have some algebra skills, however, our answers should be given in simplified radical form! No more decimal approximations (unless the directions state otherwise)!
+
+\begin{boxedex}
+Find the length of the digaonal of a 4-by-8 rectangle.
+
+\bigskip\inlineex{Solution.} This problem might not, at first, seem to have anything to do with the Pythagorean theorem. The theorem, after all, is about right triangles, and this question is about rectangles! Drawing a picture helps to reveal the connection:
+
+\begin{center}\begin{tikzpicture}[scale=0.5]
+	\draw[dashed] (0,0) -- (8,4);
+	\draw (0,0) rectangle (8,4);
+	\draw (4,0) node[below]{8};
+	\draw (8,2) node[right]{4};
+	\draw (4, 2) node[above]{$d$};
+\end{tikzpicture}\end{center}
+
+If we let $d$ represent the length of the diagonal, then we can see that it is the hypotenuse of a right triangle with legs of length 4 and 8. So:
+\[\begin{aligned}
+&& 				d^2	&= 4^2 + 8^2\\
+&&					&= 16 + 64\\
+&&					&= 80\\
+\Rightarrow	&& 	d 	&= \sqrt{80}\\
+			&&		&= \sqrt{2 \cdot 2 \cdot 2 \cdot 2 \cdot 5}\\
+			&&		&= 2 \cdot 2 \cdot \sqrt{5}\\
+			&& d 	&= 4\sqrt{5}
+\end{aligned}\]
+\end{boxedex}
+
+
+\subsection{The Distance Formula}
+
+One important application of the Pythagorean theorem is called the \inlinedef{\gls{distance formula}}. It is a formula that we can use to calculate the distance between two points on a coordinate grid.
+
+Suppose we want to find the distance between the points $(1,2)$ and $(6,7)$. In other words, we want to find the length of the line segment shown below.
+
+\begin{center}
+\begin{tikzpicture}[xscale=0.5,yscale=0.5]
+	%% grid setup
+	\draw[very thin, color=gray!25] (0,0) grid (10,10);
+	\draw[->,thick] (0,0) -- (10,0); % node[right] {$x$};
+	\draw[->,thick] (0,0) -- (0,10); % node[above] {$y$};
+	\foreach \x in {0,...,10} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+	\foreach \y in {0,...,10} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+	\draw[very thick,violet] (1,2) -- (8,7); % node[right] {$x$};
+	\draw[violet] plot[only marks,mark=*,mark size=4] coordinates{(1,2)(8,7)};
+\end{tikzpicture}
+\end{center}
+
+We can use the Pythagorean theorem! All we have to do is turn the line segment into the hypotenuse of a right triangle. The legs are the vertical and horizontal distances between the points, kind of like a slope triangle!
+
+Draw the triangle, find the horizontal and vertical distances, then apply the Pythagorean theorem.
+
+\begin{center}
+\begin{tikzpicture}[xscale=0.5,yscale=0.5]
+	%% grid setup
+	\draw[very thin, color=gray!25] (0,0) grid (10,10);
+	\draw[->,thick] (0,0) -- (10,0); % node[right] {$x$};
+	\draw[->,thick] (0,0) -- (0,10); % node[above] {$y$};
+	\foreach \x in {0,...,10} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+	\foreach \y in {0,...,10} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+	\draw[very thick,violet] (1,2) -- (8,7); % node[right] {$x$};
+	\draw[thick] (1,2) -- (8,2);
+	\draw (5,2) node[below] {7};
+	\draw[thick] (8,2) -- (8,7);
+	\draw (8,4) node[right] {5};
+	\draw[violet] plot[only marks,mark=*,mark size=4] coordinates{(1,2)(8,7)};
+\end{tikzpicture}
+\end{center}
+
+The horizontal distance is 7 units, and the vertical distance is 5 units. Those are the legs of the right triangle. Then, we use the theorem to find the length of the hypotenuse: \[\begin{aligned} a^2 + b^2 &= c^2 \\ 5^2 + 7^2 &= c^2 \\ 25 + 49 &= c^2 \\ 74 &= c^2 \\ \sqrt{74} &= c\end{aligned}\]
+
+Since the process is the same every time, we can generalize to find the distance between any two points $(x_1, y_1)$ and $(x_2, y_2)$ in the plane.
+
+\begin{center}
+\begin{tikzpicture}[xscale=0.5,yscale=0.5]
+	%% grid setup
+%	\draw[very thin, color=gray!25] (0,0) grid (10,10);
+	\draw[->,thick] (0,0) -- (10,0); % node[right] {$x$};
+	\draw[->,thick] (0,0) -- (0,10); % node[above] {$y$};
+%	\foreach \x in {0,...,10} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+%	\foreach \y in {0,...,10} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+	%% line segment
+	\draw[very thick,blue] (2,3) -- (8,7); % node[right] {$x$};
+	%% horizontal labels
+	\draw[dotted] (2,3) -- (2,0);
+	\draw (2,0.1) -- (2,-0.1) node[below]{$x_1$};
+	\draw[dotted] (8,7) -- (8,0);
+	\draw (8,0.1) -- (8,-0.1) node[below]{$x_2$};
+	%% vertical labels
+	\draw[dotted] (2,3) -- (0,3);
+	\draw (0.1,3) -- (-0.1,3) node[left]{$y_1$};
+	\draw[dotted] (8,7) -- (0,7);
+	\draw (0.1,7) -- (-0.1,7) node[left]{$y_2$};
+
+%	\draw (1,2) node[below]{$(x_1, y_1)$};
+%	\draw[thick] (1,2) -- (8,2);
+%	\draw (5,2) node[below] {$x_2 - x_1$};
+%	\draw[thick] (8,2) -- (8,7);
+%	\draw (8,4) node[right] {$y_2 - y_1$};
+	\draw[blue] plot[only marks,mark=*,mark size=4] coordinates{(2,3)(8,7)};
+\end{tikzpicture}
+\end{center}
+
+\begin{boxeddef}[The Distance Formula]
+Given two points in the plane $(x_1, y_1)$ and $(x_2, y_2)$, the length $d$ of the line segment connecting the points is given by
+\[d = \sqrt{ (x_2 - x_1)^2 + (y_2 - y_1)^2 }\]
+\end{boxeddef}
+
+This might look like a bunch of alphabet soup, much harder to remember than the Pythagorean theorem. But remember: this \textit{is} the Pythagorem theorem! If you forget the formula, don't panic! Just remember that the line segment between the two points is the hypotenuse of a right triangle.
+
+\begin{boxedex}
+Find the distance between the points $(5, 12)$ and $(-4, -2)$. Express the distance in simplified radical form.
+
+\inlineex{Solution:} We just use the distance formula. We have both subtraction and negative numbers, so watch those minus signs! \[\begin{aligned} d &= \sqrt{ (5 - -4)^2 + (12 - -2)^2 } \\ &= \sqrt{ 9^2 + 14^2 } \\ &=\sqrt{ 81 + 196 } \\ &=\sqrt{ 277 }\end{aligned}\] Since 277 is prime, we know our answer complies with simplified radical form, so we're all done. The distance betnwee the two points is $\sqrt{277}$ units.
+\end{boxedex}
+
+\subsection{Midpoint Formula}
+
+Related to the midpoint formula, is another formula for finding the coordinates of \inlinedef{midpoint} of a given line segment.
+
+Suppose we wanted to find the midpoint of the line segment connecting $(2,8)$ and $(8,4)$.
+\begin{center}
+\begin{tikzpicture}[xscale=0.5,yscale=0.5]
+	%% grid setup
+	\draw[very thin, color=gray!25] (0,0) grid (10,10);
+	\draw[->,thick] (0,0) -- (10,0); % node[right] {$x$};
+	\draw[->,thick] (0,0) -- (0,10); % node[above] {$y$};
+	\foreach \x in {0,...,10} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+	\foreach \y in {0,...,10} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+	\draw[very thick,violet] (2,8) -- (8,4); % node[right] {$x$};
+	\draw[violet] plot[only marks,mark=*,mark size=4] coordinates{(2,8)(8,4)};
+\end{tikzpicture}
+\end{center}
+Well, it sure looks like the midpoint of this segment is the point $(5,6)$\ldots but can we be sure?
+
+One way to explain this is by drawing in the right triangle, and then chopping that triangle into four congruent sub-triangles. (Remember our work with fractals and the Sierpi\'{n}ski triangle ages ago?)
+\begin{center}
+\begin{tikzpicture}[xscale=0.5,yscale=0.5]
+	%% grid setup
+	\draw[very thin, color=gray!25] (0,0) grid (10,10);
+	\draw[->,thick] (0,0) -- (10,0); % node[right] {$x$};
+	\draw[->,thick] (0,0) -- (0,10); % node[above] {$y$};
+	\foreach \x in {0,...,10} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+	\foreach \y in {0,...,10} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+	\draw[violet!50, fill=violet!50] (2,8)--(2,6)--(5,6)--cycle;
+	\draw[violet!50, fill=violet!50] (2,6)--(2,4)--(5,4)--cycle;
+	\draw[violet!50, fill=violet!50] (5,6)--(5,4)--(8,4)--cycle;
+	\draw[very thick,violet] (2,8) -- (8,4); % node[right] {$x$};
+	\draw[violet] plot[only marks,mark=*,mark size=4] coordinates{(2,8)(8,4)};
+\end{tikzpicture}
+\end{center}
+This diagram suggests that the $x$-coordinate of the midpoint of the hypotenuse is exactly halfway between the $x$-coordinates of the legs. The same goes for the $y$-coordinate.
+
+So, to find the coordinates of the midpoint, all we have to do is average the coordinates of the endpoints!
+
+\begin{boxeddef}[The Midpoint Formula]
+Given a line segment with endpoints $(x_1, y_1)$ and $(x_2, y_2)$, the coordinates of the midpoint of the segment are \[\left( \frac{x_1+x_2}{2}, \frac{y_1+y_2}{2} \right)\]
+\end{boxeddef}
+
+Once again, you don't have to memorize this formula if you remember where it comes from!
+
+\begin{boxedex}
+Find the midpoint of the segment connecting the points $(-13,8)$ and $(6, -2)$.
+
+\inlineex{Solution:} Let's calculate the midpont first, and then check our answer by drawing a picture. The formula is pretty straightforward. The midpoint should be located at: \[\left( \frac{-13+6}{2}, \frac{8+-2}{2} \right) = \left( \frac{-7}{2}, \frac{6}{2} \right) = (-3.5, 3) \]
+Here's a graph to check our work:
+\begin{center}
+\begin{tikzpicture}[scale=0.4]
+	%% grid setup
+	\draw[very thin, color=gray!25] (-15,-4) grid (8, 10);
+	\draw[<->,thick] (-15,0) -- (8,0);
+	\draw[<->,thick] (0,-4) -- (0,10);
+	\foreach \x in {-14,-12,...,8} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+	\foreach \y in {-4,-2,...,10} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+	%% line segment
+	\draw[very thick,blue] (-13,8)--(6,-2);
+	\draw[blue] plot[only marks,mark=*,mark size=4] coordinates{(-13,8)(6,-2)};
+	\draw[blue, fill=yellow] plot[only marks,mark=*,mark size=4] coordinates{(-3.5,3)};
+\end{tikzpicture}
+\end{center}
+\end{boxedex}
+
+%\subsection{Problems and Exercises}
+%
+%In the distance formula, what would happen if we did the subtracting in the opposite order? That is, what would happen if we calculated the distance using $(x_1 - x_2)$ instead of $(x_2 - x_1)$?
+%
+%%Here's a slightly more interesting application of the distance formula:
+%%\begin{boxedex}
+%Find the perimeter of the polygon with the following vertices $(3, -5)$; $(5, -5)$; and $(4, 2)$. Express the permieter in simplified radical form.
+
+%\inlineex{Solution:} To find the perimieter, we need to find the lengths of the sides of the polygon and then just add them together. Drawing a picture couldn't hurt:
+%\begin{center}
+%\begin{tikzpicture}[xscale=0.5,yscale=0.5]
+%	%% grid setup
+%	\draw[very thin, color=gray!25] (0,-6) grid (6,3);
+%	\draw[->,thick] (0,0) -- (6,0);
+%	\draw[<->,thick] (0,-6) -- (0,3);
+%	\foreach \x in {1,...,5} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+%	\foreach \y in {-5,...,3} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+%	%% line segment
+%	\draw[very thick,blue] (3,-5)--(5,-5)--(4,2)--cycle;
+%	\draw[blue] plot[only marks,mark=*,mark size=4] coordinates{(3,-5)(5,-5)(4,2)};
+%\end{tikzpicture}
+%\end{center}
+%From the picture, we can see that one side of the triangle (at the bottom) is horizontal and of length 2. No calculation needed.
+%
+%We might also notice that the two other sides are the same length! That's convenient. We use the distance formula to find the length of the segment with endpoints at $(3,-5)$ and $(4, 2)$:\[\begin{aligned} d &= \sqrt{ (3 - 4)^2 + (-5 - 2)^2 } \\ &= \sqrt{ (-1)^2 + (-7)^2 } \\ &=\sqrt{ 1 + 49 } \\ &=\sqrt{ 50 } =\sqrt{ 25 \cdot 2 } =\sqrt{25} \cdot \sqrt{2} =5\sqrt{2}\end{aligned}\] The total perimter of the triangle, then, is $2+5\sqrt{2}+5\sqrt{2}$, which we need to write in simplified radical form. So, the perimeter of the polygon is \fbox{ $2 + 10\sqrt{2}$ units }
+%\end{boxedex}
+
+
+%Here's a slightly more interesting application of the midpoint formula:
+%\begin{boxedex}
+The \textit{perpendicular bisector} of a line segment is the line which is perpendicular to the segment and passes through the midpoint of the segment. Write an equation for the perpendicular bisector of the segment connecting the points $(0,4)$ and $(-6,0)$.
+%
+%\inlineex{Solution:} The definition of a perpendicular bisector tells us that we'll need to find the midpoint of the given line segment, and we'll need to know how to describe the line perpendicular to it.
+%
+%The midpoint isn't too hard to find:\[\left( \frac{0+-6}{2}, \frac{4+0}{2} \right) = (-3, 2)\]
+%What about being perpendicular? Recall that perpendicular lines have opposite reciprocal slopes. The slope of the given line segment is: \[m = \frac{\Delta y}{\Delta x} = \frac{0-4}{-6-0} = \frac{-4}{-6} = \frac{2}{3}\]
+%So, the slope of the line perpendicular to the segment must have slope $-\frac{3}{2}$.
+%
+%So, now we have a slope and a point on the line. We can write the equation of the line in point-slope form! \[y = -\frac{3}{2}(x+3)+2\]
+%
+%Here's a picture of the whole construction. The given segment is in blue, the midpoint is marked in yellow, and the perpendicular bisector is drawn in red:
+%\begin{center}
+%\begin{tikzpicture}[scale=0.5]
+%	%% grid setup
+%	\draw[very thin, color=gray!25] (-8,-2) grid (2, 8);
+%	\draw[<->,thick] (-8,0) -- (2,0);
+%	\draw[<->,thick] (0,-2) -- (0,8);
+%	\foreach \x in {-8,-6,...,2} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+%	\foreach \y in {-2,0,...,8} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+%	%% line segment
+%	\draw[very thick,blue] (0,4)--(-6,0);
+%	\draw[blue] plot[only marks,mark=*,mark size=4] coordinates{(0,4)(-6,0)};
+%	\draw[very thick,red,<->] (-0.5,-1.75)--(-7,8);
+%	\draw[blue, fill=yellow] plot[only marks,mark=*,mark size=4] coordinates{(-3,2)};
+%\end{tikzpicture}
+%\end{center}
+%\end{boxedex}
+
+
+A right triangle has area $S$, and its sides form diameters of semicircles, as in the lefthand diagram below. The semicircle on the hypotenuse is flipped up to create two crescent-shaped regions. Find the combined area of these crescents. (These regions are called the ``lunes of Alhazen'', named after the Arab mathematician who lived around the year 1000.)
+
+\begin{center}
+\begin{tikzpicture}
+	%% Diagram 1
+	\draw[fill=red!50, xshift=5cm, rotate=-36.87] (0,0) arc (0:180:2) -- cycle;
+	\draw[fill=red!50, rotate=53.13] (0,0) arc (180:0:1.5) -- cycle;
+	\draw[fill=white] (5,0) arc (360:180:2.5);
+	\draw[fill=blue!50] (0,0) -- (53.13:3) -- (5,0) -- cycle;
+\draw (0.7,1.25) node{$a$} (3.75,1.25) node{$b$} (2.5,-0.25) node{$c$} (2,1) node {$S$};
+	%% Diagram 2
+	\tikzset{xshift=7cm}
+	\draw[fill=red!50, xshift=5cm, rotate=-36.87] (0,0) arc (0:180:2) -- cycle;
+	\draw[fill=red!50, rotate=53.13] (0,0) arc (180:0:1.5) -- cycle;
+	\draw[fill=white] (5,0) arc (0:180:2.5);
+	\draw[fill=blue!50] (0,0) -- (53.13:3) -- (5,0) -- cycle;
+\draw (0.7,1.25) node{$a$} (3.75,1.25) node{$b$} (2.5,-0.25) node{$c$} (2,1) node {$S$};
+\end{tikzpicture}
+\end{center}
+
+%\section{Extensions}
+%
+%A dart board in the shape of a regular octagon is divided into regions as shown. Suppose that a dart thrown at the board is equally likely to land anywhere on the board. What is the probability that the dart lands within the center square? (AMC 10B 2011)
+%
+%\begin{center}
+%\begin{tikzpicture}[scale=1.5]
+%	\draw[fill=blue!50] (0,0.707) rectangle (1,1.707);
+%	\draw (0,0) -- ++(135:1) -- ++(0,1) -- ++(45:1) -- ++(1,0) -- ++(-45:1) -- ++(0,-1) -- ++(-135:1) -- cycle;
+%	\draw (0,0) rectangle (1, 2.414);
+%	\draw (-0.707,0.707) rectangle (1.707, 1.707);
+%\end{tikzpicture}
+%\end{center}
+%
+%The number \[\sqrt{ 104\sqrt{6} + 468\sqrt{10} + 144\sqrt{15} + 2006 }\] can be written as $a\sqrt{2} + b\sqrt{3} + c\sqrt{5}$, where $a$, $b$, and $c$ are positive integers. Find $a \cdot b \cdot c$. (AIME 2006)
+%
+%Let $\mathcal{S}$ be the set of real numbers that can be represented as repeating decimals of the form $0.\overline{abc}$ where $a$, $b$, and $c$ are distinct digits. Find the sum of the elements of $\mathcal{S}$. (AIME 2006)
+%
+%Find the smallest value of $n$ such that the fraction $\frac{1}{n}$ has a decimal representation that repeats in a block of 5 digits.
+%
+%Space diagonal of a box. W/ OPEN QUESTION CONNECTION: Euler Brick, the existence of a perfect cuboid.
+%\begin{center}
+%\begin{tikzpicture}[scale=0.5]
+%	\draw[dashed,black!60] (3,2) -- (0,0);
+%	\draw[dashed,black!60] (3,2) -- (3,6);
+%	\draw[dashed,black!60] (3,2) -- (10,2);
+%	\draw[ultra thick,blue] (0,4) -- (10,2);
+%	\draw (0,0) rectangle (7,4);
+%	\draw (7,0) -- (10,2) -- (10,6) -- (7,4) -- cycle;
+%	\draw (0,4) -- (7,4) -- (10,6) -- (3,6) -- cycle;
+%	\draw (3.5,-0.1) node[below] {\Large$x$};
+%	\draw (8.7,1) node[below] {\Large$y$};
+%	\draw (10.1,4) node[right] {\Large$z$};
+%\end{tikzpicture}
+%\end{center}

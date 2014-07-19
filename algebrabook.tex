@@ -1,13 +1,19 @@
 \documentclass[oneside, openany]{book}
 
 %%% Partial inclusion, for piecewise development
-\includeonly{numbers, sequences, graphs, functions, equations, proportions, linear, glossary}
-%\includeonly{functions, glossary}
+%\includeonly{radicals, quadeq, quadfunc}
 
+%%%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 %%% Math formatting
 \usepackage{mathtools}
 
+\DeclareMathOperator{\OR}{~\underline{or}~}
+
+\newcommand{\solset}[1]{\mathcal{S}=\left\{#1\right\}}
+
+%%%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 %%% Paper size and margins
+%%%
 \usepackage[letterpaper, margin=1in]{geometry}
 
 %%% Set line spacing to 1.5
@@ -22,12 +28,14 @@
 	\newcommand{\@minipagerestore}{\setlength{\parskip}{\medskipamount}}
 \makeatother
 
-%\numberwithin{figure}{chapter} %%% Done automatically in "book"
-
 \usepackage{enumitem}
 
-%%% Enable two-digit chapter and section numbering: "Section 02.05"
+%%%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+%%% Formatting chapter and section titles
+%%%
 \usepackage{titlesec}
+%%% Enable two-digit chapter and section numbering: "Section 02.05"
+
 %\newcommand{\sectionbreak}{\clearpage}
 %\makeatletter
 %	\renewcommand\thechapter{\two@digits{\value{chapter}}}
@@ -36,35 +44,60 @@
 %	\renewcommand{\l@section}{\@dottedtocline{1}{2em}{3em}}
 %\makeatothter
 
+%%% Draw horizontal rule under section titles
 \newcommand{\trule}{\color{black!25}\titlerule[1pt]}
-\titleformat{\section}
-{\normalfont\bfseries\Large}
-{\thesection}{1em}{}[\trule]
 
+\titleformat{\section}
+	{\normalfont\bfseries\Large}
+	{\thesection}{1em}{}[\trule]
+
+%%% Start sections on a new page, except for the first section of a new chapter
 \usepackage{etoolbox}
 \newtoggle{afterpart}
 \pretocmd{\section}
-  {\iftoggle{afterpart}
-    {\global\togglefalse{afterpart}}% we're after a part
-    {\clearpage}% we're not immediately after a part
-  }{}{}
+{
+	\iftoggle{afterpart}
+	{\global\togglefalse{afterpart}}% we're after a part
+	{\clearpage}% we're not immediately after a part
+}{}{}
 \pretocmd{\chapter}
-  {\clearpage % do a page break
-   \global\toggletrue{afterpart}% tell \section we're just after a part
-  }
-  {}{}
+{
+	\clearpage % do a page break
+	\global\toggletrue{afterpart}% tell \section we're just after a part
+}{}{}
 
+%%% Enable fancy formatting for chapter quotes
+\usepackage{epigraph}
+
+%%% Chapter quote command to wrap epigraph commands.
+\newcommand{\chapquote}[2]{
+	\epigraphhead[50]{\epigraph{#1}{\textit{#2}}}
+}
+
+%%% Adjust epigraph rule color
+\makeatletter
+\renewcommand{\@epirule}
+	{\color{black!25}\rule[.5ex]{\epigraphwidth}{\epigraphrule}}
+\makeatother
+
+
+%%%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 %%% Footnote formatting
+%%%
 \usepackage[hang,bottom]{footmisc}
 \setlength{\footnotemargin}{1em}	% Footnote hanging indent
 \setlength{\footnotesep}{3ex}		% Space between two footnotes
 \setlength{\skip\footins}{5ex}		% Space between text and notes?
 
-%%% Enable fancy headings
+%%%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+%%% Enable fancy headers and footers
+%%%
 \usepackage{fancyhdr}
 \setlength{\headheight}{15pt}
 
+%%%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 %%% Enable clickable cross-references
+%%%
 \usepackage[hidelinks]{hyperref}
 \usepackage{cleveref}
 \providecommand\phantomsection{}
@@ -92,10 +125,10 @@
 %\let\oldglslink\glslink
 %\renewcommand*{\glslink}[2]{\inlinedef{\oldgls{#1}}\index{#1}}
 
-\DeclareMathOperator{\OR}{~\underline{or}~}
-\newcommand{\solset}[1]{\mathcal{S}=\left\{#1\right\}}
 
+%%%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
 %%% Enable to-do list creation
+%%%
 \newcommand{\addtodoitem}[1]
 {%
 	%%% Print in the document
@@ -104,16 +137,13 @@
 	\immediate\write\outputstream{#1}
 }
 
-\newcommand{\exsoln}{\ifdim\lastskip>0pt \else \medskip\fi \inlineex{Solution:}}
-\newcommand{\expsoln}{\ifdim\lastskip>0pt \else \medskip\fi \inlineex{Partial solution:}}
-
-%\usepackage{multicol}
-%\usepackage[load-headings]{exsheets}
-
-%\usepackage{tocvsec2}
-
-%% Number only subsections and above.
-%\setcounter{secnumdepth}{2} %%% Done automatically in "book"
+%%%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
+%%% Introduction to the solutions of worked examples.
+%%%
+\newcommand{\exsoln}%
+	{\ifdim\lastskip>0pt \else \medskip\fi \inlineex{Solution:}}
+\newcommand{\expsoln}%
+	{\ifdim\lastskip>0pt \else \medskip\fi \inlineex{Partial solution:}}
 
 %%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 %%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -187,11 +217,12 @@ To view a copy of this license, visit \url{http://creativecommons.org/licenses/b
 \include{linear}
 \include{systems}
 \include{inequalities}
-\include{expoexpr}
 \include{expofunc}
-\include{radexpr}
+\include{expoexpr}
+\include{quadeq}
+\include{radicals}
 \include{quadfunc}
-\include{polynomials}
+%\include{polynomials}
 
 %%% Part 2
 %\setcounter{chapter}{0} %% Restart chapter numbering
@@ -213,24 +244,28 @@ To view a copy of this license, visit \url{http://creativecommons.org/licenses/b
 \backmatter
 \pagestyle{plain}
 
-\cleardoublepage
-\phantomsection
-\addcontentsline{toc}{chapter}{Glossary}
-%\glossarystyle{listhypergroup}
-\glsaddall
-\printglossaries
+\chapter{Back Matter}
 
-\cleardoublepage
-\phantomsection
-\addcontentsline{toc}{chapter}{Bibliography}
-\bibliographystyle{plain}
-\nocite{*} %%% include all references, even those not cited
-\bibliography{algbookrefs}
+Glossary, bibliography, and index removed during editing process.
 
-\cleardoublepage
-\phantomsection
-\addcontentsline{toc}{chapter}{Index}
-\printindex
+%\cleardoublepage
+%\phantomsection
+%\addcontentsline{toc}{chapter}{Glossary}
+%%\glossarystyle{listhypergroup}
+%\glsaddall
+%\printglossaries
+%
+%\cleardoublepage
+%\phantomsection
+%\addcontentsline{toc}{chapter}{Bibliography}
+%\bibliographystyle{plain}
+%\nocite{*} %%% include all references, even those not cited
+%\bibliography{algbookrefs}
+%
+%\cleardoublepage
+%\phantomsection
+%\addcontentsline{toc}{chapter}{Index}
+%\printindex
 
 \clearpage
 
