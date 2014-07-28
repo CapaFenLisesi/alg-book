@@ -51,7 +51,7 @@ A geometric figure that has undergone infinitely many applications of a recursiv
 
 Fractal geometry is often called ``the geometry of nature''. If we look around the natural world, it is not like we see a lot of perfectly straight lines, rigid rectangles, and regular pentagons. But, the growth of a tree can be described using a recursive procedure: grow towards the sun for a bit, branch off at an angle, repeat. Trees exhibit self-similarity. If we break off a branch of a tree and stick it in the ground, looks just like a little tree!
 
-Clouds, coastlines, mountains, trees, romanesco broccoli, the folds of your brain, your vascular system, your bronchial tubes, the lining of your small intestines\ldots{} all of these are a kind of fractal.\footnote{In 1968, Hungarian biologist Aristid Lindenmayer developed a method for writing recursive rules that can be used to model the growth of algae. Called ``Lindenmayer systems'' or ``L-systems'' today, his methods have been used to model more complex organisms, as well as purely mathematical structures.} Technically speaking, natural fractals only have their recursive procedure applied a handful of times (we say the procedure has a handful of \textit{iterations}) so they aren't true mathematical fractals. A mathematical fractal undergoes an infinite number of iterations.\footnote{Fractals may play an interesting role later on in your study of mathematics, for example the Mandelbrot set is a fractal that involves the complex numbers. Do an internet search for ``Mandelbrot set'' and check out the pictures!}
+Clouds, coastlines, mountains, trees, \href{https://www.google.com/search?q="romanesco+broccoli"&tbm=isch}{Romanesco broccoli}, the folds of your brain, your vascular system, your bronchial tubes, the lining of your small intestines\ldots{} all of these are a kind of fractal.\footnote{In 1968, Hungarian biologist Aristid Lindenmayer developed a method for writing recursive rules that can be used to model the growth of algae. Called ``Lindenmayer systems'' or ``L-systems'' today, his methods have been used to model more complex organisms, as well as purely mathematical structures.} Technically speaking, natural fractals only have their recursive procedure applied a handful of times (we say the procedure has a handful of \textit{iterations}) so they aren't true mathematical fractals. A mathematical fractal undergoes an infinite number of iterations.\footnote{Fractals may play an interesting role later on in your study of mathematics, for example the Mandelbrot set is a fractal that involves the complex numbers. Do an internet search for ``Mandelbrot set'' and check out the pictures!}
 
 We will begin our study of sequences by looking at some famous mathematical fractals that were first studied by Polish mathematician Wac{\l}aw Sierpi\'nski.
 
@@ -334,7 +334,7 @@ We have discovered a way of calculating the number of segments that is \textit{n
 \index{explicit formula}
 \index{formula!explicit}
 
-In our discussion of fractals, we have always described the first image as ``stage 0'' of the fractal. But, when we write out a sequence, the first term is, well, the \textit{first} term (not the \textit{zero}th term).\footnote{In some scientific disciplines, it is customary to start counting with zero: for example, in computer science. Jason, one of the authors of the \algebranomicon, is a computer scientist by training and thinks this way. Jason also prefers to include 0 as one of the natural numbers. Patty, the other author of the \algebranomicon, is a mathematician by training and prefers to start counting at 1\ldots\ most of the time.}
+In our discussion of fractals, we have always described the first image as ``stage 0'' of the fractal. But, when we write out a sequence, the first term is, well, the \textit{first} term (not the \textit{zero}th term).\footnote{In some scientific disciplines, it is customary to start counting with zero: for example, in computer science. Jason, one of the authors of the \algebranomicon, is a computer scientist by training and thinks this way. Jason also prefers to include 0 as one of the natural numbers. Patty, the other author of the \algebranomicon, is a mathematician by training and prefers to start counting at 1.}
 
 In other words, the same pattern of values has a slightly different numbering, depending on whether we're describing stages of a fractal or terms in a sequence.
 
@@ -370,6 +370,8 @@ Write explicit formulas for the other features of the Koch curve.
 
 \textit{Total length of the curve.} Since we know the number of segments and the length of each segment, we can multiply to find the total length of the curve. We have \[\left(\frac{5}{3}\right)^0, \left(\frac{5}{3}\right)^1, \left(\frac{5}{3}\right)^2,\dotsc \quad\text{and so}\quad a_n = \left(\frac{5}{3}\right)^{n-1}\].
 \end{boxedex}
+
+Note that we're putting these fractions in parentheses! Our notation has to match our intentions and in this case we want to show that the \textit{whole fraction} is being raised to a given power.
 
 \begin{boxedex}
 What if the stage 0 figure had been a segment of length 7, rather than length 1? How would that change our formula?
@@ -700,6 +702,7 @@ Is the sequence arithmetic? Let's check for a common difference:
 35-24 &=11\\
 48-35 &=13\\
 \end{aligned}\]
+The sequence does not have a common difference, so it is \textit{not arithmetic}. But take a look at those differences! The differences have a pattern of their own: They go up by 2 every time. In other words, the differences form an arithmetic sequence! It's a sequence in a sequence! The turducken of sequences!\footnote{This sequence-in-a-sequence stuff can get pretty involved. Here, we found an arithmetic sequence in the \textit{differences} between the terms in our quadratic sequence. But why not build the sequence $1, 4, 12, 27, 51,\dotsc$, in which the sequence of differences is our quadratic sequence! Of course we could keep building sequences like this for as long as we wanted. This isn't just a turducken, it's a \textit{r\^oti sans pareil}! That's French for ``roast without equal'', a dish that which calls for 17 different birds, each one stuffed into the body cavity of the next. Since the dish was first proposed in 1807 by the French gastronomist Grimod de La Reyni\'ere, several of the birds called for in the recipe have become endangered species.}
 
 To describe this sequence with a recursive rule, we'll need to give the starting value, as usual: ``start with 3". Then, we must describe the pattern in the differences: in this case, we're adding consecutive odd numbers (starting with 5). So, one way to express this recursive rule is ``start with 3, add consecutive odd numbers (starting with 5) to the previous term''. Note that we kind of sneak in two starting places: one for the start of the sequence (3, in this case) and one for the start of the sequence of numbers that are being added on (5, in this case). Tricky!
 
@@ -737,7 +740,7 @@ Your math brain grows when you think deeply about mathematics, so hard work is v
 In the last section, we looked at the sequence, which came from a rectangular pattern of tiles: \[3,~ 8,~ 15,~ 24,~ 35,~\dotsc\]
 We wrote the recursive rule in sentences: ``start with 3, add consecutive odd numbers (starting with 5) to the previous term''. Can we translate this into a recursive formula?
 
-The first step is easy: $a_1 = 2$. Hooray for small victories!
+The first step is easy: $a_1 = 3$. Hooray for small victories!
 
 In order to describe the recursive step, we need to describe the sequence of differences: $5, 7, 9, 11, \dotsc$. Since this is an arithmetic sequence, we know how to write its explicit rule. Let's use the symbol $b$, so we don't get our sequences confused. Then this sequence is {\color{blue!90!black}$b_n = 5 + (n-1)\cdot 2$} or, if we use a zero-based rule, {\color{blue!90!black}$b_n = 3 + n\cdot 2$}.
 
@@ -869,7 +872,7 @@ Stage		& Value		& \multicolumn{4}{l}{Possible Rectangles}
 						& or\quad $3 \times 10$
 						& or\quad $5 \times 6$
 \\
-4			& 42		& $1 \times 42$
+5			& 42		& $1 \times 42$
 						& or\quad $2 \times 21$
 						& or\quad $3 \times 14$
 						& or\quad $6 \times 7$
@@ -900,7 +903,7 @@ Stage		& Value		& \multicolumn{4}{l}{Possible Rectangles}
 						& or\quad $3 \times 10$
 						& or\quad $\colorbox{yellow!95!black}{5} \times \colorbox{green!95!black}{6}$
 \\
-4			& 42		& $1 \times 42$
+5			& 42		& $1 \times 42$
 						& or\quad $2 \times 21$
 						& or\quad $3 \times 14$
 						& or\quad $\colorbox{yellow!95!black}{6} \times \colorbox{green!95!black}{7}$

@@ -53,7 +53,7 @@ In \cref{ch:sequences} we investigated pictures patterns (fractals by Koch and S
 	\label{fig:coordplane}
 \end{figure}
 
-The axes chop the plane into four regions called \glspl{quadrant}, which are numbered starting in the upper right and moving counter-clockwise (as shown in the figure). The signs in parentheses indicate the signs of $x$- and $y$-coordinates in each quadrant. The $x$-coordinates of the points in Quadrants I and IV are positive, while points in Quadrants II and III have $x$-coordinates that are negative. Points with positive $y$-coordinates lie in Quadrants I and II, while points with negative $y$-coordinates fall in Quadrants III and IV.
+The axes chop the plane into four regions called \glspl{quadrant}, which are numbered starting in the upper right and moving counter-clockwise (as shown in the figure). The signs in parentheses indicate the signs of $x$- and $y$-coordinates in each quadrant. The $x$-coordinates of the points in Quadrants I and IV are positive, while points in Quadrants II and III have $x$-coordinates that are negative. Points with positive $y$-coordinates lie in Quadrants I and II, while points with negative $y$-coordinates fall in Quadrants III and IV.\footnote{A point that lies on an axis doesn't actually in any of the four quadrants. So, the point $(4, 0)$ lives on the positive $x$-axis, but not actually in Quadrant I nor in Quadrant IV.}
 
 \begin{boxedexplore}[Startup Exploration: Pizza Intersections]
 Bob's friend Melvin ``Hambone'' Jones once worked delivering pizzas in his hometown of Euclid, Ohio. The town has streets running north-south and east-west.\footnote{Euclid, Ohio is also the home of the Polka Hall of Fame, though that has nothing to do with this problem. Also, Euclid isn't laid out in a grid as this problem implies, though it should be, given its name.}
@@ -74,11 +74,14 @@ Our goal is to make a visual representation of a sequence on this coordinate pla
 
 To graph a sequence, we use the term number as the $x$-coordinate and the term's value as the $y$-coordinate. Consider the sequence $1, 2, 4, 8, 16, 32,\dotsc$. The first term is 1, the second term is 2, and so on. We can organize this in a table, and write out the ordered pairs. Then, we can plot those ordered pairs and see a visual representation of our sequence!
 
+\resizeplot{0}{7}{0}{40}
+
+\bigskip
 \begin{minipage}[c]{0.5\textwidth }
 	\centering
-	\begin{tabular}{|C{2cm}|C{2cm}|C{2cm}|}
+	\begin{tabular}{|C{0.25\linewidth}|C{0.25\linewidth}|C{0.25\linewidth}|}
 	\hline
-	\text{\footnotesize Term No.} & \text{\footnotesize Term Value} & \text{\footnotesize Coord. Pair}\\
+	\text{Term No.} & \text{Term Value} & \text{Coord. Pair}\\
 	x & y & (x,y)\\\hline
 	1 & 1 & (1,1)\\
 	2 & 2 & (2,2)\\
@@ -91,31 +94,43 @@ To graph a sequence, we use the term number as the $x$-coordinate and the term's
 %
 \begin{minipage}[c]{0.5\textwidth }
 	\centering
-	\begin{tikzpicture}[xscale=1,yscale=0.15]
-		%% grid setup
-		\draw[very thin, color=gray!25, ystep=5] (0,0) grid (7, 42);
-		\draw[->,thick] (0,0) -- (7,0); % node[right]{$x$-axis};
-		\draw[->,thick] (0,0) -- (0,42); % node[above]{$y$-axis};
-		\foreach \x in {0,...,6} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
-		\foreach \y in {0,5,...,40} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
-		%% points
-		\draw[fill=blue,blue] (1,1) circle (.1cm and 0.66cm);
-		\draw[fill=blue,blue] (2,2) circle (.1cm and 0.66cm);
-		\draw[fill=blue,blue] (3,4) circle (.1cm and 0.66cm);
-		\draw[fill=blue,blue] (4,8) circle (.1cm and 0.66cm);
-		\draw[fill=blue,blue] (5,16) circle (.1cm and 0.66cm);
-		\draw[fill=blue,blue] (6,32) circle (.1cm and 0.66cm);
+	\begin{tikzpicture}
+		\begin{axis}[
+			standard,
+			xlabel={Term No.},
+			ylabel={Term Value},
+			width=1\linewidth,		% size
+			height=1\linewidth,		% size
+		]
+			\addplot[algpoints, blue] coordinates {(1,1)(2,2)(3,4)(4,8)(5,16)(6,32)};
+		\end{axis}
 	\end{tikzpicture}
+%	\begin{tikzpicture}[xscale=1,yscale=0.15]
+%		%% grid setup
+%		\draw[very thin, color=gray!25, ystep=5] (0,0) grid (7, 42);
+%		\draw[->,thick] (0,0) -- (7,0); % node[right]{$x$-axis};
+%		\draw[->,thick] (0,0) -- (0,42); % node[above]{$y$-axis};
+%		\foreach \x in {0,...,6} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+%		\foreach \y in {0,5,...,40} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+%		%% points
+%		\draw[fill=blue,blue] (1,1) circle (.1cm and 0.66cm);
+%		\draw[fill=blue,blue] (2,2) circle (.1cm and 0.66cm);
+%		\draw[fill=blue,blue] (3,4) circle (.1cm and 0.66cm);
+%		\draw[fill=blue,blue] (4,8) circle (.1cm and 0.66cm);
+%		\draw[fill=blue,blue] (5,16) circle (.1cm and 0.66cm);
+%		\draw[fill=blue,blue] (6,32) circle (.1cm and 0.66cm);
+%	\end{tikzpicture}
 \end{minipage}
 \medskip
 
 Recall that that sequence above, where the terms have a constant ratio, is called a geometric sequence. Let's look at an example of an arithmetic sequence, in which the terms have a constant difference. For example, consider the sequence $8, 13, 18, 23, 28, 33,\dotsc$. This sequence produces the following table and graph:
 
+\bigskip
 \begin{minipage}[c]{0.5\textwidth }
 	\centering
-	\begin{tabular}{|C{2cm}|C{2cm}|C{2cm}|}
+	\begin{tabular}{|C{0.25\linewidth}|C{0.25\linewidth}|C{0.25\linewidth}|}
 	\hline
-	\text{\footnotesize Term No.} & \text{\footnotesize Term Value} & \text{\footnotesize Coord. Pair}\\
+	\text{Term No.} & \text{Term Value} & \text{Coord. Pair}\\
 	x & y & (x,y)\\\hline
 	1 & 8 & (1,8)\\
 	2 & 13 & (2,13)\\
@@ -128,31 +143,43 @@ Recall that that sequence above, where the terms have a constant ratio, is calle
 %
 \begin{minipage}[c]{0.5\textwidth }
 	\centering
-	\begin{tikzpicture}[xscale=1,yscale=0.15]
-		%% grid setup
-		\draw[very thin, color=gray!25, ystep=5] (0,0) grid (7, 42);
-		\draw[->,thick] (0,0) -- (7,0); % node[right]{$x$-axis};
-		\draw[->,thick] (0,0) -- (0,42); % node[above]{$y$-axis};
-		\foreach \x in {0,...,6} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
-		\foreach \y in {0,5,...,40} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
-		%% points
-		\draw[fill=red,red] (1,8) circle (.1cm and 0.66cm);
-		\draw[fill=red,red] (2,13) circle (.1cm and 0.66cm);
-		\draw[fill=red,red] (3,18) circle (.1cm and 0.66cm);
-		\draw[fill=red,red] (4,23) circle (.1cm and 0.66cm);
-		\draw[fill=red,red] (5,28) circle (.1cm and 0.66cm);
-		\draw[fill=red,red] (6,33) circle (.1cm and 0.66cm);
+	\begin{tikzpicture}
+		\begin{axis}[
+			standard,
+			xlabel={Term No.},
+			ylabel={Term Value},
+			width=1\linewidth,		% size
+			height=1\linewidth,		% size
+		]
+			\addplot[algpoints, red] coordinates {(1,8)(2,13)(3,18)(4,23)(5,28)(6,33)};
+		\end{axis}
 	\end{tikzpicture}
+%	\begin{tikzpicture}[xscale=1,yscale=0.15]
+%		%% grid setup
+%		\draw[very thin, color=gray!25, ystep=5] (0,0) grid (7, 42);
+%		\draw[->,thick] (0,0) -- (7,0); % node[right]{$x$-axis};
+%		\draw[->,thick] (0,0) -- (0,42); % node[above]{$y$-axis};
+%		\foreach \x in {0,...,6} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+%		\foreach \y in {0,5,...,40} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+%		%% points
+%		\draw[fill=red,red] (1,8) circle (.1cm and 0.66cm);
+%		\draw[fill=red,red] (2,13) circle (.1cm and 0.66cm);
+%		\draw[fill=red,red] (3,18) circle (.1cm and 0.66cm);
+%		\draw[fill=red,red] (4,23) circle (.1cm and 0.66cm);
+%		\draw[fill=red,red] (5,28) circle (.1cm and 0.66cm);
+%		\draw[fill=red,red] (6,33) circle (.1cm and 0.66cm);
+%	\end{tikzpicture}
 \end{minipage}
 \medskip
 
 Finally, let's see what a quadratic pattern looks like. For example, the perfect squares form a quadratic sequence $1, 4, 9, 16, 25, 36, \dotsc$. Their table and graph go like this:
 
+\bigskip
 \begin{minipage}[c]{0.5\textwidth }
 	\centering
-	\begin{tabular}{|C{2cm}|C{2cm}|C{2cm}|}
+	\begin{tabular}{|C{0.25\linewidth}|C{0.25\linewidth}|C{0.25\linewidth}|}
 	\hline
-	\text{\footnotesize Term No.} & \text{\footnotesize Term Value} & \text{\footnotesize Coord. Pair}\\
+	\text{Term No.} & \text{Term Value} & \text{Coord. Pair}\\
 	x & y & (x,y)\\\hline
 	1 & 1 & (1,1)\\
 	2 & 4 & (2,4)\\
@@ -165,21 +192,33 @@ Finally, let's see what a quadratic pattern looks like. For example, the perfect
 %
 \begin{minipage}[c]{0.5\textwidth }
 	\centering
-	\begin{tikzpicture}[xscale=1,yscale=0.15]
-		%% grid setup
-		\draw[very thin, color=gray!25, ystep=5] (0,0) grid (7, 42);
-		\draw[->,thick] (0,0) -- (7,0); % node[right]{$x$-axis};
-		\draw[->,thick] (0,0) -- (0,42); % node[above]{$y$-axis};
-		\foreach \x in {0,...,6} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
-		\foreach \y in {0,5,...,40} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
-		%% points
-		\draw[fill=violet,violet] (1,1) circle (.1cm and 0.66cm);
-		\draw[fill=violet,violet] (2,4) circle (.1cm and 0.66cm);
-		\draw[fill=violet,violet] (3,9) circle (.1cm and 0.66cm);
-		\draw[fill=violet,violet] (4,16) circle (.1cm and 0.66cm);
-		\draw[fill=violet,violet] (5,25) circle (.1cm and 0.66cm);
-		\draw[fill=violet,violet] (6,36) circle (.1cm and 0.66cm);
+	\begin{tikzpicture}
+		\begin{axis}[
+			standard,
+			xlabel={Term No.},
+			ylabel={Term Value},
+			width=1\linewidth,		% size
+			height=1\linewidth,		% size
+		]
+			\addplot[algpoints, violet] coordinates {(1,1)(2,4)(3,9)(4,16)(5,25)(6,36)};
+		\end{axis}
 	\end{tikzpicture}
+
+%	\begin{tikzpicture}[xscale=1,yscale=0.15]
+%		%% grid setup
+%		\draw[very thin, color=gray!25, ystep=5] (0,0) grid (7, 42);
+%		\draw[->,thick] (0,0) -- (7,0); % node[right]{$x$-axis};
+%		\draw[->,thick] (0,0) -- (0,42); % node[above]{$y$-axis};
+%		\foreach \x in {0,...,6} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+%		\foreach \y in {0,5,...,40} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+%		%% points
+%		\draw[fill=violet,violet] (1,1) circle (.1cm and 0.66cm);
+%		\draw[fill=violet,violet] (2,4) circle (.1cm and 0.66cm);
+%		\draw[fill=violet,violet] (3,9) circle (.1cm and 0.66cm);
+%		\draw[fill=violet,violet] (4,16) circle (.1cm and 0.66cm);
+%		\draw[fill=violet,violet] (5,25) circle (.1cm and 0.66cm);
+%		\draw[fill=violet,violet] (6,36) circle (.1cm and 0.66cm);
+%	\end{tikzpicture}
 \end{minipage}
 \medskip
 
@@ -205,7 +244,7 @@ Find three natural numbers $x$, $y$, and $z$ which satisfy the equation $28x + 3
 In \cref{ch:numbers} we used the order of operations to simplify numeric expressions, which are made up of numbers and arithmetic operators. For example, \[3\cdot4-8(4^2-1)\] is a numeric expression. It contains only numbers and operators and, in the end, it simplifies down to a single number.\footnote{Spoiler alert: It's $-108$.} An \gls{algebraic expression} on the other hand can contain letters in addition to numbers and operators, for example \[3x - 5y + 18.\] These letters, called \textit{variables}, stand in for numbers that we don't know or which may change.
 
 \begin{boxeddef}[Variable]
-A \gls{variable} whose value can change. In algebra, variables are often represented by letters. We usually use letters from the Latin alphabet ($a, b, c, d,\dotsc$), but sometimes also use other symbols, such as letters from the Greek alphabet ($\alpha, \beta, \gamma, \delta, \dotsc$).
+A \gls{variable} is representation of a value that can change. In algebra, variables are often represented by letters. We usually use letters from the Latin alphabet ($a, b, c, d,\dotsc$), but sometimes also use other symbols, such as letters from the Greek alphabet ($\alpha, \beta, \gamma, \delta, \dotsc$).
 \end{boxeddef}
 
 \begin{boxeddef}[Algebraic Expression]
@@ -367,76 +406,115 @@ The rule for the sequence in the startup exploration is $a_n = 5n + 3$, or in te
 
 In the end, we generate 6 new coordinate pairs, which we can graph alongside the five points that we were given.
 
+\resizeplot{-5}{5}{-25}{29}
 \begin{center}
-	\begin{tikzpicture}[xscale=0.7,yscale=0.14]
-		%% grid setup
-		\draw[very thin, color=gray!25, ystep=2] (-5.5,-25) grid (5.5, 29);
-		\draw[<->,thick] (-5.5,0) -- (5.5,0); % node[right]{$x$-axis};
-		\draw[<->,thick] (0,-25) -- (0,30); % node[above]{$y$-axis};
-		\foreach \x in {-5,...,-1,1,2,3,4,5} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
-		\foreach \y in {-24,-20,...,28} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
-		%% points
-		\draw[fill=red,red] (-5,-22) circle (.1cm and 0.5cm);
-		\draw[fill=red,red] (-4,-17) circle (.1cm and 0.5cm);
-		\draw[fill=red,red] (-3,-12) circle (.1cm and 0.5cm);
-		\draw[fill=red,red] (-2,-7) circle (.1cm and 0.5cm);
-		\draw[fill=red,red] (-1,-2) circle (.1cm and 0.5cm);
-		\draw[fill=red,red] (0,3) circle (.1cm and 0.5cm);
-		\draw[fill=red,red] (1,8) circle (.1cm and 0.5cm);
-		\draw[fill=red,red] (2,13) circle (.1cm and 0.5cm);
-		\draw[fill=red,red] (3,18) circle (.1cm and 0.5cm);
-		\draw[fill=red,red] (4,23) circle (.1cm and 0.5cm);
-		\draw[fill=red,red] (5,28) circle (.1cm and 0.5cm);
-	\end{tikzpicture}
+\begin{tikzpicture}
+	\begin{axis}[standard]
+%		\addplot[algcurve, red, domain=-5:5] (\x,5*\x+3);
+%		\draw[red] (axis cs:1.5,1,0) node[right]{\large$y=5x-6$};
+		\addplot[algpoints, red] coordinates {(-5,-22)(-4,-17)(-3,-12)(-2,-7)(-1,-2)(0,3)(1,8)(2,13)(3,18)(4,23)(5,28)};
+	\end{axis}
+\end{tikzpicture}
 \end{center}
+
+%\begin{center}
+%	\begin{tikzpicture}[xscale=0.7,yscale=0.14]
+%		%% grid setup
+%		\draw[very thin, color=gray!25, ystep=2] (-5.5,-25) grid (5.5, 29);
+%		\draw[<->,thick] (-5.5,0) -- (5.5,0); % node[right]{$x$-axis};
+%		\draw[<->,thick] (0,-25) -- (0,30); % node[above]{$y$-axis};
+%		\foreach \x in {-5,...,-1,1,2,3,4,5} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+%		\foreach \y in {-24,-20,...,28} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+%		%% points
+%		\draw[fill=red,red] (-5,-22) circle (.1cm and 0.5cm);
+%		\draw[fill=red,red] (-4,-17) circle (.1cm and 0.5cm);
+%		\draw[fill=red,red] (-3,-12) circle (.1cm and 0.5cm);
+%		\draw[fill=red,red] (-2,-7) circle (.1cm and 0.5cm);
+%		\draw[fill=red,red] (-1,-2) circle (.1cm and 0.5cm);
+%		\draw[fill=red,red] (0,3) circle (.1cm and 0.5cm);
+%		\draw[fill=red,red] (1,8) circle (.1cm and 0.5cm);
+%		\draw[fill=red,red] (2,13) circle (.1cm and 0.5cm);
+%		\draw[fill=red,red] (3,18) circle (.1cm and 0.5cm);
+%		\draw[fill=red,red] (4,23) circle (.1cm and 0.5cm);
+%		\draw[fill=red,red] (5,28) circle (.1cm and 0.5cm);
+%	\end{tikzpicture}
+%\end{center}
 
 Can you anticipate the location of the point that we plot when $x = \frac{1}{3}$? What about when $x = \umin\frac{5}{2}$? What would our graph look like if we used all of the points in $\R$ as the $x$-values?
 
 When we use all of the real numbers as input to the rule $y = 5x + 3$, the resulting graph is a straight line. Of course, it would be impossible to actually plot \textit{all} of the points (there are infinitely many of them), but the pattern holds true, and so we can replace the dots with a continuous line.
+
 \begin{center}
-	\begin{tikzpicture}[xscale=0.7,yscale=0.14]
-		%% grid setup
-		\draw[very thin, color=gray!25, ystep=2] (-5.5,-25) grid (5.5, 29);
-		\draw[<->,thick] (-5.5,0) -- (5.5,0); % node[right]{$x$-axis};
-		\draw[<->,thick] (0,-25) -- (0,30); % node[above]{$y$-axis};
-		\foreach \x in {-5,...,-1,1,2,3,4,5} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
-		\foreach \y in {-24,-20,...,28} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
-		%% points
-		\draw[<->,very thick,color=red,domain=-5:5] plot (\x,5*\x+3); 
-	\end{tikzpicture}
+\begin{tikzpicture}
+	\begin{axis}[standard]
+		\addplot[algcurve, red, domain=-5:5] (\x,5*\x+3);
+%		\draw[red] (axis cs:1.5,1,0) node[right]{\large$y=5x-6$};
+%		\addplot[algpoints, red] coordinates {(-5,-22)(-4,-17)(-3,-12)(-2,-7)(-1,-2)(0,3)(1,8)(2,13)(3,18)(4,23)(5,28)};
+	\end{axis}
+\end{tikzpicture}
 \end{center}
+
+%\begin{center}
+%	\begin{tikzpicture}[xscale=0.7,yscale=0.14]
+%		%% grid setup
+%		\draw[very thin, color=gray!25, ystep=2] (-5.5,-25) grid (5.5, 29);
+%		\draw[<->,thick] (-5.5,0) -- (5.5,0); % node[right]{$x$-axis};
+%		\draw[<->,thick] (0,-25) -- (0,30); % node[above]{$y$-axis};
+%		\foreach \x in {-5,...,-1,1,2,3,4,5} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+%		\foreach \y in {-24,-20,...,28} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+%		%% points
+%		\draw[<->,very thick,color=red,domain=-5:5] plot (\x,5*\x+3); 
+%	\end{tikzpicture}
+%\end{center}
 
 The rules below correspond to the other two sequences we studied in \cref{sec:vizsequence}. Under each rule is the graph that is created when we plot the rule over $\R$.
 
 \begin{minipage}[c]{0.5\textwidth }
 	\centering
-	$y = 2^x$\par
-	\begin{tikzpicture}[xscale=0.6,yscale=0.12]
-		%% grid setup
-		\draw[very thin, color=gray!25, ystep=2] (-5.5,-25) grid (5.5, 29);
-		\draw[<->,thick] (-5.5,0) -- (5.5,0); % node[right]{$x$-axis};
-		\draw[<->,thick] (0,-25) -- (0,30); % node[above]{$y$-axis};
-		\foreach \x in {-5,...,-1,1,2,3,4,5} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
-		\foreach \y in {-24,-20,...,28} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
-		%% points
-		\draw[<->,very thick,color=blue,domain=-5:4.5] plot (\x,2^\x); 
+	$y = 2^x$\par\medskip
+	\begin{tikzpicture}
+		\begin{axis}[
+			standard,
+			width=1\linewidth,		% size
+			height=1\linewidth,		% size
+		]
+		\addplot[algcurve, blue, domain=-5:4.75] (\x,2^\x);
+		\end{axis}
 	\end{tikzpicture}
-
+%	\begin{tikzpicture}[xscale=0.6,yscale=0.12]
+%		%% grid setup
+%		\draw[very thin, color=gray!25, ystep=2] (-5.5,-25) grid (5.5, 29);
+%		\draw[<->,thick] (-5.5,0) -- (5.5,0); % node[right]{$x$-axis};
+%		\draw[<->,thick] (0,-25) -- (0,30); % node[above]{$y$-axis};
+%		\foreach \x in {-5,...,-1,1,2,3,4,5} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+%		\foreach \y in {-24,-20,...,28} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+%		%% points
+%		\draw[<->,very thick,color=blue,domain=-5:4.5] plot (\x,2^\x); 
+%	\end{tikzpicture}
 \end{minipage}
 %
 \begin{minipage}[c]{0.5\textwidth }
 	\centering
-	$y = x^2$\par
-	\begin{tikzpicture}[xscale=0.6,yscale=0.12]
-		%% grid setup
-		\draw[very thin, color=gray!25, ystep=2] (-5.5,-25) grid (5.5, 29);
-		\draw[<->,thick] (-5.5,0) -- (5.5,0); % node[right]{$x$-axis};
-		\draw[<->,thick] (0,-25) -- (0,30); % node[above]{$y$-axis};
-		\foreach \x in {-5,...,-1,1,2,3,4,5} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
-		\foreach \y in {-24,-20,...,28} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
-		%% points
-		\draw[<->,very thick,color=violet,domain=-5:5] plot (\x,\x*\x); 
+	$y = x^2$\par\medskip
+	\begin{tikzpicture}
+		\begin{axis}[
+			standard,
+			width=1\linewidth,		% size
+			height=1\linewidth,		% size
+		]
+		\addplot[algcurve, violet, domain=-5:5] (\x,\x^2);
+		\end{axis}
 	\end{tikzpicture}
+%	\begin{tikzpicture}[xscale=0.6,yscale=0.12]
+%		%% grid setup
+%		\draw[very thin, color=gray!25, ystep=2] (-5.5,-25) grid (5.5, 29);
+%		\draw[<->,thick] (-5.5,0) -- (5.5,0); % node[right]{$x$-axis};
+%		\draw[<->,thick] (0,-25) -- (0,30); % node[above]{$y$-axis};
+%		\foreach \x in {-5,...,-1,1,2,3,4,5} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+%		\foreach \y in {-24,-20,...,28} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+%		%% points
+%		\draw[<->,very thick,color=violet,domain=-5:5] plot (\x,\x*\x); 
+%	\end{tikzpicture}
 \end{minipage}
 
 Are you surprised by these two graphs? Back in \cref{sec:vizsequence}, the graphs of these two sequence looked similar. But, we were only looking at the first quadrant! Their graphs are very different for negative values of $x$.
@@ -706,13 +784,13 @@ If the scatter plot shows a positive correction, it means that as the independen
 
 A key thing to remember when it comes to looking at data is that ``correlation does not imply causation''. In other words: If we see that two variables are correlated, we might be tempted to assume that the change in one variable \textit{causes} the change in the other. This is sometimes true, but not always.
 
-For example, it seems reasonable to believe that a change in height will cause a change in weight. But, there is data that shows a positive correlation between ``consumption of mozzarella cheese per person'' and ``number of civil engineering doctorates awarded''. This has to be a coincidence! There's no (good) reason to think that changing one of these variables would cause a change in the other one.\footnote{This fact is courtesy of the website \href{http://www.tylervigen.com/view_correlation?id=3890}{Spurious Correlations}, which has many graphs of interesting and ridiculous data that show correlation but not causation.}
+For example, it seems reasonable to believe that a change in height will cause a change in weight. But, there is data that shows a positive correlation between ``consumption of mozzarella cheese per person'' and ``number of civil engineering doctorates awarded''. This has to be a coincidence! There's no (good) reason to think that changing one of these variables would cause a change in the other one.\footnote{This fact is courtesy of the website \href{http://www.tylervigen.com/view_correlation?id=3890}{Spurious Correlations}, which has many graphs of interesting and ridiculous data that show correlation but not causation. Sometimes, it's fun to try to ``explain'' the correlation. Perhaps in this case the increase in mozzarella cheese consumption is due to an increase in takeout pizza demand, which leads to more pizza delivery shops, which in turn requires more roads, which means we need more engineers to design them.}
 
 \subsection{Continuous and Discrete Data}
 
 When we drew the graph of a sequence, we didn't connect the dots. A sequence has a first term and a second term, but no one-and-a-halfth term. The $x$-values have no ``in-betweens''.
 
-Similarly, imagine a graph showing ``time'' as the independent variable and ``number of hockey players on the ice'' as the dependent variable. In this case, the $y$-values would have no ''in-betweens''. There could be 11 players or 12 players on the ice, but never 11.5 players.
+Similarly, imagine a graph showing ``time'' as the independent variable and ``number of hockey players on the ice'' as the dependent variable. In this case, the $y$-values would have no ''in-betweens''. There could be 11 players or 12 players on the ice, but never 11.5 players. This is called \textit{discrete data}.
 
 \begin{boxeddef}[Discrete Data]
 Data for which it doesn't make sense for measurements to exist between given data points. Discrete data often involves \textit{counting items}, such at the number of cars in a parking lot over time. 
@@ -726,7 +804,8 @@ Data that has no holes, gaps, or breaks. Continuous data often involves \textit{
 
 %The graphs we saw in the last section (straight lines and smooth curves) are quite easy to describe mathematically. For instance, we know how to write rules for sequences, and sequences were what led us to graph those curves in the first place. It's hard --- and sometimes impossible --- to write a neat rule for this data. So, we have developed some other terminology to describe sometimes-messy data.
 
-The key to knowing the difference between continuous and discrete data is to ask whether the data involves measuring or counting. Consider a data collection scenario in which we want to graph ``Bob's distance from home at any given time (in kilometers)''. Bob is always a certain distance away from home (perhaps 0 km, if he is at home), and he could be any distance (even fractions of a kilometer). So, this is continuous data and our graph should be an unbroken line.
+%The key to knowing the difference between continuous and discrete data is to ask whether the data involves measuring or counting.
+Consider a data collection scenario in which we want to graph ``Bob's distance from home at any given time (in kilometers)''. Bob is always a certain distance away from home (perhaps 0 km, if he is at home), and he could be any distance (even fractions of a kilometer). So, this is continuous data and our graph should be an unbroken line.
 
 Now consider the scenario in which we graph ``number of customers in line at the cheese counter at Middle Market.'' Although there is always a certain number of people in line (maybe zero), there can never be 5.7 people in line. We must count people, and so this data is discrete. Our graph would have to ``jump'' from 5 people to 6 people without going through the in-between values.
 
