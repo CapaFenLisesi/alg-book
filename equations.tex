@@ -26,7 +26,7 @@ Given any two fractions $\frac{a}{b}$ and $\frac{c}{d}$, describe a procedure fo
 \addtodoitem{Click here to visit the extended exploration: NAME}
 \end{boxedexplore}
 
-We've studied equivalence before and know, for instance, that multiplication by 1 is an operation which maintains equivalence. When we multiply some quantity by 1 --- even a very fancy version of 1 --- the quantity remains unchanged. This is the idea behind equivalent fractions: \[\frac{3}{7} = \frac{3}{7}\cdot{\color{green!40!black}1} = \frac{3}{7}\cdot{\color{green!40!black}\frac{18}{18}} = \frac{54}{126}\]
+We've studied equivalence before and know, for instance, that multiplication by 1 is an operation which maintains equivalence. When we multiply some quantity by 1 -- even a very fancy version of 1 -- the quantity remains unchanged. This is the idea behind equivalent fractions: \[\frac{3}{7} = \frac{3}{7}\cdot{\color{green!40!black}1} = \frac{3}{7}\cdot{\color{green!40!black}\frac{18}{18}} = \frac{54}{126}\]
 We also know the order of operations, which gives us a process for simplifying numerical expressions. The order of operations guarantees we always have exactly the same quantity we started with, even though it may look different.
 
 As we progress through this chapter (and beyond), we will learn more tools that we can use to simplify algebraic expressions and solve equations. We will have to be careful to use the tools correctly, though, so that the maneuvers we perform are sure to maintain equivalence. The devil is in the details, so it is a good habit to pay attention and proceed carefully.
@@ -41,29 +41,29 @@ This is a property about numbers that we use all the time, for example when we r
 
 \subsection{The Field Axioms}
 
-An \gls{axiom} is a statement that is accepted as true without proof. The real numbers $\R$ are built upon several axioms, called the \glspl{field axiom}, which are the properties and laws that make arithmetic and algebra work.\footnote{A \textit{field} is a mathematical object that pairs up a set of numbers with some operations on those numbers. The number system we know so well --- the real numbers $\R$, along with the operations of addition and multiplication --- are a field. But many other fields exist! If you continue to study algebra in college, the focus gradually shifts from studying familiar fields like the real numbers, to studying the properties of fields in general.}
+An \gls{axiom} is a statement that is accepted as true without proof. The real numbers $\R$ are built upon several axioms, called the \glspl{field axiom}, which are the properties and laws that make arithmetic and algebra work.\footnote{A \textit{field} is a mathematical object that pairs up a set of numbers with some operations on those numbers. The number system we know so well -- the real numbers $\R$, along with the operations of addition and multiplication -- are a field. But many other fields exist! If you continue to study algebra in college, the focus gradually shifts from studying familiar fields like the real numbers, to studying the properties of fields in general.}
 
-\begin{boxeddefex}[Axiom: Closure Properties]
+\begin{boxeddef2col}[Axiom: Closure Properties]
 When we add two real numbers, their sum is a real number. Mathematically speaking, we say that \textit{the real numbers are closed under the operation of addition}.
 \tcblower
 Similarly, when we multiply two real numbers, their product is a real number. We say that \textit{the real numbers are closed under the operation of multiplication}.
-\end{boxeddefex}
+\end{boxeddef2col}
 
 This might seem obvious, but we saw in \Cref{ch:numbers} that closure is not guaranteed for all sets and all operations. For example, the integers are not closed under the operation of division.
 
-\begin{boxeddefex}[Axiom: Identity Properties]
+\begin{boxeddef2col}[Axiom: Identity Properties]
 The \gls{identity property of addition} states that for any real number $a$, \[0 + a = a + 0 = a\] The number 0 is called the \gls{additive identity}.
 \tcblower
 The \gls{identity property of multiplication} states that for any real number $a$, \[1 \cdot a = a \cdot 1 = a\] The number 1 is called the \gls{multiplicative identity}.
-\end{boxeddefex}
+\end{boxeddef2col}
 
 As we saw above, the identity property of multiplication is the axiom that allows us to create equivalent fractions.
 
-\begin{boxeddefex}[Axiom: Inverse Properties]
+\begin{boxeddef2col}[Axiom: Inverse Properties]
 The \gls{inverse property of addition} states that for any real number $a$, there exists a real number $\umin a$ such that \[a + \umin a = \umin a + a = 0\] The number $\umin a$ is called the \gls{additive inverse} of $a$. Very often we will call it the \gls{opposite} of $a$.
 \tcblower
 The \gls{inverse property of multiplication} states that for any nonzero real number $a$, there exists a real number $\frac{1}{a}$ such that \[a \cdot \frac{1}{a} = \frac{1}{a} \cdot a = 1\] The number $\frac{1}{a}$ is called the \gls{multiplicative inverse} of $a$. Very often we will call it the \gls{reciprocal} of $a$.
-\end{boxeddefex}
+\end{boxeddef2col}
 
 \index{division!by zero}\index{zero!division by}
 
@@ -71,23 +71,23 @@ Note that when discussing the multiplicative inverse of $a$, this axiom states t
 
 \begin{boxedexplore}[Tangent: Explaining Division By Zero]
 Consider the following two equations. How are they related?
-\[72 \div 8 = \fbox{\color{white}0} \text{\qquad and \qquad} \fbox{\color{white}0} \cdot 8 = 72\]
+\[72 \div 8 = \fbox{\color{explorecolor!5}0} \text{\qquad and \qquad} \fbox{\color{explorecolor!5}0} \cdot 8 = 72\]
 
 Now consider these two equations. How are they related?
-\[5 \div 0 = \fbox{\color{white}0} \text{\qquad and \qquad} \fbox{\color{white}0} \cdot 0 = 5\]
+\[5 \div 0 = \fbox{\color{explorecolor!5}0} \text{\qquad and \qquad} \fbox{\color{explorecolor!5}0} \cdot 0 = 5\]
 
 The first pair of equations demonstrates the relationship between multiplication and division, which tells us that the same number goes in both boxes. Whatever number makes the first equation true, must also make the second equation true.\footnote{Spoiler alert: it's 9.}
 
-This second pair of equations is related in the same way. But, there's a problem with the multiplication sentence $\fbox{\color{white}0} \cdot 0 = 5$. \textit{Anything times zero is zero.} So, no number exists that could make that multiplication sentence true! Therefore, there can be no answer in the related division sentence.
+This second pair of equations is related in the same way. But, there's a problem with the multiplication sentence $\fbox{\color{explorecolor!5}0} \cdot 0 = 5$. \textit{Anything times zero is zero.} So, no number exists that could make that multiplication sentence true! Therefore, there can be no answer in the related division sentence.
 
-At this point, troublemakers always like to ask about $0 \div 0 = \fbox{\color{white}0}$ because that sentence, they say, is related to the multiplication sentence $\fbox{\color{white}0} \cdot 0 = 0$, and \textit{every number in the universe} makes that sentence true. They're right, of course. We say that $a \div 0$ is ``undefined'' when $a \neq 0$, whereas $0 \div 0$ is called an ``indeterminate form''. It doesn't really matter as far as we're concerned, though. Dividing \textit{anything} by zero means that we don't get a clear answer. It's mathematically off-limits.
+At this point, troublemakers always like to ask about $0 \div 0 = \fbox{\color{explorecolor!5}0}$ because that sentence, they say, is related to the multiplication sentence $\fbox{\color{explorecolor!5}0} \cdot 0 = 0$, and \textit{every number in the universe} makes that sentence true. They're right, of course. We say that $a \div 0$ is ``undefined'' when $a \neq 0$, whereas $0 \div 0$ is called an ``indeterminate form''. It doesn't really matter as far as we're concerned, though. Dividing \textit{anything} by zero means that we don't get a clear answer. It's mathematically off-limits.
 \end{boxedexplore}
 
-\begin{boxeddefex}[Axiom: Commutative Properties]
+\begin{boxeddef2col}[Axiom: Commutative Properties]
 The \gls{commutative property of addition} states that for real numbers $a$ and $b$: \[a+b = b+a\]
 \tcblower
 The \gls{commutative property of multiplication} states that for real numbers $a$ and $b$: \[a \cdot b = b \cdot a\]
-\end{boxeddefex}
+\end{boxeddef2col}
 
 The commutative properties allow us to rearrange the order of things when we add or multiply. For instance, when adding up a string of numbers, it's sometimes helpful to ``make a ten'':
 \[\begin{aligned}
@@ -107,11 +107,11 @@ The commutative properties allow us to rearrange the order of things when we add
 Note that this property is for \textit{addition and multiplication}, but not subtraction or division! To move things around in, say, a subtraction problem, we must use the definition of subtraction as ``addition of the opposite'' to create an equivalent addition problem.
 \[6 - 5 \neq 5 - 6 \text{\qquad but \qquad} 6+(\umin5) = (\umin5)+6\]
 
-\begin{boxeddefex}[Axiom: Associative Properties]
+\begin{boxeddef2col}[Axiom: Associative Properties]
 The \gls{associative property of addition} states that for real numbers $a$, $b$, and $c$: \[(a+b)+c = a+(b+c)\]
 \tcblower
 The \gls{associative property of multiplication} states that for real numbers $a$, $b$, and $c$: \[(a \cdot b) \cdot c = a \cdot (b \cdot c)\]
-\end{boxeddefex}
+\end{boxeddef2col}
 
 The associative properties allow us to move around certain parentheses and regroup addition and multiplication. Here, the numbers don't move; the parentheses do.
 \[\begin{aligned}
@@ -188,7 +188,7 @@ Clarity and simplicity are important when it comes to communicating mathematical
 
 If a movie starts at 8 o'clock, we would all prefer to see that simple number rather than have to compute $(4+5)\cdot2-10$ o'clock (yes, even algebra teachers feel this way). A simpler form will almost always be easier to understand.
 
-So, as we did with rational numbers and arithmetic expressions, we will define what it means for an algebraic expression to be ``simplified''. Recall that an \textit{algebraic expression} could be a single term, or the sum of difference of terms. A \textit{term} could be a number, or a variable, or the product/quotient of numbers and variables.
+So, as we did with rational numbers and arithmetic expressions, we will define what it means for an algebraic expression to be ``simplified''. Recall from our work in \cref{sec:algexpr} that an \gls{algebraic expression} could be a single term, or the sum of difference of terms. A \gls{term} could be a number, or a variable, or the product/quotient of numbers and variables.
 
 \begin{boxedcriteria}[Criteria for Simplified Algebraic Expressions]
 An algebraic expression is considered completely simplified if\ldots
@@ -240,7 +240,7 @@ Simplify: (a) $\umin3(2x - 4)$ \quad and \quad (b) $8-5(6x-9)$
 =&~ \umin6x + 12
 && \quad \text{substitution (in both terms)}\\
 \end{aligned}\]
-The first thing we did here was to change the subtraction to addition of the opposite. This was helpful because --- look! --- we end up with \textit{positive 12} in the final expression. That might otherwise have been an easy thing to miss.
+The first thing we did here was to change the subtraction to addition of the opposite. This was helpful because -- look! -- we end up with \textit{positive 12} in the final expression. That might otherwise have been an easy thing to miss.
 
 In problem (b) notice that we have an implied operation that will require us to apply the distributive property. In other words, the first step is \textit{not} to do $8-5$! As with the last problem, we'll start by changing to all-addition.
 \[\begin{aligned}
@@ -262,7 +262,7 @@ Again here, we get a term $\umin5\cdot\umin9 = 45$. Changing to all-addition bef
 \begin{boxedex}
 Simplify: $2x-(x-4)$
 
-\exsoln\ This one is subtle and sneaky! The negative sign is stuck on the parentheses, which means we'll have to ``distribute the negative sign'' or --- more accurately --- we again have an implied operation, hiding in there as a ``phantom one''. This expression is the same as $2x-1(x-4)$.
+\exsoln\ This one is subtle and sneaky! The negative sign is stuck on the parentheses, which means we'll have to ``distribute the negative sign'' or -- more accurately -- we again have an implied operation, hiding in there as a ``phantom one''. This expression is the same as $2x-1(x-4)$.
 
 Observe:
 \[\begin{aligned}
@@ -283,7 +283,7 @@ Did you try this problem on your own before reading the solution? Did you get $x
 
 \subsection{Combining Like Terms}
 
-\begin{boxedexplore}[Expression Sort]
+\begin{boxedexplore}[Startup Exploration: Expression Sort]
 Take a moment to sort the following mathematical objects into different groups, creating whatever categories make the most sense to you. After sorting, describe how you made your decisions. What features define each of the groups you have created?
 
 \begin{center}
@@ -337,7 +337,7 @@ Simplify: $3x^2 + 2x - 2 + x^3 + 4x^2 - 3x - 2x^3 + 8$
 \[\begin{aligned}
 	&~ 3x^2 + 2x - 2 + x^3 + 4x^2 - 3x - 2x^3 + 8\\
 =	&~ 3x^2 + 2x + \umin2 + x^3 + 4x^2 + \umin3x + \umin2x^3 + 8
-&& \quad \text{change to all-addition}\\
+&& \quad \text{definition of subtraction}\\
 =	&~ x^3 + \umin2x^3 + 3x^2 + 4x^2 + 2x + \umin3x + \umin2 + 8
 && \quad \text{commutative property of addition}\\
 =	&~ \umin1x^3 + 7x^2 + \umin x + 6
@@ -354,7 +354,7 @@ Simplify $3x-4y+2-5x+7y-6+8y$
 
 If we look at the given expression, we see that there are three ``types'' of terms that need combining: terms with $x$, terms with $y$ and constant terms (numbers).
 
-Let's pick a type of term (let's choose ones with $x$) and group them up --- signs and all! In the given expression, we have $3x-5x$, to we have $\umin2x$ in all.
+Let's pick a type of term (let's choose ones with $x$) and group them up -- signs and all! In the given expression, we have $3x-5x$, to we have $\umin2x$ in all.
 
 Pick another type of term and repeat as necessary! If we look at the $y$ terms, we have $-4y+7y+8y$ so that's $11y$ in all. Looking at the constant terms, we have $2-6 = \umin4$.
 
@@ -487,23 +487,23 @@ In \cref{sec:equivalence} we used the field axioms to simplify individual algebr
 
 An equation states that the two pans of a balance (the expressions on either side of the equal sign) are in alignment. If we were to, say, add five to the expression on one side of the equation, then we would tip the scales out of balance\ldots\ unless we also add five to the expression on other side of the equation.
 
-This idea, and other like it, are captured mathematically is a set of rules called the Properties of Equality, or POEs for short.
+This idea, and others like it, are captured mathematically is a set of rules called the Properties of Equality, or POEs for short.
 
-\begin{boxeddefex}[Properties of Equality: Addition and Subtraction]
+\begin{boxeddef2col}[Properties of Equality: Addition and Subtraction]
 The \gls{addition property of equality} (APOE) states that for all real numbers $a$, $b$, and $c$ \[\text{if } a = b \text{, then } a + c = b + c\]
 \tcblower
 The \gls{subtraction property of equality} (SPOE) states that for all real numbers $a$, $b$, and $c$\[\text{if } a = b \text{, then } a - c = b - c\]
-\end{boxeddefex}
+\end{boxeddef2col}
 
 Note that since ``subtraction'' is the same as ``addition of the opposite'', SPOE is really just APOE in disguise.
 
-\begin{boxeddefex}[Properties of Equality: Multiplication and Division]
-The \gls{multiplication property of equality} (MPOE) states that for all real numbers $a$, $b$, and $c$ \[\text{if } a = b \text{, then } a \cdot c = b \cdot c\]
+\begin{boxeddef2col}[Properties of Equality: Multiplication and Division]
+The \gls{multiplication property of equality} (MPOE) states that for all real numbers $a$, $b$, and $c$, where $c\neq 0$ \[\text{if } a = b \text{, then } a \cdot c = b \cdot c\]
 \tcblower
 The \gls{division property of equality} (DPOE) states that for all real numbers $a$, $b$, and $c$, where $c\neq 0$ \[\text{if } a = b \text{, then } \frac{a}{c} = \frac{b}{c}\]
-\end{boxeddefex}
+\end{boxeddef2col}
 
-Here again, note that since ``division'' is the same as ``multiplication by the reciprocal'', DPOE is really just MPOE in disguise. Note too that $c$ must not equal 0 when using DPOE, lest we be flummoxed upon division by zero.
+Here again, note that since ``division'' is the same as ``multiplication by the reciprocal'', DPOE is really just MPOE in disguise. Note too that $c$ must not equal 0 when using these rules. Using 0 with DPOE must certainly be avoided, lest we be flummoxed upon division by zero.\footnote{Why must we be cautious about multiplying both sides of an equation by zero? In the end we'll get $0=0$, which is a true statement. What's the problem? Note that multiplication by 0 is \textit{irreversible}. If we multiply by 2 (or any nonzero number) we can reverse or ``undo'' this operation by dividing by 2. But, since division by 0 is not allowed, we cannot undo multiplication by 0. Later, we will see that irreversible operations can lead us to ``fake'' solutions to our equations, so-called \textit{extraneous solutions}.}
 
 Let's use the properties of equality to solve the problem of Bob's cheese balance.
 
@@ -519,7 +519,7 @@ B & = 4
 \end{aligned}\]
 \end{boxedex}
 
-Note that in our work above, we started out by defining what variable we would use to represent our unknown. Then, we wrote an equation based on the information given in the problem. Our goal was to get $B$ by itself on one side of the equation, or to ``isolate $B$''. Since 3 had been added to $B$, we had to ``undo'' this. So, we subtracted 3.
+Note that in our work above, we started out by defining what variable we would use to represent our unknown. Then, we wrote an equation based on the information given in the problem. Our goal was to get $B$ by itself on one side of the equation, or to \textit{isolate $B$}. Since 3 had been added to $B$, we had to ``undo'' this. So, we subtracted 3 from both sides using SPOE.
 
 \begin{boxeddef}[Inverse Operations (a.k.a. Opposite Operations)]
 Operations that will ``undo'' one another. For example, addition and subtraction are inverse operations. Multiplication and division are inverse operations.
@@ -563,7 +563,7 @@ Here's an example of a level 2 equation. How is it different from Level 1? \[3x 
 Notice that in this equation, two things were done to the unknown $x$. First it was multiplied by 3, and then 16 was added to the result. To isolate the variable, the rule of thumb is to undo whatever was done to the unknown. Usually this means that we will have to undo the order of operations in reverse. Most of the time, we can rely on the ``underpants analogy''.
 
 \begin{boxeddef}[The Underpants Analogy]
-When you get dressed for school in the morning, you put your underpants on \textit{before} you put on your jeans. When you get undressed to go to bed, you do the \textit{opposite} of each step, and you do the steps in the \textit{opposite order}. In other words: you have to take your jeans off first, before you can take your underpants off.
+When you get dressed for school in the morning, you put your underpants on \textit{before} you put on your jeans. When you get undressed to go to bed, you do the \textit{opposite} of each step, and you do the steps in the \textit{opposite order}. In other words: you have to take your jeans off first, before you can take your underpants off.\footnote{Try doing it the other way around, we dare you. Later.}
 \end{boxeddef}
 
 To undo the order of operations, we have to work upside-down and backwards:
@@ -609,11 +609,11 @@ Having found a solution, it is a great habit to check the solution by substituti
 43 & \overset{\checkmark}{=} 43
 &&\quad\text{Check!}
 \end{aligned}\]
-When we substitute in 9, we put little question marks over out equal sign, since we are checking the solution --- we're not sure whether the two expressions are equal yet! In the end, when we discover that the left-hand side is equal to the right-hand side, we replace our question with a check mark of confirmation!
+When we substitute in 9, we put little question marks over out equal sign, since we are checking the solution -- we're not sure whether the two expressions are equal yet! In the end, when we discover that the left-hand side is equal to the right-hand side, we replace our question with a check mark of confirmation!
 
-The key here is to realize that, ultimately, the process we use to solve an equation yields \textit{candidates} for the value of the unknown. We are not guaranteed that all of these candidates actually satisfy the original equation, until we check them to know for sure.\footnote{There will come a time when we will do everything correctly, and still some of our solution-candidates will have to be rejected! Get in the habit now of checking solutions!}
+The key here is to realize that, ultimately, the process we use to solve an equation yields \textit{candidates} for the value of the unknown. We are not guaranteed that all of these candidates actually satisfy the original equation, until we check them to know for sure.\footnote{There will come a time when we will do everything correctly, and still some of our solution-candidates will have to be rejected! Get in the habit of checking solutions now!}
 
-Once we have verified that our solution satisfies the original equation, we should write our answer in set notation. The equation $x=5$ isn't our solution, but an equivalent equation --- in fact, it's the simplest equation that has the same solution as the original!
+Once we have verified that our solution satisfies the original equation, we should write our answer in set notation. The equation $x=5$ isn't our solution, but an equivalent equation -- in fact, it's the simplest equation that has the same solution as the original!
 
 In other words, the equation solving process creates simpler and simpler equations that all have the same solution. Eventually, we get to the an equation that shows the solution clearly. We use set notation to record our solution because it is a notation that suggests the solution works for all of the intermediate equations.
 
@@ -626,7 +626,7 @@ So, in our ongoing example, we write $\solset{5}$. Yes, a mathematical ``set'' m
 \section{Solving Level 3 Linear Equations}
 \label{sec:linearlevel3}
 
-Level 1 equations are called, naturally enough, \textit{one-step equations}, and Level 2 equations are called --- you guessed it! --- two-step equations. In Level 3, we increase complexity by combining the tasks of expression-simplifying and equation-solving.
+Level 1 equations are called, naturally enough, \textit{one-step equations}, and Level 2 equations are called -- you guessed it! -- two-step equations. In Level 3, we increase complexity by combining the tasks of expression-simplifying and equation-solving.
 
 \begin{boxedexplore}[Extended Exploration: Evil Mystery Numbers]
 \addtodoitem{Click here to visit the extended exploration: Evil Mystery Numbers}
@@ -640,11 +640,11 @@ Here we find an equation that must be simplified using the field axioms and rela
 \[\begin{aligned}
 2x + 7 - 5x + 12 & = 15\\
 2x + 7 + \umin5x + 12 & = 15
-&&\text{\quad rewrite subtraction as adding the opposite}\\
+&&\text{\quad rewrite as addition, by def'n of subtraction}\\
 2x + \umin5x + 7 + 12 & = 15
 &&\text{\quad commutative property of addition}\\
 \umin3x + 19 & = 15
-&&\text{\quad combine like terms --- this is now a Level 2 equation!}\\
+&&\text{\quad combine like terms -- this is now a Level 2 equation!}\\
 \umin3x + 19 - 19 & = 15 - 19
 &&\text{\quad SPOE}\\
 \umin3x & = \umin4
@@ -664,7 +664,7 @@ We can check our answer for the last problem by substituting our solution back i
 2\left(\frac{4}{3}\right) + 7 - 5\left(\frac{4}{3}\right) + 12 & \overset{?}{=} 15
 && \text{\quad substitute in our solution $x = \tfrac{4}{3}$}\\[1ex]
 2\left(\frac{4}{3}\right) + 7 + \umin5\left(\frac{4}{3}\right) + 12 & \overset{?}{=} 15
-&& \text{\quad rewrite subtraction as adding the opposite}\\[1ex]
+&& \text{\quad rewrite as addition, by def'n of subtraction}\\[1ex]
 \frac{8}{3} + 7 + \frac{\umin20}{3} + 12 & \overset{?}{=} 15
 && \text{\quad multiply fractions}\\[1ex]
 \frac{8}{3} + \frac{21}{3} + \frac{\umin20}{3} + \frac{36}{3} & \overset{?}{=} 15
@@ -677,6 +677,7 @@ We can check our answer for the last problem by substituting our solution back i
 Writing our solution as a solution set, we have $\solset{15}$.
 
 \begin{boxedex}
+\label{ex:dist}
 Determine the value of $w$, given the equation \[7w + 2(\umin3w + 1) = 12.\]
 
 \exsoln\ Our goal is to try and simplify the left-hand side so that it looks like a Level 1 or Level 2 equation.
@@ -685,7 +686,7 @@ Determine the value of $w$, given the equation \[7w + 2(\umin3w + 1) = 12.\]
 7w + \umin6w + 2 &= 12
 &&\text{\quad distributive property}\\
 1w + 2 & = 12
-&&\text{\quad combine like terms --- that's a Level 1 equation!}\\
+&&\text{\quad combine like terms -- that's a Level 1 equation!}\\
 w + 2 - 2 & = 12 - 2
 &&\text{\quad SPOE}\\
 w & = 10
@@ -707,13 +708,14 @@ Let's check our solution:
 We're going to look at one more example, and discuss two alternative ways to approach it.
 
 \begin{boxedex}
+\label{ex:nodist}
 Determine the value of $g$, given the equation \[\umin4(2g - 7) = 36.\]
 
 \exsoln\ Approach \#1. Those parentheses are just asking to be simplified using the distributive property. Be mindful of the signs, though!
 \[\begin{aligned}
 \umin4(2g - 7) &= 36\\
 \umin8g + 28 &= 36
-&&\text{\quad distributive property --- that's a Level 2 equation!}\\
+&&\text{\quad distributive property -- that's a Level 2 equation!}\\
 \umin8g + 28 - 28 &= 36 - 28
 &&\text{\quad SPOE}\\
 \umin8g &= 8\\[1ex]
@@ -728,7 +730,7 @@ Approach \#2. Let's solve the same equation again. This time, notice that we can
 \frac{\umin4(2g-7)}{\umin4} &= \frac{36}{\umin4}
 &&\text{\quad DPOE}\\
 2g-7 &= \umin9
-&&\text{\quad simplify --- that's a Level 2 equation!}\\
+&&\text{\quad simplify -- that's a Level 2 equation!}\\
 2g-7+7 &= \umin9+7
 &&\text{\quad APOE}\\
 2g &= \umin2
@@ -740,16 +742,17 @@ g &= \umin1
 
 \end{boxedex}
 
-The two different approaches taken in the previous example are not always available. Compare the solutions to examples 5.3 and 5.4 in this section. Can we avoid the distributive property in example 5.3 Why or why not?
+The two different approaches taken in the previous example are not always available. Compare the solutions to \cref{ex:dist,ex:nodist}. Can we avoid the distributive property in \cref{ex:dist}? Why or why not?
 
-\subsection{A Note on Checking Work}
 
-Every step we take in solving an equation generates an equivalent equation that has the same solution set. If we make a mistake, we accidentally create an equation with a different solution set. Knowing this can help us check our answers on the more complex equations (ones with more steps).
+\subsection{Checking Work}
+
+Every step we take in solving an equation generates an equivalent equation that has the same solution set. If we make a mistake, we accidentally create an equation with a different solution set. Knowing this can help us check our answers on the more complex equations (ones that have more steps).
 
 \begin{boxedex}
 Solve for $x$, given the equation $2x-3(4x-1)=-53$.
 
-Let's say we mess up the signs when carrying out the distributive property --- a very common mistake.
+Let's say we mess up the signs when carrying out the distributive property -- a very common mistake.
 \[\begin{aligned}
 2x - 3(4x-1) &= \umin53
 && \text{\quad Line 1.}
@@ -795,9 +798,9 @@ The goal is the same: to isolate the variable on one side of the equal sign. We 
 8x-5 &= 2x+7
 &&\text{\quad combine like terms on both sides}\\
 8x-5 - 2x &= 2x+7 - 2x
-&&\text{\quad SPOE: subtract $2x$ from both sides --- clever!}\\
+&&\text{\quad SPOE: subtract $2x$ from both sides -- clever!}\\
 6x-5 &= 7
-&&\text{\quad combine like terms again --- that's a Level 2 equation!}\\
+&&\text{\quad combine like terms again -- that's a Level 2 equation!}\\
 6x &= 12
 &&\text{\quad APOE: add 5 to both sides}\\
 x &= 2
@@ -821,9 +824,9 @@ Let's see what happens if we isolate the unknown on \textit{the other side of th
 &&\text{\quad DPOE: divide both sides by $\umin6$}
 \end{aligned}\]
 
-So, it doesn't matter which side we choose to eliminate the unknown. As long as we apply APOE or SPOE correctly, the solution will be the same. One strategy is to choose the side that will result in a \textit{positive coefficient} for the variable. This isn't required, but it helps avoid the chances of losing a negative sign along the way (maybe that's happened to you).\footnote{Seems like a good place for a footnote... but about what?}
+So, it doesn't matter which side we choose to eliminate the unknown. As long as we apply APOE or SPOE correctly, the solution will be the same. One strategy is to choose the side that will result in a \textit{positive coefficient} for the variable. This isn't required, but it helps avoid the chances of losing a negative sign along the way (maybe that's happened to you).\footnote{Napoleon ordered the creation of the first modern lost-and-found office in Paris in 1805, although lost-property systems have existed in Japan since the early 700s.}
 
-If you don't like the side of the equation that the unknown is on, you can always rewrite the equation. For example if you have the equation $3=4+x$ and you really want the $x$ on the left-hand side, you can just rewrite the equation as $4+x=3$. Those are equivalent equations!
+Plus, if you don't like the side of the equation that the unknown is on, you can always rewrite the equation. For example if you have the equation $3=4+x$ and you really want the $x$ on the left-hand side, you can just rewrite the equation as $4+x=3$. Those are equivalent equations!\footnote{Even these obvious properties have been given names. For example, this is a fact about equations: if $a=b$, then $b=a$. To describe this, we say that equality is \textit{symmetric}. An even more obvious statement is that $a=a$ (we say that equality is \textit{reflexive}). A third property is a little more interesting: if $a=b$ and $b=c$, then $a=c$ (we say that equality is \textit{transitive}). }
 
 \begin{boxedex}
 Determine the value of $x$ given the equation \[3(x-2)+3x=4x-6.\]
@@ -884,7 +887,7 @@ How do you write down the solution to a problem that has no solution? This is no
 
 Or, there is a third option. You may or may not be surprised to learn that mathematicians have invented a symbol for just such an occasion. We use the mathematical symbol \emptyset, called the ``empty set'' or ``null set'', as a way to show that that our solution set is empty.\footnote{The symbol \O, which was introduced by French mathematician Andr\'e Weil in 1939, is a letter in the Norwegian alphabet.} We write $\mathcal{S} = \emptyset$ to mean ``the solution set is empty''.
 
-Notice that we don't write the curly braces around the empty set. In other words, we write $\mathcal{S}=\emptyset$ and not $\solset{\emptyset}$. The former says ``$S$ is the empty set'', which is what we mean when we have an equation with no solutions. The latter says ``$S$ is the set which contains the empty set'' which --- believe it or not --- is not the same thing.\footnote{The empty set is not the same as zero, and it is not the same as nothing. It is a set with nothing inside it, like an empty bag. So, writing $\mathcal{S} = \emptyset$ is stating that the solution set is like an empty bag. Extending this metaphor, $\{\emptyset\}$ is a bag with an empty bag in it and, therefore, a set which contains the empty set is not empty. Om.}
+Notice that we don't write the curly braces around the empty set. In other words, we write $\mathcal{S}=\emptyset$ and not $\solset{\emptyset}$. The former says ``$S$ is the empty set'', which is what we mean when we have an equation with no solutions. The latter says ``$S$ is the set which contains the empty set'' which -- believe it or not -- is not the same thing.\footnote{The empty set is not the same as zero, and it is not the same as nothing. It is a set with nothing inside it, like an empty bag. So, writing $\mathcal{S} = \emptyset$ is stating that the solution set is like an empty bag. Extending this metaphor, $\{\emptyset\}$ is a bag with an empty bag in it and, therefore, a set which contains the empty set is not empty. Om.}
 
 For the record, the empty set is not the same as zero. So, an equation can have the solution set $\solset{0}$, like example 5.6. This is different from an equation having the solution set $\solset{~}$, like example 5.7.
 
@@ -899,7 +902,7 @@ Determine the value of $x$ given the equation \[5x-3(x+2)=2x-6.\]
 5x-3x-6 &= 2x-6
 &&\text{\quad distributive property, watch the signs}\\
 2x-6 &= 2x-6
-&&\text{\quad combine like terms --- something is fishy already.}\\
+&&\text{\quad combine like terms -- something is fishy already.}\\
 2x-6-2x &= 2x-6-2x
 &&\text{\quad SPOE: subtract $2x$ from both sides}\\
 -6 &= -6
@@ -933,7 +936,7 @@ Over the last few sections we have added complexity to the equation-solving pict
 Recall the definition of absolute value. Determine the value of $x$ given the equation \[\abs{x} = 6.\]
 \end{boxedexplore} %% End of startup exploration
 
-Recall that the absolute value of a number is that number's distance away from zero on the number line. Distances are always positive: $\umin6$ is 6 units away from 0, and so $\abs{\umin6}=6$. Of course, $\abs{6} = 6$ as well. So, the equation above has two solutions $x = 6 \OR \umin6$. In solution set notation, we write $\solset{6, \umin6}$.
+Recall that the absolute value of a number is that number's distance away from zero on the number line. Distances are always positive: $\umin6$ is 6 units away from 0, and so $\abs{\umin6}=6$. Of course, $\abs{6} = 6$ as well. So, the equation above has two solutions $x = 6 \OR \umin6$.\footnote{Note, we mean \textit{or} and not \textit{and}. Both 6 and $\umin6$ are solutions to the equation, but we must write $x=6 \OR \umin6$, since $x$ can have only take on one value at a time.} In solution set notation, we write $\solset{6, \umin6}$.
 
 The presence of the absolute value gives us the possibility of having two solutions, since whatever is inside the absolute value bars could be either the positive or the negative version of the value.
 
@@ -959,7 +962,7 @@ This equation has solutions $\solset{\umin1, 7}$.
 
 Note that the steps we took for solving were the same for both equations (in this case, first we used SPOE, and then DPOE). So, we can streamline our work a bit, as shown in the next example.
 
-The next example also has things going on outside of the absolute value symbols. For these types of problems, we want to isolate the absolute value expression first (using the properties of equality), then separate into two equations (if necessary).
+The next example also has things going on outside of the absolute value symbols. For these types of problems, we want to isolate the absolute value expression first (using the properties of equality), then separate into two equations (if necessary).\footnote{In case you are wondering, we won't get into equations that include multiple abvolute value expressions\ldots\ although you might enjoy exploring an equation of this kind, just for fun. For example, what values of $x$ satisfy this equation? $\abs{x+2}=2\abs{x}-1$}
 
 \begin{boxedex}
 Determine the value of $x$ given the equation: $3\abs{\umin4x+4} = 48$.
@@ -1090,7 +1093,7 @@ If we know the base and height of a specific triangle, we can find its area.
 \end{center}
 But what if we are given the area and the base length: Could we work backwards to find the height? Could we ``transform'' the area formula so that it computes $h$ instead of $A$?
 
-Transforming a formula means to isolate a specific variable, even though the other side of the equal sign might not simplify down to a single number. The only difference between this and what we have been doing before now is that the equations may have multiple variables.
+Transforming a formula means to isolate a specific variable, even though the other side of the equal sign might not simplify down to a single number. The only difference between this and what we have been doing before now is that the equations may have multiple variables (and not unknowns).
 
 \begin{boxedex}
 Transform the triangle area formula, $A = \frac{1}{2}bh$, to isolate $h$.
@@ -1146,7 +1149,9 @@ P - 2d &= 2w
 \end{aligned}\]
 \end{boxedex}
 
-In the previous example, the second approach is a bit more work. The distributive property can't always be avoided though, as we saw back in example 5.3. So, it pays to be observant and do a bit of thinking before we start crunching the numbers.
+In the previous example, the second approach is a bit more work. The distributive property can't always be avoided though, as we saw back in \cref{ex:dist}. So, it pays to be observant and do a bit of thinking before we start crunching the numbers.
+
+\addtodoitem{fix example numbering here}
 
 \subsection{(;,;) Proving Foundational Results Using the Field Axioms}
 
@@ -1154,7 +1159,7 @@ As we mentioned in \cref{sec:equivalence}, an axiom is a statement that is accep
 
 Similarly, there's a field axiom about multiplication by 1. But, that there is no axiom about multiplication by 0. Why not? When thinking about the field axioms, an interesting thing to consider is why some rules are omitted.\footnote{Remember that the Cthulhu icon (;,;) indicates that this is an extension section. Don't feel bad if some of the ideas feel like swimming in the deep end! Stick with it!}
 
-Surprisingly, we can use the axioms given in \cref{sec:equivalence} to explain other basic results of arithmetic. In other words: our axioms are the fundamental building blocks. We can use them to build complex structures (like Level 5 equations) or simple structures. Sometimes, we discover that we can build really simple --- even obvious-looking --- mathematical statements from \textit{even simpler statements}!
+Surprisingly, we can use the axioms given in \cref{sec:equivalence} to explain other basic results of arithmetic. In other words: our axioms are the fundamental building blocks. We can use them to build complex structures (like Level 5 equations) or simple structures. Sometimes, we discover that we can build really simple -- even obvious-looking -- mathematical statements from \textit{even simpler statements}!
 
 \subsubsection{Multiplication by Zero}
 
@@ -1270,5 +1275,5 @@ a &= a + 0
 \end{aligned}\]
 What does this tell us? Notice that we started our equation with $a$ and ended up with $b$. This means $a=b$. Altogether, we have shown that if we know $a+c = b+c$, then it must be that $a = b$. That's one of our POEs!
 
-This section has gotten into some pretty esoteric stuff. Don't worry if it feels overwhelming at first. Let these ideas sink in and read through this section again in a few weeks. It takes time for our brains to incorporate abstract ideas!
+In the end, we have been able to used the field axioms to prove that other fundamental properties hold true. Don't worry if it feels overwhelming at first. This section has gotten into some pretty abstract territory! Let these ideas sink in and read through this section again later. It takes time for our brains to incorporate challenging ideas.
 %%% End of file

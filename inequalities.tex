@@ -198,11 +198,11 @@ Could we add (or subtract) the same things on both sides and maintain order? To 
 
 In fact, adding the same thing to both sides does nothing to change their relative order on the number line. Adding simply translates the original inequality to the right or left on the number line. (Note that translations to the left happen when adding a negative number, which is the same as subtracting!)
 
-\begin{boxeddefex}[Properties of Order: Addition and Subtraction]
+\begin{boxeddef2col}[Properties of Order: Addition and Subtraction]
 The \gls{addition property of order} (APOO) states that for all real numbers $a$, $b$, and $c$  \[\text{if } a < b \text{, then } a + c < b + c\]
 \tcblower
 The \gls{subtraction property of order} (SPOO) states that for all real numbers $a$, $b$, and $c$  \[\text{if } a < b \text{, then } a - c < b - c\]
-\end{boxeddefex}
+\end{boxeddef2col}
 
 Note! Rather than write out the same sentence with all the different inequality symbols, we simply note here that APOO and SPOO hold for $a \leq b$, $a>b$, and $a \geq b$. 
 
@@ -213,7 +213,7 @@ This is encouraging! But\ldots\ we have to be a bit cautious. Notice that we hav
 
 There's a geometric interpretation to this: Multiplication (and division) perform a scaling of the points away from (or towards) zero. Multiplying by a positive number performs that scaling on the same side of zero as the original numbers. But, multiplying by a negative number first reflects our inequality about zero. That reflection changes the order of the numbers!
 
-\begin{boxeddefex}[Properties of Order: Multiplication and Division]
+\begin{boxeddef2col}[Properties of Order: Multiplication and Division]
 The \gls{multiplication property of order} (MPOO) states that for all real numbers $a$, $b$, and $c$:
 \[\text{if } a < b \text{ and } c > 0 \text{, then } ac < bc\]
 \[\text{if } a < b \text{ and } c < 0 \text{, then } ac > bc\]
@@ -221,7 +221,7 @@ The \gls{multiplication property of order} (MPOO) states that for all real numbe
 The \gls{division property of order} (DPOO) states that for all real numbers $a$, $b$, and $c$:
 \[\text{if } a < b \text{ and } c > 0 \text{, then } \frac{a}{c} < \frac{b}{c}\]
 \[\text{if } a < b \text{ and } c < 0 \text{, then } \frac{a}{c} > \frac{b}{c}\]
-\end{boxeddefex}
+\end{boxeddef2col}
 
 Note that, as before, MPOO and DPOO behave the same for all of the inequality symbols, not just $<$.
 
@@ -419,7 +419,7 @@ This statement is true, and so the points $(-3,2)$ is part of the solution set. 
 Note that the inequality is inclusive, so any point on the line $y = -2x + 6$ must be part of the solution set (that's the line $y$ \textit{equals} $-2x + 6$).
 
 In addition, the solution set must include any point that is ``less than'' that line. In other words, any point on the same side of the line as $(-3,2)$, the point that we checked above, and which we know is in the solution set. So, our solution must look like the graph below.
-\resizeplot{-8}{8}{-8}{8}
+\resizeplot{-8}{-8}{8}{8}
 \begin{center}
 \begin{tikzpicture}
 	\begin{axis}[standard]
@@ -454,7 +454,7 @@ In addition, the solution set must include any point that is ``less than'' that 
 %%%	\node[right] at (4,5) {$(4,5)$};
 %%%\end{tikzpicture}
 %%%
-%%%\resizeplot{-8}{8}{-8}{8}
+%%%\resizeplot{-8}{-8}{8}{8}
 %%%\begin{center}
 %%%\begin{tikzpicture}
 %%%	\begin{axis}[standard]
@@ -490,7 +490,7 @@ Before we draw the line, though, note that we have an exclusive inequality: ``gr
 
 Since our inequality is ``greater than'' it seems reasonable to shade the region above the line. The resulting graph is shown below.
 
-\resizeplot{-2}{17}{-2}{17}
+\resizeplot{-2}{-2}{17}{17}
 \begin{center}
 \begin{tikzpicture}
 	\begin{axis}[standard]
@@ -516,7 +516,7 @@ We have a false statement in the end, so the origin is not included in the solut
 \begin{boxedex}
 Write the inequality pictured in the graph below.
 
-\resizeplot{-10}{10}{-10}{10}
+\resizeplot{-10}{-10}{10}{10}
 \begin{center}
 \begin{tikzpicture}
 	\begin{axis}[standard]
@@ -544,7 +544,7 @@ TODO
 
 By now you can perhaps anticipate where this is heading! Here you see a graph of a system of inequalities. The solution to the system is the set of points that the graphs share. In other words, the region where they ``overlap''.
 
-\resizeplot{-10}{10}{-10}{10}
+\resizeplot{-10}{-10}{10}{10}
 \begin{center}
 \begin{tikzpicture}
 	\begin{axis}[standard]
@@ -598,7 +598,7 @@ We have been graphing lines for a while now, and shading on one side of a line d
 
 \exsoln\ Before we start graphing, note that the lines are parallel! Our first instinct might be to say that this system has ``no solution''. That would be correct, if we were dealing with a system of \textit{equations}, but here we have inequalities! Let's take a look at the graph.
 
-\resizeplot{-10}{10}{-10}{10}
+\resizeplot{-10}{-10}{10}{10}
 \begin{center}
 \begin{tikzpicture}
 	\begin{axis}[standard]
@@ -626,7 +626,7 @@ Graph the system:\[\linearsys{y\geq2x+6}{-2x+y<6}.\]
 
 \exsoln\ Let's fast-forward to the graph and see what's happening here.
 
-\resizeplot{-10}{10}{-10}{10}
+\resizeplot{-10}{-10}{10}{10}
 \begin{center}
 \begin{tikzpicture}
 	\begin{axis}[standard]
@@ -676,7 +676,7 @@ y 	&< 2x-1\\
 The point satisfies the first inequality, but not the second. So, $(-2,1)$ is not a solution to the system.
 
 Graphing is not required to answer this question, but it may be helpful to see a visual. Note where the given point lies on the graph. Predict what would happen if we tested the non-solution $(2,3)$. Do the same for the non-solution $(4,-3)$.
-\resizeplot{-8}{8}{-8}{8}
+\resizeplot{-8}{-8}{8}{8}
 \begin{center}
 \begin{tikzpicture}
 	\begin{axis}[standard]
@@ -745,7 +745,7 @@ Now, we combine our variables with our constraints to write a system of inequali
 
 We graph all five of these inequalities on the same set of axes. $F$ and $C$ aren't really dependent or independent variables, so it doesn't matter which we place on which axis. We'll put $F$ on the horizontal axis.
 
-\resizeplot{0}{17}{0}{17}
+\resizeplot{0}{0}{17}{17}
 \begin{center}
 \begin{tikzpicture}
 	\begin{axis}[standard, ylabel={\large$C$}, xlabel={\large$F$}]

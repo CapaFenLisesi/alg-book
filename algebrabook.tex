@@ -1,64 +1,82 @@
 \documentclass[oneside, openany]{book}
+\usepackage[english]{babel}
 
-%%% Partial inclusion, for piecewise development
-\includeonly{graphs}
+% Partial inclusion, for piecewise development
+%\includeonly{equations}
 
-%%%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-%%% Math formatting
-\usepackage{mathtools}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
-\DeclareMathOperator{\OR}{~\underline{or}~}
+% Custom table commands
+\usepackage{jermer_tables}
 
-\newcommand{\solset}[1]{\mathcal{S}=\left\{#1\right\}}
+% Custom mathematics commands
+\usepackage{jermer_math}
 
-%\newcommand{\iu}{{\fontfamily{ptm}\selectfont i\mkern1mu}}
-%\DeclareMathAlphabet{\mathpal}{OT1}{ppl}{m}{n}
-%\SetMathAlphabet{\mathpal}{bold}{OT1}{ppl}{b}{sl}
-%\newcommand{\iu}{{\mathpal i}}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%
+% Callout boxes
+%
+\usepackage{algnom_boxes}
 
-\newcommand{\iu}{{i\mkern1mu}}
+% Enable formatting for one-line examples
+\usepackage{enumitem}
 
-%%%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-%%% Paper size and margins
-%%%
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%
+% Graphs
+%
+\usepackage{algnom_graphs}
+
+% Enable fractal drawing
+\usepackage{tikz}
+\usetikzlibrary{decorations.fractals}
+\usetikzlibrary{lindenmayersystems}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%
+% Font selection
+%
+\RequirePackage[T1]{fontenc}
+\RequirePackage{cmbright}
+
+% Special inline formatting for the name ''Algebranomicon'
+\newcommand{\algebranomicon}{\textcolor{black}{$\mathfrak{Algebranomicon}$}}
+
+% Special inline formatting for calculator commands
+\newcommand{\calculator}[1]{\texttt{#1}}
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%
+% Page layout, margins, line spacing
+%
 \usepackage[letterpaper, margin=1in]{geometry}
 
-%%% Set line spacing to 1.5
+% Set line spacing to 1.5
 \usepackage{setspace}
 \onehalfspacing
 
-%%% Use blank line and no indentation at paragraph break
+% At paragraph break use blank line w/ no indentation 
 \usepackage{parskip}
 
+% Restore the paragraph skip length inside minipages
 \setlength{\parskip}{\bigskipamount}
 \makeatletter
 	\newcommand{\@minipagerestore}{\setlength{\parskip}{\medskipamount}}
 \makeatother
 
-\usepackage{enumitem}
+% Enable custom page headers and footers
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
 
-%%%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-%%% Formatting chapter and section titles
-%%%
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%
+% Formatting chapter and section titles
+%
 \usepackage{titlesec}
-%%% Enable two-digit chapter and section numbering: "Section 02.05"
 
-%\newcommand{\sectionbreak}{\clearpage}
-%\makeatletter
-%	\renewcommand\thechapter{\two@digits{\value{chapter}}}
-%	\renewcommand\thesection{\thechapter.\two@digits{\value{section}}}
-%	%%% Adjust spacing in TOC
-%	\renewcommand{\l@section}{\@dottedtocline{1}{2em}{3em}}
-%\makeatothter
-
-%%% Draw horizontal rule under section titles
-\newcommand{\trule}{\color{black!25}\titlerule[1pt]}
-
-\titleformat{\section}
-	{\normalfont\bfseries\Large}
-	{\thesection}{1em}{}[\trule]
-
-%%% Start sections on a new page, except for the first section of a new chapter
+% Start sections on a new page, except for the first section of a new chapter
 \usepackage{etoolbox}
 \newtoggle{afterpart}
 \pretocmd{\section}
@@ -73,40 +91,50 @@
 	\global\toggletrue{afterpart}% tell \section we're just after a part
 }{}{}
 
-%%% Enable fancy formatting for chapter quotes
+% Draw horizontal rule under section titles
+\newcommand{\trule}{\color{black!25}\titlerule[1pt]}
+
+\titleformat{\section}
+	{\normalfont\bfseries\Large}
+	{\thesection}{1em}{}[\trule]
+
+% Enable fancy formatting for chapter quotes
 \usepackage{epigraph}
 
-%%% Chapter quote command to wrap epigraph commands.
+% Command to wrap epigraph commands.
+% Usage: \chapquote{quote}{author}
 \newcommand{\chapquote}[2]{
 	\epigraphhead[50]{\epigraph{#1}{\textit{#2}}}
 }
 
-%%% Adjust epigraph rule color
+% Adjust epigraph rule color
 \makeatletter
 \renewcommand{\@epirule}
 	{\color{black!25}\rule[.5ex]{\epigraphwidth}{\epigraphrule}}
 \makeatother
 
-
-%%%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-%%% Footnote formatting
-%%%
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%
+% Footnotes
+%
 \usepackage[hang,bottom]{footmisc}
-\setlength{\footnotemargin}{1em}	% Footnote hanging indent
-\setlength{\footnotesep}{3ex}		% Space between two footnotes
-\setlength{\skip\footins}{5ex}		% Space between text and notes?
 
-%%%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-%%% Enable fancy headers and footers
-%%%
-\usepackage{fancyhdr}
-\setlength{\headheight}{15pt}
+% Footnote hanging indent
+\setlength{\footnotemargin}{1em}
 
-%%%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-%%% Enable clickable cross-references
-%%%
+% Space between two footnotes
+\setlength{\footnotesep}{3ex}
+
+% Space between text and notes -- Note sure if this is needed?
+\setlength{\skip\footins}{5ex}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%
+% Cross references
+%
 \usepackage[hidelinks]{hyperref}
 
+% Formatting hyperlinks
 %\usepackage{hyperref}
 %\hypersetup{
 %	colorlinks   = true,	%Colours links instead of ugly boxes
@@ -118,61 +146,65 @@
 \usepackage{cleveref}
 \providecommand\phantomsection{}
 
-%%% Enable glossary creation
+% Custom labels for clever references to "examples"
+\crefname{counterExample}{example}{examples}
+\Crefname{counterExample}{Example}{Examples}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%
+% Glossary and index
+%
+% Enable glossary creation
 \usepackage[nonumberlist, nopostdot]{glossaries}
 \setglossarystyle{listhypergroup}
 \renewcommand*{\glshypernavsep}{ $\cdot$ }
 \makeglossaries
 
-%%% Enable index creation
+% Enable index creation
 \usepackage{makeidx}
 \makeindex
 
-%%% Redefine glossary commands to create index linkages
-\let\oldgls\gls
-\renewcommand*{\gls}[1]{\inlinedef{\oldgls{#1}}\index{#1}}
-\let\oldGls\Gls
-\renewcommand*{\Gls}[1]{\inlinedef{\oldGls{#1}}\index{#1}}
-\let\oldglspl\glspl
-\renewcommand*{\glspl}[1]{\inlinedef{\oldglspl{#1}}\index{#1}}
-\let\oldGlspl\Glspl
-\renewcommand*{\Glspl}[1]{\inlinedef{\oldGlspl{#1}}\index{#1}}
-%% TO DO -- gotta think about this.
-%\let\oldglslink\glslink
-%\renewcommand*{\glslink}[2]{\inlinedef{\oldgls{#1}}\index{#1}}
+% Commands to create simultaneous glossary-index entries
+% Good idea? Bad idea?
+%\let\oldgls\gls
+%\renewcommand*{\gls}[1]{\inlinedef{\oldgls{#1}}\index{#1}}
+%
+%\let\oldGls\Gls
+%\renewcommand*{\Gls}[1]{\inlinedef{\oldGls{#1}}\index{#1}}
+%
+%\let\oldglspl\glspl
+%\renewcommand*{\glspl}[1]{\inlinedef{\oldglspl{#1}}\index{#1}}
+%
+%\let\oldGlspl\Glspl
+%\renewcommand*{\Glspl}[1]{\inlinedef{\oldGlspl{#1}}\index{#1}}
 
-
-%%%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-%%% Enable to-do list creation
-%%%
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%
+% To-do list
+%
 \newcommand{\addtodoitem}[1]
 {%
-	%%% Print in the document
+	% Print in the document
 	{\bfseries [TODO] #1}
-	%%% Add item to the file 'todolist.txt'
+	% Add item to the file 'todolist.txt'
 	\immediate\write\outputstream{#1}
 }
 
-%%%- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 
-%%% Introduction to the solutions of worked examples.
-%%%
-\newcommand{\exsoln}%
-	{\ifdim\lastskip>0pt \else \medskip\fi \inlineex{Solution:}}
-\newcommand{\expsoln}%
-	{\ifdim\lastskip>0pt \else \medskip\fi \inlineex{Partial solution:}}
-
-%%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-%%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% DOCUMENT
+%
 \begin{document}
 
-%%% Open output stream for to-do list
+% Open output stream for to-do list
 \newwrite\outputstream
 \immediate\openout\outputstream=todolist.txt
 
-%%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-%%% Title page & copyright information
-
-%%% Title page
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% 
+% TITLE & COPYRIGHT
+%
+% Title page
 \title{{\Huge\textbf{The Algebranomicon}}}
 \author{Patty C. Hill \\ Jason L. Ermer}
 \date{Draft: \today}
@@ -180,7 +212,7 @@
 \pagenumbering{Alph}
 \maketitle
 
-%%% Copyright page
+% Copyright page
 \pagestyle{empty}
 \null\vfill\noindent
 \raisebox{-0.33\height}{\includegraphics[height=1cm]{by-sa}} Patty C. Hill and Jason L. Ermer, 2014
@@ -190,29 +222,30 @@
 To view a copy of this license, visit \url{http://creativecommons.org/licenses/by-sa/4.0/}.
 \clearpage
 
-%%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-%%% Front matter
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% 
+% FRONT MATTER
+%
 \frontmatter
 \pagestyle{plain}
-%\pagenumbering{roman}
 
-%%% Table of contents
+% Table of contents
 \setcounter{tocdepth}{1}
 \tableofcontents
 
-%%% Acknowledgements
+% Acknowledgements
 \include{acknowledgements}
 
-%%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-%%% Main document
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% 
+% MAIN DOCUMENT
+%
 \mainmatter
 \pagestyle{fancy}
-%\pagenumbering{arabic}
 
 \lhead{}
 \rhead{\leftmark}
 \cfoot{\thepage}
-%\rfoot{\ifnum\thepage=6{This is page 6!}\fi}
 
 \include{glossary}
 
@@ -222,8 +255,7 @@ To view a copy of this license, visit \url{http://creativecommons.org/licenses/b
 %\addcontentsline{toc}{chapter}{Introduction}
 %\include{intro}
 
-%%% Part 1
-%\part{The Algebranomicon}
+% Numbered chapters
 \include{numbers}
 \include{sequences}
 \include{graphs}
@@ -240,20 +272,14 @@ To view a copy of this license, visit \url{http://creativecommons.org/licenses/b
 \include{quadfunc}
 \include{polynomials}
 
-%%% Part 2
-%\setcounter{chapter}{0} %% Restart chapter numbering
-%\settocdepth{chapter}
-%\part{Problems and Exercises}
-%\include{numbers-ex}
-%\include{sequences-ex}
-%\include{solutions}
-
-%%% Appendices
+% Appendices
 \appendix
 \include{primes}
 
-%%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-%%% Back matter
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% 
+% BACK MATTER
+%
 \backmatter
 \pagestyle{plain}
 
@@ -282,8 +308,8 @@ Glossary, bibliography, and index removed during editing process.
 
 \clearpage
 
-%%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-%%% Close output stream for to-do list
+
+% Close output stream for to-do list
 \immediate\closeout\outputstream
 
 \end{document}

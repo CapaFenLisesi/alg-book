@@ -5,7 +5,7 @@
 
 %\begin{quote}
 %A curve does not exist in its full power until contrasted with a straight line.
-%\par \hfill --- Robert Henri, American painter
+%\par \hfill -- Robert Henri, American painter
 %\end{quote}
 
 So far we have learned quite a bit about the family of linear functions. From our work with sequences we learned how to tell if a sequence was arithmetic. We can write recursive rules for arithmetic sequences, and we can change those recursive rules into into explicit formulas.
@@ -44,7 +44,7 @@ Since we're fresh from a discussion of proportional reasoning, perhaps our first
 Maybe we have an arithmetic sequence? If so, then the terms of the ``cost'' sequence will have a constant difference. But, if we take the differences between neighboring terms, we have different values: \[654 - 501 = 153 \qquad\text{but}\qquad 906-654 = 306\]
 But, hang on. Look at the corresponding ``number of credit hours''. These numbers don't increase by the same amount at every step, like they did for our arithmetic sequences. There's a jump from 4 to 6. We're going to have to be a bit more clever to account for this!
 
-Notice that when ``credit hours'' increases by 1, ``cost'' increases by \$153. And then, when ``credit hours'' increases by 2, ``cost'' increases by \$306 --- the increase in both values has doubled! This even works at the end of the table: When the number of hours jumps by 3 and the cost jumps by \$459, the rate ``\$dollars per 1 credit hour'' says the same:
+Notice that when ``credit hours'' increases by 1, ``cost'' increases by \$153. And then, when ``credit hours'' increases by 2, ``cost'' increases by \$306 -- the increase in both values has doubled! This even works at the end of the table: When the number of hours jumps by 3 and the cost jumps by \$459, the rate ``\$dollars per 1 credit hour'' says the same:
 \[\frac{153}{1} = \frac{306}{2} = \frac{459}{3} = \frac{\text{change in the total cost}}{\text{change in the number of hours}}\]
 So, even though the table skips over some numbers, the \textit{change} in the cost still corresponds to the \textit{change} in the number of hours. So, the tuition rate at CCC must be \$153 per credit hour.
 
@@ -71,7 +71,7 @@ Comparing the second pair of data points, we see that a change in distance of $1
 So, yes, this table does represent movement at a constant speed of 3.5 meters per second.
 \end{boxedex}
 
-%Movement at a constant speed --- a constant change in distance over a certain unit of time --- is what generated a straight line. So, if I can find speed from a table, I can check if it is constant, and, without graphing, determine if the data is linear.
+%Movement at a constant speed -- a constant change in distance over a certain unit of time -- is what generated a straight line. So, if I can find speed from a table, I can check if it is constant, and, without graphing, determine if the data is linear.
 
 \subsection{Rate of Change}
 
@@ -111,7 +111,7 @@ In mathematical notation, the letter most often used to abbreviate slope is $m$.
 
 \subsubsection{Slope from Data}
 
-As we have seen in the earlier examples, finding slope from a data table is rather easy. We find the change between two $y$-values and find the change between the corresponding $x$-values. When we unitize this ratio --- in other words, when we divide $\Delta y$ by $\Delta x$ --- we've got slope. Woot!
+As we have seen in the earlier examples, finding slope from a data table is rather easy. We find the change between two $y$-values and find the change between the corresponding $x$-values. When we unitize this ratio -- in other words, when we divide $\Delta y$ by $\Delta x$ -- we've got slope. Woot!
 
 This works even if the data is not given in table form. You may have heard the old saying, ``The shortest distance between two points is a straight line.'' Well\ldots\ what's the slope of that line?
 
@@ -127,41 +127,76 @@ So, the line connecting the points $(11, 4)$ and $(16, 29)$ has a slope of 5.
 Suppose we're given the graph of a line and asked to find the slope. We could create a data table using points on the line and find the slope from that data. Or, we could inspect the graph directly using a \textit{slope triangle}. A slope triangle is a right triangle that connects two points with a single vertical move and a single horizontal move.
 
 Here is the graph of a line with some points marked. To find the slope of the line, we draw a slope triangle.
+
+\resizeplot{-5}{-4}{7}{8}
+
 \begin{center}
 \begin{minipage}{0.49\textwidth}
 	\centering
-	\begin{tikzpicture}[scale=0.5]
-		%% grid setup
-		\draw[very thin, color=gray!25] (-5,-4) grid (7, 8);
-		\draw[<->,thick] (-5,0) -- (7,0); % node[right]{$x$-axis};
-		\draw[<->,thick] (0,-4) -- (0,8); % node[above]{$y$-axis};
-		\foreach \x in {-5,...,7} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
-		\foreach \y in {-4,...,8} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
-		%% graph
-		\draw[<->, very thick, violet, domain=-5:7] plot (\x,0.667*\x+3);
-		%% points (top layer)
-		\draw[violet] plot[only marks, mark=*, mark size=4] coordinates {(-3,1)(0,3)(3,5)(6,7)};
+	\begin{tikzpicture}
+		\begin{axis}[
+			standard,
+			width=\linewidth,
+			height=\linewidth,
+			minor xtick={-5,...,7},
+			minor ytick={-4,...,8},
+		]
+			\addplot[algcurve, violet, domain=-5:7] (\x,0.667*\x+3);
+%			\draw[violet] (axis cs:4,-3,0) node[right]{\large$y=\frac{1}{3}x-4$};
+			\addplot[algpoints, violet] coordinates {(-3,1)(0,3)(3,5)(6,7)};
+		\end{axis}
 	\end{tikzpicture}
+%	\begin{tikzpicture}[scale=0.5]
+%		%% grid setup
+%		\draw[very thin, color=gray!25] (-5,-4) grid (7, 8);
+%		\draw[<->,thick] (-5,0) -- (7,0); % node[right]{$x$-axis};
+%		\draw[<->,thick] (0,-4) -- (0,8); % node[above]{$y$-axis};
+%		\foreach \x in {-5,...,7} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+%		\foreach \y in {-4,...,8} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+%		%% graph
+%		\draw[<->, very thick, violet, domain=-5:7] plot (\x,0.667*\x+3);
+%		%% points (top layer)
+%		\draw[violet] plot[only marks, mark=*, mark size=4] coordinates {(-3,1)(0,3)(3,5)(6,7)};
+%	\end{tikzpicture}
 \end{minipage}
 %
 \begin{minipage}{0.49\textwidth}
 	\centering
-	\begin{tikzpicture}[scale=0.5]
-		%% grid setup
-		\draw[very thin, color=gray!25] (-5,-4) grid (7, 8);
-		\draw[<->,thick] (-5,0) -- (7,0); % node[right]{$x$-axis};
-		\draw[<->,thick] (0,-4) -- (0,8); % node[above]{$y$-axis};
-		\foreach \x in {-5,...,7} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
-		\foreach \y in {-4,...,8} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
-		%% graph
-		\draw[<->, very thick, violet, domain=-5:7] plot (\x,0.667*\x+3);
-		\draw[violet] plot[only marks, mark=*, mark size=4] coordinates {(-3,1)(0,3)(3,5)(6,7)};
-		%% slope triangle
-		\draw[->, very thick, red] (3,5) -- (3,7);
-		\draw[red] (3,6) node[left] {\bfseries+2};
-		\draw[->, very thick, blue] (3,7) -- (6,7);
-		\draw[blue] (4.5,7) node[above] {\bfseries+3};
+	\begin{tikzpicture}
+		\begin{axis}[
+			standard,
+			width=\linewidth,
+			height=\linewidth,
+			minor xtick={-5,...,7},
+			minor ytick={-4,...,8},
+		]
+			\addplot[algcurve, violet, domain=-5:7] (\x,0.667*\x+3);
+%			\draw[violet] (axis cs:4,-3,0) node[right]{\large$y=\frac{1}{3}x-4$};
+			\addplot[algpoints, violet] coordinates {(-3,1)(0,3)(3,5)(6,7)};
+			%% slope triangle
+			\draw[->, very thick, red] (axis cs: 3,5) -- (axis cs: 3,7);
+			\draw[red] (axis cs: 3,6) node[left] {\bfseries+2};
+			\draw[->, very thick, blue] (axis cs: 3,7) -- (axis cs: 6,7);
+			\draw[blue] (axis cs: 4.5,7) node[above] {\bfseries+3};
+		\end{axis}
 	\end{tikzpicture}
+%
+%	\begin{tikzpicture}[scale=0.5]
+%		%% grid setup
+%		\draw[very thin, color=gray!25] (-5,-4) grid (7, 8);
+%		\draw[<->,thick] (-5,0) -- (7,0); % node[right]{$x$-axis};
+%		\draw[<->,thick] (0,-4) -- (0,8); % node[above]{$y$-axis};
+%		\foreach \x in {-5,...,7} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+%		\foreach \y in {-4,...,8} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+%		%% graph
+%		\draw[<->, very thick, violet, domain=-5:7] plot (\x,0.667*\x+3);
+%		\draw[violet] plot[only marks, mark=*, mark size=4] coordinates {(-3,1)(0,3)(3,5)(6,7)};
+%		%% slope triangle
+%		\draw[->, very thick, red] (3,5) -- (3,7);
+%		\draw[red] (3,6) node[left] {\bfseries+2};
+%		\draw[->, very thick, blue] (3,7) -- (6,7);
+%		\draw[blue] (4.5,7) node[above] {\bfseries+3};
+%	\end{tikzpicture}
 \end{minipage}
 \end{center}
 the red arrow shows the vertical change. It starts at 5 and goes to 7, a vertical distance of $7-5=2$ units. The blue arrow shows the horizontal change. It starts at 3 and goes to 6, a horizontal change of $6-3=3$ units. Now we can calculate slope \[m = \frac{\text{vertical change}}{\text{horizontal change}} = \frac{2}{3}.\] Since the rate of change is constant for a straight line, it doesn't matter which two points we choose, or which point we choose as the starting place. Each of the slope triangles below can be used to compute slope of this line!
@@ -169,62 +204,119 @@ the red arrow shows the vertical change. It starts at 5 and goes to 7, a vertica
 \begin{center}
 \begin{minipage}{0.32\textwidth}
 	\centering
-	\begin{tikzpicture}[scale=0.4]
-		%% grid setup
-		\draw[very thin, color=gray!25] (-5,-4) grid (7, 8);
-		\draw[<->,thick] (-5,0) -- (7,0); % node[right]{$x$-axis};
-		\draw[<->,thick] (0,-4) -- (0,8); % node[above]{$y$-axis};
-		\foreach \x in {-4,-2,2,4,6} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
-		\foreach \y in {-4,-2,...,8} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
-		%% graph
-		\draw[<->, very thick, violet, domain=-5:7] plot (\x,0.667*\x+3);
-		\draw[violet] plot[only marks, mark=*, mark size=6] coordinates {(-3,1)(0,3)(3,5)(6,7)};
-		%% slope triangle
-		\draw[->, very thick, red] (-3,1) -- (-3,7);
-		\draw[red] (-3,4) node[left] {\bfseries+6};
-		\draw[->, very thick, blue] (-3,7) -- (6,7);
-		\draw[blue] (1.5,7) node[above] {\bfseries+9};
+	\begin{tikzpicture}
+		\begin{axis}[
+			standard,
+			width=\linewidth,
+			height=\linewidth,
+			minor xtick={-5,...,7},
+			minor ytick={-4,...,8},
+		]
+			\addplot[algcurve, violet, domain=-5:7] (\x,0.667*\x+3);
+%			\draw[violet] (axis cs:4,-3,0) node[right]{\large$y=\frac{1}{3}x-4$};
+			\addplot[algpoints, violet] coordinates {(-3,1)(0,3)(3,5)(6,7)};
+			%% slope triangle
+			\draw[->, very thick, red] (axis cs: -3,1) -- (axis cs: -3,7);
+			\draw[red] (axis cs: -3,4) node[left] {\bfseries+6};
+			\draw[->, very thick, blue] (axis cs: -3,7) -- (axis cs: 6,7);
+			\draw[blue] (axis cs: 2.5,7) node[above] {\bfseries+9};
+		\end{axis}
 	\end{tikzpicture}
+%
+%	\begin{tikzpicture}[scale=0.4]
+%		%% grid setup
+%		\draw[very thin, color=gray!25] (-5,-4) grid (7, 8);
+%		\draw[<->,thick] (-5,0) -- (7,0); % node[right]{$x$-axis};
+%		\draw[<->,thick] (0,-4) -- (0,8); % node[above]{$y$-axis};
+%		\foreach \x in {-4,-2,2,4,6} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+%		\foreach \y in {-4,-2,...,8} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+%		%% graph
+%		\draw[<->, very thick, violet, domain=-5:7] plot (\x,0.667*\x+3);
+%		\draw[violet] plot[only marks, mark=*, mark size=6] coordinates {(-3,1)(0,3)(3,5)(6,7)};
+%		%% slope triangle
+%		\draw[->, very thick, red] (-3,1) -- (-3,7);
+%		\draw[red] (-3,4) node[left] {\bfseries+6};
+%		\draw[->, very thick, blue] (-3,7) -- (6,7);
+%		\draw[blue] (1.5,7) node[above] {\bfseries+9};
+%	\end{tikzpicture}
 \end{minipage}
 %
 \begin{minipage}{0.32\textwidth}
 	\centering
-	\begin{tikzpicture}[scale=0.4]
-		%% grid setup
-		\draw[very thin, color=gray!25] (-5,-4) grid (7, 8);
-		\draw[<->,thick] (-5,0) -- (7,0); % node[right]{$x$-axis};
-		\draw[<->,thick] (0,-4) -- (0,8); % node[above]{$y$-axis};
-		\foreach \x in {-4,-2,2,4,6} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
-		\foreach \y in {-4,-2,...,8} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
-		%% graph
-		\draw[<->, very thick, violet, domain=-5:7] plot (\x,0.667*\x+3);
-		\draw[violet] plot[only marks, mark=*, mark size=6] coordinates {(-3,1)(0,3)(3,5)(6,7)};
-		%% slope triangle
-		\draw[->, very thick, red] (-3,1) -- (-3,5);
-		\draw[red] (-3,3) node[left] {\bfseries+4};
-		\draw[->, very thick, blue] (-3,5) -- (3,5);
-		\draw[blue] (1,5) node[above] {\bfseries+6};
+	\begin{tikzpicture}
+		\begin{axis}[
+			standard,
+			width=\linewidth,
+			height=\linewidth,
+			minor xtick={-5,...,7},
+			minor ytick={-4,...,8},
+		]
+			\addplot[algcurve, violet, domain=-5:7] (\x,0.667*\x+3);
+%			\draw[violet] (axis cs:4,-3,0) node[right]{\large$y=\frac{1}{3}x-4$};
+			\addplot[algpoints, violet] coordinates {(-3,1)(0,3)(3,5)(6,7)};
+			%% slope triangle
+			\draw[->, very thick, red] (axis cs: -3,1) -- (axis cs: -3,5);
+			\draw[red] (axis cs: -3,3) node[left] {\bfseries+4};
+			\draw[->, very thick, blue] (axis cs: -3,5) -- (axis cs: 3,5);
+			\draw[blue] (axis cs: 1,5) node[above] {\bfseries+6};
+		\end{axis}
 	\end{tikzpicture}
+%
+%	\begin{tikzpicture}[scale=0.4]
+%		%% grid setup
+%		\draw[very thin, color=gray!25] (-5,-4) grid (7, 8);
+%		\draw[<->,thick] (-5,0) -- (7,0); % node[right]{$x$-axis};
+%		\draw[<->,thick] (0,-4) -- (0,8); % node[above]{$y$-axis};
+%		\foreach \x in {-4,-2,2,4,6} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+%		\foreach \y in {-4,-2,...,8} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+%		%% graph
+%		\draw[<->, very thick, violet, domain=-5:7] plot (\x,0.667*\x+3);
+%		\draw[violet] plot[only marks, mark=*, mark size=6] coordinates {(-3,1)(0,3)(3,5)(6,7)};
+%		%% slope triangle
+%		\draw[->, very thick, red] (-3,1) -- (-3,5);
+%		\draw[red] (-3,3) node[left] {\bfseries+4};
+%		\draw[->, very thick, blue] (-3,5) -- (3,5);
+%		\draw[blue] (1,5) node[above] {\bfseries+6};
+%	\end{tikzpicture}
 \end{minipage}
 %
 \begin{minipage}{0.32\textwidth}
 	\centering
-	\begin{tikzpicture}[scale=0.4]
-		%% grid setup
-		\draw[very thin, color=gray!25] (-5,-4) grid (7, 8);
-		\draw[<->,thick] (-5,0) -- (7,0); % node[right]{$x$-axis};
-		\draw[<->,thick] (0,-4) -- (0,8); % node[above]{$y$-axis};
-		\foreach \x in {-4,-2,2,4,6} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
-		\foreach \y in {-4,-2,...,8} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
-		%% graph
-		\draw[<->, very thick, violet, domain=-5:7] plot (\x,0.667*\x+3);
-		\draw[violet] plot[only marks, mark=*, mark size=6] coordinates {(-3,1)(0,3)(3,5)(6,7)};
-		%% slope triangle
-		\draw[->, very thick, red] (3,5) -- (3,1);
-		\draw[red] (3,3) node[right] {\bfseries--4};
-		\draw[->, very thick, blue] (3,1) -- (-3,1);
-		\draw[blue] (1,1) node[below] {\bfseries--6};
+	\begin{tikzpicture}
+		\begin{axis}[
+			standard,
+			width=\linewidth,
+			height=\linewidth,
+			minor xtick={-5,...,7},
+			minor ytick={-4,...,8},
+		]
+			\addplot[algcurve, violet, domain=-5:7] (\x,0.667*\x+3);
+%			\draw[violet] (axis cs:4,-3,0) node[right]{\large$y=\frac{1}{3}x-4$};
+			\addplot[algpoints, violet] coordinates {(-3,1)(0,3)(3,5)(6,7)};
+			%% slope triangle
+			\draw[->, very thick, red] (axis cs: 3,5) -- (axis cs: 3,1);
+			\draw[red] (axis cs: 3,3) node[right] {\bfseries--4};
+			\draw[->, very thick, blue] (axis cs: 3,1) -- (axis cs: -3,1);
+			\draw[blue] (axis cs: 1,1) node[below] {\bfseries--6};
+		\end{axis}
 	\end{tikzpicture}
+%
+%	\begin{tikzpicture}[scale=0.4]
+%		%% grid setup
+%		\draw[very thin, color=gray!25] (-5,-4) grid (7, 8);
+%		\draw[<->,thick] (-5,0) -- (7,0); % node[right]{$x$-axis};
+%		\draw[<->,thick] (0,-4) -- (0,8); % node[above]{$y$-axis};
+%		\foreach \x in {-4,-2,2,4,6} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+%		\foreach \y in {-4,-2,...,8} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+%		%% graph
+%		\draw[<->, very thick, violet, domain=-5:7] plot (\x,0.667*\x+3);
+%		\draw[violet] plot[only marks, mark=*, mark size=6] coordinates {(-3,1)(0,3)(3,5)(6,7)};
+%		%% slope triangle
+%		\draw[->, very thick, red] (3,5) -- (3,1);
+%		\draw[red] (3,3) node[right] {\bfseries--4};
+%		\draw[->, very thick, blue] (3,1) -- (-3,1);
+%		\draw[blue] (1,1) node[below] {\bfseries--6};
+%	\end{tikzpicture}
 \end{minipage}
 \end{center}
 
@@ -236,26 +328,43 @@ Second, folks sometimes have problems with sign. A rule of thumb: if the data ha
 
 \begin{boxedex}
 Find the slope of the line depicted in the following graph.
+
 \begin{center}
-	\begin{tikzpicture}[xscale=0.3, yscale=0.15]
-		%% grid setup
-		\draw[very thin, color=gray!25, xstep=2, ystep=5] (-10,-20) grid (10, 20);
-		\draw[<->,thick] (-10,0) -- (10,0); % node[right]{$x$-axis};
-		\draw[<->,thick] (0,-20) -- (0,20); % node[above]{$y$-axis};
-		\foreach \x in {-10,-8,...,10} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
-		\foreach \y in {-20,-15,...,20} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
-		%% graph
-		\draw[<->, very thick, violet, domain=-6:10] plot (\x,-2.5*\x+5);
-		%% points (top layer)
-		\fill[violet] (-4,15) circle[x radius=.3, y radius=.6];
-%		\fill[violet] (-2,10) circle[x radius=.3, y radius=.6];
-%		\fill[violet] (0,5) circle[x radius=.3, y radius=.6];
-%		\fill[violet] (2,0) circle[x radius=.3, y radius=.6];
-%		\fill[violet] (4,-5) circle[x radius=.3, y radius=.6];
-		\fill[violet] (6,-10) circle[x radius=.3, y radius=.6];
-%		\fill[violet] (8,-15) circle[x radius=.3, y radius=.6];
+	\resizeplot{-10}{-20}{10}{20}
+	\begin{tikzpicture}
+		\begin{axis}[
+			standard,
+%			width=\linewidth,
+%			height=\linewidth,
+%			minor xtick={-5,...,7},
+%			minor ytick={-4,...,8},
+		]
+			\addplot[algcurve, violet, domain=-6:10] (\x,-2.5*\x+5);
+%			\draw[violet] (axis cs:4,-3,0) node[right]{\large$y=\frac{1}{3}x-4$};
+			\addplot[algpoints, violet] coordinates {(-4,15)(6,-10)};
+		\end{axis}
 	\end{tikzpicture}
 \end{center}
+%\begin{center}
+%	\begin{tikzpicture}[xscale=0.3, yscale=0.15]
+%		%% grid setup
+%		\draw[very thin, color=gray!25, xstep=2, ystep=5] (-10,-20) grid (10, 20);
+%		\draw[<->,thick] (-10,0) -- (10,0); % node[right]{$x$-axis};
+%		\draw[<->,thick] (0,-20) -- (0,20); % node[above]{$y$-axis};
+%		\foreach \x in {-10,-8,...,10} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+%		\foreach \y in {-20,-15,...,20} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+%		%% graph
+%		\draw[<->, very thick, violet, domain=-6:10] plot (\x,-2.5*\x+5);
+%		%% points (top layer)
+%		\fill[violet] (-4,15) circle[x radius=.3, y radius=.6];
+%%		\fill[violet] (-2,10) circle[x radius=.3, y radius=.6];
+%%		\fill[violet] (0,5) circle[x radius=.3, y radius=.6];
+%%		\fill[violet] (2,0) circle[x radius=.3, y radius=.6];
+%%		\fill[violet] (4,-5) circle[x radius=.3, y radius=.6];
+%		\fill[violet] (6,-10) circle[x radius=.3, y radius=.6];
+%%		\fill[violet] (8,-15) circle[x radius=.3, y radius=.6];
+%	\end{tikzpicture}
+%\end{center}
 
 \exsoln\ This problem exhibits two key features: the slope of the line will be negative (since the line decreases as we move to the right), and we're going to have to be careful about the scale on the axes! We might see a vertical change of one ``tick mark'' on the axis, but note that one tick mark is a change of 5 units. Similarly, one tick on the $x$-axis is a change of two units.
 
@@ -270,8 +379,8 @@ The process of computing slope is always basically the same, so we can derive a 
 \begin{tikzpicture}[scale=0.5]
 	%% grid setup
 %	\draw[very thin, color=gray!25] (0,0) grid (10,10);
-	\draw[<->,thick] (-1,0) -- (10,0); % node[right] {$x$};
-	\draw[<->,thick] (0,-1) -- (0,10); % node[above] {$y$};
+	\draw[<->,thick] (-1,0) -- (10,0) node[above] {$x$};
+	\draw[<->,thick] (0,-1) -- (0,10) node[right] {$y$};
 	%% line segment
 	\draw[<->, very thick, blue] (-1,1) -- (10,8.333); % node[right] {$x$};
 	\draw (2,3) node[below right] {$(x_1, y_1)$};
@@ -291,7 +400,7 @@ The process of computing slope is always basically the same, so we can derive a 
 \end{tikzpicture}
 \end{center}
 
-The vertical change between the two points is $y_2 - y_1$, and the horizontal change is $x_2 - x_1$. So we can computer the slope between these two points using our familiar formula \[m = \frac{\Delta y}{\Delta x} = \frac{y_2 - y_1}{x_2 - x_1}.\] The trickiest part about using this formula is being consistent about which point we call $(x_1, y_1)$ and which point we call $(x_2,y_2)$. It doesn't matter which point is which --- but we have to be consistent.
+The vertical change between the two points is $y_2 - y_1$, and the horizontal change is $x_2 - x_1$. So we can compute the slope between these two points using our familiar formula \[m = \frac{\Delta y}{\Delta x} = \frac{y_2 - y_1}{x_2 - x_1}.\] The trickiest part about using this formula is being consistent about which point we call $(x_1, y_1)$ and which point we call $(x_2,y_2)$. It doesn't matter which point is which -- but we have to be consistent.
 
 \begin{boxeddef}[Tangent: The Order of the Points]
 That last sentence says ``it doesn't matter which point is which.'' Why is that? Explain why it doesn't matter which point we call ``point 1'' and which we call ``point 2''. In other words, if we have two points called $(x_1, y_1)$ and $(x_2,y_2)$, explain why \[\frac{y_2 - y_1}{x_2 - x_1} = \frac{y_1 - y_2}{x_1 - x_2}.\] (Hint: Experiment with some numbers first, then try to extend your observations to the two ``generic'' points given.)
@@ -299,7 +408,7 @@ That last sentence says ``it doesn't matter which point is which.'' Why is that?
 
 \subsection{Horizontal and Vertical Lines}
 
-If we think about how slope is calculated --- vertical change over horizontal change --- a horizontal line has \textit{no vertical change}, or a vertical change of zero. If we pick two points on a horizontal line and calculate slope, we would get 0 divided by some number, which always equals zero! So the slope of a horizontal line is always 0. This makes sense if we remember the slope is a measure of the steepness: a horizontal line is flat, and that means no ``steepness'' at all!
+If we think about how slope is calculated -- vertical change over horizontal change -- a horizontal line has \textit{no vertical change}, or a vertical change of zero. If we pick two points on a horizontal line and calculate slope, we would get 0 divided by some number, which always equals zero! So the slope of a horizontal line is always 0. This makes sense if we remember the slope is a measure of the steepness: a horizontal line is flat, and that means no ``steepness'' at all!
 
 If we pick two points on a vertical line and try to calculate slope, we will get a horizontal change of 0. So we'll have some number divided by 0\ldots\ and that's off limits. We say that the slope of a vertical line is \textit{undefined}, since division by 0 is undefined.
 
@@ -314,68 +423,128 @@ Graph the line that goes through $(2,3)$ and has a slope of $\frac{1}{2}$.
 
 \exsoln\ Step 1: Plot the given point. Step 2: The slope $\frac{1}{2}$ tells us how to find another point on the line: the numerator is the change in $y$, so we move up 1 unit. The denominator is the change in $x$, so we move 2 units to the right. Now we have a second point: $(4,4)$. Step 3: Connect the dots and you have your graph!
 
+\resizeplot{-2}{-2}{5}{5}
 \begin{center}
 \begin{minipage}{0.32\textwidth}
 	\centering
-	Step 1
-	\par\begin{tikzpicture}[scale=0.45]
-		%% grid setup
-		\draw[very thin, color=gray!25] (-5,-5) grid (5,5);
-		\draw[<->,thick] (-5,0) -- (5,0); % node[right]{$x$-axis};
-		\draw[<->,thick] (0,-5) -- (0,5); % node[above]{$y$-axis};
-		\foreach \x in {-4,...,4} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
-		\foreach \y in {-4,...,4} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
-		%% graph
-%		\draw[<->, very thick, violet, domain=-5:5] plot (\x,0.5*\x+2);
-		\draw[violet] plot[only marks, mark=*, mark size=6] coordinates {(2,3)};
-		%% slope triangle
+	Step 1\par\medskip
+	\begin{tikzpicture}
+		\begin{axis}[
+			standard,
+			width=\linewidth,
+			height=\linewidth,
+			minor xtick={-2,...,5},
+			minor ytick={-2,...,5},
+		]
+%			\addplot[algcurve, violet, domain=-2:5] (\x,0.5*\x+2);
+%			\draw[violet] (axis cs:4,-3,0) node[right]{\large$y=\frac{1}{3}x-4$};
+			\addplot[algpoints, violet] coordinates {(2,3)};
+			%% slope triangle
+%			\draw[->, very thick, red] (axis cs: 2,3) -- (axis cs: 2,4);
+%			\draw[red] (axis cs: 2,3.5) node[left] {\bfseries+1};
+%			\draw[->, very thick, blue] (axis cs: 2,4) -- (axis cs: 4,4);
+%			\draw[blue] (axis cs: 3,4) node[above] {\bfseries+2};
+		\end{axis}
+	\end{tikzpicture}
+%
+%	\begin{tikzpicture}[scale=0.45]
+%		%% grid setup
+%		\draw[very thin, color=gray!25] (-5,-5) grid (5,5);
+%		\draw[<->,thick] (-5,0) -- (5,0); % node[right]{$x$-axis};
+%		\draw[<->,thick] (0,-5) -- (0,5); % node[above]{$y$-axis};
+%		\foreach \x in {-4,...,4} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+%		\foreach \y in {-4,...,4} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+%		%% graph
+%%		\draw[<->, very thick, violet, domain=-5:5] plot (\x,0.5*\x+2);
+%		\draw[violet] plot[only marks, mark=*, mark size=6] coordinates {(2,3)};
+%		%% slope triangle
+%%		\draw[->, very thick, red] (2,3) -- (2,4);
+%%		\draw[red] (2,3.5) node[left] {\bfseries+1};
+%%		\draw[->, very thick, blue] (2,4) -- (4,4);
+%%		\draw[blue] (3,4) node[above] {\bfseries+2};
+%	\end{tikzpicture}
+\end{minipage}
+%
+\begin{minipage}{0.32\textwidth}
+	\centering
+	Step 2\par\medskip
+	\begin{tikzpicture}
+		\begin{axis}[
+			standard,
+			width=\linewidth,
+			height=\linewidth,
+			minor xtick={-2,...,5},
+			minor ytick={-2,...,5},
+		]
+%			\addplot[algcurve, violet, domain=-2:5] (\x,0.5*\x+2);
+%			\draw[violet] (axis cs:4,-3,0) node[right]{\large$y=\frac{1}{3}x-4$};
+			\addplot[algpoints, violet] coordinates {(2,3)(4,4)};
+			%% slope triangle
+			\draw[->, very thick, red] (axis cs: 2,3) -- (axis cs: 2,4);
+			\draw[red] (axis cs: 2,3.5) node[left] {\bfseries+1};
+			\draw[->, very thick, blue] (axis cs: 2,4) -- (axis cs: 4,4);
+			\draw[blue] (axis cs: 3,4) node[above] {\bfseries+2};
+		\end{axis}
+	\end{tikzpicture}
+%
+%	Step 2
+%	\par\begin{tikzpicture}[scale=0.45]
+%		%% grid setup
+%		\draw[very thin, color=gray!25] (-5,-5) grid (5,5);
+%		\draw[<->,thick] (-5,0) -- (5,0); % node[right]{$x$-axis};
+%		\draw[<->,thick] (0,-5) -- (0,5); % node[above]{$y$-axis};
+%		\foreach \x in {-4,...,4} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+%		\foreach \y in {-4,...,4} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+%		%% graph
+%%		\draw[<->, very thick, violet, domain=-5:5] plot (\x,0.5*\x+2);
+%		\draw[violet] plot[only marks, mark=*, mark size=6] coordinates {(2,3)(4,4)};
+%		%% slope triangle
 %		\draw[->, very thick, red] (2,3) -- (2,4);
 %		\draw[red] (2,3.5) node[left] {\bfseries+1};
 %		\draw[->, very thick, blue] (2,4) -- (4,4);
 %		\draw[blue] (3,4) node[above] {\bfseries+2};
-	\end{tikzpicture}
+%	\end{tikzpicture}
 \end{minipage}
 %
 \begin{minipage}{0.32\textwidth}
 	\centering
-	Step 2
-	\par\begin{tikzpicture}[scale=0.45]
-		%% grid setup
-		\draw[very thin, color=gray!25] (-5,-5) grid (5,5);
-		\draw[<->,thick] (-5,0) -- (5,0); % node[right]{$x$-axis};
-		\draw[<->,thick] (0,-5) -- (0,5); % node[above]{$y$-axis};
-		\foreach \x in {-4,...,4} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
-		\foreach \y in {-4,...,4} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
-		%% graph
-%		\draw[<->, very thick, violet, domain=-5:5] plot (\x,0.5*\x+2);
-		\draw[violet] plot[only marks, mark=*, mark size=6] coordinates {(2,3)(4,4)};
-		%% slope triangle
-		\draw[->, very thick, red] (2,3) -- (2,4);
-		\draw[red] (2,3.5) node[left] {\bfseries+1};
-		\draw[->, very thick, blue] (2,4) -- (4,4);
-		\draw[blue] (3,4) node[above] {\bfseries+2};
+	Step 3\par\medskip
+	\begin{tikzpicture}
+		\begin{axis}[
+			standard,
+			width=\linewidth,
+			height=\linewidth,
+			minor xtick={-2,...,5},
+			minor ytick={-2,...,5},
+		]
+			\addplot[algcurve, violet, domain=-2:5] (\x,0.5*\x+2);
+%			\draw[violet] (axis cs:4,-3,0) node[right]{\large$y=\frac{1}{3}x-4$};
+			\addplot[algpoints, violet] coordinates {(2,3)(4,4)};
+			%% slope triangle
+			\draw[->, very thick, red] (axis cs: 2,3) -- (axis cs: 2,4);
+			\draw[red] (axis cs: 2,3.5) node[left] {\bfseries+1};
+			\draw[->, very thick, blue] (axis cs: 2,4) -- (axis cs: 4,4);
+			\draw[blue] (axis cs: 3,4) node[above] {\bfseries+2};
+		\end{axis}
 	\end{tikzpicture}
-\end{minipage}
 %
-\begin{minipage}{0.32\textwidth}
-	\centering
-	Step 3
-	\par\begin{tikzpicture}[scale=0.45]
-		%% grid setup
-		\draw[very thin, color=gray!25] (-5,-5) grid (5,5);
-		\draw[<->,thick] (-5,0) -- (5,0); % node[right]{$x$-axis};
-		\draw[<->,thick] (0,-5) -- (0,5); % node[above]{$y$-axis};
-		\foreach \x in {-4,...,4} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
-		\foreach \y in {-4,...,4} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
-		%% graph
-		\draw[<->, very thick, violet, domain=-3:5] plot (\x,0.5*\x+2);
-		\draw[violet] plot[only marks, mark=*, mark size=6] coordinates {(2,3)(4,4)};
-		%% slope triangle
-		\draw[->, very thick, red] (2,3) -- (2,4);
-		\draw[red] (2,3.5) node[left] {\bfseries+1};
-		\draw[->, very thick, blue] (2,4) -- (4,4);
-		\draw[blue] (3,4) node[above] {\bfseries+2};
-	\end{tikzpicture}
+%	Step 3
+%	\par\begin{tikzpicture}[scale=0.45]
+%		%% grid setup
+%		\draw[very thin, color=gray!25] (-5,-5) grid (5,5);
+%		\draw[<->,thick] (-5,0) -- (5,0); % node[right]{$x$-axis};
+%		\draw[<->,thick] (0,-5) -- (0,5); % node[above]{$y$-axis};
+%		\foreach \x in {-4,...,4} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+%		\foreach \y in {-4,...,4} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+%		%% graph
+%		\draw[<->, very thick, violet, domain=-3:5] plot (\x,0.5*\x+2);
+%		\draw[violet] plot[only marks, mark=*, mark size=6] coordinates {(2,3)(4,4)};
+%		%% slope triangle
+%		\draw[->, very thick, red] (2,3) -- (2,4);
+%		\draw[red] (2,3.5) node[left] {\bfseries+1};
+%		\draw[->, very thick, blue] (2,4) -- (4,4);
+%		\draw[blue] (3,4) node[above] {\bfseries+2};
+%	\end{tikzpicture}
 \end{minipage}
 \end{center}
 \end{boxedex}
@@ -386,7 +555,7 @@ By the way, perhaps now you see why we've been such fans of improper fractions. 
 
 Points that lie on the same line are said to be \textit{colinear}. If we are asked to determine whether two points are colinear\ldots\ well, that's easy! Any two points will define a line, so any pair of points will be colinear.
 
-But what about three points? How could we determine whether three points are colinear --- in other words, whether they all lie on the same line?
+But what about three points? How could we determine whether three points are colinear -- in other words, whether they all lie on the same line?
 
 \begin{boxedex}
 Are the points $(4, 1)$; $(-1, 5)$; and $(1, 2)$ colinear? Why or why not?
@@ -408,7 +577,7 @@ We are going to learn three different ways to write equations for lines: the poi
 A line with slope 2 passes through the point $(4,3)$. Name three other points that also lie on this line. Can you find a point on the line that lies in the second quadrant? The third quadrant? The fourth quadrant?
 \end{boxedexplore} %% End of startup exploration
 
-The first form that we will study is called \textit{point-slope form}. As the name suggests, all we need to write an equation this form is the slope of the line and a point on the line.
+The first form that we will study is called \textit{point-slope form}. As the name suggests, all we need to write an equation in this form is the slope of the line and a point on the line.
 
 %It is the preferred form for certain applications in higher-level mathematics classes including geometry and calculus. It is the form that generates the fewest ``algebra mistakes''. It is very basic and requires no simplification. 
 
@@ -510,21 +679,38 @@ We now have two points on the line $(4,3)$ and $(x,y)$, and we know the slope is
 \end{aligned}\]
 If we flip this around to write it in a more familiar format, we have $y=2(x-4)+3$. That's an equation we can graph! If we plot some points (or pull out our favorite piece of graphing technology) we can graph this equation:
 
+\resizeplot{-10}{-10}{10}{10}
 \begin{center}
-	\begin{tikzpicture}[scale=0.4]
-		%% grid setup
-		\draw[very thin, color=gray!25] (-10,-10) grid (10,10);
-		\draw[<->,thick] (-10,0) -- (10,0);	% x-axis
-		\draw[<->,thick] (0,-10) -- (0,10);	% y-axis
-		\foreach \x in {-10,-8,...,10}
-			\draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
-		\foreach \y in {-10,-8,...,10}
-			\draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
-		%% graph
-		\draw[red] (2.5,0) -- node[above,sloped] {\large$y=2(x-4)+3$} (6,7);
-		\draw[<->, ultra thick, red, domain=-2:7] plot (\x,2*\x-5);	
+	\begin{tikzpicture}
+		\begin{axis}[
+			standard,
+%			width=\linewidth,
+%			height=\linewidth,
+			minor xtick={-10,...,10},
+			minor ytick={-10,...,10},
+		]
+			\addplot[algcurve, red, domain=-2:7] (\x,2*\x-5);
+			\draw[red] (axis cs:2.5,0) -- node[above, sloped] {\large$y=2(x-4)+3$} (axis cs: 7,9);
+			\addplot[algpoints, red] coordinates {(4,3)};
+		\end{axis}
 	\end{tikzpicture}
 \end{center}
+%
+%\begin{center}
+%	\begin{tikzpicture}[scale=0.4]
+%		%% grid setup
+%		\draw[very thin, color=gray!25] (-10,-10) grid (10,10);
+%		\draw[<->,thick] (-10,0) -- (10,0);	% x-axis
+%		\draw[<->,thick] (0,-10) -- (0,10);	% y-axis
+%		\foreach \x in {-10,-8,...,10}
+%			\draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+%		\foreach \y in {-10,-8,...,10}
+%			\draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+%		%% graph
+%		\draw[red] (2.5,0) -- node[above,sloped] {\large$y=2(x-4)+3$} (6,7);
+%		\draw[<->, ultra thick, red, domain=-2:7] plot (\x,2*\x-5);	
+%	\end{tikzpicture}
+%\end{center}
 
 What do you know! Graphing this equation gives us exactly the line we were looking for: a line with slope 2 that goes through the point $(4,3)$. So the equation $y=2(x-4)+3$ describes the line. Can you see the slope and the given point hiding there in the equation?
 
@@ -548,7 +734,7 @@ The form of a linear equation that uses the slope and any point on the line. It 
 
 \subsection{Using Point-Slope Form}
 
-The trickiest part about the point-slope form --- as you might anticipate --- is handling the plusses and minuses. It can be tricky to remember the $-x_1$ and the $+y_1$, so be on the lookout and always check your signs.
+The trickiest part about the point-slope form -- as you might anticipate -- is handling the plusses and minuses. It can be tricky to remember the $-x_1$ and the $+y_1$, so be on the lookout and always check your signs.
 
 \begin{boxedex}
 State the slope of each of the following lines, and name a point on each line.
@@ -587,15 +773,19 @@ Write the equation of the line that goes through the points $(6, 10)$ and $(-1, 
 \exsoln\ First, we find the slope of this line: \[m = \frac{y_2-y_1}{x_2-x_1} = \frac{10-\umin4}{6-\umin1} = \frac{14}{7} = 2.\] Then, we can use either of the two points as the ``point'' in point-slope form: \[y=2(x-6)+10 \quad\OR\quad y=2(x+1)-4\]
 \end{boxedex}
 
-\subsection{Point-Slope as a Transformation of a Direct Variation}
+\subsection{Relating Point-Slope to Earlier Concepts}
 
-There is another way to look at the point-slope form that relates to transformations in a plane. In \cref{sec:directvar}, we studied direct variations of the form $y = kx$. This is a straight line through the origin, and $k$ is the slope. So let's rewrite this as $y=mx$.
+There is a way to look at the point-slope form that relates to transformations in a plane. In \cref{sec:directvar}, we studied direct variations of the form $y = kx$. This is a straight line through the origin, and $k$ is the slope. So let's rewrite this as $y=mx$.
 
 If we want to move the graph of the direct variation up or down, we add something to the equation. For example, if we want to move the graph 12 units up, the equation would become $y = mx + 12$. If we want to move down 7 units, the equation would become $y = mx + \umin7$. In general, if I wanted to move the graph vertically $y_1$ units the equation would become $y = mx + y_1$.
 
 If we want to move the graph of the direct variation to the right 5 units, we would replace $x$ with $(x-5)$ and our new equation would be $y = m(x-5)$. If we want to move the graph to the left 8 units, we have the equation $y = m(x + 8)$. In general, if we wanted to move the graph horizontally $x_1$ units, the equation would become $y = m(x-x_1)$.
 
 If we want to cause \textit{both} a horizontal and vertical shift, we would do both transformations to get $y=m(x-x_1)+y_1$. We can think of this transformation as ``moving the origin'' of the direct variation from $(0, 0)$ to $(x_1, y_1)$.
+
+Yet another way to look at point-slope form is to think back to the apparent rules we wrote for linear sequences back in \cref{sec:arithmeticseq}. Given a sequence like $4, 7, 10, 13,\dotsc$, we wrote the rule \[a_n = 4 + 3 (n-1).\] Can you see the connection to point slope form? In this rule the slope is 3 and the point is $(1,4)$. The slope is telling us the constant difference: the amount that we add on for each step forward in the sequence. The point $(1,4)$ is telling us that the first term in the sequence is 4.
+
+Back in \cref{sec:arithmeticseq} we also wrote zero-based rules for arithmetic sequences. What would be the zero-based rule for the sequence given above? These zero-based rules are at the core of the form that we will study in the next section.
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \section{Slope-Intercept Form}
@@ -610,10 +800,10 @@ Point-slope form is handy and quite easy to write in many cases. But, it has tho
 \begin{boxedexplore}[Name of Startup Exploration]
 Graph the line that goes through the points $(-1, 7)$ and $(2, -2)$. Find the slope through these two points and write two equations in point-slope form for the line.
 
-Use your toolbox of equivalence rules to eliminate the parentheses and rewrite each of your point-slope equations. What happens? How is your new equation reflected in the graph?
+Use your toolbox of equivalence rules to eliminate the parentheses and rewrite each of your point-slope equations in simplest form. What happens? How is your new equation reflected in the graph?
 \end{boxedexplore} %% End of startup exploration
 
-Point-slope form is the easiest form for algebra students to use when writing the equation of a line. Once we know the slope of the line we only need one point on the line --- any point at all --- write the equation.
+Point-slope form is the easiest form for algebra students to use when writing the equation of a line. Once we know the slope of the line we only need one point on the line -- any point at all -- write the equation.
 
 However, point-slope form is a pain for algebra \textit{teachers} to grade. Why? Well, how many points are there on a line? Each one of those points can be used to write an equation for that line. So, there are infinitely many different point-slope equations for a single line! If a student gets creative about what point to use, the teacher may have to do some work to determine whether the student's answer is correct or not.\footnote{Don't get any ideas.}
 
@@ -621,24 +811,42 @@ One way to simplify things would be to designate a kind of ``standard point'' th
 
 The startup exploration asks us to graph, and write two different equations for, the given line.
 
+\resizeplot{-2}{-3}{9}{8}
 \begin{center}
-	\begin{tikzpicture}[scale=0.625]
-		%% grid setup
-		\draw[very thin, color=gray!25] (-7,-3) grid (3,7);
-		\draw[<->,thick] (-7,0) -- (3,0);	% x-axis
-		\draw[<->,thick] (0,-3) -- (0,7);	% y-axis
-		\foreach \x in {-7,...,3}
-			\draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
-		\foreach \y in {-3,...,7}
-			\draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
-		%% graph
-		\draw[red] (-1,5) node[left] {\large$y=\umin3(x+1)+7$};
-		\draw[red] (-1,4) node[left] {\large$y=\umin3(x-2)-2$};
-%		\draw[red] (2.5,0) -- node[above,sloped] {\large$y=2(x-4)+3$} (6,7);
-		\draw[<->, ultra thick, red, domain=-1.333:2.5] plot (\x,-3*\x+4);
-		\draw[red] plot[only marks,mark=*,mark size=5] coordinates{(-1,7)(2,-2)(0,4)};
+	\begin{tikzpicture}
+		\begin{axis}[
+			standard,
+%			width=\linewidth,
+%			height=\linewidth,
+%			minor xtick={-7,...,3},
+%			minor ytick={-3,...,7},
+		]
+			\addplot[algcurve, red, domain=-1.333:2.5] (\x,-3*\x+4);
+			\draw[red] (axis cs: -.5,7) node[right] {\large$y=\umin3(x+1)+7$};
+			\draw[red] (axis cs: 2.5,-1.5) node[right] {\large$y=\umin3(x-2)-2$};
+			\addplot[algpoints, red] coordinates {(-1,7)(2,-2)(0,4)};
+		\end{axis}
 	\end{tikzpicture}
 \end{center}
+%
+%\begin{center}
+%	\begin{tikzpicture}[scale=0.625]
+%		%% grid setup
+%		\draw[very thin, color=gray!25] (-7,-3) grid (3,7);
+%		\draw[<->,thick] (-7,0) -- (3,0);	% x-axis
+%		\draw[<->,thick] (0,-3) -- (0,7);	% y-axis
+%		\foreach \x in {-7,...,3}
+%			\draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+%		\foreach \y in {-3,...,7}
+%			\draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+%		%% graph
+%		\draw[red] (-1,5) node[left] {\large$y=\umin3(x+1)+7$};
+%		\draw[red] (-1,4) node[left] {\large$y=\umin3(x-2)-2$};
+%%		\draw[red] (2.5,0) -- node[above,sloped] {\large$y=2(x-4)+3$} (6,7);
+%		\draw[<->, ultra thick, red, domain=-1.333:2.5] plot (\x,-3*\x+4);
+%		\draw[red] plot[only marks,mark=*,mark size=5] coordinates{(-1,7)(2,-2)(0,4)};
+%	\end{tikzpicture}
+%\end{center}
 
 We can eliminate the parentheses using the distributive property, and then we can combine like terms as needed. If we use the point $(-1,7)$, then we have:
 \[\begin{aligned}
@@ -705,7 +913,7 @@ x & y\\\hline
 8 & 0\\\hline
 \end{tabular}
 \end{center}
-\exsoln\ If a table of data ever includes the $y$-intercept --- the point with $x$-coordinate 0 --- then our job is quite easy. In this case, though, we don't have that. To write the equation, we could use one of the two methods above, or we could do a bit of detective work and find the $y$-intercept using the pattern in the table.
+\exsoln\ If a table of data ever includes the $y$-intercept -- the point with $x$-coordinate 0 -- then our job is quite easy. In this case, though, we don't have that. To write the equation, we could use one of the two methods above, or we could do a bit of detective work and find the $y$-intercept using the pattern in the table.
 
 Notice that the $y$-values decrease by 4 as $x$ increases by 1. That means the slope of the line is $\umin4$. It also means we can work our way backwards in the table to the point where $x=0$ and $y=32$. So, our equation is $y=\umin4x+32$.
 \end{boxedex}
@@ -714,26 +922,45 @@ These equations should look familiar. We saw equations just like these when we w
 
 \begin{boxedex}
 Write an equation in slope-intercept form for the line pictured in the graph below.
+
+\resizeplot{-8}{-8}{8}{8}
 \begin{center}
-	\begin{tikzpicture}[scale=0.5]
-		%% grid setup
-		\draw[very thin, color=gray!25] (-8,-8) grid (8,8);
-		\draw[<->,thick] (-8,0) -- (8,0);	% x-axis
-		\draw[<->,thick] (0,-8) -- (0,8);	% y-axis
-		\foreach \x in {-8,-6,...,8}
-			\draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
-		\foreach \y in {-8,-6,...,8}
-			\draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
-		%% graph
-%		\draw[red] (-1,5) node[left] {\large$y=\umin3(x+1)+7$};
-%		\draw[red] (-1,4) node[left] {\large$y=\umin3(x-2)-2$};
-%		\draw[red] (2.5,0) -- node[above,sloped] {\large$y=2(x-4)+3$} (6,7);
-		\draw[<->, ultra thick, blue, domain=-7:8] plot (\x,0.6*\x-3.6);
-		\draw[blue] plot[only marks,mark=*,mark size=5] coordinates{(6,0)(-4,-6)};
+	\begin{tikzpicture}
+		\begin{axis}[
+			standard,
+%			width=\linewidth,
+%			height=\linewidth,
+			minor xtick={-8,...,8},
+			minor ytick={-8,...,8},
+		]
+			\addplot[algcurve, blue, domain=-7:8] (\x,0.6*\x-3.6);
+%			\draw[red] (axis cs: -.5,7) node[right] {\large$y=\umin3(x+1)+7$};
+%			\draw[red] (axis cs: 2.5,-1.5) node[right] {\large$y=\umin3(x-2)-2$};
+			\addplot[algpoints, blue] coordinates {(6,0)(-4,-6)};
+		\end{axis}
 	\end{tikzpicture}
 \end{center}
+%
+%\begin{center}
+%	\begin{tikzpicture}[scale=0.5]
+%		%% grid setup
+%		\draw[very thin, color=gray!25] (-8,-8) grid (8,8);
+%		\draw[<->,thick] (-8,0) -- (8,0);	% x-axis
+%		\draw[<->,thick] (0,-8) -- (0,8);	% y-axis
+%		\foreach \x in {-8,-6,...,8}
+%			\draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+%		\foreach \y in {-8,-6,...,8}
+%			\draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+%		%% graph
+%%		\draw[red] (-1,5) node[left] {\large$y=\umin3(x+1)+7$};
+%%		\draw[red] (-1,4) node[left] {\large$y=\umin3(x-2)-2$};
+%%		\draw[red] (2.5,0) -- node[above,sloped] {\large$y=2(x-4)+3$} (6,7);
+%		\draw[<->, ultra thick, blue, domain=-7:8] plot (\x,0.6*\x-3.6);
+%		\draw[blue] plot[only marks,mark=*,mark size=5] coordinates{(6,0)(-4,-6)};
+%	\end{tikzpicture}
+%\end{center}
 
-\exsoln\ If a graph has a clear $y$-intercept then our job is quite easy. In this case, though, we don't have that. We might try to guess about the point --- maybe it's $-3.5$\ldots ish? Would you bet on that? --- but we need another approach to be sure.
+\exsoln\ If a graph has a clear $y$-intercept then our job is quite easy. In this case, though, we don't have that. We might try to guess about the point -- maybe it's $-3.5$\ldots ish? Would you bet on that? -- but we need another approach to be sure.
 
 So, we'll use a slope triangle to find the slope between the two given points $\frac{6}{10} = \frac{3}{5}$. Then, we'll write an equation in point-slope form using the point $(6,0)$: $y=\frac{3}{5}(x-6)+0$. Simplifying using the distributive property and combining like terms gives: \[y=\frac{3}{5}x - \frac{18}{5},\] and $-\frac{18}{5} = -3.6$, which is close to $-3.5$, but not the same thing!
 \end{boxedex}
@@ -759,7 +986,7 @@ Here's one way to think about this comparison. We have a line. Since we are goin
 
 This line has a slope that we can represent using the slope formula. We'll use the $y$-intercept as ``point 2'': \[m = \frac{b-y_1}{0-x_1} = \frac{b-y_1}{\umin x_1}\]
 
-Trust us on this next bit: this will be helpful. We're going to use the POEs to isolate $b$ so that we can make a comparison in a moment.
+Trust us on this next bit: it will be helpful. We're going to use the POEs to isolate $b$ so that we can make a comparison.
 \[\begin{aligned}
 m &= \frac{b-y_1}{\umin x_1}\\[1ex]
 \umin mx_1 &= b-y_1
@@ -783,7 +1010,7 @@ y &= mx + {\color{blue} b}
 &&\quad\text{slope-intercept form}
 \end{aligned}\]
 
-So, in the end, we have shown that if we have a line with $y$-intercept $(0,b)$, then the point-slope equation for the line --- using any point on the line! --- can be converted into the slope-intercept equation of the line.
+So, in the end, we have shown that if we have a line with $y$-intercept $(0,b)$, then the point-slope equation for the line -- using any point on the line! -- can be converted into the slope-intercept equation of the line.
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
 \section{Standard Form}
@@ -794,7 +1021,7 @@ So far, we know a lot about writing equations for lines. We can find the slope o
 \begin{boxedexplore}[Startup Exploration: Goats and Chickens]
 The chickens got into the goat pen on Fran\c{c}ois's farm! When Fran\c{c}ois asked Hermine how many of each animal were mixed up, she coyly replied that there were a total of 44 feet in the pen.
 
-If the pen contains only (healthy) goats and chickens, how many of each animal could there be inside? How many different combinations are possible?
+If the pen contains only (anatomically normal) goats and chickens, how many of each animal could there be inside? How many different combinations are possible?
 \end{boxedexplore} %% End of startup exploration
 
 %\begin{boxedexplore}[Name of Extended Exploration]
@@ -813,7 +1040,7 @@ If $A$, $B$, and $C$ are Integers where $A$ and $B$ are not both zero, then $Ax 
 
 Note that this is not a ``$y=$'' form. This has its challenges and its benefits. In some situations, standard form equations requires a bit of work before they are very useful.\footnote{Standard form: the fixer-upper form of a linear equation.} For example, $A$, $B$, and $C$ don't tell us much about the line. Especially when compared to point-slope form and slope-intercept form, in which important features of the line are visible right there in the equation. 
 
-A benefit of this different format is that any line --- whether it is a function or not --- has a standard form equation. The definition says that $A$ and $B$ can't \textit{both} be zero (at the same time), but one or the other of them could be zero. This is how we get equations for vertical and horizontal lines. Vertical lines are of the form $Ax = C$ and horizontal lines are of the form $By = C$.
+A benefit of this different format is that any line -- whether it is a function or not -- has a standard form equation. The definition says that $A$ and $B$ can't \textit{both} be zero (at the same time), but one or the other of them could be zero. This is how we get equations for vertical and horizontal lines. Vertical lines are of the form $Ax = C$ and horizontal lines are of the form $By = C$.
 
 %We can't easily graph standard form on a calculator, since most calculators only graph equations in function form. So, we'll have to convert standard form equations to function form if we want to graph them on the calculator.
 
@@ -873,7 +1100,7 @@ y &= \frac{1}{4}x
 \end{aligned}\]
 \end{boxedex}
 
-Of course, we can convert in the other direction as well, if needed.
+Of course, we can convert in the other direction as well, if needed -- at least to slope-intercept form (to point-slope form, not so much).
 
 \begin{boxedex}
 Convert the line $6x - 14y = 21$ to slope-intercept form.
@@ -925,7 +1152,7 @@ This last step is required because simplified standard form requires that the co
 
 \subsection{Graphing standard form}
 
-To graph standard form on most graphing calculators, the only thing we can do is convert to slope-intercept form by solving for $y$. Many online tools (like Desmos) allow graphing in standard form without any transforming required on out part.
+To graph standard form on most graphing calculators, the only thing we can do is convert to slope-intercept form by solving for $y$. Many online tools (like Desmos) allow graphing in standard form without any transforming required on our part.
 
 When graphing by hand, there is a clever alternative technique!
 
@@ -938,24 +1165,42 @@ That's a one-step equation, and $y = \umin6$. If we plug in $y=0$, we have:
 \[3x - 2(0) = 12 \qquad\implies\qquad 3x=12,\]
 and so $x=4$. So, we have found two points on the line: the $y$-intercept $(0,\umin6)$, and the $x$-intercept $(4,0)$. That's enough to draw the graph!
 
+\resizeplot{-8}{-8}{8}{8}
 \begin{center}
-	\begin{tikzpicture}[scale=0.4]
-		%% grid setup
-		\draw[very thin, color=gray!25] (-8,-8) grid (8,8);
-		\draw[<->,thick] (-8,0) -- (8,0);	% x-axis
-		\draw[<->,thick] (0,-8) -- (0,8);	% y-axis
-		\foreach \x in {-8,-6,...,8}
-			\draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
-		\foreach \y in {-8,-6,...,8}
-			\draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
-		%% graph
-%		\draw[red] (-1,5) node[left] {\large$y=\umin3(x+1)+7$};
-%		\draw[red] (-1,4) node[left] {\large$y=\umin3(x-2)-2$};
-%		\draw[red] (2.5,0) -- node[above,sloped] {\large$y=2(x-4)+3$} (6,7);
-		\draw[<->, ultra thick, blue, domain=-1:7] plot (\x,1.5*\x-6);
-		\draw[blue] plot[only marks,mark=*,mark size=6] coordinates{(4,0)(0,-6)};
+	\begin{tikzpicture}
+		\begin{axis}[
+			standard,
+%			width=\linewidth,
+%			height=\linewidth,
+			minor xtick={-8,...,8},
+			minor ytick={-8,...,8},
+		]
+			\addplot[algcurve, blue, domain=-1.25:7.5] (\x,1.5*\x-6);
+%			\draw[red] (axis cs: -.5,7) node[right] {\large$y=\umin3(x+1)+7$};
+%			\draw[red] (axis cs: 2.5,-1.5) node[right] {\large$y=\umin3(x-2)-2$};
+			\addplot[algpoints, blue] coordinates {(4,0)(0,-6)};
+		\end{axis}
 	\end{tikzpicture}
 \end{center}
+%
+%\begin{center}
+%	\begin{tikzpicture}[scale=0.4]
+%		%% grid setup
+%		\draw[very thin, color=gray!25] (-8,-8) grid (8,8);
+%		\draw[<->,thick] (-8,0) -- (8,0);	% x-axis
+%		\draw[<->,thick] (0,-8) -- (0,8);	% y-axis
+%		\foreach \x in {-8,-6,...,8}
+%			\draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+%		\foreach \y in {-8,-6,...,8}
+%			\draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+%		%% graph
+%%		\draw[red] (-1,5) node[left] {\large$y=\umin3(x+1)+7$};
+%%		\draw[red] (-1,4) node[left] {\large$y=\umin3(x-2)-2$};
+%%		\draw[red] (2.5,0) -- node[above,sloped] {\large$y=2(x-4)+3$} (6,7);
+%		\draw[<->, ultra thick, blue, domain=-1.5:7.5] plot (\x,1.5*\x-6);
+%		\draw[blue] plot[only marks,mark=*,mark size=6] coordinates{(4,0)(0,-6)};
+%	\end{tikzpicture}
+%\end{center}
 
 The only time this approach doesn't work is when the $y$-intercept and the $x$-intercept are the same. What does that sort of a line look like? How can we spot such a line from its standard form equation?
 \end{boxedex}
@@ -963,7 +1208,7 @@ The only time this approach doesn't work is when the $y$-intercept and the $x$-i
 Speaking of $x$-intercepts, they haven't gotten too much of our attention so far. Our work with linear equations has highlighted the importance of the $y$-intercept. We'll learn much more about the significance of $x$-intercepts in future chapters.
 
 %% CONSIDER CONVERTING TO ALL THIS FORMAT???
-%%\resizeplot{-10}{10}{-10}{10}
+%%\resizeplot{-10}{-10}{10}{10}
 %%\begin{tikzpicture}[baseline=(current bounding box.north)]
 %%	\begin{axis}[standard,width=0.5\textwidth, height=0.5\textwidth]
 %%		\addplot[standard line style, color=blue, domain=-2.5:9]%
@@ -990,41 +1235,68 @@ The four points below form the vertices of a rectangle. Graph the rectangle and 
 
 We won't go into the details of how to write these equations. Those details are explained in earlier sections. The key thing to study in this example is how the lines are related to each other.
 
+\resizeplot{-8}{-8}{8}{8}
 \begin{center}
-	\begin{tikzpicture}[scale=0.625]
-		%% grid setup
-		\draw[very thin, color=gray!25] (-8,-8) grid (8,8);
-		\draw[<->,thick] (-8,0) -- (8,0);	% x-axis
-		\draw[<->,thick] (0,-8) -- (0,8);	% y-axis
-		\foreach \x in {-8,-6,...,8}
-			\draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
-		\foreach \y in {-8,-6,...,8}
-			\draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
-		%% graph
-		\draw[blue] (2,3) -- node[above right,sloped] {\large$y=0.5x+2$} (4,4);
-		\draw[blue] (3,1) -- node[above right,sloped] {\large$y=0.5x-0.5$} (5,2);
-		\draw[blue] (4,-1) -- node[above right,sloped] {\large$y=-2x+7$} (5,-3);
-		\draw[blue] (0,-3) -- node[above right,sloped] {\large$y=-2x-3$} (1,-5);
-		\draw[<->, ultra thick, blue, domain=-7:7] plot (\x,0.5*\x+2);
-		\draw[<->, ultra thick, blue, domain=-7:7] plot (\x,0.5*\x-0.5);
-		\draw[<->, ultra thick, blue, domain=-5.5:2] plot (\x,-2*\x-3);
-		\draw[<->, ultra thick, blue, domain=-0.5:7] plot (\x,-2*\x+7);
-		\draw[blue] plot[only marks,mark=*,mark size=6] coordinates{(2,3)(3,1)(-1,-1)(-2,1)};
+	\begin{tikzpicture}
+		\begin{axis}[
+			standard,
+%			width=\linewidth,
+%			height=\linewidth,
+			minor xtick={-8,...,8},
+			minor ytick={-8,...,8},
+		]
+			\addplot[algcurve, blue, domain=-7:7] (\x,0.5*\x+2);
+			\addplot[algcurve, blue, domain=-7:7] (\x,0.5*\x-0.5);
+			\addplot[algcurve, blue, domain=-5.5:2] (\x,-2*\x-3);
+			\addplot[algcurve, blue, domain=-0.5:7] (\x,-2*\x+7);
+			\addplot[algpoints, blue] coordinates {(2,3)(3,1)(-1,-1)(-2,1)};
+			\draw[blue] (axis cs: 2,3) --
+				node[above right,sloped] {\large$y=0.5x+2$} (axis cs: 4,4);
+			\draw[blue] (axis cs: 3,1) --
+				node[above right,sloped] {\large$y=0.5x-0.5$} (axis cs: 5,2);
+			\draw[blue] (axis cs: 4,-1) --
+				node[above right,sloped] {\large$y=-2x+7$} (axis cs: 5,-3);
+			\draw[blue] (axis cs: 0,-3) --
+				node[above right,sloped] {\large$y=-2x-3$} (axis cs: 1,-5);
+		\end{axis}
 	\end{tikzpicture}
 \end{center}
+%
+%\begin{center}
+%	\begin{tikzpicture}[scale=0.625]
+%		%% grid setup
+%		\draw[very thin, color=gray!25] (-8,-8) grid (8,8);
+%		\draw[<->,thick] (-8,0) -- (8,0);	% x-axis
+%		\draw[<->,thick] (0,-8) -- (0,8);	% y-axis
+%		\foreach \x in {-8,-6,...,8}
+%			\draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+%		\foreach \y in {-8,-6,...,8}
+%			\draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+%		%% graph
+%		\draw[blue] (2,3) -- node[above right,sloped] {\large$y=0.5x+2$} (4,4);
+%		\draw[blue] (3,1) -- node[above right,sloped] {\large$y=0.5x-0.5$} (5,2);
+%		\draw[blue] (4,-1) -- node[above right,sloped] {\large$y=-2x+7$} (5,-3);
+%		\draw[blue] (0,-3) -- node[above right,sloped] {\large$y=-2x-3$} (1,-5);
+%		\draw[<->, ultra thick, blue, domain=-7:7] plot (\x,0.5*\x+2);
+%		\draw[<->, ultra thick, blue, domain=-7:7] plot (\x,0.5*\x-0.5);
+%		\draw[<->, ultra thick, blue, domain=-5.5:2] plot (\x,-2*\x-3);
+%		\draw[<->, ultra thick, blue, domain=-0.5:7] plot (\x,-2*\x+7);
+%		\draw[blue] plot[only marks,mark=*,mark size=6] coordinates{(2,3)(3,1)(-1,-1)(-2,1)};
+%	\end{tikzpicture}
+%\end{center}
 
 \subsection{Parallel Lines}
 
 Parallel lines never intersect. They exist in the same plane and stay the same distance apart for their entire, infinite length. In the rectangle we drew as part of the startup exploration, opposite sides are parallel. Examine the slopes of each pair of parallel lines. What do you notice?
 
-Algebraically, parallel lines have the \textit{same slope} and \textit{different $y$-intercepts}. Note that it is not sufficient to just look for having the same slope. If two lines have the same slope and also have the same $y$-intercept, then they aren't actually \textit{two lines}. Those are the same line\ldots\ and you can't be parallel to yourself!
+Algebraically, parallel lines have the \textit{same slope} and \textit{different $y$-intercepts}. Note that it is not sufficient to just look for having the same slope. If two lines have the same slope and also have the same $y$-intercept, then they aren't actually \textit{two lines}. Those are the same line\ldots\ and you can't be parallel to yourself!\footnote{Don't start with the interpretive dance about this. You can't be parallel to yourself, no matter how you hold your arms.}
 
 Parallel will play an important role as we begin to study systems of linear equations in \cref{ch:systems}.
 
-In our rectangle, the lines the meet in the second quadrant are the lines \[y=\frac{1}{2}x+2 \qquad\text{and}\qquad y=-2x-3.\] Notice that the slopes of these two lines are both opposites and reciprocals. This is true in general: perpendicular lines have slopes that are \textit{both opposites and reciprocals} of each other. This means that the slopes of perpendicular lines will always have a product of $–1$.
+In our rectangle, opposite sides of the rectangle are parallel. For example, the two lines that have positive slope: \[y=\frac{1}{2}x+2 \qquad\text{and}\qquad y=\frac{1}{2}x-\frac{1}{2}.\] Notice that the slopes of these two lines are the same and that their $y$-intercepts are different. The same is true for the other pair of lines.
 
 \begin{boxedex}
-Which of these lines, if any, are perpendicular to each other?
+Which of these lines, if any, are parallel to each other?
 
 \begin{center}
 \begin{tabularx}{0.8\linewidth}{XX}
@@ -1124,8 +1396,7 @@ Which of these lines are perpendicular to each other?
 \end{tabularx}
 \end{center}
 
-\exsoln\
-The key is to look for slopes with opposite signs and then to look for reciprocals. First, we ought to convert line (d) into a form that reveals its slope: \[\text{(d)}~y=-\frac{4}{3}x + 3\] This means that line (a) is perpendicular to line (d), since $\frac{3}{4}\cdot\umin\frac{4}{3}=-1$. Also, line (b) is perpendicular to line (c) since $\umin\frac{3}{4}\cdot\frac{4}{3}=-1$.
+\exsoln\ The key is to look for slopes with opposite signs and then to look for reciprocals. First, we ought to convert line (d) into a form that reveals its slope: \[\text{(d)}~y=-\frac{4}{3}x + 3\] This means that line (a) is perpendicular to line (d), since $\frac{3}{4}\cdot\umin\frac{4}{3}=-1$. Also, line (b) is perpendicular to line (c) since $\umin\frac{3}{4}\cdot\frac{4}{3}=-1$.
 \end{boxedex}
 
 \begin{boxedex}
@@ -1139,7 +1410,7 @@ Again, the amount of work we will have to do for questions like the ones in this
 \begin{boxedex}
 Write an equation \textit{in simplified standard form} for the line that contains $(2,-1)$ and is perpendicular to the line $5x+3y=2$.
 
-\exsoln\ The line we seek is $3x-5y=11$. Above, we discussed a clever shortcut for working with parallel lines in standard form. Can you invent a similar shortcut for working with perpendicular lines in standard form? Use the given solution to test out your ideas!
-
-Hint: What must we do to $A$ and $B$ in the standard form equation to ensure that the slopes will be both opposites and reciprocals?
+\expsoln\ The line we seek is $3x-5y=11$. Above, we discussed a clever shortcut for working with parallel lines in standard form. Can you invent a similar shortcut for working with perpendicular lines in standard form? Use the given solution to test out your ideas!
+%
+%Hint: What must we do to $A$ and $B$ in the standard form equation to ensure that the slopes will be both opposites and reciprocals?
 \end{boxedex}
