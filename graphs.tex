@@ -1,38 +1,29 @@
-\chapter{Graphs and Data}
+\chapter{Graphs and data}
 \label{ch:graphs}
 
 \chapquote{There is a magic in graphs. The profile of a curve reveals in a flash a whole situation -- the life history of an epidemic, a panic, or an era of prosperity. The curve informs the mind, awakens the imagination, convinces.}{Henry D. Hubbard\\US National Bureau of Standards}
 
-Every chapter should have a lead paragraph -- even just a short one -- that appears before the first heading. This is a placeholder paragraph which will at some point be replaces by actual content.
-
-%\begin{quote}
-%There is a magic in graphs. The profile of a curve reveals in a flash a whole situation -- the life history of an epidemic, a panic, or an era of prosperity. The curve informs the mind, awakens the imagination, convinces.
-%\par\hfill -- Henry D. Hubbard, US National Bureau of Standards
-%\end{quote}
+In \cref{ch:sequences} we investigated pictures patterns (fractals by Koch and Sierpi\'nski, patterns of made of square tiles) and used those pictures to generate sequences of numbers. We begin this chapter with a discussion of another way to represent our sequences of numbers visually: by making a coordinate graph. Then, we will extend these ideas to create visual representations of other mathematical objects, and of scientific data.
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\section{Visualizing a Sequence}
-\label{sec:vizsequence}
-
-In \cref{ch:sequences} we investigated pictures patterns (fractals by Koch and Sierpi\'nski, patterns of made of square tiles) and used those pictures to generate sequences of numbers. We begin this chapter with a discussion of another way to represent our sequences of numbers visually: by making a coordinate graph.
-
-\subsection{Coordinate Graphing}
+\section{Coordinate graphing}
+\label{sec:coordgraph}
 
 \Cref{fig:coordplane} summarizes the familiar landmarks of the \gls{coordinate plane}. We see the horizontal \gls{x-axis} and the vertical \gls{y-axis}. Using the two axes as number lines, we can locate \glspl{ordered pair} of numbers using the convention $(x,y)$. The points $(7, \umin2)$ and $(\umin6, 3)$ have been plotted as examples. The point $(0,0)$ where the the two axes meet, is a special point called the \gls{origin}.
 
-\begin{figure}[!htbp]
+\begin{figure}
 	\centering
 	\begin{tikzpicture}[scale=0.4]
 		%% grid setup
 		\draw[very thin, color=gray!20] (-10,-10) grid (10, 10);
-		\draw[<->,thick] (-10.5,0) -- (10.5,0);
-		\draw (13.5,0) node[left]{$x$-axis};
-		\draw (-13.5,0) node[right] {};
-		\draw[<->,thick] (0,-10.5) -- (0,10.5) node[above]{$y$-axis};
+		\draw[<->,thick] (-11,0) -- (11,0);
+		\draw (14,0) node[left]{$x$-axis};
+		\draw (-14,0) node[right] {};
+		\draw[<->,thick] (0,-11) -- (0,11) node[above]{$y$-axis};
 		\foreach \x in {-10,-8,...,-2,2,4,...,10}
 			\draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
 		\foreach \y in {-10,-8,...,-2,2,4,...,10}
-			\draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
+			\draw (0.05,\y) -- (-0.05,\y) node[left] {\footnotesize\y};
 		%% Quadrants
 		\draw (5,6) node[above]{\bfseries Quadrant I}
 			node[below]{\bfseries ( + , + 	)};
@@ -49,13 +40,13 @@ In \cref{ch:sequences} we investigated pictures patterns (fractals by Koch and S
 		\draw[fill] (7,-2) circle (0.2) node[right]{$(7, -2)$};
 		\draw[fill] (-6,3) circle (0.2) node[left]{$(-6, 3)$};
 	\end{tikzpicture}
-	\caption{The coordinate plane and its important landmarks.}
+	\caption{The coordinate plane and its important landmarks}
 	\label{fig:coordplane}
 \end{figure}
 
-The axes chop the plane into four regions called \glspl{quadrant}, which are numbered starting in the upper right and moving counter-clockwise (as shown in the figure). The signs in parentheses indicate the signs of $x$- and $y$-coordinates in each quadrant. The $x$-coordinates of the points in Quadrants I and IV are positive, while points in Quadrants II and III have $x$-coordinates that are negative. Points with positive $y$-coordinates lie in Quadrants I and II, while points with negative $y$-coordinates fall in Quadrants III and IV.\footnote{A point that lies on an axis doesn't actually in any of the four quadrants. So, the point $(4, 0)$ lives on the positive $x$-axis, but not actually in Quadrant I nor in Quadrant IV.}
+The axes chop the plane into four regions called \glspl{quadrant}, which are numbered starting in the upper right and moving counter-clockwise (as shown in the figure). The signs in parentheses indicate the signs of $x$- and $y$-coordinates in each quadrant. The $x$-coordinates of the points in Quadrants I and IV are positive, while points in Quadrants II and III have $x$-coordinates that are negative. Points with positive $y$-coordinates lie in Quadrants I and II, while points with negative $y$-coordinates fall in Quadrants III and IV.\footnote{A point that lies on an axis doesn't actually lie in any of the four quadrants. So, the point $(4, 0)$ lives on the positive $x$-axis, but not in Quadrant I nor in Quadrant IV.}
 
-\begin{boxedexplore}[Startup Exploration: Pizza Intersections]
+\begin{boxedexplore}[Startup exploration: Pizza intersections]
 Bob's friend Melvin ``Hambone'' Jones once worked delivering pizzas in his hometown of Euclid, Ohio. The town has streets running north-south and east-west.\footnote{Euclid, Ohio is also the home of the Polka Hall of Fame, though that has nothing to do with this problem. Also, Euclid isn't laid out in a grid as this problem implies, though it should be, given its name.}
 
 Hambone is currently parked at the intersection we will call $(0,0)$. If he drives one block east, he will arrive at the intersection $(1,0)$. If he then turns right and drives one block south, he will arrive at the intersection $(1,-1)$.
@@ -63,7 +54,7 @@ Hambone is currently parked at the intersection we will call $(0,0)$. If he driv
 Starting from $(0,0)$, describe are all the intersections that Hambone can reach by driving a total distance of exactly 10 blocks.
 \end{boxedexplore}
 
-\subsection{Graphing a Sequence}
+\subsection{Graphing a sequence}
 
 Our goal is to make a visual representation of a sequence on this coordinate plane.
 
@@ -96,30 +87,16 @@ To graph a sequence, we use the term number as the $x$-coordinate and the term's
 	\centering
 	\begin{tikzpicture}
 		\begin{axis}[
-			standard,
+			fullsize,
+			defaultgrid,
+			allminorticks,
+			labeloutsideaxis,
 			xlabel={Term No.},
 			ylabel={Term Value},
-			width=1\linewidth,		% size
-			height=1\linewidth,		% size
 		]
-			\addplot[algpoints, blue] coordinates {(1,1)(2,2)(3,4)(4,8)(5,16)(6,32)};
+		\addplot[algpoints, blue] coordinates {(1,1)(2,2)(3,4)(4,8)(5,16)(6,32)};
 		\end{axis}
 	\end{tikzpicture}
-%	\begin{tikzpicture}[xscale=1,yscale=0.15]
-%		%% grid setup
-%		\draw[very thin, color=gray!25, ystep=5] (0,0) grid (7, 42);
-%		\draw[->,thick] (0,0) -- (7,0); % node[right]{$x$-axis};
-%		\draw[->,thick] (0,0) -- (0,42); % node[above]{$y$-axis};
-%		\foreach \x in {0,...,6} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
-%		\foreach \y in {0,5,...,40} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
-%		%% points
-%		\draw[fill=blue,blue] (1,1) circle (.1cm and 0.66cm);
-%		\draw[fill=blue,blue] (2,2) circle (.1cm and 0.66cm);
-%		\draw[fill=blue,blue] (3,4) circle (.1cm and 0.66cm);
-%		\draw[fill=blue,blue] (4,8) circle (.1cm and 0.66cm);
-%		\draw[fill=blue,blue] (5,16) circle (.1cm and 0.66cm);
-%		\draw[fill=blue,blue] (6,32) circle (.1cm and 0.66cm);
-%	\end{tikzpicture}
 \end{minipage}
 \medskip
 
@@ -145,30 +122,16 @@ Recall that that sequence above, where the terms have a constant ratio, is calle
 	\centering
 	\begin{tikzpicture}
 		\begin{axis}[
-			standard,
+			fullsize,
+			defaultgrid,
+			allminorticks,
+			labeloutsideaxis,
 			xlabel={Term No.},
 			ylabel={Term Value},
-			width=1\linewidth,		% size
-			height=1\linewidth,		% size
 		]
-			\addplot[algpoints, red] coordinates {(1,8)(2,13)(3,18)(4,23)(5,28)(6,33)};
+		\addplot[algpoints, red] coordinates {(1,8)(2,13)(3,18)(4,23)(5,28)(6,33)};
 		\end{axis}
 	\end{tikzpicture}
-%	\begin{tikzpicture}[xscale=1,yscale=0.15]
-%		%% grid setup
-%		\draw[very thin, color=gray!25, ystep=5] (0,0) grid (7, 42);
-%		\draw[->,thick] (0,0) -- (7,0); % node[right]{$x$-axis};
-%		\draw[->,thick] (0,0) -- (0,42); % node[above]{$y$-axis};
-%		\foreach \x in {0,...,6} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
-%		\foreach \y in {0,5,...,40} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
-%		%% points
-%		\draw[fill=red,red] (1,8) circle (.1cm and 0.66cm);
-%		\draw[fill=red,red] (2,13) circle (.1cm and 0.66cm);
-%		\draw[fill=red,red] (3,18) circle (.1cm and 0.66cm);
-%		\draw[fill=red,red] (4,23) circle (.1cm and 0.66cm);
-%		\draw[fill=red,red] (5,28) circle (.1cm and 0.66cm);
-%		\draw[fill=red,red] (6,33) circle (.1cm and 0.66cm);
-%	\end{tikzpicture}
 \end{minipage}
 \medskip
 
@@ -194,37 +157,22 @@ Finally, let's see what a quadratic pattern looks like. For example, the perfect
 	\centering
 	\begin{tikzpicture}
 		\begin{axis}[
-			standard,
+			fullsize,
+			defaultgrid,
+			allminorticks,
+			labeloutsideaxis,
 			xlabel={Term No.},
 			ylabel={Term Value},
-			width=1\linewidth,		% size
-			height=1\linewidth,		% size
 		]
-			\addplot[algpoints, violet] coordinates {(1,1)(2,4)(3,9)(4,16)(5,25)(6,36)};
+		\addplot[algpoints, violet] coordinates {(1,1)(2,4)(3,9)(4,16)(5,25)(6,36)};
 		\end{axis}
 	\end{tikzpicture}
-
-%	\begin{tikzpicture}[xscale=1,yscale=0.15]
-%		%% grid setup
-%		\draw[very thin, color=gray!25, ystep=5] (0,0) grid (7, 42);
-%		\draw[->,thick] (0,0) -- (7,0); % node[right]{$x$-axis};
-%		\draw[->,thick] (0,0) -- (0,42); % node[above]{$y$-axis};
-%		\foreach \x in {0,...,6} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
-%		\foreach \y in {0,5,...,40} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
-%		%% points
-%		\draw[fill=violet,violet] (1,1) circle (.1cm and 0.66cm);
-%		\draw[fill=violet,violet] (2,4) circle (.1cm and 0.66cm);
-%		\draw[fill=violet,violet] (3,9) circle (.1cm and 0.66cm);
-%		\draw[fill=violet,violet] (4,16) circle (.1cm and 0.66cm);
-%		\draw[fill=violet,violet] (5,25) circle (.1cm and 0.66cm);
-%		\draw[fill=violet,violet] (6,36) circle (.1cm and 0.66cm);
-%	\end{tikzpicture}
 \end{minipage}
 \medskip
 
 Take a moment to compare the graphs of these three sequences. How are they alike? How are they different?
 
-\subsection{Features of the Graph of a Sequence}
+\subsection{Features of the graph of a sequence}
 
 Note that since the term number is always greater than 0, our graphs only show the positive part of the $x$-axis. We'll soon see that this is an artificial limitation: the negative part of the $x$-axis is just as important as the positive part.
 
@@ -234,10 +182,10 @@ In fact, when we generate a sequence we use only the natural numbers as the inpu
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\section{Algebraic Expressions}
+\section{Algebraic expressions}
 \label{sec:algexpr}
 
-\begin{boxedexplore}[Startup Exploration: Don't Take All Year]
+\begin{boxedexplore}[Startup exploration: Don't take all year]
 Find three natural numbers $x$, $y$, and $z$ which satisfy the equation $28x + 30y + 31z = 365$. Can you find more than one set of numbers $x,y,z$ that satisfy the equation?
 \end{boxedexplore}
 
@@ -247,11 +195,11 @@ In \cref{ch:numbers} we used the order of operations to simplify numeric express
 A \gls{variable} is representation of a value that can change. In algebra, variables are often represented by letters. We usually use letters from the Latin alphabet ($a, b, c, d,\dotsc$), but sometimes also use other symbols, such as letters from the Greek alphabet ($\alpha, \beta, \gamma, \delta, \dotsc$).
 \end{boxeddef}
 
-\begin{boxeddef}[Algebraic Expression]
+\begin{boxeddef}[Algebraic expression]
 A symbolic representation of mathematical operations that can involve both numbers and variables.
 \end{boxeddef}
 
-\subsection{Numbers and Variables}
+\subsection{Numbers and variables}
 
 In your mathematical career so far, you have probably worked with letters that stand in for numbers. Recall the formula for the circumference of a circle: \[C = \pi d.\]
 This formula explains the relationship between $d$, which stands in for the diameter of some circle, and $C$, which stands for the circumference of that circle. The letters $d$ and $C$ are variables. They stand in for numbers that can change, depending on which circle we're talking about.\footnote{Note that $\pi$ is \textit{not} a variable. We use a (Greek) letter in this case not because the value of $\pi$ might change, but because it's an irrational number that is impossible to write out in full. We often use letters to stand in for mathematical objects that are inconvenient, sometimes impossible, to write down in another way: $e$, $i$, $\phi$, and $\aleph_0$ each has special mathematical meaning.}
@@ -270,7 +218,7 @@ When we have the product of a number and a variable -- like $3x$ or $\umin11g$ -
 The numerical factor in a term with a variable. If no number is explicitly written, the coefficient is understood to be 1.
 \end{boxeddef}
 
-\subsection{Evaluating Algebraic Expressions}
+\subsection{Evaluating algebraic expressions}
 
 A variable is a ``placeholder'' that stands in for a number. We can only determine the value of an algebraic expression if we know what numbers the different variables represent.
 
@@ -378,20 +326,20 @@ Note how the parentheses help out when $x = \umin1$! Without those parentheses, 
 %Using the formula for the formula for arithmetic, I wrote the rule an = 12 + 3 (n – 1), which I convert to the equation y = 12 + 3 (x – 1). Now let's graph it in a standard window. You should be able to see why they call this relationship linear. Arithmetic sequences always graph to be lines, not vertical or horizontal though. Arithmetic sequences always increase or decrease by the exact same value, which means they have a constant rate of change.
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\section{Graphing a Function}
+\section{Graphing a function}
 \label{sec:graphingfunc}
 
 The graphs of sequences that we created earlier were quite limited. Since sequences use only the natural numbers as input values, the only points we had available to plot were the points where $x = 1, 2, 3, 4, \dotsc$. But now, knowing how to evaluate algebraic expressions, we can create more complete graphs by choosing a wider range of $x$ values.
 
-\begin{boxedexplore}[Startup Exploration: Extending Our Sequences]
+\begin{boxedexplore}[Startup exploration: Extending our sequences]
 Write a zero-based explicit rule for the arithmetic sequence shown below (this is the second example from \cref{sec:vizsequence}). First write the rule in terms of $n$ and $a_n$, then translate your rules into a graphable format in terms of $x$ and $y$.
 \[8, 13, 18, 23, 28, \dotsc\]
-The given sequence represents the $y$-values of the rule for the $x$-values 1, 2, 3, 4, and 5. Evaluate your rule for the $x$-values 0, -1, -2, -3, -4, and -5. Then, plots these 11 points on a coordinate grid.
+The given sequence represents the $y$-values of the rule for the $x$-values 1, 2, 3, 4, and 5. Evaluate your rule for the $x$-values 0, -1, -2, -3, -4, and -5. Then, plot these 11 points on a coordinate grid.
 \end{boxedexplore}
 
 The rule for the sequence in the startup exploration is $a_n = 5n + 3$, or in terms of $x$ and $y$, we have the rule $y = 5x + 3$. To create the coordinate graph, we can substitute the different $x$-values into the rule and compute the $y$-values. The middle column in the table below is our ``process column'' in which we substitute an $x$-value and compute the corresponding $y$-value. 
 
-\begin{center}
+\begin{table}
 \begin{tabular}{|C{2cm}|C{6cm}|C{2cm}|}
 	\hline
 	x & y = 5 x + 3& (x,y)\\\hline
@@ -402,43 +350,21 @@ The rule for the sequence in the startup exploration is $a_n = 5n + 3$, or in te
 	\umin4 & y = 5(\umin4) + 3 = \umin20 + 3 = \umin17  & (\umin4,\umin17)\\
 	\umin5 & y = 5(\umin5) + 3 = \umin25 + 3 = \umin22  & (\umin5,\umin22)\\\hline
 \end{tabular}
-\end{center}
+\end{table}
 
 In the end, we generate 6 new coordinate pairs, which we can graph alongside the five points that we were given.
 
 \resizeplot{-5}{-25}{5}{29}
 \begin{center}
 \begin{tikzpicture}
-	\begin{axis}[standard]
-%		\addplot[algcurve, red, domain=-5:5] (\x,5*\x+3);
-%		\draw[red] (axis cs:1.5,1,0) node[right]{\large$y=5x-6$};
-		\addplot[algpoints, red] coordinates {(-5,-22)(-4,-17)(-3,-12)(-2,-7)(-1,-2)(0,3)(1,8)(2,13)(3,18)(4,23)(5,28)};
+	\begin{axis}[
+		medsize,
+		defaultgrid
+	]
+	\addplot[algpoints, red] coordinates {(-5,-22)(-4,-17)(-3,-12)(-2,-7)(-1,-2)(0,3)(1,8)(2,13)(3,18)(4,23)(5,28)};
 	\end{axis}
 \end{tikzpicture}
 \end{center}
-
-%\begin{center}
-%	\begin{tikzpicture}[xscale=0.7,yscale=0.14]
-%		%% grid setup
-%		\draw[very thin, color=gray!25, ystep=2] (-5.5,-25) grid (5.5, 29);
-%		\draw[<->,thick] (-5.5,0) -- (5.5,0); % node[right]{$x$-axis};
-%		\draw[<->,thick] (0,-25) -- (0,30); % node[above]{$y$-axis};
-%		\foreach \x in {-5,...,-1,1,2,3,4,5} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
-%		\foreach \y in {-24,-20,...,28} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
-%		%% points
-%		\draw[fill=red,red] (-5,-22) circle (.1cm and 0.5cm);
-%		\draw[fill=red,red] (-4,-17) circle (.1cm and 0.5cm);
-%		\draw[fill=red,red] (-3,-12) circle (.1cm and 0.5cm);
-%		\draw[fill=red,red] (-2,-7) circle (.1cm and 0.5cm);
-%		\draw[fill=red,red] (-1,-2) circle (.1cm and 0.5cm);
-%		\draw[fill=red,red] (0,3) circle (.1cm and 0.5cm);
-%		\draw[fill=red,red] (1,8) circle (.1cm and 0.5cm);
-%		\draw[fill=red,red] (2,13) circle (.1cm and 0.5cm);
-%		\draw[fill=red,red] (3,18) circle (.1cm and 0.5cm);
-%		\draw[fill=red,red] (4,23) circle (.1cm and 0.5cm);
-%		\draw[fill=red,red] (5,28) circle (.1cm and 0.5cm);
-%	\end{tikzpicture}
-%\end{center}
 
 Can you anticipate the location of the point that we plot when $x = \frac{1}{3}$? What about when $x = \umin\frac{5}{2}$? What would our graph look like if we used all of the points in $\R$ as the $x$-values?
 
@@ -446,145 +372,119 @@ When we use all of the real numbers as input to the rule $y = 5x + 3$, the resul
 
 \begin{center}
 \begin{tikzpicture}
-	\begin{axis}[standard]
-		\addplot[algcurve, red, domain=-5:5] (\x,5*\x+3);
-%		\draw[red] (axis cs:1.5,1,0) node[right]{\large$y=5x-6$};
-%		\addplot[algpoints, red] coordinates {(-5,-22)(-4,-17)(-3,-12)(-2,-7)(-1,-2)(0,3)(1,8)(2,13)(3,18)(4,23)(5,28)};
+	\begin{axis}[
+		medsize,
+		defaultgrid
+	]
+	\addplot[algcurve, red, domain=-5:5] (\x,5*\x+3);
 	\end{axis}
 \end{tikzpicture}
 \end{center}
 
-%\begin{center}
-%	\begin{tikzpicture}[xscale=0.7,yscale=0.14]
-%		%% grid setup
-%		\draw[very thin, color=gray!25, ystep=2] (-5.5,-25) grid (5.5, 29);
-%		\draw[<->,thick] (-5.5,0) -- (5.5,0); % node[right]{$x$-axis};
-%		\draw[<->,thick] (0,-25) -- (0,30); % node[above]{$y$-axis};
-%		\foreach \x in {-5,...,-1,1,2,3,4,5} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
-%		\foreach \y in {-24,-20,...,28} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
-%		%% points
-%		\draw[<->,very thick,color=red,domain=-5:5] plot (\x,5*\x+3); 
-%	\end{tikzpicture}
-%\end{center}
-
 The rules below correspond to the other two sequences we studied in \cref{sec:vizsequence}. Under each rule is the graph that is created when we plot the rule over $\R$.
 
-\begin{minipage}[c]{0.5\textwidth }
+\begin{figure}
+\begin{minipage}[c]{0.49\textwidth }
 	\centering
 	$y = 2^x$\par\medskip
 	\begin{tikzpicture}
 		\begin{axis}[
-			standard,
-			width=1\linewidth,		% size
-			height=1\linewidth,		% size
+			fullsize,
+			defaultgrid
 		]
 		\addplot[algcurve, blue, domain=-5:4.75] (\x,2^\x);
 		\end{axis}
 	\end{tikzpicture}
-%	\begin{tikzpicture}[xscale=0.6,yscale=0.12]
-%		%% grid setup
-%		\draw[very thin, color=gray!25, ystep=2] (-5.5,-25) grid (5.5, 29);
-%		\draw[<->,thick] (-5.5,0) -- (5.5,0); % node[right]{$x$-axis};
-%		\draw[<->,thick] (0,-25) -- (0,30); % node[above]{$y$-axis};
-%		\foreach \x in {-5,...,-1,1,2,3,4,5} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
-%		\foreach \y in {-24,-20,...,28} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
-%		%% points
-%		\draw[<->,very thick,color=blue,domain=-5:4.5] plot (\x,2^\x); 
-%	\end{tikzpicture}
 \end{minipage}
 %
-\begin{minipage}[c]{0.5\textwidth }
+\begin{minipage}[c]{0.49\textwidth }
 	\centering
 	$y = x^2$\par\medskip
 	\begin{tikzpicture}
 		\begin{axis}[
-			standard,
-			width=1\linewidth,		% size
-			height=1\linewidth,		% size
+			fullsize,
+			defaultgrid
 		]
 		\addplot[algcurve, violet, domain=-5:5] (\x,\x^2);
 		\end{axis}
 	\end{tikzpicture}
-%	\begin{tikzpicture}[xscale=0.6,yscale=0.12]
-%		%% grid setup
-%		\draw[very thin, color=gray!25, ystep=2] (-5.5,-25) grid (5.5, 29);
-%		\draw[<->,thick] (-5.5,0) -- (5.5,0); % node[right]{$x$-axis};
-%		\draw[<->,thick] (0,-25) -- (0,30); % node[above]{$y$-axis};
-%		\foreach \x in {-5,...,-1,1,2,3,4,5} \draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
-%		\foreach \y in {-24,-20,...,28} \draw (-0.05,\y) -- (0.05,\y) node[left] {\footnotesize\y};
-%		%% points
-%		\draw[<->,very thick,color=violet,domain=-5:5] plot (\x,\x*\x); 
-%	\end{tikzpicture}
 \end{minipage}
+\end{figure}
 
-Are you surprised by these two graphs? Back in \cref{sec:vizsequence}, the graphs of these two sequence looked similar. But, we were only looking at the first quadrant! Their graphs are very different for negative values of $x$.
+Are you surprised by these two graphs? Back in \cref{sec:coordgraph}, the graphs of these two sequence looked similar. But, we were only looking at the first quadrant! Their graphs are very different for negative values of $x$.
 
 The moral of the story is that when we are asked to graph an equation by hand, we need to use a variety of different $x$-values, including negative numbers and fractions. Often, a problem will clearly indicate exactly what values to use.
 
-\begin{boxedexplore}[Extended Exploration: Big Graphs]
+\subsection{Criteria for high quality graphs}
+
+In algebra we make a distinction between ``sketching'' and ``graphing''. A sketch is just a quick drawing and it doesn't need to be super accurate. A sketch can be scribbled on a napkin or a piece of notebook paper.
+
+On the other hand, a proper graph is meant to communicate something to the viewer. A graph must be accurately made on graph paper. The most important features of whatever you're graphing -- a sequence, a function, a plot of a data set -- must be clear, accurate, and neatly represented. Here are some guidelines for creating high-quality graphs.
+
+High quality graphs should be drawn on graph paper. An individual graph does not have to take up an entire piece of graph paper, although it should be drawn large enough to be easily understood.
+
+Use a ruler or straightedge to make straight lines, in particular the coordinate axes or any linear data. Plus, we should draw arrowheads on anything that goes forever. This includes axes, lines, and curves.
+
+Be mindful when choosing a scale for the axes. Choose a scale that fits the data and ensures that your graph shows all important features of the curve. The origin does not necessarily need to be in the center of the grid. For example, if we are plotting data that includes only positive values, then we only need the first quadrant. The origin can be in the lower left-hand corner of the graph.
+
+Scales for the $x$- and $y$-axes can be different, and in some cases must be different, so this can take a little bit of planning. The scale must be the same for the whole length of an axis, and cannot have any ``jumps'' or ``breaks''. Changes in the scale will distort the shape of the graph, which defeats the purpose! Compare the two graphs below. The graph on the left is fine, but the graph on the right includes a common mistake. Can you identify the problem?
+
+\begin{minipage}{0.5\linewidth}
+	\centering
+	OK!\par\medskip
+	\begin{tikzpicture}[scale=1]
+		%% grid setup
+		\draw[very thin, color=gray!25] (0,0) grid (5,5);
+		\draw[->,thick] (0,0) -- (5.5,0) node[above]{$x$};
+		\draw[->,thick] (0,0) -- (0,5.5) node[right]{$y$};
+		\foreach \x in {0,2,...,10}
+			\draw (\x/2,0.05) -- (\x/2,-0.05) node[below] {\footnotesize\x};
+		\foreach \y in {0,1,...,5}
+			\draw (0.05,\y) -- (-0.05,\y) node[left] {\footnotesize\y};
+	\end{tikzpicture}
+\end{minipage}
+%
+\begin{minipage}{0.5\linewidth}
+	\centering
+	Not OK!\par\medskip
+	\begin{tikzpicture}[scale=1]
+		%% grid setup
+		\draw[very thin, color=gray!25] (0,0) grid (5,5);
+		\draw[->,thick] (0,0) -- (5.5,0) node[above]{$x$};
+		\draw[->,thick] (0,0) -- (0,5.5) node[right]{$y$};
+		\foreach \x in {0,1}
+			\draw (\x,0.05) -- (\x,-0.05) node[below] {\footnotesize\x};
+		\draw (2,0.05) -- (2,-0.05) node[below] {\footnotesize3};
+		\draw (3,0.05) -- (3,-0.05) node[below] {\footnotesize5};
+		\draw (4,0.05) -- (4,-0.05) node[below] {\footnotesize7};
+		\draw (5,0.05) -- (5,-0.05) node[below] {\footnotesize9};
+		\foreach \y in {0,1,...,5}
+			\draw (0.05,\y) -- (-0.05,\y) node[left] {\footnotesize\y};
+	\end{tikzpicture}
+\end{minipage}
+\medskip
+
+High quality graphs are clearly labeled. The scale should be indicated on the axes, and the axes should be labeled. For graphs of equations, this might mean simply labeling the axes $x$ and $y$. When plotting data, include more informative names like ``time'' or ``distance''.
+
+A final question about data points: to connect or not to connect? In the next section, we will discuss this question in some detail. But we've already seen an important piece of this puzzle: When graphing an equation by plotting data points, we should connect data points with a smooth curve and \textit{not} individual line segments. If we use a straight line to connect points, then we are telling our audience that the data in between the points is linear, which may not be the case! Go back and have a look at the graph of $y=x^2$. It doesn't come to a point at the bottom. Rather it's a smooth curve that passes through the origin.
+
+\begin{boxedexplore}[Extended exploration: Big graphs]
 \addtodoitem{Click here to visit the extended exploration: Big Graphs}
 \end{boxedexplore}
 
-\addtodoitem{Criteria for high quality graphs.}
-
-%\subsection{Criteria for High Quality Graphs}
-%
-%In algebra we make a distinction between ``sketching'' and ``graphing''. A sketch is a picture, a quick drawing, and it doesn't need to be super accurate. A sketch can be scribbled on a napkin or a piece of notebook paper.
-%
-%On the other hand, a proper graph is meant to communicate something to the viewer. A graph must be accurately made on graph paper. The most important features of whatever you're graphing -- a sequence, a function, a plot of a data set -- must be clear, accurate, and neatly represented.
-%
-%Here are some guidelines for creating high-quality graphs.
-%
-%* * * * * * * * * * 
-%High quality graphs are drawn on graph paper.
-%
-%Graphs of equations do not have to take up an entire piece of graph paper.
-%
-%Use a straightedge when drawing the coordinate axes.
-%
-%High quality graphs use an appropriate scale for the data and the size of the grid.
-%
-%Choose a scale that fits the data and ensures that your graph shows all important features of the curve. Scales for the $x$- and $y$- axes can be different, and in some cases must be different, so this can take a little bit of planning.
-%
-%Note that the scale must be the same for the whole length of an axis, and cannot ``jumps'' or ``breaks''. Changes in the scale like these will distort the shape of the graph, which defeats the purpose!
-%
-%High quality graphs are clearly labeled.
-%> For graphs of equations, this means labeling the axes $x$ and $y$. When plotting data, this means more informative names like ``time'' or ``distance''.
-%
-%High quality graphs have an appropriate scale that is clearly labeled.
-%> Graphs, no matter how beautiful, mean nothing without a scale. A line is just a line! We can't tell \textit{what line it is} without a scale!
-%
-%In addition scatter plots need to be large enough for you to draw lines/curves of best fit.
-%
-%High quality graphs are mindful of placement? 
-%
-%The origin does not necessarily need to be in the center of the grid. For example, if we are plotting data that includes no negative values, we only need the first quadrant of the graph, and so the origin can be in the lower left-hand corner of the graph.
-%
-%To connect or not to connect? Data points in a scatter plot are not connected. Data points in the graph of an equation are connected.
-%
-%When graphing an equation by plotting data points, connect non-linear data points with a smooth curve (not individual line segments). No pointy parabolas! If we use a straight line to connect points, then we are telling our viewers that the data in between the points is linear, which may not be the case.
-%
-%When graphing a line, use a ruler or straightedge. Don't try to ``free-hand'' draw a straight line. It rarely works.
-%
-%Use arrows for anything that goes forever
-%
-%This includes axes, lines, and curves. Open or closed dots are used for end points. Now, open and closed end points mean two different things. You can't use them interchangeably. Closed dots are inclusive and open dots are exclusive.
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\section{Patterns in Data}
+\section{Patterns in data}
 \label{sec:patternsindata}
 
 The graphs that we have been working with so far have been very orderly. Technical and scientific data, however, are not always so tidy. Data can be noisy, messy, and incomplete. We will need some tools that can help us to see and describe patterns that may (or may not) exist in experimental data.
 
-\begin{figure}[!htbp]
-	\centering
-	{\color{black!25}\fbox{\includegraphics[scale=0.65]{canadianwater.png}}}
-	\caption{Water consumption in Edmonton during the 2010 Olympic men's ice hockey final}
-	\label{fig:waterhockey}
-\end{figure}
+\begin{boxedexplore}[Extended exploration: Who is the best age guesser?]
+\addtodoitem{Click here to visit the extended exploration: Who Is the Best Age Guesser?}
+\end{boxedexplore}
 
-\begin{boxedexplore}[Startup Exploration: Water Consumption]
-The graph shown in \cref{fig:waterhockey} depicts water consumption in Edmonton, capital of the Canadian province of Alberta, during the gold medal men's ice hockey game at the 2010 Winter Olympics in Vancouver. The game was played between Canada and United States.
+\begin{boxedexplore}[Startup exploration: Water consumption]
+The graph shown in \cref{fig:waterconsumption} depicts water consumption in Edmonton, capital of the Canadian province of Alberta, during the gold medal men's ice hockey game at the 2010 Winter Olympics in Vancouver. The game was played between Canada and United States.
 
 Water consumption during the game is shown in blue, while data from the same time period on the previous day is shown in green.
 
@@ -593,9 +493,48 @@ Write down anything you notice or wonder about the data presented in this graph.
 A few notes: Ice hockey games are played in three 20-minute periods with breaks in between. In this particular game, the score was tied at the end of regular play. Canada scored the game winning goal in overtime and was awarded the gold medal.
 \end{boxedexplore}
 
-\begin{boxedexplore}[Extended Exploration: Who Is the Best Age Guesser?]
-\addtodoitem{Click here to visit the extended exploration: Who Is the Best Age Guesser?}
-\end{boxedexplore}
+\begin{figure}[htbp]
+\centering
+\begin{tikzpicture}
+\begin{axis}[
+		width=0.75\textwidth,
+		ylabel={\footnotesize Customer Water Demand (megaliters)},
+		ymin=300,
+		ymax=500,
+		ytick={320,340,...,480},
+		ytick pos=left,
+		ymajorgrids,
+		xmin=0,
+		xmax=6,
+		xtick={0,...,6},
+%		xtick pos=left,
+		xticklabels={12:00, 13:00, 14:00, 15:00, 16:00, 17:00, 18:00},
+		tick label style={
+			font=\footnotesize
+		},
+		legend style={
+			font=\footnotesize,
+			legend pos=north west,
+			draw=black!25
+		},
+		enlargelimits=false
+	]
+	\addplot[thick, green!80!black] table [x=time, y=day1, col sep=comma] {water.csv};
+	\addlegendentry{27 Feb 2010};
+	\addplot[thick, blue] table [x=time, y=day2, col sep=comma] {water.csv};
+	\addlegendentry{28 Feb 2010};
+\end{axis}
+\end{tikzpicture}
+\caption{Water consumption in Edmonton on 27 and 28 February 2010 (source: \href{http://www.epcor.com}{EPCOR})}
+\label{fig:waterconsumption}
+\end{figure}
+
+%\begin{figure}[!htbp]
+%	\centering
+%	{\color{black!25}\fbox{\includegraphics[scale=0.65]{canadianwater.png}}}
+%	\caption{Water consumption in Edmonton during the 2010 Olympic men's ice hockey final}
+%	\label{fig:waterhockey}
+%\end{figure}
 
 %\begin{boxedexplore}[Warm-up: Guess Your Weight]
 %\begin{minipage}[t]{0.7\textwidth}
@@ -635,11 +574,11 @@ A few notes: Ice hockey games are played in three 20-minute periods with breaks 
 
 In the graph of Edmonton water consumption, the amount of water being used varies depending on the time of day (not the other way around). We say that ``time of day'' is the \textit{independent variable} and ``water demand'' is the \textit{dependent variable}. 
 
-\begin{boxeddef}[Independent Variable]
+\begin{boxeddef}[Independent variable]
 A variable whose values affect the values of another variable. In a graph of the relationship between two variables, the quantity represented on the horizontal axis (the $x$-axis) usually represents the independent variable.
 \end{boxeddef}
 
-\begin{boxeddef}[Dependent Variable]
+\begin{boxeddef}[Dependent variable]
 A variable whose values depend on the values of another variable. In a graph of the relationship between two variables, the quantity represented on the vertical axis (the $y$-axis) usually represents the dependent variable.
 \end{boxeddef}
 
@@ -647,7 +586,7 @@ A variable whose values depend on the values of another variable. In a graph of 
 
 We can compare just about any two quantities. One way to do this is with a graph called a \gls{scatter plot}.
 
-\begin{boxeddef}[Scatter Plot]
+\begin{boxeddef}[Scatter plot]
 A graph that relates data of two different sets. The two sets of data are displayed as ordered pairs.
 \end{boxeddef}
 
@@ -655,7 +594,7 @@ Suppose we wish to compare, say, the height and weight for all of the players on
 
 While we're at it, let's make another comparison. The graph on the right plots every player's height and jersey number as ordered pairs (height, jersey number). What do you notice about these two graphs? How are they the same? How are they different?
 
-\begin{center}
+\begin{figure}
 % (height, weight)
 \begin{tikzpicture}[scale=0.9, domain=150:200]
 	\begin{axis}[xlabel={Height (cm)}, ylabel={Weight (kg)}]
@@ -766,7 +705,7 @@ While we're at it, let's make another comparison. The graph on the right plots e
 	};
 	\end{axis}
 \end{tikzpicture}
-\end{center}
+\end{figure}
 
 Notice that the graph of weight and height has a clear upward slant. This seems reasonable: the taller someone is, the more we might expect that person to weigh. There are some data points that don't fit the trend, but generally speaking the data points are increasing as we look toward the right on the graph. We say that this data shows a positive \gls{correlation}.
 
@@ -786,19 +725,19 @@ A key thing to remember when it comes to looking at data is that ``correlation d
 
 For example, it seems reasonable to believe that a change in height will cause a change in weight. But, there is data that shows a positive correlation between ``consumption of mozzarella cheese per person'' and ``number of civil engineering doctorates awarded''. This has to be a coincidence! There's no (good) reason to think that changing one of these variables would cause a change in the other one.\footnote{This fact is courtesy of the website \href{http://www.tylervigen.com/view_correlation?id=3890}{Spurious Correlations}, which has many graphs of interesting and ridiculous data that show correlation but not causation. Sometimes, it's fun to try to ``explain'' the correlation. Perhaps in this case the increase in mozzarella cheese consumption is due to an increase in takeout pizza demand, which leads to more pizza delivery shops, which in turn requires more roads, which means we need more engineers to design them.}
 
-\subsection{Continuous and Discrete Data}
+\subsection{Continuous and discrete data}
 
 When we drew the graph of a sequence, we didn't connect the dots. A sequence has a first term and a second term, but no one-and-a-halfth term. The $x$-values have no ``in-betweens''.
 
 Similarly, imagine a graph showing ``time'' as the independent variable and ``number of hockey players on the ice'' as the dependent variable. In this case, the $y$-values would have no ''in-betweens''. There could be 11 players or 12 players on the ice, but never 11.5 players. This is called \textit{discrete data}.
 
-\begin{boxeddef}[Discrete Data]
+\begin{boxeddef}[Discrete data]
 Data for which it doesn't make sense for measurements to exist between given data points. Discrete data often involves \textit{counting items}, such at the number of cars in a parking lot over time. 
 \end{boxeddef}
 
 On the other hand, when we started to picture the graph of a rule that could accept any real number as input, we drew a continuous line on the graph. The graph of water consumption in Edmonton, is jagged, spiky, and irregular -- but it's a continuous line. We can measure how much water has been used at any point in time, and we can measure the amount of water in fractions of a unit.
 
-\begin{boxeddef}[Continuous Data]
+\begin{boxeddef}[Continuous data]
 Data that has no holes, gaps, or breaks. Continuous data often involves \textit{measuring some value} where measurements exist (and may change) between data points. For example, a person's height over time.
 \end{boxeddef}
 
@@ -809,47 +748,49 @@ Consider a data collection scenario in which we want to graph ``Bob's distance f
 
 Now consider the scenario in which we graph ``number of customers in line at the cheese counter at Middle Market.'' Although there is always a certain number of people in line (maybe zero), there can never be 5.7 people in line. We must count people, and so this data is discrete. Our graph would have to ``jump'' from 5 people to 6 people without going through the in-between values.
 
-\begin{minipage}{0.5\textwidth}
+\resizeplot{0}{0}{7}{7}
+\begin{figure}
+\begin{minipage}{0.48\textwidth}
 \centering
-\begin{tikzpicture}[scale=0.7]
-	\draw[ultra thin, gray!50] (0,0) grid (6,5);
-	\draw[->,thick] (0,0) -- (6.5,0);
-	\draw[->,thick] (0,0) -- (0,5.5);
-	%% x-axis
-	\foreach \x in {0,...,6}
-		\draw (\x,0.1) -- (\x,-0.1);
-	\draw (3, -0.75) node[below] {Distance from home};
-	\draw (3, -1.5) node[below] {(continuous data)};
-	%% y-axis
-	\foreach \y in {0,...,5}
-		\draw (-0.1,\y) -- (0.1,\y);
-	%% graph
-	\draw[very thick, blue, rounded corners] (0,0) .. controls (1,4.5) .. (2,2) .. controls (3,0) .. (4,2) .. controls (5,3.5) .. (6,0);
+Continuous data\par\medskip
+\begin{tikzpicture}
+	\begin{axis}[
+		fullsize,
+		defaultgrid,
+		allminorticks,
+		labeloutsideaxis,
+		xlabel={Time},
+		ylabel={Dist. from home (miles)}
+	]
+	\addplot[samples=400, ultra thick, blue, domain=0.05:6.55]%
+		 (\x, -0.12*x^4+1.51*x^3-6.05*x^2+8.64*x-0.38);
+	\end{axis}
 \end{tikzpicture}
 \end{minipage}
 %%
-\begin{minipage}{0.5\textwidth}
+\begin{minipage}{0.48\textwidth}
 \centering
-\begin{tikzpicture}[scale=0.7]
-	\draw[ultra thin, gray!50] (0,0) grid (6,5);
-	\draw[->,thick] (0,0) -- (6.5,0);
-	\draw[->,thick] (0,0) -- (0,5.5);
-	%% x-axis
-	\foreach \x in {0,...,6}
-		\draw (\x,0.1) -- (\x,-0.1);
-	\draw (3, -0.75) node[below] {Number of customers};
-	\draw (3, -1.5) node[below] {(discrete data)};
-	%% y-axis
-	\foreach \y in {0,...,5}
-		\draw (-0.1,\y) -- (0.1,\y);
-	%% graph
-	\draw[very thick, blue] (0,1) -- (2,1);
-	\draw[very thick, blue] (2,2) -- (3,2);
-	\draw[very thick, blue] (3,4) -- (5,4);
-	\draw[very thick, blue] (5,3) -- (6,3);
+Discrete data\par\medskip
+\begin{tikzpicture}
+	\begin{axis}[
+		fullsize,
+		defaultgrid,
+		allminorticks,
+		labeloutsideaxis,
+		xlabel={Time},
+		ylabel={No. customers}
+	]
+	\draw[line width=2.5pt, blue] (axis cs: 0,1) -- (axis cs: 2,1);
+	\draw[line width=2.5pt, blue] (axis cs: 2,2) -- (axis cs: 3,2);
+	\draw[line width=2.5pt, blue] (axis cs: 3,6) -- (axis cs: 5,6);
+	\draw[line width=2.5pt, blue] (axis cs: 5,5) -- (axis cs: 6,5);
+	\draw[line width=2.5pt, blue] (axis cs: 6,4) -- (axis cs: 7,4);
+	\end{axis}
 \end{tikzpicture}
 \end{minipage}
-		
+\end{figure}
+
+
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \section{Interpreting graphs}
@@ -857,11 +798,11 @@ Now consider the scenario in which we graph ``number of customers in line at the
 
 In this section, our goal is to hone our skills at understanding what a graph is \textit{communicating}.
 
-\begin{boxedexplore}[Extended Exploration: Interpreting Graphs with Distance Match]
+\begin{boxedexplore}[Extended exploration: Interpreting graphs with distance match]
 \addtodoitem{Click here to visit the extended exploration: Interpreting Graphs with Distance Match}
 \end{boxedexplore}
 
-\begin{boxedexplore}[Startup Exploration: Yeardleigh's Submersible]
+\begin{boxedexplore}[Startup exploration: Yeardleigh's submersible]
 Always questing after the most delicious ingredients, Yeardleigh buys an underwater submersible vehicle so that she can hunt the ocean floor for interesting sea plants. The graph below shows the depth of Yeardleigh's submersible over time.
 
 Study the graph. What can you tell about what's happening? Write a short paragraph telling, in words, the same story that the graph is telling visually.
@@ -897,15 +838,30 @@ Plus, we can tell from the graph when the submersible is getting deeper (the dep
 
 Notice that other parts of the graph are horizontal, for example between 30 and 60 minutes. This tells us that the depth of the submersible stayed the same during that time. Of course Yeardleigh could still be moving around below the surface, but she remains at a constant depth, neither diving nor surfacing.
 
-\subsection{Interpreting Curves}
+\subsection{Interpreting curves}
 
 Straight lines are fine, but what if the graph shows curved lines? Consider this graph showing the submersible's depth over time. What story would we tell about this graph?
 
-\begin{center}
+%\resizeplot{0}{0}{100}{500}
+%\begin{figure}
+%\begin{tikzpicture}
+%	\begin{axis}[
+%		medsize,
+%		defaultgrid,
+%		labeloutsideaxis,
+%		xlabel={Time (min)},
+%		ylabel={Depth (ft)},
+%	]
+%	\addplot[samples=400, ultra thick, blue, domain=0:100](\x, -0.2*x^2+20*x);
+%	\end{axis}
+%\end{tikzpicture}
+%\end{figure}
+
+\begin{figure}
 \begin{tikzpicture}[scale=1]
-	\draw[ultra thin, gray!50] (0,0) grid (6,5);
+	\draw[ultra thin, gray!25] (0,0) grid (6,6);
 	\draw[->,thick] (0,0) -- (6.5,0);
-	\draw[->,thick] (0,0) -- (0,5.5);
+	\draw[->,thick] (0,0) -- (0,6.5);
 	%% x-axis
 	\foreach \x in {0,...,6}
 		\draw (\x,0.1) -- (\x,-0.1);
@@ -913,19 +869,19 @@ Straight lines are fine, but what if the graph shows curved lines? Consider this
 		\draw (0.0667*\x, 0) node[below] {\footnotesize\x};
 	\draw (3.5, -0.75) node[below] {Time (min)};
 	%% y-axis
-	\foreach \y in {0,...,5}
-		\draw (-0.1,\y) -- (0.1,\y);
-	\foreach \y in {0,100,...,500}
+	\foreach \y in {0,...,6}
+		\draw (0.1,\y) -- (-0.1,\y);
+	\foreach \y in {0,100,...,600}
 		\draw (0, 0.01*\y) node[left] {\footnotesize\y};
 	\draw (-1, 2.5) node[rotate=90,above] {Depth (ft)};
 	%% graph
 	\draw[very thick, blue, domain=0:6] plot (\x,-0.444*\x*\x+2.667*\x);
 \end{tikzpicture}
-\end{center}
+\end{figure}
 
 One way to get a feel for what's happening is to imagine leaning a ruler or pencil against the rounded edge of a soda can. Then picture the ruler rolling along the side of the can, and how the angle of the ruler will change as it rolls.
 
-\begin{center}
+\begin{figure}
 \begin{tikzpicture}[scale=0.5]
 	\draw (-1.5,0) -- (25.5,0);
 	\foreach \x in {-1,-0.75,...,25} \draw (\x,0) -- (\x-0.15, -0.25);
@@ -950,15 +906,16 @@ One way to get a feel for what's happening is to imagine leaning a ruler or penc
 		\draw[very thick] (0,2) -- (4,2);
 	\end{scope}
 \end{tikzpicture}
-\end{center}
+\caption{Pencil rolling along the side of a can}
+\end{figure}
 
 Now picture a straight line rolling along the surface of the curved line in the graph above. The straight line approximates the curved line at the point where they touch.
 
-\begin{center}
+\begin{figure}
 \begin{tikzpicture}[scale=0.7]
-	\draw[ultra thin, gray!50] (0,0) grid (6,5);
+	\draw[ultra thin, gray!25] (0,0) grid (6,6);
 	\draw[->,thick] (0,0) -- (6.5,0);
-	\draw[->,thick] (0,0) -- (0,5.5);
+	\draw[->,thick] (0,0) -- (0,6.5);
 	%% x-axis
 	\foreach \x in {0,...,6}
 		\draw (\x,0.1) -- (\x,-0.1);
@@ -966,9 +923,9 @@ Now picture a straight line rolling along the surface of the curved line in the 
 		\draw (0.0667*\x, 0) node[below] {\footnotesize\x};
 	\draw (3.5, -0.75) node[below] {Time (min)};
 	%% y-axis
-	\foreach \y in {0,...,5}
+	\foreach \y in {0,...,6}
 		\draw (-0.1,\y) -- (0.1,\y);
-	\foreach \y in {0,100,...,500}
+	\foreach \y in {0,100,...,600}
 		\draw (0, 0.01*\y) node[left] {\footnotesize\y};
 	\draw (-1, 2.5) node[rotate=90,above] {Depth (ft)};
 	%% graph
@@ -977,9 +934,9 @@ Now picture a straight line rolling along the surface of the curved line in the 
 	\draw[red,fill=red] (1,2.222) circle[radius=0.1];
 \end{tikzpicture}
 \begin{tikzpicture}[scale=0.7]
-	\draw[ultra thin, gray!50] (0,0) grid (6,5);
+	\draw[ultra thin, gray!25] (0,0) grid (6,6);
 	\draw[->,thick] (0,0) -- (6.5,0);
-	\draw[->,thick] (0,0) -- (0,5.5);
+	\draw[->,thick] (0,0) -- (0,6.5);
 	%% x-axis
 	\foreach \x in {0,...,6}
 		\draw (\x,0.1) -- (\x,-0.1);
@@ -987,7 +944,7 @@ Now picture a straight line rolling along the surface of the curved line in the 
 		\draw (0.0667*\x, 0) node[below] {\footnotesize\x};
 	\draw (3.5, -0.75) node[below] {Time (min)};
 	%% y-axis
-	\foreach \y in {0,...,5}
+	\foreach \y in {0,...,6}
 		\draw (-0.1,\y) -- (0.1,\y);
 	%\foreach \y in {0,100,...,500}
 	%	\draw (0, 0.01*\y) node[left] {\footnotesize\y};
@@ -998,9 +955,9 @@ Now picture a straight line rolling along the surface of the curved line in the 
 	\draw[red,fill=red] (2,3.556) circle[radius=0.1];
 \end{tikzpicture}
 \begin{tikzpicture}[scale=0.7]
-	\draw[ultra thin, gray!50] (0,0) grid (6,5);
+	\draw[ultra thin, gray!25] (0,0) grid (6,6);
 	\draw[->,thick] (0,0) -- (6.5,0);
-	\draw[->,thick] (0,0) -- (0,5.5);
+	\draw[->,thick] (0,0) -- (0,6.5);
 	%% x-axis
 	\foreach \x in {0,...,6}
 		\draw (\x,0.1) -- (\x,-0.1);
@@ -1008,7 +965,7 @@ Now picture a straight line rolling along the surface of the curved line in the 
 		\draw (0.0667*\x, 0) node[below] {\footnotesize\x};
 	\draw (3.5, -0.75) node[below] {Time (min)};
 	%% y-axis
-	\foreach \y in {0,...,5}
+	\foreach \y in {0,...,6}
 		\draw (-0.1,\y) -- (0.1,\y);
 	%\foreach \y in {0,100,...,500}
 	%	\draw (0, 0.01*\y) node[left] {\footnotesize\y};
@@ -1018,19 +975,19 @@ Now picture a straight line rolling along the surface of the curved line in the 
 	\draw[very thick, dashed, red, domain=0.75:4.25] plot (\x,0.444*\x+2.778);
 	\draw[red,fill=red] (2.5,3.889) circle[radius=0.1];
 \end{tikzpicture}
-\end{center}
+\end{figure}
 
 Using the straight line, we can see that the submersible starts out diving at a fairly high rate. It gradually slows its rate of descent until it eventually stops diving. Then it gradually accelerates as it returns to the surface.\footnote{Believe it or not, this idea -- approximating a curved line with a straight line -- is one of the fundamental motivating ideas in calculus. As you work to interpret these curved graphs, you're growing your calculus brain, right here in algebra 1. How cool is that?}
 
-\subsection{Impossible Interpretations}
+\subsection{Impossible situations}
 
 Consider this graph showing the submersible's depth over time. What's going on here?
 
-\begin{center}
+\begin{figure}
 \begin{tikzpicture}[scale=1]
-	\draw[ultra thin, gray!50] (0,0) grid (6,5);
+	\draw[ultra thin, gray!50] (0,0) grid (6,6);
 	\draw[->,thick] (0,0) -- (6.5,0);
-	\draw[->,thick] (0,0) -- (0,5.5);
+	\draw[->,thick] (0,0) -- (0,6.5);
 	%% x-axis
 	\foreach \x in {0,...,6}
 		\draw (\x,0.1) -- (\x,-0.1);
@@ -1038,20 +995,20 @@ Consider this graph showing the submersible's depth over time. What's going on h
 		\draw (0.0667*\x, 0) node[below] {\footnotesize\x};
 	\draw (3.5, -0.75) node[below] {Time (min)};
 	%% y-axis
-	\foreach \y in {0,...,5}
+	\foreach \y in {0,...,6}
 		\draw (-0.1,\y) -- (0.1,\y);
-	\foreach \y in {0,100,...,500}
+	\foreach \y in {0,100,...,600}
 		\draw (0, 0.01*\y) node[left] {\footnotesize\y};
 	\draw (-1, 2.5) node[rotate=90,above] {Depth (ft)};
 	%% graph
 	\draw[very thick, blue] (0,0) -- (3,1.5) -- (1,2.5) -- (4,4) -- (6,0);
-	\draw[very thick, white] (2,0) -- (2,5);
-	\draw[very thick, dotted, green!60!black] (2,0) -- (2,5);
+	\draw[ultra thick, white] (2,0) -- (2,6);
+	\draw[very thick, dotted, green!60!black] (2,0) -- (2,6);
 	\draw[white,fill=green!60!black] (2,1) circle[radius=0.1];
 	\draw[white,fill=green!60!black] (2,2) circle[radius=0.1];
 	\draw[white,fill=green!60!black] (2,3) circle[radius=0.1];
 \end{tikzpicture}
-\end{center}
+\end{figure}
 
 This graph is a problem, given the context of ``depth of the submersible over time''. Consider this question: How deep it the submersible 30 minutes after launch?
 

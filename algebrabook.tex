@@ -2,7 +2,11 @@
 \usepackage[english]{babel}
 
 % Partial inclusion, for piecewise development
-%\includeonly{equations}
+%\includeonly{graphs}
+
+\usepackage{floatrow}			% this automatically centers all floats
+\floatplacement{table}{hbtp}		% all tables are given the [hbtp] option
+\floatplacement{figure}{hbtp}	% all figures are given the [hbtp] option
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 
@@ -11,6 +15,9 @@
 
 % Custom mathematics commands
 \usepackage{jermer_math}
+
+% Environment for formatting commented work
+\usepackage{algnom_commwork}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 %

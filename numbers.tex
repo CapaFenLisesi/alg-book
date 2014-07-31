@@ -19,7 +19,7 @@ But, we now know that imaginary numbers have practical applications in, for exam
 It's not clear which is the more accurate description. No matter what side of the debate you find more convincing, there is a certain beautiful interconnectedness to our system of numbers and mathematical laws. To illustrate this, we'd like to tell a story.
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\section{The Story of Numbers}
+\section{Story of numbers}
 \label{sec:storyofnumbers}
 
 %%%
@@ -42,11 +42,11 @@ As the village grew, Knut's family farm led the development of a booming goat ch
 Eventually, some of Knut's ancestors emigrated to America and, years later, a pair of twins -- Knut's great-great-great-grandchildren -- would grow up to change the world. But let's not get too far ahead of ourselves. More about the Krumbli twins later\ldots
 \end{story}
 
-\subsection{Dissecting the Story}
+\subsection{Dissecting the story}
 
 Mathematically speaking, it's natural to begin our discussion of numbers exactly where Knut began: counting things. The numbers we use to count are called the natural numbers (also known as the counting numbers, for obvious reasons).
 
-\begin{boxeddef}[Natural Number]
+\begin{boxeddef}[Natural number]
 A \gls{natural number} is a member of the list of numbers that starts $1, 2, 3, 4,\dotsc$ and continues forever. The set of all natural numbers is denoted using the symbol $\N$, so we can write $\N = \{1, 2, 3, 4, \dotsc\}$.
 
 We use the \{curly braces\} here to indicate that we're collecting a group of numbers together as a \gls{set}. A set written in this way is written in \gls{set notation}.
@@ -74,7 +74,7 @@ The integers are closed under the operations of addition and multiplication. Plu
 
 But (as you may have anticipated) we have a problem with division. In certain cases, the quotient of two integers is itself an integer: $15 \div \umin3 = \umin5$, no problem. But other times we get a quotient that is not an integer: $\umin3 \div 15 = \umin0.2$ and $\umin0.2$ is not an integer. In other words, the integers are not closed under the operation of division.
 
-\begin{boxeddef}[Rational Number]
+\begin{boxeddef}[Rational number]
 \label{def:rationals}
 A \gls{rational number} is any number that can be written as the ratio of two integers $\frac{a}{b}$, where $b$ is not zero. This set includes all of your classic fractions, as well as all terminating decimals and all repeating decimals.
 
@@ -88,7 +88,7 @@ Fractions have a lousy reputation among math students, but the rational numbers 
 
 But, other numbers exist. Note that the rational numbers include all of the terminating decimals (like $0.5$ and $1.678$), and all of the repeating decimals (like $0.\overline{3}$ and $\umin12.34\overline{56}$). Now, consider the number \[0.10\,110\,1110\,11110\,111110\ldots\] This number does not terminate, but it does not repeat either.\footnote{This number does have a pattern, but that is not the same as ``repeating'' in the sense of ``repeating decimal''.} So, this number is \textit{not} a rational number.
 
-\begin{boxeddef}[Irrational Number]
+\begin{boxeddef}[Irrational number]
 An \gls{irrational number} is a number that cannot be expressed as the ratio of two integers. In decimal form, an irrational number never terminates and never repeats.
 \end{boxeddef}
 
@@ -96,7 +96,7 @@ You have likely encountered irrational numbers before. A famous example is the n
 
 When we group together all of the rational numbers and all of the irrational numbers, we will have accounted for all possible decimal representations. This combined set of numbers is going to be of key importance to us in algebra 1.
 
-\begin{boxeddef}[Real Number]
+\begin{boxeddef}[Real number]
 A \gls{real number} is any rational or irrational number. The set of all real numbers is denoted $\R$ which, naturally enough, comes from the word \textit{real}.
 \end{boxeddef}
 
@@ -109,24 +109,25 @@ Like the set $\Q$, the set $\R$ is closed under the four fundamental operations.
 
 You have probably been working with positive and negative numbers for a while now, so this section will review the most important terms and algorithms for signed numbers. To get the ball rolling, think about this:
 
-\begin{boxedexplore}[Startup Exploration: Integer Comparisons]
+\begin{boxedexplore}[Startup exploration: Integer comparisons]
 In each of the expressions below, $x$ and $y$ are natural numbers and $x<y$ ($x$ is less than $y$). Will the result be greater than 0, less than 0, equal to 0, or is there not enough information to tell? Why?
 
-a.\quad $x+(\umin y)$
-\hfill
-b.\quad $x-(\umin y)$
-\hfill
-c.\quad $x \cdot (\umin y)$
-\hfill
-d.\quad $x \div (\umin y)$
-\hfill
+\begin{tabularx}{\textwidth}{YYYY}
+(a)\quad $x+(\umin y)$
+&
+(b)\quad $x-(\umin y)$
+&
+(c)\quad $x \cdot (\umin y)$
+&
+(d)\quad $x \div (\umin y)$
+\end{tabularx}
 \end{boxedexplore}
 
-\subsection{Language of the signed numbers}
+\subsection{Language of signed numbers}
 
 As we saw in \cref{sec:storyofnumbers}, the integers include the natural numbers, their opposites, and zero. Numbers now include two pieces of information: they have a \textit{size} (or \textit{magnitude}) and a \textit{direction}, either positive or negative.\footnote{Later in mathematics and the physical sciences, we'll encounter mathematical objects with both magnitude and direction again. They're called vectors.} Sometimes, we care only about the magnitude of a number, in which case we refer to a number's \textit{absolute value}.
 
-\begin{boxeddef}[Absolute Value]
+\begin{boxeddef}[Absolute value]
 The \gls{absolute value} of a number $x$ is its distance away from zero on the number line. To express this in mathematical symbols, we write $\abs{x}$ to mean ``the absolute value of $x$''.
 \end{boxeddef}
 
@@ -163,7 +164,7 @@ The sum of opposites is always 0. For this reason, we sometimes use the term \gl
 
 %The set of math skills that you have already acquired should include techniques for adding, subtracting, multiplying, and dividing positive and negative numbers quickly and accurately. In the next few sections we will review and summarize the algorithms.
 
-\subsection{Adding Signed Numbers}
+\subsection{Adding signed numbers}
 \index{addition!of signed numbers}
 
 Like matter and antimatter, combining positive and negative numbers leads to annihilation. (Dramatic, no?)
@@ -190,7 +191,7 @@ For example when we bring together $+8$ and $\umin6$, we can picture 8 units of 
 
 We might visualize annihilation with a drawing like in \cref{fig:intadd} where black circles are units of matter, red circles are units of antimatter. Or, we could write a number sentence like $8 + \umin6 = 2$. Of course, no annihilations occur when we scrape together a big pile of matter (or a big pile of antimatter, for that matter). It's only when they mix that anything interesting happens.
 
-\begin{boxeddef}[Adding Signed Numbers]
+\begin{boxeddef}[Adding signed numbers]
 If the two numbers being added have the same sign, then we add the absolute values of the numbers, and use the sign that they share.
 
 Otherwise, if the two numbers being added have different signs, then we find the difference between their absolute values, and use the sign of the number with larger absolute value.
@@ -210,12 +211,12 @@ Compute each of the following.
 \end{enumerate}
 \end{boxedex}
 
-\subsection{Subtracting Signed Numbers}
+\subsection{Subtracting signed numbers}
 \index{subtraction!of signed numbers}
 
 Addition and subtraction are called \textit{opposite} (or \textit{inverse}) \textit{operations} because they ``undo'' one another. The act of adding 5 of matter can be ``undone'' by subtracting 5 units of matter. But on the other hand, the act of adding 5 units of matter can also be undone by \textit{adding 5 units of antimatter}.
 
-\begin{boxeddef}[Subtracting Signed Numbers]
+\begin{boxeddef}[Subtracting signed numbers]
 \textit{Subtracting a number} is the same as \textit{adding the opposite of the number}.
 
 When faced with a subtraction problem, change it to an ``addition of the opposite'' problem and then follow the rules for adding signed numbers.
@@ -239,15 +240,13 @@ Compute each of the following:
 
 When dealing with addition and subtraction of signed numbers in a problem, a good habit is to simplify the signs by rewriting subtraction as addition-of-the-opposite, before doing any computations.
 
-\begin{boxedex}[Explaining the Startup Exploration]
 In the startup exploration for this section, we have two natural numbers $x$ and $y$ where $x < y$. Natural numbers are all positive, so this means that $\abs{x}$ is less than $\abs{y}$.
 
 Part (a) asks us to consider $x+(\umin y)$. Since opposite numbers have the same absolute value, $\abs{y}$ is the same as $\abs{\umin y}$. Therefore when we add, the number with larger absolute value is negative and the sum will take on the negative sign. So, when $x$ and $y$ are natural numbers and $x < y$, we know that $x+(\umin y)$ is \textit{always negative} so the result is always less than 0.
 
 Part (b) asks us to consider $x-(\umin y)$. We can change this subtraction expression into addition-of-the-opposite: $x-(\umin y) = x+y$. Since both $x$ and $y$ are natural numbers, their sum is a natural number. In other words, when $x$ and $y$ are natural numbers, $x-(\umin y)$ is always positive, in other words always greater than 0.
-\end{boxedex}
 
-\subsection{Multiplying and Dividing Signed Numbers}
+\subsection{Multiplying and dividing signed numbers}
 \index{multiplication!of signed numbers}
 \index{division!of signed numbers}
 
@@ -261,19 +260,19 @@ But what about $\umin5 \cdot 6$? What does it mean to have ``negative five group
 
 For the moment, we'll simply review the rules for multiplying (and dividing) signed numbers. We can explain why these rules work using the so-called ``field axioms for the real numbers''. More on that later.
 
-\begin{boxeddef}[Multiplying (and Dividing) Signed Numbers]
+\begin{boxeddef}[Multiplying and dividing signed numbers]
 The absolute value of the product of two numbers is the product of their absolute values: $\abs{a \cdot b} = \abs{a} \cdot \abs{b}$. If the two numbers have the same sign, then the product is positive. If the two numbers have opposite signs, then the product is negative.
 \end{boxeddef}
 
 There are several clever ways to remember this rule. Some people remember that every pair of negatives in a product cancel one another. Other people use a triangle with one positive sign and two negative signs drawn on the vertices. We present another way of looking at it in the next section. Choose whichever mnemonic\footnote{mnemonic ($na \cdot MON \cdot ic$, the first ``m'' is silent): A learning aid that helps to remember or retain information.} method is most helpful to you!
 
-\subsubsection{Karmic Multiplication}
+\subsubsection{Karmic multiplication}
 
 Karma, an underlying concept of many Eastern religions, is a belief that a person's actions and intentions shape their future. Performing good deeds will contribute to one's ``good karma'' and will lead to future happiness. Bad deeds contribute to one's ``bad karma'' and will lead to future suffering.
 
 So, karma suggests that good things happen to good people, and that bad things happen to bad people. Of course we know that the universe does not always operate in accordance with karma.
 
-\begin{boxeddef}[Karmic Multiplication]
+\begin{boxeddef}[Karmic multiplication]
 \centering
 When good things happen to good people, that's good!
 
@@ -309,38 +308,35 @@ Note: When multiplying (or dividing) more than two numbers, we can approach thin
 \begin{boxedex}
 Multiply: $(2)(\umin2)(1)(\umin2)(\umin2)(1)(1)(\umin2)(\umin1)(2)$
 
-\exsoln{} If we count up the negative signs, we find there are five. Pairs of negatives will have a positive product, so we'll have two pairs of negatives plus one left over. Our final answer, then, will be negative. All that remains is to multiply the 2s (of which there are six): \[(2)(\umin2)(1)(\umin2)(\umin2)(1)(1)(\umin2)(\umin1)(2) = \umin64\]
+\exsoln\ If we count up the negative signs, we find there are five. Pairs of negatives will have a positive product, so we'll have two pairs of negatives plus one left over. Our final answer, then, will be negative. All that remains is to multiply the 2s (of which there are six): \[(2)(\umin2)(1)(\umin2)(\umin2)(1)(1)(\umin2)(\umin1)(2) = \umin64\]
 \end{boxedex}
 
-\begin{boxedex}[Explaining the Startup Exploration]
-In the startup exploration for this section, $x$ and $y$ are natural numbers and $x<y$.
-
-Since $x$ are $y$ are natural numbers they are both positive, and then $\umin y$ is negative. Part (c) asks us to consider $x\cdot(\umin y)$. We have a positive number times a negative number, so the product is \textit{always negative}, always less than 0.
+In the startup exploration for this section, $x$ and $y$ are natural numbers and $x<y$. Since $x$ are $y$ are natural numbers they are both positive, and then $\umin y$ is negative. Part (c) asks us to consider $x\cdot(\umin y)$. We have a positive number times a negative number, so the product is \textit{always negative}, always less than 0.
 
 Part (d) asks us to consider $x\div(\umin y)$. Again, we have a positive number and a negative number, so the quotient is \textit{always} less than 0.
-\end{boxedex}
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\section{Rational Numbers}
+\section{Rational numbers}
 \label{sec:rationals}
 
 As with integers, you've probably been working with fractions and decimals for a while now. In this section, we review the key terms and algorithms for working with rational numbers. As we get going, think about this:
 
-\begin{boxedexplore}[Startup Exploration: Rational Comparisons]
+\begin{boxedexplore}[Startup exploration: Rational comparisons]
 In each of the expressions below, $a$ and $b$ are rational numbers where $0 < a < b < 1$. Will the result be greater than 1, less than 1, equal to 1, or is there not enough information to tell? Why?
 
-a.\quad $a+b$
-\hfill
-b.\quad $a-b$
-\hfill
-c.\quad $a \cdot b$
-\hfill
-d.\quad $a \div b$
-\hfill
+\begin{tabularx}{\textwidth}{YYYY}
+(a)\quad $a+b$
+&
+(b)\quad $a-b$
+&
+(c)\quad $a \cdot b$
+&
+(d)\quad $x \div (\umin y)$
+\end{tabularx}
 \end{boxedexplore}
 
-\subsection{The Language of Rational Numbers}
+\subsection{Language of rational numbers}
 
 Sometimes in life we discover, much to our surprise, that some ridiculous and insignificant thing as been given a name.\footnote{For instance, did you know that the little plastic sheath at the end of your shoelaces is called an ``aglet''? Now you know.} We find ourselves wondering, ``Who decided to give \textit{that} a name? Why bother?'' Prepare for one of those moments:
 
@@ -352,7 +348,7 @@ Vincula are used in other contexts as well. For example, we use a vinculum to re
 
 With that definition in mind, we can continue with two of the most daunting words in elementary mathematics. You're definitely not alone if you have ever been confused about these.
 
-\begin{boxeddef}[Numerator and Denominator]
+\begin{boxeddef}[Numerator and denominator]
 In a fraction, the number above the vinculum is called the \gls{numerator} of the fraction, and the number below the vinculum is called the \gls{denominator} of the fraction.
 
 For example in the number $\frac{5}{6}$, the numerator is 5 and the denominator is 6.
@@ -377,7 +373,7 @@ If we ask ``five \textit{whats}?", the denominator tells us ``five \textit{sixth
 	\end{center}
 \end{minipage}
 
-\subsection{Multiplying Rational Numbers}
+\subsection{Multiplying rational numbers}
 \index{multiplication!of rational numbers}
 
 Don't worry, your version of the \algebranomicon{} isn't missing any sections. Most textbooks would discuss adding and subtracting rational numbers, but we're going to start by studying the most helpful of the rational number operations: multiplication.
@@ -416,36 +412,46 @@ What fraction of the whole block does this blue region represent? If we extend t
 
 In the end, we solved a fraction multiplication problem: ``How much is three-fourths of one-half of a whole block of cheese?'' \[\frac{3}{4} \cdot \frac{1}{2} = \frac{3}{8}\] 
 
-\begin{boxeddef}[Multiplying Rational Numbers]
+\begin{boxeddef}[Multiplying rational numbers]
 To multiply rational numbers, we multiply numerators to find the numerator of the product. We multiply denominators to find the denominator of the product. \[\frac{a}{b} \cdot \frac{c}{d} = \frac{a \cdot c}{b \cdot d}\]
 \end{boxeddef}
 
-\begin{boxedex}[Explaining the Startup Exploration]
 In the startup exploration for this section, $0 < a < b < 1$, and part (c) asks us to consider $a \cdot b$. Let's think about this from a block-of-cheese perspective. We start with less than a whole block of cheese (since $b$ is less than 1) and we only want to buy a fraction of what's there (since $a$ is less than 1).
 
 So, we are certainly buying less than a whole block of cheese! Since both $a$ and $b$ are less than 1, we know that their product must be less than one.
-\end{boxedex}
 
-\subsubsection*{Fancy Versions of One}
+\subsubsection{Fancy versions of one}
 
 Recall that any number times 1 is itself. This simple fact, along with the fraction multiplication procedure, gives us an extremely powerful tool that we'll use in various different ways throughout algebra. The key idea is that multiplying something by 1 doesn't change its value, even if we use a ``fancy version of 1''.\footnote{Multiplication by a fancy version of 1 is an application of the identity property of multiplication, which we will study in more detail in \cref{ch:equations}.} Consider, for example:
-\[\begin{aligned}
-\frac{5}{8} &= \frac{5}{8} \cdot 1
-&& \quad\text{Multiplication by 1 doesn't change the number.}
-\\
-\\
-&= \frac{5}{8} \cdot \frac{7}{7}
-&& \quad\text{We can rewrite 1 however we like, here $1 = \frac{7}{7}$.}
-\\
-\\
-&= \frac{35}{56}
-&& \quad\text{Multiply fractions.}
-\end{aligned}\]
-In the end, we have two equivalent fractions $\frac{5}{8} = \frac{35}{56}$. The representation has changed, but the value is the same! The ``fancy one'' we chose here is $\frac{7}{7}$, but any other version of 1 would work the same way: $\frac{-140}{-140}$, $\frac{2\pi}{2\pi}$, $\frac{\sqrt3}{\sqrt3}$\ldots{} The possibilities are endless.
+\begin{commwork}
+\frac{5}{8} & \dfrac{5}{8} \cdot 1
+& multiplication by 1 doesn't change the number
+\\[3ex]
+& \frac{5}{8} \cdot \frac{7}{7}
+& we can rewrite 1 however we like, here $1 = \frac{7}{7}$
+\\[3ex]
+& \frac{35}{56}
+& multiply fractions
+\end{commwork}
+
+%\[\begin{aligned}
+%\frac{5}{8} &= \frac{5}{8} \cdot 1
+%&& \quad\text{Multiplication by 1 doesn't change the number.}
+%\\
+%\\
+%&= \frac{5}{8} \cdot \frac{7}{7}
+%&& \quad\text{We can rewrite 1 however we like, here $1 = \frac{7}{7}$.}
+%\\
+%\\
+%&= \frac{35}{56}
+%&& \quad\text{Multiply fractions.}
+%\end{aligned}\]
+
+In the end, we have two equivalent fractions $\frac{5}{8} = \frac{35}{56}$. The representation has changed, but the value is the same! The ``fancy one'' we chose here is $\frac{7}{7}$, but any other version of 1 would work the same way: $\frac{-140}{-140}$, $\frac{2\pi}{2\pi}$, $\frac{\sqrt3}{\sqrt3}$\ldots\ The possibilities are endless.
 
 The first application of the ``fancy one'' has to do with one of the themes we encounter throughout algebra: the idea of finding a ``completely simplified'' solution to a problem. Fractions introduce us to the first criteria for something being simplified.
 
-\begin{boxedcriteria}[Simplified Rational Numbers \#1]
+\begin{boxedcriteria}[Simplified rational numbers \#1]
 Fractions should be simplified to \gls{lowest terms}, meaning that the numerator and denominator of the fraction are \gls{relatively prime} integers.
 \end{boxedcriteria}
 
@@ -454,7 +460,7 @@ Two integers are said to be relatively prime (or coprime) if they have no common
 On the other hand, $\frac{18}{84}$ is not in lowest terms. Both 18 and 84 are even, and so both the numerator and denominator are divisible by at least 2. To write this fraction in lowest terms, we ``undo'' fraction multiplication and search for some fancy ones that we can eliminate: \[\frac{18}{84} = \frac{2 \cdot 3 \cdot 3}{2 \cdot 2 \cdot 3 \cdot 7}  = \frac{2}{2}\cdot\frac{3}{3}\cdot\frac{3}{2\cdot 7} = 1\cdot1\cdot\frac{3}{14} = \frac{3}{14}\]
 Once we know how and why this works, we can take a shortcut and ``cancel'' common factors from the numerator and denominator: \[\frac{18}{84} = \frac{2 \cdot 3 \cdot 3}{2 \cdot 2 \cdot 3 \cdot 7}=\frac{\bcancel{2} \cdot \cancel{3} \cdot 3}{\bcancel{2} \cdot 2 \cdot \cancel{3} \cdot 7}  = \frac{3}{2 \cdot 7}\]
 
-\subsubsection*{Simplify Before You Multiply}
+\subsubsection{Simplify before you multiply}
 
 We can also use the ``fancy one'' to save ourselves some work! What if we have to multiply:
 \[\frac{1}{2} \cdot \frac{2}{3} \cdot \frac{3}{4} \cdot \frac{4}{5} \cdot \frac{5}{6}\]
@@ -465,7 +471,7 @@ Then, a common factor in the numerator and denominator is like multiplication by
 The alternative would have been to multiply all of those numbers together by hand and then simplify the fraction to lowest terms\footnote{That would have been $\frac{120}{720}$.}, which is a bunch more work. It pays to be clever!
 
 \begin{boxedex}
-Multiply: (a)~ $\dfrac{3}{4} \cdot \dfrac{7}{16}$ \quad (b)~ $\dfrac{15}{8}\cdot\dfrac{4}{7}\cdot\dfrac{14}{3}\cdot\dfrac{1}{5}$
+Multiply: (a)~ $\dfrac{3}{4} \cdot \dfrac{7}{16}$ \qquad (b)~ $\dfrac{15}{8}\cdot\dfrac{4}{7}\cdot\dfrac{14}{3}\cdot\dfrac{1}{5}$
 
 Problem (a) is nothing special. No common factors are shared between numerators and denominators, so we simply multiply as usual.\[\frac{3}{4} \cdot \frac{7}{16} = \frac{3 \cdot 7}{4 \cdot 16} = \frac{21}{64}\] Since there were no common factors to cancel before multiplying, we know the product is already in lowest terms.
 
@@ -475,7 +481,7 @@ Then, a common factor in the numerator and denominator is like multiplication by
 Note that all of the factors cancel out in the denominator. A common mistake at this point is to replace the ``empty'' denominator with 0 -- but remember, a common factor in the numerator and denominator is like a factor of 1, which is the fraction $\frac{1}{1}$, not $\frac{1}{0}$, so there's always a ``phantom one'' lurking there even if we don't write it.
 \end{boxedex}
 
-\subsection{Adding and Subtracting Rational Numbers}
+\subsection{Adding and subtracting rational numbers}
 \index{addition!of rational numbers}
 \index{subtraction!of rational numbers}
 
@@ -489,7 +495,7 @@ Given a fraction, we can use multiplication by a ``fancy one'' to generate a new
 
 Some people like to try and find the \textit{least common denominator}, but that's not strictly necessary. Any common denominator will do. In fact, a guaranteed common denominator of any two fractions is the \textit{product of their denominators}.
 
-\begin{boxeddef}[Adding and Subtracting Rational Numbers]
+\begin{boxeddef}[Adding and subtracting rational numbers]
 To add rational numbers, we must have a common denominator, for example the product of the original denominators. Then we add the numerators, and keep the common denominator.
 \[\frac{a}{b} + \frac{c}{d}
 = \frac{a\cdot d + b\cdot c}{b\cdot d}\]
@@ -504,18 +510,18 @@ Here's the derivation of fraction addition in a bit more detail. Note how we use
 
 \end{boxeddef}
 
-\subsubsection*{Negative Fractions}
+\subsubsection{Negative fractions}
 
 Where should we put the negative sign when we have a negative fraction? Does it matter? Consider the following three possibilities. Are they all equivalent? \[ -\frac{3}{4} = \frac{-3}{4} = \frac{3}{-4}\]
-A fraction is a way of writing a division problem. If Knut's four children share three bowls of lingonberries equally, then each child will get $3\div4 = \frac{3}{4}$ of a bowl of berries.\footnote{Lingonberries are a popular fruit in Scandinavia and throughout northern, central, and eastern Europe. The berries are quite tart, and so they are usually mixed with sugar and preserved as jam or compote. In Sweden and Norway, reindeer is traditionally served with gravy and lingonberry sauce. Yes, Scandinavians eat reindeer.} The fraction $\frac{3}{4}$ is just another way of writing $3 \div 4$.
+A fraction is a way of writing a division problem. If Knut's four children share three bowls of lingonberries equally, then each child will get $3\div4 = \frac{3}{4}$ of a bowl of berries.\footnote{Lingonberries are a popular fruit in Scandinavia and throughout northern, central, and eastern Europe. The berries are quite tart, and so they are usually mixed with sugar and preserved as jam or compote. In Sweden and Norway, reindeer is traditionally served with gravy and lingonberry sauce. Yes, Scandinavians eat reindeer.} The fraction $\frac{3}{4}$ is just another way of writing $3 \div 4$. So, all three of the fractions above have the same value.
 
-So, all three of the fractions above have the same value. In the first example, the whole fraction has been negated. In the second and third examples, the numbers have opposite signs and so the quotient will be negative. In other words it actually doesn't matter where we put the negative sign. We can put it where it is most convenient for the problem (very often, that's in the numerator of the fraction).
+In the first example, the whole fraction has been negated. In the second and third examples, the numbers have opposite signs and so the quotient will be negative. In other words it actually doesn't matter where we put the negative sign. We can put it where it is most convenient for the problem (very often, that's in the numerator of the fraction).
 
-\subsubsection*{Mixed Numbers}
+\subsubsection{Mixed numbers}
 
 Improper fractions have a numerator that is greater than or equal (in absolute value) to their denominator, like $\frac{5}{3}$ or $\frac{-84}{16}$. Improper fractions have been scorned by many elementary school mathematics teachers, who instead prefer mixed numbers: $1\frac{2}{3}$ or $-5\frac{1}{4}$. But, improper fractions are often much easier to work with than mixed numbers.\footnote{One situation where improper fractions are superior is when describing the slope of a line, as we will see in \cref{ch:linear}.}
 
-\begin{boxedcriteria}[Simplified Rational Numbers \#2]
+\begin{boxedcriteria}[Simplified rational numbers \#2]
 Simplified \glspl{improper fraction} are preferred over \glspl{mixed number} and decimals. Only convert to a mixed number or decimal when the context (or the directions) require it.
 \end{boxedcriteria}
 
@@ -539,19 +545,13 @@ Compute each of the following:
 \end{enumerate}
 \end{boxedex}
 
-\begin{boxedex}[Explaining the Startup Exploration]
-In the startup exploration for this section, $0 < a < b < 1$.
-
-Part (a) asks about $a + b$. Since both numbers are positive, their sum is positive, but we don't have enough information to tell whether the sum is greater than 1. If $a$ and $b$ are both less than $\frac{1}{2}$, for example, then their sum will be less than 1. On the other hand, if they are both greater than $\frac{1}{2}$, then their sum will be greater than 1.
+In the startup exploration for this section, $0 < a < b < 1$. Part (a) asks about $a + b$. Since both numbers are positive, their sum is positive, but we don't have enough information to tell whether the sum is greater than 1. If $a$ and $b$ are both less than $\frac{1}{2}$, for example, then their sum will be less than 1. On the other hand, if they are both greater than $\frac{1}{2}$, then their sum will be greater than 1.
 
 Part (b) asks us to consider $a - b$. Since $a$ is less than $b$, we're subtracting a larger number from a smaller number, and so the answer must be negative.
 
-We can reason this out in another way: $a-b$ is the same as $a + (\umin b)$. The absolute value of $b$ is the same as the absolute value of $\umin b$. And so this sum will be negative because the negative number is the one with the greater absolute value.
+We can reason this out in another way: $a-b$ is the same as $a + (\umin b)$. The absolute value of $b$ is the same as the absolute value of $\umin b$. And so this sum will be negative because the negative number is the one with the greater absolute value. In any case, $a-b$ is negative and so we know for sure that it is less than 1.
 
-In any case, $a-b$ is negative and so we know for sure that it is less than 1.
-\end{boxedex}
-
-\subsection{Dividing Rational Numbers}
+\subsection{Dividing rational numbers}
 \index{division!of rational numbers}
 
 Fraction division may be the most poorly understood operation in all of arithmetic. The algorithm for dividing fractions seems arbitrary, and it's often difficult to judge whether our answers make sense. Let's pause for a moment to think about what fraction division means.
@@ -590,7 +590,7 @@ Now, let's gather these pieces up into groups of three. We'll be able to make 10
 
 Let's retrace our steps. We set out to solve $8 \div \frac{3}{4}$, but in our picture we first multiplied to find the total number of fourths, and then we divided to find how many groups of three we could make. In other words: $8 \div \frac{3}{4}$ must have the same answer as $8 \cdot \frac{4}{3}$. Does that look familiar?
 
-\begin{boxeddef}[Dividing Rational Numbers]
+\begin{boxeddef}[Dividing rational numbers]
 Dividing by a number is the same as multiplying by the reciprocal of the number. So, we can change a given fraction division problem into an equivalent fraction multiplication problem and then use the rules for fraction multiplication. \[\frac{a}{b} \div \frac{c}{d} = \frac{a}{b} \cdot \frac{d}{c} = \frac{a \cdot d}{b \cdot c}\]
 \end{boxeddef}
 
@@ -607,11 +607,11 @@ Compute each of the following:
 Let's think about this last answer for a second: does it makes sense? Look again at the problem we were given. If we interpret this as the question``how many groups of 5 are in $3\frac{3}{4}$?'', then we can see that we can't even make one whole group: $3\frac{3}{4}$ is less than 5! So, it makes sense for our answer to be less than 1.
 \end{boxedex}
 
-\subsubsection*{Fractions Inside Fractions}
+\subsubsection{Fractions inside fractions}
 
-As if fractions on their own weren't enough, you may soon face the turducken\footnote{A ``turducken'' is a food product where a deboned chicken is stuffed inside a deboned duck, which is then stuffed inside a deboned turkey. In culinary terminology, this is an example of ``engastration'', a cooking method in which one animal is stuffed inside the gastric cavity of another\ldots{} which is probably yet another phenomenon that you didn't know had a name.} of arithmetic, the dreaded ``fraction in a fraction''. Note that the first criteria for simplified rational numbers states that the numerator and denominator must be \textit{integers}.
+As if fractions on their own weren't enough, you may soon face the turducken\footnote{A ``turducken'' is a food product where a deboned chicken is stuffed inside a deboned duck, which is then stuffed inside a deboned turkey. In culinary terminology, this is an example of ``engastration'', a cooking method in which one animal is stuffed inside the gastric cavity of another\ldots\ which is probably yet another phenomenon that you didn't know had a name.} of arithmetic, the dreaded ``fraction in a fraction''. Note that the first criteria for simplified rational numbers states that the numerator and denominator must be \textit{integers}.
 
-These creatures can look hard to handle, but don't be intimidated. Recall that a fraction is just a division problem. So, we can rewrite things using a division sign and divide as usual.\footnote{The fancy mathematical name for the $\div$ symbol is \textit{obelus} (plural: obeli)\ldots{} another thing that you probably didn't know had a name).}
+These creatures can look hard to handle, but don't be intimidated. Recall that a fraction is just a division problem. So, we can rewrite things using a division sign and divide as usual.\footnote{The fancy mathematical name for the $\div$ symbol is \textit{obelus} (plural: obeli)\ldots\ another thing that you probably didn't know had a name).}
 
 \begin{boxedex}
 Simplify each of the following:
@@ -623,9 +623,7 @@ Simplify each of the following:
 \end{enumerate}
 \end{boxedex}
 
-\begin{boxedex}[Explaining the Startup Exploration]
 In the startup exploration for this section, we have rational numbers $a$ and $b$ where $0 < a < b < 1$. Part (d) asks us to consider $a \div b$. This division problem is another way of writing $\frac{a}{b}$. Since $a$ is less than $b$, though, we know that this fraction is a proper fraction (as opposed to an improper fraction), which means it is less than 1. So, $a \div b$ is less than 1.
-\end{boxedex}
 
 \subsection{Evil and Wrong}
 
@@ -642,12 +640,12 @@ this temptation may come back, in disguise. We'll draw attention to these \evila
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\section{Order of Operations}
+\section{Order of operations}
 \label{sec:orderofops}
 
 We turn now to something else that it probably familiar, the \gls{order of operations}. Consider the following problem as we get started:
 
-\begin{boxedexplore}[Startup Exploration: Who's Right?]
+\begin{boxedexplore}[Startup exploration: Who's right?]
 The four Krumbli kids each performed the following computation: \[14 - 6 \cdot 7 + 10\] Sini got $\umin38$,
 Siri got $\umin18$,
 Sten got $66$,
@@ -656,13 +654,13 @@ and Stig got $136$. Which of them performed the computation correctly? What mist
 
 The order of operations gives us a standard procedure for simplifying numeric expressions. A \gls{numeric expression} is the algebra way of describing something you may have called just a ``math problem'' in elementary school. For example $12 - 5$ is a numeric expression. It is not in its simplest form because we can evaluate $12 - 5$ and write 7 instead.  
 
-\begin{boxedcriteria}[Simplification Rule \#1]
+\begin{boxedcriteria}[Simplification rule \#1]
 A numeric expression is completely simplified if all operations have been evaluated and all grouping symbols have been eliminated. The resulting quantity is called the \textit{value} of the expression.
 \end{boxedcriteria}
 
 As we go along in algebra, we will learn many rules that maintain ``mathematical equivalence.''  Expressions are mathematically equivalent if they represent the same quantity.  For example, $\frac{4}{8}$ is equivalent to $\frac{1}{2}$, and $12 - 5$ is equivalent to 7. Our job when we simplify is to maintain the equivalence from one step to the next. The order of operations is a set of rules for how to do that.
 
-\begin{boxeddef}[Order of Operations]
+\begin{boxeddef}[Order of operations]
 The \gls{order of operations} is an agreed-upon order for simplifying numeric expressions. The big idea is that ``more powerful'' operations take priority over ``less powerful'' operations. When we want to alter the usual rules of precedence, we introduce grouping symbols to make our intentions clear.
 
 When simplifying an expression, we evaluate things in the following order:\footnote{PEMDAS is an mnemonic acronym for remembering the order of operations: Parentheses, Exponents, Multiplication, Division, Addition, Subtraction. In Canada it's BEDMAS (B for Brackets). In the UK and Australia it's BIDMAS or BODMAS (Indices or Orders, which are other words for exponent). A better acronym might be GEMS or PEMA, which group together the pairs of operations that have the same priority (the G is for Grouping symbols).}
@@ -678,19 +676,20 @@ When simplifying an expression, we evaluate things in the following order:\footn
 \end{description}
 \end{boxeddef}
 
-\begin{boxedex}[Explaining the Startup Exploration]
+\begin{boxedex}
 Simplify: $14 - 6 \cdot 7 + 10$
 
-\exsoln{} The correct answer follows the order of operations, like so
-\[\begin{aligned}
-	&~ 14 - 6 \cdot 7 + 10\\
-=	&~ 14 - 42 + 10
-&& \quad\text{work multiplication before addition/subtraction}\\
-=	&~ \umin28 + 10
-&& \quad\text{work addition and subtraction from left to right}\\
-=	&~ \umin18
-\end{aligned}\]
-So, it is Siri who had the right answer.
+\exsoln\ The correct answer follows the order of operations, like so:
+\begin{commwork}
+14 - 6 \cdot 7 + 10 & 14 - 42 + 10
+& work mult'n before addition or subtraction
+\\
+&\umin28 + 10
+& work add'n and sub'n left to right
+\\
+&\umin18
+\end{commwork}%
+This is the problem from the startup exploration, so it is Siri who had the right answer.
 
 Students who just memorize a clever mnemonic device might be tempted to do the \underline{A}ddition before the \underline{S}ubtraction, but don't be fooled! Those two operations have the same priority. (Sini made this mistake and got $\umin38$.)
 
@@ -699,11 +698,20 @@ Sten worked the operations straight through from left to right, all at the same 
 
 Notice how we showed the work going down the page, simplifying the problem one step at a time. Some people prefer to work across, and that's OK too. The point is that it's important to show work in an organized way when we solve a problem so that our reasoning and thought process are clear.
 
+%\[\begin{aligned}
+%	&~ 14 - 6 \cdot 7 + 10\\
+%=	&~ 14 - 42 + 10
+%&& \quad\text{work multiplication before addition/subtraction}\\
+%=	&~ \umin28 + 10
+%&& \quad\text{work addition and subtraction from left to right}\\
+%=	&~ \umin18
+%\end{aligned}\]
+
 %\addtodoitem{Criteria for showing work.}
 
 The work you show is the road map to your solution. Whoever reads over your work must be able to follow and understand your steps, without having to make any assumptions about what you actually did to reach your answer. It's a bad habit to skip steps, and it's no help to people reading your work to say you did a step in your head. Every step you take needs to be written down clearly and neatly.
 
-\begin{boxedwarning}[Abuse of the Equal Sign]
+\begin{boxedwarning}[Abuse of the equal sign]
 Consider the following work, written out by a student to simplify $8 \cdot 4 + 10$ \[8 \cdot 4 = 32 + 10 = 42 \qquad\text{OK or not OK?}\]
 The student has reached the correct value, and it may even be clear what the student is thinking: ``8 times 4 is 32, plus 10 more makes 42''. This, however, is a heinous abuse of the equal sign! Look at what the first part of the work says: \[8 \cdot 4 = 32 + 10 \qquad\text{These are not equal!}\]
 One way to avoid this misuse of the equal sign is to write your work going down the page (as shown above). If you prefer to write across the page, be sure to write out the whole problem as you perform each simplification: \[8 \cdot 4 + 10 = 32 + 10 = 42\]
@@ -711,24 +719,30 @@ One way to avoid this misuse of the equal sign is to write your work going down 
 
 In the next few sections, we'll look more closely at some trickier aspects of the order of operations.
 
-\subsection{About Grouping Symbols}
+\subsection{About grouping symbols}
 
 As expressions get complicated, we may have grouping symbols inside of other grouping symbols. If there are different symbols, we can more easily see where different groups begin and end. But, we may just find a bunch of parentheses, like in the example below. In that case, we have to be a bit careful about what's being grouped together.
 
 \begin{boxedex}
 Simplify: $12+(3-(4-2)+5)$
 
-\exsoln{} When faced with multiple grouping symbols, we must start with the innermost set of grouping symbols and evaluate our way to the outermost. Once we have simplified the expression inside a set of grouping symbols down to a single quantity, we can write that quantity without the groupers.
-\[\begin{aligned}
-	&~ 12+(3-(4-2)+5)\\
-=	&~ 12+(3-2+5)\\
-=	&~ 12+(1+5)\\
-=	&~ 12+6\\
-=	&~ 18
-\end{aligned}\]
+\exsoln\ When faced with multiple grouping symbols, we must start with the innermost set of grouping symbols and evaluate our way to the outermost. Once we have simplified the expression inside a set of grouping symbols down to a single quantity, we can write that quantity without the groupers.
+\begin{commwork}
+12+(3-(4-2)+5) & 12+(3-2+5)\\
+& 12+(1+5)\\
+& 12+6\\
+& 18
+\end{commwork}%
+%\[\begin{aligned}
+%	&~ 12+(3-(4-2)+5)\\
+%=	&~ 12+(3-2+5)\\
+%=	&~ 12+(1+5)\\
+%=	&~ 12+6\\
+%=	&~ 18
+%\end{aligned}\]
 \end{boxedex}
 
-\subsubsection{The Vinculum Is a Grouping Symbol}
+\subsubsection{Vinculum is a grouping symbol}
 
 The \gls{vinculum} (as in the fraction bar) is a grouping symbol. For example, if the task is to simplify a fraction such as: \[\frac{20+2^2\cdot(14-9)}{(2-4)^3}\] then we must think of the expression in the numerator as a group, and likewise for the denominator. In other words, like so: \[\Bigl(20+2^2\cdot(14-9)\Bigr)\div\Bigl((2-4)^3\Bigr)\]
 
@@ -737,18 +751,24 @@ We have two options for simplifying this. We might keep it in a fraction the who
 \begin{boxedex}
 Simplify: $\dfrac{20+2^2\cdot(14-9)}{(2-4)^3}$
 
-\exsoln{} Let's dismantle this thing and handle it in two pieces. The numerator works like this:
-\[\begin{aligned}
-	&~ 20 + 2^2 \cdot (14-9)\\
-=	&~ 20 + 2^2 \cdot 5\\
-=	&~ 20 + 4 \cdot 5\\
-=	&~ 20 + 20\\
-=	&~ 40
-\end{aligned}\]
+\exsoln\ Let's dismantle this thing and handle it in two pieces. The numerator works like this:
+\begin{commwork}
+20 + 2^2 \cdot (14-9) & 20 + 2^2 \cdot 5\\
+& 20 + 4 \cdot 5\\
+& 20 + 20\\
+& 40
+\end{commwork}%
+%\[\begin{aligned}
+%	&~ 20 + 2^2 \cdot (14-9)\\
+%=	&~ 20 + 2^2 \cdot 5\\
+%=	&~ 20 + 4 \cdot 5\\
+%=	&~ 20 + 20\\
+%=	&~ 40
+%\end{aligned}\]
 The denominator works like this: $(2-4)^3 = (\umin2)^3 = \umin8$. Then, we can put the pieces back into their original fraction configuration:\[\dfrac{20+2^2\cdot(14-9)}{(2-4)^3} = \dfrac{40}{\umin8} = \umin5\]
 \end{boxedex}
 
-\subsection{About Exponents}
+\subsection{About exponents}
 
 An expression of the form $a^b$ is read ``$a$ to the power of $b$'' or ``$a$ to the $b^{\text{th}}$ power''. In such an expression, $a$ is called the \gls{base} and $b$ is called the \gls{exponent}. We call the whole thing a \gls{power} of $a$, since $a$ is the base.
 
@@ -756,7 +776,7 @@ We will get into more detail about exponents later on, but we'll pause here to m
 \[a^b = \underbrace{a \cdot a \cdot a \dotsb a}_{\text{$b$ times}}\]
 That part you probably knew already. This next fact may be new.
 
-\begin{boxeddef}[Raising to the Power Zero]
+\begin{boxeddef}[Raising to the power zero]
 For any nonzero number $a$, the expression $a^0 = 1$. In other words, any nonzero number raised to the power 0 equals 1.
 
 When we say that $a$ is a ``nonzero number'' this means, naturally enough, that $a$ cannot be 0. The expression $0^0 \neq 1$. What \textit{does} it equal? That's a tricky question that will have to wait for later. $0^0 $ is an unusual mathematical creature!\footnote{It's not the only one, either. In 1872, Karl Weierstrass (or Weierstra\ss, if you prefer the German double-S) shook the foundations of calculus with his mathematical monster, now called the ``Weierstra\ss{} function''. It's a bit complicated to get into the details, but he described a mathematical rule which behaves like the geometric ``fractals'' that we'll study in \cref{ch:sequences}\ldots\ and it made some other mathematicians very upset.}
@@ -779,7 +799,7 @@ So, this one's easy:
 The lesson here is to look at the entire problem and plan an efficient solution strategy \textit{before} just jumping in and crunching numbers. In this case, we can save ourselves a lot of work with a bit of careful observation.
 \end{boxedex}
 
-\subsubsection*{Fractions Versus Exponents}
+\subsubsection{Fractions versus exponents}
 
 If we have a fraction raised to a power, we must be very mindful of the notation and to what, exactly, the exponent applies.
 
@@ -795,23 +815,26 @@ Simplify each of the following:
 
 Keep this last example in mind when writing your own expressions, as well. Our notation must match our intentions. What exactly so we intend an exponent to apply to? Do we need to add parentheses to make our intentions clear?
 
-\subsubsection*{One of the Trickiest Concepts in Algebra 1}
+\subsubsection{One of the trickiest concepts in algebra 1}
 
 What is the difference between the following three expressions? \[(\umin3)^2 \qquad \umin(3^2) \qquad \umin3^2\]
 Tricky, right? This is an important difference that will come back over and over again, and will look a little different every time.
 
-In the first case, the parentheses make it clear: $(-3)^2$ means ``raise negative three to the second power''.\[(\umin3)^2 = \umin3 \cdot \umin3 = 9\]As usual, the product of two negatives is positive (Hitler gets hit by a truck). The second case is clear as well. The parentheses indicate that we should simplify the exponent first and then take the opposite of the result: \[\umin(3^2) = \umin(3\cdot3) = \umin(9) = \umin9\]
+In the first case, the parentheses make it clear: $(\umin3)^2$ means ``raise negative three to the second power''.
+\[(\umin3)^2 = \umin3 \cdot \umin3 = 9\]
+As usual, the product of two negatives is positive (Hitler gets hit by a truck). The second case is clear as well. The parentheses indicate that we should simplify the exponent first and then take the opposite of the result:
+\[\umin(3^2) = \umin(3\cdot3) = \umin(9) = \umin9\]
 
 The third case, $\umin3^2$,  is the tricky one. It looks kind of ambiguous, since there are no parentheses. But, suppose we wrote the problem like this:
 \[0 - 3^2\] Now, it's clear what to do even without the parentheses, and that is the key.
 
-\begin{boxeddef}[Opposites of Numbers to a Power]
+\begin{boxeddef}[Opposites of numbers to a power]
 The expression $-a^n$, written without parentheses, is equivalent to the parenthesized expression $-(a^n)$. For example: $-3^2 = -(3^2) = -9$.
 \end{boxeddef}
 
 You might be saying to yourself, ``No sweat. I get it.'' But (if history and human nature are any indication) you may find yourself tripping over this concept at some point. Confusion around the notation can pop up, for instance, when we're typing expressions into a graphing calculator.\footnote{A note to old-school parents who are used to working with calculators that use reverse Polish notation (RPN) or a stack, and might want to argue that $-3^2 = 9$. When using an RPN calculator we punch in $-3$ and press enter to push that quantity onto the stack. The number and the negative are both in the stack together, so squaring the entry on the top of the stack means squaring negative three, which is equivalent to $(-3)^2$ and not the same as $-3^2$.}
 
-\subsection{About Multiplication}
+\subsection{About multiplication}
 
 In algebra we frequently use $x$ (the letter) to stand for a unknown or variable quantity. So, we never use $\times$ to show multiplication. It would be too confusing to have a mix of letter-$x$'s and multiplication-$\times$'s in the same expression. Can you imagine trying to decode something like: \[x \times 3 + 4 \times x = x + 4 x \times x \times x \text{\qquad Yikes!}\]
 
@@ -819,7 +842,7 @@ In algebra we frequently use $x$ (the letter) to stand for a unknown or variable
 To show the operation of multiplication, use an asterisk, a dot, or parentheses. Instead of writing $3\times 4$ to represent ``3 times 4'', we write: $\,3 \ast 4$, or $\,3 \cdot 4$, or $\,3(4)$.
 \end{boxedwarning}
 
-\subsubsection{Implied Operations}
+\subsubsection{Implied operations}
 
 A key aspect of algebra will be learning to read the notation and use it correctly when writing expressions and equations. Algebra is very much like a language, and all languages have special rules. For example, in English we sometimes smash up two words as a contraction: instead of writing ``do not'' we can write ``don't''.
 
@@ -830,16 +853,23 @@ Another kind of mathematical contraction is the use of an \gls{implied operation
 \begin{boxedex}
 Simplify: $12 - 5(2 + 8)$
 
-\exsoln{} 
-\[\begin{aligned}
-	&~ 12-5(2+8)\\
-=	&~ 12-5(10)
-&& \quad\text{Aha! That 5(10) means multiplication!}\\
-=	&~ 12-50\\
-=	&~ -38\\
-\end{aligned}\]
-A very common mistake is to do the $12-5$ first, instead of the $5(10)$, but that would totally violate the order of operations!
+\exsoln\ Be on the lookout for implied operations!
+\begin{commwork}
+12-5(2+8) & 12-5(10)
+\\
+& 12-50
+& That 5(10) means mult'n, and must happen first!
+\\
+& \umin38\\
+\end{commwork}%
+%\[\begin{aligned}
+%	&~ 12-5(2+8)\\
+%=	&~ 12-5(10)
+%&& \quad\text{Aha! That 5(10) means multiplication!}\\
+%=	&~ 12-50\\
+%=	&~ -38\\
+%\end{aligned}\]
+A very common mistake is to do the $12-5$ first, instead of the $5(10)$, but that would violate the order of operations!
 \end{boxedex}
 
 In this chapter we have thought deeply about fundamental ideas regarding numbers and operations, and perhaps you have seen some familiar ideas in a new light. Armed with this knowledge, we now venture deeper into the algebraic wilderness.
-%%% End of file.

@@ -1,8 +1,7 @@
-Click here to visit the extended exploration: Sierpi«ski's Triangle
-Click here to visit the extended exploration: Koch Curve
-Click here to visit the extended exploration: Squares, Triangles, Segments
+Click here to visit the extended exploration: Sierpi«ski's triangle
+Click here to visit the extended exploration: Koch curve
+Click here to visit the extended exploration: Squares, triangles, segments
 Click here to visit the extended exploration: Big Graphs
-Criteria for high quality graphs.
 Click here to visit the extended exploration: Who Is the Best Age Guesser?
 Click here to visit the extended exploration: Interpreting Graphs with Distance Match
 Click here to visit the extended exploration: NAME
