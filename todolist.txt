@@ -5,6 +5,10 @@ Click here to visit the extended exploration: Big Graphs
 Click here to visit the extended exploration: Who Is the Best Age Guesser?
 Click here to visit the extended exploration: Interpreting Graphs with Distance Match
 Click here to visit the extended exploration: NAME
+Click here to visit the extended exploration: Exploring the Three Families
+Create something on the website for this. Maybe links to desmos pages w/ sliders.
+Closing Remarks of some kind, since we're venturing off into the linear unit now...
+Click here to visit the extended exploration: NAME
 Click here to visit the extended exploration: Mystery Numbers
 Click here to visit the extended exploration: Evil Mystery Numbers
 Click here to visit the extended exploration: Super Evil Mystery Numbers

@@ -2,7 +2,7 @@
 \usepackage[english]{babel}
 
 % Partial inclusion, for piecewise development
-%\includeonly{graphs}
+%\includeonly{functions}
 
 \usepackage{floatrow}			% this automatically centers all floats
 \floatplacement{table}{hbtp}		% all tables are given the [hbtp] option
@@ -38,6 +38,35 @@
 \usepackage{tikz}
 \usetikzlibrary{decorations.fractals}
 \usetikzlibrary{lindenmayersystems}
+
+\usepackage[autoplay, loop]{animate}
+
+% Patch to the delimiter bug in animate package
+\makeatletter
+\def\@anim@@sanitize#1\@nil{%
+  \@tfor\next:=#1\do{%
+    \expandafter\xdef\csname @anim@\number\expandafter`\next\endcsname{%
+      \the\catcode\expandafter`\next
+    }%
+    \global\catcode\expandafter`\next=12
+  }
+  \global\catcode`\#=12
+  \global\let\@anim@newline=\\\global\let\\=\@anim@bksl
+  \global\let\@anim@leftbrace=\{\global\let\{=\@anim@lbr
+  \global\let\@anim@rightbrace=\}\global\let\}=\@anim@rbr
+  \global\let\@anim@percent=\%\global\let\%=\@anim@per
+}
+\def\@anim@@endsanitize#1\@nil{%
+  \@tfor\next:=#1\do{%
+    \global\catcode\expandafter`\next=\csname @anim@\number\expandafter`\next\endcsname
+  }
+  \global\let\%=\@anim@percent%
+  \global\let\}=\@anim@rightbrace%
+  \global\let\{=\@anim@leftbrace%
+  \global\let\\=\@anim@newline%
+  \global\catcode`\#=6%
+}
+\makeatother
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 %
@@ -173,17 +202,17 @@
 
 % Commands to create simultaneous glossary-index entries
 % Good idea? Bad idea?
-%\let\oldgls\gls
-%\renewcommand*{\gls}[1]{\inlinedef{\oldgls{#1}}\index{#1}}
-%
-%\let\oldGls\Gls
-%\renewcommand*{\Gls}[1]{\inlinedef{\oldGls{#1}}\index{#1}}
-%
-%\let\oldglspl\glspl
-%\renewcommand*{\glspl}[1]{\inlinedef{\oldglspl{#1}}\index{#1}}
-%
-%\let\oldGlspl\Glspl
-%\renewcommand*{\Glspl}[1]{\inlinedef{\oldGlspl{#1}}\index{#1}}
+\let\oldgls\gls
+\renewcommand*{\gls}[1]{\inlinedef{\oldgls{#1}}\index{#1}}
+
+\let\oldGls\Gls
+\renewcommand*{\Gls}[1]{\inlinedef{\oldGls{#1}}\index{#1}}
+
+\let\oldglspl\glspl
+\renewcommand*{\glspl}[1]{\inlinedef{\oldglspl{#1}}\index{#1}}
+
+\let\oldGlspl\Glspl
+\renewcommand*{\Glspl}[1]{\inlinedef{\oldGlspl{#1}}\index{#1}}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 %
@@ -222,7 +251,7 @@
 % Copyright page
 \pagestyle{empty}
 \null\vfill\noindent
-\raisebox{-0.33\height}{\includegraphics[height=1cm]{by-sa}} Patty C. Hill and Jason L. Ermer, 2014
+\raisebox{-0.33\height}{\includegraphics[height=1cm]{img/by-sa}} Patty C. Hill and Jason L. Ermer, 2014
 
 \copyright{2014} by Patty C. Hill and Jason L. Ermer. Untitled Algebra Book is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
 

@@ -1,0 +1,54 @@
+\documentclass[tikz]{standalone}
+
+\RequirePackage[T1]{fontenc}
+\RequirePackage{cmbright}
+
+\usepackage{algnom_graphs}
+
+\usepackage{xcolor}
+\colorlet{gcol}{violet}
+
+\begin{document}
+\resizeplot{-10}{-10}{10}{10}
+
+\foreach \i in {0, 0.5, ..., 3, 2.5, 2, ..., -3, -2.5, -2, ..., 0}{
+	\begin{tikzpicture}
+	\begin{axis}[
+			fullsize,
+			axis lines = middle,
+			every axis/.append style={font=\footnotesize},
+			axis line style={thick, <->},
+			xlabel={$x$},
+			ylabel={$y$},
+			grid = both,
+			grid style={gray!25},
+			allminorticks,
+			clip=true
+		]
+		%%% Graph	--- --- --- --- --- --- --- --- --- --- --- ---
+		\addplot[algcurve, gray!50, domain=-11:11]{x};
+		\addplot[algcurve, gcol, domain=-11:11]{x+\i};
+		%%% Slider legend
+		\node at (axis cs: -6, 9) {\Large $y=x+{\color{gcol}c}$};
+		%%% Slider label
+		\node at (axis cs: -9.65, 8) {\large $\color{gcol}c$};
+		%%% Slider --- --- --- --- --- --- --- --- --- --- --- ---
+		% horizontal bar
+		\draw[thick] (axis cs: -9,8) -- (axis cs: -3,8);
+		\pgfplotsforeachungrouped \foo in {-9, -8.5, ..., -3}
+		{ % tick marks
+			\edef\temp{\noexpand\draw[thick]%
+				(axis cs: \foo,7.75) -- (axis cs: \foo,8.25);}
+			\temp
+		};
+		\pgfplotsforeachungrouped \foo in {-3, ..., 3}
+		{ % tick labels
+			\edef\temp{\noexpand\node at (axis cs: -6+\foo, 7) {\foo};}
+			\temp
+		};
+		% moving marker
+		\draw[thick, black, fill=gcol!25] (axis cs: -6+\i, 8) circle[radius=0.2];
+	\end{axis}
+	\end{tikzpicture}
+}
+\end{document}
