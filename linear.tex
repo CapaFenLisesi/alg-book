@@ -15,10 +15,10 @@ We turned arithmetic sequences into tables of data, and when we graphed some lin
 Most recently we learned about a specific type of linear function, the direct variation. In this chapter we will bring together all of the pieces we have learned previously into a single coherent, and very important, idea.
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-\section{Rate of Change and Slope}
+\section{Rate of change and slope}
 \label{sec:rateofchange}
 
-\begin{boxedexplore}[Extended Exploration: Calculating Speed]
+\begin{boxedexplore}[Extended exploration: Calculating speed]
 \addtodoitem{Click here to visit the extended exploration: Calculating Speed}
 \end{boxedexplore}
 
@@ -38,7 +38,7 @@ Cost (dollars) & 501 & 654 & 960 & 1113 & 1572\\\hline
 What can you learn from the table? How much is tuition per credit hour? How much does CCC estimate Bob will pay in fees?
 \end{boxedexplore} %% End of startup exploration
 
-\subsection{Unit Rates in Data}
+\subsection{Unit rates in data}
 
 Since we're fresh from a discussion of proportional reasoning, perhaps our first guess might be that this is a direct variation. Unfortunately, a quick check of the ratios $\frac{y}{x}$ shoots that idea down: \[\frac{501}{3} = 167 \qquad\text{but}\qquad \frac{654}{4} = 163.5\]
 Maybe we have an arithmetic sequence? If so, then the terms of the ``cost'' sequence will have a constant difference. But, if we take the differences between neighboring terms, we have different values: \[654 - 501 = 153 \qquad\text{but}\qquad 906-654 = 306\]
@@ -73,11 +73,11 @@ So, yes, this table does represent movement at a constant speed of 3.5 meters pe
 
 %Movement at a constant speed -- a constant change in distance over a certain unit of time -- is what generated a straight line. So, if I can find speed from a table, I can check if it is constant, and, without graphing, determine if the data is linear.
 
-\subsection{Rate of Change}
+\subsection{Rate of change}
 
 We want to be able to tell if \textit{any} data set is linear. The examples of speed and hourly tuition begin to suggest a general approach. We are seeking a constant \gls{rate of change}.
 
-\begin{boxeddef}[Rate of Change]
+\begin{boxeddef}[Rate of change]
 Rate of change is a measurement of how quickly the dependent variable changes relative to a one-unit change in the independent variable.
 \end{boxeddef}
 
@@ -109,7 +109,7 @@ For a line, slope and rate of change are describing the same thing. We don't rea
 In mathematical notation, the letter most often used to abbreviate slope is $m$.\footnote{``Why $m$?'' we bet you're wondering. Many people have looked into this question, digging back through mathematical writing to try and learn where this abbreviation comes from. It seems that the earliest recorded use of $m$ for slope was in 1757 by Italian mathematician Vincenzo Riccati. But his work includes no explanation of \textit{why} the letter $m$ was used.} So, we can update our notation from earlier:
 \[m = \frac{\Delta y}{\Delta x}\]
 
-\subsubsection{Slope from Data}
+\subsubsection{Slope from data}
 
 As we have seen in the earlier examples, finding slope from a data table is rather easy. We find the change between two $y$-values and find the change between the corresponding $x$-values. When we unitize this ratio -- in other words, when we divide $\Delta y$ by $\Delta x$ -- we've got slope. Woot!
 
@@ -122,7 +122,7 @@ Find the slope of the line connecting the points $(11, 4)$ and $(16, 29)$.
 So, the line connecting the points $(11, 4)$ and $(16, 29)$ has a slope of 5.
 \end{boxedex}
 
-\subsubsection{Slope From a Graph: The Slope Triangle}
+\subsubsection{Slope from a graph: The slope triangle}
 
 Suppose we're given the graph of a line and asked to find the slope. We could create a data table using points on the line and find the slope from that data. Or, we could inspect the graph directly using a \textit{slope triangle}. A slope triangle is a right triangle that connects two points with a single vertical move and a single horizontal move.
 
@@ -371,7 +371,7 @@ Find the slope of the line depicted in the following graph.
 If we start at the point on the left and move to the point on the right, we have a horizontal change of +10 units in the horizontal direction and $-25$ units in the vertical direction (a negative vertical change means moving downwards). So, the slope is \[m = \frac{-25}{10} = \frac{-5}{2} = -\frac{5}{2}\]
 \end{boxedex}
 
-\subsection{The Slope Formula}
+\subsection{Slope formula}
 
 The process of computing slope is always basically the same, so we can derive a formula for slope. Study the picture below, showing a line through two ``generic points'' called $(x_1,y_2)$ and $(x_2,y_2)$.
 
@@ -402,17 +402,17 @@ The process of computing slope is always basically the same, so we can derive a 
 
 The vertical change between the two points is $y_2 - y_1$, and the horizontal change is $x_2 - x_1$. So we can compute the slope between these two points using our familiar formula \[m = \frac{\Delta y}{\Delta x} = \frac{y_2 - y_1}{x_2 - x_1}.\] The trickiest part about using this formula is being consistent about which point we call $(x_1, y_1)$ and which point we call $(x_2,y_2)$. It doesn't matter which point is which -- but we have to be consistent.
 
-\begin{boxeddef}[Tangent: The Order of the Points]
+\begin{boxeddef}[Tangent: Order of the points]
 That last sentence says ``it doesn't matter which point is which.'' Why is that? Explain why it doesn't matter which point we call ``point 1'' and which we call ``point 2''. In other words, if we have two points called $(x_1, y_1)$ and $(x_2,y_2)$, explain why \[\frac{y_2 - y_1}{x_2 - x_1} = \frac{y_1 - y_2}{x_1 - x_2}.\] (Hint: Experiment with some numbers first, then try to extend your observations to the two ``generic'' points given.)
 \end{boxeddef}
 
-\subsection{Horizontal and Vertical Lines}
+\subsection{Horizontal and vertical lines}
 
 If we think about how slope is calculated -- vertical change over horizontal change -- a horizontal line has \textit{no vertical change}, or a vertical change of zero. If we pick two points on a horizontal line and calculate slope, we would get 0 divided by some number, which always equals zero! So the slope of a horizontal line is always 0. This makes sense if we remember the slope is a measure of the steepness: a horizontal line is flat, and that means no ``steepness'' at all!
 
 If we pick two points on a vertical line and try to calculate slope, we will get a horizontal change of 0. So we'll have some number divided by 0\ldots\ and that's off limits. We say that the slope of a vertical line is \textit{undefined}, since division by 0 is undefined.
 
-\subsection{Using Slope}
+\subsection{Using slope}
 
 Before, when we were graphing a line we had to take some domain values, like the integers between $–3$ and $3$, plug them in to the equation, and plot every single point, one at a time. Now we have an alternative!
 
@@ -564,16 +564,16 @@ Are the points $(4, 1)$; $(-1, 5)$; and $(1, 2)$ colinear? Why or why not?
 \end{boxedex}
  
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-\section{Point-Slope Form}
+\section{Point-slope form}
 \label{pointslopeform}
 
 We are going to learn three different ways to write equations for lines: the point-slope form, the slope-intercept form, and the standard form. Each form tells you something a little different about the line, and each one has its own set of pros and cons. Over the next few sections we will learn about these different forms, what they tell us about lines, what they are good for, and how to convert from one form to another.
 
-\begin{boxedexplore}[Extended Exploration]
+\begin{boxedexplore}[Extended exploration]
 \addtodoitem{Click here to visit the extended exploration: Deriving the Point Slope Form}
 \end{boxedexplore}
 
-\begin{boxedexplore}[Startup Exploration: One Point, One Slope]
+\begin{boxedexplore}[Startup exploration: One point, one slope]
 A line with slope 2 passes through the point $(4,3)$. Name three other points that also lie on this line. Can you find a point on the line that lies in the second quadrant? The third quadrant? The fourth quadrant?
 \end{boxedexplore} %% End of startup exploration
 
@@ -714,7 +714,7 @@ If we flip this around to write it in a more familiar format, we have $y=2(x-4)+
 
 What do you know! Graphing this equation gives us exactly the line we were looking for: a line with slope 2 that goes through the point $(4,3)$. So the equation $y=2(x-4)+3$ describes the line. Can you see the slope and the given point hiding there in the equation?
 
-\subsection{Deriving the Point-Slope Form}
+\subsection{Deriving point-slope form}
 
 Let's make things even more generic. Suppose we have a line with slope $m$ that goes through the specific point $(x_1, y_1)$. Then let $(x,y)$ be any other random point on the line. We can summarize this using the slope formula, and then transform our equation into a graphable, $y=something$ format:
 \[\begin{aligned}
@@ -728,11 +728,11 @@ m(x-x_1)+y_1 &= y
 \end{aligned}\]
 This last line is what we call the \gls{point-slope form} of a line.
 
-\begin{boxeddef}[Point-Slope Form]
+\begin{boxeddef}[Point-slope form]
 The form of a linear equation that uses the slope and any point on the line. It is written either $y-y_1 = m(x-x_1)$ or $y=m(x-x_1)+y_1$, where $m$ is the slope of the line and $(x_1,y_1)$ is a point on the line.
 \end{boxeddef}
 
-\subsection{Using Point-Slope Form}
+\subsection{Using point-slope form}
 
 The trickiest part about the point-slope form -- as you might anticipate -- is handling the plusses and minuses. It can be tricky to remember the $-x_1$ and the $+y_1$, so be on the lookout and always check your signs.
 
@@ -773,7 +773,7 @@ Write the equation of the line that goes through the points $(6, 10)$ and $(-1, 
 \exsoln\ First, we find the slope of this line: \[m = \frac{y_2-y_1}{x_2-x_1} = \frac{10-\umin4}{6-\umin1} = \frac{14}{7} = 2.\] Then, we can use either of the two points as the ``point'' in point-slope form: \[y=2(x-6)+10 \quad\OR\quad y=2(x+1)-4\]
 \end{boxedex}
 
-\subsection{Relating Point-Slope to Earlier Concepts}
+\subsection{Relating point-slope to earlier concepts}
 
 There is a way to look at the point-slope form that relates to transformations in a plane. In \cref{sec:directvar}, we studied direct variations of the form $y = kx$. This is a straight line through the origin, and $k$ is the slope. So let's rewrite this as $y=mx$.
 
@@ -788,7 +788,7 @@ Yet another way to look at point-slope form is to think back to the apparent rul
 Back in \cref{sec:arithmeticseq} we also wrote zero-based rules for arithmetic sequences. What would be the zero-based rule for the sequence given above? These zero-based rules are at the core of the form that we will study in the next section.
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-\section{Slope-Intercept Form}
+\section{Slope-intercept form}
 \label{sec:slopeinterceptform}
 
 Point-slope form is handy and quite easy to write in many cases. But, it has those parentheses in it which means that we could simplify it even further. We explore that possibility in this section.
@@ -797,7 +797,7 @@ Point-slope form is handy and quite easy to write in many cases. But, it has tho
 %\addtodoitem{Click here to visit the extended exploration: NAME}
 %\end{boxedexplore}
 
-\begin{boxedexplore}[Name of Startup Exploration]
+\begin{boxedexplore}[Startup exploration: Two become one]
 Graph the line that goes through the points $(-1, 7)$ and $(2, -2)$. Find the slope through these two points and write two equations in point-slope form for the line.
 
 Use your toolbox of equivalence rules to eliminate the parentheses and rewrite each of your point-slope equations in simplest form. What happens? How is your new equation reflected in the graph?
@@ -874,7 +874,7 @@ y 	& = \umin3(x - 2) - 2\\
 \]
 After this simplification process, the two different point-slope form equations have turned into the \textit{same equation}! It turns out that this always happens: if we simplify two different point-slope equations for the same line (by getting rid of the parentheses and combining like terms), we will always end up with the same equation. This simplified version is called the \gls{slope-intercept form}.
 
-\begin{boxeddef}[Slope-Intercept Form]
+\begin{boxeddef}[Slope-intercept form]
 The \gls{slope-intercept form} of a linear equation is an equation of the form \[y = mx +b.\] The value $m$ is the slope of the line, and $b$ is the value at which the line crosses the $y$-axis. The point $(0,b)$ is called the $y$-intercept of the line.
 \end{boxeddef}
 
@@ -884,7 +884,7 @@ Since a linear function has a constant slope and and can only have one $y$-inter
 
 Graphing a line in slope-intercept form is exactly the same as graph a line in point-slope form. In fact, it's easier! Figuring out the ``point'' in point-slope form can lead to some challenges with positive and negative numbers. With slope-intercept form, the ``point'' is much easier to identify. Then, we can use the slope to find a second point and graph the line.
 
-\subsection{Writing Equations in Slope-Intercept Form}
+\subsection{Writing equations in slope-intercept form}
 
 Suppose we are given the slope of a line and a point on the line that is \textit{not} the $y$-intercept. There are two primary ways to get to an equation for a line in slope-intercept form.
 
@@ -965,7 +965,7 @@ Write an equation in slope-intercept form for the line pictured in the graph bel
 So, we'll use a slope triangle to find the slope between the two given points $\frac{6}{10} = \frac{3}{5}$. Then, we'll write an equation in point-slope form using the point $(6,0)$: $y=\frac{3}{5}(x-6)+0$. Simplifying using the distributive property and combining like terms gives: \[y=\frac{3}{5}x - \frac{18}{5},\] and $-\frac{18}{5} = -3.6$, which is close to $-3.5$, but not the same thing!
 \end{boxedex}
 
-%\subsection{Using Slope-Intercept Form}
+%\subsection{Using slope-intercept form}
 %
 %Many situations that can be modeled with a slope-intercept equation contain two components: a fixed value and a unit rate.
 %
@@ -974,7 +974,7 @@ So, we'll use a slope triangle to find the slope between the two given points $\
 %So if you know you only can raise \$500, you can determine the number of t-shirts you can make. If you know you want 80 shirts, you can calculate the cost. You really don't need an equation for that, but if you knew that another company charged \$75 for a design fee and \$8.50 per shirt, you can do a comparison to find out under what circumstances it would be better to go with the first company and when it is better to go with the second. We will solve problems like this one in the 4th six weeks.
  
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\subsection{(;,;) Equivalence of the Point-Slope and Slope-Intercept Forms}
+\subsection{(;,;) Equivalence of the point-slope and slope-intercept forms}
 
 In this extension section, we'll look in more detail at a claim we made earlier in this chapter. If the content here feels like too much, take a break and come back to it later. Your brain keeps working on things even when you're not thinking about them consciously!
 
@@ -1013,12 +1013,12 @@ y &= mx + {\color{blue} b}
 So, in the end, we have shown that if we have a line with $y$-intercept $(0,b)$, then the point-slope equation for the line -- using any point on the line! -- can be converted into the slope-intercept equation of the line.
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-\section{Standard Form}
+\section{Standard form}
 \label{sec:standardform}
 
 So far, we know a lot about writing equations for lines. We can find the slope of a line, we can write equations in point-slope form, and we can convert point-slope form into slope-intercept form. We now look at a final linear form, so-called \gls{standard form}.
 
-\begin{boxedexplore}[Startup Exploration: Goats and Chickens]
+\begin{boxedexplore}[Startup exploration: Goats and chickens]
 The chickens got into the goat pen on Fran\c{c}ois's farm! When Fran\c{c}ois asked Hermine how many of each animal were mixed up, she coyly replied that there were a total of 44 feet in the pen.
 
 If the pen contains only (anatomically normal) goats and chickens, how many of each animal could there be inside? How many different combinations are possible?
@@ -1033,7 +1033,7 @@ We can tinker with a little guess and check to find combinations that work. For 
 
 We'll come back to problems like ``goats and chickens'' in the future. For now, we'll simply point out that our equation above is an example of a linear equation in standard form.
 
-\begin{boxeddef}[Standard Form]
+\begin{boxeddef}[Standard form]
 \index{standard form}
 If $A$, $B$, and $C$ are Integers where $A$ and $B$ are not both zero, then $Ax + By = C$ is a linear equation in standard form.
 \end{boxeddef}
@@ -1070,7 +1070,7 @@ Are the following equations written in standard form? If not, why not?
 Lines (b), (c), and (f) are in standard form. Note that (c) has $B=0$, but that's OK; this is the equation for a vertical line. Line (f) is written with the variables on the right-hand side, but otherwise it meets the requirements.
 \end{boxedex}
 
-\subsection{Converting To and From Standard Form}
+\subsection{Converting to and from standard form}
 
 If we are given a line in some other form, then we can convert to standard form using the properties of equality. This is an application of ``transforming formulas'' that we saw in \cref{sec:eqsolveapplications}.
 
@@ -1117,7 +1117,7 @@ y &= \frac{3}{7}x - \frac{3}{2}
 \end{aligned}\]
 \end{boxedex}
 
-\subsection{Simplified Standard Form}
+\subsection{Simplified standard form}
 
 It turns out that we can generate infinitely many equivalent equations in standard form just by multiplying both sides of a given form by an integer. For example, if we have the line $3x-y=5$, we might through by 5 and get $15x-5y=25$. Or we could multiply through by $-1$ and get $-3x+y=-5$. All of these lines are the same because we've applied a property of equality (MPOE) to create them.
 
@@ -1219,7 +1219,7 @@ Speaking of $x$-intercepts, they haven't gotten too much of our attention so far
 %%\end{tikzpicture}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
-\section{Parallel and Perpendicular Lines}
+\section{Parallel and perpendicular lines}
 \label{sec:parallelperpendicular}
 
 This part of this chapter is dedicated to a geometric connection to linear functions: parallel and perpendicular lines. Our goal for now is to learn how to tell if two lines are parallel or perpendicular, and how to write equations for lines that are parallel or perpendicular to a given line. In the future (like in a geometry class), you might use concepts from this lesson to prove some geometric concepts algebraically.
@@ -1228,7 +1228,7 @@ This part of this chapter is dedicated to a geometric connection to linear funct
 %\addtodoitem{Click here to visit the extended exploration: NAME}
 %\end{boxedexplore}
 
-\begin{boxedexplore}[Name of Startup Exploration]
+\begin{boxedexplore}[Startup exploration: Graphical rectangle]
 The four points below form the vertices of a rectangle. Graph the rectangle and write four equations in slope-intercept form for the lines containing the four sides of the rectangle.
 \[(2,3) \quad (3,1) \quad (-1,-1) \quad (-2,1)\]
 \end{boxedexplore} %% End of startup exploration
@@ -1285,7 +1285,7 @@ We won't go into the details of how to write these equations. Those details are 
 %	\end{tikzpicture}
 %\end{center}
 
-\subsection{Parallel Lines}
+\subsection{Parallel lines}
 
 Parallel lines never intersect. They exist in the same plane and stay the same distance apart for their entire, infinite length. In the rectangle we drew as part of the startup exploration, opposite sides are parallel. Examine the slopes of each pair of parallel lines. What do you notice?
 
@@ -1375,7 +1375,7 @@ How can we figure out what $C$ value will make the line $5x + 3y = C$ go through
 \end{aligned}\]
 So, our standard form equation is $5x + 3y = 7$.
 
-\subsection{Perpendicular Lines}
+\subsection{Perpendicular lines}
 
 Perpendicular lines intersect at right angles (that is, $90^\circ$ angles). In the rectangle we drew in the startup exploration, adjacent sides are perpendicular. Examine the slopes of each pair of perpendicular lines. What do you notice?
 
@@ -1414,3 +1414,8 @@ Write an equation \textit{in simplified standard form} for the line that contain
 %
 %Hint: What must we do to $A$ and $B$ in the standard form equation to ensure that the slopes will be both opposites and reciprocals?
 \end{boxedex}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\subsection*{Chapter summary}
+
+Might be nice to have something here in every chapter?

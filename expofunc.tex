@@ -18,7 +18,7 @@ Every chapter should have a lead paragraph -- even just a short one -- that appe
 %\end{boxedexplore}
 
 %% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\section{Exponential Relationships}
+\section{Exponential relationships}
 \label{sec:exporelationships}
 
 \begin{boxedexplore}
@@ -90,7 +90,7 @@ A new wrinkle that comes up here, though, is the idea of using negative numbers 
 which is not an obvious statement! Let's look more closely at this idea.
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\subsection{Negative Exponents}
+\subsection{Negative exponents}
 \label{sec:exponegative}
 
 Recall that when we talk about exponents and exponential expressions, we're talking about expressions of the form: $a^b$. This is read ``$a$ to the power of $b$'' or ``$a$ to the $b^{\text{th}}$ power''. In such an expression, $a$ is called the \textit{base} and $b$ is called the \textit{exponent}. Since $a$ is the base, we call the whole thing a \textit{power of $a$}.
@@ -101,11 +101,11 @@ This representation is a bit limited --- it really only works when the exponent 
 
 For clarity, we will name the different forms of the exponential expression. We will use the term ``exponent form'' to describe $a^b$, and  ``expanded form'' to describe the form where the multiplication is written out. So, for example, $12^4$ is in exponent form, and \[12\cdot12\cdot12\cdot12\] is the same number written in expanded form. Of course, if the base is a number, we can compute this value: \[12^4 = 12\cdot12\cdot12\cdot12 = 20\,736.\] This last value (the number) is in ``standard form'' or ``decimal form''. Expressions like $a^b$ have no decimal form until we know what numbers $a$ and $b$ represent.
 
-\subsection{Extending Repeated Multiplication}
+\subsection{Extending repeated multiplication}
 
 Recall that in \cref{sec:orderofops} we mentioned a rule for using zero as an exponent:
 
-\begin{boxeddef}[Zero Exponent]
+\begin{boxeddef}[Zero exponent]
 For any nonzero real number $a$, \[a^0 = 1.\]
 \end{boxeddef}
 
@@ -147,7 +147,7 @@ So, we can extend the table downwards, as shown below. We take away 1 from the e
 
 There are a number of important patterns to see in this table. For example, the pattern ``divide by 5 as we move downwards in the table'' helps us to explain why $5^0 = 1$. Also note which numbers in the table are reciprocals of one another. This suggests a general rule for working with negative exponents.
 
-\begin{boxeddef}[Negative Exponents]
+\begin{boxeddef}[Negative exponents]
 For any nonzero real number $a$, and any positive integer $n$, \[a^{-n}=\frac{1}{a^n}.\]
 In other words, $a^{-n}$ is the reciprocal of $a^n$ (the base raised to the opposite power).
 \end{boxeddef}
@@ -196,7 +196,7 @@ In the second expression, the exponent applies only to the 3 in the numerator, a
 
 The second expression went through a rather ugly, fraction-in-a-fraction phase, but don't worry: we'll soon learns some simplification rules that will help us make quick work of expressions like these.
 
-\subsection{Smaller and Smaller}
+\subsection{Smaller and smaller}
 
 An interesting consequence of this negative exponent business is that we get a progression of numbers that get smaller and smaller, but never disappear. For example, in the sequence of powers of 5 above, as $n$ gets larger, the number $5^n$ grows huge! By the time $n=10$, the number $5^{10}$ is nearly 10 million.
 
@@ -230,7 +230,7 @@ We can also see how steep the curve gets as we go along the positive $x$-axis. A
 
 \addtodoitem{Idea: include Zeno's paradox here? Or as a journal prompt or activity of some kind?}
 
-\begin{boxedexplore}[Startup Exploration: Zeno's Paradox]
+\begin{boxedexplore}[Startup exploration: {Z}eno's paradox]
 A paradox is a statement from which we can follow a logical path of reasoning to an impossible of self-contradictory end.
 
 The ancient Greek philosopher Zeno proposed a set of paradoxes about motion. One of these says:
@@ -255,14 +255,14 @@ What do you think about these ideas?
 \end{boxedexplore}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\section{Exponential Growth}
+\section{Exponential growth}
 \label{sec:expogrowth}
 
-\begin{boxedexplore}[Extended Exploration: A Problem With Turtles]
+\begin{boxedexplore}[Extended exploration: Problem with turtles]
 \addtodoitem{LINK.}
 \end{boxedexplore}
 
-\begin{boxedexplore}[Startup Exploration: Cantor Set]
+\begin{boxedexplore}[Startup exploration: {C}antor set]
 German mathematician Georg Cantor suggested a way to construct a very interesting set of numbers. We start in Stage 0 with a line segment covering the interval from 0 to 1 on the number line. The recursive procedure is to remove the middle third from each of the line segments in the previous step. The first few iterations are shown.
 
 \newlength{\cantorht}
@@ -299,7 +299,7 @@ Let $f(x)$ represent the number of segments in stage $x$ of this construction. W
 \textit{Bonus puzzler.} The set of points from the original line segment that are not deleted at any step of the (infinite) process is called the \textit{Cantor ternary set}. Can you give an example of a point that is in this set? What can we say about the points that survive this process?
 \end{boxedexplore}
 
-\subsection{Modeling Exponential Growth}
+\subsection{Modeling exponential growth}
 
 The number of segments in the construction of the Cantor set doubles each time, so the pattern follows the rule ``start with 1, multiply the previous value by 2''. We can write out the repeated multiplication in expanded form, or use an exponent.
 
@@ -338,7 +338,7 @@ f(17) &= 131\,072\\
 \end{aligned}\]
 So, stage 17 is the first stage to contain more than 100,000 segments. Are you surprised by this? The figure grows from around 1000 segments in stage 10 to more than 100 times that number of segments less than 10 stages later! Surprising results like this are part of what make exponential relationships so much different from linear relationships.
 
-\subsection{Extending the Growth Model}
+\subsection{Extending the growth model}
 Suppose we build an equilateral triangle in which each side is a Cantor segment. Then we let $g(x)$ represent the number of segments in stage $x$ of this new figure. Let's try to answer the same questions as above: how many segments in stage 10, and in what stage will the number of segments first exceed 100,000?
 
 \begin{center}
@@ -398,11 +398,11 @@ The only difference here is that we've changed the initial number of segments. N
 Notice how we only need to change one part of the first rule that we wrote: \[g(x)=3\cdot2^x\]
 To find the number of segments in stage 10, we compute $g(10) = 3\cdot2^{10} = 3072$. Then, we do some detective work to find the stage number in which we first exceed 100,000 segments. Stage 15 is close with $g(15)=98\,304$, but it is stage 16 that first breaks the barrier: $g(16) = 196\,608$.
 
-\subsection{Exponential Equations}
+\subsection{Exponential equations}
 
 If we summarize our findings from the explorations above, we have the ``general form'' of an exponential function.
 
-\begin{boxeddef}[General Form of the Exponential Function]
+\begin{boxeddef}[General form of the exponential function]
 A equation of the form \[f(x)=a \cdot b^x\] is an exponential function if $a\neq0$, $b\neq1$, and $b>0$. The constant value $a$ is the \textit{initial value} of the function (when $x=0$). The constant value $b$ is called the \textit{constant multiplier}. 
 \end{boxeddef}
 
@@ -416,12 +416,12 @@ When $b$ is greater than 1, we have a situation like the ones we have seen in th
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\section{Percent Change}
+\section{Percent change}
 \label{sec:expopercentchange}
 
 Earlier explorations have involved an amount doubling as time went by. But what if we have a quantity that grows at a different rate? For example, the United Nations estimates that the population of the Earth will grow by approximately 0.77\% per year between now and 2050. How do our rules have to change to accomodate an arbitrary rate of growth?
 
-\begin{boxedexplore}[Startup Exploration: Hermine's Choice]
+\begin{boxedexplore}[Startup exploration: {H}ermine's choice]
 Hermine is shopping for a mother's day gift. The vase she wants to buy is on sale for 25\% off. She also has a 10\% off coupon that can be applied to any item in the store. The store manager agrees that she can use both discounts, and gives her two options: \textit{Option 1}: Take 25\% off the full price of the vase, then apply the coupon to the discounted price. \textit{Option 2}: Apply the 10\% coupon to the full price of the vase, and then take 25\% off the discounted price.
 
 Which option should Hermine choose? Why?
@@ -455,7 +455,7 @@ Note that to calculate the percent increase we found 15\% of 300 and then added 
 
 Now consider the case of a percent decrease, such as Hermine's discount coupon in the startup exploration. If Hermine wants to buy a vase that costs \$75 and has a 10\% off coupon, we can find 10\% of the value of the vase and subtract that from the original value: \[75 - 75(0.10)\] Applying the distributive property as we did above, we have: \[75 - 75(0.10) = 75(1-0.10) = 75(0.90)\] This makes sense, too: if Hermine gets 10\% off the price of the vase, then she is only paying 90\% of the original price. Armed with these ideas, we can determine which option Hermine should choose in the startup exploration.
 
-\begin{boxedex}[Explaining the Startup Exploration]
+\begin{boxedex}[Explaining the startup exploration]
 \exsoln\ It may have been helpful to make up a price for the vase (a convenient number, like \$100), but we'll use a variable here. Let $V$ represent the price of the vase.
 
 If Hermine chooses option 1, she will first get a 25\% discount. In other words, the price of the vase will be reduced to 75\% of its original value and Hermine would pay $(0.75)V$. The next step is to take this value and apply the 10\% coupon. If we take 10\% off, that's like paying for 90\% of the vase. So in the end the new price is: \[(0.90)\bigl((0.75)V\bigr) = \bigl((0.90)(0.75)\bigr)V= (0.675)V\] Hermine pays for 67.5\% of the vase, which is a 32.5\% discount.
@@ -467,7 +467,7 @@ So it doesn't matter which option Hermine chooses. She will pay the same amount 
 
 Note how the associative and commutative properties of multiplication play a role in this problem! The field axioms come to the rescue again!
 
-\subsection{Using Growth Rate}
+\subsection{Using growth rate}
 
 In \cref{sec:exporelationships}, we studied a kind of fast-growing seaweed under development at YeardleighCorp labs. Suppose that YeardleighCorp genetic engineers have a different kind seaweed which grows at a rate of 25\% per day.
 
@@ -491,7 +491,7 @@ You may be suspicious about the fact that we predict a 6 cm piece of seaweed wil
 
 We summarize our approach here, and present a second way to express the equation for exponential growth.
 
-\begin{boxeddef}[Exponential Growth, Given Growth Rate]
+\begin{boxeddef}[Exponential growth, given growth rate]
 A equation of the form \[f(x) = a\cdot(1+r)^x\] is an exponential function where $a$ is the initial value, and $r$ is the growth rate (the percent increase each ``generation'').
 \end{boxeddef}
 
@@ -499,7 +499,7 @@ If we compare this form of the equation to the previous form, $y=ab^x$, we can s
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\section{Personal Finance}
+\section{Personal finance}
 \label{sec:expofinance}
 
 This material in this section is quite possibly the most important thing we will discuss in all of algebra 1! The topics here apply not just to students who plan on studying science, technology, engineering, mathematics (or other ``mathematically intense'' disciplines). The concept of personal finance is important for anyone who plans to have a job or a bank account, anyone who wants to own a car or a home.
@@ -516,11 +516,11 @@ There are two kinds of interest in the world: good interest and bad interest.\fo
 
 As a future consumer, it is important to learn about how interest works.\footnote{When you go to the bank to get a car loan, you won't have to do all the math yourself. The bank will do the interest calculations up front and tell you how much you should expect to pay. But: credit cards are different, and --- in the opinion of the authors --- much more sinister.} A good rule of thumb is to try and minimize ``bad interest'' which works \textit{against} you, and to try and get as much ``good interest'' as possible working \textit{for} you.
 
-\subsection{Simple Interest}
+\subsection{Simple interest}
 
 The simplest way to calculate interest is called, naturally enough, \gls{simple interest}. It is calculated based only on the original amount borrowed or invested, called the \gls{principal amount}, or just \textit{principal}.
 
-\begin{boxeddef}[Simple Interest]
+\begin{boxeddef}[Simple interest]
 We calculate simple interest using the formula \[I = Prt,\] where $I$ represents the interest earned, $P$ represents the principal (the initial amount invested or borrowed), $r$ represents the annual percentage rate, and $t$ represents the time (in years).
 \end{boxeddef}
 
@@ -551,7 +551,7 @@ Let's compare this to the evil-genius that is \textit{compound interest}.
 
 %Problem: I = PRT I = 225(0.04)(2) = 18. I invest \$225 at an interest rate of 4\% per year for 2 years. How much do I have now? Therefore I will have 225+ 18 = \$243
 
-\subsection{Compound Interest}
+\subsection{Compound interest}
 
 The key idea of compound interest is that it isn't calculated based just on the principal amount, but based on the principal amount \textit{plus all of the interest that has been earned up to that point}.
 
@@ -678,21 +678,21 @@ Once again, notice that the difference isn't that great compared to the other ca
 
 We can distill these calculatons into a formula for compound interest.
 
-\begin{boxeddef}[Compound Interest]
+\begin{boxeddef}[Compound interest]
 We calculate compound interest using the formula \[A = P\left(1+\frac{r}{n}\right)^{nt}\]
 where $A$ represents the total amount, $P$ represents the principal, $r$ represents the annual interest rate, $t$ represents the time in years, and $n$ represents the number of compounding periods per year.
 \end{boxeddef}
 
 For example in the scenario of ``monthly compounding'', $n=12$ and so we use the equation \[A = P\left( 1 + \frac{r}{12}\right)^{12t}\] to compute interest after $t$ years. Note that we have $\frac{r}{12}$, meaning we've divided the rate into 12 pieces, and $12t$ in the exponent meaning that in each year $t$ we have 12 compounding periods.
 
-\subsubsection{Credit Cards and Compound Interest}
+\subsubsection{Credit cards and compound interest}
 	
 Credit card companies charge compound interest on your balance, and interest is compounded daily. Plus, credit cards often charge a higher interest rate than other types of financial products (car loans and student loans generally charge a much lower rate of interest).
 
 These two things --- high interest rates and daily compounding --- combine to make it very hard to pay of large amounts of credit card debt. It's troubling that the average American consumer owes several thousand dollars in credit card debt, with American consumers together owing billions of dollars to credit card companies.
 
 
-\subsection{(;,;) Continuous Compounding}
+\subsection{(;,;) Continuous compounding}
 
 At this point, someone usually wonders whether a bank could make an unlimited amount of money using this technique. What happens if a bank were so evil that they compounded interest every minute of every day? What about every second of every day? What about every millisecond?
 
@@ -707,14 +707,14 @@ Imagine that we invest a principal amount $P$ at an evil bank which charges 100\
 This scenario --- continuous compounding for one year at 100\% interest --- gives rise to a very interesting number which will be of great importance in future mathematics courses, including algebra 2.\footnote{Actually, this number has already been mentioned in the \algebranomicon! Go on a little scaveneger hunt through the footnotes in \cref{ch:functions} and see what you can find!}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\section{Exponential Decay}
+\section{Exponential decay}
 \label{sec:expodecay}
 
-\begin{boxedexplore}[Extended Exploration: A Problem With Pintonium]
+\begin{boxedexplore}[Extended exploration: Problem with pintonium]
 LINK
 \end{boxedexplore}
 
-\begin{boxedexplore}[Startup Exploration: No Pressure]
+\begin{boxedexplore}[Startup exploration: No pressure]
 Patrons to the Cheeseville Zoo can take a hot air balloon ride over the park. They have to fly high enough to be at a safe distance above the most dangerous areas of the zoo: Lake Mascarpone (the reptile exhibit) and NAME THE ISLAND (the primate enclosure).
 
 Of course humans can't fly too high: atmospheric pressure (the pressure of air around you) decreases as altitude increases, by about 6\% for every 500 meters. Above a certain altitute, people need breathing aids if they aren't in a pressurized environment (like an airplane).
@@ -746,11 +746,11 @@ The death zone is at 8000 meters, or when $a=16$ in our model. The pressure at t
 \[P(16) = 1\cdot(0.88)^{16} \approx 0.129\]
 Our model predicts that atmospheric pressure of around 13\% is life-threatening.\footnote{For reference, most commercial airlines cruise at an altitude of around 12,000 m and pressurize their cabin to approximate an altitude of around 2100 m.}
 
-\subsection{Exponentially Decreasing}
+\subsection{Exponentially decreasing}
 
 Exponential decay describes a relationship which decreases exponentially. These have the same general formula for exponential relationships --- we have an initial value $a$ and a constant multiplier $b$ --- but now the constant multiplier is a fraction between 0 and 1.
 
-\begin{boxeddef}[Exponential Decay]
+\begin{boxeddef}[Exponential decay]
 An equation of the form $f(x) = a \cdot b^x$ represents exponential decay when $a \neq 0$ and $0 < b < 1$.
 \end{boxeddef}
 
@@ -803,7 +803,7 @@ A(8) &\approx 89\,919
 This tells us that ``year 8'', meaning calendar year 2003, was the first time attendance dropped below 100,000 visitors.
 \end{boxedex}
 
-%\subsection{Radioactive Decay and Half-Life}
+%\subsection{Radioactive decay and half-life}
 %
 %One application of Certain chemical elements, like Uranium and Plutonium, have unstable isotopes which emit energy in the form of radiation. 
 %
@@ -828,7 +828,7 @@ This tells us that ``year 8'', meaning calendar year 2003, was the first time at
 
 
 %% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\subsection{Linear Versus Exponential Change}
+\subsection{Linear versus exponential change}
 
 Before this chapter, we spent most of our time discussing linear equations. We have seen situations that can be represented quite effectively using linear functions. For example, exchanging money between two different currencies, the amount a person might earn from working a certain number of hours at a particular pay rate, or how much distance a person can cover when moving at a constant speed.
 
@@ -838,7 +838,7 @@ It's sometimes hard to appreciate the difference between a curved line and a str
 
 To compare linear and exponential growth, we close this chapter with a famous fable first told by the Persian poet Ferdowsi.
 
-\begin{boxedexplore}[The Chessboard]
+\begin{boxedexplore}[Chessboard]
 Many centuries ago, so the story goes, the inventor of the game of chess showed his invention to the king. The king was so delighted by the new game that he told the inventor that he could have whatever he liked as compensation.
 
 The inventor proposed that the king give him one grain of wheat for the first square of the chessboard, two grains of wheat for the second square, four grains of wheat for the third square, and so on, doubling the number of grains for each of the 64 squares on the board.
@@ -990,3 +990,8 @@ At first glance, there hardly seems to be a competition between these two: the s
 %\caption{Growth in the chessboard fable: 64 squares.}
 %\label{fig:chessboard64}
 %\end{figure}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\subsection*{Chapter summary}
+
+Might be nice to have something here in every chapter?

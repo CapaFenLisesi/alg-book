@@ -3,10 +3,7 @@
 
 \chapquote{Still need to find a quote that works for this chapter. In the meantime, we have this.}{Author, description of author}
 
-Much of the beginning of this section is review and renaming as we have actually been working on polynomials all year long!
-
-All real numbers can be represented as polynomials. So, like numbers, we will be learning how to add, subtract, multiply, divide, factor, raise to powers, etc. with polynomials. 
-
+Don't let the complicated-sounding name scare your: we have actually been working with polynomials throughout the course! In this chapter, we will put some new names on some old concepts, and extend those ideas into a more general form. Then we'll start with the foundations and learn the rules for performing the standard operations with polynomials: adding, subtracting, multiplying, dividing, factoring, and raising to a power.
 
 
 \section{Building Polynomials}
@@ -32,9 +29,9 @@ Based on this information, conjecture about what it means to be a polynomial. Wh
 
 Recall that a \gls{term} is a number, a variable, or the product (or quotient) of numbers and variables. The following expressions are all terms:
 \[4 \qquad 3x \qquad 14x^6\]
-We have been dealing with terms throughout this course. We know how to combine \textit{like terms}. When we perform the distributive propoerty, we are multiplying one term with each of several terms.  
+We have been dealing with terms throughout this course. We know how to \textit{combine like terms}. When we perform the distributive propoerty, we are multiplying one term with each of several terms.  
 
-Remember that terms are separated by addition and subtraction, and that an \gls{algebraic expression} is the sum or difference of terms. An expression can be a single term all by itself, since $x$ and $0$ are both terms, $x+0$ (which is the same as $x$) is an expression.
+Remember that terms are separated by addition and subtraction, and that an \gls{algebraic expression} is the sum or difference of terms. An expression can be a single term all by itself: since $x$ and $0$ are both terms, $x+0$ (which is the same as $x$) is an expression.
 
 A \gls{polynomial} is a special type of algebraic expression.
 
@@ -44,13 +41,14 @@ A algebraic expression which contains only a single variable, in which the coeff
 
 Recall that the \gls{degree of a term} is the exponent on the variable of a term. It is usually quite easy to identify the degree of a term: the degree of $5x^3$ is 3. Remember, though, that some special situations arise.
 
-If we have a variable with no exponent, we imagine a phantom 1 in the exponent. So for example, the term $18x$ is of degree 1, since $18x = 18x^1$. If we have a number with no variable, we can imagine a phanom 1 of a different kind: a variable raised to the zero power. So, the term $10$ is of degree 0, since $10 = 10x^0$.
+If we have a variable with no exponent, we imagine a phantom 1 as the exponent. So for example, the term $18x$ is of degree 1, since $18x = 18x^1$. If we have a number with no variable, we can imagine a phanom 1 of a different kind: a variable raised to the zero power. So, the term $10$ is of degree 0, since $10 = 10x^0$.
 
 This means that a polynomial can always be written in the form
 \[a_0x^0 + a_1x^1 + a_2x^2 + a_3x^3+ \dotsb +a_nx^n,\]
-where this sum stops at some integer $n$, and in which the $a$-values (the coefficients) are rational numbers, some of which might be zero. Usually, we prefer to write a polynomial with the terms in order of decreasing degree, that is:
+where this sum stops at some positive integer $n$, and in which the $a$-values (the coefficients) are rational numbers, some of which might be zero. Usually, we prefer to write a polynomial with the terms in order of decreasing degree, that is:
 \[a_nx^n + \dotsb + a_3x^3 + a_2x^2 + a_1x^1 + a_0x^0\]
-In other words: a polynomial may not have a variable in the exponent, and may not include a variable raised to a non-integer exponent (so, no variables under radicals), nor a negative exponent (so, variables in a denominator). Also, the variable may not be enclosed in an absolute value expression.
+
+Not all algebraic expressions are polynomials. A polynomial may not have a variable in the exponent, so exponential functions are not polynomials. A polynomial may not include a variable raised to a non-integer exponent (so, no variables under radicals), nor a negative exponent (so, variables in a denominator). Also, the variable may not be enclosed in an absolute value expression.
 
 Look back over the list of polynomials and non-polynomials in the startup exploration. The expressions in the list of polynomials all meet these requirements. The non-polynomials all fail on at least one point (can you identify the point of failure for each one?). Of the three expressions we are asked to classify, the first one is not a polynomial, since it includes the variable $x$ raised to a negative exponent. 
 
@@ -61,22 +59,18 @@ The other two expressions are polynomials. The number 150 is a polynomial since 
 The degree of the highest-degree term in the polynomial.
 \end{boxeddef}
 
-The degree of a polynomial is the highest exponent in a polynomial. This is very important because that highest degree has the biggest impact on the value of the expression. If we were to put a ``y=`` in front of the polynomial to turn it into a function, that highest degreed term would tell you which family it belongs in, what the graph is going to look like, etc.
+The degree of a polynomial is the highest exponent in the polynomial. This is very important because the highest degree has the biggest impact on the value of the expression. If we were to put a ``$y=$'' in front of the polynomial to turn it into a function, the highest degree term will tell us which family it belongs in. For example, every member of the quadratic family is a polynomial of degree 2.
+
+\begin{boxeddef}[Standard form of a polynomial]
+A polynomial is written in standard form if the degree of the terms decreases from left to right, and no two terms have the same degree.
+\end{boxeddef} 
+
+This is probably common sense by this point in the course. Basically, standard form is simplified (like terms are combined and there are no parentheses), and in addition, we make be sure to write the terms in a ``reasonable'' order. The highest degree term comes first, then the rest follow in order of decreasing degree. A polynomial is still a polynomial otherwise, but this format makes polynomials easier to understand and communicate.
 
 
+\subsection{Naming polynomials}
 
-Vocabulary
-
-Standard Form of a Polynomial
-A polynomial written so that the degree of the terms decreases from left to right and no terms have the same degree.
- 
-Very much common sense at this point in the year. Basically Standard form is simplified (like terms are combined and no parenthesis), you just have to make sure to write the terms in the correct order. The highest degree comes first, the rest follow in order of decreasing degree, which you've been required to do for a while now.
-
-
-
-\subsection{Naming Polynomials}
-
-In the life sciences, biological classification is the practice of grouping organisims into species, and then grouping various species togeher into groups, and then grouping those groups together, and so on, to produce a systematic classification of living things. Such a classification is important so that biologists can then be clear when communicating to one another.
+In the life sciences, biological classification is the practice of grouping organisims into species, and then grouping various species together into groups, and then grouping those groups together, and so on, to produce a systematic classification of living things. Such a classification is important so that biologists can then be clear when communicating to one another.
 
 For example, there are many different types of fruit fly, and so the term ``fruit fly'' is ambiguous. In English, we make a distinction between the so-called ``common fruit fly'' and the ``Asian fruit fly''. Biologists in Korea, however, might not use these terms in the same way (is the Asian fruit fly more common in Korea than the common fruit fly?). Biologists have therefore agreed to use a different, more universal, system for describing organisms so that they can distinguish between \textit{Drosophila melanogaster} (what we call the common fruit fly) and \textit{Drosophila suzukii} (what we call the Asian fruit fly).
 
@@ -84,7 +78,7 @@ The Latinized names for organisms identify the genus and species. In mathematics
 
 The first name is by degree, and this is related to the name you would give to that family of functions. We worked closely with two examples in this course so far. A polynomial of degree 1 is called a \textit{linear} polynomial, and a polyonmial of degree 2 is called a \textit{quadratic} polynomial.
 
-\begin{table}[!htbp]
+\begin{table}
 \centering
 \begin{tabular}{c@{\hspace{2em}}l}
 Degree & Name\\\hline
@@ -103,7 +97,7 @@ For polynomials with degree higher than 5, we usuall say ``polynomial of degree 
 
 When naming a polynomial, the second name tells us how many terms it has.
 
-\begin{table}[!htbp]
+\begin{table}
 \centering
 \begin{tabular}{c@{\hspace{2em}}l}
 No. Terms & Name\\\hline
@@ -119,713 +113,403 @@ For polynomials with more than three terms, we say ``polynomial with $n$ terms''
 \[11x^8 + x^5 + x^4 - 3x^3 + 5x^2 - 3\]
 is a polynomial with 6 terms, or a 6-term polynomial.
 
-Note that some of these prefixes are familiar. \textit{Tri-} means ``three'', as in triangle and tricycle. \textit{Bi-} means ``two'', as in bicycle. There are less familiar word parts, too: \textit{mono-} means one, and \textit{-nomial} means ``names'' (indicating the number of terms)
+Note that some of these prefixes are familiar. \textit{Tri-} means ``three'' (as in triangle and tricycle), and \textit{bi-} means ``two'' (as in bicycle or bisexual). There are less familiar word parts, too: \textit{Mono-} means one (a monopoly is when a single company is the only one offering a particular product or service). The suffix \textit{-nomial} means ``names'' (this is the same root as in the words nominate and denominator).
 
 When giving the full name of a polynomial, we include both the name by degree and the name by the number of terms. Here are some examples:
 
-\begin{table}[!htbp]
+\begin{table}
 \centering
 \begin{tabular}{>$c<$@{\hspace{2em}}l}
 \text{Polynomial}		& Name\\\hline
-x 						& Monomial\\
-y 						& Binomial\\
-z 						& Trinomial\\
+14x^3 					& cubic monomial\\
+-1.2x^2 				& quadratic monomial\\
+18						& constant monomial\\
+7x-2					& linear binomial\\
+2x^2 - 4x + 8			& quadratic trinomial\\
+3x^3 + 2x - 11			& cubic trinomial\\
+x^4 + 3					& quartic binomial\\
 \end{tabular}
 \label{table:polynameex}
 \caption{Examples of polynomial names.}
 \end{table}
 
-
-
-
-Polynomial
-Name
--14x3
--1.2x2
--1
-7x - 2
-3x3 + 2x - 8
-2x2 - 4x + 8
-x4 + 3
-cubic monomial
-quadratic monomial
-constant monomial
-linear binomial
-cubic trinomial
-quadratic trinomial
-Quartic binomial
- 
-Above are examples of the full names of polynomials. Remember we use the family (degree) name first. It is the most important name.
-
-\section{Adding, Subtracting, and Multiplying Polynomials}
-
-Adding and Subtracting Polynomials
-
-To add or subtract polynomials, simply combine like terms. So, nothing really new here. We've been doing this for a long while. I'm just going to add more terms than you are used to and terms of higher degree.
-
-Example 1
-
-Simplify: 
-1. (5x2 - 3x + 7) + (2x2 + 5x - 7)
-2. (3x3 + 6x - 8) + (4x2 + 2x - 5)
-
-Solution:
-1. 7x2 + 2x
-2. 3x3 + 4x2 + 8x - 13
-
-At this point, you should be able to mentally group the terms together by degree. You can also write the rearrangement down by commuting the terms if you need to. Just be sure to combine the terms with the correct terms. For example, the second example, it is common for student to accidentally combine the cubic term and the quadratic term.
-
-Example 2
-
-Simplify: 
-1. (2x3+ 4x2- 6) - (3x3+ 2x - 2)
-2. (7x3- 3x + 1) - (x3- 4x2- 2)
-
-Solution:
-1. (2x3+ 4x2- 6) + (-3x3+ -2x - -2)
-= -x3+ 4x2- 2x - 4
-
-2. (7x3 - 3x + 1) + (-x3- -4x2- -2)
-= 6x3+ 4x2- 3x + 3
-
-More examples, this time with subtraction. You have to remember that every term of that second polynomial is being subtracted. So it is useful to change the problem to an addition one before moving on remembering that subtraction is defined by adding the opposite. You basically have to change every sign in the polynomial that you are subtracting. In essence, you are distributing a negative one.
-
-How you show your work is up to you. It might be easier to keep track of everything if you set the problem up vertically like an ``old school'' addition or subtraction problem. To do so, just think of the degree of the term like the place value of a digit. You can leave spaces blank if there is a degree missing. I put the subtraction in parenthesis to remind myself that every term needs to be subtracted. Sometimes if you don't , you just think that the coefficient of the first term is negative.
-
-Example 3
-
-Simplify: 
-1. (7y2- 3y + 4) + ( 8y2+ 3y - 4)
-
-2. (2x3- 5x2+ 3x - 1) - (8x3- 8x2 + 4x + 3)
-
-
-Solution:
-
-1. 7y2- 3y + 4
- + 8y2+ 3y - 4
- 15y2 + 0y + 0 = 15y2
-
-2. 2x3- 5x2+ 3x - 1
- - (8x3- 8x2 + 4x + 3)
- -6x3+ 3x2- x - 4
-
-Example 4
-
-Simplify: 
-1. (7y3 + 2y2+ 5y - 1) + (5y3+ 7y)
-
-2. (b4 - 6 + 5b + 1) + (8b4 + 2b - 3b2
-
-
-Solution:
-
-1. 7y3 + 2y2 + 5y - 1
- + 5y3+ 0y2 + 7y + 0
- 12y3+ 2y2 + 12y - 1
-
-2. b4 + 0b3 + 0b2 + 5b - 5
- + 8b4 + 0b3- 3b2 + 2b + 0 
- 9b4 + 0b3 - 3b2 + 7b - 5 = 9b4 - 3b2+ 7b - 5
-
-Multiplying Polynomials
-
-You already know how to multiply polynomials. You just use the distributive property, either single or multiple. You can also set it up Leo B. style. In this section, we will do a little review and add something that will help with factoring, the area model (algebra tiles.)
- 
-Algebra tiles are tools that help one represent polynomials. They can, at most, be used to represent quadratics. There are six tiles. The red tiles represent negative quantities. The other colors represent the positive quantities. The small square is the unit square and represents 1. The thin rectangle represents x. The large square represents x2.
-
-
-
- 
-
-You can use the tiles to show a picture of a polynomial, to show how addition/subtractions work, but what they are really good for is showing how multiplication and factoring work. Let's start with the basics.
-Example 5: What polynomial is represented below?
-
-Solution: So, what is the polynomial represented above?
-2x2 + 2x - 4x + 8 - 3
-Simplified (because red/green and red/yellow cancel) 
-2x2 - 2x + 5
-
-When you multiply, you are really finding the areas of rectangles. The length and width are the factors and the product is the area. 
-
-Example 6: Multiply 2x (3x + 1)
-
-They are really good at having you understand how to multiply polynomials. Each factor is a dimension of a rectangle. So 2x is the width and 3x + 1 is the length. Then you add the pieces to make a rectangle\ldots{} x * x is x2 so you put little x2 pieces wherever you see an x *x. When you see an x*1 you get x, so you put a little green tile there. You end up with six x2 and two x, which is the product we knew it would be to begin with, because you already know how to multiply via the distributive property. This seems annoying now, but will help you out when I ask you to undo multiply two binomials.
-
-Example 7: Use an area model to show the following multiplication. (x + 2) (x + 1) 
-
-1. What are the factors? 
-2. What type of factors are they?
-3. What will their product look like?
-4. Use the tiles to multiply
-
-Solution: Let's try to use the area model to multiply two binomials together. This sort of multiplication works a little differently than the regular distributive property, as you saw when we covered raising binomials to powers and the Leo B. method, so we will see what happens when we use the tiles.
-
-1. x+2 and x + 1
-2. They are both linear binomials
-3. Should be a quadratic trinomial.
-4. 
-
-Use the tiles just like we did before. Each factor is a dimension of the rectangle. The width is x + 2 and the length is x + 1. Multiply the x's and the units. What is the area of the rectangle? x2 + x + 2x + 2. Simplify and get x2 + 3x + 2. The multiplication yielded 4 terms, two from multiplying x times (x+1) and two from multiplying 2 times (x+1). When we combined like terms, we got our quadratic trinomial.
-
-If you ``learned'' algebra from a book, Kumon, or some outside math class, you probably learned how to multiply using FOIL. It only works with two binomials, which is why I don't like it. If I only can remember one way to multiply, it should be something that works for everything. FOIL does not. 
-
-It is called F.O.I.L. which stands for ``First, Outer, Inner, Last''
-F = first terms in each binomial
-O = the two outer terms
-I = the two inner terms
-L = last terms in each binomial
-
-If you want practice, go back and simplify the ones you did with the tiles using FOIL. This is really just a double distribution. F and O come from distributing the first x over the second binomial. The I and L come from distributing the second term of the first binomial over the second binomial. 
-
-\section{The GCF}
-
-The Basics of Factoring
-
-Factoring is not dividing. It is re-writing a number as a multiplication problem. You can factor 6 and rewrite it as 2 $\cdot$ 3. You can do the same to polynomials. Your goal is to rewrite the polynomial as a multiplication problem. It has the same value, but looks different. There are different types of factoring. We will start with the type that undoes the multiplication of the most basic form of the distributive property you learned with the Field Axioms.
-
-You have factored before. In 6th grade you learned how to ``prime factorize'' numbers. We are going to be doing something similar with polynomials. For polynomials, factoring is working backwards from multiplication. You have the product as an answer. I want you to undo the polynomial multiplication to find the factors that made that product.
-
-Undoing the Distributive Property by Factoring Out the GCF
-
-This is what we are familiar with. This is how we simplify by distributing.
-
- Simplify:
- 3x( 2x + 5)
- 3x*2x + 3x * 5
- 6x2 + 15x
-
-Now factoring takes the 6x2+ 12x (the product) and rewrites it so that you have the original, un-simplified multiplication problem. There is a lot of logic involved. You have to find the Greatest Common Factor of the terms of a polynomial. To find the GCF of a polynomial 6x2+ 15x, you have to look at each term. What do you notice about each of the terms? You should notice that both terms have x and both terms are multiples of 3. This gives you a clue to what some common factors are\ldots{} 3 and x. Now, to find the greatest common factor. You can do this systematically and prime factorize each term.
-
- 6x2: 2 $\cdot$ 3 $\cdot$ x $\cdot$ x 
-15x: 3 $\cdot$ 5 $\cdot$ x 
-
-Circle the common factors. All of the common terms multiply together to form the GCF. What do you notice between the GCF and the previous problem? The GCF is that number that got sprinkled during the distribution. This means that if you can find the GCF, you can undo the distributive property and factor a polynomial.
-
-Example 1
-
-Find the GCF of 6x4 + 4x3 + 8x2 
-Solution:
-What do you notice about each of the terms? You may be able to find the GCF that way, or, if you can't, prime factorize each term.
-6x4: 2 $\cdot$ 3 $\cdot$ x $\cdot$ x $\cdot$ x $\cdot$ x 
-4X3 : 2 $\cdot$ 2 $\cdot$ x $\cdot$ x $\cdot$ x 
-8x2 : 2 $\cdot$ 2 $\cdot$ 2 $\cdot$ x $\cdot$ x 
-
-All of the terms have an x2 and all of them are even, so 2x is the GCF.
-Example 2
-
-Find the GCF of each of the following polynomials. 
-1. 12x4+ 18x3
-2. 32y4- 16y2
-3. -4y2- 8y - 12
-Solution:
-1. 6x3 
-2. 16y2 
-3. 4 or -4 (-4 technically isn't the greatest but it is sometimes convenient to use the negative factor to change all of the signs)
-
-Factoring out the GCF
-
-Technically, when you undo the distributive property you are ``factoring out a monomial term.'' Now, if you can find the GCF, this is really easy. The GCF is the thing being sprinkled. The stuff left over after the GCF is taken out goes in parenthesis. It is the thing that gets the sprinkling. Now, the cool thing, is that this is so easy to check. If you want to see that you factored correctly, all you have to do is redistribute.
-
-We will use 6x3 + 4x2 + 8x. Start by finding the GCF, which we know is 2x from example 1. The GCF is the monomial that goes outside of the ( ) in the distribution problem., whatever factors are left over from the prime factorization makes up the polynomial that goes inside of the ( ). 2x (3x2+ 2x + 4). Now, check to see if they are equivalent. Distribute the 2x or just graph both on your graphing calculator. 
-
-If you factor out the GCFs of the polynomials in example 2, you get the following:
-
-1. 6x3(2x + 3)
-2. 16y2 (2y2 - 1)
-3. 4(-y2 - 2y -3) or -4(y2 + 2y + 3)
-
-Often, when you are asked to factor a polynomial, the first thing you should look for is a GCF that can be factored out of the problem. Actually, one of the most missed things on the assessment over factoring is forgetting to factor out a GCF. 
-
-\section{Factoring the Special Case x2 + bx + c}
-
-This is how to factor using algebra tiles. We are basically taking the multiplication and doing it in reverse. Instead of starting with the dimensions, we are going to start with the tiles and arrange them into a rectangle. The length and width of the rectangle will be the factors we are looking for.
-How can these tiles be arranged into a rectangle?
-
-
-
-First, you must know the polynomial being represented by the tiles. Then, experiment and turn them into a single rectangle. After that, find the length and width of the rectangle. Remember that the ``x2'' tiles have to be in the top left corner and the unit tiles have to form a rectangle in the lower right corner. The ``x'' tiles fill in the spaces.
-
-
-
-Now all you have to do is determine what the factors are that create this rectangle. Look along the left side. It is made up of 1x and 1 unit, so the binomial is (x+1). Finally look along the top. It is made up of 1x and 2 units, so the binomial is (x+2). Therefore the factored form of x2 + 3x+2 = (x+1)(x+2). This is easy to check. Just multiply the binomials back out or use a graphing calculator.
-
-The tiles are manipulatives that are used to show the area model of a polynomial. It is just as easy to realize that a quadratic trinomial results from the product of two binomials from experience. The multiplication of 2 binomials results in 4 terms, two of which are combined in the final step. Instead of drawing the individual tiles, you can just draw a rectangle and break it up into 4 sections. The top left section represents the quadratic term, the bottom right is the section containing the constant term. The other two sections are the two that combined to form the linear term. If you use this instead, you have to figure out how to break up the linear term. There is only one combinations that is going to work. In addition, once you figure out how to break it up and have your rectangle drawn, you find the GCF of each column to find one factor. Find the GCF of each row to find the other factor.
-
-Quadratic Term
-Part of linear term
-Part of linear term
-Constant Term
-
-Of course, we want to be able to do this without the tiles and without drawing rectangles. In essence we are anti-foiling, or anti-double distributing. Think about where all of the terms in the quadratic come from in terms where/when during the process of multiplication.
-
-1. Where does quadratic term come from?
-2. Where does constant term come from?
-3. Where does linear term come from?
-
-Knowing the answers to the 3 questions above, you can factor using logic.
-
-1. The quadratic term comes from multiplying x by x. So we know our factors have to start (x\ldots{}.)(x\ldots{})
-2. Since all of the terms are positive, we know our factors have to be (x+\ldots{})(x+\ldots{})
-3. We also know that the factors have to look like (x+ some number)(x + some other number)
-4. So what could those numbers be? Well, we know they multiply together to give us the ``c'' term. Since the c in this case is 2, we know the two numbers have to be 1 and 2.
-5. It looks like our factors are going to be (x+1) and (x+2), but we have to be sure. The way to check is to look at the ``bx'' term. We know that comes from multiplying the ``outer'' and ``inner'' terms together and adding those products together. Let's check to see if this is going to work. The ``outer'' product is 2x, the inner is 1x, the sum is 3x. That is what we were given originally, so x2+ 3x + 2 = (x+1)(x+2)
-
-If you want to factor without the tiles, you have to ``guess and check''. Here's an organized way to do just that. It is, of course, based on the above sequence of logical steps.
-
-1. Find the factors of the ``c'' term.
-2. The factors that add up to the ``b'' term are the correct ones.
-3. Check the signs to make sure they will multiply correctly!
-4. Check your answer!
-
-That is the actual procedure we are going to use to factor quadratic trinomials of the form x2 + bx + c. 
-Remember to incorporate the sign of the factors of c. The final step is to always check to make sure everything works right. It is really easy to pick the wrong factors or the wrong sign on the factors. I'll go through the reasoning only on some of these, but give the solution to all of them. Remember, for this special case, I am looking for factors of c that add to b. 
-
-Example 1
-
-Factor: 
-
-1. x2 + 7x + 12		2. x2 + 8x + 12		3. x2 + 2x - 3		4. x2 - 6x + 8
-5. x2 + x - 12		6. x2 - 3x - 10		7. x2- 8x + 15		8. x2- 3x - 18
-9. x2- 3x + 2		10. x2- 10x + 21
-
-Solution:
-1. We need to look for factors of +12 that add to 7. This means they both have to be positive. The possible factor pairs are (1, 12), (2, 6), and (3,4). Which of these pairs add up to 7? That would be 3 and 4. It seems that (x + 3)(x + 4) might be the factors. They add up to 7 and multiply out to 12. Time to check (x+3)(x+4) =x2 + 4x + 3x + 12 = x2+ 7x + 12.
-2. (x + 6)(x+2)
-3. We need to look for factors of -3 that add to 2. This means that one is negative and one is positive. Also that the positive one is ``bigger.'' The possible factor pairs are (1, -3) and (-1, 3). Which of these add up to +2? (-1, 3). (x - 1) (x+3) looks to be the answer. Time to check (x-1)(x+3) = x2+ 3x - x - 3 = x2+ 2x - 3
-4. We need to look for factors of +8 that add to -6. This means that they both are negative. The possible factor pairs are (-1, -8), (-2, -4). Which of these add up to -6? (-2, -4). (x - 2)(x -4) might be the solution. Check: (x-2)(x-4) = x2- 4x - 2x + 8 = x2- 6x + 8
-5. ( x + 4)(x - 3)
-6. (x-5)(x+2)
-7. (x - 3)(x-5)
-8. ( x - 6)(x + 3)
-9. ( x - 2)(x-1)
-10. (x - 7)(x-3)
-
-
-\section{Perfect Square Trinomials and Difference of Squares}
-
-Perfect Square Trinomials
-
-A trinomial formed by squaring a binomial is called a Perfect Square Trinomial. In the exponential unit, we called this raising a sum to a power. Over the course of the past few weeks, you should have noticed that there is a pattern to squaring a sum. 
-
-Example 1
-
-Simplify and find the patterns in the resulting trinomial: 
-
-1. (x + 5)2
-2. (2x - 3)2
-3. (x - 4)2
-4. (5x + 2)2
-
-
-Solution:
-
-1. x2 + 10x + 25
-2. 4x2 - 12x + 9
-3. x2 -8x + 16
-4. 25x2 + 20x + 4
-
-The perfect square trinomial has some special features. These features make it easier to multiply these out and easier to factor them too. You should notice that the first term and last term of the trinomial is a perfect square. You might have also noticed that the ``bx'' term is twice the product of the terms in the parenthesis.
-
-Perfect Square Trinomial 
-
-(a +b)2 = a2 + 2ab + b2
-(a - b)2 = a2 - 2ab + b2
-
-The key is knowing when you have a perfect square trinomial. You can't just look at the quadratic and constant terms. *Remember, when you square root, you can get a positive or a negative.* The way to check to see if you have a PST
-A. Look at the ax2 term. Is it a perfect square? If so, move on to \#2.
-B. Look at the c terms. Is it a perfect square? If so, move on to \#3.
-C. Take the square root of ax2 and the square root of c. Multiply the roots together. Then double them. Is this the bx term? If so, you have a perfect square trinomial.
-
-Example 1
-
-Determine whether the following polynomials are perfect square trinomials. If so, factor it.
-
-1. x2 - 12x + 36
-2. 9x2 + 34x + 25
-3. x2 + 18x + 81
-4. 64x2- 20x + 1
-
-Solution:
-
-1. x2 is a perfect square. 36 is a perfect square. The square root of x2 is x. The square root of 36 is 6. 6 times x is 6x. Double it and get 12x. Hmm, I forgot that I can get -6 as a square root of 36, so go through step 3 again, and I get -12x\ldots{} and that is what bx is, so, yes, x2 - 12x + 36 is a perfect square. So this will factor to (x - 6)2
-2. No because 3x times 5 times 2 is not 34. We can't factor this yet.
-3. Yes because x times 9 times 2 = 18. So this will factor to (x + 9)2 
-4. No because 8x times -1 times 2 is not -20. We can't factor this yet.
-
-Difference of Squares
-
-The difference of squares is a binomial that is formed by subtracting two perfect squares, literally the difference of 2 squares. Below are some examples:
-
-1. x2 - 4
-2. x2- 625
-3. 4x2 - 25
-4. 16x2- 81
-
-Notice, it is not the sum of squares!!!!!!!! THE SUM OF SQUARES DO NOT FACTOR OVER REAL NUMBERS. This means that you will see ``trick'' questions that ask you to factor the sum of squares. Those are not factorable in algebra 1.
-
-Now, let's look at these. They are always a ``perfect square - another perfect square''. Another reason why it is good to know the first 25 perfect squares. We can definitely factor the first two to see what the factors are like. They fit the special case of x2 + bx + c, it is just that b = 0.
-
-1. We are looking for factors of -4 that add to 0. It has to be 2, and -2. So this will factor to (x-2)(x+2)
-2. We are looking for factors of -625 that add to zero. It has to be +25, -25, so (x-25)(x+25).
-
-Using the factors we have just found, what do you notice? The factors are almost identical, except for the sign separating the terms. They have to be opposite for that ``bx'' term to drop out of the final product. So, let's think about what \#3 and \#4 will be. Almost identical, except for the sign between the terms of the factor. The terms of the factors are square roots of the terms of the original.
-
-3. (2x - 5) (2x + 5)
-4. (4x - 9)(4x + 9)
-
-Difference of Squares
-
-a2 - b2= (a + b)(a - b)
-
-This is the general form of a difference of squares. ``a'' and ``b'' can be any terms. When you see a difference of squares, to factor, just square root the two terms. Make one binomial have a ``+'' and the other a ``-''. Check, and you are done.
-
-Examples! Be careful. \#2 - \#4 are tricky. You should know by now that your math teacher loves the tricky problems!
-
-Example 2
-
-Factor each of the following completely.
-
-1. x2- 100
-2. x4 - 16
-3. 100x2 - 400
-4. 3x2 - 75
-5. 225x2 - 121y2
-
-Solution:
-
-1. Normal\ldots{} (x + 10)(x -10)
-2. Hmm, x4 and 16 are both perfect squares\ldots{} so (x2 + 4)(x2 - 4)\ldots{} but wait a minute! One of those factors is a perfect square. I can factor it even more. (x2 + 4)(x -2)(x+2)\ldots{} but beware! Don't go ``factor crazy'' and try and factor the x2 + 4. It is one of those sums of squares that don't factor. I like to call this the ``Goldilocks'' problem.
-3. Hmmm, again\ldots{} 100 is a perfect square and so is 400, but I notice that the polynomials has a GCF of 100. I can factor that out first. 100(x2 - 4). Now I can factor x2- 4. So 100(x-2)(x+2)
-4. Not a difference of squares, but maybe I can do what I did in \#3 to factor this one. The GCF is 3. I can factor this to 3(x2 - 25) = 3(x-5)(x+5)
-5. Not a polynomial, but It is a difference of squares. So (15x - 11y)(15x + 11y)
-
-
-\section{Factoring by Grouping}
-
-This is a general form of factoring that will allow you to factor just about anything that can be factored. We will be starting with things that are technically not like the polynomials we study as functions, but only because it is easier to understand the mechanics of factoring by grouping. Factoring by grouping is literally the multiple distribution/Leo B. method in reverse. Let's refresh our memories. 
-
-Use the ``multiple distribution method'' to simplify ( a + b ) ( c + d ).
-
-When you multiply these expressions you need to multiply a (c + d) and then b (c + d). You write out 
-ac +ad + bc + bd. If you examine these 4 terms, you should notice that you have groups of terms that have a common gcf, ac + ad has a in common and bc+bd has b in common. Derp\ldots{} Because that is what we distributed. This means that both a and b were both distributed over (c +d).
-
-So, let's try to factor this example: gh + gt + vh + vt 
-
-1. Examine the expression you are given. You need to find equal ``groups'' of terms that have common factors. gh + gt + vh + vt\ldots{} there are two ``groups'' of terms here. The terms with ``g'' as a factor and terms with ``v'' as a factor.
-2. Separate them out into their two groups gh +gt + vh + vt. I usually do this by just underlining them.
-3. Then you need to factor out the gcf of each group you formed. g(h + t) + v(h + t)
-4. You should be left with things in ( ) that are identical. That (expression) is one of the factors, so (h + t) is one of the factors. The gcf's form the other factor\ldots{} so g + v.
-5. Finally you check your answer. (g + v)(h + t) = gh + gt + vh + vt.
-
-Note: Sometimes you will have to rearrange the factors to find the correct groups. You may also have to factor out a negative to get the leftovers to be identical.
-
-Example 1
-
-Factor completely.
-
-1. ad + ac - d - c
-2. 3x2 - 4x - 6x + 8
-3. xy + 3y + 4x + 12
-4. 3x ( x - 4) + 2( x - 4)
-5. y2 ( 2x + 5) - (2x + 5)
-
-Solution:
-
-1. The two groups are ad + ac and -d - c . Factor out ``a'' from the first group. For the second group you will need to factor out a -1 to change the signs. Whenever you need to change the signs of an expression, you can factor out a negative 1. --> (a - 1)(d + c) 
-2. The two groups are 3x2 - 4x and -6x + 8. Factor out an ``x'' from the first group. For the second group, you will need to factor out a -2, not just a two, once again to make the signs correct. -->(x -2)(3x -4)
-3. The two groups are xy + 3y and 4x + 12. Factor out ``y'' from the first group. For the second group you will need to factor out a 4. --> (y + 4)(x + 3)
-4. The first few steps were already done for us. --> (x - 4)(3x +2)
-5. The first few steps were already done for us. --> (2x + 5) (y2 - 1)\ldots{} but this last one is tricky! First, when one of the groups has ``nothing'' in front , or only a + or -, that means that there is a ``1'' there that becomes part of the factor. Second\ldots{} my answer is ``completely factored''. You might have noticed that y2 - 1 is a difference of squares so the answer is --> (2x + 5)(y+1)(y-1) 
-
-
-Now, let's look at polynomials. Up until this point, we have only been able to factor ``special case'' polynomials. We really haven't looked at factoring polynomials of the form ``ax2 + bx + c''. Factoring by grouping is going to allow us to factor any polynomial, but I might have to do something first. 
-
-We are going to start with an example that doesn't need to be factored by grouping. I can factor x2 + 5x + 6 by grouping, but, right now, I don't have enough terms. So I have to break that middle term up into 2 different terms. Basically, I need to ``un-combine like terms'' to figure out what was distributed over each group. My options are x + 4x, 2x + 3x and only one of them will work. Which one? Well let's try both to find out.
-
-Option 1: x2+ x + 4x + 6 --> x(x +1) + 2(2x + 3) --> what is in the ( ) is not identical. So Not this one.
-Option 2: x2+ 2x + 3x + 6 --> x(x + 2) + 3 (x + 2) --> woo hoo! --> (x + 3)(x +2)
-
-Let's try: 2x2+ 13x + 15
-
-If you hate grouping, you don't have to use it. You may have to spend a lot of time guessing and checking though. If I were to use pure guess and check, I have the following options: 
-
-(x + 15)(2x + 1)		(x +3)(2x +5)		(x +5)(2x +3)		(x+1)(2x + 15)
-
-I need to find two linear binomials so that the first term is 2x2 (formed by 2x * 1x) and the last term is 15 (formed by either 1*15 or 3*5). I then need to find the combination that will give me a 13x. This one isn't too bad because there aren't very many options. It turns out that (x+5)(2x+3) is the combination that will work. You have to be aware of the sign and check your answer!
-
-If you want something more streamline and systematic than just guess and check, you have to factor by grouping. I just have to figure out what to break 13x into to get two groups. By inspection it is obvious that I want to break it into 3x + 10x. By grouping 2x2 + 3x + 10x + 15 = x(2x + 3) + 5(2x +3) = (x + 5)(2x +3).
-
-Now, of course, there is a structured way to find what to break the terms up into. It's not always\ldots{} ``just look at it and figure it out''
-
-The Procedure to factor a quadratic trinomial with grouping. (ax2 + bx + c)
-
-1. Multiply a and c
-2. Find the factors of the product ``ac'' that will add to b.
-3. Split ``bx'' into two terms using the numbers found in step 2.
-4. Group
-5. Factor out the GCF from each group
-6. Factor into binomials
-
-Now, let's see this with an example that would be horrible to use guess and check with: 20x2 + 7x - 6
-
-1. 20 (-6) = -120
-2. Option: 1, 120; 2, 60; 3, 40; 5, 24; 	6, 20; 	8, 15; 10, 12 --> since it is negative, that means one is positive and one is negative, but they have a difference of +7 so it has to be -8 and 15. 
-3. 20x2 - 8x + 15x - 6 --> (it doesn't matter which way you split the terms)
-4. (20x2 - 8x) + (15x - 6) 
-5. 4x (5x -2) + 3 (5x - 2) 
-6. (4x + 3)(5x -2)
-
-Example 2
-
-Factor each of the following by grouping
-
-1. 6x2 -7x - 5
-2. 10x2 + 17x + 3
-3. 8x2 + 6x - 5
-4. 6x2- 19X + 10
-
-Solution:
-
-1. (2x +1)(3x -5)
-2. (5x+1)(2x+3)
-3. (2x-1)(4x+5)
-4. (3x-2)(2x-5)
-
-
-\section{Factoring Completely}
-
-Sometimes it seems that a polynomial can't be factored. Sometimes they can't and sometimes they can. One way to check to see if a polynomial is factorable is to check the Discriminant, if it is quadratic. If the Discriminant is a perfect square, then it is likely factorable. 
-
-Another thing to check for is a GCF. Sometimes polynomials, especially special cases, are disguised by a GCF. For example, 3x2 - 75. If you notice it has 2 terms which makes it a candidate for a difference of squares, but it isn't formed by squares. The terms have a common factor, factor it out and see what you are left with. Each term has a factor of 3, so 3 (x2- 25)\ldots{} oh look, the leftovers are a difference of squares. So 3(x-5)(x+5).
-
-When you are instructed to factor completely, you have to factor until you can't factor anymore. If you leave a common factor, you will get the problem wrong. Here are the basic steps you need to remember when asked to factor.
-
-1. Factor out any GCFs
-2. Factor the resulting polynomial.
- -Check for special cases!
- 3. Check to make sure each factor is factored.
-
-
-Example 1
-
-Factor Completely: 
-1. 7x3- 343x 
-2. 4x4 - 64
-3. 2x2y - 8xy + 8y
-Solution:
-
-1. 7x(x-7)(x+7)
-2. 4(x2 + 4)(x-2)(x+2)
-3. 2y (x - 2)(x-2)
-
-\section{The Big Solving Day}
-
-Making Factoring Useful
-
-The whole point of factoring is to make solving higher order equations easier. So how do you use factoring to solve an equation?
-
-The Zero Product Property
-
-If a•b = 0, then a = 0 or b = 0 
-Example
-
-3x = 0, therefore x = 0
-
-The Zero product property seems pretty lame and obvious. It says that if you have a product that is equal to zero, that means at least one of the factors had to be zero. So, if I have a standard form polynomial equation of the form polynomial = 0 and can factor it, one of those factors have to be zero. This makes factoring a useful way to solve equations. Let's see how this works.
-
-Solve x2+ 5x + 6 = 0. It is factorable (x +2)(x+3) = 0. So either x + 2 = 0 or x + 3 = 0. Solve each of those linear equations formed by setting each factor to zero via the zero product property, and you get x = -2 or -3! We could have figured that out by graphing or the quadratic formula too.
-
-How about x2- 25 = 0. It is factorable (x + 5)(x -5) = 0. So either x + 5 = 0 or x - 5 = 0. Solve each of those linear equations, and you get x = +5 or -5! We could have used the PoEs and opposite operations, but remember how people forget to add the +/-. Well, if you solve by factoring, you don't need to add that.
-
-Finally, let's try to solve 6x2 -7x = 5. First, it is called the zero product property and not the five product property, so put it in standard from. 6x2- 7x - 5 = 0. It is factorable (2x +1)(3x -5). So either 2x + 1 = 0 or 3x - 5 = 0. You get x = -1/2 or 5/3. Alternatively, you could have used the quadratic formula.
-
-Note: If something isn't factorable, that does not mean it has no solution set. There are quadratics that have solutions (irrational) that aren't factorable over integers. Now, if a quadratic has no solution, then it is definitely not factorable. You can actually use the discriminant to determine if a quadratic is factorable as stated in the previous section.
-
-Another Note: If you have a higher order equation, like a cubit, the only way you have to solve it, that isn't graphing, is factoring. 
-
-Example 1
-Problem: 
-1. (3x + 4)(x - 5) = 0
-2. 2x( 6x - 9) = 0
-3. x2 - 4x = -4
-4. x2 + 7x + 12 = 0
-5. 8x2 + 6x = 5
-6. 7x3 = 343x
-Solution:
-1. S = {-4/3 or 5}
-2. S = {0 or 3/2}
-3. S = {2}
-4. S={-3, -4}
-5. S ={ 1/2 , -5/4}
-6. S = {0,7,-7}
-Revisiting Radical Equations
-
-If you remember before spring break we did a little lesson on solving equations where the unknown was under a radical. I also said that there was one type we would have to wait to solve. Well, now is the time to solve that final type of radical equation. These equations have the unknown both under a radical and outside the radical. These types generate a quadratic equation when you square both sides, which is why we had to wait until now.
-
-Type 4: (the reason we are doing this now instead of with the radical unit)
-
-Example 2
-
-Solve: 
-
-Solution: Just like the first example, I just squared both sides of the equation, creating a quadratic after the first step.
-
-Work to find candidates for solution
-Check of candidates to find solution set
-
-Check 6
-
-
-Check -1
-
-
-Since the original equation wanted the positive root, it appears that only 6 works and -1 is an extraneous solution. S = {6}. -1 ext
-
-One simple change in the equation creates the opposite solution set. has the solution set x= {-1}, 6 ext.
-
-So be careful and check the candidates to make sure they belong in the solution set. When you solve one of the 4th type and get 2 candidates, both might work, 1 might work, or none of them will work, depending on the signs and how things play out in the solution process.
-
-Note for EOC\ldots{} Sometimes you will see that the EOC will ask you to find``roots'' or ``zeroes'' of a function. That means that you are trying to find x-intercepts. By now, you should have noticed that finding x-intercepts means to set the y to zero and solve the corresponding equation.
-
-
-\section{Completing the Square}
-
-Solving Quadratic Equations
-
-During this lesson we are going to learn a final method for solving a quadratic equation, a method that gives us the Quadratic Formula and is the method we use to convert standard form to vertex form.
-
-Reminders about ways to Solve Quadratics:
-
-1. Graphing (finding the x-intercepts, not always exact) --> doesn't work for irrational solutions
-2. Factoring/Zero-Product Property (not everything is factorable) --> only works if you can factor
-3. Quadratic Formula --> always works, but simplifying can be annoying
-4. Completing the Square --> always works
-
-Completing the square
-
-First, we are going to do a couple of example problems to solve equations that look a specific way, kind of like vertex form. Why? Because completing the square turns all standard form quadratics equations that look like these.
-
-Example 1
-(1) 		
-(2)
-Solve each of the following with a radical. 
-(1) 
-(2) 
-
-Solution:
-Remember, when you chose to perform a root in the process of solving, you have to add ±.
-
-
-		
-Now, if you can solve all of those, then, you are ready to learn how to complete the square. The only thing you have to do is convert the quadratic to the appropriate form, a perfect square trinomial on one side a number on the other side. The first step is to convert into . It seems like voodoo, but it is based on really knowing the pattern for a PST. First, you get the coefficient of the quadratic term to be 1 by division. Then you remove the term that is preventing the quadratic from being a PST, the constant term. You add or subtract it off, then figure out what you have to add to make a PST, based on the linear term. You know that in order for the quadratic to be a PST, you have to halve the linear term and square it for the constant term. There is a very set procedure to do this.
-
-Steps to follow to complete the square.
-
-1. Move the constant using SPoE to the side opposite the variables. This should leave the linear and quadratic terms. 
-2. Divide to make sure the coefficient of the quadratic term is 1. You should have something that looks like x2 + \#x = \#
-3. Add the square of ? the coefficient of the linear term to both sides to make sure the side with the variables is a perfect square. 
-4. Factor the left side. 
-
-Let's work an example to show this process. 
-
-Example 2
-
-Solve: 
-
-1. Move the constant term
-2. no need to divide, quadratic coefficient =1
-3 \& 4. Complete the Square, divide linear coefficient by 2, square it, add it to both sides. Then factor the polynomial side.
-5. Solve
-
-Solution:
-
-
-The beauty of completing the square is that it combines factoring and opposite operations to solve and the solution is pretty much simplified by the time you find it. You just have to be really comfortable with figuring out what to add to a quadratic to turn it into a PST.
-
-Here are some more examples.
-
-Example 3
-
-Solve: 
-
-(1) 	(2) 	 (3) 
-
-
-Solution:
-
-1.
-2.
-3.
-
-\section{Deriving the Quadratic Formula}
-
-Since completing the square is such a rigid procedure, it is possible to do it for the general form quadratic and derive a formula for solving quadratics. See if you can follow the steps below, which is the derivation of the quadratic formula. As you follow the steps, you should see parts of the formula starting to emerge.
-
-
-I'm going to follow the same steps for completing the square. 
-
-First, subtract the constant term. 
-
-Then divide by a to make the coefficient of the quadratic term 1.
-
-Add the square of half of the coefficient of the linear term.
-
-There is some work simplifying the right side, common denominators and rearrangement into a familiar form.
-
-Then factor the polynomial side. This gives you a perfect square, so square root both sides. Don't forget the +/-.
-
-Simplify the radical remaining, remembering that you have only multiplication and division properties for radicals, and none for addition/subtraction.
-
-Finally, get that x by itself\ldots{} and there you have the quadratic formula.
-
-
-Converting from Standard to Vertex
-
-Once you've figured out how to complete the square, you can try to convert a standard from quadratic function into a vertex form. There is a reason why it is sometimes called ``completed square'' form. You have to complete the square. The y on the other side does complicate things slightly. You can't divide both sides by the coefficient of the quadratic term. You have to factor it out and be very careful about what you add to both sides to complete the square.
-
-Example 1
-
-Convert into vertex form. 
-
-Solution:
-Since the coefficient of the quadratic is 1, you don't have to worry about the division.
-
-
-Example 2
-
-Convert into vertex form. 
-
-Solution:
-Since the coefficient of the quadratic is 3, you need to factor the 3 out. When you add to complete the PST, you don't just add 1, you add 3 to both sides.
-
-
-
-\section{You can divide polynomials?}
-
-Polynomial Division
-
-Polynomials represent real numbers, so if you can divide real numbers, you can divide polynomials. Polynomial division is just long division. You are going to have to remember the algorithm for long division and apply it to polynomials. If you think about what we've done with polynomials, we've avoided division. We've factored, but the actual act of division and getting remainders, that is something we haven't dealt with. You'll see what this is used for later, when you have to graph rational functions in algebra 2.
-
-As I said, it is just like long division. , which means if I ask you to divide I want to see as the answer. Remember, this works just like old fashioned long division. So if I ask for the quotient, I just want the quotient. If I just want the remainder, I don't need to write it as a fraction over the divisor. If there is no remainder, then that means that the Divisor is a factor of the Dividend. 
-
-Example 1
-
-Divide by 
-
-Solution: First, check and make sure the polynomials are correctly arranged in decreasing degree and completely simplified. If a specific term is missing, then add it on with a zero for a coefficient. This is crucial, but unnecessary for our example. The degrees are like place values.
-So Set it up like --> . To actually divide you look at the first term in the divisor and think ``What do I have to multiply that term by to get the first term in the dividend?'' In this case, you have to multiply x by x2 to get x3. . Then, just follow the algorithm of long division. Multiply the entire divisor by x2, line up these terms with their counterparts under the dividend and subtract. Bring down terms as necessary and continue until what you are left with is of lower degree than the divisor. If it is not zero, then that is your remainder. 
-
-
-Therefore the Quotient is x2 - 3x - 2 and the remainder is -6. Written correctly, .
-
-To check your solution, multiply the quotient and the divisor, then add the remainder. That should give you the dividend.
-
-
-A good way to practice is to take a couple of quadratic expressions that you know are factorable. Factor them. Then divide the polynomial by on of the factors and make sure the other factor is your answer. In algebra 1, you will have to factor, at most, a quadratic by a linear.
-
-Example 2
-
-Divide by 
-
-Solution: I know that x2 - 4 is factorable and the answer should be x + 2. If I can divide, I should get x + 2. Don't forget, you must have all of the degrees. Since the linear term is missing, I have to add it in as a place-value holder.
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Adding, subtracting, and multiplying polynomials}
+
+The first few operations with polynomials are related to things we have seen before.
+
+\subsection{Polynomial addition and subtraction}
+
+To add or subtract polynomials, we simply combine like terms -- nothing new here! The only change is that we might encounter more terms than before, and perhaps terms of higher degree.
+
+\begin{boxedex}
+\label{ex:polyadd}
+Add: $(3x^3 + x^2 + 6x - 8) + (4x^2 + 2x - 5)$
+
+\exsoln\ To add polynomials, we simply combine like terms. Recall that to be like terms, two terms much have identical variable parts. So, in this case, the sum of these two polynomials is:
+\[3x^3 + 5x^2 + 8x - 13\]
+\end{boxedex}
+
+Be sure to read carefully. A common mistake in the above example is to combine the first term of each polyomial -- but that's no good, since we are adding polynomials of different degree!
+
+\begin{boxedex}
+\label{ex:polysub}
+Subtract: $(7x^3-3x+1)-(x^3-4x^2-2)$
+
+\exsoln\ When subtracting we'll have to distribute the negative, so remember to check the signs. In this case, we'll have:
+\begin{commwork}
+(7x^3-3x + 1) - (x^3-4x^2-2) & (7x^3-3x + 1) + (-x^3-\umin4x^2-\umin2)
+\\
+&(7x^3-3x + 1) + (-x^3+4x^2+2)\\
+&6x^3+4x^2-3x+3
+\end{commwork}
+\end{boxedex}
+
+The key with subtraction is to remember that every term of that second polynomial is being subtracted.
+
+When showing your work, it is sometimes easier to keep track of everything if we set it up like ``old school'' addition or subtraction problem. To do this, we think of the degree of the term like the place value of a digit. If there is a degree missing, we can insert a term with coefficient 0. Here's how \cref{ex:polyadd} would look:
+
+\[\begin{array}{rrcrcrcr}
+	& 3x^3 		&+& x^2	&+& 6x		&-& 8\\
++	& 0x^3		&+& 4x^2	&+& 2x		&-& 5\\\hline
+	& 3x^3		&+& 5x^2		&+& 8x		&-& 13
+\end{array}\]
+
+Consider putting the subtraction in parenthesis as a reminder that every term needs to be subtracted. Here's \cref{ex:polysub} presented in this format:
+
+\[\begin{array}{rrcrcrcr}
+	& 7x^3 		&+& 0x^2	&-& 3x		&+& 1\\
+-	&( x^3		&-& 4x^2	&+& 0x		&-& 2)\\\hline
+	& 6x^3		&+& 4x^2		&-& 3x		&+& 3
+\end{array}\]
+
+
+\subsection{Polynomial multiplication}
+
+We have already studied the key ideas of polynomial multiplication, back in \cref{sec:exposumstopowers} when we learned how to raise a sum to a power. The key idea is to use the distributive property.
+
+For example, given the task of multiplying the linear binomials $(x+1)(x+2)$, we treat the $(x+1)$ as a single entity and distribute that over the two terms of $(x+2)$.
+\begin{commwork}
+{\color{blue}(x+1)}(x+2) & {\color{blue}(x+1)}x + {\color{blue}(x+1)}2
+& distribute the $(x+1)$
+\\
+& {\color{blue}(x+1)}{\color{red}x} + {\color{blue}(x+1)}{\color{violet}2}
+& identify two new distribution opportunities
+\\
+& {\color{blue}x}\cdot{\color{red}x}+{\color{blue}1}\cdot{\color{red}x} + {\color{blue}x}\cdot{\color{violet}2}+{\color{blue}1}\cdot{\color{violet}2}
+& distribute twice more
+\\
+& x^2 + x  + 2x + 2
+& simplify
+\\
+& x^2 + 3x + 2
+& combine like terms
+\end{commwork}
+
+We can also set things up using an old school style, as we saw back then, and this representation makes the connections more clear. Consider the two multiplication problems below: one with four-digit numbers, and one with four-term polynomials.
+
+\[
+\begin{array}{rrrrr}
+		&5&6&8&2\\
+\times	&3&9&4&7\\\hline
+\end{array}
+\qquad\text{and}\qquad
+\begin{array}{rrcrcrcr}
+		& 5x^3 		&+& 6x^2	&+& 8x		&+& 2\\
+\times	& 3x^3		&+& 9x^2	&+& 4x		&+& 7\\\hline
+\end{array}
+\]
+
+The process of multiplication is the same in these two cases: in fact, if we substitute $x=10$, we have \textit{exactly the same problem}, since we can rewrite a number in expanded form using its place value, for example:
+\begin{commwork}
+5682	& 5000 + 600 + 80 + 2\\
+		& 5\cdot1000 + 6\cdot100 + 8\cdot10 + 2\\
+		& 5\cdot10^3 + 6\cdot10^2 + 8\cdot10^1 + 2\cdot10^0 
+\end{commwork}
+This last line is the same as the polynomial $5x^3+6x^2+8x+2$, evaluated at $x=10$!
+
+In any case, each term in one polynomial will be multiplied by each term in the other polynomial. It's a pretty tedious exercise to multiply two four-digit numbers by hand, and the same goes for multiplying two cubic polynomials. So, instead, let's look at something more interesting.
+
+\subsection{Return of the algebra tiles}
+
+In \cref{sec:exposumstopowers} we saw a visual representation called algebra tiles. Algebra tiles can be used to represent polynomials, although they are limited to polynomials of degree 0, 1, or 2.
+
+Recall that the basic set of tiles includes three colored tiles that represent 1, $x$, and $x^2$. To represent negative numbers, we also have tiles of the same size, all colored red.
+
+\begin{figure}
+\begin{tikzpicture}[scale=0.75]
+	%% 1 tile
+	\draw[gray, fill=yellow!75] (0, 0) rectangle node[black]{\Large1} (1, 1);
+	\draw (0.5, 0) node[below] {1};
+	\draw (0, 0.5) node[left] {1};
+	%% x tile
+	\draw[gray, fill=green!75] (4, 0) rectangle node[black]{\Large$x$} (7, 1);
+	\draw (5.5, 0) node[below] {$x$};
+	\draw (4, 0.5) node[left] {1};
+	%% xx tile
+	\draw[gray, fill=blue!75] (10, -1) rectangle node[white]{\Large$x^2$} (13, 2);
+	\draw (11.5, -1) node[below] {$x$};
+	\draw (10, 0.5) node[left] {$x$};
+\begin{scope}[yshift=-4cm]
+	%% 1 tile
+	\draw[gray, fill=red!75] (0, 0) rectangle node[black]{\Large$-1$} (1, 1);
+%	\draw (0.5, 0) node[below] {1};
+%	\draw (0, 0.5) node[left] {1};
+	%% x tile
+	\draw[gray, fill=red!75] (4, 0) rectangle node[black]{\Large$-x$} (7, 1);
+%	\draw (5.5, 0) node[below] {$x$};
+%	\draw (4, 0.5) node[left] {1};
+	%% xx tile
+	\draw[gray, fill=red!75] (10, -1) rectangle node[black]{\Large$-x^2$} (13, 2);
+%	\draw (11.5, -1) node[below] {$x$};
+%	\draw (10, 0.5) node[left] {$x$};
+\end{scope}
+\end{tikzpicture}
+\end{figure}
+
+We can use the tiles to show a picture of a polynomial, and to show how addition and subtraction work, but they are really helpful for showing the key ideas around multiplication. Let's start with the basics.
+
+\begin{boxedex}
+What polynomial is represented below?
+
+\begin{center}
+\begin{tikzpicture}[scale=0.5]
+	% xx-tiles
+	\foreach \x/\y/\c in {0/2/blue, 8/4/blue} {
+		\draw[gray, fill=\c!75] (\x, \y) rectangle (\x+3, \y+3);
+	}
+	% Horiz x-tiles
+	\foreach \x/\y/\c in {0/0/green, 8/0/red, 8/2/red} {
+		\draw[gray, fill=\c!75] (\x, \y) rectangle (\x+3, \y+1);
+	}
+	% Vert x-tiles
+	\foreach \x/\y/\c in {4/4/red, 6/4/red, 14/4/green} {
+		\draw[gray, fill=\c!75] (\x, \y) rectangle (\x+1, \y+3);
+	}
+	% 1-tiles
+	\foreach \x/\y/\c in {%
+		0/6/yellow,%
+		2/6/yellow,%
+		4/0/yellow,%
+		6/0/red,%
+		4/2/yellow,%
+		6/2/yellow,%
+		12/0/red,%
+		12/2/yellow,%
+		12/4/red,%
+		12/6/red,%
+		14/0/yellow,%
+		14/2/yellow%
+	} {
+		\draw[gray, fill=\c!75] (\x, \y) rectangle (\x+1, \y+1);
+	}
+\end{tikzpicture}
+\end{center}
+
+\exsoln\ A red tile will cancel out a non-red tile of the same size, since the two add up to zero. After removing all of the ``zero pairs'', we just count up what's left over. In the end, we'll have:
+\[2x^2 - 2x + 4.\]
+\end{boxedex}
+
+If we have two piles of tiles at the start, we can scrape them into one big pile, remove all the zero pairs, and then count up what we have. This is polynomial addition! To subtract polynomials using tiles, we would negate all the tiles in the polynomial that's being subtracted (exchanging red tiles for their non-red versions, and vice versa), and then add. Nothing to it!
+
+Representing multiplication with algebra tiles is quite handy. The length and width are the factors and the product is the area. For instance, if we want to multply $(x+1)(x+2)$, we set up a rectangle that has width is $x+1$ and length $x+2$. We fill in the rectangle with algebra tiles and then interpret the result.
+
+\begin{figure}
+\label{fig:tileproduct}
+\begin{minipage}{0.48\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.75]
+	\draw[|-|] (0,0.1) -- node[above]{$x$} (3,0.1);
+	\foreach \x in {3,...,3} {
+		\draw[|-|] (\x,0.1) -- node[above]{1} (\x+1,0.1);
+	}
+	\draw[|-|] (-0.1,0) -- node[left]{$x$} (-0.1,-3);
+	\foreach \y in {-3,...,-4} {
+		\draw[|-|] (-0.1,\y) -- node[left]{1} (-0.1,\y-1);
+	}
+	\draw[gray] (0,0) rectangle (4,-5);
+\end{tikzpicture}
+\end{minipage}
+\begin{minipage}{0.48\textwidth}
+\centering
+\begin{tikzpicture}[scale=0.75]
+	\draw[|-|] (0,0.1) -- node[above]{$x$} (3,0.1);
+	\draw[|-|] (-0.1,0) -- node[left]{$x$} (-0.1,-3);
+	\draw[gray, fill=blue!75] (0,0) rectangle node[white]{$x^2$} (3,-3);
+	\foreach \x in {3,...,3} {
+		\draw[|-|] (\x,0.1) -- node[above]{1} (\x+1,0.1);
+		\draw[gray, fill=green!75] (\x,0) rectangle node[black]{$x$} (\x+1,-3);
+	}
+	\foreach \y in {-3,...,-4} {
+		\draw[|-|] (-0.1,\y) -- node[left]{1} (-0.1,\y-1);
+		\draw[gray, fill=green!75] (0,\y) rectangle node[black]{$x$} (3,\y-1);
+	}
+	\foreach \x in {3,...,3} {
+		\foreach \y in {-3,...,-4}
+			\draw[gray, fill=yellow!75] (\x, \y) rectangle node[black]{1} (\x+1,\y-1);
+	}
+\end{tikzpicture}
+\end{minipage}
+\caption{Multiplication using algebra tiles: $(x+1)(x+2)=x^2+3x+2$}
+\end{figure}
+
+So, we have the product $(x+1)(x+2) = x^2 + 3x + 2$.
+
+It may seem silly to manipulate these rectangular pictures one we know how to use the distributive property, but recall how helpful the square diagrams were in solving quadratic equations. Rectangular pictures will help us to visualize the ``undoing'' of multiplication in a section or two. Never underestimate the power of a picture!
+
+\subsubsection{An algebraic {F}-word}
+
+At this point, many algebra textbooks introduce the term \textit{FOIL}.\footnote{This term is also popular among online tutorial videos, math-help websites, private tutors, and parents.} The authors of the \algebranomicon\ are not fans of FOIL, and we mention it at this point only to dispell the misconception that we don't know what it is.
+
+FOIL is an acronym that stands for ``First, Outer, Inner, Last''. It is meant to be a mnemonic device for remembering how to multiply two binomials.
+
+\begin{figure}
+\begin{tabular}{lll}
+F & First & Multiply the first terms of the binomials\\
+O & Outer & Multiply the outer terms of the binomials\\
+I & Inner & Multiply the inner terms of the binomials\\
+L & Last & Multiply the last terms of the binomials
+\end{tabular}
+
+\vspace{3ex}
+
+\begin{tikzpicture}
+	\draw (0,0) node[right] {\Large$(\,x\,+\,1\,)\,(\,x\,+\,2\,)$};
+	\draw[red, very thick, <-] (2.6, 0.4) arc (0 : 180 : 1);
+	\draw (2.75, 0.75) node[red] {\textbf F};
+	\draw[green!50!black, very thick, <-] (3.6, 0.4) arc (0 : 180 : 1.5);
+	\draw (3.75, 0.75) node[green!50!black] {\textbf O};
+	\draw[blue, very thick, <-] (2.6, -0.4) arc (0 : -180 : 0.5);
+	\draw (2.75, -0.75) node[blue] {\textbf I};
+	\draw[violet, very thick, <-] (3.6, -0.4) arc (0 : -180 : 1);
+	\draw (3.75, -0.75) node[violet] {\textbf L};
+\end{tikzpicture}
+\end{figure}
+
+The problem with FOIL is that it only works with \textit{two binomials}. It's a special-case formula! If we're going to learn a technique for multiplication, we should focus on a technique that works for everything: the distributive property always works. FOIL does not.
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Dividing polynomials}
+
+Polynomials represent real numbers, and since we can divide real numbers, we can divide polynomials. We won't focus on polynomial division here -- it will be a topic of more dicsussion in algebra 2. We discuss the idea now simply to ``complete the set'' and show how all four of the basic operations work with polynomials.
+
+Polynomial division works just like long division of numbers. Recall from your elementary school days (or from \cref{sec:radrealnumbers}) that to do the division $643\div12$ we proceed like so:
+
+\[
+\renewcommand\arraystretch{1.1}
+\begin{array}{*2r @{\hskip\arraycolsep}c@{\hskip\arraycolsep} *3r}
+		&&&		~&5&3\\
+\cline{3-6}
+1&2		&\big)&		6&4&3\\
+		&&-&		6&0&~\\
+\cline{4-6}
+		&&&		~&4&3\\
+		&&&		-&3&6\\
+\cline{5-6}
+		&&&		~&~&7\\
+\end{array}
+\]
+
+In the end, we can make 53 whole groups of 12 and we are left with a remainder of 7. In other words: we can't make another group of 12 because we have only 7 left over. We can express this as a fraction since we have $\frac{7}{12}$ of another group. So we have:
+\[643 \div 12 = \frac{643}{12} = 53\,\frac{7}{12}\]
+Generally speaking, we have:
+\[\frac{\text{dividend}}{\text{divisor}} = \text{quotient}+\frac{\text{remainder}}{\text{divisor}}\]
+
+Of course, if the remainder is zero then it means that the divisor is a factor of the dividend. Both of these situations can arise when dividing polynomials. Later, in algebra 2, we will return to polynomial division and discover what we can learn from these remainders when they exist.
+
+In the remainder of this chapter, though, we will focus on the situation in which one polynomial is a factor of the other. This is particularly important and we will spend quite a bit of time learning the essential skills around \textit{factoring} polynomials.
+
+Before we get into that special situation, let's look at some examples of polynomial division. Suppose we wish to divide $x^3-5x^2+4x-2$ by $x-2$.
+
+First, we have to set up the division. We should check and make sure the polynomials completely simplified and that their terms are arranged by decreasing degree. Then, we set up the division:
+
+\[
+\renewcommand\arraystretch{1.1}
+\begin{array}{*1r @{\hskip\arraycolsep}c@{\hskip\arraycolsep} *4r}
+\cline{2-6}
+x-2		&\big)	&x^3&-5x^2&+4x&-2\\
+\end{array}
+\]
+
+To divide we look at the first term in the divisor and ask: ``What do we have to multiply that term by to get the first term in the dividend?'' In this case, we have to multiply $x$ (the first term in the divisor) by $x^2$ to get $x^3$ (the first term in the dividend). So, $x^2$ becomes the first term in the quotient.
+
+\[
+\renewcommand\arraystretch{1.1}
+\begin{array}{*1r @{\hskip\arraycolsep}c@{\hskip\arraycolsep} *4r}
+		&	~	&&x^2&\\
+\cline{2-6}
+x-2		&\big)	&x^3&-5x^2&+4x&-2\\
+\end{array}
+\]
+
+
+Then, we follow the algorithm of long division. Multiply the entire divisor by $x^2$, line up these terms with their counterparts under the dividend and subtract. Watch out for those negative signs!
+
+\[
+\renewcommand\arraystretch{1.1}
+\begin{array}{*1r @{\hskip\arraycolsep}c@{\hskip\arraycolsep} *4r}
+		&	~	&&x^2&\\
+\cline{2-6}
+x-2		&\big)	&x^3&-5x^2&+4x&-2\\
+		&-		&(x^3&-2x^2)\\
+\cline{2-6}
+		&		&~	&-3x^2\\
+\end{array}
+\]
+
+Bring down the extra terms, and we have a new polynomial whose degree is less than the original. So, we start again with the division step and determine what we have to multiply the divisor by so that we match the leading term in the new polynomial. We can stop when the degree of the remainder is less than the degree of the divisor. Here's the full process in this case:
+\[
+\renewcommand\arraystretch{1.1}
+\begin{array}{*1r @{\hskip\arraycolsep}c@{\hskip\arraycolsep} *4r}
+		&	~	&&x^2&-3x&-2\\
+\cline{2-6}
+x-2		&\big)	&x^3&-5x^2&+4x&-2\\
+		&-		&(x^3&-2x^2)\\
+\cline{2-6}
+		&		&~	&-3x^2&+4x&-2\\
+		&		&-	&(-3x^2&+6x)&\\
+\cline{4-6}
+		&		&&	&-2x&-2\\
+		&		&&-	&(-2x&+4)\\
+\cline{4-6}
+		&		&&		&&-6
+\end{array}
+\]
+
+Therefore the quotient is $x^2-3x-2$ and the remainder is $-6$. Written in its final form, we have:
+\[\frac{x^3-5x^2+4x-2}{x-2} = x^2-3x-2+\frac{-6}{x-2}\]
+To check our solution, we can multiply the quotient by the divisor, then add the remainder. That should give us the dividend back again!
+
+%A good way to practice is to take a couple of quadratic expressions that you know are factorable. Factor them. Then divide the polynomial by on of the factors and make sure the other factor is your answer. In algebra 1, you will have to factor, at most, a quadratic by a linear.
+
+That's a lot of alphabet soup and, as we mentioned above, we'll come back to generic polynomial division in algebra 2. For now, we will concern ourselves with the important situation in which one polynomial is a factor of another. Consider this final example as we make the transition.
+
+\begin{boxedex}
+Divide $x^2-9$ by $x+3$.
+
+\exsoln\ In this case, we find that there are terms ``missing'' from the dividend. So, we must add in a linear term with a zero coefficient: $0x$. Then, we can go about long division as usual:
+
+\[
+\renewcommand\arraystretch{1.1}
+\begin{array}{*1r @{\hskip\arraycolsep}c@{\hskip\arraycolsep} *3r}
+		&	~	&&x&-3\\
+\cline{2-5}
+x+3	&\big)	&x^2&+0x&-9\\
+		&-		&(x^2&+3x)\\
+\cline{3-5}
+		&		&&-3x&-9\\
+		&		&-&(-3x&-9)\\
+\cline{4-5}
+		&		&&&0
+\end{array}
+\]
+
+No remainder means that we have found to polynomials which multiply together to produce the other:
+\[(x+3)(x-3) = x^2 - 9\]
+Check our solution by carrying out the multiplication of these two linear binomials. What happens?
+\end{boxedex}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\subsection*{Chapter summary}
+
+Might be nice to have something here in every chapter?
