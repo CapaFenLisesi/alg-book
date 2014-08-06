@@ -1,18 +1,66 @@
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % 
-% Title and copyright pages for the Algebranomicon
+% Cover, title, and copyright pages for the Algebranomicon
 %
 
 % Title page
-\title{{\Huge\textbf{The Algebranomicon}}}
+\title{The Algebranomicon}
 \author{Patty C. Hill \\ Jason L. Ermer}
 \date{Revised: \today}
 
-%\pagenumbering{Alph}
+% Store title information for use after \maketitle
+\makeatletter
+\let\TITLE\@title
+\let\AUTHOR\@author
+\let\DATE\@date
+\makeatother
+
+% Custom colors
+\definecolor{coverpagecolor}{RGB}{25,25,25}
+\definecolor{covertextcolor}{RGB}{235,235,235}
+
+\pagestyle{empty}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%  
+% Cover
+%
+%\TileWallPaper{40px}{40px}{img/scales.png}	% small scales
+\TileWallPaper{80px}{80px}{img/scales2x.png}	% large scales
+
+\newgeometry{left=7.5cm}		% geometry for the cover page
+%\color{titlepagecolor}			% page color
+\color{covertextcolor}			% text color
+
+% print title
+{\fontsize{32pt}{0pt}\selectfont \textbf{\TITLE}\par}
+
+% horizontal rule to the right edge
+\makebox[0pt][l]{\rule{1.5\textwidth}{1pt}}
+
+% print authors
+\vfill
+{\LARGE \textbf{\AUTHOR}\par}
+%\vskip2\baselineskip
+
+\clearpage
+
+\restoregeometry		% restore the geometry
+\color{black}			% restore text color
+\ClearWallPaper			% clear the background image
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%  
+% Title page
+%
 \maketitle
 
+\clearpage
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%  
 % Copyright page
-\pagestyle{empty}
+%
 \null
 \vfill
 \noindent
@@ -22,4 +70,4 @@
 
 Copyright {2014} by Patty C. Hill and Jason L. Ermer. The Algebranomicon is made available under the Creative Commons Attribution-ShareAlike 4.0 International License: \url{http://creativecommons.org/licenses/by-sa/4.0/}.
 
-%\clearpage
+\clearpage
