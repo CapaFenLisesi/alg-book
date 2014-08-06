@@ -2,7 +2,7 @@
 \usepackage[english]{babel}
 
 % Partial inclusion, for piecewise development
-%\includeonly{functions}
+\includeonly{titlepage, numbers}
 
 \usepackage{floatrow}			% this automatically centers all floats
 \floatplacement{table}{hbtp}		% all tables are given the [hbtp] option
@@ -68,6 +68,47 @@
 }
 \makeatother
 
+%%%
+% Diagram of the form (a+b)^2 = a^2+ab+ab+b^2
+% \quadrangle{a}{b}{a^2}{ab}{b^2}
+\newcommand{\quadrangle}[5]
+{
+\begin{center}
+\begin{tikzpicture}[scale=0.625]
+	\draw(0,0) rectangle node{\large$#3$} (2,-2);
+	\draw(2,0) rectangle node{\large$#4$} (4,-2);
+	\draw(0,-2) rectangle node{\large$#4$} (2,-4);
+	\draw(2,-2) rectangle node{\large$#5$} (4,-4);
+	\draw(0,0) -- node[above]{\large$#1$} (2,0);
+	\draw(2,0) -- node[above]{\large$#2$} (4,0);
+	\draw(0,0) -- node[left]{\large$#1$} (0,-2);
+	\draw(0,-2) -- node[left]{\large$#2$} (0,-4);
+\end{tikzpicture}
+\end{center}
+}
+%%%
+
+%%%
+% Diagram of the form (a+b)(c+d) = ac+ad+bc+bd
+% \quadrangleplus{a}{b}{c}{d}{ab}{ac}{bc}{bd}
+\newcommand{\quadrangleplus}[8]
+{
+\begin{center}
+\begin{tikzpicture}[scale=0.625]
+	\draw(0,0) rectangle node{\large$#5$} (2,-2);
+	\draw(2,0) rectangle node{\large$#7$} (4,-2);
+	\draw(0,-2) rectangle node{\large$#6$} (2,-4);
+	\draw(2,-2) rectangle node{\large$#8$} (4,-4);
+	\draw(0,0) -- node[above]{\large$#1$} (2,0);
+	\draw(2,0) -- node[above]{\large$#2$} (4,0);
+	\draw(0,0) -- node[left]{\large$#3$} (0,-2);
+	\draw(0,-2) -- node[left]{\large$#4$} (0,-4);
+\end{tikzpicture}
+\end{center}
+}
+%%%
+
+
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 %
 % Font selection
@@ -118,13 +159,13 @@
 \pretocmd{\section}
 {
 	\iftoggle{afterpart}
-	{\global\togglefalse{afterpart}}% we're after a part
-	{\clearpage}% we're not immediately after a part
+	{\global\togglefalse{afterpart}}	% we're after a part
+	{\clearpage}						% we're not immediately after a part
 }{}{}
 \pretocmd{\chapter}
 {
-	\clearpage % do a page break
-	\global\toggletrue{afterpart}% tell \section we're just after a part
+	\clearpage						% do a page break
+	\global\toggletrue{afterpart}		% tell \section we're just after a part
 }{}{}
 
 % Draw horizontal rule under section titles
@@ -226,7 +267,9 @@
 	\immediate\write\outputstream{#1}
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % 
 % DOCUMENT
 %
@@ -240,23 +283,7 @@
 % 
 % TITLE & COPYRIGHT
 %
-% Title page
-\title{{\Huge\textbf{The Algebranomicon}}}
-\author{Patty C. Hill \\ Jason L. Ermer}
-\date{Draft: \today}
-
-\pagenumbering{Alph}
-\maketitle
-
-% Copyright page
-\pagestyle{empty}
-\null\vfill\noindent
-\raisebox{-0.33\height}{\includegraphics[height=1cm]{img/by-sa}} Patty C. Hill and Jason L. Ermer, 2014
-
-\copyright{2014} by Patty C. Hill and Jason L. Ermer. Untitled Algebra Book is licensed under the Creative Commons Attribution-ShareAlike 4.0 International License.
-
-To view a copy of this license, visit \url{http://creativecommons.org/licenses/by-sa/4.0/}.
-\clearpage
+\include{titlepage}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % 
@@ -265,12 +292,20 @@ To view a copy of this license, visit \url{http://creativecommons.org/licenses/b
 \frontmatter
 \pagestyle{plain}
 
+%\include{frontmatter}
+
 % Table of contents
 \setcounter{tocdepth}{1}
 \tableofcontents
 
 % Acknowledgements
 \include{acknowledgements}
+
+% Introduction
+%\cleardoublepage
+%\phantomsection
+%\addcontentsline{toc}{chapter}{Introduction}
+\include{introduction}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % 
@@ -284,12 +319,6 @@ To view a copy of this license, visit \url{http://creativecommons.org/licenses/b
 \cfoot{\thepage}
 
 \include{glossary}
-
-%%% Introduction
-%\cleardoublepage
-%\phantomsection
-%\addcontentsline{toc}{chapter}{Introduction}
-%\include{intro}
 
 % Numbered chapters
 \include{numbers}
@@ -307,6 +336,7 @@ To view a copy of this license, visit \url{http://creativecommons.org/licenses/b
 \include{radicals}
 \include{quadfunc}
 \include{polynomials}
+\include{factoring}
 
 % Appendices
 \appendix
@@ -319,9 +349,10 @@ To view a copy of this license, visit \url{http://creativecommons.org/licenses/b
 \backmatter
 \pagestyle{plain}
 
-\chapter{Back Matter}
+\include{backmatter}
 
-Glossary, bibliography, and index removed during editing process.
+%\chapter{Back Matter}
+%Glossary, bibliography, and index removed during editing process.
 
 %\cleardoublepage
 %\phantomsection
