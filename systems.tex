@@ -1,15 +1,11 @@
 \chapter{Linear Systems}
 \label{ch:systems}
 
-%%%
-\newcommand{\linearsys}[2]{\left\{\begin{array}{l}#1\\#2\end{array}\right.}
-%%%
-
 \chapquote{Still need to find a quote that works for this chapter. In the meantime, we have this.}{Author\\Description of author}
 
 %\begin{quote}
 %Still need to find a quote that works for this chapter. In the meantime, we have this.
-%\par \hfill --- Author, description of author
+%\par \hfill -- Author, description of author
 %\end{quote}
 
 Every chapter should have a lead paragraph -- even just a short one -- that appears before the first heading. This is a placeholder paragraph which will at some point be replaces by actual content.
@@ -21,7 +17,7 @@ Every chapter should have a lead paragraph -- even just a short one -- that appe
 Mathematics has many applications to the sciences, medicine, business, and economics. Often, though, we have to ``translate'' some problem in the real world so that it can be interpreted mathematically. It is usually necessary to break down the situation into a set of variables and equations, then look at them all together and see how they interact with each other. Doing this is called \inlinedef{mathematical modeling}.
 \index{mathematical modeling}
 
-We can model the financials of a business, weather patterns, transportation infrastructure, airline schedules, missile guidance systems, factory efficiency --- and many other phenomena --- in this way.
+We can model the financials of a business, weather patterns, transportation infrastructure, airline schedules, missile guidance systems, factory efficiency -- and many other phenomena -- in this way.
 
 \begin{boxedexplore}[Startup exploration: {I} $\varheart$ {Y}eardleigh{C}orp]
 Yeardleigh is a good business woman. She realizes that in order to grow her business, she must brand her corporation by selling things like t-shirts with her company logo on it. She spends \$270 on a design. Since she plans on printing a huge number of shirts, she finds a supplier who will sell her blank cotton shirts in a variety of sizes and colors for \$3.00 per shirt, and a printer who will print the logo in full color for \$1.50 per shirt. If Yeardleigh decides to sell the shirts for \$12.00 each, how many shirts must Yeardleigh sell before she can start making a profit on t-shirt sales?
@@ -88,53 +84,68 @@ The coordinates of the intersection point are $(36, 432)$. So, if Yeardleigh sel
 
 We have found Yeardleigh's \textit{break-even point}, a very important idea in economics and business. It is the point where a company's costs and income are the same. Before this point, the company will be losing money. After this point, the company will start to make a profit. In the context of our problem, Yeardleigh will make a profit on t-shirt sales only if she sells more than 36 shirts.
 
-\subsection{Writing a system of equations}
+\subsubsection{Writing a system of equations}
 
 When we have two (or more) equations that we want to treat as a system, we usually write them stacked vertically, and we very often add a big curly brace (usually on the left-hand side only) to show that they are meant to be considered a group. In the case of the startup exploration, we write: \[\left\{\begin{array}{l}y=12.00x\\y=4.50x+270\end{array}\right.\]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Solving systems of linear equations}
+\subsection{Solutions to systems}
+
+\begin{boxedexplore}[Startup exploration: Imagining intersections]
+Imagine two lines drawn in the coordinate plane. In the previous section, we saw that these lines might intersect at a single point. Is that the only possibility? Could they intersect in more than one point? Could they not intersect at all?
+
+What about if we have three lines in the plane? Describe the ways they might (or might not) intersect.
+
+What about a parabola and a line? What about two parabolas?
+\end{boxedexplore}
+
+\addtodoitem{Visuals of the various solutions types.}
+
+In the startup exploration, we are visualizing the possible solutions to various possible systems of equations.
 
 \begin{boxeddef}[Solution to a system of equations]
 The set of all points that are common to all equations in the system. Graphically, these are the points where all of the graphs of the functions intersect. Note: a system of equations may have no solution.
 \end{boxeddef}
 
-The solution to a system of linear equations is the intersection point of the graphs of those functions. Can a system of equations have more than one solution?
-
-Imagine that we have a system of two linear equations. Try to visualize the types of solutions we might get. What are the different ways that two straight lines in the plane can intersect?
-
+We will focus in this course on systems of two linear equations, and there are three ways in which two lines in the plane might interact:
 \begin{itemize}
 \item The lines might intersect at a single point. Such a system has a unique solution.
 
 \item The lines might be parallel and not intersect at all. In this case, the system has no solution.
 
-\item The lines might overlap completely (that is, the ``two lines'' might actually be the same line). In this case, the system has infinitely many solutions: every point one line is also on the other line --- they're the same line!
+\item The lines might overlap completely (that is, the ``two lines'' might actually be the same line). In this case, the system has infinitely many solutions: every point one line is also on the other line -- they're the same line!
 \end{itemize}
 
 Since we have straight lines, these are the only possibilities. For example, a system of linear equations cannot have ``exactly two soltuions''. (Can you explain why not?) Later (in Algebra 2, for instance), systems will get more complex. Then, we won't have to limit ourselves to linear equations! A system of two quadratic equations, for example, might have no solution, one solution, two solutions, or infinitely many solutions. (Can you picture how each of those might happen? Look back at some of the graphs we drew in \cref{ch:graphs} and \cref{ch:functions}.)
 
 
-\subsection{Checking a solution to a system}
+\subsection{Checking a solution}
 
 Suppose we have a point that we think might be a solution to a system of equations. How can we check?
 
 \begin{boxedex}
 Determine whether or not the point $(-1,5)$ is a solution to each of the given systems.
 \[
-\text{System A: }\left\{%
-\begin{array}{l}
-x+y=4\\
-x=-1
-\end{array}
-\right.
+\text{System A: }\twosystem{x+y=4}{x=-1}
 \qquad
-\text{System B: }\left\{%
-\begin{array}{l}
-y=-x+4\\
-y=-\tfrac{1}{5}x
-\end{array}
-\right.
+\text{System B: }\twosystem{y=-x+4}{y=-\tfrac{1}{5}x}
 \] 
+
+%\[
+%\text{System A: }\left\{%
+%\begin{array}{l}
+%x+y=4\\
+%x=-1
+%\end{array}
+%\right.
+%\qquad
+%\text{System B: }\left\{%
+%\begin{array}{l}
+%y=-x+4\\
+%y=-\tfrac{1}{5}x
+%\end{array}
+%\right.
+%\] 
 
 To check whether the point is a solution to System A, we'll sustitute $x$ and $y$ into both equations. If the point makes both equations true, then the point is a solution to the system.
 
@@ -170,17 +181,16 @@ y 	&= -\tfrac{1}{5}x\\
 The given point works for the first equation, but not for the second. To be a solution, the point has to satisfy both equations, so no, the point $(-1,5)$ is not a solution to System B.
 \end{boxedex}
 
-\subsection{Writing the solution to a system}
+\subsection{Writing the solutions}
 
-NEED SOME VISUALS HERE...?
-
-When we were solving equations --- meaning one equation at a time --- we use set notation to record our solutions. Since the solution to a system involves two numbers, we have to be mindful about how we write our answers.
+When we were solving equations -- meaning one equation at a time -- we use set notation to record our solutions. Since the solution to a system involves two numbers, we have to be mindful about how we write our answers.
 
 Two cases are pretty straightforward. If the system has a unique point as its solution, we can write that point as the solution set. For example, the solution to System A in the previous example is $\solset{(-1,5)}$. Note that we've just enclosed the point $(-1,5)$ inside the curly braces to show that the set includes that point.
 
 The second easy case is when a system has no solution. Then, we can use the same approach for when a single equation has no solution: $\solset{~}$ or $\mathcal{S}=\emptyset$.
 
-The trickier case is when two lines overlap completely. We can't say that the solutions in the case are ``all real numbers'' (as we said for a single equation). 
+The trickier case is when two lines overlap completely. We can't say that the solutions in the case are ``all real numbers'' (as we said for a single equation). In this case we say that $\solset{\text{all the points on the line }y=2x}$ or write out the sentence.\footnote{An alternative is to use set notation with a fancy notation extension. We write $\solset{(x,y) \mid x, y \in \R \text{ and } y=2x}.$ This is called \textit{set builder notation}, and it uses the vertical bar to mean ``such that''. So, this math sentence read ``$\mathcal{S}$ is the set of all points $(x,y)$ such that $x$ and $y$ are real numbers and $y=2x$.''}
+
 
 \subsection{Techniques for solving linear systems}
 
@@ -201,6 +211,8 @@ The different approaches have pros and cons, and you may find that you prefer a 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Solving by graphing}
 \label{sec:sysgraphing}
+
+\addtodoitem{Solving systems by graphing needs work.}
 
 We solved the startup exploration at the start of $\cref{sec:sysintro}$ by graphing two equations on the same set of axes. That's the idea behind this solution technique.
 
@@ -255,14 +267,7 @@ For the t-shirt example, go to the \calculator{table} screen on your calculator,
 
 \begin{boxedexplore}[Startup exploration: Ugly graphing]
 Solve the following system by graphing.
-\[
-\left\{%
-\begin{array}{l}
-y=\frac{1}{3}x-4\\[1ex]
-y=5x-6
-\end{array}
-\right.
-\]
+\[\twosystem{y=\frac{1}{3}x-4}{y=5x-6}\]
 What are the challenges that arise when solving this system by graphing?
 \end{boxedexplore}
 
@@ -345,7 +350,7 @@ y &= 2x -4
 \end{aligned}\]
 \end{boxedex}
 
-When we assume that the two $y$'s were equal --- as they must be if we have found a solution to the system --- then substitution means that we can replace one $y$ with the other.
+When we assume that the two $y$'s were equal -- as they must be if we have found a solution to the system -- then substitution means that we can replace one $y$ with the other.
 
 We can carry this out for the problem in the startup exploration. Since we have two equations in $y=$ format, and since any point that satisfies the system has a $y$-coordinate that satisfies both equations, we can set the equations equal to one another:
 \[\begin{aligned}
@@ -508,7 +513,7 @@ That was the first ``special case''. The other special case is when the two line
 
 \begin{boxedexplore}[Startup exploration: Ugly substitution]
 Study the following system of linear equations.
-\[\linearsys{4x+3y=22}{3x+5y=11}\]
+\[\twosystem{4x+3y=22}{3x+5y=11}\]
 What challenges would you face if you tried to solve this system by graphing? What challenges would you face if you tried to solve it by substitution?
 \end{boxedexplore}
 
@@ -517,7 +522,7 @@ The equations in the startup exploration would require quite a bit of work to gr
 This technique is particularly helpful when the given equations are both in standard form. The premise behind elimination is that we use the properties of equality to, say, add two equations together. Recall that the addition property of equality says that we can add the same quantity to both sides of an equation. If we know two things are equal, we can add one thing to one side of an equation and the other thing to the other side, and still maintian equality.
 
 \begin{boxedex}
-Solve the following system using elimination. \[\linearsys{y=3}{5x-y=12}\]
+Solve the following system using elimination. \[\twosystem{y=3}{5x-y=12}\]
 
 \exsoln\ The first equation tells us that $y$ is equal to 3. Of course, we could add $y$ to both sides of an equation\ldots\ or we could add 3 to both sides of an equation\ldots but since we know $y$ and 3 are equal we can add $y$ to one side of an equation and 3 to the other side of that equation!
 
@@ -544,7 +549,7 @@ A method for solving a system of equations that involves adding two equations to
 The method is called ``elimination'' because it eliminates a variable.\footnote{This name is also related to a technique from the study of matrices called \textit{Gaussian elimination}.}
 
 \begin{boxedex}
-Solve the following system by elimination. \[\linearsys{2x + 2y = 7}{3x - 2y = 8}\]
+Solve the following system by elimination. \[\twosystem{2x + 2y = 7}{3x - 2y = 8}\]
 
 \exsoln\ Notice how the coefficients on the $y$ terms are opposites. If we add these two equations together, the $y$'s will be eliminated:
 \[
@@ -561,7 +566,7 @@ We then substitute $x=3$ back into one of the equations to find $y = \frac{1}{2}
 
 The key to the elimination approach is to ``add the equations together'' so that one variable vanishes, just as the $y$ disappeared on the third in the previous example. In order to faciliatate this elimination, one or both of the equations must sometimes be multiplied by a constant before we add them (an application of MPOE).
 
-This approach is required to handle the startup exploration. Recall, that in that problem we were asked to solve the following system by elimination.\[\linearsys{4x+3y=22}{3x+5y=11}\]
+This approach is required to handle the startup exploration. Recall, that in that problem we were asked to solve the following system by elimination.\[\twosystem{4x+3y=22}{3x+5y=11}\]
 Adding these two equations won't eliminate any variables, as we have encountered in the earlier examples. But, with a few clever applicatons on MPOE, we can put ourselves into exactly the situation that we desire.
 
 Let's make it our goal to eliminate $x$. What could we do to these equations so that we have equivalent equations but ones in which the $x$ terms have opposite coefficients?

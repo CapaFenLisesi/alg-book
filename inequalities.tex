@@ -1,35 +1,35 @@
 \chapter{Inequalities}
 \label{ch:inequalities}
 
-%%%--------------------------------------------------
-%%% BRING THIS OUT
-\newcommand{\gridconfig}[4]
-%%	arg1: x-min
-%%	arg2: x-max
-%%	arg3: y-min
-%%	arg4: y-amx
-{
-	%% Draw axes
-	\draw[very thin, step=1.0, color=gray!25] (#1,#3) grid (#2,#4);
-	\draw[<->,thick] (#1-0.5,0) -- (#2+0.5,0);% node[right] {\footnotesize$x$};
-	\draw[<->,thick] (0,#3-0.5) -- (0,#4+0.5);% node[above] {\footnotesize$y$};
-	%% Draw labels
-	\foreach \x in {-2,-4,...,#1} \draw (\x,0.05) -- (\x,-0.05)
-		node[below] {\footnotesize\x};
-	\foreach \x in {2,4,...,#2} \draw (\x,0.05) -- (\x,-0.05)
-		node[below] {\footnotesize\x};
-	\foreach \y in {-2,-4,...,#3} \draw (-0.05,\y) -- (0.05,\y)
-		node[left] {\footnotesize\y};
-	\foreach \y in {2,4,...,#4} \draw (-0.05,\y) -- (0.05,\y)
-		node[left] {\footnotesize\y};
-	\draw(0,0) node[below left] {\footnotesize0};
-%	
-%	\foreach \x in {#1,...,#2} \draw (\x,0.05) -- (\x,-0.05)
+%%%%--------------------------------------------------
+%%%% BRING THIS OUT
+%\newcommand{\gridconfig}[4]
+%%%	arg1: x-min
+%%%	arg2: x-max
+%%%	arg3: y-min
+%%%	arg4: y-amx
+%{
+%	%% Draw axes
+%	\draw[very thin, step=1.0, color=gray!25] (#1,#3) grid (#2,#4);
+%	\draw[<->,thick] (#1-0.5,0) -- (#2+0.5,0);% node[right] {\footnotesize$x$};
+%	\draw[<->,thick] (0,#3-0.5) -- (0,#4+0.5);% node[above] {\footnotesize$y$};
+%	%% Draw labels
+%	\foreach \x in {-2,-4,...,#1} \draw (\x,0.05) -- (\x,-0.05)
 %		node[below] {\footnotesize\x};
-%	\foreach \y in {#3,...,#4} \draw (-0.05,\y) -- (0.05,\y)
+%	\foreach \x in {2,4,...,#2} \draw (\x,0.05) -- (\x,-0.05)
+%		node[below] {\footnotesize\x};
+%	\foreach \y in {-2,-4,...,#3} \draw (-0.05,\y) -- (0.05,\y)
 %		node[left] {\footnotesize\y};
-}
-%%%--------------------------------------------------
+%	\foreach \y in {2,4,...,#4} \draw (-0.05,\y) -- (0.05,\y)
+%		node[left] {\footnotesize\y};
+%	\draw(0,0) node[below left] {\footnotesize0};
+%%	
+%%	\foreach \x in {#1,...,#2} \draw (\x,0.05) -- (\x,-0.05)
+%%		node[below] {\footnotesize\x};
+%%	\foreach \y in {#3,...,#4} \draw (-0.05,\y) -- (0.05,\y)
+%%		node[left] {\footnotesize\y};
+%}
+%%%%--------------------------------------------------
 
 \chapquote{Still need to find a quote that works for this chapter. In the meantime, we have this.}{Author\\Description of author}
 
@@ -147,13 +147,13 @@ Draw a graph of $x > -2$.
 First, we found the boundary (it's $-2$) and plotted it on the number line, along with 0. The boundary is excluded from the solution set, so we used an hollow circle to show that $-2$ itself is not part of the solution. Then we used an arrow (a ray) pointing to the right because we are interested in values that are greater than -2.
 \end{boxedex}
 
-The following comments may not be necessary, given the previous to examples, but we'll summarize them here for clarity. There are two main things to consider when graphing a one-variable inequality.
+The following comments may not be necessary, given the previous two examples, but we'll summarize them here for clarity. There are two main things to consider when graphing a one-variable inequality.
 
 \textbf{Consideration \#1: Boundary.} What is the greatest or least possible value of the solution, and is that point included in the solution set?
 
-If we have an inclusive inequality ($\leq$, $\geq$, and $=$), then the boundary point is included in the solution set. On the graph, we use a filled in circle or ``closed'' endpoint to show that the boundary is part of the solution. We call the boundary point an \textit{inclusive boundary}.
+If we have an inclusive inequality ($\leq$, $\geq$, and $=$), then the boundary point is included in the solution set. On the graph, we use a filled in circle or ``closed'' endpoint to show that the boundary is part of the solution. We call the boundary point an \gls{inclusive boundary}.
 
-If, on the other hand, we have an exclusive inequality ($<$, $>$, and $\neq$), then the boundary point is not included in the solution set. On the graph we draw a hollow or ``open'' endpoint to show that the boundary is not part of the solution. We call the boundary an \inlinedef{exclusive boundary}.
+If, on the other hand, we have an exclusive inequality ($<$, $>$, and $\neq$), then the boundary point is not included in the solution set. On the graph we draw a hollow or ``open'' endpoint to show that the boundary is not part of the solution. We call the boundary an \gls{exclusive boundary}.
 
 \textbf{Consideration \#2: Direction.} Are the solutions greater than the boundary (stretching to the right, towards positive infinity) or are they less than the bounday (stretching to the left towards negative infinity)? We draw a heavy arrow in that direction.
 
@@ -180,7 +180,7 @@ TODO
 
 When we solve an equation using the POEs, we create a series of equivalent equations until we can determine the solution set. The big question of this section is: Can we do something similar for inequalities? What does it mean to have \textit{equivalent inequalities}?
 
-Equivalent inequalities is not an oxymoron.\footnote{An oxymoron is a figure of speech that brings together two things that appear to be contradictory. For example, the titles of the movie ``Night of the Living Dead'' and the song ``Along Together'' contain oxymorons.} It just means that two inequality statements have the same solution set! For example, $3x < 12$ and $x < 4$ are equivalent because the exact same values of $x$ will work in both statements. They have the same graph!
+Equivalent inequalities is not an oxymoron.\footnote{An oxymoron is a figure of speech that brings together two things that appear to be contradictory, like the term ``jumbo shrimp''. The titles of the movie ``Night of the Living Dead'' and the song ``Alone Together'' contain oxymorons.} It just means that two inequality statements have the same solution set! For example, $3x < 12$ and $x < 4$ are equivalent because the exact same values of $x$ will work in both statements. They have the same graph!
 
 But, how can we transform an inequality into an equivalent inequality? Can we use the same properties as we used for solving equations? In essence: are there Properties of Inequalities like there are Properties of Equality (POEs)?
 
@@ -386,15 +386,47 @@ In set notation, we write: $\solset{ x \in \R \mid x \neq 2}$. The graph is the 
 \section{Two-variable inequalities}
 \label{sec:ineqtwovar}
 
-\begin{boxedexplore}[Startup exploration: TODO]
-TODO
+\begin{boxedexplore}[Startup exploration: Pick some points]
+Consider the two-variable inequality $y < 2x$. If we let $x=5$ and $y=1$, we have a true statement since $1 < 2\cdot5$, that is to say $1<10$. The point $(5,1)$ satisfies our inequality.
+
+On the other hand, the point $(0,1)$ does not satisfy our inequality. If we let $x=0$ and $y=1$, out inequality doesn't work: $1<2\cdot0$ is false.
+
+Find some other points that satisfy this inequality, and some other points that do not. Plot these points on a graph (perhaps using different colors). What patterns do you notice?
 \end{boxedexplore}
 
-Having spent all of that time talking about one-variable inequalities, we can now get on with something more interesting: turning a linear equation like $y = -2x + 6$ into a two-variable inequality like $y \leq -2x + 6$.
+Having spent all of that time talking about one-variable inequalities, we can now get on with something more interesting: turning a linear equation like $y = 2x$ into a two-variable inequality like $y < 2x$.
 
-What does this inequality mean? What counts as solution? To explore this a bit more, suppose we want to check whether the random points $(4,5)$ and $(-3,2)$ satisfy the inequality $y \leq -2x + 6$.
+In the startup exploration, we set out to find some points that either satisfy or fail to satisfy this inequality. If we plot some points on a graph -- dark blue for ``satisfy'', pale red for ``fails to satisfy'' -- an interesting pattern emerges:
 
-To accomplish this, we substitute the values $x=4$ and $y=5$ into the given inequality, and then see whether the resulting inequality is true or false:
+\begin{figure}
+\resizeplot{-5}{-5}{5}{5}
+\colorlet{ptblue}{blue!75!black}
+\begin{tikzpicture}
+	\begin{axis}[standard]
+		\foreach \y in {-5,...,5} {
+			\foreach \x in {-5, ..., 2}
+				\addplot[algpoints, red!50] coordinates{(\x,\y)};
+			\foreach \x in {3, ..., 5}
+				\addplot[algpoints, ptblue] coordinates{(\x,\y)};
+		}
+		\foreach \y in {3,...,-5} {
+			\addplot[algpoints, ptblue] coordinates{(2,\y)};
+		}
+		\foreach \y in {1,...,-5} {
+			\addplot[algpoints, ptblue] coordinates{(1,\y)};
+		}
+		\foreach \y in {-1,...,-5} {
+			\addplot[algpoints, ptblue] coordinates{(0,\y)};
+		}
+		\foreach \y in {-3,...,-5} {
+			\addplot[algpoints, ptblue] coordinates{(-1,\y)};
+		}
+		\addplot[algpoints, ptblue] coordinates{(-2,-5)};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+
+We could carry out this procedure with any inequality, say $y \leq -2x + 6$, by checking a few random points, say $(4,5)$ and $(-3,2)$, to see if they satisfy the inequality .
 \[\begin{aligned}
 y &\leq -2x+6
 && \quad\text{original inequality}\\
@@ -414,19 +446,19 @@ y &\leq -2x+6
 \\
 2 &\leq 12
 \end{aligned}\]
-This statement is true, and so the points $(-3,2)$ is part of the solution set. But our work with one-variable inequalities suggests that this probably isn't the \textit{only} point in the solution set. What other points might be included?
+This statement is true, and so the point $(-3,2)$ is part of the solution set. But our work above suggests that this probably isn't the \textit{only} point in the solution set. What other points might be included?
 
 Note that the inequality is inclusive, so any point on the line $y = -2x + 6$ must be part of the solution set (that's the line $y$ \textit{equals} $-2x + 6$).
 
-In addition, the solution set must include any point that is ``less than'' that line. In other words, any point on the same side of the line as $(-3,2)$, the point that we checked above, and which we know is in the solution set. So, our solution must look like the graph below.
+In addition, the solution set must include any point that is ``less than'' that line. In other words, any point on the same side of the line as $(-3,2)$, the point which we checked above, and which we \textit{know} is in the solution set. So, our solution must look like the graph below.
 \resizeplot{-8}{-8}{8}{8}
 \begin{center}
 \begin{tikzpicture}
 	\begin{axis}[standard]
-		\addplot[algcurve, blue, domain=-1.25:7.25] (\x,-2*x+6);
+		\addplot[algcurve, blue, domain=-1.25:7.25]{-2*x+6};
 %		\addplot[algpoints, red] coordinates {(4,5)};
 %		\addplot[algpoints, white] coordinates {(-3,2)};
-		\fill[nearly transparent, blue] (axis cs:-1,8,0) -- (axis cs:-8,8,0) -- (axis cs:-8,-8,0) -- (axis cs:7,-8,0) -- cycle ;
+		\fill[nearly transparent, blue] (axis cs:-1,8) -- (axis cs:-8,8) -- (axis cs:-8,-8) -- (axis cs:7,-8) -- cycle;
 %		%% Addenda
 %		\draw (axis cs:-3,2,0) -- (axis cs:-3.5,2.5,0) node[left]{YES!};
 %		\draw[black] (axis cs:-3,2,0) circle[radius=4pt];
@@ -497,7 +529,7 @@ Since our inequality is ``greater than'' it seems reasonable to shade the region
 		\addplot[algcurve, blue, loosely dashed, domain=-2.75:17.75] (\x,-1*x/3+5);
 %		\addplot[algpoints, red] coordinates {(4,5)};
 %		\addplot[algpoints, white] coordinates {(-3,2)};
-		\fill[nearly transparent, blue] (axis cs:-2,17/3,0) -- (axis cs:-2,17,0) -- (axis cs:17,17,0) -- (axis cs:17,-2/3,0) -- cycle ;
+		\fill[nearly transparent, blue] (axis cs:-2,17/3) -- (axis cs:-2,17) -- (axis cs:17,17) -- (axis cs:17,-2/3) -- cycle ;
 	\end{axis}
 \end{tikzpicture}
 \end{center}
@@ -585,7 +617,7 @@ Write the system pictured in the graph at the beginning of this section.
 
 The red graph is a direct variation (a straight line through the origin) through the point $(1,2)$. So the equation for the line is $y=2x$. This line is dashed and shaded above, so we have the inequality $y > 2x$.
 
-So, together we have the system of inequalities \[\linearsys{y\leq3}{y>2x}.\]
+So, together we have the system of inequalities \[\twosystem{y\leq3}{y>2x}.\]
 \end{boxedex}
 
 \subsection{Special case systems}
@@ -622,7 +654,7 @@ Note that the red region is entirely covered over by the blue region! So the ove
 As the previous example shows, a pair of parallel lines can create a pair of inequalities which overlap. But, could the shading have gone differently? There are four different scenarios that can arise when turning two parallel lines into inequalities (one of this is shown in the example). Can you draw pictures of the other three scenarios? How does the solution set look in each case?
 
 \begin{boxedex}
-Graph the system:\[\linearsys{y\geq2x+6}{-2x+y<6}.\]
+Graph the system:\[\twosystem{y\geq2x+6}{-2x+y<6}.\]
 
 \exsoln\ Let's fast-forward to the graph and see what's happening here.
 
@@ -657,7 +689,7 @@ We jumped right in to graphing a system, but suppose we want simply to check to 
 
 \begin{boxedex}
 
-Determine whether the point $(-2, 1)$ is a solution to the system: \[\linearsys{y > 3x}{y < 2x-1}.\]
+Determine whether the point $(-2, 1)$ is a solution to the system: \[\twosystem{y > 3x}{y < 2x-1}.\]
 
 \exsoln\ To answer this question, we don't have to graph. We can just substitute the point into each inequality and check to see whether it makes both true. Let's check $(-2,1)$:
 \[
@@ -720,7 +752,7 @@ Businesses want to maximize their profits and minimize their costs. At the same 
 Maximizing or minimizing a quantity, given a set constraints.
 \end{boxeddef}
 
-There are multiple techniques for optimization. The approach we will learn here is called \inlinedef{linear programming}. Real-world linear programming problems have many variables, sometimes numbering in the millions. Since we're only in Algebra 1, we'll stick with just a few variables.
+There are multiple techniques for optimization. The approach we will learn here is called \inlinedef{linear programming}.\footnote{More on the interesting history of linear programming at the end of this section!} Real-world linear programming problems have many variables, sometimes numbering in the millions. Since we're only in Algebra 1, we'll stick with just a few variables.
 
 \subsection{Process of linear programming}
 
@@ -795,7 +827,7 @@ The other two vertices show the company making all 16 machines they can make per
 
 Finally, our solution makes sense because it seems reasonable that we would want to find the solution that maximizes overall production, but also maximizes production of the machines that make more money for the company!
 
-In a real linear programming problem, there would likely be many more constraints. For example, the maximum number of machines per day might depend on the number of employees we have, the amount of time each employee can work, how productive those workers are during that time, the their salaries, how much money there is in the payroll account, how many parts we need, how many parts we have in stock, how much it costs to make new parts, how long it will take to make them,\ldots\ well, this could go on for a while. At any rate: business work quite hard to figure out challenges like this!
+In a real linear programming problem, there would likely be many more constraints. For example, the maximum number of machines per day might depend on the number of employees we have, the amount of time each employee can work, how productive those workers are during that time, the their salaries, how much money there is in the payroll account, how many parts we need, how many parts we have in stock, how much it costs to make new parts, how long it will take to make them,\ldots\ well, this could go on for a while. At any rate: businesses work quite hard to figure out challenges like this!
 
 
 \subsection{History of linear programming}
