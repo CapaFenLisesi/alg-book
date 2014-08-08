@@ -12,18 +12,18 @@ Factoring a polynomial has the same goal: to rewrite the polynomial as an equiva
 \label{sec:factorsolvingpreview}
 
 \begin{boxedexplore}[Startup exploration: Solutions and factors]
-Solve the following quadratic equation using the square method that we studied in \cref{ch:quadeq}:
+Solve the following quadratic equation using the quadrangle method that we studied in \cref{ch:quadeq}:
 \[x^2 + 3x + 2 = 0\]
 Then, look back at \cref{fig:tileproduct} (figure?), which shows a way of writing this quadratic trinomial as the product of two binomials.
 \[(x+1)(x+2) = x^2+3x+2\]
 What relationships, if any, are there between these factors and the solutions to the given equation?
 \end{boxedexplore}
 
-We solve the quadratic $x^2+3x+2=0$ using the square method, beginning with the observation that the linear term has an odd coefficient. So, we multiply through by 4: $4x^2+12x+8=0$. From here, we can draw the square diagram:
+We solve the quadratic $x^2+3x+2=0$ using the quadrangle method, beginning with the observation that the linear term has an odd coefficient. So, we multiply through by 4: $4x^2+12x+8=0$. From here, we can draw the quadrangle diagram:
 
 \quadrangle{2x}{3}{4x^2}{6x}{\color{red}9}
 
-The square diagram predicts a constant term of 9, but we only have 8. So, we add 1 to both sides. Here's the full work:
+The quadrangle diagram predicts a constant term of 9, but we only have 8. So, we add 1 to both sides. Here's the full work:
 \begin{commwork}
 x^2+3x+2			& 0
 \\
@@ -34,7 +34,7 @@ x^2+3x+2			& 0
 & add 1 to both sides
 \\
 (2x+3)^2			& 1
-& based on the square diagram
+& based on the quadrangle diagram
 \\
 2x+3				& 1 \OR -1
 & square root of both sides
@@ -62,11 +62,11 @@ We have seen that we can factor this quadratic expression into the product of tw
 \[(x+1)(x+2) = 0.\]
 Here we have the product of two expressions, and that product equals 0. The zero product property tells us that one or the other of those factors must be equal to zero! In other words, either $(x+1) = 0$ or $(x+2)=0$.
 
-But if $x+1=0$, then $x=-1$. So $-1$ is a solution to the equation. On the other hand, if $x+2=0$, then $x=-2$. So $-2$ is also a solution to the equation! We just found the two solutions to our quadratic without the square method!
+But if $x+1=0$, then $x=-1$. So $-1$ is a solution to the equation. On the other hand, if $x+2=0$, then $x=-2$. So $-2$ is also a solution to the equation! We just found the two solutions to our quadratic without the quadrangle method!
 
-Behold the power of factoring! When tasked with solving a quadratic equation (or any polynomial equation, really), we can sometimes attack it using factoring and the zero product property. This approach doesn't always work, and in those cases we must rely on other techniques (like the square method). But, factoring will give us an elegant way to solve equations, and teach us other things as well, for example about the graphs of polynomial functions.
+Behold the power of factoring! When tasked with solving a quadratic equation (or any polynomial equation, really), we can sometimes attack it using factoring and the zero product property. This approach doesn't always work, and in those cases we must rely on other techniques (like the quadrangle method). But, factoring will give us an elegant way to solve equations, and teach us other things as well, for example about the graphs of polynomial functions.
 
-In the next several sections we will progress through the levels of factoring challenge, revisit the square diagram in a rectangular format, and fill our toolbox with an impressive collection of tools and techniques.
+In the next several sections we will progress through the levels of factoring challenge, revisit the quadrangle diagram in a rectangular format, and fill our toolbox with an impressive collection of tools and techniques.
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \section{Factoring level 1: Greatest common factor}
@@ -322,7 +322,7 @@ Carry out the following multiplications. What patterns do you notice that relate
 \end{tabularx}
 \end{boxedexplore}
 
-A trinomial that is formed by squaring a binomial is called, naturally enough, a \gls{perfect square trinomial}. In the exponential unit (\cref{sec:exposumstopowers}), we called this raising a sum to a power. We used the square method to great benefit when solving quadratic equations (\cref{ch:quadeq}). The diagram that we drew was a kind of abstract algebra tiles picture in which all the tiles together formed a large square.
+A trinomial that is formed by squaring a binomial is called, naturally enough, a \gls{perfect square trinomial}. In the exponential unit (\cref{sec:exposumstopowers}), we called this raising a sum to a power. We used the quadrangle method to great benefit when solving quadratic equations (\cref{ch:quadeq}). The diagram that we drew was a kind of abstract algebra tiles picture in which all the tiles together formed a large square.
 
 \begin{figure}
 \begin{tikzpicture}[scale=0.75]
@@ -536,7 +536,7 @@ Here's a fresh example. Suppose we want to solve the equation
 \[x^2 - 3x - 40 = 0.\]
 This is a Level 2 factoring problem, and so which can be factored without too much trouble:
 \[(x-8)(x+5) = 0.\]
-Since the product of these two equals zero, it must be that either $x-8=0$ (meaning $x=8$) or $x+5=0$ (meaning $x=-5$). So, we have found two solutions to the quadratic, and $\solset={8, -5}$. In this case, factoring might be easier than applying the square diagram approach.
+Since the product of these two equals zero, it must be that either $x-8=0$ (meaning $x=8$) or $x+5=0$ (meaning $x=-5$). So, we have found two solutions to the quadratic, and $\solset={8, -5}$. In this case, factoring might be easier than applying the quadrangle diagram approach.
 
 Factoring works even when other approaches are possible. For example, it's easy to solve $x^2 = 25$ using the POEs. We know that $x = 5\OR-5$. But this is confirmed by a factoring approach:
 \begin{commwork}
@@ -553,7 +553,7 @@ This means that either $(x+5)=0$, in which case $x=-5$, or $(x-5)=0$, in which c
 
 In some cases it's not clear which approach is easier. Suppose we have the quadratic equation
 \[6x^2-7x-1=4.\]
-We could carry out the square diagram procedure on this equation, as we have done many times before. Or, we could try to apply what we know about factoring. This technique is the most helpful in conjuction with the zero product property, and so we need first to have an equation equal to zero. So, we first use SPOE, which gives us  a trinomial equal to zero.
+We could carry out the quadrangle diagram procedure on this equation, as we have done many times before. Or, we could try to apply what we know about factoring. This technique is the most helpful in conjuction with the zero product property, and so we need first to have an equation equal to zero. So, we first use SPOE, which gives us  a trinomial equal to zero.
 \[6x^2-7x-5=0\]
 Can we factor the left-hand side? If so, it will require factoring by grouping (since neither the first nor last term is a perfect square). This means we're hunting for two numbers who product is $-30$ and whose sum is $-7$. That means $-10$ and $3$ are the numbers we're after! This gives us the factroization:
 \[6x^2 - 10x +3x - 5 = 2x{\color{blue}(3x-5)} + 1{\color{blue}(3x-5)} = (2x+1)(3x-5)\]
@@ -561,9 +561,7 @@ And so this means that we have the equation:
 \[(2x+1)(3x-5)=0,\]
 which means that we have two equations to solve: $2x+1=0$ and $3x-5=0$. Solve these two-step equations gives us our solutions:
 \[\solset{-\frac{1}{2}, \frac{3}{5}}\]
-In this case, it may have been just as easy (perhaps even easier) to apply the square diagram method.
-
-\addtodoitem{We need a catchier name for the square diagram method. Maybe: the quadrangle method?}
+In this case, it may have been just as easy (perhaps even easier) to apply the quadrangle method.
 
 Not every polynomial is factorable, and so not every equation can be solved by factoring. And just because an equation can't be solved by factoring doesn't mean that is has no solutions. There are quadratics that have irrational solutions that aren't factorable over integers. Conversely, if a quadratic has no solution, then it is definitely not factorable.
 

@@ -1,4 +1,3 @@
-Section 1.1. Click here to visit the extended exploration: NAME
-Section 1.2. More examples here: see Patty's notes.
-Section 1.3. Click here to visit the extended exploration: Exploring the Three Families
-Section 1.3. Create something on the website for this. Maybe links to desmos pages w/ sliders.
+Section 1.3. See Patty's alternative way of simplifying radicals.
+Section 1.3. Image of a sliderule?
+Section 1.4. Need a good Pythagoras footnote.

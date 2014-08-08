@@ -35,7 +35,7 @@ Recall that a fraction is simply a divison problem in disguise. If we execute th
 
 \subsubsection{Long division}
 
-Don't worry if your long division is a bit rusty, just take another look at the startup exploration. The warehouse workers must divide 1379 mini-wheels of cheese among the three trucks -- that's $1379 \div 3$ -- but they must do this with a minimum amount of regrouping.
+Don't worry if your long division is a bit rusty, just take another look at the startup exploration. The warehouse workers must divide 1379 mini-wheels of cheese among the three trucks (that's $1379 \div 3$) but they must do this with a minimum amount of regrouping.
 
 One solution is to put 4 crates on each of the three trucks. This takes care of 12 crates (1200 mini-wheels in all), but leaves one crate. They have no choice but to open this crate and treat it as 10 boxes. Of course they already had 7 boxes in stock, so now they have 17 boxes in all. They can put 5 boxes on each truck (accounting for 15 boxes, or 150 mini-wheels), but they will have 2 boxes left over. They open these two boxes, revealing 20 mini-wheels. They add these to the 9 mini-wheels they had already, giving 29 mini-wheels in all. Each truck gets 9 of these (using up 27), and they have 2 left over.
 
@@ -192,12 +192,12 @@ The second clever move is to use an idea from when we were solving systems of eq
 
 Notice that the two numbers on the righthand side of our equations are exactly four units apart. In other words: the infinitely long tail of 4's disappears when we subtract! Now all we have to do is use DPOE to isolate $x$: \[9x = 4 \quad\implies\quad x = \frac{4}{9}\] If you have a calculator handy, you can perform this division and see that we have accomplished the goal of turning our repeating decimal into a fraction:\[0.\overline{4} = \frac{4}{9}\]
 
-This process is sometimes called \textit{killing the tail}, since our goal is to subtract two different decimal forms that have the same repeating part, thereby eliminating the infintely long tail of digits.
+This process is sometimes called \textit{killing the tail}, since our goal is to subtract two different decimal forms that have the same repeating part, thereby eliminating the infintely long tail of digits.\footnote{An alternative technique, which we'll discuss in Algebra 2, involves turning the repeating decimal into an infinitely long sequence of ever-decreasing numbers, and then finding the sum of that sequence. Yes, we can -- in certain circumstances -- add up infinitely many numbers. This is just one of the amazing things that awaits you in Algebra 2!}
 
 \begin{boxedex}
 Convert the repeating decimal $0.\overline{63}$ to its decimal representation.
 
-\bigskip\inlineex{Solution.} We'll kill the tail again, but note that we have two digits after the decimal which repeat. This will require a slight adjustment. We'll start as we did before, by assigning an algebraic name to our number:\[x = 0.6363\dotso\]
+\exsoln\ We'll kill the tail again, but note that we have two digits after the decimal which repeat. This will require a slight adjustment. We'll start as we did before, by assigning an algebraic name to our number:\[x = 0.6363\dotso\]
 If we multiply both sides by 10, we'll have \[10x = 6.3636\dotso\] which is also a repeating decimal, but with a \textit{different} repeating tail. We could work with this, but it's a bit easier to multiply by 10 again (in other words, to multiply the original equation by 100): \[100x = 63.6363\dotso\] Now we have an equation in which the number on the righthand side has exactly the same tail as in the original equation. So, we subtract:
 \[\begin{aligned}
 	&&	100x	&= &63.\overline{63}\\
@@ -323,7 +323,7 @@ Steps 3 and 5 both go on to say something like ``if $a^2$ is even, then $a$ is e
 
 Step 6 argues that $\frac{a}{b}$ is not in lowest terms. How do we know this is true?
 
-This is an example of \textit{proof by contradiction}. We assume that some statement is true, then show that this assumption leads to some kind of impossible situation. The impossibility means we have to reject the original assumption. What was our original assumption in this proof? What is the contradiction that results from that assumption?
+This is an example of \textit{proof by contradiction}. We assume that some statement is true, then show that this assumption leads to some kind of impossible situation. The impossibility means we have to reject the original assumption. What was our original assumption in this proof? What is the contradiction that results from that assumption?\footnote{Another famous proof by contradiction is Euclid's proof that there are infinitely many prime numbers. Have a look in \cref{app:primes}!}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \section{Simplified radical form}
@@ -388,9 +388,12 @@ Over the next few sections, we will discuss each of these criteria and the algeb
 Criteria \#1 states that like radical terms must be combined. We combine radical terms as we do variable terms. For example, we are very familiar with the simplification \[x + x = 2x.\] We combine radical terms in exactly the same way: \[\sqrt5 + \sqrt5 = 2\cdot\sqrt5 = 2\sqrt5.\]
 Note, in particular, that the sum here is not $\sqrt{10}$. Similarly, $3x + 4x = 7x$ and so with radicals, we have $3\sqrt{21} + 4\sqrt{21} = 7\sqrt{21}$. When we have a multiplication of a number times a radical, we can omit the multiplication symbol.
 
+\addtodoitem{See Patty's alternative way of simplifying radicals.}
+
 \begin{boxedwarning}
 When we say like radical terms ``can be combined'', don't go thinking you can add the numbers under the radical. To add the values like this is \evilandwrong.
 \[ \sqrt{3} + \sqrt{3} \neq \sqrt{6}\]
+Since a radical is like an exponent, this is the equivalent of saying $(a+b)^2=a^2+b^2$ which, by now, we know is not generally the case. You can't sprinkle that exponent across the sum!
 
 While we're at it, don't get any ideas about splitting the radical-of-a-sum into the sum-of-radicals. This, too, is \evilandwrong.
 \[\sqrt{2+14} \neq \sqrt{2} +\sqrt{14}\]
@@ -458,7 +461,7 @@ This process might take a little longer, but it is sometimes easier to identify 
 
 \subsubsection{Strategy 3: Sniper method}
 
-The idea here is to write the \textit{prime factorization} of the number under the radical, and then look for pairs of factors.\footnote{For a handy, if unusually-formatted, list of prime numbers, see \cref{app:primes}.} The factorization of $108 = 2 \cdot 2 \cdot 3 \cdot 3 \cdot 3$, so: \[\sqrt{108} = \sqrt{\underline{\color{blue}2 \cdot 2} \cdot \underline{\color{red}3 \cdot 3} \cdot 3} = \underline{\color{blue}2} \cdot \underline{\color{red}3} \cdot \sqrt{3} = 6\sqrt{3} \]
+The idea here is to write the \textit{prime factorization} of the number under the radical, and then look for pairs of factors.\footnote{One way to break a number down into primes is using a factor tree. For a handy, if unusually-formatted, list of prime numbers, see \cref{app:primes}.} The factorization of $108 = 2 \cdot 2 \cdot 3 \cdot 3 \cdot 3$, so: \[\sqrt{108} = \sqrt{\underline{\color{blue}2 \cdot 2} \cdot \underline{\color{red}3 \cdot 3} \cdot 3} = \underline{\color{blue}2} \cdot \underline{\color{red}3} \cdot \sqrt{3} = 6\sqrt{3} \]
 
 We've given this strategy the memorable (though perhaps gruesome) name \textit{the sniper method}. Think of the radical as a prison. There are snipers outside and any number that tries to escape needs to have a decoy. A single factor of 2 is stuck inside for life, but if the 2 has a partner (that is, if there's a $2 \cdot 2$ under the radical), then 2 can make a break for it!
 
@@ -473,6 +476,8 @@ But, only one of the partners survives the jailbreak. The snipers take out the d
 \label{sec:radquotient}
 
 Criteria \#3 and \#4 for simplified radical form are both pretty antiquated. They came about in the pre-calculator days when folks had to do a lot more calculation by hand and use large data tables to approximate radical values. Yet, these last two properties are still considered ``standard'' for simplified radical form.
+
+\addtodoitem{Image of a sliderule?}
 
 Rules were made to be broken, though, and there will be times when it's OK to break away from these criteria (\#4 especially). But we'll burn that bridge when we come to it. For now, all four criteria are in effect.
 
@@ -514,7 +519,7 @@ In the second example, the numerator doesn't contain in a perfect square, so we 
 \subsection{Rationalizing the denominator}
 
 When simplifying an expression using the division property, we may encounter something like the following: \[\sqrt{\frac{9}{2}} = \frac{\sqrt{9}}{\sqrt{2}} = \frac{3}{\sqrt{2}}\]
-Back in the pre-calculator days, this led to criteria \#4, no radicals in the denominator of a fraction.
+Back in the pre-calculator days, this led to criteria \#4, no radicals in the denominator of a fraction. After all, long division is bad enough to carry out by hand. Why not try to put yourself into a situation that makes division as easy and accurate as possible, and avoid dividing by a big ugly decimal?
 
 When we have a radical in the denominator of a fraction we have an \textit{irrational denominator}. Our goal is to fix this by creating an equivalent fraction with a \textit{rational denominator}. The process of making this translation is called \gls{rationalizing the denominator}.
 
@@ -588,7 +593,7 @@ Now, an alternative approach: We'll use the division property of radicals in rev
 \]
 \end{boxedex}
 
-The second approach is much easier in this case, though it may not always be this easy. (Under what circumstances will we be able to use the kind of shortcut?)
+The second approach is much easier in this case. It pays to work smart and do a bit of planning before charging ahead with an algorithm blindly. It may not always be this easy, though. Under what circumstances will we be able to use the kind of shortcut?
 
 \begin{boxedwarning}
 Answers with fractions must be simplified, but folks sometimes get overly aggressive with the simplification. Consider the following: \[\frac{2}{\sqrt{6}} = \frac{2}{\sqrt{6}}\cdot\frac{\sqrt{6}}{\sqrt{6}} = \frac{2\sqrt{6}}{\sqrt{6}\cdot\sqrt{6}} = \frac{2\sqrt{6}}{6}\]
@@ -602,11 +607,11 @@ Determine the value of $x$ given the equation: $2x^2+4x-3=40$.
 
 \exsoln\ We'll use everything that we learned in \cref{ch:quadeq}! Our first step is to ensure that the first term is a perfect square, so we multiply through by 2.
 \[4x^2 + 8x - 6 = 80\]
-This also gives us an even linear coefficient, so it looks like we're ready for the square method.
+This also gives us an even linear coefficient, so it looks like we're ready for the quadrangle method.
 \begin{center}
 \quadrangle{2x}{2}{4x^2}{4x}{\color{red}4}
 \end{center}
-The square method predicts 4 as the constant term, but our equation has $-6$. APOE to the rescue:
+The quadrangle method predicts 4 as the constant term, but our equation has $-6$. APOE to the rescue:
 \begin{align*}
 4x^2 + 8x - 6 &= 80
 \\
@@ -614,7 +619,7 @@ The square method predicts 4 as the constant term, but our equation has $-6$. AP
 &&\text{APOE: add 10 to both sides}
 \\
 (2x+2)^2 &= 90
-&&\text{based on the square diagram}
+&&\text{based on the quadrangle diagram}
 \\
 2x+2 &= \pm\sqrt{90}
 &&\text{square root of both sides}
@@ -659,14 +664,14 @@ As we saw in \cref{sec:radsquareroots}, a square with area $\mathcal{A}$ has sid
 
 What is the area of each square? What is the side length of each square? Can you draw a square with side length $\sqrt{8}$? What about $\sqrt{13}$?
 
-By the way, how do we know that each of these figures is, in fact, a square? (Hint: Think back to the slopes of parallel lines.)
+By the way, how do we know that each of these figures is, in fact, a square? (Hint: Think back to the slopes of parallel and perpendicular lines. What argument can we make for why the diagonal segments must be the same length in each figure?)
 \end{boxedexplore}
 
 As an application of radicals and radical expressions, which are closely connected to the side lengths of squares, it's natural to discuss concepts from geometry. We'll begin with one of the most famous and important statements in mathematics.
 
 \subsection{{P}ythagorean theorem}
 
-It's a good bet that have seen the Pythagorean Theorem before, and that you will see it in every high school mathematics class you take, and many of the mathematics classed you take in college. In fact, the Pythagorean theorem is a foundational piece of an entire branch of mathematics based on the properties of triangles called \textit{trigonometry}.\footnote{Trigonometry begins with the study of triangles. \textit{Trigon} is another way of saying \textit{triangle} -- in fact it might be a better way of naming that shape! Most of the other polygons we know (pentagons, hexagons, octagons) have that \textit{-gon} suffix, and the prefix \textit{tri-} means ``three'' (as in tricycle).}
+It's a good bet that have seen the Pythagorean Theorem before, and that you will see it in every high school mathematics class you take, and many of the mathematics classed you take in college. In fact, the Pythagorean theorem is a foundational piece of an entire branch of mathematics based on the properties of triangles called \textit{trigonometry}.\footnote{Trigonometry begins with the study of triangles. \textit{Trigon} is another way of sayinga \textit{triangle} -- in fact it might be a better way of naming that shape! Most of the other polygons we know (pentagons, hexagons, octagons) have that \textit{-gon} suffix, and the prefix \textit{tri-} means ``three'' (as in tricycle).}
 
 \begin{boxeddef}[{P}ythagorean theorem]
 The sum of the squares of the lengths of the \glspl{leg} of a right triangle is equal to the square of the length of the \gls{hypotenuse}.
@@ -674,7 +679,7 @@ The sum of the squares of the lengths of the \glspl{leg} of a right triangle is 
 In other words, if $a$ and $b$ represent the lengths of the legs (the perpendicular sides) of a right triangle, and $c$ represents the length of the hypotenuse (the longest side, opposite the right angle), then \[a^2 + b^2 = c^2.\]
 \end{boxeddef}
 
-The theorem is named after Greek philosopher and mathematician Pythagoras of Samos, who lived around 570--495 BCE. However, there is substantial evidence that the theorem was known to many different cultures from many different time periods. There is evidence, for instance, that the ancient Babylonians knew about Pythagorean triples (see the next section) more than 1000 years BCE.
+The theorem is named after Greek philosopher and mathematician Pythagoras of Samos, who lived around 570--495 BCE.\footnote{\addtodoitem{Need a good Pythagoras footnote.}} However, there is substantial evidence that the theorem was known to many different cultures from many different time periods. There is evidence, for instance, that the ancient Babylonians knew about Pythagorean triples (see the next section) more than 1000 years BCE.
 
 Let's jump in with a famous right triangle: one with legs of length 3 and 4, and with hypotenuse of length 5. If we draw squares on the sides of the triangle, we can see that the sums of the areas of the two smaller squares (9+16) is exactly equal to the area of the largest square (25).
 \begin{center}
@@ -911,7 +916,10 @@ Imagine a pizza box and four identical slices of pizza\ldots\ where the pizza sl
 \begin{center}
 \begin{tikzpicture}[scale=0.35]
 	\draw[thick] (0,0) rectangle (6,6);
-	\foreach \x in {9,12,15,18} \draw[fill=blue!50] (\x,1) -- (\x+2,1) -- (\x,5) -- cycle;
+	\foreach \x in {9,12,15,18} {
+		\draw[thick, fill=blue!50] (\x,1) -- (\x+2,1) -- (\x,5) -- cycle;
+		\draw (\x,1) rectangle (\x+0.5, 1.5);
+	}
 \end{tikzpicture}
 \end{center}
 
@@ -923,11 +931,21 @@ Consider two different arrangements of the same four pizza slices inside the sam
 	\draw[thick] (0,0) rectangle (6,6);
 	\draw[thick,fill=blue!50] (0,0) rectangle (2,4);
 	\draw[thick,fill=blue!50] (2,4) rectangle (6,6);
+	\draw (0,0) rectangle (0.5, 0.5);
+	\draw (2,4) rectangle (1.5, 3.5);
+	\draw (2,4) rectangle (2.5, 4.5);
+	\draw (6,6) rectangle (5.5, 5.5);
 	\draw[thick] (0,4) -- (2,0);
 	\draw[thick] (2,6) -- (6,4);
 	%% Box 2
-	\draw[thick,fill=blue!50] (12,0) rectangle (18,6);
-	\draw[thick,fill=white] (12,4) -- (14,0) -- (18,2) -- (16,6) -- cycle;
+	\begin{scope}[xshift=12cm]
+	\draw[thick,fill=blue!50] (0,0) rectangle (6,6);
+	\draw (0,0) rectangle (0.5, 0.5);
+	\draw (0,6) rectangle (0.5, 5.5);
+	\draw (6,0) rectangle (5.5, 0.5);
+	\draw (6,6) rectangle (5.5, 5.5);
+	\draw[thick,fill=white] (0,4) -- (2,0) -- (6,2) -- (4,6) -- cycle;
+	\end{scope}
 \end{tikzpicture}
 \end{center}
 
@@ -948,8 +966,12 @@ In fact, we can explain the theorem using only the right-hand diagram. Let $a$ a
 \begin{center}
 \begin{tikzpicture}[scale=0.5]
 	%% Box 2
-	\draw[thick,fill=red!50] (12,0) rectangle (18,6);
-	\draw[thick,fill=white] (12,4) -- (14,0) -- (18,2) -- (16,6) -- cycle;
+	\draw[thick,fill=red!50] (0,0) rectangle (6,6);
+	\draw (0,0) rectangle (0.5, 0.5);
+	\draw (0,6) rectangle (0.5, 5.5);
+	\draw (6,0) rectangle (5.5, 0.5);
+	\draw (6,6) rectangle (5.5, 5.5);
+	\draw[thick,fill=white] (0,4) -- (2,0) -- (6,2) -- (4,6) -- cycle;
 \end{tikzpicture}
 \end{center}
 
