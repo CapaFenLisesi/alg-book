@@ -9,7 +9,7 @@
 %
 %Finally, all the ``is it a function'' stuff feels like a kind of distraction. Why is the concept so important at this very moment? I like the idea of calling things by their proper names, and if we're going to study ``functions'' we should define that term. But, I don't think we need all the detail.
 %
-%So, here's what I picture: A short introductory bit that defines function, gives some examples and nonexamples, but basically says: We're going to study functions in algebra 1. There are things that aren't functions, but we'll learn about those things later.
+%So, here's what I picture: A short introductory bit that defines function, gives some examples and nonexamples, but basically says: We're going to study functions in Algebra 1. There are things that aren't functions, but we'll learn about those things later.
 %
 %I say we introduce function notation, since for the most part it's just a renaming. Plus, it gives a handy notation for evaluation.
 %
@@ -107,7 +107,7 @@ A sequence is a function: it would be silly to suggest that a sequence had more 
 
 Ther are several ways to represent a mathematical relation. We might represent a relation using:
 \begin{itemize}
-\item A graph. This representation gives is a visual of the relationship between input values and output values.
+\item A graph. This representation gives us a visual of the relationship between input values and output values.
 \item A table of values. This representation gives us an organized list of input values and their corresponding output values. (Related forms include a \textit{mapping diagram}, or just a collection of ordered pairs.)
 \item An equation. This representation gives us a rule for turning input values into output values, the way a number machine might do.
 %-- A mapping diagram. Like a table, gives a series of input and corresponding output values.
@@ -219,7 +219,7 @@ Plot C
 
 Note that we don't care if different $x$'s map to the same $y$. For example, in plot C, all of the $x$-values map to the same $y$-value. That's OK. In other words, a function \textit{can} fail the ``horizontal line test'' without penalty.\footnote{The horizontal line test \textit{is} a thing, and passing or failing the horizontal line test does have a mathematical meaning. But, a discussion of this will have to wait until later.}
 
-If we think about the name-the-mother function, it is not uncommon for two different people to have the same mother: they're called siblings!
+For example, the name-the-mother function does not pass the horizontal line test because two different inputs (people) can have the same output (mother). In fact, it is not at all uncommon for two different people to have the same mother: they're called siblings!
 
 \subsection{Functions from points}
 
@@ -263,9 +263,12 @@ x & y \\\hline
 \begin{minipage}[t]{0.33\textwidth}
 \centering
 Set C
-\par$(0,4) \quad (-1,6)$
-\par$(2,3) \quad (0,4)$
-\par$(1,5) \quad (-2,5)$
+\par
+\[\left\{\begin{array}{ll}
+(0,4); &(-1,6);\\
+(2,3); &(0,4);\\
+(1,5); &(-2,5)
+\end{array}\right\}\]
 \end{minipage}
 
 \exsoln\ Set A is a function. There are no repeated $x$-values! Set B is not a function. The $x$-value 1 appears twice and with two different related $y$-values (0 and 2). This violates the definition of function. Set C is a function. The $x$ value 0 appears twice, but it is mapped to the same value in both cases.
@@ -320,7 +323,7 @@ Diagram B
 \exsoln\ The first mapping is a function. Each $x$-value maps to exactly one $y$-value. The second mapping is not a function: the value 2 maps to both 7 and 9.
 \end{boxedex}
 
-Note again that the problem in diagram 2 is \textit{not} that multiple arrows point to each of the output numbers. It's OK for multiple arrows to go \textit{toward} a certain output value. The problem is that the input value 2 has multiple arrows \textit{leaving} and going to different targets.
+Note again that the problem in diagram 2 is \textit{not} that multiple arrows point to each of the output numbers. It's OK for multiple arrows to go \textit{toward} a certain output value. The problem is that the input value 2 has multiple arrows \textit{leaving} and going to different targets (both 7 and 9).
 
 %The table, the mapping diagram, and the list of points are all basically the same sort of representation: we are presented with a finite number of ordered pairs. So, these representations only give a limited picture of how the function operates. The preferred representations are the graph and the equation.
 
@@ -332,9 +335,9 @@ The ``number machine'' metaphor is often helpful when thinking about a function.
 
 For example, the equation $y = 3x$ defines a function. We can substitute in 5 for $x$. The function machine multiplies 5 by 3 and outputs 15. This generates the ordered pair $(5, 15)$ and we say that ``5 maps to 15''. If we choose other values of $x$, we can generate more ordered pairs.
 
-Not every equation defines a function, though. In order to be a function, every input value must produce one and only one output value. In algebra 2 we will study many interesting and important mathematical relationships that are not functions. We will learn, for instance, how to write the equation for a circle -- and a circle is not a function. (Can you explain why not?)
+Not every equation defines a function, though. In order to be a function, every input value must produce one and only one output value. In Algebra 2 we will study many interesting and important mathematical relationships that are not functions. We will learn, for instance, how to write the equation for a circle -- and a circle is not a function. (Can you explain why not?)
 
-Our focus in algebra 1, though, will be on three main ``families'' of functions, and our rules will all be of the form ``$y$ equals some expression in terms of $x$''.
+Our focus in Algebra 1, though, will be on three main ``families'' of functions, and our rules will all be of the form ``$y$ equals some expression in terms of $x$''.
 
 %In addition to being able to determine if a relation is a function, one has to be able to convert between the different representations. We will spend more time on this when we study each family of functions in depth.
 
@@ -371,6 +374,9 @@ We will use function notation and $y =$ notation through this course. The flexib
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \section{Domain and range}
+\label{cref:domandrange}
+
+\addtodoitem{More examples here: see Patty's notes.}
 
 %\begin{boxedexplore}[Name of Extended Exploration]
 %\addtodoitem{Click here to visit the extended exploration: NAME}
@@ -385,7 +391,7 @@ Consider the function machines below.
 What sorts of values are allowed as input to each of these machines? What sorts of values will each one produce as output?
 \end{boxedexplore} %% End of startup exploration
 
-A blender is a machine that has limited operating parameters. Anything we put into the blender comes out ``blended'' in some way. But, of course, there are some things we can't put in a blender: a piano, for example.\footnote{We'll pause here to note that ``blended'' is defined rather loosely: smoothies come out ``blended'', ice comes out ``crushed'', chickpeas come out ``pur\'eed'', magazines come out ``shredded''\ldots\ We consider all of these to be a kind of ``blended''. Speaking of magazines, we'll also mention that there are things which one \textit{can} put into a blender, but \textit{shouldn't}.} Similarly, we wouldn't put bread into a  blender, hit the button, and expect toast to pop out. That kind of output is associated with a different machine.
+A blender is a machine that has limited operating parameters. Anything we put into the blender comes out ``blended'' in some way. But, of course, there are some things we can't put in a blender: a piano, for example.\footnote{We'll pause here to note that ``blended'' is defined rather loosely: smoothies come out ``blended'', ice comes out ``crushed'', chickpeas come out ``pur\'eed'', magazines come out ``shredded''\ldots\ We consider all of these to be a kind of ``blended''. Speaking of magazines, we'll also mention that there are things which one \textit{can} put into a blender, but \textit{shouldn't}. Magazines are one example. Another example: your hand.} Similarly, we wouldn't put bread into a  blender, hit the button, and expect toast to pop out. That kind of output is associated with a different machine.
 
 \subsection{Regarding input values}
 
@@ -410,13 +416,13 @@ In \cref{ch:numbers}, we discussed the illegality of division by zero. So, if we
 %%%
 %%%Another function with a limited domain is the square-root function $y = \sqrt{x}$. This function can only accept nonzero numbers as input. All negative numbers are restricted from the domain.\footnote{Try to take the square root of a negative number on a calculator and see what happens! Stay tuned for more on this phenomenon, and other stuff about square roots, in \cref{ch:radicals}.}
 
-There are other circumstances where we will want or need to limit the domain. For example, if we write an equation that shows distance as a function of time, it usually makes sense to limit the domain to only include positive time-values. So, a domain can be limited by context.
+There are other circumstances where we will want or need to limit the domain. For example, a domain can be limited by the context of a problem we are solving. If we write an equation that shows distance as a function of time, it usually makes sense to limit the domain to only include positive time-values. If we have a function which maps ``number of pizza toppings'' to ``price of the pizza'', then there is (probably) an upper limit on the domain: there are only so many pizzas toppings available.\footnote{Did you know that the so-called ``Hawaiian pizza'', a pizza topped with pieces of ham and pineapple, is not actually a Hawaiian invention? Several news organizations agree that this pizza originated in Ontario, Canada.}
 
 A sequence is a function whose domain is limited to the set of natural numbers (the positive integers). We saw this in \cref{ch:sequences,,ch:graphs}: a sequence can have a first term and a second term, but no one-and-a-halfth term. We exclude from the domain of a sequence all numbers except $1, 2, 3, 4, \dotsc$.
 
 We can also define a specific domain for convenience. On an assignment, for example, we might be asked to evaluate the function $y=4x+5$ for the $x$-vales $-1$, 0, and 1. We did something like this in \cref{ex:evaluating}. This is another example of limiting the domain.
 
-%%%The three families of functions that we will study most closely in algebra 1 (the linear, exponential, and quadratic families) do not require any domain restrictions, which is good news.
+%%%The three families of functions that we will study most closely in Algebra 1 (the linear, exponential, and quadratic families) do not require any domain restrictions, which is good news.
 
 \subsection{Regarding output values}
 
@@ -586,7 +592,7 @@ which is a list of all the integers. In other words: this machine turns the natu
 %%%\item \textit{Rotation}: Turning or twisting a figure
 %%%\end{itemize}
 %%%
-%%%Our focus in algebra 1 is on the first three types of transformations. We won't get into rotations of functions now. They will return later in your mathematical career!
+%%%Our focus in Algebra 1 is on the first three types of transformations. We won't get into rotations of functions now. They will return later in your mathematical career!
 %%%
 %%%\subsubsection{Translation Up or Down}
 %%%
@@ -610,10 +616,12 @@ which is a list of all the integers. In other words: this machine turns the natu
 %%%
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\section{Three families of algebra 1}
+\section{Three families of Algebra 1}
 \label{sec:threefamilies}
 
-The majority of algebra 1 will focus on the in-depth study of three key families of functions: the linear family, the exponential family, and the quadratic family. We've encountered each of these families before, but now it's time for a more formal introduction.
+\addtodoitem{The tone here could be more ``recap all that we've learned in this unit'', look at how much you already know.}
+
+The majority of Algebra 1 will focus on the in-depth study of three key families of functions: the linear family, the exponential family, and the quadratic family. We've encountered each of these families before, and now we will recap all that we've learned about them. Though this is our first ``formal introduction'', you might be surprised to discover how much you already know about the families!
 
 \begin{boxedexplore}[Extended exploration: Exploring the three families]
 \addtodoitem{Click here to visit the extended exploration: Exploring the Three Families}
@@ -731,9 +739,7 @@ Quadratic Family
 \label{fig:parents}
 \end{figure}
 
-Compare the equations for each of the parent functions: How are they the same? How are they different? Compare the graphs: How are they the same? How are they different? When presented with a new equation of graph, what features might we look for to decide which family it belongs to?
-
-These are not the only three families of functions out there. Invent a rule or draw a graph which \textit{does not fit} into any of these three families. What makes this rule or graph different?
+Compare the equations for each of the parent functions: How are they the same? How are they different? Compare the graphs: How are they the same? How are they different? When presented with a new equation of graph, what features might we look for to decide which family it belongs to?\footnote{These are not the only three families of functions out there, of course. Other families of functions will get the focus in Algebra 2 (and beyond).}
 
 In \cref{sec:mathrelationships} we learned techniques for identifying whether a given relation is a function. One of our tasks going forward will be to learn techniques for distinguishing the function families from one another.
 
@@ -825,11 +831,11 @@ The first family we will study in depth is the family of linear functions. Here 
 
 We will learn several different forms for the equation of a linear function. The feature they all share is that the variable $x$ has no exponent, or rather the highest power of the variable $x$ is 1. For example, the parent of this family, $y = x$, is the same as $y = x^1$. That's a ``phantom 1'' there in the exponent, and we don't usually write it.
 
-The graph of a linear function is a straight, non-vertical line. (Can you explain why we have to exclude vertical lines from this family of functions?) We sometimes also exclude horizontal lines from this family: a function of the form ``$y=$ a number'' is a horizontal line, for example $y = 6$.
+The graph of a linear function is a straight, non-vertical line. (Can you explain why we have to exclude vertical lines from this family of functions?) We sometimes also exclude horizontal lines from this family: a function of the form ``$y=$ a number'' is a horizontal line, for example $y = 6$.\footnote{In fact, horizontal lines can be considered their own family: the family of \textit{constant functions}.}
 
 Recall that arithmetic sequences are in the family of linear functions. Arithmetic sequences have a rule that involves repeatedly adding on a constant difference at each step. So, this is the feature we see in the table of a linear function: when the $x$-values increase by a fixed amount, the $y$-values increase by a (possibly different) fixed amount.
 
-There are two key transformations of the parent function. Multiplying by a constant value, as in $y=a \cdot x$ changes the ``steepness'' of the graph. Certain $a$ values (negative ones) cause the graph to show a decreasing trend. Adding a value as in $y=x + c$ shifts the graph upwards or downwards. Viewed from a different perspective, we could also say that this shifts the graph left or right. Up-down shifts and left-right shifts look the same for a straight line. The distinction is more clear in the other families.
+There are two key transformations of the parent function. Multiplying by a constant value, as in $y=a \cdot x$ changes the ``steepness'' of the graph. Certain $a$ values cause the graph to flip over the $x$-axis and show a trend that goes in the opposite direction (we get a graph that has been reflected over the $x$-axis). Adding a value as in $y=x + c$ shifts the graph upwards or downwards. Viewed from a different perspective, we could also say that this shifts the graph left or right. Up-down shifts and left-right shifts look the same for a straight line. The distinction between these two transformations is more clear in the other families.
 
 %%%In the extended exploration, we saw that graphing the equation $y=3x+2$ produced a graph that was steeper than $y=x$ and also shifted upwards from the origin. Generally, if take the equation $y=mx+b$ and replace $m$ and $b$ with numbers, the number $m$ controls the steepness of the line and the number $b$ controls the vertical shift.
 %%%
@@ -848,22 +854,22 @@ There are two key transformations of the parent function. Multiplying by a const
 
 \subsection{Fundamentals of exponential functions}
 
-The second family of functions we will explore in this course is the exponential family. In fact, we will begin our study of this family in algebra 1, and then return to it again in algebra 2.
+The second family of functions we will explore in this course is the exponential family. In fact, we will begin our study of this family in Algebra 1, and then return to it again in Algebra 2.
 
 An exponential equation is one in which the variable $x$ appears as the exponent (hence the name). The graph of an exponential function is a smooth, curving shape that we sometimes describe as ``J-like''. This is only an approximation, though, since an exponential graph may sometimes look more like a backwards J or an upside-down J.
 
-Exponentials have the interesting property that while they get almost vertical on one side, and almost horizontal on the other side. In other words, one side gets ``infinitely large'' while on the other side we have tinier and tinier fractions that get closer and closed to zero\ldots\ but never actually disappear! Mathematically speaking, we say that the function approaches an \gls{asymptote} at the flat horizontal portion.
+Exponentials have the interesting property that while they get almost vertical on one side, and almost horizontal on the other side. For example, one side of the parent function, $y=2^x$, gets ``infinitely large'' while on the other side we have tinier and tinier fractions that get closer and closed to zero\ldots\ but never actually disappear! Mathematically speaking, we say that the function approaches an \gls{asymptote} at the flat horizontal portion. The parent function has a horizontal asymptote at $y=0$; other functions in this family may have their asymptote at a different position.
 
 Recall that geometric sequences are in the family of exponential functions. Geometric sequences have a rule that involves repeatedly multiplying by a constant ratio. This is the feature we look for in a table.
 
-Multiplying the parent by a value, as in $y=a\cdot2^x$, changes the steepness of the graph and -- if $a$ is negative -- causes it to be reflected over the $x$-axis.
+Multiplying the parent by a value, as in $y=a\cdot2^x$, changes the steepness of the graph and (if $a$ is negative) causes it to be reflected over the $x$-axis.
 
-Adding a value to the parent function -- $y=2^x+c$ -- causes a shift up or down. Adding to the argument -- $y = 2^{(x+b)}$ -- gives us a shift left or right.
+Adding a value to the parent function, $y=2^x+c$, causes a shift up or down (can you predict where the function's asymptote will be in this case?). If we add to the argument, $y = 2^{(x+b)}$, we get a shift left or right.
 
 
 \subsection{Fundamentals of quadratic functions}
 
-We will study the quadratic family last in this course. In fact, it will be our gateway into the study of techniques that will become helpful as we learn about other families and types of functions in algebra 2.
+We will study the quadratic family last in this course. In fact, it will be our gateway into the study of techniques that will become helpful as we learn about other families and types of functions in Algebra 2.
 
 The key feature of a quadratic equation is that the highest exponent on the variable $x$ is 2. The equation may also contain an $x$ term, but that's the same as $x^1$, so the highest power of $x$ is still 2!
 
@@ -878,18 +884,21 @@ Recall from our study of sequences that quadratic patterns show a constant secon
 
 \subsection{Domain and range of the three families}
 
-It's quite easy to identify the domains of the three main families of algebra 1. Linear, exponential, and quadratic functions all have ``all real numbers'' as their domain. We can always use any number as input. This is convenient!
+It's quite easy to identify the domains of the three main families of Algebra 1. Linear, exponential, and quadratic functions all have ``all real numbers'' as their domain. We can always use any number as input. This is convenient!
 
 The range of a linear function is also pretty simple: it is all real numbers. As we saw as we transformed linear functions, the a (non-horizontal) line will eventually stretch up (or down) as high (or as low) as you want to go on the $y$-axis.
 
-The ranges for exponential and quadratic functions are a little more complicated, but we can see what is happening by examining their graphs. Notice, for example, that the graphs of the parents $y=2^x$ and $y=x^2$ never dip below the $x$-axis.
+The ranges for exponential and quadratic functions are a little more complicated, but we can see what is happening by examining their graphs. Notice, for example, that the graphs of the parents $y=2^x$ and $y=x^2$ never dip below the $x$-axis. This feature of the exponential and quadratic families will always be retained, in some form, when we transform these equations: the range will always be limited by some minimum or maximum value. 
 
-This feature of the exponential and quadratic families will always be retained, in some form, when we transform these equations. The range will always be limited by some minimum or maximum value. 
+The quadratic parent, passes through the origin, and so the range of $y=x^2$ is all real numbers \textit{greater than or equal to} zero. We might write that $y$ is any real number such that  $y\geq0$. In fact, every parabola has a point, called its \gls{vertex}, that is either its lowest point (if the parabola opens upwards) or its highest point (if the parabola opens downwards). We will learn more about identifying and describing the vertex of a parabola when we study the quadratic family in in depth.
 
-For example, the U-shaped quadratic function always has a lowest point (if the parabola opens upwards) or a highest point (if the parabola opens downwards). We will learn more about identifying and describing the maxima and minima when we get into each family in depth.
-
+When it comes to the exponential parent, we mentioned that is has an asymptote at $y=0$. This means that the function approaches, but never reaches, that value. So, the range of $y=2^x$ is all real numbers \textit{strictly greater than} zero. We might write that $y$ is any real number such that $y>0$. We will learn more about what's going on with this asymptote when we study the exponential family.
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \subsection*{Chapter summary}
 
-Might be nice to have something here in every chapter?
+In this chapter we have brought together a number of different concepts. Our work with sequences, graphs, functions, and transformations, has been organized under three key headings: the three families that we will study closely in Algebra 1.
+
+The next section of the course will focus on the linear family, the most logical place to start. In one sense, the linear family is the easiest family to understand, and so it makes for a good ``training level''. At the same time, the linear function is an important structural concept in mathematics, and gives rise to a whole branch of study called, appropriately enough, \textit{linear algebra}.
+
+In any case, studying the linear family will give us the chance to learn a whole collection of new algebraic tools and techniques that we will use throughout the course. Onward!

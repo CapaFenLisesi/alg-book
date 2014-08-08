@@ -2,7 +2,7 @@
 \usepackage[english]{babel}
 
 % Partial inclusion, for piecewise development
-\includeonly{numbers}
+\includeonly{functions}
 
 \usepackage{floatrow}			% this automatically centers all floats
 \floatplacement{table}{hbtp}		% all tables are given the [hbtp] option
@@ -264,9 +264,9 @@
 \newcommand{\addtodoitem}[1]
 {%
 	% Print in the document
-	{\bfseries [TODO] #1}
+	{\bfseries [TODO] Section \thesection. #1}
 	% Add item to the file 'todolist.txt'
-	\immediate\write\outputstream{#1}
+	\immediate\write\outputstream{Section \thesection. #1}
 }
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -297,7 +297,7 @@
 %\include{frontmatter}
 
 % Table of contents
-\setcounter{tocdepth}{1}
+\setcounter{tocdepth}{2}
 \tableofcontents
 
 % Acknowledgements
