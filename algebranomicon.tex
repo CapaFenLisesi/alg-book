@@ -2,7 +2,7 @@
 \usepackage[english]{babel}
 
 % Partial inclusion, for piecewise development
-\includeonly{radicals}
+%\includeonly{radicals}
 
 \usepackage{floatrow}			% this automatically centers all floats
 \floatplacement{table}{hbtp}		% all tables are given the [hbtp] option
@@ -48,31 +48,31 @@
 \usepackage[autoplay, loop]{animate}
 
 % Patch to the delimiter bug in animate package
-\makeatletter
-\def\@anim@@sanitize#1\@nil{%
-  \@tfor\next:=#1\do{%
-    \expandafter\xdef\csname @anim@\number\expandafter`\next\endcsname{%
-      \the\catcode\expandafter`\next
-    }%
-    \global\catcode\expandafter`\next=12
-  }
-  \global\catcode`\#=12
-  \global\let\@anim@newline=\\\global\let\\=\@anim@bksl
-  \global\let\@anim@leftbrace=\{\global\let\{=\@anim@lbr
-  \global\let\@anim@rightbrace=\}\global\let\}=\@anim@rbr
-  \global\let\@anim@percent=\%\global\let\%=\@anim@per
-}
-\def\@anim@@endsanitize#1\@nil{%
-  \@tfor\next:=#1\do{%
-    \global\catcode\expandafter`\next=\csname @anim@\number\expandafter`\next\endcsname
-  }
-  \global\let\%=\@anim@percent%
-  \global\let\}=\@anim@rightbrace%
-  \global\let\{=\@anim@leftbrace%
-  \global\let\\=\@anim@newline%
-  \global\catcode`\#=6%
-}
-\makeatother
+%%\makeatletter
+%%\def\@anim@@sanitize#1\@nil{%
+%%  \@tfor\next:=#1\do{%
+%%    \expandafter\xdef\csname @anim@\number\expandafter`\next\endcsname{%
+%%      \the\catcode\expandafter`\next
+%%    }%
+%%    \global\catcode\expandafter`\next=12
+%%  }
+%%  \global\catcode`\#=12
+%%  \global\let\@anim@newline=\\\global\let\\=\@anim@bksl
+%%  \global\let\@anim@leftbrace=\{\global\let\{=\@anim@lbr
+%%  \global\let\@anim@rightbrace=\}\global\let\}=\@anim@rbr
+%%  \global\let\@anim@percent=\%\global\let\%=\@anim@per
+%%}
+%%\def\@anim@@endsanitize#1\@nil{%
+%%  \@tfor\next:=#1\do{%
+%%    \global\catcode\expandafter`\next=\csname @anim@\number\expandafter`\next\endcsname
+%%  }
+%%  \global\let\%=\@anim@percent%
+%%  \global\let\}=\@anim@rightbrace%
+%%  \global\let\{=\@anim@leftbrace%
+%%  \global\let\\=\@anim@newline%
+%%  \global\catcode`\#=6%
+%%}
+%%\makeatother
 
 %%%
 % Diagram of the form (a+b)^2 = a^2+ab+ab+b^2
@@ -268,10 +268,11 @@
 \newcommand{\addtodoitem}[1]
 {%
 	% Print in the document
-	{\bfseries [TODO] Section \thesection. #1}
+%	{\bfseries [TODO] Section \thesection. #1}
 	% Add item to the file 'todolist.txt'
 	\immediate\write\outputstream{Section \thesection. #1}
 }
+
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 

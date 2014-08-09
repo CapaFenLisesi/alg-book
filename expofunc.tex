@@ -3,12 +3,9 @@
 
 \chapquote{The greatest shortcoming of the human race is our inability to understand the exponential function.}{Albert A. Bartlett\\American physicist}
 
-%\begin{quote}
-%The greatest shortcoming of the human race is our inability to understand the exponential function.
-%\par\hfill -- Albert A. Bartlett, American physicist
-%\end{quote}
+We first saw exponential relationships back in \cref{ch:sequences}, when we studied geomertic sequences. In this chapter we will look more closely at exponential functions, but we will be forced to leave some questions unanswered.
 
-Every chapter should have a lead paragraph -- even just a short one -- that appears before the first heading. This is a placeholder paragraph which will at some point be replaces by actual content.
+Our focus now will be on the fundamentals of exponentials. Then, exponential functions will return in Algebra 2. In that course we will learn more techniques for representing and manipulating exponential functions, and learn tools for solving exponential functions.
 
 %%% Good somewhere?
 %\begin{boxedexplore}[Startup Exploration: The Water Lily]
@@ -16,12 +13,13 @@ Every chapter should have a lead paragraph -- even just a short one -- that appe
 %
 %Over the years Fran\c{c}ois has learned that the lily population doubles in size every day, and that it takes 30 days to cover the surface of the pond. At the start of a new growing cycle, Fran\c{c}ois tells Ivan to monitor the situation and to cut the lily back when it covers half of the pond. On what day should Ivan do this?
 %\end{boxedexplore}
+%%%
 
-%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \section{Exponential relationships}
 \label{sec:exporelationships}
 
-\begin{boxedexplore}
+\begin{boxedexplore}[Startup exploration: Super seaweed]
 YeardleighCorp genetic engineers have developed a new kind of fast-growing, nutrient-rich seaweed for the turtle pens. The length of a strand of this seaweed doubles every day.
 
 Scientists measure a particular strand of seaweed to be 15 centimeters long. How long will this strand be in 1 day? 2 days? 3 days? How long was this strand 1 day ago? 2 days ago? 3 days ago?
@@ -99,7 +97,7 @@ One interpretation of this expression, as we have seen, is as repeated multiplic
 \[a^b = \underbrace{a \cdot a \cdot a \cdot \dotsm \cdot a}_{\text{$b$ times}}\]
 This representation is a bit limited --- it really only works when the exponent $b$ is a positive integer --- but it is still helpful for gaining some intuition about how exponents work.
 
-For clarity, we will name the different forms of the exponential expression. We will use the term ``exponent form'' to describe $a^b$, and  ``expanded form'' to describe the form where the multiplication is written out. So, for example, $12^4$ is in exponent form, and \[12\cdot12\cdot12\cdot12\] is the same number written in expanded form. Of course, if the base is a number, we can compute this value: \[12^4 = 12\cdot12\cdot12\cdot12 = 20\,736.\] This last value (the number) is in ``standard form'' or ``decimal form''. Expressions like $a^b$ have no decimal form until we know what numbers $a$ and $b$ represent.
+For clarity, we will name the different forms of the exponential expression. We will use the term \gls{exponential form} to describe $a^b$, and \gls{expanded form} to describe the form where the multiplication is written out. So, for example, $12^4$ is in exponent form, and \[12\cdot12\cdot12\cdot12\] is the same number written in expanded form. Of course, if the base is a number, we can compute this value: \[12^4 = 12\cdot12\cdot12\cdot12 = 20\,736.\] This last value (the number) is in ``standard form'' or ``decimal form''.\footnote{Note that there are many things in algebra that are called ``standard form''. We have to look at context clues to determine which one we need!} Expressions like $a^b$ have no decimal form until we know what numbers $a$ and $b$ represent.
 
 \subsection{Extending repeated multiplication}
 
@@ -228,9 +226,9 @@ If we look at the graph of $y=5^x$, we see that the curve flattens out as we loo
 
 We can also see how steep the curve gets as we go along the positive $x$-axis. An important aspect of understanding exponential relationships is understanding this dual nature: incredibly steep on one end, incredibly flat on the other.
 
-\addtodoitem{Idea: include Zeno's paradox here? Or as a journal prompt or activity of some kind?}
+\addtodoitem{Discuss: Is Zeno's paradox too much here?}
 
-\begin{boxedexplore}[Startup exploration: {Z}eno's paradox]
+\begin{boxedexplore}[Exploring {Z}eno's paradox]
 A paradox is a statement from which we can follow a logical path of reasoning to an impossible of self-contradictory end.
 
 The ancient Greek philosopher Zeno proposed a set of paradoxes about motion. One of these says:
@@ -258,9 +256,10 @@ What do you think about these ideas?
 \section{Exponential growth}
 \label{sec:expogrowth}
 
-\begin{boxedexplore}[Extended exploration: Problem with turtles]
-\addtodoitem{LINK.}
-\end{boxedexplore}
+%\begin{boxedexplore}[Extended exploration: Problem with turtles]
+%\addtodoitem{LINK.}
+%\end{boxedexplore}
+\addtodoitem{Link to extended exploration: A problem w/ turtles}
 
 \begin{boxedexplore}[Startup exploration: {C}antor set]
 German mathematician Georg Cantor suggested a way to construct a very interesting set of numbers. We start in Stage 0 with a line segment covering the interval from 0 to 1 on the number line. The recursive procedure is to remove the middle third from each of the line segments in the previous step. The first few iterations are shown.
@@ -698,11 +697,11 @@ At this point, someone usually wonders whether a bank could make an unlimited am
 
 Interestingly, there is a limit to the amount of money that a bank can rake in using compound interest. Notice that the amounts we have seen --- under annual, semi-annual, monthly, and daily compounding --- have all been increasing, but that they have been increasing by less and less. The increases are sort of ``trailing off'' and, over time, the change between compounding schemes gets closer and closer to zero.
 
-\begin{boxedexplore}
-\addtodoitem{Could we link to an exploration about this?}
-
+\begin{boxedexplore}[Exploring continuous compounding]
 Imagine that we invest a principal amount $P$ at an evil bank which charges 100\% interest. Experiment with the amount we would owe after one year given different compounding periods. What is the maximum that we would be expected to pay back after one year?
 \end{boxedexplore}
+
+\addtodoitem{Discuss: Is continuous compounding too much?}
 
 This scenario --- continuous compounding for one year at 100\% interest --- gives rise to a very interesting number which will be of great importance in future mathematics courses, including Algebra 2.\footnote{Actually, this number has already been mentioned in the \algebranomicon! Go on a little scaveneger hunt through the footnotes in \cref{ch:functions} and see what you can find!}
 
@@ -710,9 +709,10 @@ This scenario --- continuous compounding for one year at 100\% interest --- give
 \section{Exponential decay}
 \label{sec:expodecay}
 
-\begin{boxedexplore}[Extended exploration: Problem with pintonium]
-LINK
-\end{boxedexplore}
+%\begin{boxedexplore}[Extended exploration: Problem with pintonium]
+%LINK
+%\end{boxedexplore}
+\addtodoitem{Link to extended exploration: A problem w/ Pintonium}
 
 \begin{boxedexplore}[Startup exploration: No pressure]
 Patrons to the Cheeseville Zoo can take a hot air balloon ride over the park. They have to fly high enough to be at a safe distance above the most dangerous areas of the zoo: Lake Mascarpone (the reptile exhibit) and NAME THE ISLAND (the primate enclosure).
@@ -838,7 +838,7 @@ It's sometimes hard to appreciate the difference between a curved line and a str
 
 To compare linear and exponential growth, we close this chapter with a famous fable first told by the Persian poet Ferdowsi.
 
-\begin{boxedexplore}[Chessboard]
+\begin{boxedexplore}[Exploring the chessboard fable]
 Many centuries ago, so the story goes, the inventor of the game of chess showed his invention to the king. The king was so delighted by the new game that he told the inventor that he could have whatever he liked as compensation.
 
 The inventor proposed that the king give him one grain of wheat for the first square of the chessboard, two grains of wheat for the second square, four grains of wheat for the third square, and so on, doubling the number of grains for each of the 64 squares on the board.
@@ -994,4 +994,8 @@ At first glance, there hardly seems to be a competition between these two: the s
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \subsection*{Chapter summary}
 
-Might be nice to have something here in every chapter?
+In this chapter we uncovered some of the surprising differences between the linear and exponential families. We saw examples of exponential growth and decay, including the very practical application of percent change and exponential growth in the context of personal finance.
+
+In the course of our work in this chapter, we have encountered expressions that we have been content to leave ``unsimplified''. For example, we have been okay with leaving the parentheses alone in an expression like $(1+r)^t$, whereas in earlier chapters, parentheses were often taboo.
+
+How do we eliminate the parentheses from an expression like this? In the next chapter, we will expand our set of equivalence rules to handle the simplification of algebraic expressions that involve exponents. Onward!

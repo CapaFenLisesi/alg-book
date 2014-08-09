@@ -2248,6 +2248,36 @@ parent={},%
 %
 }%
 }%
+\ifglsentryexists{expanded form}{}%
+{%
+\gls@defglossaryentry{expanded form}%
+{%
+name={expanded form},%
+sort={expanded form},%
+type={main},%
+first={expanded form},%
+firstplural={expanded forms},%
+text={expanded form},%
+plural={expanded forms},%
+description={The form of an exponential expression in which repeated multiplication is written out. For example, the right-hand side of the equation $x^3 = x\cdot x \cdot x$, is written in expanded form.},%
+descriptionplural={The form of an exponential expression in which repeated multiplication is written out. For example, the right-hand side of the equation $x^3 = x\cdot x \cdot x$, is written in expanded form.},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
 \ifglsentryexists{exponential decay}{}%
 {%
 \gls@defglossaryentry{exponential decay}%
@@ -5308,6 +5338,36 @@ parent={},%
 %
 }%
 }%
+\ifglsentryexists{quadrangle method}{}%
+{%
+\gls@defglossaryentry{quadrangle method}%
+{%
+name={quadrangle method},%
+sort={quadrangle method},%
+type={main},%
+first={quadrangle method},%
+firstplural={quadrangle methods},%
+text={quadrangle method},%
+plural={quadrangle methods},%
+description={A technique for solving quadratic equations that is based on the symmetry of the square. When executing the quadrangle method, we often draw a \textit {quadrangle diagram}.},%
+descriptionplural={A technique for solving quadratic equations that is based on the symmetry of the square. When executing the quadrangle method, we often draw a \textit {quadrangle diagram}.},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
 \ifglsentryexists{quadrant}{}%
 {%
 \gls@defglossaryentry{quadrant}%
@@ -6881,6 +6941,36 @@ text={trinomial},%
 plural={trinomials},%
 description={A polynomial with exactly three terms.},%
 descriptionplural={A polynomial with exactly three terms.},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={},%
+longplural={},%
+short={},%
+shortplural={},%
+counter={page},%
+parent={},%
+%
+}%
+}%
+\ifglsentryexists{turducken}{}%
+{%
+\gls@defglossaryentry{turducken}%
+{%
+name={turducken},%
+sort={turducken},%
+type={main},%
+first={turducken},%
+firstplural={turduckens},%
+text={turducken},%
+plural={turduckens},%
+description={A food product in which a deboned chicken is stuffed inside a deboned duck, which is then stuffed inside a deboned turkey. In culinary terminology, this is an example of ``engastration'', a cooking method in which one animal is stuffed inside the gastric cavity of another.},%
+descriptionplural={A food product in which a deboned chicken is stuffed inside a deboned duck, which is then stuffed inside a deboned turkey. In culinary terminology, this is an example of ``engastration'', a cooking method in which one animal is stuffed inside the gastric cavity of another.},%
 symbol={\relax },%
 symbolplural={\relax },%
 user1={},%
