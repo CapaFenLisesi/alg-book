@@ -2,7 +2,7 @@
 \usepackage[english]{babel}
 
 % Partial inclusion, for piecewise development
-%\includeonly{radicals}
+%\includeonly{graphs}
 
 \usepackage{floatrow}			% this automatically centers all floats
 \floatplacement{table}{hbtp}		% all tables are given the [hbtp] option
@@ -42,6 +42,7 @@
 
 % Enable fractal drawing
 \usepackage{tikz}
+\usetikzlibrary{patterns}
 \usetikzlibrary{decorations.fractals}
 \usetikzlibrary{lindenmayersystems}
 
@@ -196,6 +197,8 @@
 	{\color{black!25}\rule[.5ex]{\epigraphwidth}{\epigraphrule}}
 \makeatother
 
+\newcommand{\chaptersummary}{\subsection*{>> Chapter summary <<}}
+
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 %
 % Footnotes
@@ -302,7 +305,7 @@
 %\include{frontmatter}
 
 % Table of contents
-\setcounter{tocdepth}{2}
+\setcounter{tocdepth}{1}
 \tableofcontents
 
 % Acknowledgements

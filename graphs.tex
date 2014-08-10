@@ -3,7 +3,7 @@
 
 \chapquote{There is a magic in graphs. The profile of a curve reveals in a flash a whole situation -- the life history of an epidemic, a panic, or an era of prosperity. The curve informs the mind, awakens the imagination, convinces.}{Henry D. Hubbard\\US National Bureau of Standards}
 
-In \cref{ch:sequences} we investigated pictures patterns (fractals by Koch and Sierpi\'nski, patterns of made of square tiles) and used those pictures to generate sequences of numbers. We begin this chapter with a discussion of another way to represent our sequences of numbers visually: by making a coordinate graph. Then, we will extend these ideas to create visual representations of other mathematical objects, and of scientific data.
+In \cref{ch:sequences} we investigated pictures patterns (fractals by Koch and Sierpi\'nski, and patterns of made of square tiles) and used those pictures to generate sequences of numbers. We begin this chapter with a discussion of another way to represent our sequences of numbers visually: by making a coordinate graph. Then, we will extend these ideas to create visual representations of other mathematical objects, and of scientific (and other) data.
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \section{Coordinate graphing}
@@ -44,9 +44,9 @@ In \cref{ch:sequences} we investigated pictures patterns (fractals by Koch and S
 	\label{fig:coordplane}
 \end{figure}
 
-The axes chop the plane into four regions called \glspl{quadrant}, which are numbered starting in the upper right and moving counter-clockwise (as shown in the figure). The signs in parentheses indicate the signs of $x$- and $y$-coordinates in each quadrant. The $x$-coordinates of the points in Quadrants I and IV are positive, while points in Quadrants II and III have $x$-coordinates that are negative. Points with positive $y$-coordinates lie in Quadrants I and II, while points with negative $y$-coordinates fall in Quadrants III and IV.\footnote{A point that lies on an axis doesn't actually lie in any of the four quadrants. So, the point $(4, 0)$ lives on the positive $x$-axis, but not in Quadrant I nor in Quadrant IV.}
+The axes chop the plane into four regions called \glspl{quadrant}, which are numbered starting in the upper right and moving counter-clockwise (as shown in the figure). The signs in parentheses indicate the signs of the $x$- and $y$-coordinates in each quadrant. The $x$-coordinates of the points in Quadrants I and IV are positive, while points in Quadrants II and III have $x$-coordinates that are negative. Points with positive $y$-coordinates lie in Quadrants I and II, while points with negative $y$-coordinates fall in Quadrants III and IV.\footnote{A point that lies on an axis doesn't actually lie in any of the four quadrants. So, the point $(4, 0)$ lives on the positive $x$-axis, but neither in Quadrant I nor in Quadrant IV.}
 
-\begin{boxedexplore}[Startup exploration: Pizza intersections]
+\begin{boxedexplore}[Pizza intersections]
 Bob's friend Melvin ``Hambone'' Jones once worked delivering pizzas in his hometown of Euclid, Ohio. The town has streets running north-south and east-west.\footnote{Euclid, Ohio is also the home of the Polka Hall of Fame, though that has nothing to do with this problem. Also, Euclid isn't laid out in a grid as this problem implies, though it should be, given its name.}
 
 Hambone is currently parked at the intersection we will call $(0,0)$. If he drives one block east, he will arrive at the intersection $(1,0)$. If he then turns right and drives one block south, he will arrive at the intersection $(1,-1)$.
@@ -54,14 +54,13 @@ Hambone is currently parked at the intersection we will call $(0,0)$. If he driv
 Starting from $(0,0)$, describe are all the intersections that Hambone can reach by driving a total distance of exactly 10 blocks.
 \end{boxedexplore}
 
+\addtodoitem{Was there any Krumbli stuff in the sequences chapter? We need some continuity...}
+
 \subsection{Graphing a sequence}
 
-Our goal is to make a visual representation of a sequence on this coordinate plane.
+Our goal is to make a visual representation of a sequence on the coordinate plane.
 
 ``But,'' you may be asking yourself, ``a sequence is just a list of numbers. How do we make a coordinate graph, which needs coordinate pairs of numbers? It takes \textit{two numbers} to make a \textit{pair}!''
-
-%This means instead of writing rules expressing $a_n$ in terms of $n$, we'll write rules expressing $y$ in terms of $x$.
-%This is a geometric sequence, with the recursive rule ``START~=~1, NEXT~=~NOW~$\cdot~2$''. 
 
 To graph a sequence, we use the term number as the $x$-coordinate and the term's value as the $y$-coordinate. Consider the sequence $1, 2, 4, 8, 16, 32,\dotsc$. The first term is 1, the second term is 2, and so on. We can organize this in a table, and write out the ordered pairs. Then, we can plot those ordered pairs and see a visual representation of our sequence!
 
@@ -174,25 +173,25 @@ Take a moment to compare the graphs of these three sequences. How are they alike
 
 \subsection{Features of the graph of a sequence}
 
-Note that since the term number is always greater than 0, our graphs only show the positive part of the $x$-axis. We'll soon see that this is an artificial limitation: the negative part of the $x$-axis is just as important as the positive part.
+Note that since the term number is always greater than 0, our graphs only show the positive part of the $x$-axis. We'll soon see that this is an artificial limitation that doesn't apply to most situations: the negative part of the $x$-axis is just as important as the positive part.
 
-Note also that we haven't connected the dots: a sequence has a first term and a second term, but no one-and-a-halfth term. We'll soon see that this is an artificial limitation, too. The fractional values in between the points we've plotted are also important.
+Note also that we haven't connected the dots. A sequence has a first term and a second term, but no one-and-a-halfth term. So, we shouldn't have any points with $x$-coordinates in between the natural numbers. We'll soon see that this is an artificial limitation, too. Fractional $x$-values are appropriate for most rules.
 
-In fact, when we generate a sequence we use only the natural numbers as the input values to the formula. However, if we change our point of view and allow the input to be any real number, we will have turned our sequence into a mathematical relationship called a \gls{function}.\footnote{Technically, a sequence is \textit{already} a function. The distinction we make here has to do with what kinds of input values are allowed. Later, once we have some additional concepts under our belts, we'll talk about a sequence as ``a function whose domain is the natural numbers''.} We'll discuss the details of what functions are (and what they are not) in \cref{ch:functions}.
+If we change our point of view and allow the input to be any real number, we will have turned our sequence into a mathematical relationship called a \gls{function}.\footnote{Actually, a sequence is \textit{already} a function. The distinction we make here has to do with what kinds of input values are allowed. Later, once we have some additional concepts under our belts, we'll talk about a sequence as ``a function whose domain is the natural numbers''.} We'll discuss the details of what functions are (and what they are not) in \cref{ch:functions}.
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \section{Algebraic expressions}
 \label{sec:algexpr}
 
-\begin{boxedexplore}[Startup exploration: Don't take all year]
+\begin{boxedexplore}[Don't take all year]
 Find three natural numbers $x$, $y$, and $z$ which satisfy the equation $28x + 30y + 31z = 365$. Can you find more than one set of numbers $x,y,z$ that satisfy the equation?
 \end{boxedexplore}
 
-In \cref{ch:numbers} we used the order of operations to simplify numeric expressions, which are made up of numbers and arithmetic operators. For example, \[3\cdot4-8(4^2-1)\] is a numeric expression. It contains only numbers and operators and, in the end, it simplifies down to a single number.\footnote{Spoiler alert: It's $-108$.} An \gls{algebraic expression} on the other hand can contain letters in addition to numbers and operators, for example \[3x - 5y + 18.\] These letters, called \textit{variables}, stand in for numbers that we don't know or which may change.
+In \cref{ch:numbers} we used the order of operations to simplify numeric expressions, which are made up of numbers and arithmetic operators. For example, \[3\cdot4-8(4^2-1)\] is a numeric expression. It contains only numbers and operators and, in the end, it simplifies down to a single number.\footnote{Spoiler alert: It's $-108$.} An \gls{algebraic expression} on the other hand can contain letters in addition to numbers and operators, for example \[3x - 5y + 18.\] These letters, called \glspl{variable}, stand in for numbers that we don't know or which may change.
 
 \begin{boxeddef}[Variable]
-A \gls{variable} is representation of a value that can change. In algebra, variables are often represented by letters. We usually use letters from the Latin alphabet ($a, b, c, d,\dotsc$), but sometimes also use other symbols, such as letters from the Greek alphabet ($\alpha, \beta, \gamma, \delta, \dotsc$).
+A representation of a value that can change. In algebra, variables are often represented by letters. We usually use letters from the Latin alphabet ($a, b, c, d,\dotsc$), but sometimes also use other symbols, such as letters from the Greek alphabet ($\alpha, \beta, \gamma, \delta, \dotsc$).
 \end{boxeddef}
 
 \begin{boxeddef}[Algebraic expression]
@@ -204,15 +203,15 @@ A symbolic representation of mathematical operations that can involve both numbe
 In your mathematical career so far, you have probably worked with letters that stand in for numbers. Recall the formula for the circumference of a circle: \[C = \pi d.\]
 This formula explains the relationship between $d$, which stands in for the diameter of some circle, and $C$, which stands for the circumference of that circle. The letters $d$ and $C$ are variables. They stand in for numbers that can change, depending on which circle we're talking about.\footnote{Note that $\pi$ is \textit{not} a variable. We use a (Greek) letter in this case not because the value of $\pi$ might change, but because it's an irrational number that is impossible to write out in full. We often use letters to stand in for mathematical objects that are inconvenient, sometimes impossible, to write down in another way: $e$, $i$, $\phi$, and $\aleph_0$ each has special mathematical meaning.}
 
-Once we start to introduce letters into our expressions, we have to discuss some standard notation and terminology. As we have seen, we don't usually write any multiplication symbol when multiplying a number times a variable. Rather than writing $3\cdot x$ or $3(x)$, we can write $3x$ without anything in between.
+Once we start to introduce letters into our expressions, we have to discuss some standard notation and terminology. As we have seen, we don't usually write any multiplication symbol when multiplying a number by a variable. Rather than writing $3\cdot x$ or $3(x)$, we can write $3x$ without anything in between.
 
 An algebraic expression that is built using only multiplication (or division) is called a \gls{term}. For example, $3x$ and $\frac{1}{2}m$ are terms. On the other hand, the expression $3x+2y$ is not a term because it includes addition. In fact, this expression is the sum of two terms.
 
 \begin{boxeddef}[Term]
-An algebraic expression that represents only multiplication and division between variables and constants.
+An algebraic expression that represents only multiplication and division between variables and constants (numbers).
 \end{boxeddef}
 
-When we have the product of a number and a variable -- like $3x$ or $\umin11g$ -- the number part is called the \gls{coefficient} of the term. So, the coefficient of $3x$ is 3, and $\umin11$ is the coefficient of $\umin11x$. If we have a variable all alone without a number attached -- like $y$ or $w$ -- then we picture a ``phantom 1'' lurking there as the coefficient: $y$ is the same as $1y$ and $1w$ is the same as $w$.
+When we have the product of a number and a variable, like $3x$ or $\umin11g$, the number part is called the \gls{coefficient} of the term. So, the coefficient of $3x$ is 3, and $\umin11$ is the coefficient of $\umin11x$. If we have a variable all alone without a number attached, like $y$ or $w$, then we picture a ``phantom 1'' lurking there as the coefficient: $y$ is the same as $1y$, and $1w$ is the same as $w$.
 
 \begin{boxeddef}[Coefficient]
 The numerical factor in a term with a variable. If no number is explicitly written, the coefficient is understood to be 1.
@@ -222,13 +221,13 @@ The numerical factor in a term with a variable. If no number is explicitly writt
 
 A variable is a ``placeholder'' that stands in for a number. We can only determine the value of an algebraic expression if we know what numbers the different variables represent.
 
-Consider the expression $3x$. If we know that $x$ represents $15$, then we can \gls{evaluate} the expression $3x$ in the case that $x = 15$. In that case, it must be that $3x$ represents $3(15) = 45$.
+Consider the expression $3x$. If we know that $x$ represents $15$, then we can \gls{evaluate} the expression $3x$ in the case that $x = 15$. In that case, it must be that $3x = 3(15) = 45$.
 
 When we evaluate an algebraic expression, we substitute in values for its variables, and then simplify the resulting numeric expression using the order of operations. It is a really good habit always to use parentheses when substituting numeric values for variables. This can avoid confusion about negative numbers!
 
 \begin{boxedex}
 \label{ex:evaluating}
-Evaluate the expressions $6x+ 4$ and $x^2 - 5$ for the $x$ values 3, $\umin1$, and $\frac{1}{2}$.
+Evaluate the expressions (a) $6x+ 4$, and (b) $x^2 - 5$ for the $x$ values 3, $\umin1$, and $\frac{1}{2}$.
 
 \exsoln{}
 \begin{enumerate}[label={(\alph*)}]
@@ -301,9 +300,10 @@ x^2 - 5 & = \left(\tfrac{1}{2}\right)^2 - 5\\
 \end{aligned}
 \end{array}
 \]
-Note how the parentheses help out when $x = \umin1$! Without those parentheses, we would have run the risk of making the most common mistake in Algebra 1: remember the difference between $(\umin1)^2$ and $\umin1^2$.
 \end{enumerate}
 \end{boxedex}
+
+Note how the parentheses help out when $x = \umin1$! Without those parentheses, we would have run the risk of making the most common mistake in Algebra 1: remember the difference between $(\umin1)^2$ and $\umin1^2$.
 
 %%Speaking of parentheses: Remember that a graphing calculator will follow the order of operations. That means that we need to use the proper notation for our intentions. If our intent is to raise $\umin2$ to the fourth power, we had better not write $\umin2^4$ but rather write $(\umin2)^4$ with parentheses!
 
@@ -330,9 +330,9 @@ Note how the parentheses help out when $x = \umin1$! Without those parentheses, 
 \section{Graphing a function}
 \label{sec:graphingfunc}
 
-The graphs of sequences that we created earlier were quite limited. Since sequences use only the natural numbers as input values, the only points we had available to plot were the points where $x = 1, 2, 3, 4, \dotsc$. But now, knowing how to evaluate algebraic expressions, we can create more complete graphs by choosing a wider range of $x$ values.
+The graphs of sequences that we created earlier were quite limited. Since sequences use only the natural numbers as input values, the only points we had available to plot were the points where $x = 1, 2, 3, 4, \dotsc$. But now, knowing how to evaluate algebraic expressions, we can create more complete graphs by choosing a wider variety of $x$-values.
 
-\begin{boxedexplore}[Startup exploration: Extending our sequences]
+\begin{boxedexplore}[Extending our sequences]
 Write a zero-based explicit rule for the arithmetic sequence shown below (this is the second example from \cref{sec:coordgraph}). First write the rule in terms of $n$ and $a_n$, then translate your rules into a graphable format in terms of $x$ and $y$.
 \[8, 13, 18, 23, 28, \dotsc\]
 The given sequence represents the $y$-values of the rule for the $x$-values 1, 2, 3, 4, and 5. Evaluate your rule for the $x$-values 0, -1, -2, -3, -4, and -5. Then, plot these 11 points on a coordinate grid.
@@ -418,21 +418,21 @@ The moral of the story is that when we are asked to graph an equation by hand, w
 
 \subsection{Criteria for high quality graphs}
 
-In algebra we make a distinction between ``sketching'' and ``graphing''. A sketch is just a quick drawing and it doesn't need to be super accurate. A sketch can be scribbled on a napkin or a piece of notebook paper.
+In algebra we make a distinction between ``sketching'' and ``graphing''. A sketch is just a quick drawing and it doesn't need to be super accurate. A sketch can drawn on notebook paper (or scribbled on a napkin).
 
-On the other hand, a proper graph is meant to communicate something to the viewer. A graph must be accurately made on graph paper. The most important features of whatever you're graphing -- a sequence, a function, a plot of a data set -- must be clear, accurate, and neatly represented. Here are some guidelines for creating high-quality graphs.
+On the other hand, a proper graph is meant to communicate something to the viewer. A graph must be accurately drawn on graph paper. The most important features of whatever we're graphing -- a sequence, a function, a plot of a data set -- must be clear, accurate, and neatly represented. Here are some guidelines for creating high-quality graphs.
 
 High quality graphs should be drawn on graph paper. An individual graph does not have to take up an entire piece of graph paper, although it should be drawn large enough to be easily understood.
 
-Use a ruler or straightedge to make straight lines, in particular the coordinate axes or any linear data. Plus, we should draw arrowheads on anything that goes forever. This includes axes, lines, and curves.
+Use a ruler or straightedge to make straight lines, in particular the coordinate axes or any linear data. Plus, we should draw arrowheads on anything that continues forever. This includes axes, lines, and curves (note the arrowheads in the graphs above).
 
-Be mindful when choosing a scale for the axes. Choose a scale that fits the data and ensures that your graph shows all important features of the curve. The origin does not necessarily need to be in the center of the grid. For example, if we are plotting data that includes only positive values, then we only need the first quadrant. The origin can be in the lower left-hand corner of the graph.
+Be mindful when choosing a scale for the axes. Choose a scale that fits the data and ensures that your graph shows all important features of the curve. The origin does not necessarily need to be in the center of the grid. For example, if we are plotting data that includes only positive values, then we only need the first quadrant. The origin in this case might be in the lower left-hand corner of the graph.
 
-Scales for the $x$- and $y$-axes can be different, and in some cases must be different, so this can take a little bit of planning. The scale must be the same for the whole length of an axis, and cannot have any ``jumps'' or ``breaks''. Changes in the scale will distort the shape of the graph, which defeats the purpose! Compare the two graphs below. The graph on the left is fine, but the graph on the right includes a common mistake. Can you identify the problem?
+Scales for the $x$- and $y$-axes can be different, and in some cases must be different, so this can take a little bit of planning. The scale must be the same for the whole length of an axis, and cannot have any ``jumps'' or ``breaks''. Changes in the scale will distort the shape of the graph, which defeats the purpose! Compare the two grids below. The grid on the left is fine, but the grid on the right includes a common mistake. Can you identify the problem?
 
 \begin{minipage}{0.5\linewidth}
 	\centering
-	OK!\par\medskip
+	OK!\par
 	\begin{tikzpicture}[scale=1]
 		%% grid setup
 		\draw[very thin, color=gray!25] (0,0) grid (5,5);
@@ -447,7 +447,7 @@ Scales for the $x$- and $y$-axes can be different, and in some cases must be dif
 %
 \begin{minipage}{0.5\linewidth}
 	\centering
-	Not OK!\par\medskip
+	Not OK!\par
 	\begin{tikzpicture}[scale=1]
 		%% grid setup
 		\draw[very thin, color=gray!25] (0,0) grid (5,5);
@@ -467,7 +467,9 @@ Scales for the $x$- and $y$-axes can be different, and in some cases must be dif
 
 High quality graphs are clearly labeled. The scale should be indicated on the axes, and the axes should be labeled. For graphs of equations, this might mean simply labeling the axes $x$ and $y$. When plotting data, include more informative names like ``time'' or ``distance''.
 
-A final question about data points: to connect or not to connect? In the next section, we will discuss this question in some detail. But we've already seen an important piece of this puzzle: When graphing an equation by plotting data points, we should connect data points with a smooth curve and \textit{not} individual line segments. If we use a straight line to connect points, then we are telling our audience that the data in between the points is linear, which may not be the case! Go back and have a look at the graph of $y=x^2$. It doesn't come to a point at the bottom. Rather it's a smooth curve that passes through the origin.
+A final question to consider regarding data points: to connect or not to connect? In the next section, we will discuss this question in some detail. But we've already seen some important pieces of this puzzle. When we have a sequence, or other data that skips values, we should not connect the points.
+
+If we do want to connect the points, say, when graphing a funcction by plotting some sample points, we should connect with a smooth curve and \textit{not} individual line segments. If we use a straight line to connect points, then we are telling our audience that the data in between the points is linear, which may not be the case! Go back and have a look at the graph of $y=x^2$. It doesn't come to a point at the bottom. Rather it's a smooth curve that passes through the origin.
 
 %\begin{boxedexplore}[Extended exploration: Big graphs]
 %\addtodoitem{Click here to visit the extended exploration: Big Graphs}
@@ -485,18 +487,18 @@ The graphs that we have been working with so far have been very orderly. Technic
 %\end{boxedexplore}
 \addtodoitem{Link to extended exploration: Age guesser}
 
-\begin{boxedexplore}[Startup exploration: Water consumption]
+\begin{boxedexplore}[Water consumption]
 The graph shown in \cref{fig:waterconsumption} depicts water consumption in Edmonton, capital of the Canadian province of Alberta, during the gold medal men's ice hockey game at the 2010 Winter Olympics in Vancouver. The game was played between Canada and United States.
 
 Water consumption during the game is shown in blue, while data from the same time period on the previous day is shown in green.
 
 Write down anything you notice or wonder about the data presented in this graph.
 
-A few notes: Ice hockey games are played in three 20-minute periods with breaks in between. In this particular game, the score was tied at the end of regular play. Canada scored the game winning goal in overtime and was awarded the gold medal.
+A few notes: Ice hockey games are played in three 20-minute periods with breaks in between. In this particular game, the score was tied at the end of regular play. Canada scored the winning goal in overtime and was then awarded the gold medal.
 \end{boxedexplore}
 
 \begin{figure}[htbp]
-\centering
+\centering\bigskip
 \begin{tikzpicture}
 \begin{axis}[
 		width=0.75\textwidth,
@@ -538,7 +540,7 @@ A few notes: Ice hockey games are played in three 20-minute periods with breaks 
 %	\label{fig:waterhockey}
 %\end{figure}
 
-%\begin{boxedexplore}[Startup exploration: Guess Your Weight]
+%\begin{boxedexplore}[Guess Your Weight]
 %\begin{minipage}[t]{0.7\textwidth}
 %\vspace{0pt}
 %Alphonse the Amazing has a Guess-Your-Weight booth on the carnival midway at the Cheeseville Zoo. To play, people pay \$1, Alphonse guesses their weight, and then they step on a scale (only the most self-confident people play this game). If Alphonse's guess is off by more than 5 pounds (over or under), they win a prize.
@@ -592,17 +594,41 @@ We can compare just about any two quantities. One way to do this is with a graph
 A graph that relates data of two different sets. The two sets of data are displayed as ordered pairs.
 \end{boxeddef}
 
-Suppose we wish to compare, say, the height and weight for all of the players on the top two 2010 Olympic men's ice hockey teams. Let's make a graph comparing every player's height and weight as ordered pairs: (height, weight). This graph is shown on the left below. Blue dots represent players on the United States team, red dots represent players on team Canada.\footnote{Data from the International Olympic Committee, as reported in \href{http://en.wikipedia.org/wiki/Ice_hockey_at_the_2010_Winter_Olympics}{Wikipedia}.}
+Suppose we wish to compare, say, the height and weight for all of the players on the top two 2010 Olympic men's ice hockey teams. Let's make a graph comparing every player's height and weight as ordered pairs: (height, weight). This graph is shown on the left in \cref{fig:hockeystats}.\footnote{Data from the International Olympic Committee, as reported in \href{http://en.wikipedia.org/wiki/Ice_hockey_at_the_2010_Winter_Olympics}{Wikipedia}.}
 
-While we're at it, let's make another comparison. The graph on the right plots every player's height and jersey number as ordered pairs (height, jersey number). What do you notice about these two graphs? How are they the same? How are they different?
+While we're at it, let's make another comparison. The graph on the right in \cref{fig:hockeystats} plots every player's height and jersey number as ordered pairs (height, jersey number). What do you notice about these two graphs? How are they the same? How are they different?
 
 \begin{figure}
+\label{fig:hockeystats}
+\caption{Comparing the Canadian and US men's ice hockey teams (2010 Winter Olympics).}
+%
+\begin{minipage}{0.45\linewidth}
 % (height, weight)
-\begin{tikzpicture}[scale=0.9, domain=150:200]
-	\begin{axis}[xlabel={Height (cm)}, ylabel={Weight (kg)}]
-	\addplot[scatter, only marks, scatter src=\thisrow{class}]
-      table[x=x,y=y] {
-	x		y		class
+\begin{tikzpicture}[domain=150:200]
+	\begin{axis}[
+		legend style={
+			font=\footnotesize,%
+			legend pos=south east,%
+			legend cell align=left,%
+			/tikz/every even column/.append style={column sep=1em},%
+			draw=black!25,%
+		},%
+		legend columns=-1,
+		legend to name=namedhockeylegend,
+		width=0.9\linewidth,%
+		xlabel={Height (cm)},%
+		ylabel={Weight (kg)}%
+	]
+	\addplot[%
+		scatter/classes={
+			1={mark=square*, blue!75!black},%
+			2={mark=*, red}
+		},
+		scatter,
+		only marks,
+		scatter src=explicit symbolic]
+      table[x=x, y=y, meta=label] {
+	x		y		label
 	188		75		1
 	185		91		1
 	180		91		1
@@ -650,14 +676,29 @@ While we're at it, let's make another comparison. The graph on the right plots e
 	193		107		2
 	188		96		2
 	};
+	\legend{Team USA, Team Canada};
 	\end{axis}
 \end{tikzpicture}
+\end{minipage}
+%
+\begin{minipage}{0.45\linewidth}
 % (height, jersey number)
-\begin{tikzpicture}[scale=0.9, domain=150:200]
-	\begin{axis}[xlabel={Height (cm)}, ylabel={Jersey Number}]
-	\addplot[scatter, only marks, scatter src=\thisrow{class}]
-      table[x=x,y=y] {
-	x		y		class
+\begin{tikzpicture}[domain=150:200]
+	\begin{axis}[
+		width=0.9\linewidth,%
+		xlabel={Height (cm)},%
+		ylabel={Jersey number}%
+	]
+	\addplot[%
+		scatter/classes={
+			1={mark=square*, blue!75!black},%
+			2={mark=*, red}
+		},
+		scatter,
+		only marks,
+		scatter src=explicit symbolic]
+      table[x=x, y=y, meta=label] {
+	x		y		label
 	188		39		1
 	185		29		1
 	180		30		1
@@ -705,8 +746,11 @@ While we're at it, let's make another comparison. The graph on the right plots e
 	193		19		2
 	188		16		2
 	};
+	%\legend{Team USA, Team Canada};
 	\end{axis}
 \end{tikzpicture}
+\end{minipage}
+\ref{namedhockeylegend}
 \end{figure}
 
 Notice that the graph of weight and height has a clear upward slant. This seems reasonable: the taller someone is, the more we might expect that person to weigh. There are some data points that don't fit the trend, but generally speaking the data points are increasing as we look toward the right on the graph. We say that this data shows a positive \gls{correlation}.
@@ -717,13 +761,11 @@ A trend between two sets of data, as seen in a scatter plot. A trend can show po
 
 The graph of jersey number versus height is more of a blob. There's no clear trend in this data, and so we say that is shows \textit{no correlation}. This makes sense, too: there's no logical connection between a player's height and the number they wear on their shirt.
 
-A third possibility would be data that shows a negative correlation, meaning that the data are decreasing as we look towards the right on the graph. Can you imagine two variables that might show a negative correlation when compared on a scatter plot?
+A third possibility would be data which shows a negative correlation, meaning that the data are decreasing as we look towards the right on the graph. Can you imagine two variables that might show a negative correlation when compared on a scatter plot?
 
-Graphing experimental data on a scatter plot helps us to see if there is a relationship between variables. If there is, a pattern will emerge in the graph. The points will fall (approximately) in a line or a curve and will have a correlation.
+Graphing experimental data on a scatter plot helps us to see if there is a relationship between variables. If there is, a pattern will emerge in the graph. The points will fall (approximately) in a line or a curve and will have a correlation. A key thing to remember when it comes to looking at data is that ``correlation does not imply causation''. In other words: If we see that two variables are correlated, we might be tempted to assume that the change in one variable \textit{causes} the change in the other. This is sometimes true, but not always.
 
-If the scatter plot shows a positive correction, it means that as the independent variable increases, the dependent variable increases. If the scatter plot shows a negative correlation, it means that as the independent variable increases, the dependent variable decreases. If a scatter plot shows no correlation, it indicates that there is no relationship between the two variables.
-
-A key thing to remember when it comes to looking at data is that ``correlation does not imply causation''. In other words: If we see that two variables are correlated, we might be tempted to assume that the change in one variable \textit{causes} the change in the other. This is sometimes true, but not always.
+%If the scatter plot shows a positive correction, it means that as the independent variable increases, the dependent variable increases. If the scatter plot shows a negative correlation, it means that as the independent variable increases, the dependent variable decreases. If a scatter plot shows no correlation, it indicates that there is no relationship between the two variables.
 
 For example, it seems reasonable to believe that a change in height will cause a change in weight. But, there is data that shows a positive correlation between ``consumption of mozzarella cheese per person'' and ``number of civil engineering doctorates awarded''. This has to be a coincidence! There's no (good) reason to think that changing one of these variables would cause a change in the other one.\footnote{This fact is courtesy of the website \href{http://www.tylervigen.com/view_correlation?id=3890}{Spurious Correlations}, which has many graphs of interesting and ridiculous data that show correlation but not causation. Sometimes, it's fun to try to ``explain'' the correlation. Perhaps in this case the increase in mozzarella cheese consumption is due to an increase in takeout pizza demand, which leads to more pizza delivery shops, which in turn requires more roads, which means we need more engineers to design them.}
 
@@ -731,13 +773,13 @@ For example, it seems reasonable to believe that a change in height will cause a
 
 When we drew the graph of a sequence, we didn't connect the dots. A sequence has a first term and a second term, but no one-and-a-halfth term. The $x$-values have no ``in-betweens''.
 
-Similarly, imagine a graph showing ``time'' as the independent variable and ``number of hockey players on the ice'' as the dependent variable. In this case, the $y$-values would have no ''in-betweens''. There could be 11 players or 12 players on the ice, but never 11.5 players. This is called \textit{discrete data}.
+Similarly, imagine a graph showing ``time'' as the independent variable and ``number of hockey players on the ice'' as the dependent variable. In this case, the $y$-values would have no ''in-betweens''. There could be 11 players or 12 players on the ice, but never 11.5 players. This is called \gls{discrete data}.
 
 \begin{boxeddef}[Discrete data]
 Data for which it doesn't make sense for measurements to exist between given data points. Discrete data often involves \textit{counting items}, such at the number of cars in a parking lot over time. 
 \end{boxeddef}
 
-On the other hand, when we started to picture the graph of a rule that could accept any real number as input, we drew a continuous line on the graph. The graph of water consumption in Edmonton, is jagged, spiky, and irregular -- but it's a continuous line. We can measure how much water has been used at any point in time, and we can measure the amount of water in fractions of a unit.
+On the other hand, when we started to picture the graph of a rule that could accept any real number as input, we drew a continuous line on the graph. The graph of water consumption in Edmonton, is jagged, spiky, and irregular -- but it's a continuous line. We can measure how much water has been used at any point in time, and we can measure the amount of water in fractions of a unit. We call this \gls{continuous data}.
 
 \begin{boxeddef}[Continuous data]
 Data that has no holes, gaps, or breaks. Continuous data often involves \textit{measuring some value} where measurements exist (and may change) between data points. For example, a person's height over time.
@@ -752,6 +794,8 @@ Now consider the scenario in which we graph ``number of customers in line at the
 
 \resizeplot{0}{0}{7}{7}
 \begin{figure}
+\label{fig:continuousvsdiscrete}
+\caption{Comparing graphs of continuous and discrete data.}
 \begin{minipage}{0.48\textwidth}
 \centering
 Continuous data\par\medskip
@@ -805,7 +849,7 @@ In this section, our goal is to hone our skills at understanding what a graph is
 %\end{boxedexplore}
 \addtodoitem{Link to extended exploration: distance match}
 
-\begin{boxedexplore}[Startup exploration: Yeardleigh's submersible]
+\begin{boxedexplore}[Yeardleigh's submersible]
 Always questing after the most delicious ingredients, Yeardleigh buys an underwater submersible vehicle so that she can hunt the ocean floor for interesting sea plants. The graph below shows the depth of Yeardleigh's submersible over time.
 
 Study the graph. What can you tell about what's happening? Write a short paragraph telling, in words, the same story that the graph is telling visually.
@@ -1022,7 +1066,7 @@ This kind of problem could pop up in other places. For example, in a distance-ti
 Graphs like this -- where several $y$-values stack up vertically over the same $x$-value -- violate a certain requirement that we will learn about in the next chapter, as we delve into the important mathematical idea of a \textit{function}.
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
-\subsection*{Chapter summary}
+\chaptersummary
 
 In this chapter we began with plotting points to create the graph of a sequence. Then, we built upon these ideas to create the graph of function. We then turned our attention from making graphs to understanding graphs that are given to us.
 

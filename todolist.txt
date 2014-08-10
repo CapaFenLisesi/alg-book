@@ -1,6 +1,7 @@
 Section 2.1. Link to extended exploration: Sierpinski's triangle
 Section 2.2. Link to extended exploration: Koch curve, triangular version
 Section 2.3. Link to extended exploration: Squares, triangles, segments
+Section 3.1. Was there any Krumbli stuff in the sequences chapter? We need some continuity...
 Section 3.3. Link to extended exploration: Big graphs
 Section 3.4. Link to extended exploration: Age guesser
 Section 3.5. Link to extended exploration: distance match
