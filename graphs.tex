@@ -46,13 +46,13 @@ In \cref{ch:sequences} we investigated pictures patterns (fractals by Koch and S
 
 The axes chop the plane into four regions called \glspl{quadrant}, which are numbered starting in the upper right and moving counter-clockwise (as shown in the figure). The signs in parentheses indicate the signs of the $x$- and $y$-coordinates in each quadrant. The $x$-coordinates of the points in Quadrants I and IV are positive, while points in Quadrants II and III have $x$-coordinates that are negative. Points with positive $y$-coordinates lie in Quadrants I and II, while points with negative $y$-coordinates fall in Quadrants III and IV.\footnote{A point that lies on an axis doesn't actually lie in any of the four quadrants. So, the point $(4, 0)$ lives on the positive $x$-axis, but neither in Quadrant I nor in Quadrant IV.}
 
-\begin{boxedexplore}[Pizza intersections]
+\begin{boxexplore}[Pizza intersections]
 Bob's friend Melvin ``Hambone'' Jones once worked delivering pizzas in his hometown of Euclid, Ohio. The town has streets running north-south and east-west.\footnote{Euclid, Ohio is also the home of the Polka Hall of Fame, though that has nothing to do with this problem. Also, Euclid isn't laid out in a grid as this problem implies, though it should be, given its name.}
 
 Hambone is currently parked at the intersection we will call $(0,0)$. If he drives one block east, he will arrive at the intersection $(1,0)$. If he then turns right and drives one block south, he will arrive at the intersection $(1,-1)$.
 
 Starting from $(0,0)$, describe are all the intersections that Hambone can reach by driving a total distance of exactly 10 blocks.
-\end{boxedexplore}
+\end{boxexplore}
 
 \addtodoitem{Was there any Krumbli stuff in the sequences chapter? We need some continuity...}
 
@@ -184,19 +184,19 @@ If we change our point of view and allow the input to be any real number, we wil
 \section{Algebraic expressions}
 \label{sec:algexpr}
 
-\begin{boxedexplore}[Don't take all year]
+\begin{boxexplore}[Don't take all year]
 Find three natural numbers $x$, $y$, and $z$ which satisfy the equation $28x + 30y + 31z = 365$. Can you find more than one set of numbers $x,y,z$ that satisfy the equation?
-\end{boxedexplore}
+\end{boxexplore}
 
 In \cref{ch:numbers} we used the order of operations to simplify numeric expressions, which are made up of numbers and arithmetic operators. For example, \[3\cdot4-8(4^2-1)\] is a numeric expression. It contains only numbers and operators and, in the end, it simplifies down to a single number.\footnote{Spoiler alert: It's $-108$.} An \gls{algebraic expression} on the other hand can contain letters in addition to numbers and operators, for example \[3x - 5y + 18.\] These letters, called \glspl{variable}, stand in for numbers that we don't know or which may change.
 
-\begin{boxeddef}[Variable]
+\begin{boxdef}[Variable]
 A representation of a value that can change. In algebra, variables are often represented by letters. We usually use letters from the Latin alphabet ($a, b, c, d,\dotsc$), but sometimes also use other symbols, such as letters from the Greek alphabet ($\alpha, \beta, \gamma, \delta, \dotsc$).
-\end{boxeddef}
+\end{boxdef}
 
-\begin{boxeddef}[Algebraic expression]
+\begin{boxdef}[Algebraic expression]
 A symbolic representation of mathematical operations that can involve both numbers and variables.
-\end{boxeddef}
+\end{boxdef}
 
 \subsection{Numbers and variables}
 
@@ -207,15 +207,15 @@ Once we start to introduce letters into our expressions, we have to discuss some
 
 An algebraic expression that is built using only multiplication (or division) is called a \gls{term}. For example, $3x$ and $\frac{1}{2}m$ are terms. On the other hand, the expression $3x+2y$ is not a term because it includes addition. In fact, this expression is the sum of two terms.
 
-\begin{boxeddef}[Term]
+\begin{boxdef}[Term]
 An algebraic expression that represents only multiplication and division between variables and constants (numbers).
-\end{boxeddef}
+\end{boxdef}
 
 When we have the product of a number and a variable, like $3x$ or $\umin11g$, the number part is called the \gls{coefficient} of the term. So, the coefficient of $3x$ is 3, and $\umin11$ is the coefficient of $\umin11x$. If we have a variable all alone without a number attached, like $y$ or $w$, then we picture a ``phantom 1'' lurking there as the coefficient: $y$ is the same as $1y$, and $1w$ is the same as $w$.
 
-\begin{boxeddef}[Coefficient]
+\begin{boxdef}[Coefficient]
 The numerical factor in a term with a variable. If no number is explicitly written, the coefficient is understood to be 1.
-\end{boxeddef}
+\end{boxdef}
 
 \subsection{Evaluating algebraic expressions}
 
@@ -225,7 +225,7 @@ Consider the expression $3x$. If we know that $x$ represents $15$, then we can \
 
 When we evaluate an algebraic expression, we substitute in values for its variables, and then simplify the resulting numeric expression using the order of operations. It is a really good habit always to use parentheses when substituting numeric values for variables. This can avoid confusion about negative numbers!
 
-\begin{boxedex}
+\begin{boxex}
 \label{ex:evaluating}
 Evaluate the expressions (a) $6x+ 4$, and (b) $x^2 - 5$ for the $x$ values 3, $\umin1$, and $\frac{1}{2}$.
 
@@ -301,7 +301,7 @@ x^2 - 5 & = \left(\tfrac{1}{2}\right)^2 - 5\\
 \end{array}
 \]
 \end{enumerate}
-\end{boxedex}
+\end{boxex}
 
 Note how the parentheses help out when $x = \umin1$! Without those parentheses, we would have run the risk of making the most common mistake in Algebra 1: remember the difference between $(\umin1)^2$ and $\umin1^2$.
 
@@ -332,11 +332,11 @@ Note how the parentheses help out when $x = \umin1$! Without those parentheses, 
 
 The graphs of sequences that we created earlier were quite limited. Since sequences use only the natural numbers as input values, the only points we had available to plot were the points where $x = 1, 2, 3, 4, \dotsc$. But now, knowing how to evaluate algebraic expressions, we can create more complete graphs by choosing a wider variety of $x$-values.
 
-\begin{boxedexplore}[Extending our sequences]
+\begin{boxexplore}[Extending our sequences]
 Write a zero-based explicit rule for the arithmetic sequence shown below (this is the second example from \cref{sec:coordgraph}). First write the rule in terms of $n$ and $a_n$, then translate your rules into a graphable format in terms of $x$ and $y$.
 \[8, 13, 18, 23, 28, \dotsc\]
 The given sequence represents the $y$-values of the rule for the $x$-values 1, 2, 3, 4, and 5. Evaluate your rule for the $x$-values 0, -1, -2, -3, -4, and -5. Then, plot these 11 points on a coordinate grid.
-\end{boxedexplore}
+\end{boxexplore}
 
 The rule for the sequence in the startup exploration is $a_n = 5n + 3$, or in terms of $x$ and $y$, we have the rule $y = 5x + 3$. To create the coordinate graph, we can substitute the different $x$-values into the rule and compute the $y$-values. The middle column in the table below is our ``process column'' in which we substitute an $x$-value and compute the corresponding $y$-value. 
 
@@ -471,9 +471,9 @@ A final question to consider regarding data points: to connect or not to connect
 
 If we do want to connect the points, say, when graphing a funcction by plotting some sample points, we should connect with a smooth curve and \textit{not} individual line segments. If we use a straight line to connect points, then we are telling our audience that the data in between the points is linear, which may not be the case! Go back and have a look at the graph of $y=x^2$. It doesn't come to a point at the bottom. Rather it's a smooth curve that passes through the origin.
 
-%\begin{boxedexplore}[Extended exploration: Big graphs]
+%\begin{boxexplore}[Extended exploration: Big graphs]
 %\addtodoitem{Click here to visit the extended exploration: Big Graphs}
-%\end{boxedexplore}
+%\end{boxexplore}
 \addtodoitem{Link to extended exploration: Big graphs}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -482,12 +482,12 @@ If we do want to connect the points, say, when graphing a funcction by plotting 
 
 The graphs that we have been working with so far have been very orderly. Technical and scientific data, however, are not always so tidy. Data can be noisy, messy, and incomplete. We will need some tools that can help us to see and describe patterns that may (or may not) exist in experimental data.
 
-%\begin{boxedexplore}[Extended exploration: Who is the best age guesser?]
+%\begin{boxexplore}[Extended exploration: Who is the best age guesser?]
 %\addtodoitem{Click here to visit the extended exploration: Who Is the Best Age Guesser?}
-%\end{boxedexplore}
+%\end{boxexplore}
 \addtodoitem{Link to extended exploration: Age guesser}
 
-\begin{boxedexplore}[Water consumption]
+\begin{boxexplore}[Water consumption]
 The graph shown in \cref{fig:waterconsumption} depicts water consumption in Edmonton, capital of the Canadian province of Alberta, during the gold medal men's ice hockey game at the 2010 Winter Olympics in Vancouver. The game was played between Canada and United States.
 
 Water consumption during the game is shown in blue, while data from the same time period on the previous day is shown in green.
@@ -495,7 +495,7 @@ Water consumption during the game is shown in blue, while data from the same tim
 Write down anything you notice or wonder about the data presented in this graph.
 
 A few notes: Ice hockey games are played in three 20-minute periods with breaks in between. In this particular game, the score was tied at the end of regular play. Canada scored the winning goal in overtime and was then awarded the gold medal.
-\end{boxedexplore}
+\end{boxexplore}
 
 \begin{figure}[htbp]
 \centering\bigskip
@@ -540,7 +540,7 @@ A few notes: Ice hockey games are played in three 20-minute periods with breaks 
 %	\label{fig:waterhockey}
 %\end{figure}
 
-%\begin{boxedexplore}[Guess Your Weight]
+%\begin{boxexplore}[Guess Your Weight]
 %\begin{minipage}[t]{0.7\textwidth}
 %\vspace{0pt}
 %Alphonse the Amazing has a Guess-Your-Weight booth on the carnival midway at the Cheeseville Zoo. To play, people pay \$1, Alphonse guesses their weight, and then they step on a scale (only the most self-confident people play this game). If Alphonse's guess is off by more than 5 pounds (over or under), they win a prize.
@@ -574,25 +574,25 @@ A few notes: Ice hockey games are played in three 20-minute periods with breaks 
 %170 & 153\\\hline
 %\end{tabular}\par
 %\end{minipage}
-%\end{boxedexplore}
+%\end{boxexplore}
 
 In the graph of Edmonton water consumption, the amount of water being used varies depending on the time of day (not the other way around). We say that ``time of day'' is the \textit{independent variable} and ``water demand'' is the \textit{dependent variable}. 
 
-\begin{boxeddef}[Independent variable]
+\begin{boxdef}[Independent variable]
 A variable whose values affect the values of another variable. In a graph of the relationship between two variables, the quantity represented on the horizontal axis (the $x$-axis) usually represents the independent variable.
-\end{boxeddef}
+\end{boxdef}
 
-\begin{boxeddef}[Dependent variable]
+\begin{boxdef}[Dependent variable]
 A variable whose values depend on the values of another variable. In a graph of the relationship between two variables, the quantity represented on the vertical axis (the $y$-axis) usually represents the dependent variable.
-\end{boxeddef}
+\end{boxdef}
 
 \subsection{Correlation}
 
 We can compare just about any two quantities. One way to do this is with a graph called a \gls{scatter plot}.
 
-\begin{boxeddef}[Scatter plot]
+\begin{boxdef}[Scatter plot]
 A graph that relates data of two different sets. The two sets of data are displayed as ordered pairs.
-\end{boxeddef}
+\end{boxdef}
 
 Suppose we wish to compare, say, the height and weight for all of the players on the top two 2010 Olympic men's ice hockey teams. Let's make a graph comparing every player's height and weight as ordered pairs: (height, weight). This graph is shown on the left in \cref{fig:hockeystats}.\footnote{Data from the International Olympic Committee, as reported in \href{http://en.wikipedia.org/wiki/Ice_hockey_at_the_2010_Winter_Olympics}{Wikipedia}.}
 
@@ -755,9 +755,9 @@ While we're at it, let's make another comparison. The graph on the right in \cre
 
 Notice that the graph of weight and height has a clear upward slant. This seems reasonable: the taller someone is, the more we might expect that person to weigh. There are some data points that don't fit the trend, but generally speaking the data points are increasing as we look toward the right on the graph. We say that this data shows a positive \gls{correlation}.
 
-\begin{boxeddef}[Correlation]
+\begin{boxdef}[Correlation]
 A trend between two sets of data, as seen in a scatter plot. A trend can show positive, negative, or no correlation. Positive correlation shows an \gls{increasing} trend in data. Negative correlation shows a \gls{decreasing} trend in data.
-\end{boxeddef}
+\end{boxdef}
 
 The graph of jersey number versus height is more of a blob. There's no clear trend in this data, and so we say that is shows \textit{no correlation}. This makes sense, too: there's no logical connection between a player's height and the number they wear on their shirt.
 
@@ -775,15 +775,15 @@ When we drew the graph of a sequence, we didn't connect the dots. A sequence has
 
 Similarly, imagine a graph showing ``time'' as the independent variable and ``number of hockey players on the ice'' as the dependent variable. In this case, the $y$-values would have no ''in-betweens''. There could be 11 players or 12 players on the ice, but never 11.5 players. This is called \gls{discrete data}.
 
-\begin{boxeddef}[Discrete data]
+\begin{boxdef}[Discrete data]
 Data for which it doesn't make sense for measurements to exist between given data points. Discrete data often involves \textit{counting items}, such at the number of cars in a parking lot over time. 
-\end{boxeddef}
+\end{boxdef}
 
 On the other hand, when we started to picture the graph of a rule that could accept any real number as input, we drew a continuous line on the graph. The graph of water consumption in Edmonton, is jagged, spiky, and irregular -- but it's a continuous line. We can measure how much water has been used at any point in time, and we can measure the amount of water in fractions of a unit. We call this \gls{continuous data}.
 
-\begin{boxeddef}[Continuous data]
+\begin{boxdef}[Continuous data]
 Data that has no holes, gaps, or breaks. Continuous data often involves \textit{measuring some value} where measurements exist (and may change) between data points. For example, a person's height over time.
-\end{boxeddef}
+\end{boxdef}
 
 %The graphs we saw in the last section (straight lines and smooth curves) are quite easy to describe mathematically. For instance, we know how to write rules for sequences, and sequences were what led us to graph those curves in the first place. It's hard -- and sometimes impossible -- to write a neat rule for this data. So, we have developed some other terminology to describe sometimes-messy data.
 
@@ -844,12 +844,12 @@ Discrete data\par\medskip
 
 In this section, our goal is to hone our skills at understanding what a graph is \textit{communicating}.
 
-%\begin{boxedexplore}[Extended exploration: Interpreting graphs with distance match]
+%\begin{boxexplore}[Extended exploration: Interpreting graphs with distance match]
 %\addtodoitem{Click here to visit the extended exploration: Interpreting Graphs with Distance Match}
-%\end{boxedexplore}
+%\end{boxexplore}
 \addtodoitem{Link to extended exploration: distance match}
 
-\begin{boxedexplore}[Yeardleigh's submersible]
+\begin{boxexplore}[Yeardleigh's submersible]
 Always questing after the most delicious ingredients, Yeardleigh buys an underwater submersible vehicle so that she can hunt the ocean floor for interesting sea plants. The graph below shows the depth of Yeardleigh's submersible over time.
 
 Study the graph. What can you tell about what's happening? Write a short paragraph telling, in words, the same story that the graph is telling visually.
@@ -875,7 +875,7 @@ Study the graph. What can you tell about what's happening? Write a short paragra
 	\draw[very thick, blue] (0,0) -- (2,1) -- (4,1) -- (8,3) -- (10,3) -- (11,5) -- (12,5) -- (14,0);
 \end{tikzpicture}
 \end{center}
-\end{boxedexplore}
+\end{boxexplore}
 
 At the beginning of the trip, Yeardleigh's submersible dives a total of 100 feet in the first 30 minutes. At the end of the trip, it returns to the surface, rising 500 feet in the last 30 minutes. This tells us that the depth of the submersible was \textit{changing much faster} at the end of the journey compared to the beginning.
 

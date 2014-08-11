@@ -11,13 +11,13 @@ In the last chapter, we found integer solutions to nearly all of the equations t
 \section{Real numbers}
 \label{sec:radrealnumbers}
 
-\begin{boxedexplore}[Share the cheese]
+\begin{boxexplore}[Share the cheese]
 Middle Market sells mini-wheels of cheese for snacking. Mini-wheels can be sold one at a time, or in boxes of 10. The cheese arrives at the warehouse in crates of 10 boxes (containing 100 wheels of cheese in total).
 
 The warehouse workers need to divide their stock of mini-wheels up among three trucks, each of which will deliver to a local Middle Market branch. The warehouse has a total of 13 crates, 7 boxes, and 9 mini-wheels in stock.
 
 The manager allows the workers to open crates or boxes, if needed, to divide the supply evenly. Describe a process for dividing up the cheese that requires opening the minimum number of boxes.
-\end{boxedexplore}
+\end{boxexplore}
 
 In \cref{ch:numbers}, we made some comments which might, at first, appear contradictory. On the one hand, we saw that the set of real numbers, $\R$, includes every possible decimal number. We also saw that the set of rational numbers, $\Q$, includes ``terminating decimals and repeating decimals''. 
 
@@ -56,7 +56,7 @@ So, in the end: each truck gets 4 crates, 5 boxes, and 9 mini-wheels -- that's 4
 
 In the cheese example, it makes sense to stop here with a remainder of 2. In general, though, we could continue the process of division and create a number that extends to the right of the decimal point.
 
-\begin{boxedex}
+\begin{boxex}
 Convert $\dfrac{3}{4}$ and $\dfrac{1}{6}$ into their decimal representations.
 
 \bigskip\inlineex{Solution:} Recall that the fraction three-fourths is equivalent to the division problem $3 \div 4$. To do this by long division, we put the dividend (that's 3) inside the ``division house'' and leave the divisor (that's 4) outside.
@@ -93,7 +93,7 @@ So the decimal representation of $\frac{3}{4} = 0.75$ (you may have known that a
 \end{array}
 \]
 We might as well stop here, though, because we're stuck in a loop! The 6's in the answer are going to repeat forever. (Can you see why?) So, the decimal representation of $\frac{1}{6} = 0.1\overline{6}$.
-\end{boxedex}
+\end{boxex}
 
 We say that $0.75$ is a terminating decimal, because the process of long division stops with a remainder of zero. On the other hand, $0.1\overline{6}$ is called a repeating decimal because the long division process gets stuck in a loop. Note that we've used a vinculum over the 6 to indicate which digits repeat.
 
@@ -189,7 +189,7 @@ Notice that the two numbers on the righthand side of our equations are exactly f
 
 This process is sometimes called \textit{killing the tail}, since our goal is to subtract two different decimal forms that have the same repeating part, thereby eliminating the infintely long tail of digits.\footnote{An alternative technique, which we'll discuss in Algebra 2, involves turning the repeating decimal into an infinitely long sequence of ever-decreasing numbers, and then finding the sum of that sequence. Yes, we can -- in certain circumstances -- add up infinitely many numbers. This is just one of the amazing things that awaits you in Algebra 2!}
 
-\begin{boxedex}
+\begin{boxex}
 Convert the repeating decimal $0.\overline{63}$ to its decimal representation.
 
 \exsoln\ We'll kill the tail again, but note that we have two digits after the decimal which repeat. This will require a slight adjustment. We'll start as we did before, by assigning an algebraic name to our number:\[x = 0.6363\dotso\]
@@ -199,7 +199,7 @@ If we multiply both sides by 10, we'll have \[10x = 6.3636\dotso\] which is also
 - 	&& 	x 		&= &0.\overline{63}\\\hline
 	&&	99x 	&= &63.00
 \end{aligned}\] We divide both sides by 99, and then simplify our fraction to lowest terms. In the end, we have: \[0.\overline{63} = \frac{63}{99} = \frac{7}{11}\]
-\end{boxedex}
+\end{boxex}
 
 The moral of the story is that we may have to adjust our method and choose the ``just right'' powers of 10. Consider how we might use kill the tail to turn $0.1\overline{6}$ back into $\frac{1}{6}$? (Note that the 6 repeats in the decimal form, but the 1 does not.)
 
@@ -228,11 +228,11 @@ Unfortunately, explaining the irrationality of $\pi$ requires a bit more mathema
 
 We have already worked quite a bit with exponents, but every exponent so far has been an integer. Could we have a rational number as an exponent? If so, what would it mean?
 
-\begin{boxedexplore}[Half power]
+\begin{boxexplore}[Half power]
 Consider the expression \[9^{1/2},\] that is, ``nine to the power one-half''. What are some possible interpretations of this?
 
 Use a calculator to explore what happens when we raise certain numbers to the one-half power (start with the natural numbers between 1 and 20). What patterns do you notice? What conjectures do you have about what's happening?
-\end{boxedexplore}
+\end{boxexplore}
 
 Suppose we let $x = 9^{1/2}$. We'd like to find an alternative way of expressing $x$ that uses only integer exponents. One approach is to multiply each side of this equation by itself. Then we'd have:
 \[\begin{aligned}
@@ -246,9 +246,9 @@ x\cdot x	&= 9
 \end{aligned}\]
 So, $x$ is the number that when multiplied by itself gives $9$ as the result. That could be either $3$ or $\umin3$, since $3\cdot 3 = \umin3 \cdot \umin3 = 9$. Using some vocabulary that we already know: we say that $9^{1/2}$ is a \textit{square root} of $9$.
 
-\begin{boxeddef}[Square root]
+\begin{boxdef}[Square root]
 A \gls{square root} of $a$ is a number $b$ such that $b \cdot b = a$.
-\end{boxeddef}
+\end{boxdef}
 
 The reason this is called a ``square root'' has to do with the geometric interpretation of this operation. If we have a square of side length $\mathcal{S}$, then the area of the square is $\mathcal{S}^2$. Conversely, if we have a square with area $\mathcal{A}$, then the \textit{square root of $\mathcal{A}$} gives us the side length of the square. 
 
@@ -281,9 +281,9 @@ In these cases, the notation specifically indicates that we want both the positi
 
 Consider the expression $\sqrt{\umin16}$. This is a bit of a problem. We're meant to find the principal square root of $\umin16$, but the closest we can get is $4 \cdot \umin4 = \umin16$. It's true that $4$ and $\umin4$ have the same absolute value, but they're not the same number, which means we're not \textit{squaring} anything. So, there is no real number equal to $\sqrt{\umin16}$. Of course, $\umin16$ isn't special, the same argument applies to any negative number.
 
-\begin{boxeddef}[Square root of a negative number]
+\begin{boxdef}[Square root of a negative number]
 If $a < 0$, then there is no real number equal to $\sqrt{a}$.
-\end{boxeddef}
+\end{boxdef}
 
 Note that this \textit{doesn't} mean that $\umin16$ doesn't have any square roots. It simply means that the square roots are not real numbers. The square roots of $\umin16$ are members of a set called the \textit{complex numbers} $\C$, but not members of the real numbers $\R$.
 
@@ -324,9 +324,9 @@ This is an example of \textit{proof by contradiction}. We assume that some state
 \section{Simplified radical form}
 \label{sec:radsimplifiedform}
 
-%\begin{boxedexplore}[TODO]
+%\begin{boxexplore}[TODO]
 %TODO
-%\end{boxedexplore}
+%\end{boxexplore}
 \addtodoitem{Startup exploration on simplified radical form?}
 
 %When we take the square root of a perfect square we get an integer as the answer. It may come in handy to memorize the first 25 or so perfect squares, so that you can recognize them when they come up in a problem.
@@ -367,7 +367,7 @@ The \textit{exact value} of an irrational number can only be represented using s
 
 To help us standardize the way we write radical expressions, we all agree to comply with \textit{simplified radical form}.
 
-\begin{boxedcriteria}[Simplified radical form]
+\begin{boxcrit}[Simplified radical form]
 A radical expression is considered completely simplified if\ldots
 \begin{enumerate}
 \item Like radical terms have been combined.
@@ -375,7 +375,7 @@ A radical expression is considered completely simplified if\ldots
 \item There are no fractions under the radical.
 \item There are no radicals in the denominator of a fraction.
 \end{enumerate}
-\end{boxedcriteria}
+\end{boxcrit}
 
 Over the next few sections, we will discuss each of these criteria and the algebraic manipulations that we can use to make sure our expressions comply. The first criteria is quite straightforward, so let's get right to it.
 
@@ -386,25 +386,25 @@ Note, in particular, that the sum here is not $\sqrt{10}$. Similarly, $3x + 4x =
 
 \addtodoitem{See Patty's alternative way of simplifying radicals.}
 
-\begin{boxedwarning}
+\begin{boxwarn}
 When we say like radical terms ``can be combined'', don't go thinking you can add the numbers under the radical. To add the values like this is \evilandwrong.
 \[ \sqrt{3} + \sqrt{3} \neq \sqrt{6}\]
 Since a radical is like an exponent, this is the equivalent of saying $(a+b)^2=a^2+b^2$ which, by now, we know is not generally the case. You can't sprinkle that exponent across the sum!
 
 While we're at it, don't get any ideas about splitting the radical-of-a-sum into the sum-of-radicals. This, too, is \evilandwrong.
 \[\sqrt{2+14} \neq \sqrt{2} +\sqrt{14}\]
-\end{boxedwarning}
+\end{boxwarn}
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \subsection{Product properties of radicals}
 %\label{sec:radproduct}
 
-\begin{boxedexplore}[Building blocks]
+\begin{boxexplore}[Building blocks]
 The number 1 is the \textit{additive building block} of the natural numbers. In other words: If we want to ``build'' any natural number using only addition, the only number we need is the number 1. Every natural number can be written as the sum of a bunch of 1's.
 
 What are the \textit{multiplicative building blocks} of the natural numbers? Note that we have to say \textit{blocks} (plural) since the number 1 is not enough: multiplying together a bunch of 1's always gives us 1 as the product. What is the smallest collection of natural numbers that we need in order to build the rest using only multiplication?
-\end{boxedexplore}
+\end{boxexplore}
 
 The second criteria for simplified radical form states that the expression under the radical may have no perfect square factors other than 1. This may seem strangely worded. It clearly handles the idea that there should be no perfect squares under the radical, and that makes sense. Expressions like $\sqrt{4}$ and $\sqrt{25}$ can pretty obviously be simplified.
 
@@ -412,15 +412,15 @@ But, this criteria also catches expressions like $\sqrt{24}$ and $\sqrt{50}$ bec
 
 How can we simplify an expression like $\sqrt{50}$ so that it has no perfect square factors under the radical? For help, we turn to:
 
-\begin{boxeddef}[Product rule of radicals]
+\begin{boxdef}[Product rule of radicals]
 For any $a \geq 0$ and $b \geq 0$, \[\sqrt{ab} = \sqrt{a} \cdot \sqrt{b}.\]
 
 Note: In Algebra 1 we only use the square root version of this property, though in fact it applies to radicals of any degree: cube roots, fourth roots, and so on.
-\end{boxeddef}
+\end{boxdef}
 
 This property looks an awful lot like the product rule for exponents, which makes sense since here we are undoing the power of a product rule, where the power is the exponent one-half!
 
-\begin{boxedex}
+\begin{boxex}
 Express $\sqrt{50}$ in simplified radical form.
 
 \exsoln\ We know $\sqrt{50}$ is not yet in simplified radical form because 50 is divisible by a perfect square, $50 = 25 \cdot 2$. We apply the multiplication property of radicals like so:
@@ -435,7 +435,7 @@ Express $\sqrt{50}$ in simplified radical form.
 \end{aligned}
 \]
 So, $\sqrt{50} = 5\sqrt{2}$. These two expressions are equal, but only the second expression satisfies the criteria of simplified radical form.
-\end{boxedex}
+\end{boxex}
 
 \subsection{Different approaches to simplifying}
 
@@ -463,9 +463,9 @@ We've given this strategy the memorable (though perhaps gruesome) name \textit{t
 
 But, only one of the partners survives the jailbreak. The snipers take out the decoy. In the example above, one 2 makes it out, and so does one 3. The final factor of 3 is partnerless, and left trapped inside its radical prison.
 
-\begin{boxedex}
+\begin{boxex}
 	TO DO.
-\end{boxedex}
+\end{boxex}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \subsection{Quotient properties of radicals}
@@ -481,13 +481,13 @@ Both of these have to do with interactions between radicals and fractions. Crite
 
 To tackle Criteria \#3, for example when faced with expressions like \[\sqrt{\frac{4}{49}} \quad\text{or}\quad \sqrt{\frac{24}{25}}~,\]we turn to:
 
-\begin{boxeddef}[Quotient rule of radicals]
+\begin{boxdef}[Quotient rule of radicals]
 For any $a \geq 0$ and $b \geq 0$, \[\sqrt{\frac{a}{b}} = \dfrac{\sqrt{a}}{\sqrt{b}}.\]
-\end{boxeddef}
+\end{boxdef}
 
 Again, this property applies to radicals of any degree (though for now we'll focus on square roots). And again, this property is just like the quotient rule for exponents, but with a rational exponent.
 
-\begin{boxedex}
+\begin{boxex}
 Express $\sqrt{\frac{4}{49}}$ and $\sqrt{\frac{24}{25}}$ in simplified radical form.
 
 \exsoln\ Here we have a fairly clear application of the rule:
@@ -510,7 +510,7 @@ In the second example, the numerator doesn't contain in a perfect square, so we 
 &= \frac{2\sqrt{6}}{5}
 \end{aligned}
 \]
-\end{boxedex}
+\end{boxex}
 
 \subsection{Rationalizing the denominator}
 
@@ -523,7 +523,7 @@ We will employ the trusty \textit{identity property of multiplication}. Remember
 
 Study the following examples:
 
-\begin{boxedex}
+\begin{boxex}
 Write $\dfrac{3}{\sqrt{2}}$ in simplified radical form.
 
 \exsoln\ Note the clever use of multiplication by a fancy version of 1.
@@ -538,13 +538,13 @@ Write $\dfrac{3}{\sqrt{2}}$ in simplified radical form.
 &&\quad\text{definition of square root (in the denominator)}\\
 \end{aligned}
 \]
-\end{boxedex}
+\end{boxex}
 
 Note that we chose as our fancy 1 \textit{exactly what we needed} to make the denominator of our fraction turn into an integer. This might seem like cheating, but it's a completely legal move, algebraically speaking.
 
 Be sure to pay close attention. Sometimes we can use the division property in reverse to get rid of radicals in the denominator. We'll work the next example in two different ways to show the comparison.
 
-\begin{boxedex}
+\begin{boxex}
 Write $\dfrac{\sqrt{84}}{\sqrt{6}}$ in simplified radical form.
 
 \exsoln\ First, we'll rationalize the denominator using a fancy version of 1.
@@ -587,18 +587,18 @@ Now, an alternative approach: We'll use the division property of radicals in rev
 &&\quad\text{Voil\`a.}
 \end{aligned}
 \]
-\end{boxedex}
+\end{boxex}
 
 The second approach is much easier in this case. It pays to work smart and do a bit of planning before charging ahead with an algorithm blindly. It may not always be this easy, though. Under what circumstances will we be able to use the kind of shortcut?
 
-\begin{boxedwarning}
+\begin{boxwarn}
 Answers with fractions must be simplified, but folks sometimes get overly aggressive with the simplification. Consider the following: \[\frac{2}{\sqrt{6}} = \frac{2}{\sqrt{6}}\cdot\frac{\sqrt{6}}{\sqrt{6}} = \frac{2\sqrt{6}}{\sqrt{6}\cdot\sqrt{6}} = \frac{2\sqrt{6}}{6}\]
 At this point, we can do one more simplification: \[\frac{2\sqrt{6}}{6} = \frac{\sqrt{6}}{3} \qquad \text{Yes!}\]
 But we might be tempted to try and simplify even more: \[\frac{\sqrt{6}}{3} = \frac{\sqrt{2}}{1} \qquad \text{No!}\]
 It's tempting, but we can't simplify using things \textit{under} the radical and things \textit{outside} the radical. That 6 under the radical cannot cancel with the 3 outside! To attempt such a simplification is \evilandwrong.
-\end{boxedwarning}
+\end{boxwarn}
 
-\begin{boxedex}
+\begin{boxex}
 Determine the value of $x$ given the equation: $2x^2+4x-3=40$.
 
 \exsoln\ We'll use everything that we learned in \cref{ch:quadeq}! Our first step is to ensure that the first term is a perfect square, so we multiply through by 2.
@@ -631,13 +631,13 @@ Almost there! Remember, we need to simplify our radicals! We can use the sniper 
 And so in the end, we have
 \[\solset{\frac{-2 \pm 3\sqrt{10}}{2}}\]
 We'll admit that these answers ain't pretty (note that there are two answers there!), but they are the values that satisfy our original quadratic equation.
-\end{boxedex}
+\end{boxex}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \section{Coordinate geometry}
 \label{sec:coordgeometry}
 
-\begin{boxedexplore}[Squarea]
+\begin{boxexplore}[Squarea]
 As we saw in \cref{sec:radsquareroots}, a square with area $\mathcal{A}$ has side length $\sqrt{\!\mathcal{A}\,}$. Consider the figures below.
 
 \begin{center}
@@ -661,7 +661,7 @@ As we saw in \cref{sec:radsquareroots}, a square with area $\mathcal{A}$ has sid
 What is the area of each square? What is the side length of each square? Can you draw a square with side length $\sqrt{8}$? What about $\sqrt{13}$?
 
 By the way, how do we know that each of these figures is, in fact, a square? (Hint: Think back to the slopes of parallel and perpendicular lines. What argument can we make for why the diagonal segments must be the same length in each figure?)
-\end{boxedexplore}
+\end{boxexplore}
 
 As an application of radicals and radical expressions, which are closely connected to the side lengths of squares, it's natural to discuss concepts from geometry. We'll begin with one of the most famous and important statements in mathematics.
 
@@ -669,11 +669,11 @@ As an application of radicals and radical expressions, which are closely connect
 
 It's a good bet that have seen the Pythagorean Theorem before, and that you will see it in every high school mathematics class you take, and many of the mathematics classed you take in college. In fact, the Pythagorean theorem is a foundational piece of an entire branch of mathematics based on the properties of triangles called \textit{trigonometry}.\footnote{Trigonometry begins with the study of triangles. \textit{Trigon} is another way of sayinga \textit{triangle} -- in fact it might be a better way of naming that shape! Most of the other polygons we know (pentagons, hexagons, octagons) have that \textit{-gon} suffix, and the prefix \textit{tri-} means ``three'' (as in tricycle).}
 
-\begin{boxeddef}[{P}ythagorean theorem]
+\begin{boxdef}[{P}ythagorean theorem]
 The sum of the squares of the lengths of the \glspl{leg} of a right triangle is equal to the square of the length of the \gls{hypotenuse}.
 
 In other words, if $a$ and $b$ represent the lengths of the legs (the perpendicular sides) of a right triangle, and $c$ represents the length of the hypotenuse (the longest side, opposite the right angle), then \[a^2 + b^2 = c^2.\]
-\end{boxeddef}
+\end{boxdef}
 
 The theorem is named after Greek philosopher and mathematician Pythagoras of Samos, who lived around 570--495 BCE.\footnote{\addtodoitem{Need a good Pythagoras footnote.}} However, there is substantial evidence that the theorem was known to many different cultures from many different time periods. There is evidence, for instance, that the ancient Babylonians knew about Pythagorean triples (see the next section) more than 1000 years BCE.
 
@@ -694,9 +694,9 @@ You might be asking yourself, ``How do we know that the theorem is true for \tex
 
 \subsection{{P}ythagorean triples}
 
-\begin{boxeddef}[{P}ythagorean triple]
+\begin{boxdef}[{P}ythagorean triple]
 A \textit{Pythagorean triple} is a set of three positive integers satisfying the Pythagorean theorem.
-\end{boxeddef}
+\end{boxdef}
 
 There are infinitely many Pythagorean triples, and it is quite handy to know a few by heart. (This is because they are used quite a bit in problems, and those delightful standardized tests we all know and love.) Here are a few common Pythagorean triples:
 \[
@@ -714,7 +714,7 @@ The triples above are called \inlinedef{primitive Pythagorean triples} because t
 
 The classic application of the Pythagorean theorem is to find a missing side length, either a leg or a hypotenuse, and you may have solved problems like this before. Now that we have some algebra skills, however, our answers should be given in simplified radical form! No more decimal approximations (unless the directions state otherwise)!
 
-\begin{boxedex}
+\begin{boxex}
 Find the length of the digaonal of a 4-by-8 rectangle.
 
 \exsoln\ This problem might not, at first, seem to have anything to do with the Pythagorean theorem. The theorem, after all, is about right triangles, and this question is about a rectangle! Drawing a picture helps to reveal the connection:
@@ -741,7 +741,7 @@ d 	&= 2 \cdot 2 \cdot \sqrt{5}\\
 d 	&= 4\sqrt{5}
 \end{align*}
 So, a 4-by-8 rectangle has a diagonal which is $4\sqrt5$ units long.
-\end{boxedex}
+\end{boxex}
 
 To get a feel for whether this answer is reasonable, we could find a decimal approximation using a calculator (it's about 9 units long, which seems OK), or we could reason as follows. We know that $\sqrt{4} = 2$, and so $\sqrt{5}$ must be a bit more than 2. So, $4\sqrt{5}$ must be a bit more than 8. This seems reasonable.
 
@@ -749,9 +749,9 @@ On the other hand, if we had gotten $4\sqrt{8}$ we might reason that $\sqrt{9} =
 
 \subsection{Distance formula}
 
-\begin{boxedexplore}[Grid distance]
+\begin{boxexplore}[Grid distance]
 Find the length of the line segment connecting the points $(1,2)$ and $(6,7)$.
-\end{boxedexplore}
+\end{boxexplore}
 
 One important application of the Pythagorean theorem is called the \gls{distance formula}. It is a formula that we can use to calculate the distance between two points on a coordinate grid. In the startup exploration, we have the segment pictured below:
 
@@ -823,14 +823,14 @@ Since the process is the same every time, we can generalize to find the distance
 \end{tikzpicture}
 \end{center}
 
-\begin{boxeddef}[Distance formula]
+\begin{boxdef}[Distance formula]
 Given two points in the plane $(x_1, y_1)$ and $(x_2, y_2)$, the length $d$ of the line segment connecting the points is given by the formula:
 \[d = \sqrt{ (x_2 - x_1)^2 + (y_2 - y_1)^2 }.\]
-\end{boxeddef}
+\end{boxdef}
 
 This might look like a bunch of alphabet soup, much harder to remember than the Pythagorean theorem. But remember: this \textit{is} the Pythagorem theorem! If you forget the formula, don't panic! Just remember that the line segment between the two points is the hypotenuse of a right triangle.
 
-\begin{boxedex}
+\begin{boxex}
 Find the distance between the points $(5, 12)$ and $(-4, -2)$.
 
 \exsoln\ We will use the distance formula, but note that we have both subtraction and negative numbers. Watch those minus signs!
@@ -841,7 +841,7 @@ d &= \sqrt{ (5 - \umin4)^2 + (12 - \umin2)^2 } \\
 &=\sqrt{ 277 }
 \end{aligned}\]
 Since 277 is prime, we know our answer complies with simplified radical form, so we're all done. The distance betnwee the two points is $\sqrt{277}$ units.
-\end{boxedex}
+\end{boxex}
 
 \subsection{Midpoint formula}
 
@@ -879,11 +879,11 @@ One way to explain this is by drawing in the right triangle, and then chopping t
 This diagram suggests that the $x$-coordinate of the midpoint of the hypotenuse is exactly halfway between the $x$-coordinates of the legs. The same goes for the $y$-coordinate. So, to find the coordinates of the midpoint, all we have to do is average the coordinates of the endpoints! Once again, you don't have to memorize this formula if you remember where it comes from!
 
 
-\begin{boxeddef}[Midpoint formula]
+\begin{boxdef}[Midpoint formula]
 Given a line segment with endpoints $(x_1, y_1)$ and $(x_2, y_2)$, the coordinates of the midpoint of the segment are \[\left( \frac{x_1+x_2}{2} ~,~ \frac{y_1+y_2}{2} \right)\]
-\end{boxeddef}
+\end{boxdef}
 
-\begin{boxedex}
+\begin{boxex}
 Find the midpoint of the segment connecting the points $(-13,8)$ and $(6, -2)$.
 
 \inlineex{Solution:} Let's calculate the midpont first, and then check our answer by drawing a picture. The formula is pretty straightforward. The midpoint should be located at: \[\left( \frac{-13+6}{2} ~,~ \frac{8+\umin2}{2} \right) = \left( \frac{-7}{2} ~,~ \frac{6}{2} \right) = (-3.5, 3) \]
@@ -902,7 +902,7 @@ Here's a graph to check that our answer is reasonable:
 	\draw[blue, fill=yellow] plot[only marks,mark=*,mark size=4] coordinates{(-3.5,3)};
 \end{tikzpicture}
 \end{center}
-\end{boxedex}
+\end{boxex}
 
 \subsection{(;,;) Proof of the {P}ythagorean theorem}
 \label{sec:pythagproof}

@@ -31,7 +31,7 @@ Whenever we are asked to simplify an exponential expression, a good habit of min
 
 In earlier chapters we learned properties that could be used to simplify linear expressions. The criteria we learned in \cref{ch:equations} for ``simplified algebraic expressions'' still apply, but now that we are dealing with exponents, there are a few new criteria that we need to add. We will summarize the criteria here and then learn the details over the next few sections.
 
-\begin{boxedcriteria}[Simplified exponential expressions]
+\begin{boxcrit}[Simplified exponential expressions]
 An exponential expression is considered completely simplified if\ldots
 \begin{enumerate}
 	\item It contains only positive exponents
@@ -39,7 +39,7 @@ An exponential expression is considered completely simplified if\ldots
 	\item Powers with a numeric base are written in standard form (if that's reasonable)
 	\item It contains no explicit grouping symbols
 \end{enumerate}
-\end{boxedcriteria}
+\end{boxcrit}
 
 Criteria \#1 asks for only positive exponents. In \cref{sec:exponegative}, we saw how to use the reciprocal to rewrite a negative exponent using a positive exponents. We'll see more about negative exponents in \cref{sec:expoquotient}.
 
@@ -63,11 +63,11 @@ In the next few sections we will derive the properies for simplifying exponentia
 
 \subsection{Product rule}
 
-\begin{boxedexplore}[Derivation \#1]
+\begin{boxexplore}[Derivation \#1]
 Use expanded form to write each of the expressions below as a single base raised to a singe exponent.
 \[x^4 \cdot x^3 \qquad\text{and}\qquad z^5 \cdot z^8\]
 Make a conjecture about a general rule for simplifications of this type.
-\end{boxedexplore}
+\end{boxexplore}
 
 This shortcut is called the product rule, since it applies to the situation in which we are finding the product of two exponential expressions with the same base.
 
@@ -78,26 +78,26 @@ The same goes for the $z$'s in the second expression:
 
 The new exponent will be the sum of the original exponents!
 
-\begin{boxeddef}[Product rule of exponents]
+\begin{boxdef}[Product rule of exponents]
 For any nonzero real number $a$ and any integers $m$ and $n$, \[a^m \cdot a^n = a^{m+n}.\]
-\end{boxeddef}
+\end{boxdef}
 
 The intuition behind this rule is that $a^m \cdot a^n$ means we have $m$ factors of $a$ multiplied by $n$ factors of $a$, and so we have $m+n$ factors of $a$ in all. That means $a^{m+n}$. This is pretty straightforward! There's really no need to ``memorize'' this rule. We can always re-derive it if we forget exactly how it works.
 
-\begin{boxedex}
+\begin{boxex}
 Simplify $3b^2 \cdot 4b^5.$
 
 \exsoln\ In this example, we will need to use the commutative property of multiplication to move the coefficients together and the variable parts together. In other words: \[3b^2 \cdot 4b^5 = 3\cdot4\cdot b^2 \cdot b^5 = 12b^{2+5} = 12b^7.\]
-\end{boxedex}
+\end{boxex}
 
 
 \subsection{Power rule}
 
-\begin{boxedexplore}[Derivation \#2]
+\begin{boxexplore}[Derivation \#2]
 Use expanded form to write each of the expressions below as a single base raised to a singe exponent.
 \[(x^3)^4 \qquad\text{and}\qquad (z^5)^8\]
 Make a conjecture about a general rule for simplifications of this type.
-\end{boxedexplore}
+\end{boxexplore}
 
 This simplification is called the power rule, since it applies to situations in which we have a power which is itself being raised to a power.
 
@@ -108,24 +108,24 @@ Notice that we get a repeated addition in the exponent, which we can rewrite as 
 
 The new exponent is the product of the original exponents!
 
-\begin{boxeddef}[Power eule of exponents]
+\begin{boxdef}[Power eule of exponents]
 For any nonzero real number $a$ and any integers $m$ and $n$, \[(a^m)^n = a^{n \cdot m}\]
-\end{boxeddef}
+\end{boxdef}
 
 In this case, the intuition is that the outermost exponent means we will multiply together $n$ factors of $a^m$. Since each of those factors has $m$ factors of $a$, we have ``$n$ groups of $m$ factors of $a$'' in all, which is another way of saying $n \cdot m$ factors of $a$.
 
-\begin{boxedex}
+\begin{boxex}
 ---
-\end{boxedex}
+\end{boxex}
 
 
 \subsection{Product to a power}
 
-\begin{boxedexplore}[Derivation \#3]
+\begin{boxexplore}[Derivation \#3]
 Use expanded form to write each of the expressions below without parentheses.
 \[(xy)^4 \qquad\text{and}\qquad (abc)^8\]
 Make a conjecture about a general rule for simplifications of this type.
-\end{boxedexplore}
+\end{boxexplore}
 
 In this case, we are taking the power of a product so we call this shortcut ``power of a product'' or ``product to a power''. We can write out the first expression in expanded form, and then use the commutative property to rearrange the factors:
 \[(xy)^4 = (xy)(xy)(xy)(xy) = xy\,xy\,xy\,xy = xxxx\,yyyy = x^4y^4\]
@@ -139,17 +139,17 @@ The second example works just the same way:
 
 We can remove the parentheses by attaching the exponent to each of the factors inside!
 
-\begin{boxeddef}[Product to a power rule]
+\begin{boxdef}[Product to a power rule]
 For any nonzero real numbers $a$ and $b$ and any integer $m$, \[(ab)^m = a^m b^m\]
-\end{boxeddef}
+\end{boxdef}
 
 The idea is that the exponent gives us $m$ copies of the product, which means $m$ copies of each of the factors in that product. The commutative property of multiplication allows us to move these factors around and regroup them.
 
 Note that the thing in the parentheses is a product, \textit{not a sum}. We'll learn how to handle sums raised to powers, for example $(x+y)^2$, in \cref{sec:exposumstopowers}.
 
-\begin{boxedex}
+\begin{boxex}
 ---
-\end{boxedex}
+\end{boxex}
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -160,11 +160,11 @@ The rules in the last section were all based on multiplication. We'll look at so
 
 \subsection{Simplifying negative exponents}
 
-\begin{boxedexplore}[Derivation \#4]
+\begin{boxexplore}[Derivation \#4]
 Use the definition of a negative exponent to write each of the expressions using only positive exponents.
 \[\frac{a^{-2}}{b} \qquad\text{and}\qquad \frac{2x^3y^{-2}}{m^{-5}q^2}\]
 Make a conjecture about a general rule for simplifications of this type.
-\end{boxedexplore}
+\end{boxexplore}
 
 We'll use the definition of negative exponents to work these out, but sometimes that can involve numerous steps. For example in the first expression, we have:
 \[\frac{a^{-2}}{~b~} = \frac{\frac{1}{a^2}}{~b~} = \frac{1}{a^2}\div{b} = \frac{1}{a^2}\cdot\frac{1}{b} = \frac{1}{a^2b}\]
@@ -194,11 +194,11 @@ Notice that in the first example of derivation \#4, we filled the empty numerato
 
 \subsection{Quotient rule}
 
-\begin{boxedexplore}[Derivation \#5]
+\begin{boxexplore}[Derivation \#5]
 Use expanded form to write each of the expressions below as a single base raised to a singe exponent.
 \[\frac{m^6}{m^2} \qquad\text{and}\qquad \frac{z^5}{z^8}\]
 Make a conjecture about a general rule for simplifications of this type.
-\end{boxedexplore}
+\end{boxexplore}
 
 This simplification is called the quotient rule, since it applies when we are finding the quotient of two exponential expressions with the same base.
 
@@ -209,9 +209,9 @@ Here, we replace the empty denominator with a soon-to-be phantom 1, which prompt
 
 The new exponent is the difference of the original exponents: numerator minus denominator!
 
-\begin{boxeddef}[Quotient rule]
+\begin{boxdef}[Quotient rule]
 For any nonzero real number $a$ and any integers $m$ and $n$, \[\frac{a^m}{a^n} = a^{m-n}\]
-\end{boxeddef}
+\end{boxdef}
 
 The intuition here is that when we have a quotient involving two expressions with the same base, there are going to be common factors in the numerator and denominator. Some of these will ``cancel'', and in fact either the whole numerator or the whole denominator (or both!) will be reduced simply to the number 1.
 
@@ -225,11 +225,11 @@ This means we have two different interpretations of the same quantity, and so th
 
 \subsection{Quotient to a power}
 
-\begin{boxedexplore}[Derivation \#6]
+\begin{boxexplore}[Derivation \#6]
 Use expanded form to write each of the expressions below without parentheses.
 \[\left(\frac{x}{y}\right)^2 \qquad\text{and}\qquad \left(\frac{ab}{c}\right)^7\]
 Make a conjecture about a general rule for simplifications of this type.
-\end{boxedexplore}
+\end{boxexplore}
 
 By now, you may be getting the hang of these simplification properties! In this case, we have
 \[\left(\frac{x}{y}\right)^2 = \left(\frac{x}{y}\right)\left(\frac{x}{y}\right) = \frac{x\cdot x}{y\cdot y} = \frac{x^2}{y^2}\]
@@ -244,9 +244,9 @@ The second example is longer, but works the same:
 
 In general, when we have a quotient raised to a power, we can apply the exponent to both the numerator and denominator. To eliminate the parentheses entirely in the second example, we had to use the power of a product property to simplify the numerator.
 
-\begin{boxeddef}[Quotient to a power rule]
+\begin{boxdef}[Quotient to a power rule]
 For any nonzero real numbers $a$ and $b$ and any integer $m$, \[\left(\frac{a}{b}\right)^m = \frac{a^m}{b^m}\]
-\end{boxeddef}
+\end{boxdef}
 
 The exponent means that we have $m$ copies of the fraction $\frac{a}{b}$ which, when we multiply, become a single fraction with $m$ copies of $a$ in the numerator and $m$ copies of $b$ in the denominator.
 
@@ -264,7 +264,7 @@ Now, we'll need the quotient property to simplify the variables. The coefficient
 
 That final answer might not look all that ``simple'', but it meets the requirements of a simplified exponential expression, and so we're done. Try the following examples, and then study the solutions carefully.
 
-\begin{boxedex}
+\begin{boxex}
 Simplify each of the following.
 \[\left(\frac{x^3y^{-2}}{x^{-1}y^5}\right)^3 \qquad\text{and}\qquad \frac{8x^2y}{y^2}\div\frac{16xy^2}{(4y^2)^2}\]
 
@@ -288,16 +288,16 @@ Then, before we can apply any of the product properties, we need to fix the prod
 \\[1ex]&= 8xy
 \end{aligned}\]
 Some of the simplification steps we took above could have been completed in a different order. There are multiple paths to the most simplified form!
-\end{boxedex}
+\end{boxex}
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \section{Raising sums to powers}
 \label{sec:exposumstopowers}
 
-\begin{boxedexplore}[Check this work!]
+\begin{boxexplore}[Check this work!]
 The following is a very common error: \[(a+b)^2 = a^2 + b^2 \qquad\text{(nice try, but wrong)}.\] This equation looks reasonable, but it is not true most of the time. Find three different pairs of values $a$ and $b$ which demonstrate that this equation does not work in general. Can you find any ``lucky'' values of $a$ and $b$ that do satisfy this equation?
-\end{boxedexplore}
+\end{boxexplore}
 
 As we see in the startup exploration, $(x + 3)^2 \neq x^2 + 3^2$. The temptation to ``sprinkle'' an exponent over a sum --- using a kind of exponent distributive property --- is \evilandwrong. We \textit{will} use the distributive property to work out what it means to raise a sum to a power, but there's more to it than a simple sprinkle.
 
@@ -325,7 +325,7 @@ we can use the distributive property (twice, in fact) to simplify the right-hand
 \end{aligned}\]
 We do a kind of ``double distribution'': first with one set of parentheses over the other, and then distributing over the results.
 
-\begin{boxedex}
+\begin{boxex}
 Simplify $(3x-5)^2$.
 
 \exsoln\ The exponent means that we're multiplying this expression by itself, so we will carry out ``double distribution'':
@@ -338,7 +338,7 @@ Simplify $(3x-5)^2$.
 \\
 \end{aligned}\]
 So, in the end, $(3x-5)^2 = 9x^2 - 30x + 25$.
-\end{boxedex}
+\end{boxex}
 
 \subsection{Old school multiplication}
 

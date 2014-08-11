@@ -11,13 +11,13 @@ Factoring a polynomial has the same goal: to rewrite the polynomial as an equiva
 \section{Quadratic equations, revisited}
 \label{sec:factorsolvingpreview}
 
-\begin{boxedexplore}[Solutions and factors]
+\begin{boxexplore}[Solutions and factors]
 Solve the following quadratic equation using the quadrangle method that we studied in \cref{ch:quadeq}:
 \[x^2 + 3x + 2 = 0\]
 Then, look back at \cref{fig:tileproduct} (figure?), which shows a way of writing this quadratic trinomial as the product of two binomials.
 \[(x+1)(x+2) = x^2+3x+2\]
 What relationships, if any, are there between these factors and the solutions to the given equation?
-\end{boxedexplore}
+\end{boxexplore}
 
 We solve the quadratic $x^2+3x+2=0$ using the quadrangle method, beginning with the observation that the linear term has an odd coefficient. So, we multiply through by 4: $4x^2+12x+8=0$. From here, we can draw the quadrangle diagram:
 
@@ -25,24 +25,24 @@ We solve the quadratic $x^2+3x+2=0$ using the quadrangle method, beginning with 
 
 The quadrangle diagram predicts a constant term of 9, but we only have 8. So, we add 1 to both sides. Here's the full work:
 \begin{commwork}
-x^2+3x+2			& 0
+x^2+3x+2			&=& 0
 \\
-4x^2+12x+8		& 0
+4x^2+12x+8		&=& 0
 & multiply through by 4
 \\
-4x^2 + 12x + 9		& 1
+4x^2 + 12x + 9		&=& 1
 & add 1 to both sides
 \\
-(2x+3)^2			& 1
+(2x+3)^2			&=& 1
 & based on the quadrangle diagram
 \\
-2x+3				& 1 \OR -1
+2x+3				&=& 1 \OR -1
 & square root of both sides
 \\
-2x					& -2 \OR -4
+2x					&=& -2 \OR -4
 & subtract 3 throughout
 \\
-x					& -1 \OR -2
+x					&=& -1 \OR -2
 & divide by 2 throughout
 \end{commwork}
 
@@ -52,9 +52,9 @@ So, we have solutions $-1$ and $-2$. Now consider the factorization $(x+1)(x+2)$
 
 To explain the connection, we will turn to one of the most obvious statements in elementary mathematics. It is a statement so simple that you might be surprised that it could ever serve any truly helpful purpose.
 
-\begin{boxeddef}[Zero product property]
+\begin{boxdef}[Zero product property]
 If $a \cdot b = 0$, then either $a=0$ or $b=0$ (or both). In other words: if the product of two numbers is 0, then at least one of those numbers must be zero.
-\end{boxeddef}
+\end{boxdef}
 
 Ridiculously simple, right? But watch it in action! Consider again the original quadratic equation we were given in the startup exploration:
 \[x^2 + 3x + 2 = 0.\]
@@ -235,13 +235,13 @@ Solution:
 
 \subsection{Level 3: Difference of squares}
 
-\begin{boxedexplore}[Factoring level 3]
+\begin{boxexplore}[Factoring level 3]
 The polynomials below don't look like Level 2 factoring problems, since they have only two terms. How can we change these into Level 2 problems? What happens when we factor them using Level 2 techniques?
 
 \begin{tabularx}{\linewidth}{NNN}
 x^2-9 & x^2-100 & x^2-36
 \end{tabularx}
-\end{boxedexplore}
+\end{boxexplore}
 
 We can extend each of the binomals in the startup exploration by adding a linear term with coefficient zero. Then we'd have, for example,
 \[x^2+0x-9\]
@@ -252,11 +252,11 @@ Following this chain of reasoning, we have:
 
 Polynomials of this form are called the \textit{difference of squares} since we have some perfect square minus a different perfect square. The resulting binomial factors are almost identical, but with different signs on their second term. They have to be of opposite sign for that $bx$ term to disappear from the final product!
 
-\begin{boxedwarning}[Not the sum of squares!]
+\begin{boxwarn}[Not the sum of squares!]
 Important note: this is not the sum of squares! For example, we can't factor the following polynomial in the same way:
 \[x^2 + 100\]
 Folks can be tempted to see the sum of squares and write out a factorization, but this does not work the same way! In fact, expressions like this are never factorable in Algebra 1. (Can you explain why not?)
-\end{boxedwarning}
+\end{boxwarn}
 
 When modeling teh difference of squares with algebra tiles, we have a picture that looks like \cref{fig:diffsquares}. The green $x$ tiles and the red $-x$ tiles zero one another out, leaving the $x^2$ tile and a collection of $-1$ tiles.
 
@@ -284,9 +284,9 @@ When modeling teh difference of squares with algebra tiles, we have a picture th
 
 The general form of a difference of squares, in which $a$ and $b$ can be any terms, is given below. Thinking of $a$ and $b$ as generic terms will let us expand this technique a bit further.
 
-\begin{boxeddef}[Difference of squares]
+\begin{boxdef}[Difference of squares]
 \[a^2 - b^2= (a + b)(a - b).\]
-\end{boxeddef}
+\end{boxdef}
 
 \subsubsection{Beyond monics}
 
@@ -314,13 +314,13 @@ We call polynomials like $x^4-16$ ``Goldilocks polynomials'' because there's a t
 \subsection{Level 4: Perfect square trinomials}
 
 
-\begin{boxedexplore}[Factoring level 4]
+\begin{boxexplore}[Factoring level 4]
 Carry out the following multiplications. What patterns do you notice that relate the factors to the product?
 
 \begin{tabularx}{\linewidth}{NNN}
 (x+5)^2 & (x-4)^2 & (3x-5)x^2
 \end{tabularx}
-\end{boxedexplore}
+\end{boxexplore}
 
 A trinomial that is formed by squaring a binomial is called, naturally enough, a \gls{perfect square trinomial}. In the exponential unit (\cref{sec:exposumstopowers}), we called this raising a sum to a power. We used the quadrangle method to great benefit when solving quadratic equations (\cref{ch:quadeq}). The diagram that we drew was a kind of abstract algebra tiles picture in which all the tiles together formed a large square.
 
@@ -348,14 +348,14 @@ A trinomial that is formed by squaring a binomial is called, naturally enough, a
 
 Perfect square trinomials have some special features which make them easier to multiply and easier to factor. Notice that the first and last terms of the trinomial are both perfect squares. Note also that the $bx$ term is twice the product of the terms in the binomial that we are squaring!
 
-\begin{boxeddef}[Perfect square trinomial]
+\begin{boxdef}[Perfect square trinomial]
 \[(a+b)^2 = (a+b)(a+b) = a^2 + ab + ba + b^2 = a^2 + 2ab + b^2\]
 \[(a-b)^2 = (a-b)(a-b) = a^2 - ab - ba + b^2 = a^2 - 2ab + b^2\]
-\end{boxeddef}
+\end{boxdef}
 
 As with the difference of squares, we can use this model to factor non-monic polynomials. The key is knowing when we have a perfect square trinomial and when we don't. The first, and easiest, thing to check is that the quadratic term and the constant term are both perfect squares. From there, we can imagine a candidate factorization -- but we still have to check the linear term!
 
-\begin{boxedex}
+\begin{boxex}
 Determing whether each of the following are perfect square trinomails. If so, write the factorization.
 
 \begin{tabularx}{\linewidth}{NNN}
@@ -369,7 +369,7 @@ The first and last terms of the second example should lead us to conjecture that
 
 In the third example, we conjecture that the factorization is $(8x+3)^2$. This would, in turn, require the linear term to be: $2\cdot 8x \cdot 3 = 48x$. Good news, that's what we have! So, the factorization is:
 \[64x^2 + 48x + 9 = (8x+3)^2\] 
-\end{boxedex}
+\end{boxex}
 
 The second polynomial in the previous example \textit{is factorable}, however it is not a perfect square. More on how to tackle problems like that one in the next section!
 
@@ -379,12 +379,12 @@ The second polynomial in the previous example \textit{is factorable}, however it
 
 This is a general form of factoring that will allow us to factor just about anything that can be factored. To get the hang of the mechanics, we will start by factoring expressions that look a bit abstract. Then, we'll apply this technique in context.
  
-\begin{boxedexplore}[Factoring level 5]
+\begin{boxexplore}[Factoring level 5]
 Use the ``multiple distribution method'' to simplify $(a+b)(c+d)$.
 
 Based on the patterns you notice after doing the multiplication above, rewrite the following expression as the product of two binomials.
 \[pw + ps + hw + hs\]
-\end{boxedexplore}
+\end{boxexplore}
 
 \textit{Factoring by grouping} is simply the multiple distribution method in reverse. We can multiply the two binomials in the startup exploration by first distributing the $(c+d)$ term over the other term. We would then have:
 \[a (c + d) + b (c + d).\]
@@ -540,13 +540,13 @@ Since the product of these two equals zero, it must be that either $x-8=0$ (mean
 
 Factoring works even when other approaches are possible. For example, it's easy to solve $x^2 = 25$ using the POEs. We know that $x = 5\OR-5$. But this is confirmed by a factoring approach:
 \begin{commwork}
-x^2 & 25
+x^2 &=& 25
 & the original equation
 \\
-x^2 - 25 & 0
+x^2 - 25 &=& 0
 & prepare for the zero product property
 \\
-(x+5)(x-5) & 0
+(x+5)(x-5) &=& 0
 & factor the difference of squares
 \end{commwork}%
 This means that either $(x+5)=0$, in which case $x=-5$, or $(x-5)=0$, in which case $x=5$. And so again, we have $\solset{5, -5}$. In this case, solving using the POEs is easier than factoring.
@@ -692,10 +692,10 @@ Note for EOC\ldots{} Sometimes you will see that the EOC will ask you to find``r
 
 At the end of our study of quadratic equations, in \cref{sec:quadformulapreview} to be precise, we used the quadrangle method to solve a generic quadratic equation. It was an ugly bit of alphabet soup, but it is yet another way to solve a quadratic equation.
 
-\begin{boxeddef}[The quadratic formula]
+\begin{boxdef}[The quadratic formula]
 The solutions to the quadratic equation $ax^2 + bx + c=0$ (where $a\neq0$) are given by the formula:
 \[x=\frac{-b\pm\sqrt{b^2-4ac}}{2a}.\]
-\end{boxeddef}
+\end{boxdef}
 
 \addtodoitem{What do we want to say here?}
 

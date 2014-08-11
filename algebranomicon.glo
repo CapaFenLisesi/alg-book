@@ -1,0 +1,457 @@
+\glossaryentry{imaginary number?\glossentry{imaginary number}|setentrycounter[]{page}\glsnumberformat}{1}
+\glossaryentry{natural number?\glossentry{natural number}|setentrycounter[]{page}\glsnumberformat}{2}
+\glossaryentry{set?\glossentry{set}|setentrycounter[]{page}\glsnumberformat}{2}
+\glossaryentry{set notation?\glossentry{set notation}|setentrycounter[]{page}\glsnumberformat}{2}
+\glossaryentry{closure?\glossentry{closure}|setentrycounter[]{page}\glsnumberformat}{3}
+\glossaryentry{integer?\glossentry{integer}|setentrycounter[]{page}\glsnumberformat}{3}
+\glossaryentry{subset?\glossentry{subset}|setentrycounter[]{page}\glsnumberformat}{3}
+\glossaryentry{rational number?\glossentry{rational number}|setentrycounter[]{page}\glsnumberformat}{3}
+\glossaryentry{irrational number?\glossentry{irrational number}|setentrycounter[]{page}\glsnumberformat}{4}
+\glossaryentry{real number?\glossentry{real number}|setentrycounter[]{page}\glsnumberformat}{4}
+\glossaryentry{complex number?\glossentry{complex number}|setentrycounter[]{page}\glsnumberformat}{5}
+\glossaryentry{absolute value?\glossentry{absolute value}|setentrycounter[]{page}\glsnumberformat}{6}
+\glossaryentry{opposite?\glossentry{opposite}|setentrycounter[]{page}\glsnumberformat}{7}
+\glossaryentry{additive inverse?\glossentry{additive inverse}|setentrycounter[]{page}\glsnumberformat}{7}
+\glossaryentry{vinculum?\glossentry{vinculum}|setentrycounter[]{page}\glsnumberformat}{13}
+\glossaryentry{numerator?\glossentry{numerator}|setentrycounter[]{page}\glsnumberformat}{13}
+\glossaryentry{denominator?\glossentry{denominator}|setentrycounter[]{page}\glsnumberformat}{13}
+\glossaryentry{lowest terms?\glossentry{lowest terms}|setentrycounter[]{page}\glsnumberformat}{16}
+\glossaryentry{relatively prime?\glossentry{relatively prime}|setentrycounter[]{page}\glsnumberformat}{16}
+\glossaryentry{improper fraction?\glossentry{improper fraction}|setentrycounter[]{page}\glsnumberformat}{19}
+\glossaryentry{mixed number?\glossentry{mixed number}|setentrycounter[]{page}\glsnumberformat}{19}
+\glossaryentry{reciprocal?\glossentry{reciprocal}|setentrycounter[]{page}\glsnumberformat}{21}
+\glossaryentry{turducken?\glossentry{turducken}|setentrycounter[]{page}\glsnumberformat}{22}
+\glossaryentry{obelus?\glossentry{obelus}|setentrycounter[]{page}\glsnumberformat}{22}
+\glossaryentry{order of operations?\glossentry{order of operations}|setentrycounter[]{page}\glsnumberformat}{25}
+\glossaryentry{numeric expression?\glossentry{numeric expression}|setentrycounter[]{page}\glsnumberformat}{25}
+\glossaryentry{vinculum?\glossentry{vinculum}|setentrycounter[]{page}\glsnumberformat}{28}
+\glossaryentry{base?\glossentry{base}|setentrycounter[]{page}\glsnumberformat}{29}
+\glossaryentry{exponent?\glossentry{exponent}|setentrycounter[]{page}\glsnumberformat}{29}
+\glossaryentry{power?\glossentry{power}|setentrycounter[]{page}\glsnumberformat}{29}
+\glossaryentry{implied operation?\glossentry{implied operation}|setentrycounter[]{page}\glsnumberformat}{32}
+\glossaryentry{sequence?\glossentry{sequence}|setentrycounter[]{page}\glsnumberformat}{34}
+\glossaryentry{term?\glossentry{term}|setentrycounter[]{page}\glsnumberformat}{34}
+\glossaryentry{recursive?\glossentry{recursive}|setentrycounter[]{page}\glsnumberformat}{35}
+\glossaryentry{fractal?\glossentry{fractal}|setentrycounter[]{page}\glsnumberformat}{35}
+\glossaryentry{geometric sequence?\glossentry{geometric sequence}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{common ratio?\glossentry{common ratio}|setentrycounter[]{page}\glsnumberformat}{43}
+\glossaryentry{arithmetic sequence?\glossentry{arithmetic sequence}|setentrycounter[]{page}\glsnumberformat}{46}
+\glossaryentry{common difference?\glossentry{common difference}|setentrycounter[]{page}\glsnumberformat}{46}
+\glossaryentry{perfect square?\glossentry{perfect square}|setentrycounter[]{page}\glsnumberformat}{54}
+\glossaryentry{coordinate plane?\glossentry{coordinate plane}|setentrycounter[]{page}\glsnumberformat}{57}
+\glossaryentry{x-axis?\glossentry{x-axis}|setentrycounter[]{page}\glsnumberformat}{57}
+\glossaryentry{y-axis?\glossentry{y-axis}|setentrycounter[]{page}\glsnumberformat}{57}
+\glossaryentry{ordered pair?\glossentry{ordered pair}|setentrycounter[]{page}\glsnumberformat}{57}
+\glossaryentry{origin?\glossentry{origin}|setentrycounter[]{page}\glsnumberformat}{57}
+\glossaryentry{quadrant?\glossentry{quadrant}|setentrycounter[]{page}\glsnumberformat}{57}
+\glossaryentry{function?\glossentry{function}|setentrycounter[]{page}\glsnumberformat}{60}
+\glossaryentry{algebraic expression?\glossentry{algebraic expression}|setentrycounter[]{page}\glsnumberformat}{61}
+\glossaryentry{variable?\glossentry{variable}|setentrycounter[]{page}\glsnumberformat}{61}
+\glossaryentry{term?\glossentry{term}|setentrycounter[]{page}\glsnumberformat}{62}
+\glossaryentry{coefficient?\glossentry{coefficient}|setentrycounter[]{page}\glsnumberformat}{62}
+\glossaryentry{evaluate?\glossentry{evaluate}|setentrycounter[]{page}\glsnumberformat}{62}
+\glossaryentry{scatter plot?\glossentry{scatter plot}|setentrycounter[]{page}\glsnumberformat}{69}
+\glossaryentry{correlation?\glossentry{correlation}|setentrycounter[]{page}\glsnumberformat}{70}
+\glossaryentry{increasing?\glossentry{increasing}|setentrycounter[]{page}\glsnumberformat}{70}
+\glossaryentry{decreasing?\glossentry{decreasing}|setentrycounter[]{page}\glsnumberformat}{70}
+\glossaryentry{discrete data?\glossentry{discrete data}|setentrycounter[]{page}\glsnumberformat}{71}
+\glossaryentry{continuous data?\glossentry{continuous data}|setentrycounter[]{page}\glsnumberformat}{71}
+\glossaryentry{relation?\glossentry{relation}|setentrycounter[]{page}\glsnumberformat}{78}
+\glossaryentry{function?\glossentry{function}|setentrycounter[]{page}\glsnumberformat}{78}
+\glossaryentry{function?\glossentry{function}|setentrycounter[]{page}\glsnumberformat}{79}
+\glossaryentry{vertical line test?\glossentry{vertical line test}|setentrycounter[]{page}\glsnumberformat}{80}
+\glossaryentry{mapping diagram?\glossentry{mapping diagram}|setentrycounter[]{page}\glsnumberformat}{82}
+\glossaryentry{asymptote?\glossentry{asymptote}|setentrycounter[]{page}\glsnumberformat}{92}
+\glossaryentry{parabola?\glossentry{parabola}|setentrycounter[]{page}\glsnumberformat}{93}
+\glossaryentry{vertex?\glossentry{vertex}|setentrycounter[]{page}\glsnumberformat}{94}
+\glossaryentry{axiom?\glossentry{axiom}|setentrycounter[]{page}\glsnumberformat}{96}
+\glossaryentry{field axiom?\glossentry{field axiom}|setentrycounter[]{page}\glsnumberformat}{96}
+\glossaryentry{identity property of addition?\glossentry{identity property of addition}|setentrycounter[]{page}\glsnumberformat}{97}
+\glossaryentry{additive identity?\glossentry{additive identity}|setentrycounter[]{page}\glsnumberformat}{97}
+\glossaryentry{identity property of multiplication?\glossentry{identity property of multiplication}|setentrycounter[]{page}\glsnumberformat}{97}
+\glossaryentry{multiplicative identity?\glossentry{multiplicative identity}|setentrycounter[]{page}\glsnumberformat}{97}
+\glossaryentry{inverse property of addition?\glossentry{inverse property of addition}|setentrycounter[]{page}\glsnumberformat}{97}
+\glossaryentry{additive inverse?\glossentry{additive inverse}|setentrycounter[]{page}\glsnumberformat}{97}
+\glossaryentry{opposite?\glossentry{opposite}|setentrycounter[]{page}\glsnumberformat}{97}
+\glossaryentry{inverse property of multiplication?\glossentry{inverse property of multiplication}|setentrycounter[]{page}\glsnumberformat}{97}
+\glossaryentry{multiplicative inverse?\glossentry{multiplicative inverse}|setentrycounter[]{page}\glsnumberformat}{97}
+\glossaryentry{reciprocal?\glossentry{reciprocal}|setentrycounter[]{page}\glsnumberformat}{97}
+\glossaryentry{commutative property of addition?\glossentry{commutative property of addition}|setentrycounter[]{page}\glsnumberformat}{98}
+\glossaryentry{commutative property of multiplication?\glossentry{commutative property of multiplication}|setentrycounter[]{page}\glsnumberformat}{98}
+\glossaryentry{associative property of addition?\glossentry{associative property of addition}|setentrycounter[]{page}\glsnumberformat}{99}
+\glossaryentry{associative property of multiplication?\glossentry{associative property of multiplication}|setentrycounter[]{page}\glsnumberformat}{99}
+\glossaryentry{distributive property?\glossentry{distributive property}|setentrycounter[]{page}\glsnumberformat}{99}
+\glossaryentry{algebraic expression?\glossentry{algebraic expression}|setentrycounter[]{page}\glsnumberformat}{101}
+\glossaryentry{term?\glossentry{term}|setentrycounter[]{page}\glsnumberformat}{101}
+\glossaryentry{degree of a term?\glossentry{degree of a term}|setentrycounter[]{page}\glsnumberformat}{101}
+\glossaryentry{like terms?\glossentry{like terms}|setentrycounter[]{page}\glsnumberformat}{104}
+\glossaryentry{combining like terms?\glossentry{combining like terms}|setentrycounter[]{page}\glsnumberformat}{105}
+\glossaryentry{equation?\glossentry{equation}|setentrycounter[]{page}\glsnumberformat}{107}
+\glossaryentry{unknown?\glossentry{unknown}|setentrycounter[]{page}\glsnumberformat}{108}
+\glossaryentry{addition property of equality?\glossentry{addition property of equality}|setentrycounter[]{page}\glsnumberformat}{109}
+\glossaryentry{subtraction property of equality?\glossentry{subtraction property of equality}|setentrycounter[]{page}\glsnumberformat}{109}
+\glossaryentry{multiplication property of equality?\glossentry{multiplication property of equality}|setentrycounter[]{page}\glsnumberformat}{109}
+\glossaryentry{division property of equality?\glossentry{division property of equality}|setentrycounter[]{page}\glsnumberformat}{109}
+\glossaryentry{solution?\glossentry{solution}|setentrycounter[]{page}\glsnumberformat}{112}
+\glossaryentry{solution set?\glossentry{solution set}|setentrycounter[]{page}\glsnumberformat}{112}
+\glossaryentry{unit rate?\glossentry{unit rate}|setentrycounter[]{page}\glsnumberformat}{137}
+\glossaryentry{sample space?\glossentry{sample space}|setentrycounter[]{page}\glsnumberformat}{141}
+\glossaryentry{directly proportional?\glossentry{directly proportional}|setentrycounter[]{page}\glsnumberformat}{145}
+\glossaryentry{constant of variation?\glossentry{constant of variation}|setentrycounter[]{page}\glsnumberformat}{145}
+\glossaryentry{direct variation?\glossentry{direct variation}|setentrycounter[]{page}\glsnumberformat}{145}
+\glossaryentry{rate of change?\glossentry{rate of change}|setentrycounter[]{page}\glsnumberformat}{157}
+\glossaryentry{slope?\glossentry{slope}|setentrycounter[]{page}\glsnumberformat}{158}
+\glossaryentry{point-slope form?\glossentry{point-slope form}|setentrycounter[]{page}\glsnumberformat}{165}
+\glossaryentry{slope-intercept form?\glossentry{slope-intercept form}|setentrycounter[]{page}\glsnumberformat}{170}
+\glossaryentry{slope-intercept form?\glossentry{slope-intercept form}|setentrycounter[]{page}\glsnumberformat}{170}
+\glossaryentry{standard form?\glossentry{standard form}|setentrycounter[]{page}\glsnumberformat}{174}
+\glossaryentry{system of equations?\glossentry{system of equations}|setentrycounter[]{page}\glsnumberformat}{187}
+\glossaryentry{elimination method?\glossentry{elimination method}|setentrycounter[]{page}\glsnumberformat}{199}
+\glossaryentry{inclusive boundary?\glossentry{inclusive boundary}|setentrycounter[]{page}\glsnumberformat}{212}
+\glossaryentry{exclusive boundary?\glossentry{exclusive boundary}|setentrycounter[]{page}\glsnumberformat}{212}
+\glossaryentry{addition property of order?\glossentry{addition property of order}|setentrycounter[]{page}\glsnumberformat}{215}
+\glossaryentry{subtraction property of order?\glossentry{subtraction property of order}|setentrycounter[]{page}\glsnumberformat}{215}
+\glossaryentry{multiplication property of order?\glossentry{multiplication property of order}|setentrycounter[]{page}\glsnumberformat}{215}
+\glossaryentry{division property of order?\glossentry{division property of order}|setentrycounter[]{page}\glsnumberformat}{215}
+\glossaryentry{exponential form?\glossentry{exponential form}|setentrycounter[]{page}\glsnumberformat}{235}
+\glossaryentry{expanded form?\glossentry{expanded form}|setentrycounter[]{page}\glsnumberformat}{235}
+\glossaryentry{interest?\glossentry{interest}|setentrycounter[]{page}\glsnumberformat}{249}
+\glossaryentry{interest rate?\glossentry{interest rate}|setentrycounter[]{page}\glsnumberformat}{249}
+\glossaryentry{simple interest?\glossentry{simple interest}|setentrycounter[]{page}\glsnumberformat}{249}
+\glossaryentry{principal amount?\glossentry{principal amount}|setentrycounter[]{page}\glsnumberformat}{249}
+\glossaryentry{base?\glossentry{base}|setentrycounter[]{page}\glsnumberformat}{262}
+\glossaryentry{exponent?\glossentry{exponent}|setentrycounter[]{page}\glsnumberformat}{262}
+\glossaryentry{power?\glossentry{power}|setentrycounter[]{page}\glsnumberformat}{262}
+\glossaryentry{exponential form?\glossentry{exponential form}|setentrycounter[]{page}\glsnumberformat}{262}
+\glossaryentry{expanded form?\glossentry{expanded form}|setentrycounter[]{page}\glsnumberformat}{262}
+\glossaryentry{irrational number?\glossentry{irrational number}|setentrycounter[]{page}\glsnumberformat}{306}
+\glossaryentry{square root?\glossentry{square root}|setentrycounter[]{page}\glsnumberformat}{308}
+\glossaryentry{principal square root?\glossentry{principal square root}|setentrycounter[]{page}\glsnumberformat}{309}
+\glossaryentry{radical?\glossentry{radical}|setentrycounter[]{page}\glsnumberformat}{309}
+\glossaryentry{rationalizing the denominator?\glossentry{rationalizing the denominator}|setentrycounter[]{page}\glsnumberformat}{317}
+\glossaryentry{leg?\glossentry{leg}|setentrycounter[]{page}\glsnumberformat}{322}
+\glossaryentry{hypotenuse?\glossentry{hypotenuse}|setentrycounter[]{page}\glsnumberformat}{322}
+\glossaryentry{distance formula?\glossentry{distance formula}|setentrycounter[]{page}\glsnumberformat}{324}
+\glossaryentry{vertex form?\glossentry{vertex form}|setentrycounter[]{page}\glsnumberformat}{336}
+\glossaryentry{completing the square?\glossentry{completing the square}|setentrycounter[]{page}\glsnumberformat}{346}
+\glossaryentry{term?\glossentry{term}|setentrycounter[]{page}\glsnumberformat}{358}
+\glossaryentry{algebraic expression?\glossentry{algebraic expression}|setentrycounter[]{page}\glsnumberformat}{358}
+\glossaryentry{polynomial?\glossentry{polynomial}|setentrycounter[]{page}\glsnumberformat}{358}
+\glossaryentry{degree of a term?\glossentry{degree of a term}|setentrycounter[]{page}\glsnumberformat}{358}
+\glossaryentry{perfect square trinomial?\glossentry{perfect square trinomial}|setentrycounter[]{page}\glsnumberformat}{380}
+\glossaryentry{abscissa?\glossentry{abscissa}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{absolute value?\glossentry{absolute value}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{addition property of equality?\glossentry{addition property of equality}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{addition property of order?\glossentry{addition property of order}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{additive identity?\glossentry{additive identity}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{additive inverse?\glossentry{additive inverse}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{algebraic expression?\glossentry{algebraic expression}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{algebraic number?\glossentry{algebraic number}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{arithmetic sequence?\glossentry{arithmetic sequence}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{associative property of addition?\glossentry{associative property of addition}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{associative property of multiplication?\glossentry{associative property of multiplication}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{asymptote?\glossentry{asymptote}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{axiom?\glossentry{axiom}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{axis?\glossentry{axis}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{axis of symmetry?\glossentry{axis of symmetry}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{base?\glossentry{base}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{binomial?\glossentry{binomial}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{boundary?\glossentry{boundary}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{Cartesian plane?\glossentry{Cartesian plane}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{closure?\glossentry{closure}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{coefficient?\glossentry{coefficient}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{colinear?\glossentry{colinear}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{combining like terms?\glossentry{combining like terms}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{common monomial factor?\glossentry{common monomial factor}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{common difference?\glossentry{common difference}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{common ratio?\glossentry{common ratio}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{commutative property of addition?\glossentry{commutative property of addition}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{commutative property of multiplication?\glossentry{commutative property of multiplication}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{completing the square?\glossentry{completing the square}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{complex number?\glossentry{complex number}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{compound interest?\glossentry{compound interest}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{constant?\glossentry{constant}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{constant function?\glossentry{constant function}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{constant multiplier?\glossentry{constant multiplier}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{constant of variation?\glossentry{constant of variation}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{constant term?\glossentry{constant term}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{constraint?\glossentry{constraint}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{continuous data?\glossentry{continuous data}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{continuous function?\glossentry{continuous function}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{converse of the Pythagorean theorem?\glossentry{converse of the Pythagorean theorem}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{conversion factor?\glossentry{conversion factor}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{coordinate plane?\glossentry{coordinate plane}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{coprime?\glossentry{coprime}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{correlation?\glossentry{correlation}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{cubic?\glossentry{cubic}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{decay factor?\glossentry{decay factor}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{decay rate?\glossentry{decay rate}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{decreasing?\glossentry{decreasing}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{degree of a polynomial?\glossentry{degree of a polynomial}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{degree of a term?\glossentry{degree of a term}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{$\Delta $?\glossentry{delta}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{denominator?\glossentry{denominator}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{dependent variable?\glossentry{dependent variable}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{difference of squares?\glossentry{difference of squares}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{dimensional analysis?\glossentry{dimensional analysis}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{direct variation?\glossentry{direct variation}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{directly proportional?\glossentry{directly proportional}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{discrete data?\glossentry{discrete data}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{discrete function?\glossentry{discrete function}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{discriminant?\glossentry{discriminant}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{distance formula?\glossentry{distance formula}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{distributive property?\glossentry{distributive property}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{division property of equality?\glossentry{division property of equality}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{division property of order?\glossentry{division property of order}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{domain?\glossentry{domain}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{domain restriction?\glossentry{domain restriction}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{doubling time?\glossentry{doubling time}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{elimination method?\glossentry{elimination method}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{equation?\glossentry{equation}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{equivalent equations?\glossentry{equivalent equations}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{equivalent inequalities?\glossentry{equivalent inequalities}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{evaluate?\glossentry{evaluate}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{exclusive boundary?\glossentry{exclusive boundary}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{exclusive inequality?\glossentry{exclusive inequality}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{exponent?\glossentry{exponent}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{expanded form?\glossentry{expanded form}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{exponential decay?\glossentry{exponential decay}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{exponential equation?\glossentry{exponential equation}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{exponential form?\glossentry{exponential form}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{exponential function?\glossentry{exponential function}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{exponential growth?\glossentry{exponential growth}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{extraneous solution?\glossentry{extraneous solution}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{factor?\glossentry{factor}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{factored form?\glossentry{factored form}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{factoring?\glossentry{factoring}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{family of functions?\glossentry{family of functions}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{field axiom?\glossentry{field axiom}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{FOIL?\glossentry{FOIL}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{fractal?\glossentry{fractal}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{function?\glossentry{function}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{function notation?\glossentry{function notation}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{function rule?\glossentry{function rule}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{GCF?\glossentry{GCF}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{geometric sequence?\glossentry{geometric sequence}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{growth factor?\glossentry{growth factor}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{growth rate?\glossentry{growth rate}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{half-life?\glossentry{half-life}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{half-plane?\glossentry{half-plane}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{hypotenuse?\glossentry{hypotenuse}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{identity?\glossentry{identity}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{identity property of addition?\glossentry{identity property of addition}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{identity property of multiplication?\glossentry{identity property of multiplication}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{imaginary number?\glossentry{imaginary number}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{implied operation?\glossentry{implied operation}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{improper fraction?\glossentry{improper fraction}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{increasing?\glossentry{increasing}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{independent variable?\glossentry{independent variable}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{inequality?\glossentry{inequality}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{initial value?\glossentry{initial value}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{integer?\glossentry{integer}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{inclusive boundary?\glossentry{inclusive boundary}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{inclusive inequality?\glossentry{inclusive inequality}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{intercept?\glossentry{intercept}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{interest?\glossentry{interest}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{interest rate?\glossentry{interest rate}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{inverse property of addition?\glossentry{inverse property of addition}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{inverse property of multiplication?\glossentry{inverse property of multiplication}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{inverse variation?\glossentry{inverse variation}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{inversely proportional?\glossentry{inversely proportional}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{irrational number?\glossentry{irrational number}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{irreversible operation?\glossentry{irreversible operation}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{leg?\glossentry{leg}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{like terms?\glossentry{like terms}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{limited domain?\glossentry{limited domain}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{line of best fit?\glossentry{line of best fit}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{line of symmetry?\glossentry{line of symmetry}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{linear?\glossentry{linear}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{linear function?\glossentry{linear function}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{linear inequality?\glossentry{linear inequality}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{linear programming?\glossentry{linear programming}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{linear relationship?\glossentry{linear relationship}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{linear term?\glossentry{linear term}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{lowest terms?\glossentry{lowest terms}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{mapping diagram?\glossentry{mapping diagram}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{mathematical equivalence?\glossentry{mathematical equivalence}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{mathematical modeling?\glossentry{mathematical modeling}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{maximum?\glossentry{maximum}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{midpoint?\glossentry{midpoint}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{midpoint formula?\glossentry{midpoint formula}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{minimum?\glossentry{minimum}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{mixed number?\glossentry{mixed number}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{monomial?\glossentry{monomial}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{multiplication property of equality?\glossentry{multiplication property of equality}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{multiplication property of order?\glossentry{multiplication property of order}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{multiplicative identity?\glossentry{multiplicative identity}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{multiplicative inverse?\glossentry{multiplicative inverse}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{natural number?\glossentry{natural number}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{negative correlation?\glossentry{negative correlation}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{null set?\glossentry{null set}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{numerator?\glossentry{numerator}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{numeric expression?\glossentry{numeric expression}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{obelus?\glossentry{obelus}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{one-variable data?\glossentry{one-variable data}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{opposite?\glossentry{opposite}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{optimization?\glossentry{optimization}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{order of magnitude?\glossentry{order of magnitude}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{order of operations?\glossentry{order of operations}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{ordered pair?\glossentry{ordered pair}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{ordinate?\glossentry{ordinate}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{origin?\glossentry{origin}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{parabola?\glossentry{parabola}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{parallel lines?\glossentry{parallel lines}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{parent function?\glossentry{parent function}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{percent change?\glossentry{percent change}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{perfect cube?\glossentry{perfect cube}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{perfect square?\glossentry{perfect square}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{perfect square trinomial?\glossentry{perfect square trinomial}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{period of compounding?\glossentry{period of compounding}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{perpendicular lines?\glossentry{perpendicular lines}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{point-slope form?\glossentry{point-slope form}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{polynomial?\glossentry{polynomial}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{positive correlation?\glossentry{positive correlation}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{principal amount?\glossentry{principal amount}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{principal square root?\glossentry{principal square root}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{proper fraction?\glossentry{proper fraction}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{proportion?\glossentry{proportion}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{power?\glossentry{power}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{Pythagorean theorem?\glossentry{Pythagorean theorem}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{quadrangle method?\glossentry{quadrangle method}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{quadrant?\glossentry{quadrant}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{quadratic formula?\glossentry{quadratic formula}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{quadratic function?\glossentry{quadratic function}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{quadratic term?\glossentry{quadratic term}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{radical?\glossentry{radical}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{radical expression?\glossentry{radical expression}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{radical function?\glossentry{radical function}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{radioactive decay?\glossentry{radioactive decay}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{range?\glossentry{range}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{rate?\glossentry{rate}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{rate of change?\glossentry{rate of change}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{ratio?\glossentry{ratio}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{rational expression?\glossentry{rational expression}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{rational function?\glossentry{rational function}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{rational number?\glossentry{rational number}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{rationalizing the denominator?\glossentry{rationalizing the denominator}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{real number?\glossentry{real number}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{reciprocal?\glossentry{reciprocal}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{recursive?\glossentry{recursive}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{recursive rule?\glossentry{recursive rule}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{recursive sequence?\glossentry{recursive sequence}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{relatively prime?\glossentry{relatively prime}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{relation?\glossentry{relation}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{repeating decimal?\glossentry{repeating decimal}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{root?\glossentry{root}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{sample space?\glossentry{sample space}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{scatter plot?\glossentry{scatter plot}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{scientific notation?\glossentry{scientific notation}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{sequence?\glossentry{sequence}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{set?\glossentry{set}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{set notation?\glossentry{set notation}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{simple interest?\glossentry{simple interest}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{simplify?\glossentry{simplify}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{simplified radical form?\glossentry{simplified radical form}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{slope?\glossentry{slope}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{slope-intercept form?\glossentry{slope-intercept form}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{solution?\glossentry{solution}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{solution set?\glossentry{solution set}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{solution set notation?\glossentry{solution set notation}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{solve?\glossentry{solve}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{square root?\glossentry{square root}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{standard form?\glossentry{standard form}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{subset?\glossentry{subset}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{substitution?\glossentry{substitution}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{substitution method?\glossentry{substitution method}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{subtraction property of equality?\glossentry{subtraction property of equality}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{subtraction property of order?\glossentry{subtraction property of order}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{system of equations?\glossentry{system of equations}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{system of inequalities?\glossentry{system of inequalities}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{term?\glossentry{term}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{terminating decimal?\glossentry{terminating decimal}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{transcendental number?\glossentry{transcendental number}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{trinomial?\glossentry{trinomial}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{turducken?\glossentry{turducken}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{two-variable data?\glossentry{two-variable data}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{unit rate?\glossentry{unit rate}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{unknown?\glossentry{unknown}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{variable?\glossentry{variable}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{vector?\glossentry{vector}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{vertex?\glossentry{vertex}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{vertex form?\glossentry{vertex form}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{vertical line test?\glossentry{vertical line test}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{vertical motion formula?\glossentry{vertical motion formula}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{vinculum?\glossentry{vinculum}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{x-axis?\glossentry{x-axis}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{x-intercept?\glossentry{x-intercept}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{y-axis?\glossentry{y-axis}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{y-intercept?\glossentry{y-intercept}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{zero product property?\glossentry{zero product property}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{zero?\glossentry{zero}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{field axiom?\glossentry{field axiom}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{field axiom?\glossentry{field axiom}|setentrycounter[]{page}\glsnumberformat}{392}
+\glossaryentry{inequality?\glossentry{inequality}|setentrycounter[]{page}\glsnumberformat}{393}
+\glossaryentry{half-plane?\glossentry{half-plane}|setentrycounter[]{page}\glsnumberformat}{393}
+\glossaryentry{coordinate plane?\glossentry{coordinate plane}|setentrycounter[]{page}\glsnumberformat}{393}
+\glossaryentry{natural number?\glossentry{natural number}|setentrycounter[]{page}\glsnumberformat}{393}
+\glossaryentry{relatively prime?\glossentry{relatively prime}|setentrycounter[]{page}\glsnumberformat}{395}
+\glossaryentry{increasing?\glossentry{increasing}|setentrycounter[]{page}\glsnumberformat}{395}
+\glossaryentry{decreasing?\glossentry{decreasing}|setentrycounter[]{page}\glsnumberformat}{395}
+\glossaryentry{vinculum?\glossentry{vinculum}|setentrycounter[]{page}\glsnumberformat}{395}
+\glossaryentry{rational number?\glossentry{rational number}|setentrycounter[]{page}\glsnumberformat}{395}
+\glossaryentry{rational expression?\glossentry{rational expression}|setentrycounter[]{page}\glsnumberformat}{395}
+\glossaryentry{directly proportional?\glossentry{directly proportional}|setentrycounter[]{page}\glsnumberformat}{396}
+\glossaryentry{constant of variation?\glossentry{constant of variation}|setentrycounter[]{page}\glsnumberformat}{396}
+\glossaryentry{boundary?\glossentry{boundary}|setentrycounter[]{page}\glsnumberformat}{397}
+\glossaryentry{inequality?\glossentry{inequality}|setentrycounter[]{page}\glsnumberformat}{397}
+\glossaryentry{base?\glossentry{base}|setentrycounter[]{page}\glsnumberformat}{397}
+\glossaryentry{coordinate plane?\glossentry{coordinate plane}|setentrycounter[]{page}\glsnumberformat}{398}
+\glossaryentry{additive identity?\glossentry{additive identity}|setentrycounter[]{page}\glsnumberformat}{399}
+\glossaryentry{field axiom?\glossentry{field axiom}|setentrycounter[]{page}\glsnumberformat}{399}
+\glossaryentry{field axiom?\glossentry{field axiom}|setentrycounter[]{page}\glsnumberformat}{399}
+\glossaryentry{numerator?\glossentry{numerator}|setentrycounter[]{page}\glsnumberformat}{399}
+\glossaryentry{denominator?\glossentry{denominator}|setentrycounter[]{page}\glsnumberformat}{399}
+\glossaryentry{proper fraction?\glossentry{proper fraction}|setentrycounter[]{page}\glsnumberformat}{399}
+\glossaryentry{mixed number?\glossentry{mixed number}|setentrycounter[]{page}\glsnumberformat}{399}
+\glossaryentry{boundary?\glossentry{boundary}|setentrycounter[]{page}\glsnumberformat}{399}
+\glossaryentry{inequality?\glossentry{inequality}|setentrycounter[]{page}\glsnumberformat}{399}
+\glossaryentry{additive inverse?\glossentry{additive inverse}|setentrycounter[]{page}\glsnumberformat}{400}
+\glossaryentry{opposite?\glossentry{opposite}|setentrycounter[]{page}\glsnumberformat}{400}
+\glossaryentry{multiplicative inverse?\glossentry{multiplicative inverse}|setentrycounter[]{page}\glsnumberformat}{400}
+\glossaryentry{reciprocal?\glossentry{reciprocal}|setentrycounter[]{page}\glsnumberformat}{400}
+\glossaryentry{inversely proportional?\glossentry{inversely proportional}|setentrycounter[]{page}\glsnumberformat}{400}
+\glossaryentry{constant of variation?\glossentry{constant of variation}|setentrycounter[]{page}\glsnumberformat}{400}
+\glossaryentry{axis of symmetry?\glossentry{axis of symmetry}|setentrycounter[]{page}\glsnumberformat}{401}
+\glossaryentry{relatively prime?\glossentry{relatively prime}|setentrycounter[]{page}\glsnumberformat}{401}
+\glossaryentry{linear programming?\glossentry{linear programming}|setentrycounter[]{page}\glsnumberformat}{401}
+\glossaryentry{integer?\glossentry{integer}|setentrycounter[]{page}\glsnumberformat}{402}
+\glossaryentry{proper fraction?\glossentry{proper fraction}|setentrycounter[]{page}\glsnumberformat}{402}
+\glossaryentry{improper fraction?\glossentry{improper fraction}|setentrycounter[]{page}\glsnumberformat}{402}
+\glossaryentry{field axiom?\glossentry{field axiom}|setentrycounter[]{page}\glsnumberformat}{402}
+\glossaryentry{field axiom?\glossentry{field axiom}|setentrycounter[]{page}\glsnumberformat}{402}
+\glossaryentry{correlation?\glossentry{correlation}|setentrycounter[]{page}\glsnumberformat}{402}
+\glossaryentry{vinculum?\glossentry{vinculum}|setentrycounter[]{page}\glsnumberformat}{402}
+\glossaryentry{rational number?\glossentry{rational number}|setentrycounter[]{page}\glsnumberformat}{402}
+\glossaryentry{rational expression?\glossentry{rational expression}|setentrycounter[]{page}\glsnumberformat}{402}
+\glossaryentry{two-variable data?\glossentry{two-variable data}|setentrycounter[]{page}\glsnumberformat}{402}
+\glossaryentry{additive inverse?\glossentry{additive inverse}|setentrycounter[]{page}\glsnumberformat}{402}
+\glossaryentry{compound interest?\glossentry{compound interest}|setentrycounter[]{page}\glsnumberformat}{403}
+\glossaryentry{correlation?\glossentry{correlation}|setentrycounter[]{page}\glsnumberformat}{404}
+\glossaryentry{compound interest?\glossentry{compound interest}|setentrycounter[]{page}\glsnumberformat}{404}
+\glossaryentry{numerator?\glossentry{numerator}|setentrycounter[]{page}\glsnumberformat}{404}
+\glossaryentry{denominator?\glossentry{denominator}|setentrycounter[]{page}\glsnumberformat}{404}
+\glossaryentry{improper fraction?\glossentry{improper fraction}|setentrycounter[]{page}\glsnumberformat}{404}
+\glossaryentry{hypotenuse?\glossentry{hypotenuse}|setentrycounter[]{page}\glsnumberformat}{404}
+\glossaryentry{parabola?\glossentry{parabola}|setentrycounter[]{page}\glsnumberformat}{404}
+\glossaryentry{ratio?\glossentry{ratio}|setentrycounter[]{page}\glsnumberformat}{405}
+\glossaryentry{null set?\glossentry{null set}|setentrycounter[]{page}\glsnumberformat}{406}
+\glossaryentry{integer?\glossentry{integer}|setentrycounter[]{page}\glsnumberformat}{406}
+\glossaryentry{real number?\glossentry{real number}|setentrycounter[]{page}\glsnumberformat}{406}
+\glossaryentry{principal amount?\glossentry{principal amount}|setentrycounter[]{page}\glsnumberformat}{406}
+\glossaryentry{point-slope form?\glossentry{point-slope form}|setentrycounter[]{page}\glsnumberformat}{407}
+\glossaryentry{principal square root?\glossentry{principal square root}|setentrycounter[]{page}\glsnumberformat}{407}
+\glossaryentry{elimination method?\glossentry{elimination method}|setentrycounter[]{page}\glsnumberformat}{407}
+\glossaryentry{addition property of equality?\glossentry{addition property of equality}|setentrycounter[]{page}\glsnumberformat}{407}
+\glossaryentry{addition property of order?\glossentry{addition property of order}|setentrycounter[]{page}\glsnumberformat}{408}
+\glossaryentry{one-variable data?\glossentry{one-variable data}|setentrycounter[]{page}\glsnumberformat}{408}
+\glossaryentry{root?\glossentry{root}|setentrycounter[]{page}\glsnumberformat}{409}

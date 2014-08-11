@@ -8,22 +8,22 @@ We first saw exponential relationships back in \cref{ch:sequences}, when we stud
 Our focus now will be on the fundamentals of exponentials. Then, exponential functions will return in Algebra 2. In that course we will learn more techniques for representing and manipulating exponential functions, and learn tools for solving exponential functions.
 
 %%% Good somewhere?
-%\begin{boxedexplore}[The Water Lily]
+%\begin{boxexplore}[The Water Lily]
 %On Fran\c{c}ois's farm, there is a pond with awater lily leaves floating on its surface. If the lily is allowed to grow without interference, it will eventually cover the surface of the pond, blocking the light and starving the other plants that live in the water.
 %
 %Over the years Fran\c{c}ois has learned that the lily population doubles in size every day, and that it takes 30 days to cover the surface of the pond. At the start of a new growing cycle, Fran\c{c}ois tells Ivan to monitor the situation and to cut the lily back when it covers half of the pond. On what day should Ivan do this?
-%\end{boxedexplore}
+%\end{boxexplore}
 %%%
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \section{Exponential relationships}
 \label{sec:exporelationships}
 
-\begin{boxedexplore}[Super seaweed]
+\begin{boxexplore}[Super seaweed]
 YeardleighCorp genetic engineers have developed a new kind of fast-growing, nutrient-rich seaweed for the turtle pens. The length of a strand of this seaweed doubles every day.
 
 Scientists measure a particular strand of seaweed to be 15 centimeters long. How long will this strand be in 1 day? 2 days? 3 days? How long was this strand 1 day ago? 2 days ago? 3 days ago?
-\end{boxedexplore}
+\end{boxexplore}
 
 We are told that the seaweed doubles in length each day, so after one day the strand will be 30 cm long. Continuing the doubling pattern, the strand will be 60 cm after two days, and then 120 cm after three days.
 
@@ -103,9 +103,9 @@ For clarity, we will name the different forms of the exponential expression. We 
 
 Recall that in \cref{sec:orderofops} we mentioned a rule for using zero as an exponent:
 
-\begin{boxeddef}[Zero exponent]
+\begin{boxdef}[Zero exponent]
 For any nonzero real number $a$, \[a^0 = 1.\]
-\end{boxeddef}
+\end{boxdef}
 
 Our goal now is to extend this idea to include exponents that are negative integers. We'll do this informally by looking at exponential patterns. We'll start with a table that just shows the non-negative integral powers of 5:
 
@@ -145,16 +145,16 @@ So, we can extend the table downwards, as shown below. We take away 1 from the e
 
 There are a number of important patterns to see in this table. For example, the pattern ``divide by 5 as we move downwards in the table'' helps us to explain why $5^0 = 1$. Also note which numbers in the table are reciprocals of one another. This suggests a general rule for working with negative exponents.
 
-\begin{boxeddef}[Negative exponents]
+\begin{boxdef}[Negative exponents]
 For any nonzero real number $a$, and any positive integer $n$, \[a^{-n}=\frac{1}{a^n}.\]
 In other words, $a^{-n}$ is the reciprocal of $a^n$ (the base raised to the opposite power).
-\end{boxeddef}
+\end{boxdef}
 
 One aspect of negative exponents that can be confusing is that the negative exponent does not change the sign of the evaluated expression. For example, all of the numbers in the table above are positive numbers, even though they have a negative number in the exponent!
 
 Also note that this rule explicitly states that $a$ must be a \textit{nonzero} real number. Can you explain why is this important? Why can't we raise 0 to a negative exponent?
 
-\begin{boxedex}
+\begin{boxex}
 Write each of the following in standard form (as a fraction in lowest terms).
 
 \begin{center}
@@ -172,11 +172,11 @@ The next two require a bit more computation, but the idea is the same. Problem (
 \[2^{-6} = \left(\frac{1}{2}\right)^6 = \left(\frac{1}{2}\right)\left(\frac{1}{2}\right)\left(\frac{1}{2}\right)\left(\frac{1}{2}\right)\left(\frac{1}{2}\right)\left(\frac{1}{2}\right) = \frac{1}{64}\]
 And problem (c) becomes:
 \[\left(\frac{3}{4}\right)^{-2} = \left(\frac{4}{3}\right)^2 = \left(\frac{4}{3}\right)\left(\frac{4}{3}\right) = \frac{16}{9}\]
-\end{boxedex}
+\end{boxex}
 
 It pays to take time when working on problems like this. Consider the next examples carefully!
 
-\begin{boxedex}
+\begin{boxex}
 Rewrite each of the following expressions in an equivalent form that uses only positive exponents.
 \begin{center}
 \begin{tabularx}{0.4\textwidth}{XX}
@@ -190,7 +190,7 @@ Rewrite each of the following expressions in an equivalent form that uses only p
 \[7m^{-2} = 7\left(\frac{1}{m}\right)^2 = \left(\frac{7}{1}\right)\left(\frac{1}{m}\right)\left(\frac{1}{m}\right) = \frac{7}{m^2}\]
 In the second expression, the exponent applies only to the 3 in the numerator, and not the whole fraction (there's a subtle grouping symbol here --- what is it?). This expression becomes:
 \[\dfrac{3^{-1}}{~4~} = \dfrac{\tfrac{1}{3}}{~4~} = \frac{1}{3}\div{4} = \left(\frac{1}{3}\right)\left(\frac{1}{4}\right) = \frac{1}{12}\]
-\end{boxedex}
+\end{boxex}
 
 The second expression went through a rather ugly, fraction-in-a-fraction phase, but don't worry: we'll soon learns some simplification rules that will help us make quick work of expressions like these.
 
@@ -228,7 +228,7 @@ We can also see how steep the curve gets as we go along the positive $x$-axis. A
 
 \addtodoitem{Discuss: Is Zeno's paradox too much here?}
 
-\begin{boxedexplore}[Exploring {Z}eno's paradox]
+\begin{boxexplore}[Exploring {Z}eno's paradox]
 A paradox is a statement from which we can follow a logical path of reasoning to an impossible of self-contradictory end.
 
 The ancient Greek philosopher Zeno proposed a set of paradoxes about motion. One of these says:
@@ -250,18 +250,18 @@ Zeno says that movement is impossible, since the above statement about ``going h
 Many resolutions to the paradox have been proposed over the year, but it wasn't until the 19th century --- around 2000 years after Zeno lived --- that mathematics had a clear and rigorous solution to the paradox.
 
 What do you think about these ideas? 
-\end{boxedexplore}
+\end{boxexplore}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \section{Exponential growth}
 \label{sec:expogrowth}
 
-%\begin{boxedexplore}[Extended exploration: Problem with turtles]
+%\begin{boxexplore}[Extended exploration: Problem with turtles]
 %\addtodoitem{LINK.}
-%\end{boxedexplore}
+%\end{boxexplore}
 \addtodoitem{Link to extended exploration: A problem w/ turtles}
 
-\begin{boxedexplore}[{C}antor set]
+\begin{boxexplore}[{C}antor set]
 German mathematician Georg Cantor suggested a way to construct a very interesting set of numbers. We start in Stage 0 with a line segment covering the interval from 0 to 1 on the number line. The recursive procedure is to remove the middle third from each of the line segments in the previous step. The first few iterations are shown.
 
 \newlength{\cantorht}
@@ -296,7 +296,7 @@ German mathematician Georg Cantor suggested a way to construct a very interestin
 Let $f(x)$ represent the number of segments in stage $x$ of this construction. Write an equation for $f(x)$. How many segments are in stage 10 of the figure? What is the first stage to contain more than 100,000 segments?
 
 \textit{Bonus puzzler.} The set of points from the original line segment that are not deleted at any step of the (infinite) process is called the \textit{Cantor ternary set}. Can you give an example of a point that is in this set? What can we say about the points that survive this process?
-\end{boxedexplore}
+\end{boxexplore}
 
 \subsection{Modeling exponential growth}
 
@@ -401,9 +401,9 @@ To find the number of segments in stage 10, we compute $g(10) = 3\cdot2^{10} = 3
 
 If we summarize our findings from the explorations above, we have the ``general form'' of an exponential function.
 
-\begin{boxeddef}[General form of the exponential function]
+\begin{boxdef}[General form of the exponential function]
 A equation of the form \[f(x)=a \cdot b^x\] is an exponential function if $a\neq0$, $b\neq1$, and $b>0$. The constant value $a$ is the \textit{initial value} of the function (when $x=0$). The constant value $b$ is called the \textit{constant multiplier}. 
-\end{boxeddef}
+\end{boxdef}
 
 Note that there are some constraints placed on the ``legal'' values of $a$ and $b$. Why do we need these restrictions?
 
@@ -420,13 +420,13 @@ When $b$ is greater than 1, we have a situation like the ones we have seen in th
 
 Earlier explorations have involved an amount doubling as time went by. But what if we have a quantity that grows at a different rate? For example, the United Nations estimates that the population of the Earth will grow by approximately 0.77\% per year between now and 2050. How do our rules have to change to accomodate an arbitrary rate of growth?
 
-\begin{boxedexplore}[{H}ermine's choice]
+\begin{boxexplore}[{H}ermine's choice]
 Hermine is shopping for a mother's day gift. The vase she wants to buy is on sale for 25\% off. She also has a 10\% off coupon that can be applied to any item in the store. The store manager agrees that she can use both discounts, and gives her two options: \textit{Option 1}: Take 25\% off the full price of the vase, then apply the coupon to the discounted price. \textit{Option 2}: Apply the 10\% coupon to the full price of the vase, and then take 25\% off the discounted price.
 
 Which option should Hermine choose? Why?
 
 Later, Hermine told Bob this story. He said, ``Wow! 35\% off! You got a great deal!'' How would you respond to Bob?
-\end{boxedexplore}
+\end{boxexplore}
 
 In \cref{ch:proportions}, we discussed the percent proportion:
 \[\frac{\text{part}}{\text{whole}} = \frac{\text{percent}}{100}.\]
@@ -438,7 +438,7 @@ If we wish to isolate percent change, we can multiply both sides by 100.
 
 Of course, a value may grow larger or smaller, and so we must remember to be clear and describe the percent change as either a ``percent increase'' or ``percent decrease''.
 
-\begin{boxedex}
+\begin{boxex}
 Yeardleigh gives Hermine \$300 worth of YeardleighCorp stock as a birthday gift. After one month, the value of YeardleighCorp stock had increased by 15\%. How much were Hermine's shares worth at that point?
 
 After two months, Hermine's shares are worth \$240. What is the percent change from her original \$300 gift? What is the percent change from the value of her shares after one month?
@@ -448,13 +448,13 @@ After two months, Hermine's shares are worth \$240. What is the percent change f
 Since the stock value goes down in the second month, we're looking for percent decrease. The drop from the original value is $300-240=60$ dollars. We compare this to the original price to find the percent change from that price: \[\frac{300}{60} = 0.2 = 20\%\]
 We can make the same comparison with the price after one month. The amount of the change is $345-240=105$ dollars, so the percent change from that price is: \[\frac{105}{345} \approx 0.304 \approx 30\%\]
 So Hermine's shares have undergone a 20\% decrease from their starting value, and a 30\% decrease from their price one month ago.
-\end{boxedex}
+\end{boxex}
 
 Note that to calculate the percent increase we found 15\% of 300 and then added that on to the original 300. So the new amount is \[300 + 300(0.15).\] We can apply the distributive property to this and get \[300(1+0.15) = 300(1.15).\] If we interpret this as a percent question in its own right, we are saying that the new value is 115\% of the original value. This might seem like an unusual statement, but it makes sense: we have 100\% of the amount (all of what we started with) and then we add on an additional 15\%.
 
 Now consider the case of a percent decrease, such as Hermine's discount coupon in the startup exploration. If Hermine wants to buy a vase that costs \$75 and has a 10\% off coupon, we can find 10\% of the value of the vase and subtract that from the original value: \[75 - 75(0.10)\] Applying the distributive property as we did above, we have: \[75 - 75(0.10) = 75(1-0.10) = 75(0.90)\] This makes sense, too: if Hermine gets 10\% off the price of the vase, then she is only paying 90\% of the original price. Armed with these ideas, we can determine which option Hermine should choose in the startup exploration.
 
-\begin{boxedex}[Explaining the startup exploration]
+\begin{boxex}[Explaining the startup exploration]
 \exsoln\ It may have been helpful to make up a price for the vase (a convenient number, like \$100), but we'll use a variable here. Let $V$ represent the price of the vase.
 
 If Hermine chooses option 1, she will first get a 25\% discount. In other words, the price of the vase will be reduced to 75\% of its original value and Hermine would pay $(0.75)V$. The next step is to take this value and apply the 10\% coupon. If we take 10\% off, that's like paying for 90\% of the vase. So in the end the new price is: \[(0.90)\bigl((0.75)V\bigr) = \bigl((0.90)(0.75)\bigr)V= (0.675)V\] Hermine pays for 67.5\% of the vase, which is a 32.5\% discount.
@@ -462,7 +462,7 @@ If Hermine chooses option 1, she will first get a 25\% discount. In other words,
 If Hermine chooses option 2, she gets the 10\% discount first. This makes her cost 90\% of the original price. Then we take 75\% of this value. So option 2 means the new price would be: \[(0.75)\bigl((0.90)V\bigr) = \bigl((0.75)(0.90)\bigr)V = (0.675)V,\] which is exactly the same as option 1.
 
 So it doesn't matter which option Hermine chooses. She will pay the same amount for the vase either way. In response to Bob's comment, this is not a 35\% reduction in the price, but a 32.5\% reduction.
-\end{boxedex}
+\end{boxex}
 
 Note how the associative and commutative properties of multiplication play a role in this problem! The field axioms come to the rescue again!
 
@@ -490,9 +490,9 @@ You may be suspicious about the fact that we predict a 6 cm piece of seaweed wil
 
 We summarize our approach here, and present a second way to express the equation for exponential growth.
 
-\begin{boxeddef}[Exponential growth, given growth rate]
+\begin{boxdef}[Exponential growth, given growth rate]
 A equation of the form \[f(x) = a\cdot(1+r)^x\] is an exponential function where $a$ is the initial value, and $r$ is the growth rate (the percent increase each ``generation'').
-\end{boxeddef}
+\end{boxdef}
 
 If we compare this form of the equation to the previous form, $y=ab^x$, we can see that $b=(1+r)$. This value is called the \textit{growth factor}. Be mindful that ``growth rate'' and ``growth factor'' are different the ``growth factor'' is ``1 + growth rate''.
 
@@ -519,9 +519,9 @@ As a future consumer, it is important to learn about how interest works.\footnot
 
 The simplest way to calculate interest is called, naturally enough, \gls{simple interest}. It is calculated based only on the original amount borrowed or invested, called the \gls{principal amount}, or just \textit{principal}.
 
-\begin{boxeddef}[Simple interest]
+\begin{boxdef}[Simple interest]
 We calculate simple interest using the formula \[I = Prt,\] where $I$ represents the interest earned, $P$ represents the principal (the initial amount invested or borrowed), $r$ represents the annual percentage rate, and $t$ represents the time (in years).
-\end{boxeddef}
+\end{boxdef}
 
 The formula $I=Prt$ only calculates the interest, meaning the extra amount that we add on. The formula doesn't tell us the total amount that we own (or owe). To calculate the total amount, we can create an alternative formula for $A$ the total amount: \[A = P +Prt.\]
 
@@ -677,10 +677,10 @@ Once again, notice that the difference isn't that great compared to the other ca
 
 We can distill these calculatons into a formula for compound interest.
 
-\begin{boxeddef}[Compound interest]
+\begin{boxdef}[Compound interest]
 We calculate compound interest using the formula \[A = P\left(1+\frac{r}{n}\right)^{nt}\]
 where $A$ represents the total amount, $P$ represents the principal, $r$ represents the annual interest rate, $t$ represents the time in years, and $n$ represents the number of compounding periods per year.
-\end{boxeddef}
+\end{boxdef}
 
 For example in the scenario of ``monthly compounding'', $n=12$ and so we use the equation \[A = P\left( 1 + \frac{r}{12}\right)^{12t}\] to compute interest after $t$ years. Note that we have $\frac{r}{12}$, meaning we've divided the rate into 12 pieces, and $12t$ in the exponent meaning that in each year $t$ we have 12 compounding periods.
 
@@ -697,9 +697,9 @@ At this point, someone usually wonders whether a bank could make an unlimited am
 
 Interestingly, there is a limit to the amount of money that a bank can rake in using compound interest. Notice that the amounts we have seen --- under annual, semi-annual, monthly, and daily compounding --- have all been increasing, but that they have been increasing by less and less. The increases are sort of ``trailing off'' and, over time, the change between compounding schemes gets closer and closer to zero.
 
-\begin{boxedexplore}[Exploring continuous compounding]
+\begin{boxexplore}[Exploring continuous compounding]
 Imagine that we invest a principal amount $P$ at an evil bank which charges 100\% interest. Experiment with the amount we would owe after one year given different compounding periods. What is the maximum that we would be expected to pay back after one year?
-\end{boxedexplore}
+\end{boxexplore}
 
 \addtodoitem{Discuss: Is continuous compounding too much?}
 
@@ -709,12 +709,12 @@ This scenario --- continuous compounding for one year at 100\% interest --- give
 \section{Exponential decay}
 \label{sec:expodecay}
 
-%\begin{boxedexplore}[Extended exploration: Problem with pintonium]
+%\begin{boxexplore}[Extended exploration: Problem with pintonium]
 %LINK
-%\end{boxedexplore}
+%\end{boxexplore}
 \addtodoitem{Link to extended exploration: A problem w/ Pintonium}
 
-\begin{boxedexplore}[No pressure]
+\begin{boxexplore}[No pressure]
 Patrons to the Cheeseville Zoo can take a hot air balloon ride over the park. They have to fly high enough to be at a safe distance above the most dangerous areas of the zoo: Lake Mascarpone (the reptile exhibit) and NAME THE ISLAND (the primate enclosure).
 
 Of course humans can't fly too high: atmospheric pressure (the pressure of air around you) decreases as altitude increases, by about 6\% for every 500 meters. Above a certain altitute, people need breathing aids if they aren't in a pressurized environment (like an airplane).
@@ -724,7 +724,7 @@ Mountain climbers who scale Mount Everest say that ``altitude sickness'' sets in
 What percentage of normal air pressure is safe for humans? Specifically: at what percentage does a person risk altitude sickness? At what percentage does a person risk death?
 
 \addtodoitem{What's the name of the monkey enclosue where the gorilla mauling happens?}
-\end{boxedexplore}
+\end{boxexplore}
 
 At an altitude of 0 meters (sea level), we experience 100\% of normal atmospheric pressure. When we rise to a height of 500 meters, the atmospheric pressure decreases by 12\%. In other words, we are experiencing approximately 88\% of normal air pressure at that altitude.
 
@@ -750,9 +750,9 @@ Our model predicts that atmospheric pressure of around 13\% is life-threatening.
 
 Exponential decay describes a relationship which decreases exponentially. These have the same general formula for exponential relationships --- we have an initial value $a$ and a constant multiplier $b$ --- but now the constant multiplier is a fraction between 0 and 1.
 
-\begin{boxeddef}[Exponential decay]
+\begin{boxdef}[Exponential decay]
 An equation of the form $f(x) = a \cdot b^x$ represents exponential decay when $a \neq 0$ and $0 < b < 1$.
-\end{boxeddef}
+\end{boxdef}
 
 The graph of our atmospheric pressure example shows the familiar J-like shape, only backwards: a decreasing trend.
 
@@ -783,11 +783,11 @@ As with exponential growth, we distinguish between \textit{decay factor} and \te
 
 If air pressure decreases by 12\% per step change in elevation, then the decay rate is 12\%. This means that 88\% of the pressure ``remains'', and so this is the decay factor. The relationship between these two values is straight forward: \textit{decay factor} = 1 -- \textit{decay rate}. One way to write an equation for exponential decay uses the decay rate.
 
-\begin{boxeddef}
+\begin{boxdef}
 Exponential decay is described by an equation of the form \[f(x)=a(1-r)^x\] where $a$ represents the initial value, and $r$ represents the decay rate (a percent, written as a decimal).
-\end{boxeddef}
+\end{boxdef}
 
-\begin{boxedex}
+\begin{boxex}
 In the late 1990's, the Cheeseville Zoo saw some hard times. After a record high attendance of 1,000,000 visitors in 1995, attendance declined at a rate of 26\% per year. Approximatley how many people attended the zoo in 2000? In what year did attendance first drop below 100,000?
 
 \exsoln\ A decay rate of 26\%, means we can write a rule using the decay factor $1-0.26 = 0.74$ or 74\%. So, let's create a rule \[A(t) = 1\,000\,000(0.74)^t\] to represent the attendance after $t$ years (where 1995 is ``year 0'').
@@ -801,7 +801,7 @@ A(7) &\approx 121\,513
 A(8) &\approx 89\,919
 \end{aligned}\]
 This tells us that ``year 8'', meaning calendar year 2003, was the first time attendance dropped below 100,000 visitors.
-\end{boxedex}
+\end{boxex}
 
 %\subsection{Radioactive decay and half-life}
 %
@@ -811,7 +811,7 @@ This tells us that ``year 8'', meaning calendar year 2003, was the first time at
 %
 %For example certain types of Uranium have a half-life of 2 billion years. That if I have 1 kg of Uranium, in 2 billion years only half of it will have decayed into a stable substance. The other half will still be just as radioactive.
 %
-%\begin{boxedex}
+%\begin{boxex}
 %Suppose we have 10kg of a radioactive substance that decays at a rate of 18\% per year. Find the half-life of this substance.
 %
 %\exsoln\ The equation to model the decay of the substance is \[R(t) = 10(1-0.18)^t\] where $R(t)$ represents the amount of the substance remaining after $t$ years. To find the half-life, we wish to know when 5kg of the substance remains. So, we want to solve the equation \[5= 10(0.82)^x.\] To find this number, we are
@@ -824,7 +824,7 @@ This tells us that ``year 8'', meaning calendar year 2003, was the first time at
 %R(4) &\approx 4.521 \text{kg}
 %\end{aligned}\]
 %So, the half-life of this substance is between 3 and 4 years. (To refine the value we could adjust our table count in smaller increments, which gives us between 3.4 and 3.5 years.)
-%\end{boxedex}
+%\end{boxex}
 
 
 %% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -838,7 +838,7 @@ It's sometimes hard to appreciate the difference between a curved line and a str
 
 To compare linear and exponential growth, we close this chapter with a famous fable first told by the Persian poet Ferdowsi.
 
-\begin{boxedexplore}[Exploring the chessboard fable]
+\begin{boxexplore}[Exploring the chessboard fable]
 Many centuries ago, so the story goes, the inventor of the game of chess showed his invention to the king. The king was so delighted by the new game that he told the inventor that he could have whatever he liked as compensation.
 
 The inventor proposed that the king give him one grain of wheat for the first square of the chessboard, two grains of wheat for the second square, four grains of wheat for the third square, and so on, doubling the number of grains for each of the 64 squares on the board.
@@ -848,7 +848,7 @@ The king was shocked that the inventor should ask such a low price and offered i
 The king agreed to pay the inventor's price, chuckling to himself that the foolish man had asked for so little.
 
 But when the time came for the king to pay the debt, he was no longer chuckling. What happened?
-\end{boxedexplore}
+\end{boxexplore}
 
 Suppose we use some algebra to compare the different proposals. The king is offering to pay 1 million grains of rice every for every square on the chessboard. We can represent his proposal with the equation
 \[f(x)=1\,000\,000\,x,\]

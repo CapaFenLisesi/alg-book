@@ -2,7 +2,7 @@
 \usepackage[english]{babel}
 
 % Partial inclusion, for piecewise development
-%\includeonly{graphs}
+%\includeonly{numbers}
 
 \usepackage{floatrow}			% this automatically centers all floats
 \floatplacement{table}{hbtp}		% all tables are given the [hbtp] option
@@ -17,10 +17,6 @@
 
 % Custom mathematics commands
 \usepackage{jermer_math}
-
-%%%
-\newcommand{\twosystem}[2]{\left\{\begin{array}{l}#1\\[1ex]#2\end{array}\right.}
-%%%
 
 % Environment for formatting commented work
 \usepackage{algnom_commwork}
@@ -48,74 +44,6 @@
 
 \usepackage[autoplay, loop]{animate}
 
-% Patch to the delimiter bug in animate package
-%%\makeatletter
-%%\def\@anim@@sanitize#1\@nil{%
-%%  \@tfor\next:=#1\do{%
-%%    \expandafter\xdef\csname @anim@\number\expandafter`\next\endcsname{%
-%%      \the\catcode\expandafter`\next
-%%    }%
-%%    \global\catcode\expandafter`\next=12
-%%  }
-%%  \global\catcode`\#=12
-%%  \global\let\@anim@newline=\\\global\let\\=\@anim@bksl
-%%  \global\let\@anim@leftbrace=\{\global\let\{=\@anim@lbr
-%%  \global\let\@anim@rightbrace=\}\global\let\}=\@anim@rbr
-%%  \global\let\@anim@percent=\%\global\let\%=\@anim@per
-%%}
-%%\def\@anim@@endsanitize#1\@nil{%
-%%  \@tfor\next:=#1\do{%
-%%    \global\catcode\expandafter`\next=\csname @anim@\number\expandafter`\next\endcsname
-%%  }
-%%  \global\let\%=\@anim@percent%
-%%  \global\let\}=\@anim@rightbrace%
-%%  \global\let\{=\@anim@leftbrace%
-%%  \global\let\\=\@anim@newline%
-%%  \global\catcode`\#=6%
-%%}
-%%\makeatother
-
-%%%
-% Diagram of the form (a+b)^2 = a^2+ab+ab+b^2
-% \quadrangle{a}{b}{a^2}{ab}{b^2}
-\newcommand{\quadrangle}[5]
-{
-\begin{center}
-\begin{tikzpicture}[scale=0.625]
-	\draw(0,0) rectangle node{\large$#3$} (2,-2);
-	\draw(2,0) rectangle node{\large$#4$} (4,-2);
-	\draw(0,-2) rectangle node{\large$#4$} (2,-4);
-	\draw(2,-2) rectangle node{\large$#5$} (4,-4);
-	\draw(0,0) -- node[above]{\large$#1$} (2,0);
-	\draw(2,0) -- node[above]{\large$#2$} (4,0);
-	\draw(0,0) -- node[left]{\large$#1$} (0,-2);
-	\draw(0,-2) -- node[left]{\large$#2$} (0,-4);
-\end{tikzpicture}
-\end{center}
-}
-%%%
-
-%%%
-% Diagram of the form (a+b)(c+d) = ac+ad+bc+bd
-% \quadrangleplus{a}{b}{c}{d}{ab}{ac}{bc}{bd}
-\newcommand{\quadrangleplus}[8]
-{
-\begin{center}
-\begin{tikzpicture}[scale=0.625]
-	\draw(0,0) rectangle node{\large$#5$} (2,-2);
-	\draw(2,0) rectangle node{\large$#7$} (4,-2);
-	\draw(0,-2) rectangle node{\large$#6$} (2,-4);
-	\draw(2,-2) rectangle node{\large$#8$} (4,-4);
-	\draw(0,0) -- node[above]{\large$#1$} (2,0);
-	\draw(2,0) -- node[above]{\large$#2$} (4,0);
-	\draw(0,0) -- node[left]{\large$#3$} (0,-2);
-	\draw(0,-2) -- node[left]{\large$#4$} (0,-4);
-\end{tikzpicture}
-\end{center}
-}
-%%%
-
-
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 %
 % Font selection
@@ -128,7 +56,6 @@
 
 % Special inline formatting for calculator commands
 \newcommand{\calculator}[1]{\texttt{#1}}
-
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 %
@@ -152,7 +79,6 @@
 % Enable custom page headers and footers
 \usepackage{fancyhdr}
 \setlength{\headheight}{15pt}
-
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 %
@@ -197,6 +123,7 @@
 	{\color{black!25}\rule[.5ex]{\epigraphwidth}{\epigraphrule}}
 \makeatother
 
+% Command for consistent formatting of "chapter summary" section
 \newcommand{\chaptersummary}{\subsection*{>> Chapter summary <<}}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -361,30 +288,7 @@
 
 \include{backmatter}
 
-%\chapter{Back Matter}
-%Glossary, bibliography, and index removed during editing process.
-
-%\cleardoublepage
-%\phantomsection
-%\addcontentsline{toc}{chapter}{Glossary}
-%%\glossarystyle{listhypergroup}
-%\glsaddall
-%\printglossaries
-%
-%\cleardoublepage
-%\phantomsection
-%\addcontentsline{toc}{chapter}{Bibliography}
-%\bibliographystyle{plain}
-%\nocite{*} %%% include all references, even those not cited
-%\bibliography{algbookrefs}
-%
-%\cleardoublepage
-%\phantomsection
-%\addcontentsline{toc}{chapter}{Index}
-%\printindex
-
 \clearpage
-
 
 % Close output stream for to-do list
 \immediate\closeout\outputstream

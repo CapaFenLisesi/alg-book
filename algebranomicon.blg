@@ -1,0 +1,68 @@
+This is BibTeX, Version 0.99d (TeX Live 2014)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: algebranomicon.aux
+A level-1 auxiliary file: titlepage.aux
+A level-1 auxiliary file: acknowledgements.aux
+A level-1 auxiliary file: introduction.aux
+A level-1 auxiliary file: glossary.aux
+A level-1 auxiliary file: numbers.aux
+A level-1 auxiliary file: sequences.aux
+A level-1 auxiliary file: graphs.aux
+A level-1 auxiliary file: functions.aux
+A level-1 auxiliary file: equations.aux
+A level-1 auxiliary file: proportions.aux
+A level-1 auxiliary file: linear.aux
+A level-1 auxiliary file: systems.aux
+A level-1 auxiliary file: inequalities.aux
+A level-1 auxiliary file: expofunc.aux
+A level-1 auxiliary file: expoexpr.aux
+A level-1 auxiliary file: quadeq.aux
+A level-1 auxiliary file: radicals.aux
+A level-1 auxiliary file: quadfunc.aux
+A level-1 auxiliary file: polynomials.aux
+A level-1 auxiliary file: factoring.aux
+A level-1 auxiliary file: primes.aux
+A level-1 auxiliary file: backmatter.aux
+The style file: plain.bst
+Database file #1: algbookrefs.bib
+You've used 22 entries,
+            2118 wiz_defined-function locations,
+            636 strings with 7113 characters,
+and the built_in function-call counts, 5349 in all, are:
+= -- 463
+> -- 251
+< -- 0
++ -- 105
+- -- 78
+* -- 251
+:= -- 950
+add.period$ -- 66
+call.type$ -- 22
+change.case$ -- 83
+chr.to.int$ -- 0
+cite$ -- 22
+duplicate$ -- 265
+empty$ -- 486
+format.name$ -- 78
+if$ -- 1121
+int.to.chr$ -- 0
+int.to.str$ -- 22
+missing$ -- 43
+newline$ -- 113
+num.names$ -- 45
+pop$ -- 192
+preamble$ -- 1
+purify$ -- 83
+quote$ -- 0
+skip$ -- 138
+stack$ -- 0
+substring$ -- 115
+swap$ -- 22
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 44
+warning$ -- 0
+while$ -- 44
+width$ -- 24
+write$ -- 222

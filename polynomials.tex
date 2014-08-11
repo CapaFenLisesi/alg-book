@@ -7,7 +7,7 @@ Don't be scared by the complicated-sounding name: we have actually been working 
 
 \section{Building Polynomials}
 
-\begin{boxedexplore}[What qualifies?]
+\begin{boxexplore}[What qualifies?]
 Before reading he official definition of a polynomial, consider the two lists below.
 
 \begin{center}
@@ -24,7 +24,7 @@ Before reading he official definition of a polynomial, consider the two lists be
 
 Based on this information, conjecture about what it means to be a polynomial. Which of the following (if any) are polynomials?
 \[6x - 8 + 7x^{-1} \qquad\qquad 150 \qquad\qquad x^2 + x^4 - 3x^3 + 8 - x\]
-\end{boxedexplore}
+\end{boxexplore}
 
 Recall that a \gls{term} is a number, a variable, or the product (or quotient) of numbers and variables. The following expressions are all terms:
 \[4 \qquad 3x \qquad 14x^6\]
@@ -34,9 +34,9 @@ Remember that terms are separated by addition and subtraction, and that an \gls{
 
 A \gls{polynomial} is a special type of algebraic expression.
 
-\begin{boxeddef}[Polynomial]
+\begin{boxdef}[Polynomial]
 A algebraic expression which contains only a single variable, in which the coefficients are all rational numbers, and the degree of each term is a non-negative integer.
-\end{boxeddef}
+\end{boxdef}
 
 Recall that the \gls{degree of a term} is the exponent on the variable of a term. It is usually quite easy to identify the degree of a term: the degree of $5x^3$ is 3. Remember, though, that some special situations arise.
 
@@ -54,15 +54,15 @@ Look back over the list of polynomials and non-polynomials in the startup explor
 The other two expressions are polynomials. The number 150 is a polynomial since it is of the form $150x^0$. The third expression given meets the definition of a polynomial, and can be rewritten as follows:
 \[x^4 - 3x^3 + x^2 - x + 8\]
 
-\begin{boxeddef}[Degree of a Polynomial]
+\begin{boxdef}[Degree of a Polynomial]
 The degree of the highest-degree term in the polynomial.
-\end{boxeddef}
+\end{boxdef}
 
 The degree of a polynomial is the highest exponent in the polynomial. This is very important because the highest degree has the biggest impact on the value of the expression. If we were to put a ``$y=$'' in front of the polynomial to turn it into a function, the highest degree term will tell us which family it belongs in. For example, every member of the quadratic family is a polynomial of degree 2.
 
-\begin{boxeddef}[Standard form of a polynomial]
+\begin{boxdef}[Standard form of a polynomial]
 A polynomial is written in standard form if the degree of the terms decreases from left to right, and no two terms have the same degree.
-\end{boxeddef} 
+\end{boxdef} 
 
 This is probably common sense by this point in the course. Basically, standard form is simplified (like terms are combined and there are no parentheses), and in addition, we make be sure to write the terms in a ``reasonable'' order. The highest degree term comes first, then the rest follow in order of decreasing degree. A polynomial is still a polynomial otherwise, but this format makes polynomials easier to understand and communicate.
 
@@ -143,28 +143,29 @@ The first few operations with polynomials are related to things we have seen bef
 
 To add or subtract polynomials, we simply combine like terms -- nothing new here! The only change is that we might encounter more terms than before, and perhaps terms of higher degree.
 
-\begin{boxedex}
+\begin{boxex}
 \label{ex:polyadd}
 Add: $(3x^3 + x^2 + 6x - 8) + (4x^2 + 2x - 5)$
 
 \exsoln\ To add polynomials, we simply combine like terms. Recall that to be like terms, two terms much have identical variable parts. So, in this case, the sum of these two polynomials is:
 \[3x^3 + 5x^2 + 8x - 13\]
-\end{boxedex}
+\end{boxex}
 
 Be sure to read carefully. A common mistake in the above example is to combine the first term of each polyomial -- but that's no good, since we are adding polynomials of different degree!
 
-\begin{boxedex}
+\begin{boxex}
 \label{ex:polysub}
 Subtract: $(7x^3-3x+1)-(x^3-4x^2-2)$
 
 \exsoln\ When subtracting we'll have to distribute the negative, so remember to check the signs. In this case, we'll have:
 \begin{commwork}
-(7x^3-3x + 1) - (x^3-4x^2-2) & (7x^3-3x + 1) + (-x^3-\umin4x^2-\umin2)
+(7x^3-3x + 1) - (x^3-4x^2-2)
+&=& (7x^3-3x + 1) + (-x^3-\umin4x^2-\umin2)
 \\
-&(7x^3-3x + 1) + (-x^3+4x^2+2)\\
-&6x^3+4x^2-3x+3
+&=& (7x^3-3x + 1) + (-x^3+4x^2+2)\\
+&=& 6x^3+4x^2-3x+3
 \end{commwork}
-\end{boxedex}
+\end{boxex}
 
 The key with subtraction is to remember that every term of that second polynomial is being subtracted.
 
@@ -191,19 +192,20 @@ We have already studied the key ideas of polynomial multiplication, back in \cre
 
 For example, given the task of multiplying the linear binomials $(x+1)(x+2)$, we treat the $(x+1)$ as a single entity and distribute that over the two terms of $(x+2)$.
 \begin{commwork}
-{\color{blue}(x+1)}(x+2) & {\color{blue}(x+1)}x + {\color{blue}(x+1)}2
+{\color{blue}(x+1)}(x+2)
+&=& {\color{blue}(x+1)}x + {\color{blue}(x+1)}2
 & distribute the $(x+1)$
 \\
-& {\color{blue}(x+1)}{\color{red}x} + {\color{blue}(x+1)}{\color{violet}2}
+&=& {\color{blue}(x+1)}{\color{red}x} + {\color{blue}(x+1)}{\color{violet}2}
 & identify two new distribution opportunities
 \\
-& {\color{blue}x}\cdot{\color{red}x}+{\color{blue}1}\cdot{\color{red}x} + {\color{blue}x}\cdot{\color{violet}2}+{\color{blue}1}\cdot{\color{violet}2}
+&=& {\color{blue}x}\cdot{\color{red}x}+{\color{blue}1}\cdot{\color{red}x} + {\color{blue}x}\cdot{\color{violet}2}+{\color{blue}1}\cdot{\color{violet}2}
 & distribute twice more
 \\
-& x^2 + x  + 2x + 2
+&=& x^2 + x  + 2x + 2
 & simplify
 \\
-& x^2 + 3x + 2
+&=& x^2 + 3x + 2
 & combine like terms
 \end{commwork}
 
@@ -223,9 +225,9 @@ We can also set things up using an old school style, as we saw back then, and th
 
 The process of multiplication is the same in these two cases: in fact, if we substitute $x=10$, we have \textit{exactly the same problem}, since we can rewrite a number in expanded form using its place value, for example:
 \begin{commwork}
-5682	& 5000 + 600 + 80 + 2\\
-		& 5\cdot1000 + 6\cdot100 + 8\cdot10 + 2\\
-		& 5\cdot10^3 + 6\cdot10^2 + 8\cdot10^1 + 2\cdot10^0 
+5682	&=&  5000 + 600 + 80 + 2\\
+		&=&  5\cdot1000 + 6\cdot100 + 8\cdot10 + 2\\
+		&=&  5\cdot10^3 + 6\cdot10^2 + 8\cdot10^1 + 2\cdot10^0 
 \end{commwork}
 This last line is the same as the polynomial $5x^3+6x^2+8x+2$, evaluated at $x=10$!
 
@@ -270,7 +272,7 @@ Recall that the basic set of tiles includes three colored tiles that represent 1
 
 We can use the tiles to show a picture of a polynomial, and to show how addition and subtraction work, but they are really helpful for showing the key ideas around multiplication. Let's start with the basics.
 
-\begin{boxedex}
+\begin{boxex}
 What polynomial is represented below?
 
 \begin{center}
@@ -309,7 +311,7 @@ What polynomial is represented below?
 
 \exsoln\ A red tile will cancel out a non-red tile of the same size, since the two add up to zero. After removing all of the ``zero pairs'', we just count up what's left over. In the end, we'll have:
 \[2x^2 - 2x + 4.\]
-\end{boxedex}
+\end{boxex}
 
 If we have two piles of tiles at the start, we can scrape them into one big pile, remove all the zero pairs, and then count up what we have. This is polynomial addition! To subtract polynomials using tiles, we would negate all the tiles in the polynomial that's being subtracted (exchanging red tiles for their non-red versions, and vice versa), and then add. Nothing to it!
 
@@ -484,7 +486,7 @@ To check our solution, we can multiply the quotient by the divisor, then add the
 
 That's a lot of alphabet soup and, as we mentioned above, we'll come back to generic polynomial division in Algebra 2. For the remainder of our time in Algebra 1, we will concern ourselves with the important situation in which one polynomial is a factor of another. Consider this final example as we make the transition.
 
-\begin{boxedex}
+\begin{boxex}
 Divide $x^2-9$ by $x+3$.
 
 \exsoln\ In this case, we find that there are terms ``missing'' from the dividend. So, we must add in a linear term with a zero coefficient: $0x$. Then, we can go about long division as usual:
@@ -507,7 +509,7 @@ x+3	&\big)	&x^2&+0x&-9\\
 No remainder means that we have found to polynomials which multiply together to produce the other:
 \[(x+3)(x-3) = x^2 - 9\]
 Check our solution by carrying out the multiplication of these two linear binomials. What happens?
-\end{boxedex}
+\end{boxex}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \chaptersummary
