@@ -193,16 +193,19 @@
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 %
-% To-do list
+% To-do lists
 %
 \newcommand{\addtodoitem}[1]
 {%
-	% Print in the document
-%	{\bfseries [TODO] Section \thesection. #1}
 	% Add item to the file 'todolist.txt'
-	\immediate\write\outputstream{Section \thesection. #1}
+	\immediate\write\outputstream{[TODO] Section \thesection. #1}
 }
 
+\newcommand{\kverse}[1]
+{%
+	% Add item to the file 'todolist.txt'
+	\immediate\write\outputstream{[Krumbliverse] Section \thesection. #1}
+}
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 

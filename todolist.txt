@@ -1,51 +1,51 @@
-Section 2.1. Link to extended exploration: Sierpinski's triangle
-Section 2.2. Link to extended exploration: Koch curve, triangular version
-Section 2.3. Link to extended exploration: Squares, triangles, segments
-Section 3.1. Was there any Krumbli stuff in the sequences chapter? We need some continuity...
-Section 3.3. Link to extended exploration: Big graphs
-Section 3.4. Link to extended exploration: Age guesser
-Section 3.5. Link to extended exploration: distance match
-Section 4.1. Startup exploration on function notation?
-Section 4.2. More examples here: see Patty's notes.
-Section 4.3. The tone here could be more ``recap all that we've learned in this unit'', look at how much you already know.
-Section 4.3. Link to extended exploration: Exploring the three families
-Section 4.3. Create something on the website for this. Maybe links to desmos pages w/ sliders.
-Section 5.3. Link to extended exploration: Mystery numbers
-Section 5.5. Link to extended exploration: Evil mystery numbers
-Section 5.6. Link to extended exploration: Super evil mystery numbers
-Section 5.7. Link to extended exploration: Dreadful mystery numbers
-Section 5.8. Link to extended exploration: Mixed bag o' problems
-Section 5.8. Remember: Since we moved transforming formulas before the linear equations formulae, we should add a bit about transforming standard from later.
-Section 5.8. fix example numbering here
-Section 6.1. Link to extended exploration: Multiply and conquer
-Section 6.3. Link to extended exploration: Direct variation
-Section 6.3. Graphs and visuals for DV
-Section 6.4. Link to extended exploration: Teeter-totter nickels
-Section 6.4. asymptote in I.V. section
-Section 7.1. Link to extended exploration: Calculating speed
-Section 7.2. Link to extended exploration: Deriving point-slope
-Section 7.3. Link to extended exploration: Slope-inercept form
-Section 7.4. Link to extended exploration: Standard form
-Section 7.5. Link to extended exploration: Parallel and perpendicular
-Section 8.1. Visuals of the various solutions types.
-Section 8.2. Solving systems by graphing needs work.
-Section 8.5. Systems: The word problems in this chapter should all connect into one story, IMHO... perhaps advancing the overall story.
-Section 8.5. Systems: Some pictures of the word problems would be helpful.
-Section 9.3. Startup exploration on solving inequalities?
-Section 9.5. Startup exploration on systems of inequalities
-Section 10.1. Discuss: Is Zeno's paradox too much here?
-Section 10.2. Link to extended exploration: A problem w/ turtles
-Section 10.4. Discuss: Is continuous compounding too much?
-Section 10.5. Link to extended exploration: A problem w/ Pintonium
-Section 10.5. What's the name of the monkey enclosue where the gorilla mauling happens?
-Section 13.3. Startup exploration on simplified radical form?
-Section 13.3. See Patty's alternative way of simplifying radicals.
-Section 13.3. Image of a sliderule?
-Section 13.4. Need a good Pythagoras footnote.
-Section 14.1. Link to extended exploration: Staking a claim
-Section 15.2. Startup explorations in the polynomial operations sections?
-Section 16.6. Should add a comment about factorable being integer coefficients...
-Section 16.6. Revisit x-intercepts here
-Section 16.6. What do we want to say here?
-Section 16.6. What do we want to say here?
-Section 16.6. A short list of things to add is found at the end of the chapter.
+[TODO] Section 2.1. Link to extended exploration: Sierpinski's triangle
+[TODO] Section 2.2. Link to extended exploration: Koch curve, triangular version
+[TODO] Section 2.3. Link to extended exploration: Squares, triangles, segments
+[TODO] Section 3.1. Was there any Krumbli stuff in the sequences chapter? We need some continuity...
+[TODO] Section 3.3. Link to extended exploration: Big graphs
+[TODO] Section 3.4. Link to extended exploration: Age guesser
+[TODO] Section 3.5. Link to extended exploration: distance match
+[TODO] Section 4.1. Startup exploration on function notation?
+[TODO] Section 4.2. More examples here: see Patty's notes.
+[TODO] Section 4.3. The tone here could be more ``recap all that we've learned in this unit'', look at how much you already know.
+[TODO] Section 4.3. Link to extended exploration: Exploring the three families
+[TODO] Section 4.3. Create something on the website for this. Maybe links to desmos pages w/ sliders.
+[TODO] Section 5.3. Link to extended exploration: Mystery numbers
+[TODO] Section 5.5. Link to extended exploration: Evil mystery numbers
+[TODO] Section 5.6. Link to extended exploration: Super evil mystery numbers
+[TODO] Section 5.7. Link to extended exploration: Dreadful mystery numbers
+[TODO] Section 5.8. Link to extended exploration: Mixed bag o' problems
+[TODO] Section 5.8. Remember: Since we moved transforming formulas before the linear equations formulae, we should add a bit about transforming standard from later.
+[TODO] Section 5.8. fix example numbering here
+[TODO] Section 6.1. Link to extended exploration: Multiply and conquer
+[TODO] Section 6.3. Link to extended exploration: Direct variation
+[TODO] Section 6.3. Graphs and visuals for DV
+[TODO] Section 6.4. Link to extended exploration: Teeter-totter nickels
+[TODO] Section 6.4. asymptote in I.V. section
+[TODO] Section 7.1. Link to extended exploration: Calculating speed
+[TODO] Section 7.2. Link to extended exploration: Deriving point-slope
+[TODO] Section 7.3. Link to extended exploration: Slope-inercept form
+[TODO] Section 7.4. Link to extended exploration: Standard form
+[TODO] Section 7.5. Link to extended exploration: Parallel and perpendicular
+[TODO] Section 8.1. Visuals of the various solutions types.
+[TODO] Section 8.2. Solving systems by graphing needs work.
+[TODO] Section 8.5. Systems: The word problems in this chapter should all connect into one story, IMHO... perhaps advancing the overall story.
+[TODO] Section 8.5. Systems: Some pictures of the word problems would be helpful.
+[TODO] Section 9.3. Startup exploration on solving inequalities?
+[TODO] Section 9.5. Startup exploration on systems of inequalities
+[TODO] Section 10.1. Discuss: Is Zeno's paradox too much here?
+[TODO] Section 10.2. Link to extended exploration: A problem w/ turtles
+[TODO] Section 10.4. Discuss: Is continuous compounding too much?
+[TODO] Section 10.5. Link to extended exploration: A problem w/ Pintonium
+[TODO] Section 10.5. What's the name of the monkey enclosue where the gorilla mauling happens?
+[TODO] Section 13.3. Startup exploration on simplified radical form?
+[TODO] Section 13.3. See Patty's alternative way of simplifying radicals.
+[TODO] Section 13.3. Image of a sliderule?
+[TODO] Section 13.4. Need a good Pythagoras footnote.
+[TODO] Section 14.1. Link to extended exploration: Staking a claim
+[TODO] Section 15.2. Startup explorations in the polynomial operations sections?
+[TODO] Section 16.6. Should add a comment about factorable being integer coefficients...
+[TODO] Section 16.6. Revisit x-intercepts here
+[TODO] Section 16.6. What do we want to say here?
+[TODO] Section 16.6. What do we want to say here?
+[TODO] Section 16.6. A short list of things to add is found at the end of the chapter.
