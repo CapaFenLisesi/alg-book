@@ -1,7 +1,7 @@
 \chapter{Solving equations}
 \label{ch:equations}
 
-\chapquote{Mathematics is the art of giving the same name to different things.}{Henri Poincar\'e\\French mathematician}
+\chapquote{Mathematics is the art of giving the same name to different things.}{Henri Poincar\'e, French mathematician}
 
 One of the most important concepts in mathematics is the equation: a statement that two quantities are the same. We use equations in mathematics, of course, but equations are used in all sorts of places: in biology, chemistry, and physics laboratories\ldots\ in the officies of business leaders, economists, and politicians\ldots\ in hospitals, in schools, and in homes.
 
@@ -11,7 +11,7 @@ In this chapter we will learn the key ideas about writing and solving equations,
 \section{Equivalence}
 \label{sec:equivalence}
 
-Equivalence is an important concept in algebra, and indeed throughout mathematics. The kernel of the idea is that we can manipulate mathematical objects in ways that change their appearance without changing their value.
+Equivalence is an important concept in algebra and, indeed, throughout mathematics. The kernel of the idea is that we can manipulate mathematical objects in ways that change their appearance without changing their value.
 
 \begin{boxexplore}[Never the tween shall meet?]
 Bob thinks: ``Since $\frac{3}{7}$ and $\frac{4}{7}$ are `right next to each other' on the number line, there must be no fractions in between them.'' Use what you know about equivalent fractions to find a fraction in between $\frac{3}{7}$ and $\frac{4}{7}$.
@@ -43,25 +43,31 @@ This is a property about numbers that we use all the time, for example when we r
 An \gls{axiom} is a statement that is accepted as true without proof. The real numbers $\R$ are built upon several axioms, called the \glspl{field axiom}, which are the properties and laws that make arithmetic and algebra work.\footnote{A \textit{field} is a mathematical object that pairs up a set of numbers with some operations on those numbers. The number system we know so well -- the real numbers $\R$, along with the operations of addition and multiplication -- are a field. But many other fields exist! If you continue to study algebra in college, the focus gradually shifts from studying familiar fields like the real numbers, to studying the properties of fields in general.}
 
 \begin{boxdef2col}[Axiom: Closure properties]
+\raggedright % based on Tyson's suggestion
 When we add two real numbers, their sum is a real number. Mathematically speaking, we say that \textit{the real numbers are closed under the operation of addition}.
 \tcblower
+\raggedright % based on Tyson's suggestion
 Similarly, when we multiply two real numbers, their product is a real number. We say that \textit{the real numbers are closed under the operation of multiplication}.
 \end{boxdef2col}
 
 This might seem obvious, but we saw in \Cref{ch:numbers} that closure is not guaranteed for all sets and all operations. For example, the integers are not closed under the operation of division.
 
 \begin{boxdef2col}[Axiom: Identity properties]
-The \gls{identity property of addition} states that for any real number $a$, \[0 + a = a + 0 = a\] The number 0 is called the \gls{additive identity}.
+\raggedright % based on Tyson's suggestion
+The \gls{identity property of addition} states that for any real number $a$, \[0 + a = a + 0 = a.\] The number 0 is called the \gls{additive identity}.
 \tcblower
-The \gls{identity property of multiplication} states that for any real number $a$, \[1 \cdot a = a \cdot 1 = a\] The number 1 is called the \gls{multiplicative identity}.
+\raggedright % based on Tyson's suggestion
+The \gls{identity property of multiplication} states that for any real number $a$, \[1 \cdot a = a \cdot 1 = a.\] The number 1 is called the \gls{multiplicative identity}.
 \end{boxdef2col}
 
 As we saw above, the identity property of multiplication is the axiom that allows us to create equivalent fractions.
 
 \begin{boxdef2col}[Axiom: Inverse properties]
-The \gls{inverse property of addition} states that for any real number $a$, there exists a real number $\umin a$ such that \[a + \umin a = \umin a + a = 0\] The number $\umin a$ is called the \gls{additive inverse} of $a$. Very often we will call it the \gls{opposite} of $a$.
+\raggedright % based on Tyson's suggestion
+The \gls{inverse property of addition} states that for any real number $a$, there exists a real number $\umin a$ such that \[a + \umin a = \umin a + a = 0.\] The number $\umin a$ is called the \gls{additive inverse} of $a$. Often we will call it the \gls{opposite} of $a$.
 \tcblower
-The \gls{inverse property of multiplication} states that for any nonzero real number $a$, there exists a real number $\frac{1}{a}$ such that \[a \cdot \frac{1}{a} = \frac{1}{a} \cdot a = 1\] The number $\frac{1}{a}$ is called the \gls{multiplicative inverse} of $a$. Very often we will call it the \gls{reciprocal} of $a$.
+\raggedright % based on Tyson's suggestion
+The \gls{inverse property of multiplication} states that for any nonzero real number $a$, there exists a real number $1/a$ such that \[a \cdot \frac{1}{a} = \frac{1}{a} \cdot a = 1.\] The number $1/a$ is called the \gls{multiplicative inverse} of $a$. Often we will call it the \gls{reciprocal} of $a$.
 \end{boxdef2col}
 
 \index{division!by zero}\index{zero!division by}
@@ -83,9 +89,11 @@ At this point, troublemakers always like to ask about $0 \div 0 = \fbox{\color{e
 \end{boxexplore}
 
 \begin{boxdef2col}[Axiom: Commutative properties]
-The \gls{commutative property of addition} states that for real numbers $a$ and $b$: \[a+b = b+a\]
+\raggedright % based on Tyson's suggestion
+The \gls{commutative property of addition} states that for real numbers $a$ and $b$: \[a+b = b+a.\]
 \tcblower
-The \gls{commutative property of multiplication} states that for real numbers $a$ and $b$: \[a \cdot b = b \cdot a\]
+\raggedright % based on Tyson's suggestion
+The \gls{commutative property of multiplication} states that for real numbers $a$ and $b$: \[a \cdot b = b \cdot a.\]
 \end{boxdef2col}
 
 The commutative properties allow us to rearrange the order of things when we add or multiply. For instance, when adding up a string of numbers, it's sometimes helpful to ``make a ten'':
@@ -103,13 +111,15 @@ The commutative properties allow us to rearrange the order of things when we add
 &&
 \end{aligned}\]
 
-Note that this property is for \textit{addition and multiplication}, but not subtraction or division! To move things around in, say, a subtraction problem, we must use the definition of subtraction as ``addition of the opposite'' to create an equivalent addition problem.
+Note that this property is for \textit{addition} and \textit{multiplication}, but not subtraction or division! To move things around in, say, a subtraction problem, we must use the definition of subtraction as ``addition of the opposite'' to create an equivalent addition problem.
 \[6 - 5 \neq 5 - 6 \text{\qquad but \qquad} 6+(\umin5) = (\umin5)+6\]
 
 \begin{boxdef2col}[Axiom: Associative properties]
-The \gls{associative property of addition} states that for real numbers $a$, $b$, and $c$: \[(a+b)+c = a+(b+c)\]
+\raggedright % based on Tyson's suggestion
+The \gls{associative property of addition} states that for real numbers $a$, $b$, and $c$: \[(a+b)+c = a+(b+c).\]
 \tcblower
-The \gls{associative property of multiplication} states that for real numbers $a$, $b$, and $c$: \[(a \cdot b) \cdot c = a \cdot (b \cdot c)\]
+\raggedright % based on Tyson's suggestion
+The \gls{associative property of multiplication} states that for real numbers $a$, $b$, and $c$: \[(a \cdot b) \cdot c = a \cdot (b \cdot c).\]
 \end{boxdef2col}
 
 The associative properties allow us to move around certain parentheses and regroup addition and multiplication. Here, the numbers don't move; the parentheses do.
@@ -136,8 +146,9 @@ Here's a sneaky one, can you explain why these two equations are not equivalent?
 To handle situations like these last two, we need the final field axiom:
 
 \begin{boxdef}[Axiom: Distributive property]
+\raggedright % based on Tyson's suggestion
 The \gls{distributive property} states that for real numbers $a$, $b$, and $c$:
-\[a \cdot (b+c) = a\cdot b + a\cdot c\]
+\[a \cdot (b+c) = a\cdot b + a\cdot c.\]
 \end{boxdef}
 
 This property explains how multiplication and addition are related to each other. To get a feel for this, suppose we have two rectangles: one that is $a$ units tall and $b$ units wide, and a second rectangle that is $a$ units tall and $c$ units wide. Together, their combined area is $a \cdot b + a \cdot c$.
@@ -195,7 +206,7 @@ An algebraic expression is considered completely simplified if\ldots
 	\item Numerical expressions have been evaluated
 	\item Redundant negative signs have been rewritten
 	\item Terms have been arranged in order of decreasing degree, with coefficients written first
-	\item It contains no explicit grouping symbols
+	\item Grouping symbols have been eliminated (whenever possible)
 	\item Different variable terms appear at most once
 \end{enumerate}
 \end{boxcrit}
@@ -208,7 +219,7 @@ Criteria \#3 is just a bit of cosmetics. We say that the \gls{degree of a term} 
 \[2x + 3x^4 + 7 - 6x^3 - 18x^2\]
 it's often nicer to write:
 \[3x^4 - 6x^3 - 18x^2 + 2x + 7\]
-Note that when there's a variable with no exponent written, as in the $2x$ here, we think of it has having a ``phantom 1'' in the exponent: $2x = 2x^1$. Also note that the term $7$ has no variable part at all. In this case, we picture a different kind of ``phantom 1'': $7 = 7 \cdot 1 = 7x^0$. If we make these substitutions, we can really see how the terms are arranged by degree:
+Note that when there's a variable with no exponent written, as in the $2x$ here, we think of it as having a ``phantom 1'' in the exponent: $2x = 2x^1$. Also note that the term $7$ has no variable part at all. In this case, we picture a different kind of ``phantom 1'': $7 = 7 \cdot 1 = 7x^0$. If we make these substitutions, we can really see how the terms are arranged by degree:
 \[3x^4 - 6x^3 - 18x^2 + 2x^1 + 7x^0\]
 Also note that this criteria asks us to write the coefficients first. So, $2x$ is preferred over $x2$. This is, primarily, because it might be tricky to tell the difference between $x2$ and $x^2$. It would be especially confusing in a term has both a coefficient and an exponent: $x^43$ looks a bit too much like $x^{43}$, whereas $3x^4$ is much clearer.
 
@@ -261,7 +272,7 @@ Again here, we get a term $\umin5\cdot\umin9 = 45$. Changing to all-addition bef
 \begin{boxex}
 Simplify: $2x-(x-4)$
 
-\exsoln\ This one is subtle and sneaky! The negative sign is stuck on the parentheses, which means we'll have to ``distribute the negative sign'' or -- more accurately -- we again have an implied operation, hiding in there as a ``phantom one''. This expression is the same as $2x-1(x-4)$.
+\exsoln\ This one is subtle and sneaky! The negative sign is stuck on the parentheses, which means we'll have to ``distribute the negative sign'' or -- more accurately -- we again have an implied operation hiding in there as a ``phantom one''. This expression is the same as $2x-1(x-4)$.
 
 Observe:
 \[\begin{aligned}
@@ -277,7 +288,7 @@ Observe:
 =&~ x + 4
 && \quad \text{rewrite to hide the ``phantom one''}\\
 \end{aligned}\]
-Did you try this problem on your own before reading the solution? Did you get $x-4$? If so, don't be too upset: you're in good company. This is one of the most common mistakes in Algebra 1. Always be on the looking when you see the distributive property mixed up with subtraction and negative signs.
+Did you try this problem on your own before reading the solution? Did you get $x-4$? If so, don't be too upset: you're in good company. This is one of the most common mistakes in Algebra 1. Always be on the lookout when you see the distributive property mixed up with subtraction and negative signs.
 \end{boxex}
 
 \subsection{Combining like terms}
@@ -297,15 +308,15 @@ Take a moment to sort the following mathematical objects into different groups, 
 One way to sort the terms above is to group \gls{like terms} together. Like terms have the same variable factors raised to the same powers. For example, $17x$ and $4x$ are like terms. Also, $x^2$ and $-4x^2$ are like terms. But, $17x$ and $11z$ are \textit{not} like terms since they have different variable parts. Though it may seem confusing at first, $x$ and $x^2$ are \textit{not} like terms. They both have $x$'s, but those $x$'s are raised to different powers.
 
 \begin{boxex}[Explaining the startup exploration]
-The terms in the startup exploration can be grouped using many different schemes. The categorization below is based on concept of grouping ``like terms'' together.
+The terms in the startup exploration can be grouped using many different schemes. The categorization below is based on the concept of grouping ``like terms'' together.
 \begin{itemize}
 	\item Terms with no variable: $-3$ and $8$
 	\item Terms with $x$ as the variable: $x$, $4x$, and $17x$
 	\item Terms with $x^2$ as the variable: $x^2$, $3x^2$, and $-4x^2$
 	\item Terms with $y$ as the variable: $-y$, $4y$, and $-6y$
-	\item Terms with $z$ as the variable: $-15z$, and $11z$
+	\item Terms with $z$ as the variable: $-15z$ and $11z$
 	\item Terms with $xy$ as the variable: $2xy$
-	\item Terms with $x^2y$ as the variable: $-2x^2y$, and $8x^2y$
+	\item Terms with $x^2y$ as the variable: $-2x^2y$ and $8x^2y$
 	\item Terms with $xy^2$ as the variable: $0.5xy^2$, $xy^2$, and $4xy^2$
 	\item Terms with $xyz$ as the variable: $xyz$ and $3xyz$
 \end{itemize}
@@ -316,16 +327,29 @@ Just as 3 goats and 2 goats combine to make 5 goats, so too do $3x$ and $2x$ com
 
 The expression $3xy^2 + 3x^2y + 3x^2y^2$ is simplified, since the variables and their corresponding powers do not match (look closely!).
 
-The process of uniting like terms under a single coefficient is called \gls{combining like terms}.\footnote{Also sometimes called ``collecting'' like terms, or ``gathering'' like terms, and sometimes abbreviated ``CLT''.} This is not technically a property in itself, but a ``shortcut'' for a somewhat longer chain of events:
-\[\begin{aligned}
-	&~ 3x + 2x\\
-=	&~ x(3 + 2)
-&& \quad \text{the distributive property, in reverse}\\
-=	&~ x(5)
-&& \quad \text{substitution}\\
-=	&~ 5x
-&& \quad \text{commutative property of multiplcation}\\
-\end{aligned}\]
+The process of uniting like terms under a single coefficient is called \gls{combining like terms}.\footnote{Also sometimes called \textit{collecting like terms}, or \textit{gathering like terms}, and sometimes abbreviated \textit{CLT}.} This is not technically a property in itself, but a ``shortcut'' for a somewhat longer chain of events:
+\begin{commwork}
+3x+2x &=& x(3+2)
+& the distributive property, in reverse
+\\
+&=& x(5)
+& substitution
+\\
+&=& 5x
+& commutative property of multiplication
+\end{commwork}
+
+\addtodoitem{Change commented work in this chapter to the commwork format.}
+
+%\[\begin{aligned}
+%	&~ 3x + 2x\\
+%=	&~ x(3 + 2)
+%&& \quad \text{the distributive property, in reverse}\\
+%=	&~ x(5)
+%&& \quad \text{substitution}\\
+%=	&~ 5x
+%&& \quad \text{commutative property of multiplcation}\\
+%\end{aligned}\]
 
 At first, it's best to commute the terms and group them up. Then we can add up the coefficients of the like terms. We'll see this approach, and a shortcut, in the examples below.
 
@@ -353,7 +377,7 @@ Simplify $3x-4y+2-5x+7y-6+8y$
 
 If we look at the given expression, we see that there are three ``types'' of terms that need combining: terms with $x$, terms with $y$ and constant terms (numbers).
 
-Let's pick a type of term (let's choose ones with $x$) and group them up -- signs and all! In the given expression, we have $3x-5x$, to we have $\umin2x$ in all.
+Let's pick a type of term (let's choose ones with $x$) and group them up -- signs and all! In the given expression, we have $3x-5x$, so we have $\umin2x$ in all.
 
 Pick another type of term and repeat as necessary! If we look at the $y$ terms, we have $-4y+7y+8y$ so that's $11y$ in all. Looking at the constant terms, we have $2-6 = \umin4$.
 
@@ -489,20 +513,24 @@ In \cref{sec:equivalence} we used the field axioms to simplify individual algebr
 
 An equation states that the two pans of a balance (the expressions on either side of the equal sign) are in alignment. If we were to, say, add five to the expression on one side of the equation, then we would tip the scales out of balance\ldots\ unless we also add five to the expression on other side of the equation.
 
-This idea, and others like it, are captured mathematically is a set of rules called the Properties of Equality, or POEs for short.
+This idea, and others like it, are captured mathematically in a set of rules called the \textit{properties of equality}, or \textit{POEs} for short.
 
 \begin{boxdef2col}[Properties of equality: Addition and subtraction]
-The \gls{addition property of equality} (APOE) states that for all real numbers $a$, $b$, and $c$ \[\text{if } a = b \text{, then } a + c = b + c\]
+\raggedright % based on Tyson's suggestion
+The \gls{addition property of equality} (APOE) states that for all real numbers $a$, $b$, and $c$ \[\text{if } a = b \text{, then } a + c = b + c.\]
 \tcblower
-The \gls{subtraction property of equality} (SPOE) states that for all real numbers $a$, $b$, and $c$\[\text{if } a = b \text{, then } a - c = b - c\]
+\raggedright % based on Tyson's suggestion
+The \gls{subtraction property of equality} (SPOE) states that for all real numbers $a$, $b$, and $c$\[\text{if } a = b \text{, then } a - c = b - c.\]
 \end{boxdef2col}
 
 Note that since ``subtraction'' is the same as ``addition of the opposite'', SPOE is really just APOE in disguise.
 
 \begin{boxdef2col}[Properties of equality: Multiplication and division]
-The \gls{multiplication property of equality} (MPOE) states that for all real numbers $a$, $b$, and $c$, where $c\neq 0$ \[\text{if } a = b \text{, then } a \cdot c = b \cdot c\]
+\raggedright % based on Tyson's suggestion
+The \gls{multiplication property of equality} (MPOE) states that for all real numbers $a$, $b$, and $c$, where $c\neq 0$ \[\text{if } a = b \text{, then } a \cdot c = b \cdot c.\]
 \tcblower
-The \gls{division property of equality} (DPOE) states that for all real numbers $a$, $b$, and $c$, where $c\neq 0$ \[\text{if } a = b \text{, then } \frac{a}{c} = \frac{b}{c}\]
+\raggedright % based on Tyson's suggestion
+The \gls{division property of equality} (DPOE) states that for all real numbers $a$, $b$, and $c$, where $c\neq 0$ \[\text{if } a = b \text{, then } \frac{a}{c} = \frac{b}{c}.\]
 \end{boxdef2col}
 
 Here again, note that since ``division'' is the same as ``multiplication by the reciprocal'', DPOE is really just MPOE in disguise. Note too that $c$ must not equal 0 when using these rules. Using 0 with DPOE must certainly be avoided, lest we be flummoxed upon division by zero.\footnote{Why must we be cautious about multiplying both sides of an equation by zero? In the end we'll get $0=0$, which is a true statement. What's the problem? Note that multiplication by 0 is \textit{irreversible}. If we multiply by 2 (or any nonzero number) we can reverse or ``undo'' this operation by dividing by 2. But, since division by 0 is not allowed, we cannot undo multiplication by 0. Later, we will see that irreversible operations can lead us to ``fake'' solutions to our equations, so-called \textit{extraneous solutions}.}
@@ -513,15 +541,26 @@ Let's use the properties of equality to solve the problem of Bob's cheese balanc
 Bob put a block of edam cheese and three wheels of gouda on one side of a two-pan balance. On the other pan he put seven wheels of gouda. He discovered that the scale was in perfect balance. If all of the wheels of gouda are identical in weight, how many wheels will balance the block of edam?
 
 \exsoln\ Let $B$ represent the weight of the block of edam. Then, the given information suggests the equation $B + 3 = 7$. We want to isolate $B$.
-\[\begin{aligned}
-B + 3 & = 7\\
-B + 3 {\color{red} \,-\,3} & = 7 {\color{red} \,-\,3}
-&&\text{\quad SPOE: subtract 3 from both sides of the equation}\\
-B & = 4
-\end{aligned}\]
+\begin{commwork}
+B + 3 &=& 7
+\\
+B + 3 {\color{red} \,-\,3} &=& 7 {\color{red} \,-\,3}
+& SPOE: subtract 3 from both sides of the equation
+\\
+B &=& 4
+\end{commwork}
+
+%\[\begin{aligned}
+%B + 3 & = 7\\
+%B + 3 {\color{red} \,-\,3} & = 7 {\color{red} \,-\,3}
+%&&\text{\quad SPOE: subtract 3 from both sides of the equation}\\
+%B & = 4
+%\end{aligned}\]
 \end{boxex}
 
-Note that in our work above, we started out by defining what variable we would use to represent our unknown. Then, we wrote an equation based on the information given in the problem. Our goal was to get $B$ by itself on one side of the equation, or to \textit{isolate $B$}. Since 3 had been added to $B$, we had to ``undo'' this. So, we subtracted 3 from both sides using SPOE.
+Note that in our solution above, we started out by defining what variable we would use to represent our unknown. Then, we wrote an equation based on the information given in the problem.
+
+Our goal was to \textit{isolate $B$} or to get $B$ by itself on one side of the equation. Since 3 had been added to $B$, we had to ``undo'' this. So, we subtracted 3 from both sides using SPOE. We showed our work going down the page, one step at a time. The individual equations were aligned at the equal sign for clarity.
 
 \begin{boxdef}[Inverse operations (a.k.a. opposite operations)]
 Operations that will ``undo'' one another. For example, addition and subtraction are inverse operations. Multiplication and division are inverse operations.
