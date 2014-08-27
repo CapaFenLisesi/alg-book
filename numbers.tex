@@ -3,9 +3,9 @@
 
 \chapquote{God made the integers, all the rest is the work of man.}{Leopold Kronecker\\German mathematician}
 
-The number system that we use every day, both in mathematics class and in our regular lives, developed over many generations. Men and women from all over the world, both famous and anonymous, have helped to make mathematics what it is today. Yet, people argue over whether mathematical ideas are ``invented'' or ``discovered''.
+The number system that we use every day, both in mathematics class and in our regular lives, developed over many generations. Men and women from all over the world, both famous and anonymous, have helped to make mathematics what it is today.
 
-For example: \glspl{imaginary number} (which we will discuss briefly in Algebra 1, and study in more detail in Algebra 2), first appeared on the mathematical scene in the 1500s. Italian mathematician Gerolamo Cardano first wrote about these new numbers in his work with certain types of problems that otherwise would have been impossible to solve. Since he was one of the first people to describe this new kind of number, we might say that Cardano \textit{invented} imaginary numbers.
+People argue over whether mathematical ideas are ``invented'' or ``discovered''. For example: \glspl{imaginary number} (which we will discuss briefly in Algebra 1, and study in more detail in Algebra 2), first appeared on the mathematical scene in the 1500s. Italian mathematician Gerolamo Cardano wrote about these new numbers in his work with certain types of problems that otherwise would have been impossible to solve. Since he was one of the first people to describe this new kind of number, we might say that Cardano \textit{invented} imaginary numbers.
 
 But, we now know that imaginary numbers have practical applications in, for example, electrical engineering. The laws of electromagnetism haven't changed since the 1500s. (Well, our understanding of the laws has changed, but the physics has not.) So, maybe imaginary numbers have been there all along, lurking within the fabric of the universe. In this case, Cardano \textit{discovered} imaginary numbers.
 
@@ -22,13 +22,13 @@ It's not clear which is the more accurate description. No matter what side of th
 %%%
 
 \begin{story}
-Once upon a time, there was a simple farmer. Knut Krumbli lived in rural Sweden, raising goats and making goat cheese. He and his family led an uncomplicated life and they didn't have much need for mathematics. In fact, they really only needed numbers to count their goats: 1 goat, 2 goats, 3 goats, 4 goats\ldots
+Once upon a time, there was a simple farmer. Knut Krumbli lived in rural Sweden, raising goats and making goat cheese. He and his family led an uncomplicated life, and they didn't have much need for mathematics. In fact, they really only needed numbers to count their goats: 1 goat, 2 goats, 3 goats, 4 goats\ldots
 
 But one day, after a terrible storm, Knut went to the field to count the goats and discovered, much to his dismay, that there were no goats to count. He hadn't needed a number to describe this situation before, but now people were asking him hard questions, like ``How many of your goats made it through that crazy storm?'' (But, you know, in Swedish.)
 
-Knut and his family couldn't very well survive without any goats, so he went to his neighbor for help. The neighbor agreed to loan Knut some goats to restart his herd but, of course, Knut would have to repay his goat-debt later. The village hadn't needed to do much accounting before the storm, but now they needed a system of numbers that could keep track of debts and credits.
+Knut and his family couldn't very well survive without any goats, so he went to his neighbor for help. The neighbor agreed to loan Knut some goats to restart his herd, but, of course, Knut would have to repay his goat-debt later. The village hadn't needed to do much accounting before the storm, but now they needed a system of numbers that could keep track of debts and credits.
 
-Over time, Knut's family got back on their feet and thrived. They paid back their debts and eventually grew to raise more goats (and to make more goat cheese) than they could eat. They began to trade with their neighbors for other goods or services. Of course, everything had relative value: three wheels of goat cheese were worth two bales of hay. So, the village developed a system of numbers for describing exchange rates of this kind.
+Over time, Knut's family got back on their feet and thrived. They paid back their debts and eventually grew to raise more goats and to make more goat cheese than they could eat. They began to trade with their neighbors for other goods or services. Of course, everything had relative value: three wheels of goat cheese were worth two bales of hay. So, the village developed a system of numbers for describing exchange rates of this kind.
 
 As the village grew, Knut's family farm led the development of a booming goat cheese industry. They invested their profits into bank accounts that paid interest. In certain situations, everyone was surprised to discover, interest-bearing accounts led to a new system of numbers that no one had seen before.
 
@@ -87,7 +87,8 @@ But, other numbers exist. Yes, the rational numbers include all of the terminati
 A number that cannot be expressed as the ratio of two integers. In decimal form, an irrational number never terminates and never repeats.
 \end{boxdef}
 
-You have likely encountered irrational numbers before. A famous example is the number $\pi$ (pi), which shows up when we study circles. We usually approximate $\pi$ to be about $3.14$, but in fact the decimal representation of $\pi$ goes on forever without stopping or repeating: \[\pi \approx 3. \, 1415926535 ~ 8979323846 ~ 2643383279 ~ 502884197 ~ 6939937510 ~ 5820974944 ~ 5923078164\ldots\]
+You have likely encountered irrational numbers before. A famous example is the number $\pi$ (pi), which shows up when we study circles. We usually approximate $\pi$ to be about $3.14$, but in fact the decimal representation of $\pi$ goes on forever without stopping or repeating.\footnote{We use the symbol $\approx$ to mean ``is approximately equal to''. We write $\pi\approx3.14$ and not $\pi=3.14$, because 3.14 is only an approximation of $\pi$, not its exact value.}
+\[\pi \approx 3. 141\,592\,653\,589\,793\,238\,462\,643\,383\,279\,502\,884\,197\,693\,993\,751\,058\,209\,749\,445\,923\,078\,164\ldots\]
 
 When we group together all of the rational numbers and all of the irrational numbers, we will have accounted for all possible decimal representations. This combined set of numbers, called the \glspl{real number}, is going to be of key importance to us in Algebra 1.
 
@@ -129,14 +130,12 @@ The absolute value of a number $x$ is its distance away from zero on the number 
 For those who like memory aids, it may be helpful to think of the absolute value bars as a little numerical shower stall or car wash: a number goes in and all its negativity gets washed away.
 
 \begin{boxex}
-Compute each of the following.
-
 \begin{enumerate}[itemsep=10pt]
 \item \onerowex{$\abs{4}$}{The absolute value of a positive number is just the original number, so $\abs{4}=4$.}
 
 \item \onerowex{$\abs{\umin8}$}{Absolute value ignores the sign and tells us how far a number is from zero. $\umin8$ is eight units away from zero, so $\abs{\umin8} = 8.$}
 
-\item \onerowex{$\umin\abs{\umin6}$}{The absolute value bars only apply to what's inside, but then this negative sign \textit{outside} the absolute value bars will make the final answer negative again! So, $\umin\abs{\umin6} = \umin6$.}
+\item \onerowex{$\umin\abs{\umin6}$}{The absolute value bars only apply to what's inside, but then this negative sign \textit{outside} the absolute value bars will make the final answer negative again! So, $\umin\abs{\umin6} = \umin6$. Note that $\umin\abs{6}$ would also be $\umin6$.}
 \end{enumerate}
 \end{boxex}
 
@@ -205,7 +204,7 @@ Compute each of the following.
 \subsection{Subtracting signed numbers}
 \index{subtraction!of signed numbers}
 
-Addition and subtraction are called \textit{opposite} (or \textit{inverse}) \textit{operations} because they ``undo'' one another. The act of adding 5 of matter can be ``undone'' by subtracting 5 units of matter. But on the other hand, the act of adding 5 units of matter can also be undone by \textit{adding 5 units of antimatter}.
+Addition and subtraction are called \textit{opposite} (or \textit{inverse}) \textit{operations} because they ``undo'' one another. The act of adding 5 of matter can be ``undone'' by subtracting 5 units of matter. On the other hand, the act of adding 5 units of matter can also be undone by \textit{adding 5 units of antimatter}.
 
 \begin{boxdef}[Subtracting signed numbers]
 \textit{Subtracting a number} is the same as \textit{adding the opposite of the number}.
@@ -247,12 +246,16 @@ Recall from your elementary school days that one way to think about whole number
 
 Using this interpretation, we can easily explain the product of a positive number and a negative number. The expression $4\cdot\umin8$ means ``four groups of negative eight'': $4 \cdot \umin8 = \umin8 + \umin8 + \umin8 + \umin8 = \umin32$. No problem!
 
-But what about $\umin5 \cdot 6$? What does it mean to have ``negative five groups of six''? Or even worse, what about $\umin3 \cdot \umin7$, ``negative three groups of negative seven''? Rather than try to twist the metaphor to fit these new situations, let's just admit that multiplication can not \textit{always} be represented by repeated addition.\footnote{The ``multiplication as repeated addition'' analogy breaks down when we have a negative number of groups, but also for rational and irrational numbers. What's the repeated addition problem for $\frac{2}{3} \cdot \frac{1}{2}$, or for $\sqrt{2} \cdot \sqrt{3}?$}
+But what about $\umin5 \cdot 6$? What does it mean to have ``negative five groups of six''? Or even worse, what about $\umin3 \cdot \umin7$, ``negative three groups of negative seven''? Rather than try to twist the metaphor to fit these new situations, let's just admit that multiplication cannot \textit{always} be represented by repeated addition.\footnote{The ``multiplication as repeated addition'' analogy breaks down when we have a negative number of groups, but also for rational and irrational numbers. What's the repeated addition problem for $\frac{2}{3} \cdot \frac{1}{2}$, or for $\sqrt{2} \cdot \sqrt{3}?$}
 
 For the moment, we'll simply state the rules for multiplying (and dividing) signed numbers. We can explain why these rules work using the so-called ``field axioms for the real numbers''. More on that in \cref{ch:equations}.
 
-\begin{boxdef}[Multiplying and dividing signed numbers]
-The absolute value of the product of two numbers is the product of their absolute values: $\abs{a \cdot b} = \abs{a} \cdot \abs{b}$. If the two numbers have the same sign, then the product is positive. If the two numbers have opposite signs, then the product is negative.
+\begin{boxdef}[Multiplying (and dividing) signed numbers]
+When multiplying signed numbers, we determine the magnitude and sign of the product separately. (The same procedure applies when dividing.)
+
+The absolute value of the product of two numbers is the product of their absolute values: $\abs{a \cdot b} = \abs{a} \cdot \abs{b}$. This gives us the magnitude of the product (or quotient).
+
+To determine the sign, we compare the signs of the numbers we are given. If the two numbers have the same sign, then the answer is positive. If the two numbers have opposite signs, then the answer is negative.
 \end{boxdef}
 
 There are several clever ways to remember this rule. Some people remember that every pair of negatives in a product cancel one another. Other people use a triangle with one positive sign and two negative signs drawn on the vertices. We present another way of looking at it in the next section. Choose whichever mnemonic\footnote{mnemonic ($na \cdot MON \cdot ic$, the first ``m'' is silent): A learning aid that helps to remember or retain information.} method is most helpful to you!
@@ -264,7 +267,6 @@ Karma, an underlying concept of many Eastern religions, is the belief that a per
 So, karma suggests that good things happen to good people, and that bad things happen to bad people. Of course we know that the universe does not always operate in accordance with karma.
 
 \begin{boxdef}[Karmic multiplication]
-\centering
 When good things happen to good people, that's good!
 \\
 When bad things happen to good people, that's bad!
@@ -294,7 +296,7 @@ Compute each of the following:
 \end{enumerate}
 \end{boxex}
 
-Note: When multiplying (or dividing) more than two numbers, we can approach things in two different ways. We might simplify the product two factors at a time, and keep track of the sign as we go. Or, we could treat the signs as a separate problem: first multiply all of the absolute values, then go back and count up the negative signs. %Suppose we count a total of 3 negative signs? Will our answer be positive or negative? What about if we could up 8 negative signs? Why?
+Note: When multiplying (or dividing) more than two numbers, we can approach things in two different ways. We might simplify the product two factors at a time and keep track of the sign as we go. Or, we could treat the signs as a separate problem: first multiply all of the absolute values, then go back and count up the negative signs. %Suppose we count a total of 3 negative signs? Will our answer be positive or negative? What about if we could up 8 negative signs? Why?
 
 \begin{boxex}
 Multiply: $(2)(\umin2)(1)(\umin2)(\umin2)(1)(1)(\umin2)(\umin1)(2)$
@@ -323,7 +325,7 @@ In each of the expressions below, $a$ and $b$ are rational numbers where $0 < a 
 &
 (c)\quad $a \cdot b$
 &
-(d)\quad $x \div (\umin y)$
+(d)\quad $a \div b$
 \end{tabularx}
 \end{boxexplore}
 
@@ -337,10 +339,10 @@ A \gls{vinculum} (plural: vincula) is a horizontal bar used in mathematics to sh
 Vincula are used in other contexts as well. For example, we use a vinculum to represent a repeating decimal such as $0.\overline{3}$.
 \end{boxdef}
 
-With that definition in mind, we can continue with two of the most daunting words in elementary mathematics. You're definitely not alone if you have ever been confused about these.
+With that definition in mind, we can continue with two of the most daunting words in elementary mathematics: \gls{numerator} and \gls{denominator}. You're definitely not alone if you have ever been confused about these.
 
 \begin{boxdef}[Numerator and denominator]
-In a fraction, the number above the vinculum is called the \gls{numerator} of the fraction, and the number below the vinculum is called the \gls{denominator} of the fraction.
+In a fraction, the number above the vinculum is called the \textit{numerator} of the fraction, and the number below the vinculum is called the \textit{denominator} of the fraction.
 
 For example in the number $\frac{5}{6}$, the numerator is 5 and the denominator is 6.
 \end{boxdef}
@@ -348,9 +350,9 @@ For example in the number $\frac{5}{6}$, the numerator is 5 and the denominator 
 %%% minipage to have fraction image inline with text
 \bigskip
 \begin{minipage}{0.66\textwidth}
-If we ask ``\textit{how many} sixths?'', the numerator tells us ``\textit{five} sixths''. The word numerator is related to the word ``number'', and the numerator counts the pieces.
+If we ask, ``\textit{How many} sixths?'' -- the numerator tells us ``\textit{five} sixths''. The word numerator is related to the word ``number'', and the numerator counts the pieces.
 
-If we ask ``five \textit{whats}?", the denominator tells us ``five \textit{sixths}''. The word denominator is related to the word ``nominate'' (as in ``to nominate someone for president'') which means ``to name''. The denominator \textit{names} the fraction.
+If we ask, ``Five \textit{whats}?" -- the denominator tells us ``five \textit{sixths}''. The word denominator is related to the word ``nominate'' (as in ``to nominate someone for president'') which means ``to name''. The denominator \textit{names} the fraction.
 \end{minipage}
 %
 \begin{minipage}{0.33\textwidth}
@@ -463,9 +465,9 @@ Note that all of the factors cancel out in the denominator. A common mistake at 
 \index{addition!of rational numbers}
 \index{subtraction!of rational numbers}
 
-Knut Krumbli would tell you that brining together a herd of 8 goats and a herd of 11 goats results in a herd of 19 goats. It's goat herding, not rocket science.
+Knut Krumbli would tell you that bringing together a herd of 8 goats and a herd of 11 goats results in a herd of 19 goats. It's goat herding, not rocket science.
 
-But, combining a herd of 4 goats and a flock of 13 sheep doesn't really give us 17 of anything until we can find some shared characteristic that is common to both groups. For instance, we could say we have a group of ``17 mammals'', or ``17 quadrupeds''.
+But, combining a herd of 4 goats and a flock of 13 sheep doesn't really give us 17 of anything until we can find some shared characteristic that is common to both groups. For instance, we could say we have a group of ``17 mammals'' or ``17 quadrupeds''.
 
 So it goes with fractions. When our fractions have a shared name (a common denominator) we can total up how many things we have with that name: 8 thirds and 11 thirds makes 19 thirds. In math symbols, we write
 \[\frac{8}{3} + \frac{11}{3} = \frac{19}{3}\]
@@ -496,7 +498,7 @@ Where should we put the negative sign when we have a negative fraction? Does it 
 \[ -\frac{3}{4} \qquad \frac{-3}{4} \qquad \frac{3}{-4}\]
 A fraction is a way of writing a division problem. If Knut's four children share three bowls of lingonberries equally, then each child will get $3\div4 = \frac{3}{4}$ of a bowl of berries.\footnote{Lingonberries are a popular fruit in Scandinavia and throughout northern, central, and eastern Europe. The berries are quite tart, and so they are usually mixed with sugar and preserved as jam or compote. In Sweden and Norway, reindeer is traditionally served with gravy and lingonberry sauce. Yes, Scandinavians eat reindeer.} The fraction $\frac{3}{4}$ is just another way of writing $3 \div 4$. So, all three of the fractions above have the same value.
 
-In the first example, the whole fraction has been negated. In the second and third examples, the numbers have opposite signs and so the quotient will be negative. In other words it actually doesn't matter where we put the negative sign. We can put it where it is most convenient for the problem (very often, that's in the numerator of the fraction).
+In the first example, the whole fraction has been negated. In the second and third examples, the numbers have opposite signs and so the quotient will be negative. In other words it actually doesn't matter where we put the negative sign. We can put it where it is most convenient for the problem. Very often, that's in the numerator of the fraction.
 
 \subsubsection{Mixed numbers}
 
@@ -506,7 +508,7 @@ Improper fractions have a numerator that is greater than or equal (in absolute v
 Simplified \glspl{improper fraction} are preferred over \glspl{mixed number} and decimals. Only convert to a mixed number or decimal when the context (or the directions) require it.
 \end{boxcrit}
 
-We usually prefer exact fraction answers over decimal approximations. Writing the decimal $\frac{10}{7}$, for instance, is much preferred over $1.43$, and better even than the exact answer $1.\overline{428571}$ (yep, that's a big chuck o' repeating decimal).
+We usually prefer exact fraction answers over decimal approximations. Writing the decimal $\frac{10}{7}$, for instance, is much preferred over $1.43$, and it's better even than the exact answer $1.\overline{428571}$ (yep, that's a big chuck o' repeating decimal).
 
 But, be sure to read questions carefully! There are exceptions to these rules. When working in a real-world context, a certain number format may make more sense. For example, when solving a problem about money, the answer \$3.50 makes a lot more sense than $\$\frac{7}{2}$. Likewise, the answer ``$1\frac{1}{3}$~pounds of cheese'' is better than ``$\frac{4}{3}$~pounds of cheese''. In ambiguous cases, we will make it clear what number format is preferred.
 
@@ -594,13 +596,13 @@ Let's think about this last answer for a second: does it makes sense? Look again
 
 As if fractions on their own weren't enough, you may soon face the \gls{turducken}\footnote{A ``turducken'' is a food product where a deboned chicken is stuffed inside a deboned duck, which is then stuffed inside a deboned turkey. In culinary terminology, this is an example of ``engastration'', a cooking method in which one animal is stuffed inside the gastric cavity of another\ldots\ which is probably yet another phenomenon that you didn't know had a name.} of arithmetic, the dreaded ``fraction in a fraction''. Note that a fraction-in-a-fraction would not be considered simplified since the criteria state that the numerator and denominator must be \textit{integers}.
 
-These creatures can look hard to handle, but don't be intimidated. Recall that a fraction is just a division problem. So, we can rewrite things using a division sign and divide as usual.\footnote{The fancy mathematical name for the $\div$ symbol is \gls{obelus} (plural: obeli)\ldots\ another thing that you probably didn't know had a name).}
+These creatures can look hard to handle, but don't be intimidated. Recall that a fraction is just a division problem. So, we can rewrite things using a division sign and divide as usual.\footnote{The fancy mathematical name for the $\div$ symbol is \gls{obelus} (plural: obeli)\ldots\ another thing that you probably didn't know had a name.}
 
 \begin{boxex}
 Simplify each of the following:
 
 \begin{enumerate}[itemsep=10pt]
-\item \onerowex{$\dfrac{~~4~~}{\left( \frac{1}{3} \right)}$}{All we have to do is rewrite the fraction-in-a-fraction as ``numerator $\div$ denominator'', and then divide as usual. \[\dfrac{~~4~~}{\left( \frac{1}{3} \right)} = 4 \div \dfrac{1}{3} = 4 \cdot \dfrac{3}{1} = 4 \cdot 3 = 12\]}
+\item \onerowex{$\dfrac{~~4~~}{\left( \frac{1}{3} \right)}$}{All we have to do is rewrite the fraction-in-a-fraction as ``numerator $\div$ denominator'', and then divide as usual. \[\dfrac{~~4~~}{\left( \frac{1}{3} \right)} = 4 \div \dfrac{1}{3} = \frac{4}{1} \div \frac{1}{3}= \frac{4}{1} \cdot \dfrac{3}{1} = 4 \cdot 3 = 12\]}
 
 \item \onerowex{$\dfrac{~~\left( \frac{2}{5} \right)~~}{\left( 1\frac{3}{8} \right)}$}{Here we rewrite using the obelus, then convert to improper fractions, then divide! \[\dfrac{~~\left( \frac{2}{5} \right)~~}{\left( 1\frac{3}{8} \right)} = \dfrac{2}{5} \div 1\dfrac{3}{8} = \dfrac{2}{5} \div \dfrac{11}{8} =\dfrac{2}{5} \cdot \dfrac{8}{11} = \dfrac{16}{55}\]}
 \end{enumerate}
@@ -657,7 +659,7 @@ When simplifying an expression, we evaluate things in the following order:\footn
 
 \item[Then:] Multiplication and division. Recall that dividing is the same as ``multiplying by the reciprocal''. So, these two operations have the same priority and we work from left to right.
 
-\item[Finally:] Addition and subtraction. Recall that ``subtracting'' is the same as ``adding the opposite''. So, these two operations have the same priority and we work from left to right.
+\item[Finally:] Addition and subtraction. Recall that ``subtracting'' is the same as ``adding the opposite''. So, these two operations have the same priority, and we work from left to right.
 \end{description}
 \end{boxdef}
 
@@ -695,7 +697,7 @@ Notice how we showed the work going down the page, simplifying the problem one s
 
 %\addtodoitem{Criteria for showing work.}
 
-The work we show is the road map to our solution. Whoever reads over our work must be able to follow and understand our steps, without having to make any assumptions about what we actually did to reach our answer. It's a bad habit to skip steps, and it's no help to people reading your work to claim that we did a step in our head. Every step we take needs to be written down clearly and neatly.
+The work we show is the road map to our solution. Whoever reads over our work must be able to follow and understand our steps, without having to make any assumptions about what we actually did to reach our answer. It's a bad habit to skip steps, and it's no help to people reading our work to claim that we did a step in our head. Every step we take needs to be written down clearly and neatly.
 
 \begin{boxwarn}[Abuse of the equal sign]
 Consider the following work, written out by a student to simplify $8 \cdot 4 + 10$ \[8 \cdot 4 = 32 + 10 = 42 \qquad\text{OK or not OK?}\]
@@ -770,7 +772,7 @@ Simplify: $\left( \dfrac{120-(24-5^2)}{7^2 \cdot 400 \div 6^3} \right)^0$
 
 \exsoln If we go on ``auto-pilot'' we might follow all of the simplification rules, work from the inside to the outside, simplify the numerator, simplify the denominator\ldots
 
-But, the expression is raised to the power 0. So the answer is probably 1! We must check that we don't have $0^0$, but we can use a little number sense to do a quick check of the numerator in the fraction, and see that it will not equal zero. (Can you see why, without having to work it all out?)
+But, the expression is raised to the power 0. So the answer is probably 1! We must check that we don't have $0^0$, but we can use a little number sense to do a quick check of the numerator in the fraction, and see that it will not equal zero. (Can you see why without having to work it all out?)
 
 We must also check that the denominator is not zero. A quick check there shows that it is not zero either. (Can you see why?) So, this one's easy:
 \[\left( \frac{120-(24-5^2)}{7^2 \cdot 400 \div 6^3} \right)^0 = 1\]
@@ -797,7 +799,7 @@ Keep this last example in mind when writing your own expressions, as well. Our n
 \subsubsection{One of the trickiest concepts in Algebra 1}
 
 What is the difference between the following three expressions? \[(\umin3)^2 \qquad \umin(3^2) \qquad \umin3^2\]
-Tricky, right? This is an important difference that will come back over and over again, and will look a little different every time.
+Tricky, right? This is an important difference that will come back over and over again, and it will look a little different every time.
 
 In the first case, the parentheses make it clear: $(\umin3)^2$ means ``raise negative three to the second power''.
 \[(\umin3)^2 = \umin3 \cdot \umin3 = 9\]
