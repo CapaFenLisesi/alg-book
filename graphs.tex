@@ -3,7 +3,7 @@
 
 \chapquote{There is a magic in graphs. The profile of a curve reveals in a flash a whole situation -- the life history of an epidemic, a panic, or an era of prosperity. The curve informs the mind, awakens the imagination, convinces.}{Henry D. Hubbard\\US National Bureau of Standards}
 
-In \cref{ch:sequences} we investigated pictures patterns (fractals by Koch and Sierpi\'nski, and patterns of made of square tiles) and used those pictures to generate sequences of numbers. We begin this chapter with a discussion of another way to represent our sequences of numbers visually: by making a coordinate graph. Then, we will extend these ideas to create visual representations of other mathematical objects, and of scientific (and other) data.
+In \cref{ch:sequences} we investigated pictures patterns (fractals by Koch and Sierpi\'nski, and patterns made of square tiles) and used those pictures to generate sequences of numbers. We begin this chapter with a discussion of another way to represent our sequences of numbers visually: by making a coordinate graph. Then, we will extend these ideas to create visual representations of other mathematical objects, and of scientific (and other) data.
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \section{Coordinate graphing}
@@ -193,7 +193,7 @@ Find three natural numbers $x$, $y$, and $z$ which satisfy the equation $28x + 3
 In \cref{ch:numbers} we used the order of operations to simplify numeric expressions, which are made up of numbers and arithmetic operators. For example, \[3\cdot4-8(4^2-1)\] is a numeric expression. It contains only numbers and operators and, in the end, it simplifies down to a single number.\footnote{Spoiler alert: It's $-108$.} An \gls{algebraic expression} on the other hand can contain letters in addition to numbers and operators, for example \[3x - 5y + 18.\] These letters, called \glspl{variable}, stand in for numbers that we don't know or which may change.
 
 \begin{boxdef}[Variable]
-A representation of a value that can change. In algebra, variables are often represented by letters. We usually use letters from the Latin alphabet ($a, b, c, d,\dotsc$), but sometimes also use other symbols, such as letters from the Greek alphabet ($\alpha, \beta, \gamma, \delta, \dotsc$).
+A representation of a value that can change. In algebra, variables are often represented by letters. We usually use letters from the Latin alphabet ($a, b, c, d,\dotsc$), but we sometimes also use other symbols, such as letters from the Greek alphabet ($\alpha, \beta, \gamma, \delta, \dotsc$).
 \end{boxdef}
 
 \begin{boxdef}[Algebraic expression]
@@ -203,7 +203,7 @@ A symbolic representation of mathematical operations that can involve both numbe
 \subsection{Numbers and variables}
 
 In your mathematical career so far, you have probably worked with letters that stand in for numbers. Recall the formula for the circumference of a circle: \[C = \pi d.\]
-This formula explains the relationship between $d$, which stands in for the diameter of some circle, and $C$, which stands for the circumference of that circle. The letters $d$ and $C$ are variables. They stand in for numbers that can change, depending on which circle we're talking about.\footnote{Note that $\pi$ is \textit{not} a variable. We use a (Greek) letter in this case not because the value of $\pi$ might change, but because it's an irrational number that is impossible to write out in full. We often use letters to stand in for mathematical objects that are inconvenient, sometimes impossible, to write down in another way: $e$, $i$, $\phi$, and $\aleph_0$ each has special mathematical meaning.}
+This formula explains the relationship between $d$, which stands in for the diameter of some circle, and $C$, which stands for the circumference of that circle. The letters $d$ and $C$ are variables. They stand in for numbers that can change, depending on which circle we're talking about.\footnote{Note that $\pi$ is \textit{not} a variable. We use a (Greek) letter in this case not because the value of $\pi$ might change, but because it's an irrational number that is impossible to write out in full. We often use letters to stand in for mathematical objects that are inconvenient, sometimes impossible, to write down in another way: $e$, $i$, $\phi$, and $\aleph_0$ each has a special mathematical meaning.}
 
 Once we start to introduce letters into our expressions, we have to discuss some standard notation and terminology. As we have seen, we don't usually write any multiplication symbol when multiplying a number by a variable. Rather than writing $3\cdot x$ or $3(x)$, we can write $3x$ without anything in between.
 
@@ -305,7 +305,7 @@ x^2 - 5 & = \left(\tfrac{1}{2}\right)^2 - 5\\
 \end{enumerate}
 \end{boxex}
 
-Note how the parentheses help out when $x = \umin1$! Without those parentheses, we would have run the risk of making the most common mistake in Algebra 1: remember the difference between $(\umin1)^2$ and $\umin1^2$.
+Note how the parentheses help out when $x = \umin1$. Without those parentheses, we would have run the risk of making the most common mistake in Algebra 1! Remember the difference between $(\umin1)^2$ and $\umin1^2$.
 
 %%Speaking of parentheses: Remember that a graphing calculator will follow the order of operations. That means that we need to use the proper notation for our intentions. If our intent is to raise $\umin2$ to the fourth power, we had better not write $\umin2^4$ but rather write $(\umin2)^4$ with parentheses!
 
@@ -911,7 +911,7 @@ Straight lines are fine, but what if the graph shows curved lines? Consider this
 %\end{tikzpicture}
 %\end{figure}
 
-\begin{figure}
+\begin{center} %{figure}
 \begin{tikzpicture}[scale=1]
 	\draw[ultra thin, gray!25] (0,0) grid (6,6);
 	\draw[->,thick] (0,0) -- (6.5,0);
@@ -931,7 +931,7 @@ Straight lines are fine, but what if the graph shows curved lines? Consider this
 	%% graph
 	\draw[very thick, blue, domain=0:6] plot (\x,-0.444*\x*\x+2.667*\x);
 \end{tikzpicture}
-\end{figure}
+\end{center} %{figure}
 
 One way to get a feel for what's happening is to imagine leaning a ruler or pencil against the rounded edge of a soda can. Then picture the ruler rolling along the side of the can, and how the angle of the ruler will change as it rolls.
 
@@ -965,7 +965,7 @@ One way to get a feel for what's happening is to imagine leaning a ruler or penc
 
 Now picture a straight line rolling along the surface of the curved line in the graph above. The straight line approximates the curved line at the point where they touch.
 
-\begin{figure}
+\begin{center} %{figure}
 \begin{tikzpicture}[scale=0.7]
 	\draw[ultra thin, gray!25] (0,0) grid (6,6);
 	\draw[->,thick] (0,0) -- (6.5,0);
@@ -1029,15 +1029,15 @@ Now picture a straight line rolling along the surface of the curved line in the 
 	\draw[very thick, dashed, red, domain=0.75:4.25] plot (\x,0.444*\x+2.778);
 	\draw[red,fill=red] (2.5,3.889) circle[radius=0.1];
 \end{tikzpicture}
-\end{figure}
+\end{center} %{figure}
 
-Using the straight line, we can see that the submersible starts out diving at a fairly high rate. It gradually slows its rate of descent until it eventually stops diving. Then it gradually accelerates as it returns to the surface.\footnote{Believe it or not, this idea -- approximating a curved line with a straight line -- is one of the fundamental motivating ideas in calculus. As you work to interpret these curved graphs, you're growing your calculus brain, right here in Algebra 1. How cool is that?}
+We can see that the submersible starts out diving at a fairly high rate. It gradually slows its rate of descent until it eventually stops diving. Then it gradually accelerates as it returns to the surface.\footnote{Believe it or not, this idea -- approximating a curved line with a straight line -- is one of the fundamental motivating ideas in calculus. As you work to interpret these curved graphs, you're growing your calculus brain, right here in Algebra 1. How cool is that?}
 
 \subsection{Impossible situations}
 
 Consider this graph showing the submersible's depth over time. What's going on here?
 
-\begin{figure}
+\begin{center} %{figure}
 \begin{tikzpicture}[scale=1]
 	\draw[ultra thin, gray!50] (0,0) grid (6,6);
 	\draw[->,thick] (0,0) -- (6.5,0);
@@ -1062,9 +1062,9 @@ Consider this graph showing the submersible's depth over time. What's going on h
 	\draw[white,fill=green!60!black] (2,2) circle[radius=0.1];
 	\draw[white,fill=green!60!black] (2,3) circle[radius=0.1];
 \end{tikzpicture}
-\end{figure}
+\end{center} %{figure}
 
-This graph is a problem, given the context of ``depth of the submersible over time''. Consider this question: How deep it the submersible 30 minutes after launch?
+This graph is a problem, given the context of ``depth of the submersible over time''. Consider this question: How deep is the submersible 30 minutes after launch?
 
 According to the graph, the submersible is 100 feet deep\ldots\ and 200 feet deep\ldots\ \textit{and} 300 feet deep\ldots\ all at the same time! That's impossible!
 
@@ -1077,4 +1077,4 @@ Graphs like this -- where several $y$-values stack up vertically over the same $
 
 In this chapter we began with plotting points to create the graph of a sequence. Then, we built upon these ideas to create the graph of function. We then turned our attention from making graphs to understanding graphs that are given to us.
 
-These two skills -- creating a graph from a given rule, and extracting information from a given graph -- are both key mathematical skills that we will develop in this course. At the heart of both skills lies the connection between a function's rule and its graph. This connection, and more about the concept of a function, is the focus of the next chapter. Onward!
+These two skills -- creating a graph from a given rule, and extracting information from a given graph -- are both key mathematical skills that we will develop in this course. At the heart of both skills lies the connection between a function's rule and its graph. This connection, and more about the concept of a function, are discussed in the next chapter. Onward!

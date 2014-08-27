@@ -17,10 +17,13 @@ Given a few numbers that form a pattern, for example, we can use algebraic symbo
 \label{sec:recursion}
 
 \begin{boxexplore}[Communicating a pattern]
+As children, the twins Bob and Yeardleigh Krumbli (great-great-great-grandchildren of Knut and Jorunn) liked to play a kind of guessing game. One would think of a number pattern and try to communicate it to the other using as little information as possible.
+
 Predict the next few numbers in the number pattern shown below.
 \[2, 5, 8, 11, 14, 17, \dotsc\]
 How would you describe this pattern to a partner who could not see it? Could you communicate the pattern \textit{without simply listing the numbers}? What's the minimum amount of information you could give so that your partner could recreate the pattern?
 \end{boxexplore}
+\kverse{Bob and Yeardleigh play number guessing games as children.}
 
 Informally, we call this a number pattern. Mathematically speaking, an ordered list of numbers like this is called a \gls{sequence}. Each of the numbers in the list is called a \gls{term} of the sequence.
 
@@ -30,7 +33,7 @@ Sequences often have patterns within them. Perhaps when thinking about how you'd
 
 But ``add 3'' is not enough to recreate the sequence. Consider the sequence: $1, 4, 7, 10, 13, \dotsc$. And what about $\umin10, \umin7, \umin4, \umin1, 2, \dotsc$? The phrase ``add 3'' also applies to these sequences, even though they are different from the sequence in the startup exploration.
 
-To distinguish these different sequences, we must include the starting value in our description. We can describe the original sequence clearly and unambiguously by saying something like: ``Start with 2, then add 3 to the previous value.''
+To distinguish these different sequences, we must include the starting value in our description. We can describe the original sequence clearly and unambiguously by saying something like: ``Start with 2, then add 3 to each resulting value.''
 
 When describing the pattern of a sequence, we are really describing how to generate the sequence from scratch. To do that, we have to answer these two questions: First, where does the sequence begin? Second, what must we do to the \textit{current} term to find the \textit{next} term of the sequence? This is called the \gls{recursive} description of the sequence.
 
@@ -48,7 +51,7 @@ Fractal geometry is often called ``the geometry of nature''. If we look around t
 
 Clouds, coastlines, mountains, trees, 
 \href{https://www.google.com/search?q="romanesco+broccoli"&tbm=isch}{Romanesco broccoli}, 
-the folds of your brain, your vascular system, your bronchial tubes, the lining of your small intestines\ldots\ all of these are a kind of fractal.\footnote{In 1968, Hungarian biologist Aristid Lindenmayer developed a method for writing recursive rules that could be used to model the growth of algae. Called ``Lindenmayer systems'' or ``L-systems'' today, these methods have been used to model more complex organisms, as well as purely mathematical structures.} Technically speaking, natural fractals only have their recursive procedure applied a handful of times (we say the procedure has a handful of \textit{iterations}) so they aren't true mathematical fractals. A mathematical fractal undergoes an infinite number of iterations.\footnote{Fractals may play an interesting role later on in your study of mathematics, for example the Mandelbrot set is a fractal that involves the complex numbers. Do an internet search for ``Mandelbrot set'' and check out the pictures!}
+the folds of your brain, your vascular system, your bronchial tubes, the lining of your small intestines\ldots\ all of these are a kind of fractal.\footnote{In 1968, Hungarian biologist Aristid Lindenmayer developed a method for writing recursive rules that could be used to model the growth of algae. Called ``Lindenmayer systems'' or ``L-systems'' today, these methods have been used to model more complex organisms, as well as purely mathematical structures.} Technically speaking, natural fractals only have their recursive procedure applied a limited number of times (we say the procedure has a limited number of \textit{iterations}) so they aren't true mathematical fractals. A mathematical fractal undergoes an infinite number of iterations.\footnote{Fractals may play an interesting role later on in your study of mathematics, for example the Mandelbrot set is a fractal that involves the complex numbers. Do an internet search for ``Mandelbrot set'' and check out the pictures!}
 
 Our first fractal will be a famous fractal that was first studied by Polish mathematician Wac{\l}aw Sierpi\'nski.
 
@@ -123,22 +126,15 @@ There is one solid square in stage 0, and there are eight (smaller) solid square
  
 \subsection{Algebra of {S}ierpi\'nski's carpet}
 
-Sierpi\'nski's carpet generates some interesting sequences of numbers. For example, if we consider the number of (smallest) squares at each stage of the fractal. We have one square in stage 0, and eight squares in stage 1.
+Sierpi\'nski's carpet generates some interesting sequences of numbers. For example, if we consider the number of (smallest) squares at each stage of the fractal. We have one square in stage 0 and eight squares in stage 1.
 
-To create stage 2, we divide each of the eight stage-one squares into 9 pieces, and then remove the center square. So each of the eight squares from stage 1 turns into eight new, tiny squares in stage 2. So there are $8\cdot8 = 64$ tiny squares in stage 2. To create stage 3, each of these sixty-four tiny squares becomes 8 super-tiny squares, so there are $64 \cdot 8 = 512$ super-tiny squares in stage 3. Together, we have a sequence that begins:
+To create stage 2, we divide each of the eight stage-one squares into 9 pieces and then remove the center square. So each of the eight squares from stage 1 turns into eight new, tiny squares in stage 2. So there are $8\cdot8 = 64$ tiny squares in stage 2. To create stage 3, each of these sixty-four tiny squares becomes 8 super-tiny squares, so there are $64 \cdot 8 = 512$ super-tiny squares in stage 3. Together, we have a sequence that begins:
 \[1, 8, 64, 512, \dotsc\]
 What is a recursive rule for this sequence? The sequence starts with 1, and then to go from one number to the next, we multiply by 8. So, that's our rule: ``start with 1, multiply the previous value by 8''. In other words, to find the next term in the sequence, take the previous term (the last term in the sequence that we know) and multiply by 8.
 
-We can use this rule to generate the next few terms of our sequence, but watch out! We quickly end up with a lot of teeny squares and you don't want to get any on your shoes. \[1,~ 8,~ 64,~ 512,~ 4096,~ 32\,768,~ 262\,144,~ 2\,097\,152,~ 16\,777\,216,~ \dotsc\]
+We can use this rule to generate the next few terms of our sequence, but watch out! We quickly end up with a lot of teeny squares, and you don't want to get any on your shoes. \[1,~ 8,~ 64,~ 512,~ 4096,~ 32\,768,~ 262\,144,~ 2\,097\,152,~ 16\,777\,216,~ \dotsc\]
 
-We can always write a recursive rule as a sentence, as we did above. Another way to capture a recursive procedure is using a ``now-next'' rule, sometimes called a ``start-now-next'' rule. For example, the now-next rule for the number of squares is:
-
-\begin{center}
-START~=~1 \\
-NEXT~=~NOW $\cdot$ 8
-\end{center}
-
-It's pretty obvious that the first part of the rule says where to start. The second part of the rule says: ``To find the \textit{next} number in the pattern, we take the number we have \textit{now} and multiply by 8.''
+We can always write a recursive rule as a sentence, as we did above. Another way to capture a recursive procedure is using a ``now-next'' rule, sometimes called a ``start-now-next'' rule. For example, the now-next rule for the number of squares is: ``START~=~1, NEXT~=~NOW $\cdot$ 8''. It's pretty obvious that the first part of the rule says where to start. The second part of the rule says: ``To find the \textit{next} number in the pattern, we take the number we have \textit{now} and multiply by 8.''
 
 \subsection{Recursive rules and formulas}
 \index{recursive formula}
@@ -191,7 +187,7 @@ Well, $a_{999} = 3 \cdot a_{998}$ But, what's $a_{998}$?
 
 Hmm. $a_{998} = 3 \cdot a_{997}$\ldots\ but\ldots\ oh boy. Can you see the problem here?
 
-If we want to skip around and find random terms in a sequence, it's much easier to use a different kind of formula, called an \textit{apparent} or \textit{explicit formula}. More on those in the next section!
+If we want to skip around and find random terms in a sequence, it's much easier to use a different kind of formula called an \textit{apparent} or \textit{explicit formula}. More on those in the next section!
 
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
@@ -348,7 +344,7 @@ Rules of this kind are called apparent formulas or explicit formulas. One benefi
 By the way, this number is enormous. It's more than 1300 digits long!
 
 \begin{boxex}
-Write explicit formulas for other features of the Koch curve: the length of one segment, and the total length of the curve.
+Write explicit formulas for these other features of the Koch curve: the length of one segment and the total length of the curve.
 
 \exsoln\ \textit{Length of one segment.} Each segment in a certain stage is one-third the length of the segment in the stage before. So, the sequence generated by the length of one segment in each stage is
 \[\left(\frac{1}{3}\right)^0,
@@ -374,19 +370,19 @@ What if the stage 0 figure had been a segment of length 7, rather than length 1?
 \exsoln\ The number of segments would not change, but the length of each segment (and the total length of the curve) would! The new sequence for the length of one segment would be generated as follows:
 \begin{commwork}
 7
-&=& 7\ast\left(\frac{1}{3}\right)^{0}
+&=& 7\left(\frac{1}{3}\right)^{0}
 & length of one segment in stage 0
 \\[\fracspace]
-7 \ast\left(\frac{1}{3}\right)
-&=& 7\ast\left(\frac{1}{3}\right)^{1}
+7 \left(\frac{1}{3}\right)
+&=& 7\left(\frac{1}{3}\right)^{1}
 & length of one segment in stage 1
 \\[\fracspace]
-7 \ast\left(\frac{1}{3}\right) \ast\left(\frac{1}{3}\right)
-&=& 7\ast\left(\frac{1}{3}\right)^{2}
+7 \left(\frac{1}{3}\right)\left(\frac{1}{3}\right)
+&=& 7\left(\frac{1}{3}\right)^{2}
 & length of one segment in stage 2
 \\[\fracspace]
-7 \ast\left(\frac{1}{3}\right) \ast\left(\frac{1}{3}\right) \ast\left(\frac{1}{3}\right)
-&=& 7\ast\left(\frac{1}{3}\right)^{3}
+7 \left(\frac{1}{3}\right) \left(\frac{1}{3}\right) \left(\frac{1}{3}\right)
+&=& 7\left(\frac{1}{3}\right)^{3}
 & length of one segment in stage 3
 \end{commwork}%
 
@@ -394,16 +390,16 @@ Again we can use an exponent to simplify the repeated multiplication of $\frac{1
 %The recursive formula for this procedure would be ``start at 7, multiply the previous term by one-third'', or $a_1 = 7,~ a_{n+1} = \frac{1}{3} \cdot a_n$.
 %The length of the fractal at stage $x$ is $7 \cdot \left(\frac{1}{3}\right)^{x}$ units long.
 This generates the sequence
-\[7\ast\left(\frac{1}{3}\right)^0,
-~~ 7\ast\left(\frac{1}{3}\right)^1,
-~~ 7\ast\left(\frac{1}{3}\right)^2,
+\[7\left(\frac{1}{3}\right)^0,
+~~ 7\left(\frac{1}{3}\right)^1,
+~~ 7\left(\frac{1}{3}\right)^2,
 ~ \dotsc\]
-If we let $n$ represent the term number, then the recursive formula for this sequence is \[a_n = 7 \ast \left(\frac{1}{3}\right)^{n-1}.\]
+If we let $n$ represent the term number, then the recursive formula for this sequence is \[a_n = 7 \left(\frac{1}{3}\right)^{n-1}.\]
 \end{boxex}
 
 \subsection{Geometric sequences}
 
-So far, all of our sequences have had recursive rules like ``start with $A$, \textit{multiply} the previous term by $B$''. Sequences with recursive rules of this type are called \glspl{geometric sequence}. Geometric sequences belong to the family of \textit{exponential relationships}, because the apparent formula has a variable in the exponent.
+So far, all of our sequences have had recursive rules like ``start with $A$, multiply the previous term by $B$''. Sequences with recursive rules of this type are called \glspl{geometric sequence}. Geometric sequences belong to the family of \textit{exponential relationships}, because the apparent formula has a variable in the exponent.
 
 To generate the next term of a geometric sequence, we multiply the previous term by a fixed value. This fixed value is sometimes called, naturally enough, the \textit{constant multiplier}. More often, it is called the \gls{common ratio}.
 
@@ -432,7 +428,7 @@ Write recursive and explicit formulas for the geometric sequence $32, 24, 18, 13
 
 \exsoln\ To get from 32 to 24, our first instinct might be to subtract: $32 - 8 = 24$. But, we're told in the problem that this is a \textit{geometric} sequence, and that means that the recursive rule involves multiplication, not subtraction.
 
-How can get from 32 to 24 using multiplication? The constant multiplier must be less than one (can you explain why?), and we can divide to find what it is: \[\frac{24}{32} = \frac{3}{4}\]
+How can we get from 32 to 24 using multiplication? The constant multiplier must be less than one. (Can you explain why?) We can divide to find what it is: \[\frac{24}{32} = \frac{3}{4}\]
 So, $\frac{3}{4}$ is a good candidate for the constant ratio of the sequence. Let's check the other terms to see if we're right. We multiply 24 by $\frac{3}{4}$ to see if that gives us the next term in the sequence: \[24 \cdot\frac{3}{4} = \frac{24}{1}\cdot\frac{3}{4} = \frac{\bcancel{4} \cdot 6}{1}\cdot\frac{3}{\bcancel{4}} = \frac{6}{1}\cdot\frac{3}{1} = 18 \qquad\text{Check!}\]
 Now see if 18 times $\frac{3}{4}$ gives the next term:
 \[18 \cdot\frac{3}{4} = \frac{18}{1}\cdot\frac{3}{4} = \frac{\bcancel{2} \cdot 9}{1}\cdot\frac{3}{\bcancel{2} \cdot 2} = \frac{9}{1}\cdot\frac{3}{2} = \frac{27}{2} = 13\tfrac{1}{2} \qquad\text{Check!}\]
@@ -444,8 +440,8 @@ So, we have found the correct constant multiplier based on the information we we
 If we look back over the explicit rules for the sequences in this section, we might notice that the formulas have a formula of their own! In other words, the apparent rule for a geometric sequence always has a certain structure, which we summarize here.
 
 \begin{boxdef}[Apparent formula for a geometric sequence]
-Given a geometric sequence with first term $a_1$ and common ratio $r$, in other words, a sequence of the form \[a_1~,~~ a_1\ast r~,~~ a_1\ast r^2~,~~ a_1\ast r^3~,~~ \dotsc\]
-The apparent or explicit formula for the sequence is: \[a_n = a_1\ast r^{n-1}.\]
+Given a geometric sequence with first term $a_1$ and common ratio $r$, in other words, a sequence of the form \[a_1~,~~ a_1 r~,~~ a_1 r^2~,~~ a_1 r^3~,~~ \dotsc\]
+The apparent or explicit formula for the sequence is: \[a_n = a_1 r^{n-1}.\]
 \end{boxdef}
 
 
@@ -581,7 +577,7 @@ a_5 &= 4 +3 +3 +3 +3	&= 4 + 3\cdot4
 \end{aligned}\]
 Notice now that these multiplications are 3 times ``one less than the stage number''! Therefore, we can write \[a_n = 4 + 3 (n-1)\]
 
-As with geometric sequences, there is a formula for these formulas, too:
+As we did with geometric sequences, we can summarize the general form of the explicit rule for an arithmetic sequence:
 
 \begin{boxdef}[Apparent formula for an arithmetic sequence]
 Given an arithmetic sequence with first term $a_1$ and common difference $d$, in other words, a sequence of the form \[a_1~,~~ a_1 + d~,~~ a_1 + 2d~,~~ a_1 + 3d~,~~ \dotsc\] The apparent or explicit formula for the sequence is: \[a_n = a_1 + (n-1) \ast d.\]
@@ -700,7 +696,7 @@ Is the sequence arithmetic? Let's check for a common difference:
 35-24 &=11\\
 48-35 &=13\\
 \end{aligned}\]
-The sequence does not have a common difference, so it is \textit{not arithmetic}. But take a look at those differences! The differences have a pattern of their own: They go up by 2 every time. In other words, the differences form an arithmetic sequence! It's a sequence in a sequence! The turducken of sequences!\footnote{This sequence-in-a-sequence stuff can get pretty involved. Here, we found an arithmetic sequence in the \textit{differences} between the terms in our quadratic sequence. But why not build the sequence $1, 4, 12, 27, 51, \dotsc$, in which the sequence of differences is our quadratic sequence! Of course we could keep building sequences like this for as long as we wanted. This isn't just a turducken, it's a \textit{r\^oti sans pareil}! That's French for ``roast without equal'', a dish that which calls for 17 different birds, each one stuffed into the body cavity of the next. In the years since the dish was first proposed in 1807 by the French gastronomist Grimod de La Reyni\'ere, several of the birds called for in the recipe have become endangered species.}
+The sequence does not have a common difference, so it is \textit{not arithmetic}. But take a look at those differences! The differences have a pattern of their own: They go up by 2 every time. In other words, the differences form an arithmetic sequence! It's a sequence within a sequence! The turducken of sequences!\footnote{This sequence-in-a-sequence stuff can get pretty involved. Here, we found an arithmetic sequence in the \textit{differences} between the terms in our quadratic sequence. But why not build the sequence $1, 4, 12, 27, 51, \dotsc$, in which the sequence of differences is our quadratic sequence! Of course we could keep building sequences like this for as long as we wanted. This isn't just a turducken, it's a \textit{r\^oti sans pareil}! That's French for ``roast without equal'', a dish that which calls for 17 different birds, each one stuffed into the body cavity of the next. In the years since the dish was first proposed in 1807 by the French gastronomist Grimod de La Reyni\'ere, several of the birds called for in the recipe have become endangered species.}
 
 To describe this sequence with a recursive rule, we'll need to give the starting value, as usual: ``start with 3". Then, we must describe the pattern in the differences: in this case, we're adding consecutive odd numbers (starting with 5). So, one way to express this recursive rule is ``start with 3, add consecutive odd numbers (starting with 5) to the previous term''. Note that we kind of sneak in two starting places: one for the start of the sequence (3, in this case) and one for the start of the sequence of numbers that are being added on (5, in this case). Tricky!
 
@@ -734,7 +730,7 @@ At this point, our goal is just to recognize that these sequences are neither ar
 \begin{tcolorbox}[title={Extension sections}]
 Sections marked with the Cthulhu (;,;) emoticon, like this one, are extension sections that might be a bit more intense than the norm. We encourage you to explore the concepts, but don't feel discouraged if you find the material challenging.
 
-Your math brain grows when you think about hard questions, so that kind of thinking is valuable, even if the concepts aren't completely clear right away. As your algebra skills develop over time, you may find that you can return to these extension sections with more confidence later on.
+Your math brain grows when you think about hard questions, so that kind of thinking is valuable, even if the concepts aren't completely clear right away. As your algebra skills develop over time, you can hopefully return to these extension sections with more confidence.
 \end{tcolorbox}
 
 In the last section, we looked at the sequence, which came from a rectangular pattern of tiles: \[3, 8, 15, 24, 35, \dotsc\]
@@ -925,7 +921,7 @@ If these last two sections felt a bit overwhelming, don't worry. After we have s
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \chaptersummary
 
-In this chapter we explored and extended the idea of a number pattern, with the result that we can now identify and describe certain kinds of patterns in detail. Already we have met the three key ``families'' of mathematical relationships that are at the heart of Algebra 1.
+In this chapter we explored and extended the idea of a number pattern with the result that we can now identify and describe certain kinds of patterns in detail. Already we have met the three key ``families'' of mathematical relationships that are at the heart of Algebra 1.
 
 The linear family, represented in this chapter by the idea of an arithmetic sequence, will become our focus starting in \cref{ch:equations}. The exponential family, represented in this chapter by the geomertic sequences, will be our focus in \cref{ch:expofunc,,ch:expoexpr}. Quadratic sequences and the quadratic family will be in the spotlight starting in chapter \cref{ch:quadeq}.
 
