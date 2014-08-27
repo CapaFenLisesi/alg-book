@@ -6,7 +6,7 @@
 
 \chapquote{On two occasions I have been asked, ``Pray, Mr. Babbage, if you put into the machine wrong figures, will the right answers come out?'' I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question.}{Charles Babbage, English inventor of the first mechanical computer}
 
-We have seen a number of relationships so far: the relationship between distance and time of a moving object, for example, or the relationship between a number's position in a sequence and that number's value. A \textit{function} is a certain kind of relationship that is of key importance to us in algebra, and indeed throughout mathematics. In this chapter we'll get an overview of functions and their different representations. then, in the rest of the course, we will look closely at three specific kinds of functions.
+We have seen a number of relationships so far: the relationship between distance and time of a moving object, for example, or the relationship between a number's position in a sequence and that number's value. A \textit{function} is a certain kind of relationship that is of key importance to us in algebra and, indeed, throughout mathematics. In this chapter we'll get an overview of functions and their different representations. then, in the rest of the course, we will look closely at three specific kinds of functions.
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \section{Mathematical relationships}
@@ -38,12 +38,11 @@ For machine B we are given the points $(8, 15)$ and $(-12, 23)$. One, somewhat c
 
 We can define relations that compare things other than numbers. For example, we might define the ``name-the-mother'' relation that accepts a person as input and which gives that person's biological mother as output. Or, we might define the ``name-the-pet'' relation, which accepts a human as input and outputs other animals.
 
-Note that there is a difference between these two relations we have just defined. Not all people own pets, so some inputs to the name-the-pet macine have no output. Plus, some people own multiple pets, so some inputs to the name-the-pet machine have multiple outputs. On the other hand, the name-the-mother machine is guaranteed to always produce a unique output: every person has a biological mother, and every person has exactly one biological mother. It is impossible for someone to have more than one biological mother!\footnote{We don't deny that a family with two mothers is still a family! It is true that a person can have multiple mothers in a legal or emotional sense\ldots\ but a person has exactly one \textit{biological} mother.}
+Note that there is a difference between these two relations we have just defined. Not all people own pets, so some inputs to the name-the-pet macine have no output. Plus, some people own multiple pets, so some inputs to the name-the-pet machine have multiple outputs. On the other hand, the name-the-mother machine is guaranteed to always produce a unique output: every person has a biological mother, and it is impossible for a person to have more than one biological mother!\footnote{We don't deny that a family with two mothers is still a family! It is true that a person can have multiple mothers in a legal or emotional sense\ldots\ but a person always has exactly one \textit{biological} mother.}
 
-We saw something similar in \cref{sec:interpgraphs}, where certain graphs could be drawn in a way that would suggest an impossible situation. For example, we drew a graph (shown in \cref{fig:impossible}) that suggested Yeardleigh's submersible could at three different depths simultaneously, which -- like have more than one biological mother -- is nonsense.
-%\footnote{``I like nonsense; it wakes up the brain cells.'' --- Dr. Seuss}
+We saw something similar in \cref{sec:interpgraphs}, where certain graphs could be drawn in a way that would suggest an impossible situation. For example, we drew a graph (shown in \cref{fig:impossible}) that suggested Yeardleigh's submersible could at three different depths simultaneously. This is as ridiculous as the idea that a person could have more than one biological mother! 
 
-\begin{figure}[!htbp]
+\begin{figure}
 \centering
 \begin{tikzpicture}[scale=1]
 	\draw[ultra thin, gray!50] (0,0) grid (6,6);
@@ -73,7 +72,7 @@ We saw something similar in \cref{sec:interpgraphs}, where certain graphs could 
 	\label{fig:impossible}
 \end{figure}
 
-Relationships that follow this very natural rule -- any given input produces a unique output -- have a special status in algebra. They're called \glspl{function}.
+Relationships which follow this very natural rule -- any given input produces a unique output -- have a special status in algebra. They're called \glspl{function}.
 
 %From a certain point of view, there is nothing wrong with this graph --- any old squiggly line in the coordinate plane is a kind of graph. The problem arises because this graph doesn't make any sense \textit{in the context of the problem}. In this chapter, we will make some formal definitions that will help us to distinguish certain types of mathematical rules and relationships from one another.
 
@@ -81,16 +80,16 @@ Relationships that follow this very natural rule -- any given input produces a u
 A \gls{function} is a special type of relation in which the ordered pairs have the following property: each $x$-value is paired with one, and only one, $y$-value.
 \end{boxdef}
 
-The ``one and only one'' requirement is what makes a function special. The graph in \cref{fig:impossible} violates this requirement: certain $x$-values have more than one associated $y$-value (look at $x$ values between 15 and 45 minutes). So, this graph does not depict a function. Any given sequence is a function, since each $x$ value (position in the sequence) is occupied by exactly one $y$ value.
+The ``one and only one'' requirement is what makes a function special. The graph in \cref{fig:impossible} violates this requirement: certain $x$-values have more than one associated $y$-value (look at $x$ values between 15 and 45 minutes). So, this graph does not depict a function.
 
-A sequence is a function: it would be silly to suggest that a sequence had more than one value as its third term. Depending on how we think about number machines, we might expect that a machine would act predictably and always produce the same output for a given input. A number machine that behaves in this way defines a function.
+The sequences we studied in \cref{ch:sequences} are functions: it would be silly to suggest that a sequence could have more than one value as its third term. Depending on how we think about number machines, we might expect that a machine would act predictably and always produce the same output for a given input. A number machine that behaves in this way defines a function.
 
 \subsubsection{Representing relations}
 
 Ther are several ways to represent a mathematical relation. We might represent a relation using:
 \begin{itemize}
 \item A graph. This representation gives us a visual of the relationship between input values and output values.
-\item A table of values. This representation gives us an organized list of input values and their corresponding output values. (Related forms include a \textit{mapping diagram}, or just a collection of ordered pairs.)
+\item A table of values. This representation gives us an organized list of input values and their corresponding output values. (Related forms include a \textit{mapping diagram} or just a collection of ordered pairs.)
 \item An equation. This representation gives us a rule for turning input values into output values, the way a number machine might do.
 %-- A mapping diagram. Like a table, gives a series of input and corresponding output values.
 %-- A set of points. Like a table, but organized differently
@@ -199,7 +198,7 @@ Plot C
 \exsoln\ Plots A and C both pass the vertical line test, and therefore represent functions. Plot B fails the vertical line test because it fails for the vertical line at $x=3$.
 \end{boxex}
 
-Note that we don't care if different $x$'s map to the same $y$. For example, in plot C, all of the $x$-values map to the same $y$-value. That's OK. In other words, a function \textit{can} fail the ``horizontal line test'' without penalty.\footnote{The horizontal line test \textit{is} a thing, and passing or failing the horizontal line test does have a mathematical meaning. But, a discussion of this will have to wait until later.}
+Note that we don't care if different $x$-values map to the same $y$. For example, in plot C, all of the $x$-values map to the same $y$-value. That's OK. In other words, a function \textit{can} fail the ``horizontal line test'' without penalty.\footnote{The horizontal line test \textit{is} a thing, and passing or failing the horizontal line test does have a mathematical meaning. A discussion of this will have to wait until later, however.}
 
 For example, the name-the-mother function does not pass the horizontal line test because two different inputs (people) can have the same output (mother). In fact, it is not at all uncommon for two different people to have the same mother: they're called siblings!
 
@@ -340,7 +339,7 @@ Up until now, we have used ``$y=$ something in terms of $x$'' to define all of o
 
 In its generic form, the letter $f$ is used to name the function. We use the letter $f$, of course, because it stands for ``function''. And as usual, we use $x$ to represent the independent variable.
 
-What's nice about this notation is that it allows us great flexibility to use other letters or symbols that can be more descriptive. For example, if we wanted to describe how the height of a bouncing ball changes over time, we might want to let the variable $t$ represent time, and then name the function $h$ for height.
+What's nice about this notation is that it allows us great flexibility to use other letters or symbols that can be more descriptive. For example, if we wanted to describe how the height of a bouncing ball changes over time, we might want to let the variable $t$ represent time and then name the function $h$ for height.
 
 So, we could write a function ``$h(t) =$ some expression in terms of $t$''. That's read ``$h$ of $t$'', which does a pretty good job of capturing the idea that we're describing \textit{height} in terms \textit{of time}.
 
@@ -358,8 +357,6 @@ We will use function notation and $y =$ notation through this course. The flexib
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \section{Domain and range}
 \label{cref:domandrange}
-
-\addtodoitem{More examples here: see Patty's notes.}
 
 %\begin{boxexplore}[Name of Extended Exploration]
 %\addtodoitem{Click here to visit the extended exploration: NAME}
@@ -381,10 +378,10 @@ A blender is a machine that has limited operating parameters. Anything we put in
 An important component of the definition of any function is a specification about what sorts of numbers it can accept as input. In the language of mathematics, we call the set of all ``legal'' input values the \textit{domain} of the function.
 
 \begin{boxdef}[Domain]
-The set of all allowed input values to a function. This is the set of all allowed $x$-values, or all possible values of the independent variable.
+The set of all allowed input values to a function. This is the set of all allowed $x$-values or all possible values of the independent variable.
 \end{boxdef}
 
-We have two functions in the startup exploration. The first function, $f(x)=\abs{x}$, is very welcoming: any real number can be used as unput to this number machine: whole numbers, fractions, positive numbers, negative numbers, it doesn't matter. The other function is a little more finicky.
+We have two functions in the startup exploration. The first function, $f(x)=\abs{x}$, is very welcoming: any real number can be used as input to this number machine: whole numbers, fractions, positive numbers, negative numbers, it doesn't matter. The other function is a little more finicky.
 
 In \cref{ch:numbers}, we discussed the illegality of division by zero. So, if we try to put 0 into the function $g(x)=\frac{1}{x}$, then we're going to have a problem: $g(0)$ -- that's the function $g$ evaluated at $x=0$ -- is undefined. So, our user manual for the function $g$ has to include a note that only numbers other than 0 are allowed as input. We say that the function $g(x)$ has a \textit{limited} or \textit{restricted domain}.
 
@@ -399,11 +396,13 @@ In \cref{ch:numbers}, we discussed the illegality of division by zero. So, if we
 %%%
 %%%Another function with a limited domain is the square-root function $y = \sqrt{x}$. This function can only accept nonzero numbers as input. All negative numbers are restricted from the domain.\footnote{Try to take the square root of a negative number on a calculator and see what happens! Stay tuned for more on this phenomenon, and other stuff about square roots, in \cref{ch:radicals}.}
 
-There are other circumstances where we will want or need to limit the domain. For example, a domain can be limited by the context of a problem we are solving. If we write an equation that shows distance as a function of time, it usually makes sense to limit the domain to only include positive time-values. If we have a function which maps ``number of pizza toppings'' to ``price of the pizza'', then there is (probably) an upper limit on the domain: there are only so many pizzas toppings available.\footnote{Did you know that the so-called ``Hawaiian pizza'', a pizza topped with pieces of ham and pineapple, is not actually a Hawaiian invention? Several news organizations agree that this pizza originated in Ontario, Canada.}
+There are other circumstances where we will want or need to limit the domain. For example, a domain can be limited by the context of a problem we are solving. If we write an equation that shows distance as a function of time, it usually makes sense to limit the domain to only include positive time-values. If we have a function which maps ``number of pizza toppings'' to ``price of the pizza'', then there is (probably) an upper limit on the domain: there are only so many pizza toppings available.\footnote{Did you know that the so-called ``Hawaiian pizza'', a pizza topped with pieces of ham and pineapple, is not actually a Hawaiian invention? Several news organizations agree that this pizza originated in Ontario, Canada.}
 
 A sequence is a function whose domain is limited to the set of natural numbers (the positive integers). We saw this in \cref{ch:sequences,,ch:graphs}: a sequence can have a first term and a second term, but no one-and-a-halfth term. We exclude from the domain of a sequence all numbers except $1, 2, 3, 4, \dotsc$.
 
-We can also define a specific domain for convenience. On an assignment, for example, we might be asked to evaluate the function $y=4x+5$ for the $x$-vales $-1$, 0, and 1. We did something like this in \cref{ex:evaluating}. This is another example of limiting the domain.
+We can also define a specific domain for convenience. On an assignment, for example, we might be asked to evaluate the function $y=4x+5$ for the $x$-values $-1$, 0, and 1. We did something like this in \cref{ex:evaluating}. This is another case of limiting the domain.
+
+\addtodoitem{Patty's idea of including the domain of a piece of a function or more exotic domains.}
 
 %%%The three families of functions that we will study most closely in Algebra 1 (the linear, exponential, and quadratic families) do not require any domain restrictions, which is good news.
 
@@ -412,7 +411,7 @@ We can also define a specific domain for convenience. On an assignment, for exam
 In addition to knowing about input values, it is often important for us to know what sorts of numbers we can expect as output from a certain function. We call the set of all output values the \textit{range} of the function.
 
 \begin{boxdef}[Range]
-The set of all output values from a function. This is the set of all $y$-values, or all possible values of the dependent variable.
+The set of all output values from a function. This is the set of all $y$-values or all possible values of the dependent variable.
 \end{boxdef}
 
 The function $f(x) = \abs{x}$ can accept any number as input, but only non-negative numbers ever come out. We say that the range of $f$ is non-negative real numbers.
@@ -718,7 +717,7 @@ Quadratic Family
 \label{fig:parents}
 \end{figure}
 
-Compare the equations for each of the parent functions: How are they the same? How are they different? Compare the graphs: How are they the same? How are they different? When presented with a new equation of graph, what features might we look for to decide which family it belongs to?\footnote{These are not the only three families of functions out there, of course. Other families of functions will get the focus in Algebra 2 (and beyond).}
+Compare the equations for each of the parent functions: How are they the same? How are they different? Compare the graphs: How are they the same? How are they different? When presented with a new equation of graph, what features might we look for to decide which family it belongs to?\footnote{These are not the only three families of functions out there, of course. Other families of functions will become the subject of study in Algebra 2 (and beyond).}
 
 In \cref{sec:mathrelationships} we learned techniques for identifying whether a given relation is a function. One of our tasks going forward will be to learn techniques for distinguishing the function families from one another.
 
@@ -730,20 +729,18 @@ As we have seen many times already, a graph can be particularly helpful way to s
 Over time and with practice, we'll get better at picturing the graph of a function in our mind's eye without having to draw the graph on paper. Drawing graphs will still be informative, of course, but some features of the graph will start to ``jump out at us'' simply from looking at the equation of the function.
 
 \begin{boxexplore}[Not far from the tree]
-Study the three sets of animations below. Each set of images shows a way in which we can change the parent equation and produce a change in its graph.
+Study the three sets of animations depicted in \crefrange{fig:transa}{fig:transb}. Each set of images shows a way in which we can change the parent equation and produce a change in its graph.
 
-\Cref{fig:transa} shows what happens when we multiply the parent function by a constant value. \Cref{fig:transc} shows what happens when we add a constant value to the parent. \Cref{fig:transb} shows what happens when we add a constant value to the agrument (the $x$ value) before that value is used as input to the parent function.
+\Cref{fig:transa} shows what happens when we multiply the parent function by a constant value. \Cref{fig:transc} shows what happens when we add a constant value to the parent. \Cref{fig:transb} shows what happens when we add a constant value to the agrument (the $x$-value) before that value is used as input to the parent function.
 
-Study the animations, and then write a sentence or two summarizing what is happening in each case.
+Study the animations\footnote{The images will only appear animated when this PDF document is viewed using \href{http://get.adobe.com/reader/}{Adobe Reader}.} or experiment with the interactive versions at \href{http://www.algebranomicon.org/}{algebranomicon.org}. Then write a sentence or two summarizing what is happening in each case.
 
-\textit{Note about the animations: The images will only appear animated when this PDF document is viewed using \href{http://get.adobe.com/reader/}{Adobe Reader}. Otherwise, please visit OUR WEBSITE for an interactive versions of these animations.}
-
-\addtodoitem{Create something on the website for this. Maybe links to desmos pages w/ sliders.}
+\addtodoitem{Create something on the website with interactive transformations of functions (maybe links to desmos pages with sliders).}
 \end{boxexplore}
 
 \newcommand{\animscale}{0.45}
 %%% Figure 1. a*f(x) animations
-\begin{figure}
+\begin{figure}[p]
 \begin{minipage}{0.32\linewidth}
 	\centering
 	\animategraphics[scale=\animscale]{6}{anim/linea}{}{}
@@ -764,7 +761,7 @@ Study the animations, and then write a sentence or two summarizing what is happe
 
 
 %%% Figure 2: f(x)+c animations
-\begin{figure}
+\begin{figure}[p]
 \begin{minipage}{0.32\linewidth}
 	\centering
 	\animategraphics[scale=\animscale]{6}{anim/linec}{}{}
@@ -784,7 +781,7 @@ Study the animations, and then write a sentence or two summarizing what is happe
 \end{figure}
 
 %%% Figure 3: f(x+b) animations
-\begin{figure}
+\begin{figure}[p]
 \begin{minipage}{0.32\linewidth}
 	\centering
 	\animategraphics[scale=\animscale]{6}{anim/lineb}{}{}
@@ -833,17 +830,17 @@ There are two key transformations of the parent function. Multiplying by a const
 
 \subsection{Fundamentals of exponential functions}
 
-The second family of functions we will explore in this course is the exponential family. In fact, we will begin our study of this family in Algebra 1, and then return to it again in Algebra 2.
+The second family of functions we will explore in this course is the exponential family. In fact, we will begin our study of this family in Algebra 1 and then return to it again in Algebra 2.
 
 An exponential equation is one in which the variable $x$ appears as the exponent (hence the name). The graph of an exponential function is a smooth, curving shape that we sometimes describe as ``J-like''. This is only an approximation, though, since an exponential graph may sometimes look more like a backwards J or an upside-down J.
 
-Exponentials have the interesting property that while they get almost vertical on one side, and almost horizontal on the other side. For example, one side of the parent function, $y=2^x$, gets ``infinitely large'' while on the other side we have tinier and tinier fractions that get closer and closed to zero\ldots\ but never actually disappear! Mathematically speaking, we say that the function approaches an \gls{asymptote} at the flat horizontal portion. The parent function has a horizontal asymptote at $y=0$; other functions in this family may have their asymptote at a different position.
+Exponentials have the interesting property that they get almost vertical on one side and almost horizontal on the other side. For example, one side of the parent function, $y=2^x$, gets ``infinitely large'' while on the other side we have tinier and tinier fractions that get closer and closed to zero\ldots\ but never actually disappear! Mathematically speaking, we say that the function approaches an \gls{asymptote} at the flat horizontal portion. The parent function has a horizontal asymptote at $y=0$; other functions in this family may have their asymptote at a different position.
 
 Recall that geometric sequences are in the family of exponential functions. Geometric sequences have a rule that involves repeatedly multiplying by a constant ratio. This is the feature we look for in a table.
 
 Multiplying the parent by a value, as in $y=a\cdot2^x$, changes the steepness of the graph and (if $a$ is negative) causes it to be reflected over the $x$-axis.
 
-Adding a value to the parent function, $y=2^x+c$, causes a shift up or down (can you predict where the function's asymptote will be in this case?). If we add to the argument, $y = 2^{(x+b)}$, we get a shift left or right.
+Adding a value to the parent function, $y=2^x+c$, causes a shift up or down. (Can you predict where the function's asymptote will be in this case?) If we add to the argument, $y = 2^{(x+b)}$, we get a shift left or right.
 
 
 \subsection{Fundamentals of quadratic functions}
@@ -856,7 +853,7 @@ The graph of a quadratic function is a smooth U-like graph called a \gls{parabol
 
 The transformations of the parent function are perhaps more clear with this family. Multiplying by a constant, $y=a \cdot x^2$, changes the ``steepness'' of the graph. And, in the case that $a$ is negative, controls whether the graph opens upwards or downwards.
 
-Adding to the parent function $y=x^2+c$ produces a clear vertical shift, and adding to the argument $y=(x+b)^2$ produces a clear horizontal shift. Interestingly, the horizontal shifts appear to be ``backwards'' compared to what we might expect. Adding to the argument shifts the graph to the left, whereas subtracting from the argument (or adding a negative value) shifts the graph to the right. More on this unusual behavior later!
+Adding to the parent function $y=x^2+c$ produces a clear vertical shift, and adding to the argument $y=(x+b)^2$ produces a clear horizontal shift. Interestingly, the horizontal shifts appear to be ``backwards'' compared to what we might expect. Adding to the argument shifts the graph to the left, whereas subtracting from the argument (or adding a negative value) shifts the graph to the right. (Can you spot this unsual behavior in the linear and exponential families, too?)
 
 Recall from our study of sequences that quadratic patterns show a constant second difference. In other words, they have a recursive rule that states: ``Start with $A$, add to each previous term the members of some arithmetic sequence.'' This constant second difference will be the feature that we look for in a data table.
 
@@ -869,15 +866,15 @@ The range of a linear function is also pretty simple: it is all real numbers. As
 
 The ranges for exponential and quadratic functions are a little more complicated, but we can see what is happening by examining their graphs. Notice, for example, that the graphs of the parents $y=2^x$ and $y=x^2$ never dip below the $x$-axis. This feature of the exponential and quadratic families will always be retained, in some form, when we transform these equations: the range will always be limited by some minimum or maximum value. 
 
-The quadratic parent, passes through the origin, and so the range of $y=x^2$ is all real numbers \textit{greater than or equal to} zero. We might write that $y$ is any real number such that  $y\geq0$. In fact, every parabola has a point, called its \gls{vertex}, that is either its lowest point (if the parabola opens upwards) or its highest point (if the parabola opens downwards). We will learn more about identifying and describing the vertex of a parabola when we study the quadratic family in in depth.
+The quadratic parent passes through the origin, and so the range of $y=x^2$ is all real numbers \textit{greater than or equal to} zero. We might write that $y$ is any real number such that  $y\geq0$. In fact, every parabola has a point, called its \gls{vertex}, that is either its lowest point (if the parabola opens upwards) or its highest point (if the parabola opens downwards). We will learn more about identifying and describing the vertex of a parabola when we study the quadratic family in in depth.
 
 When it comes to the exponential parent, we mentioned that is has an asymptote at $y=0$. This means that the function approaches, but never reaches, that value. So, the range of $y=2^x$ is all real numbers \textit{strictly greater than} zero. We might write that $y$ is any real number such that $y>0$. We will learn more about what's going on with this asymptote when we study the exponential family.
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \chaptersummary
 
-In this chapter we have brought together a number of different concepts. Our work with sequences, graphs, functions, and transformations, has been organized under three key headings: the three families that we will study closely in Algebra 1.
+In this chapter we have brought together a number of different concepts. Our work with sequences, graphs, functions, and transformations has been organized under three key headings: the three families that we will study closely in Algebra 1.
 
-With the next chapter we begin to focus on the linear family, the most logical place to start. In one sense, the linear family is the easiest family to understand, and so it makes for a good ``training level''. At the same time, the linear function is an important structural concept in mathematics, and gives rise to a whole branch of study called, appropriately enough, \textit{linear algebra}.
+With the next chapter we begin to focus on the linear family, the most logical place to start. In one sense, the linear family is the easiest family to understand, and so it makes for a good ``training level''. At the same time, the linear function is an important structural concept in mathematics that gives rise to a whole branch of study called, appropriately enough, \textit{linear algebra}.
 
 In any case, studying the linear family will give us the chance to learn a whole collection of new algebraic tools and techniques that we will use throughout the course. Onward!
