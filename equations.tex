@@ -97,19 +97,31 @@ The \gls{commutative property of multiplication} states that for real numbers $a
 \end{boxdef2col}
 
 The commutative properties allow us to rearrange the order of things when we add or multiply. For instance, when adding up a string of numbers, it's sometimes helpful to ``make a ten'':
-\[\begin{aligned}
-&12 + 6 + 8
-&& \quad\text{grouping up the 12 and the 8 would be easier than adding left-to-right}
+\begin{commwork}
+&&12 + 6 + 8
+& grouping up the 12 and the 8 would be easier than adding left-to-right
 \\
-=~&12 + 8 + 6
-&& \quad\text{commutative property of addition says $6+8=8+6$, so we can swap them}
+&=&12 + 8 + 6
+& commutative property of addition says $6+8=8+6$, so we can swap them
 \\
-=~&20 + 6
-&&
+&=&20 + 6
 \\
-=~&26
-&&
-\end{aligned}\]
+&=&26
+\end{commwork}
+
+%\[\begin{aligned}
+%&12 + 6 + 8
+%&& \quad\text{grouping up the 12 and the 8 would be easier than adding left-to-right}
+%\\
+%=~&12 + 8 + 6
+%&& \quad\text{commutative property of addition says $6+8=8+6$, so we can swap them}
+%\\
+%=~&20 + 6
+%&&
+%\\
+%=~&26
+%&&
+%\end{aligned}\]
 
 Note that this property is for \textit{addition} and \textit{multiplication}, but not subtraction or division! To move things around in, say, a subtraction problem, we must use the definition of subtraction as ``addition of the opposite'' to create an equivalent addition problem.
 \[6 - 5 \neq 5 - 6 \text{\qquad but \qquad} 6+(\umin5) = (\umin5)+6\]
@@ -123,19 +135,31 @@ The \gls{associative property of multiplication} states that for real numbers $a
 \end{boxdef2col}
 
 The associative properties allow us to move around certain parentheses and regroup addition and multiplication. Here, the numbers don't move; the parentheses do.
-\[\begin{aligned}
-&5 \cdot (8 \cdot 7)
-&& \quad\text{order of operations would force us to do what's inside the parentheses first}
+\begin{commwork}
+&&5 \cdot (8 \cdot 7)
+& order of operations would force us to do what's inside the parentheses first
 \\
-=~&(5 \cdot 8) \cdot 7
-&& \quad\text{associative property of multiplication says we can move the parentheses}
+&=&(5 \cdot 8) \cdot 7
+& associative property of multiplication says we can move the parentheses
 \\
-=~&40 \cdot 7
-&&
+&=&40 \cdot 7
 \\
-=~&280
-&&
-\end{aligned}\]
+&=&280
+\end{commwork}
+
+%\[\begin{aligned}
+%&5 \cdot (8 \cdot 7)
+%&& \quad\text{order of operations would force us to do what's inside the parentheses first}
+%\\
+%=~&(5 \cdot 8) \cdot 7
+%&& \quad\text{associative property of multiplication says we can move the parentheses}
+%\\
+%=~&40 \cdot 7
+%&&
+%\\
+%=~&280
+%&&
+%\end{aligned}\]
 
 A few words of warning: We can only use this property around addition or multiplication. Subtraction, for example, would have to be transformed into addition of the opposite.
 \[(8 - 4) + 3 \neq 8 - (4 + 3) \text{\qquad but \qquad} (8 + \umin4) + 3 = 8 + (\umin4 + 3)\]
@@ -239,33 +263,71 @@ There are subtleties to using the distributive property. Distribution and negati
 Simplify: (a) $\umin3(2x - 4)$ \quad and \quad (b) $8-5(6x-9)$
 
 \exsoln\ In problem (a) we distribute a negative number. Notice what happens with the signs of the terms in the result.
-\[\begin{aligned}
-&~ \umin3(2x - 4)&&\\
-=&~ \umin3(2x + \umin4)
-&& \quad \text{change subtraction to addition of the opposite}\\
-=&~ \umin3 \cdot 2x + \umin3 \cdot \umin4
-&& \quad \text{distributive property}\\
-=&~ (\umin3 \cdot 2)x + \umin3 \cdot \umin4
-&& \quad \text{commutative property of multiplication}\\
-=&~ \umin6x + 12
-&& \quad \text{substitution (in both terms)}\\
-\end{aligned}\]
+
+\begin{commwork}
+&&\umin3(2x - 4)
+\\
+&=&\umin3(2x + \umin4)
+& change subtraction to addition of the opposite
+\\
+&=&\umin3 \cdot 2x + \umin3 \cdot \umin4
+& distributive property
+\\
+&=&(\umin3 \cdot 2)x + \umin3 \cdot \umin4
+& commutative property of multiplication
+\\
+&=&\umin6x + 12
+& substitution (in both terms)
+\end{commwork}
+
+%\[\begin{aligned}
+%&~ \umin3(2x - 4)&&\\
+%=&~ \umin3(2x + \umin4)
+%&& \quad \text{change subtraction to addition of the opposite}\\
+%=&~ \umin3 \cdot 2x + \umin3 \cdot \umin4
+%&& \quad \text{distributive property}\\
+%=&~ (\umin3 \cdot 2)x + \umin3 \cdot \umin4
+%&& \quad \text{commutative property of multiplication}\\
+%=&~ \umin6x + 12
+%&& \quad \text{substitution (in both terms)}\\
+%\end{aligned}\]
 The first thing we did here was to change the subtraction to addition of the opposite. This was helpful because -- look! -- we end up with \textit{positive 12} in the final expression. That might otherwise have been an easy thing to miss.
 
 In problem (b) notice that we have an implied operation that will require us to apply the distributive property. In other words, the first step is \textit{not} to do $8-5$! As with the last problem, we'll start by changing to all-addition.
-\[\begin{aligned}
-&~ 8-5(6x-9)&&\\
-=&~ 8+\umin5(6x + \umin9)
-&& \quad \text{change subtraction to addition of the opposite}\\
-=&~ 8 + \umin5\cdot6x + \umin5\cdot\umin9
-&& \quad \text{distributive property}\\
-=&~ 8 + \umin30x + 45
-&& \quad \text{substitution}\\
-=&~ \umin30x + 8 + 45
-&& \quad \text{commutative property of addition}\\
-=&~ \umin30x + 53
-&& \quad \text{substitution}\\
-\end{aligned}\]
+
+\begin{commwork}
+&& 8-5(6x-9)
+\\
+&=& 8+\umin5(6x + \umin9)
+& change subtraction to addition of the opposite
+\\
+&=& 8 + \umin5\cdot6x + \umin5\cdot\umin9
+& distributive property
+\\
+&=& 8 + \umin30x + 45
+& substitution
+\\
+&=& \umin30x + 8 + 45
+& commutative property of addition
+\\
+&=& \umin30x + 53
+& substitution
+\\
+\end{commwork}
+
+%\[\begin{aligned}
+%&~ 8-5(6x-9)&&\\
+%=&~ 8+\umin5(6x + \umin9)
+%&& \quad \text{change subtraction to addition of the opposite}\\
+%=&~ 8 + \umin5\cdot6x + \umin5\cdot\umin9
+%&& \quad \text{distributive property}\\
+%=&~ 8 + \umin30x + 45
+%&& \quad \text{substitution}\\
+%=&~ \umin30x + 8 + 45
+%&& \quad \text{commutative property of addition}\\
+%=&~ \umin30x + 53
+%&& \quad \text{substitution}\\
+%\end{aligned}\]
 Again here, we get a term $\umin5\cdot\umin9 = 45$. Changing to all-addition before distributing is a helpful technique for getting these signs right.
 \end{boxex}
 
@@ -275,19 +337,39 @@ Simplify: $2x-(x-4)$
 \exsoln\ This one is subtle and sneaky! The negative sign is stuck on the parentheses, which means we'll have to ``distribute the negative sign'' or -- more accurately -- we again have an implied operation hiding in there as a ``phantom one''. This expression is the same as $2x-1(x-4)$.
 
 Observe:
-\[\begin{aligned}
-&~ 2x-(x-4)&&\\
-=&~ 2x-1(x-4)
-&& \quad \text{rewrite to expose the ``phantom one''}\\
-=&~ 2x + \umin1(x + \umin4)
-&& \quad \text{change subtraction to addition of the opposite}\\
-=&~ 2x + \umin1x + \umin1\cdot\umin4
-&& \quad \text{distributive property}\\
-=&~ 1x + 4
-&& \quad \text{substitution}\\
-=&~ x + 4
-&& \quad \text{rewrite to hide the ``phantom one''}\\
-\end{aligned}\]
+\begin{commwork}
+&& 2x-(x-4)
+\\
+&=& 2x-1(x-4)
+& rewrite to expose the ``phantom one''
+\\
+&=& 2x + \umin1(x + \umin4)
+& change subtraction to addition of the opposite
+\\
+&=& 2x + \umin1x + \umin1\cdot\umin4
+& distributive property
+\\
+&=& 1x + 4
+& substitution
+\\
+&=& x + 4
+& rewrite to hide the ``phantom one''
+\end{commwork}
+
+%\[\begin{aligned}
+%&~ 2x-(x-4)&&\\
+%=&~ 2x-1(x-4)
+%&& \quad \text{rewrite to expose the ``phantom one''}\\
+%=&~ 2x + \umin1(x + \umin4)
+%&& \quad \text{change subtraction to addition of the opposite}\\
+%=&~ 2x + \umin1x + \umin1\cdot\umin4
+%&& \quad \text{distributive property}\\
+%=&~ 1x + 4
+%&& \quad \text{substitution}\\
+%=&~ x + 4
+%&& \quad \text{rewrite to hide the ``phantom one''}\\
+%\end{aligned}\]
+
 Did you try this problem on your own before reading the solution? Did you get $x-4$? If so, don't be too upset: you're in good company. This is one of the most common mistakes in Algebra 1. Always be on the lookout when you see the distributive property mixed up with subtraction and negative signs.
 \end{boxex}
 
@@ -357,17 +439,34 @@ At first, it's best to commute the terms and group them up. Then we can add up t
 Simplify: $3x^2 + 2x - 2 + x^3 + 4x^2 - 3x - 2x^3 + 8$
 
 \exsoln\ To make sure we keep track of the signs, we'll convert to all-addition and then move the terms around to put like terms next to each other.
-\[\begin{aligned}
-	&~ 3x^2 + 2x - 2 + x^3 + 4x^2 - 3x - 2x^3 + 8\\
-=	&~ 3x^2 + 2x + \umin2 + x^3 + 4x^2 + \umin3x + \umin2x^3 + 8
-&& \quad \text{definition of subtraction}\\
-=	&~ x^3 + \umin2x^3 + 3x^2 + 4x^2 + 2x + \umin3x + \umin2 + 8
-&& \quad \text{commutative property of addition}\\
-=	&~ \umin1x^3 + 7x^2 + \umin x + 6
-&& \quad \text{combine like terms}\\
-=	&~ x^3 + 7x^2 - x 6
-&& \quad \text{simplify signs}\\
-\end{aligned}\]
+
+\begin{commwork}
+&& 3x^2 + 2x - 2 + x^3 + 4x^2 - 3x - 2x^3 + 8
+\\
+&=& 3x^2 + 2x + \umin2 + x^3 + 4x^2 + \umin3x + \umin2x^3 + 8
+& definition of subtraction
+\\
+&=& x^3 + \umin2x^3 + 3x^2 + 4x^2 + 2x + \umin3x + \umin2 + 8
+& commutative property of addition
+\\
+&=& \umin1x^3 + 7x^2 + \umin x + 6
+& combine like terms
+\\
+&=& x^3 + 7x^2 - x 6
+& simplify signs
+\end{commwork}
+
+%\[\begin{aligned}
+%	&~ 3x^2 + 2x - 2 + x^3 + 4x^2 - 3x - 2x^3 + 8\\
+%=	&~ 3x^2 + 2x + \umin2 + x^3 + 4x^2 + \umin3x + \umin2x^3 + 8
+%&& \quad \text{definition of subtraction}\\
+%=	&~ x^3 + \umin2x^3 + 3x^2 + 4x^2 + 2x + \umin3x + \umin2 + 8
+%&& \quad \text{commutative property of addition}\\
+%=	&~ \umin1x^3 + 7x^2 + \umin x + 6
+%&& \quad \text{combine like terms}\\
+%=	&~ x^3 + 7x^2 - x 6
+%&& \quad \text{simplify signs}\\
+%\end{aligned}\]
 \end{boxex}
 
 \begin{boxex}
@@ -585,14 +684,27 @@ x\div 4 = 21 & w - 9 = 50 & y + 13 = \umin24 & 8 x = 72\\
 \end{tabular}
 
 \expsoln\ In the first equation we must multiply both sides of the equation by 4 (MPOE).
-\[\begin{aligned}
-x \div 4& = 21\\
-\frac{x}{4}& = 21
-&&\text{\quad definition of division}\\[2ex]
-\frac{x}{4} {\color{red} \,\cdot\,4} & = 21 {\color{red} \,\cdot\,4}
-&&\text{\quad MPOE: multiply both sides of the equation by 4}\\[2ex]
+
+\begin{commwork}
+x \div 4 &=& 21
+\\
+\frac{x}{4} &=& 21
+& definition of division
+\\[\fracspace]
+\frac{x}{4} {\color{red} \,\cdot\,4} &=& 21 {\color{red} \,\cdot\,4}
+& MPOE: multiply both sides of the equation by 4
+\\[\fracspace]
 x & = 84
-\end{aligned}\]
+\end{commwork}
+
+%\[\begin{aligned}
+%x \div 4& = 21\\
+%\frac{x}{4}& = 21
+%&&\text{\quad definition of division}\\[2ex]
+%\frac{x}{4} {\color{red} \,\cdot\,4} & = 21 {\color{red} \,\cdot\,4}
+%&&\text{\quad MPOE: multiply both sides of the equation by 4}\\[2ex]
+%x & = 84
+%\end{aligned}\]
 In the second equation we should add 9 to both sides (APOE). In the third equation, we should subtract 13 (SPOE). Alternatively, we can think of this as APOE in which we add $\umin13$ to both sides.
 
 In the last example, we should divide both sides of the equation by 8 (DPOE). Or, we can think of this as MPOE in which we multiply both sides by $\frac{1}{8}$.
@@ -608,17 +720,35 @@ When you get dressed for school in the morning, you put your underpants on \text
 \end{boxdef}
 
 To undo the order of operations, we have to work upside-down and backwards:
-\[\begin{aligned}
-3x + 16 & = 43\\
-3x + 16 - 16 & = 43 - 16
-&&\text{\quad SPOE: subtract 16 from both sides of the equation}\\
-3x & = 27
-&&\text{\quad Simplify and substitute}\\[1ex]
-\frac{3x}{3} & = \frac{27}{3}
-&&\text{\quad DPOE: divide both sides of the equation by 3}\\[1ex]
-x & = 9
-&&\text{\quad Simplify and substitute}\\
-\end{aligned}\]
+
+\begin{commwork}
+3x + 16 &=& 43
+\\
+3x + 16 - 16 &=& 43 - 16
+& SPOE: subtract 16 from both sides of the equation
+\\
+3x &=& 27
+& simplify and substitute
+\\[\fracspace]
+\frac{3x}{3} &=& \frac{27}{3}
+& DPOE: divide both sides of the equation by 3
+\\[\fracspace]
+x &=& 9
+& simplify and substitute
+\end{commwork}
+
+%\[\begin{aligned}
+%3x + 16 & = 43\\
+%3x + 16 - 16 & = 43 - 16
+%&&\text{\quad SPOE: subtract 16 from both sides of the equation}\\
+%3x & = 27
+%&&\text{\quad Simplify and substitute}\\[1ex]
+%\frac{3x}{3} & = \frac{27}{3}
+%&&\text{\quad DPOE: divide both sides of the equation by 3}\\[1ex]
+%x & = 9
+%&&\text{\quad Simplify and substitute}\\
+%\end{aligned}\]
+
 In the end we have isolated $x$, and so this final equation tells us that 9 is a solution to the original equation.
 
 \begin{boxdef}[Solution and solution set]
@@ -637,22 +767,38 @@ Equations that have the same solution set.
 
 As with problems that involved the order of operations, it is often best to show your work going down the page as we have done in the earlier sections. It is also very helpful to anyone reading your work if you write beside each step the property that you used to justify turning one equation into an equivalent equation.
 
-A note on vocabulary: we \textit{simplify and expression} and we \textit{solve an equation}. Even though the work we show might be very similar, the goal of our steps is quite different.
+A note on vocabulary: we \textit{simplify an expression} and we \textit{solve an equation}. Even though the work we show might be very similar, the goal of our steps is quite different.
 
 Having found a solution, it is a great habit to check the solution by substituting it back into the original equation. In the example above, we had the equation $3x+16=43$ and found that this was equivalent to the equation $x=9$. To check our solution, we plug 9 back in for $x$ in the original equation:
-\[\begin{aligned}
-3x + 16 & = 43
-&&\quad\text{original equation}\\
-3(9) + 16 & \overset{?}{=} 43
-&&\quad\text{substitute in 9 for $x$}\\
-27 + 16 & \overset{?}{=} 43
-&&\quad\text{carry out the order of operations}\\
-43 & \overset{\checkmark}{=} 43
-&&\quad\text{Check!}
-\end{aligned}\]
-When we substitute in 9, we put little question marks over out equal sign, since we are checking the solution -- we're not sure whether the two expressions are equal yet! In the end, when we discover that the left-hand side is equal to the right-hand side, we replace our question with a check mark of confirmation!
 
-The key here is to realize that, ultimately, the process we use to solve an equation yields \textit{candidates} for the value of the unknown. We are not guaranteed that all of these candidates actually satisfy the original equation, until we check them to know for sure.\footnote{There will come a time when we will do everything correctly, and still some of our solution-candidates will have to be rejected! Get in the habit of checking solutions now!}
+\begin{commwork}
+3x + 16 &=& 43
+& original equation
+\\
+3(9) + 16 &\overset{?}{=}& 43
+& substitute in 9 for $x$
+\\
+27 + 16 &\overset{?}{=}& 43
+& carry out the order of operations
+\\
+43 &\overset{\checkmark}{=}& 43
+& check!
+\end{commwork}
+
+%\[\begin{aligned}
+%3x + 16 & = 43
+%&&\quad\text{original equation}\\
+%3(9) + 16 & \overset{?}{=} 43
+%&&\quad\text{substitute in 9 for $x$}\\
+%27 + 16 & \overset{?}{=} 43
+%&&\quad\text{carry out the order of operations}\\
+%43 & \overset{\checkmark}{=} 43
+%&&\quad\text{Check!}
+%\end{aligned}\]
+
+When we substitute in 9, we put little question marks over out equal sign, since we are checking the solution -- we're not sure whether the two expressions are equal yet! In the end, when we discover that the left-hand side is equal to the right-hand side, we replace our question mark with a check mark of confirmation!
+
+The key here is to realize that, ultimately, the process we use to solve an equation yields \textit{candidates} for the value of the unknown. We are not guaranteed that all of these candidates actually satisfy the original equation, until we check them to know for sure.\footnote{There will come a time when we will do everything correctly and, still, some of our solution-candidates will have to be rejected! Get in the habit of checking solutions now!}
 
 Once we have verified that our solution satisfies the original equation, we should write our answer in set notation. The equation $x=5$ isn't our solution, but an equivalent equation -- in fact, it's the simplest equation that has the same solution as the original!
 
@@ -679,43 +825,93 @@ Determine the value $x$, given the equation \[2x + 7 - 5x + 12 = 15.\]
 \end{boxexplore} %% End of startup exploration
 
 Here we find an equation that must be simplified using the field axioms and related tools. Let's start out by trying to simplify the left-hand side.
-\[\begin{aligned}
-2x + 7 - 5x + 12 & = 15\\
-2x + 7 + \umin5x + 12 & = 15
-&&\text{\quad rewrite as addition, by def'n of subtraction}\\
-2x + \umin5x + 7 + 12 & = 15
-&&\text{\quad commutative property of addition}\\
-\umin3x + 19 & = 15
-&&\text{\quad combine like terms -- this is now a Level 2 equation!}\\
-\umin3x + 19 - 19 & = 15 - 19
-&&\text{\quad SPOE}\\
-\umin3x & = \umin4
-&&\text{}\\[1ex]
-\frac{\umin3x}{\umin3} & = \frac{\umin4}{\umin3}
-&&\text{\quad DPOE}\\[1ex]
-x & = \frac{4}{3}
-&&\text{\quad Simplify}\\[1ex]
-\end{aligned}\]
 
-Notice that after a few lines, we had turned the Level 3 equation into a Level 2 equation. We know how to solve those! So, our goal will be to try to turn Level 3 equations into a Level 1 or Level 2 equations. But, since there are more steps in the process, there's more chance we can make a mistake. So, it's a good habit to remember to check our answer at the end.
+\begin{commwork}
+2x + 7 - 5x + 12 &=& 15
+\\
+2x + 7 + \umin5x + 12 &=& 15
+& rewrite as addition, by def'n of subtraction
+\\
+2x + \umin5x + 7 + 12 &=& 15
+& commutative property of addition
+\\
+\umin3x + 19 &=& 15
+& combine like terms -- this is now a Level 2 equation!
+\\
+\umin3x + 19 - 19 &=& 15 - 19
+& SPOE
+\\
+\umin3x &=& \umin4
+\\[\fracspace]
+\frac{\umin3x}{\umin3} &=& \frac{\umin4}{\umin3}
+& DPOE
+\\[\fracspace]
+x &=& \frac{4}{3}
+& simplify
+\end{commwork}
+
+%\[\begin{aligned}
+%2x + 7 - 5x + 12 & = 15\\
+%2x + 7 + \umin5x + 12 & = 15
+%&&\text{\quad rewrite as addition, by def'n of subtraction}\\
+%2x + \umin5x + 7 + 12 & = 15
+%&&\text{\quad commutative property of addition}\\
+%\umin3x + 19 & = 15
+%&&\text{\quad combine like terms -- this is now a Level 2 equation!}\\
+%\umin3x + 19 - 19 & = 15 - 19
+%&&\text{\quad SPOE}\\
+%\umin3x & = \umin4
+%&&\text{}\\[1ex]
+%\frac{\umin3x}{\umin3} & = \frac{\umin4}{\umin3}
+%&&\text{\quad DPOE}\\[1ex]
+%x & = \frac{4}{3}
+%&&\text{\quad Simplify}\\[1ex]
+%\end{aligned}\]
+
+Notice that after a few lines, we had turned the Level 3 equation into a Level 2 equation. We know how to solve those! So, our goal will be to try to turn Level 3 equations into Level 1 or Level 2 equations. But, since there are more steps in the process, there are more chances we can make a mistake. So, it's a good habit to remember to check our answer at the end.
 
 We can check our answer for the last problem by substituting our solution back into the original equation and simplifying using the order of operations.
-\[\begin{aligned}
-2x + 7 - 5x + 12 & = 15
-&& \text{\quad original equation}\\
-2\left(\frac{4}{3}\right) + 7 - 5\left(\frac{4}{3}\right) + 12 & \overset{?}{=} 15
-&& \text{\quad substitute in our solution $x = \tfrac{4}{3}$}\\[1ex]
-2\left(\frac{4}{3}\right) + 7 + \umin5\left(\frac{4}{3}\right) + 12 & \overset{?}{=} 15
-&& \text{\quad rewrite as addition, by def'n of subtraction}\\[1ex]
-\frac{8}{3} + 7 + \frac{\umin20}{3} + 12 & \overset{?}{=} 15
-&& \text{\quad multiply fractions}\\[1ex]
-\frac{8}{3} + \frac{21}{3} + \frac{\umin20}{3} + \frac{36}{3} & \overset{?}{=} 15
-&& \text{\quad rewrite left-hand side with common denominator}\\[1ex]
-\frac{45}{3} & \overset{?}{=} 15
-&& \text{\quad add fractions}\\[1ex]
-15 & \overset{\checkmark}{=} 15
-&& \text{\quad boom!}
-\end{aligned}\]
+
+\begin{commwork}
+2x + 7 - 5x + 12 &=& 15
+& original equation
+\\
+2\left(\frac{4}{3}\right) + 7 - 5\left(\frac{4}{3}\right) + 12 &\overset{?}{=}& 15
+& substitute in our solution $x = \tfrac{4}{3}$
+\\[\fracspace]
+2\left(\frac{4}{3}\right) + 7 + \umin5\left(\frac{4}{3}\right) + 12 &\overset{?}{=}& 15
+& rewrite as addition, by def'n of subtraction
+\\[\fracspace]
+\frac{8}{3} + 7 + \frac{\umin20}{3} + 12 &\overset{?}{=}& 15
+& multiply fractions
+\\[\fracspace]
+\frac{8}{3} + \frac{21}{3} + \frac{\umin20}{3} + \frac{36}{3} &\overset{?}{=}& 15
+& rewrite left-hand side with common denominator
+\\[\fracspace]
+\frac{45}{3} &\overset{?}{=}& 15
+& add fractions
+\\[\fracspace]
+15 &\overset{\checkmark}{=}& 15
+& boom!
+\end{commwork}
+
+%\[\begin{aligned}
+%2x + 7 - 5x + 12 & = 15
+%&& \text{\quad original equation}\\
+%2\left(\frac{4}{3}\right) + 7 - 5\left(\frac{4}{3}\right) + 12 & \overset{?}{=} 15
+%&& \text{\quad substitute in our solution $x = \tfrac{4}{3}$}\\[1ex]
+%2\left(\frac{4}{3}\right) + 7 + \umin5\left(\frac{4}{3}\right) + 12 & \overset{?}{=} 15
+%&& \text{\quad rewrite as addition, by def'n of subtraction}\\[1ex]
+%\frac{8}{3} + 7 + \frac{\umin20}{3} + 12 & \overset{?}{=} 15
+%&& \text{\quad multiply fractions}\\[1ex]
+%\frac{8}{3} + \frac{21}{3} + \frac{\umin20}{3} + \frac{36}{3} & \overset{?}{=} 15
+%&& \text{\quad rewrite left-hand side with common denominator}\\[1ex]
+%\frac{45}{3} & \overset{?}{=} 15
+%&& \text{\quad add fractions}\\[1ex]
+%15 & \overset{\checkmark}{=} 15
+%&& \text{\quad boom!}
+%\end{aligned}\]
+
 Writing our solution as a solution set, we have $\solset{15}$.
 
 \begin{boxex}
@@ -723,64 +919,139 @@ Writing our solution as a solution set, we have $\solset{15}$.
 Determine the value of $w$, given the equation \[7w + 2(\umin3w + 1) = 12.\]
 
 \exsoln\ Our goal is to try and simplify the left-hand side so that it looks like a Level 1 or Level 2 equation.
-\[\begin{aligned}
-7w + 2(\umin3w + 1) &= 12\\
-7w + \umin6w + 2 &= 12
-&&\text{\quad distributive property}\\
-1w + 2 & = 12
-&&\text{\quad combine like terms -- that's a Level 1 equation!}\\
-w + 2 - 2 & = 12 - 2
-&&\text{\quad SPOE}\\
-w & = 10
-\end{aligned}\]
+
+\begin{commwork}
+7w + 2(\umin3w + 1) &=& 12
+\\
+7w + \umin6w + 2 &=& 12
+& distributive property
+\\
+1w + 2 &=& 12
+& combine like terms -- that's a Level 1 equation!
+\\
+w + 2 - 2 &=& 12 - 2
+& SPOE
+\\
+w &=& 10
+\end{commwork}
+
+%\[\begin{aligned}
+%7w + 2(\umin3w + 1) &= 12\\
+%7w + \umin6w + 2 &= 12
+%&&\text{\quad distributive property}\\
+%1w + 2 & = 12
+%&&\text{\quad combine like terms -- that's a Level 1 equation!}\\
+%w + 2 - 2 & = 12 - 2
+%&&\text{\quad SPOE}\\
+%w & = 10
+%\end{aligned}\]
+
 Let's check our solution:
-\[\begin{aligned}
-7w + 2(\umin3w + 1) &= 12
-&& \text{\quad original equation}\\
-7(10) + 2(\umin3(10) + 1) &\overset{?}{=} 12
-&& \text{\quad substitute in our solution $w = 10$}\\
-70 + 2(\umin30 + 1) &\overset{?}{=} 12
-&& \text{\quad carry out the order of operations on the left-hand side}\\
-70 + 2(\umin29) &\overset{?}{=} 12\\
-70 + \umin58 &\overset{?}{=} 12\\
-12 &\overset{\checkmark}{=} 12\\
-\end{aligned}\]
+
+\begin{commwork}
+7w + 2(\umin3w + 1) &=& 12
+& original equation
+\\
+7(10) + 2(\umin3(10) + 1) &\overset{?}{=} &12
+& substitute in our solution $w = 10$
+\\
+70 + 2(\umin30 + 1) &\overset{?}{=}& 12
+& carry out the order of operations on the left-hand side
+\\
+70 + 2(\umin29) &\overset{?}{=}& 12
+\\
+70 + \umin58 &\overset{?}{=}& 12
+\\
+12 &\overset{\checkmark}{=}& 12
+\end{commwork}
+
+%\[\begin{aligned}
+%7w + 2(\umin3w + 1) &= 12
+%&& \text{\quad original equation}\\
+%7(10) + 2(\umin3(10) + 1) &\overset{?}{=} 12
+%&& \text{\quad substitute in our solution $w = 10$}\\
+%70 + 2(\umin30 + 1) &\overset{?}{=} 12
+%&& \text{\quad carry out the order of operations on the left-hand side}\\
+%70 + 2(\umin29) &\overset{?}{=} 12\\
+%70 + \umin58 &\overset{?}{=} 12\\
+%12 &\overset{\checkmark}{=} 12\\
+%\end{aligned}\]
+
 \end{boxex}
 
-We're going to look at one more example, and discuss two alternative ways to approach it.
+We're going to look at one more example and discuss two alternative ways to approach it.
 
 \begin{boxex}
 \label{ex:nodist}
 Determine the value of $g$, given the equation \[\umin4(2g - 7) = 36.\]
 
 \exsoln\ Approach \#1. Those parentheses are just asking to be simplified using the distributive property. Be mindful of the signs, though!
-\[\begin{aligned}
-\umin4(2g - 7) &= 36\\
-\umin8g + 28 &= 36
-&&\text{\quad distributive property -- that's a Level 2 equation!}\\
-\umin8g + 28 - 28 &= 36 - 28
-&&\text{\quad SPOE}\\
-\umin8g &= 8\\[1ex]
-\frac{\umin8g}{\umin8} &= \frac{8}{\umin8}
-&&\text{\quad DPOE}\\
-g &= \umin1
-\end{aligned}\]
+
+\begin{commwork}
+\umin4(2g - 7) &=& 36
+\\
+\umin8g + 28 &=& 36
+& distributive property -- that's a Level 2 equation!
+\\
+\umin8g + 28 - 28 &=& 36 - 28
+& SPOE
+\\
+\umin8g &=& 8
+\\[\fracspace]
+\frac{\umin8g}{\umin8} &=& \frac{8}{\umin8}
+& DPOE
+\\
+g &=& \umin1
+\end{commwork}
+
+%\[\begin{aligned}
+%\umin4(2g - 7) &= 36\\
+%\umin8g + 28 &= 36
+%&&\text{\quad distributive property -- that's a Level 2 equation!}\\
+%\umin8g + 28 - 28 &= 36 - 28
+%&&\text{\quad SPOE}\\
+%\umin8g &= 8\\[1ex]
+%\frac{\umin8g}{\umin8} &= \frac{8}{\umin8}
+%&&\text{\quad DPOE}\\
+%g &= \umin1
+%\end{aligned}\]
 
 Approach \#2. Let's solve the same equation again. This time, notice that we can divide both sides by $\umin4$ as the first step, which eliminates the need for the distributive property.
-\[\begin{aligned}
-\umin4(2g - 7) &= 36\\[1ex]
-\frac{\umin4(2g-7)}{\umin4} &= \frac{36}{\umin4}
-&&\text{\quad DPOE}\\
-2g-7 &= \umin9
-&&\text{\quad simplify -- that's a Level 2 equation!}\\
-2g-7+7 &= \umin9+7
-&&\text{\quad APOE}\\
-2g &= \umin2
-&&\text{\quad}\\[1ex]
-\frac{2g}{2} &= \frac{\umin2}{2}
-&&\text{\quad DPOE}\\
-g &= \umin1
-\end{aligned}\]
+
+\begin{commwork}
+\umin4(2g - 7) &=& 36
+\\[\fracspace]
+\frac{\umin4(2g-7)}{\umin4} &=& \frac{36}{\umin4}
+& DPOE
+\\[\fracspace]
+2g-7 &=& \umin9
+& simplify -- that's a Level 2 equation!
+\\
+2g-7+7 &=& \umin9+7
+& APOE
+\\
+2g &=& \umin2
+\\[\fracspace]
+\frac{2g}{2} &=& \frac{\umin2}{2}
+& DPOE
+\\[\fracspace]
+g &=& \umin1
+\end{commwork}
+
+%\[\begin{aligned}
+%\umin4(2g - 7) &= 36\\[1ex]
+%\frac{\umin4(2g-7)}{\umin4} &= \frac{36}{\umin4}
+%&&\text{\quad DPOE}\\
+%2g-7 &= \umin9
+%&&\text{\quad simplify -- that's a Level 2 equation!}\\
+%2g-7+7 &= \umin9+7
+%&&\text{\quad APOE}\\
+%2g &= \umin2
+%&&\text{\quad}\\[1ex]
+%\frac{2g}{2} &= \frac{\umin2}{2}
+%&&\text{\quad DPOE}\\
+%g &= \umin1
+%\end{aligned}\]
 
 \end{boxex}
 
@@ -795,26 +1066,44 @@ Every step we take in solving an equation generates an equivalent equation that 
 Solve for $x$, given the equation $2x-3(4x-1)=-53$.
 
 Let's say we mess up the signs when carrying out the distributive property -- a very common mistake.
-\[\begin{aligned}
-2x - 3(4x-1) &= \umin53
-&& \text{\quad Line 1.}
-\\
-2x - 12x - 3 &= \umin53
-&& \text{\quad Line 2. That's a mistake!}
-\\
-\umin10x - 3 &= \umin53
-&& \text{\quad Line 3.}
-\\
-\umin10x &= \umin50
-&& \text{\quad Line 4.}
-\\
-x &= 5
-&& \text{\quad Line 5.}
-\end{aligned}\]
 
-Now, we go back to check our work by substituting the solution into the original equation. The answer doesn't work in line 1, so we know it is not the correct solution. \[2(5) - 3\bigl(4(5)-4\bigr) = \umin53 \implies \umin38 \neq \umin53 \text{\quad(something went wrong!)}\]
-But, our answer \textit{does} work in line 2 (and also lines 3,4, and 5).
-\[2(5) - 12(5) - 3 = \umin53 \implies \umin53 = \umin53 \text{\quad(that works!)}\]
+\begin{commwork}
+2x - 3(4x-1) &=& \umin53
+& Line 1.
+\\
+2x - 12x - 3 &=& \umin53
+& Line 2. (That's a mistake!)
+\\
+\umin10x - 3 &=& \umin53
+& Line 3.
+\\
+\umin10x &=& \umin50
+& Line 4.
+\\
+x &=& 5
+& Line 5.
+\end{commwork}
+
+%\[\begin{aligned}
+%2x - 3(4x-1) &= \umin53
+%&& \text{\quad Line 1.}
+%\\
+%2x - 12x - 3 &= \umin53
+%&& \text{\quad Line 2. (That's a mistake!)}
+%\\
+%\umin10x - 3 &= \umin53
+%&& \text{\quad Line 3.}
+%\\
+%\umin10x &= \umin50
+%&& \text{\quad Line 4.}
+%\\
+%x &= 5
+%&& \text{\quad Line 5.}
+%\end{aligned}\]
+
+Now, we go back to check our work by substituting the solution into the original equation. The answer doesn't work in line 1, so we know it is not the correct solution. \[2(5) - 3\bigl(4(5)-4\bigr) = \umin53 \implies \umin38 \neq \umin53 \text{\quad(Something went wrong!)}\]
+But, our answer \textit{does} work in line 2 (and also lines 3, 4, and 5).
+\[2(5) - 12(5) - 3 = \umin53 \implies \umin53 = \umin53 \text{\quad(That works!)}\]
 This is the clue helps us pinpoint the location of the mistake. It tells us the mistake must have happened when transforming line 1 into line 2.
 
 If, on a different problem, we find that our solution doesn't work for steps 1, 2, or 3, but \textit{does work} in step 4, then it means that our mistake must have happened when transforming step 3 into step 4!
@@ -824,7 +1113,7 @@ If, on a different problem, we find that our solution doesn't work for steps 1, 
 \section{Level 4 linear equations: Variables on both sides}
 \label{sec:linearlevel4}
 
-In Level 4, we add a wrinkle, which can lead to some very unusual results.
+In Level 4, we add a wrinkle which can lead to some very unusual results.
 
 %\begin{boxexplore}[Extended exploration: Super evil mystery numbers]
 %\addtodoitem{Click here to visit the extended exploration: Super Evil Mystery Numbers}
@@ -836,69 +1125,148 @@ Determine the value of $x$ given the equation \[13x-5x-5=x+7+x.\]
 \end{boxexplore} %% End of startup exploration
 
 The goal is the same: to isolate the variable on one side of the equal sign. We begin by simplifying each side.
-\[\begin{aligned}
-13x-5x-5 &= x+7+x\\
-8x-5 &= 2x+7
-&&\text{\quad combine like terms on both sides}\\
-8x-5 - 2x &= 2x+7 - 2x
-&&\text{\quad SPOE: subtract $2x$ from both sides -- clever!}\\
-6x-5 &= 7
-&&\text{\quad combine like terms again -- that's a Level 2 equation!}\\
-6x &= 12
-&&\text{\quad APOE: add 5 to both sides}\\
-x &= 2
-&&\text{\quad DPOE: divide both sides by 6}
-\end{aligned}\]
+
+\begin{commwork}
+13x-5x-5 &=& x+7+x
+\\
+8x-5 &=& 2x+7
+& combine like terms on both sides
+\\
+8x-5 - 2x &=& 2x+7 - 2x
+& SPOE: subtract $2x$ from both sides -- clever!
+\\
+6x-5 &=& 7
+& combine like terms again -- that's a Level 2 equation!
+\\
+6x &=& 12
+& APOE: add 5 to both sides
+\\
+x &=& 2
+& DPOE: divide both sides by 6
+\end{commwork}
+
+%\[\begin{aligned}
+%13x-5x-5 &= x+7+x\\
+%8x-5 &= 2x+7
+%&&\text{\quad combine like terms on both sides}\\
+%8x-5 - 2x &= 2x+7 - 2x
+%&&\text{\quad SPOE: subtract $2x$ from both sides -- clever!}\\
+%6x-5 &= 7
+%&&\text{\quad combine like terms again -- that's a Level 2 equation!}\\
+%6x &= 12
+%&&\text{\quad APOE: add 5 to both sides}\\
+%x &= 2
+%&&\text{\quad DPOE: divide both sides by 6}
+%\end{aligned}\]
+
 In this example, we subtracted $2x$ from both sides of the equation. This might seem like a tricky move, but it's a completely legal application of SPOE. We are allowed to do the same thing to both sides of the balanced equation, even if that means subtracting an unknown amount from both sides.\footnote{Of course, you have to subtract the same unknown amount from both sides. It's no fair to subtract $x$ from one side of an equation and $y$ from the other side. This will put the equation out of balance unless we know that these two unknown amounts are equal\ldots\ that is, unless we know that $x=y$. Caution: can you think of a situation in which it might be dangerous to apply a POE using an unknown? Think about what might happen if we use DPOE to divide both sides by an unknown value $x$.}
 
 Let's see what happens if we isolate the unknown on \textit{the other side of the equal sign}. (It had better give us the same answer!)
-\[\begin{aligned}
-13x-5x-5 &= x+7+x
-&&\text{\quad same equation as before}\\
-8x-5 &= 2x+7
-&&\text{\quad combine like terms on both sides, as before}\\
-8x-5 - 8x &= 2x+7 - 8x
-&&\text{\quad SPOE: subtract $8x$ from both sides}\\
-\umin5 &= \umin6x + 7
-&&\text{\quad combine like terms}\\
-\umin12 &= \umin6x
-&&\text{\quad SPOE: subtract 7 from both sides}\\
-2 &= x
-&&\text{\quad DPOE: divide both sides by $\umin6$}
-\end{aligned}\]
 
-So, it doesn't matter which side we choose to eliminate the unknown. As long as we apply APOE or SPOE correctly, the solution will be the same. One strategy is to choose the side that will result in a \textit{positive coefficient} for the variable. This isn't required, but it helps avoid the chances of losing a negative sign along the way (maybe that's happened to you).\footnote{Napoleon ordered the creation of the first modern lost-and-found office in Paris in 1805, although lost-property systems have existed in Japan since the early 700s.}
+\begin{commwork}
+13x-5x-5 &=& x+7+x
+& same equation as before
+\\
+8x-5 &=& 2x+7
+& combine like terms on both sides, as before
+\\
+8x-5 - 8x &=& 2x+7 - 8x
+& SPOE: subtract $8x$ from both sides
+\\
+\umin5 &=& \umin6x + 7
+& combine like terms
+\\
+\umin12 &=& \umin6x
+& SPOE: subtract 7 from both sides
+\\
+2 &=& x
+& DPOE: divide both sides by $\umin6$
+\end{commwork}
 
-Plus, if you don't like the side of the equation that the unknown is on, you can always rewrite the equation. For example if you have the equation $3=4+x$ and you really want the $x$ on the left-hand side, you can just rewrite the equation as $4+x=3$. Those are equivalent equations!\footnote{Even these obvious properties have been given names. For example, this is a fact about equations: if $a=b$, then $b=a$. To describe this, we say that equality is \textit{symmetric}. An even more obvious statement is that $a=a$ (we say that equality is \textit{reflexive}). A third property is a little more interesting: if $a=b$ and $b=c$, then $a=c$ (we say that equality is \textit{transitive}). }
+%\[\begin{aligned}
+%13x-5x-5 &= x+7+x
+%&&\text{\quad same equation as before}\\
+%8x-5 &= 2x+7
+%&&\text{\quad combine like terms on both sides, as before}\\
+%8x-5 - 8x &= 2x+7 - 8x
+%&&\text{\quad SPOE: subtract $8x$ from both sides}\\
+%\umin5 &= \umin6x + 7
+%&&\text{\quad combine like terms}\\
+%\umin12 &= \umin6x
+%&&\text{\quad SPOE: subtract 7 from both sides}\\
+%2 &= x
+%&&\text{\quad DPOE: divide both sides by $\umin6$}
+%\end{aligned}\]
+
+So, it doesn't matter which side we choose to eliminate the unknown. As long as we apply APOE or SPOE correctly, the solution will be the same. One strategy is to choose the side that will result in a \textit{positive coefficient} for the variable. This isn't required, but it helps avoid the chances of losing a negative sign along the way. (Maybe that's happened to you!)\footnote{Napoleon ordered the creation of the first modern lost-and-found office in Paris in 1805, although lost-property systems have existed in Japan since the early 700s.}
+
+Plus, if we don't like the side of the equation that the unknown is on, we can always rewrite the equation. For example if we have the equation $3=4+x$ and we really want the $x$ on the left-hand side, we can just rewrite the equation as $4+x=3$. Those are equivalent equations!\footnote{Even these obvious properties have been given names. For example, this is a fact about equations: if $a=b$, then $b=a$. To describe this, we say that equality is \textit{symmetric}. An even more obvious statement is that $a=a$ (we say that equality is \textit{reflexive}). A third property is a little more interesting: if $a=b$ and $b=c$, then $a=c$ (we say that equality is \textit{transitive}). }
 
 \begin{boxex}
+\label{ex:zerosoln}
 Determine the value of $x$ given the equation \[3(x-2)+3x=4x-6.\]
 
 \exsoln\ Let's jump right in and start simplifying the left-hand side.
-\[\begin{aligned}
-3(x-2)+3x &= 4x-6\\
-3x-6+3x &= 4x-6
-&&\text{\quad distributive property}\\
-6x-6 &= 4x-6
-&&\text{\quad combine like terms}\\
-2x-6 &= -6
-&&\text{\quad SPOE: subtract $4x$ from both sides}\\
-2x &= 0
-&&\text{\quad APOE: add 6 to both sides}\\
-x &= 0
-&&\text{\quad DPOE: divide both sides} by 2\\
-\end{aligned}\]
+
+\begin{commwork}
+3(x-2)+3x &=& 4x-6
+\\
+3x-6+3x &=& 4x-6
+& distributive property
+\\
+6x-6 &=& 4x-6
+& combine like terms
+\\
+2x-6 &=& -6
+& SPOE: subtract $4x$ from both sides
+\\
+2x &=& 0
+& APOE: add 6 to both sides
+\\
+x &=& 0
+& DPOE: divide both sides by 2
+\end{commwork}
+
+%\[\begin{aligned}
+%3(x-2)+3x &= 4x-6\\
+%3x-6+3x &= 4x-6
+%&&\text{\quad distributive property}\\
+%6x-6 &= 4x-6
+%&&\text{\quad combine like terms}\\
+%2x-6 &= -6
+%&&\text{\quad SPOE: subtract $4x$ from both sides}\\
+%2x &= 0
+%&&\text{\quad APOE: add 6 to both sides}\\
+%x &= 0
+%&&\text{\quad DPOE: divide both sides by 2}\\
+%\end{aligned}\]
 
 Yes, we can get 0 as the solution to an equation. We can always check to be sure:
-\[\begin{aligned}
-3(x-2)+3x &= 4x-6
-&& \text{\quad original equation}\\
-3(0-2)+3(0) &\overset{?}{=} 4(0)-6
-&& \text{\quad substitute in our solution $x = 0$}\\
-3(\umin2)+0 &\overset{?}{=} \umin6
-&& \text{\quad simplify}\\
-\umin6 &\overset{\checkmark}{=} \umin6\\
-\end{aligned}\]
+
+\begin{commwork}
+3(x-2)+3x &=& 4x-6
+& original equation
+\\
+3(0-2)+3(0) &\overset{?}{=}& 4(0)-6
+& substitute in our solution $x = 0$
+\\
+3(\umin2)+0 &\overset{?}{=}& \umin6
+& simplify
+\\
+\umin6 &\overset{\checkmark}{=}& \umin6
+\\
+\end{commwork}
+
+%\[\begin{aligned}
+%3(x-2)+3x &= 4x-6
+%&& \text{\quad original equation}\\
+%3(0-2)+3(0) &\overset{?}{=} 4(0)-6
+%&& \text{\quad substitute in our solution $x = 0$}\\
+%3(\umin2)+0 &\overset{?}{=} \umin6
+%&& \text{\quad simplify}\\
+%\umin6 &\overset{\checkmark}{=} \umin6\\
+%\end{aligned}\]
+
 \end{boxex}
 
 \subsection{Special cases}
@@ -906,18 +1274,33 @@ Yes, we can get 0 as the solution to an equation. We can always check to be sure
 There are some things to be careful about with when it comes to solving Level 4 linear equations. Here is an example of something strange that can happen when we have unknowns on both sides of the equal sign.
 
 \begin{boxex}
+\label{ex:nosoln}
 Determine the value of $x$ given the equation \[12x + 36 = 2(6x-10).\]
 
 \exsoln\ We proceed as we have done in earlier problems:
-\[\begin{aligned}
-12x + 36 &= 2(6x-10)\\
-12x + 36 &= 12x-20
-&&\text{\quad distributive property}\\
-12x+36-12x &= 12x-20-12x
-&&\text{\quad SPOE: subtract $12x$ from both sides}\\
-36 &= \umin20
-&&\text{\quad Huh?}\\
-\end{aligned}\]
+
+\begin{commwork}
+12x + 36 &=& 2(6x-10)
+\\
+12x + 36 &=& 12x-20
+& distributive property
+\\
+12x+36-12x &=& 12x-20-12x
+& SPOE: subtract $12x$ from both sides
+\\
+36 &=& \umin20
+& huh?
+\end{commwork}
+
+%\[\begin{aligned}
+%12x + 36 &= 2(6x-10)\\
+%12x + 36 &= 12x-20
+%&&\text{\quad distributive property}\\
+%12x+36-12x &= 12x-20-12x
+%&&\text{\quad SPOE: subtract $12x$ from both sides}\\
+%36 &= \umin20
+%&&\text{\quad Huh?}\\
+%\end{aligned}\]
 
 In this case the variable term disappears completely from both sides of the equation. And then, what is left is obviously \textit{not equal}. In a sense, the original ``equation'' is not an equation at all. The two given expressions are not equal, and never will be.
 
@@ -932,7 +1315,7 @@ Or, there is a third option. You may or may not be surprised to learn that mathe
 
 Notice that we don't write the curly braces around the empty set. In other words, we write $\mathcal{S}=\emptyset$ and not $\solset{\emptyset}$. The former says ``$S$ is the empty set'', which is what we mean when we have an equation with no solutions. The latter says ``$S$ is the set which contains the empty set'' which -- believe it or not -- is not the same thing.\footnote{The empty set is not the same as zero, and it is not the same as nothing. It is a set with nothing inside it, like an empty bag. So, writing $\mathcal{S} = \emptyset$ is stating that the solution set is like an empty bag. Extending this metaphor, $\{\emptyset\}$ is a bag with an empty bag in it and, therefore, a set which contains the empty set is not empty. Om.}
 
-For the record, the empty set is not the same as zero. So, an equation can have the solution set $\solset{0}$, like example 5.6. This is different from an equation having the solution set $\solset{~}$, like example 5.7.
+For the record, the empty set is not the same as zero. So, an equation can have the solution set $\solset{0}$, like example \cref{ex:zerosoln}. This is different from an equation having the solution set $\solset{~}$, like example \cref{ex:nosoln}.
 
 If you look back at the reason why the last example has no solution, you may be wondering about whether there is another possibility. Study the following example.
 
@@ -940,17 +1323,34 @@ If you look back at the reason why the last example has no solution, you may be 
 Determine the value of $x$ given the equation \[5x-3(x+2)=2x-6.\]
 
 \exsoln\ Let's go for it:
-\[\begin{aligned}
-5x-3(x+2) &= 2x-6\\
-5x-3x-6 &= 2x-6
-&&\text{\quad distributive property, watch the signs}\\
-2x-6 &= 2x-6
-&&\text{\quad combine like terms -- something is fishy already.}\\
-2x-6-2x &= 2x-6-2x
-&&\text{\quad SPOE: subtract $2x$ from both sides}\\
--6 &= -6
-&&\text{\quad But, of course.}\\
-\end{aligned}\]
+
+\begin{commwork}
+5x-3(x+2) &=& 2x-6
+\\
+5x-3x-6 &=& 2x-6
+& distributive property, watch the signs
+\\
+2x-6 &=& 2x-6
+& combine like terms -- something is fishy already\ldots
+\\
+2x-6-2x &=& 2x-6-2x
+& SPOE: subtract $2x$ from both sides
+\\
+-6 &=& -6
+& but, of course!
+\end{commwork}
+
+%\[\begin{aligned}
+%5x-3(x+2) &= 2x-6\\
+%5x-3x-6 &= 2x-6
+%&&\text{\quad distributive property, watch the signs}\\
+%2x-6 &= 2x-6
+%&&\text{\quad combine like terms -- something is fishy already.}\\
+%2x-6-2x &= 2x-6-2x
+%&&\text{\quad SPOE: subtract $2x$ from both sides}\\
+%-6 &= -6
+%&&\text{\quad But, of course.}\\
+%\end{aligned}\]
 
 In this case the variable term disappears again, and the leftovers are \textit{obviously equal}. This is the opposite of what happened earlier. If that example had no solutions, this one has all of them. We can replace $x$ with literally any real number and the equation will be true. That means that we have a solution set that contains every real number there is.
 
@@ -969,7 +1369,7 @@ If we find that an equation has ``no solutions'', then any number we use to chec
 \section{Level 5 linear equations: Absolute value}
 \label{sec:linearlevel5}
 
-Over the last few sections we have added complexity to the equation-solving picture. We have learned properties that can be used to ``undo'' whatever has been ``done'' to the variable. Sometimes this has led to situations where the equation has no solutions, or infinitely many solutions. We turn now to equations that involve the absolute value of an unknown.\footnote{We're discussing absolute value equations here in the chapter on linear equations, though we put ``linear'' in quotes. Absolute value equations of the kind that we're discussing here are linear-like enough that they fit here. Other types of absolute value equations are possible, though we won't get into the full range of variations in this course.}
+Over the last few sections we have added complexity to the equation-solving picture. We have learned properties that can be used to ``undo'' whatever has been ``done'' to the variable. Sometimes this has led to situations where the equation has no solutions or infinitely many solutions. We turn now to equations that involve the absolute value of an unknown.\footnote{We're discussing absolute value equations here in the chapter on linear equations, though we put ``linear'' in quotes. Absolute value equations of the kind that we're discussing here are linear-like enough that they fit here. Other types of absolute value equations are possible, though we won't get into the full range of variations in this course.}
 
 %\begin{boxexplore}[Extended exploration: Dreadful mystery numbers]
 %\addtodoitem{Click here to visit the extended exploration: Dreadful Mystery Numbers}
@@ -980,7 +1380,7 @@ Over the last few sections we have added complexity to the equation-solving pict
 Recall the definition of absolute value. Determine the value of $x$ given the equation \[\abs{x} = 6.\]
 \end{boxexplore} %% End of startup exploration
 
-Recall that the absolute value of a number is that number's distance away from zero on the number line. Distances are always positive: $\umin6$ is 6 units away from 0, and so $\abs{\umin6}=6$. Of course, $\abs{6} = 6$ as well. So, the equation above has two solutions $x = 6 \OR \umin6$.\footnote{Note, we mean \textit{or} and not \textit{and}. Both 6 and $\umin6$ are solutions to the equation, but we must write $x=6 \OR \umin6$, since $x$ can have only take on one value at a time.} In solution set notation, we write $\solset{6, \umin6}$.
+Recall that the absolute value of a number is that number's distance away from zero on the number line. Distances are always positive: $\umin6$ is 6 units away from 0, and so $\abs{\umin6}=6$. Of course, $\abs{6} = 6$ as well. So, the equation above has two solutions $x = 6 \OR \umin6$.\footnote{Note, we mean \textit{or} and not \textit{and}. Both 6 and $\umin6$ are solutions to the equation, but we must write $x=6 \OR \umin6$, since $x$ can only take on one value at a time.} In solution set notation, we write $\solset{6, \umin6}$.
 
 The presence of the absolute value gives us the possibility of having two solutions, since whatever is inside the absolute value bars could be either the positive or the negative version of the value.
 
@@ -994,35 +1394,56 @@ The following two examples carry this idea a bit further.
 Determine the value of $x$ given the equation \[\abs{\umin3x+9} = 12.\]
 
 \exsoln\ The stuff inside the absolute value bars can equal 12 or $\umin12$. So, this means, we have two equations:
+
+% Note: we use "aligned" rather than "commwork" in this case because of the unusual "or" construction
 \[\begin{aligned}
 \umin3x + 9 &= 12 	&\OR 	&&\umin3x + 9 &= \umin12\\
 \umin3x  &= 3 		&	 	&&-3x &= \umin21
-&&\text{\quad SPOE: subtract 9 throughout}\\
+&&\text{\qquad SPOE: subtract 9 throughout}\\
 x &= \umin1 		&	 	&&x &= 7
-&&\text{\quad DPOE: divide by $-3$ throughout}\\
+&&\text{\qquad DPOE: divide by $-3$ throughout}\\
 \end{aligned}\]
+
 This equation has solutions $\solset{\umin1, 7}$.
 \end{boxex}
 
 Note that the steps we took for solving were the same for both equations (in this case, first we used SPOE, and then DPOE). So, we can streamline our work a bit, as shown in the next example.
 
-The next example also has things going on outside of the absolute value symbols. For these types of problems, we want to isolate the absolute value expression first (using the properties of equality), then separate into two equations (if necessary).\footnote{In case you are wondering, we won't get into equations that include multiple abvolute value expressions\ldots\ although you might enjoy exploring an equation of this kind, just for fun. For example, what values of $x$ satisfy this equation? $\abs{x+2}=2\abs{x}-1$}
+The next example also has things going on outside of the absolute value symbols. For these types of problems, we want to isolate the absolute value expression first (using the properties of equality), then separate into two equations (if necessary).\footnote{In case you are wondering, we won't get into equations that include multiple absolute value expressions\ldots\ although you might enjoy exploring an equation of this kind, just for fun. For example, what values of $x$ satisfy this equation? $\abs{x+2}=2\abs{x}-1$}
 
 \begin{boxex}
-Determine the value of $x$ given the equation: $3\abs{\umin4x+4} = 48$.
+Determine the value of $x$ given the equation: $3\,\abs{4-4x} = 48$.
 
-\exsoln\ 
-\[\begin{aligned}
-3\abs{\umin4x+4} &= 48\\
-\abs{\umin4x+4} &= 16
-&&\text{\quad DPOE, to isolate the absolute value expression}\\
-\umin4x+4 &= 16 \OR \umin16
-&&\text{\quad definition of absolute value}\\
-\umin4x &= 12 \OR \umin20
-&&\text{\quad SPOE: subtract 4 throughout}\\
-x &= \umin3 \OR 5
-&&\text{\quad DPOE: divide by $\umin4$ throughout}
-\end{aligned}\]
+\exsoln\ We use the POEs at first, and then split into two equations when necessary.
+
+\begin{commwork}
+3\,\abs{4-4x} &=& 48
+\\
+\abs{4-4x} &=& 16
+& DPOE, to isolate the absolute value expression
+\\
+4-4x &=& 16 \OR \umin16
+& definition of absolute value
+\\
+\umin4x &=& 12 \OR \umin20
+& SPOE: subtract 4 throughout
+\\
+x &=& \umin3 \OR 5
+& DPOE: divide by $\umin4$ throughout
+\end{commwork}
+
+%\[\begin{aligned}
+%3\abs{\umin4x+4} &= 48\\
+%\abs{\umin4x+4} &= 16
+%&&\text{\quad DPOE, to isolate the absolute value expression}\\
+%\umin4x+4 &= 16 \OR \umin16
+%&&\text{\quad definition of absolute value}\\
+%\umin4x &= 12 \OR \umin20
+%&&\text{\quad SPOE: subtract 4 throughout}\\
+%x &= \umin3 \OR 5
+%&&\text{\quad DPOE: divide by $\umin4$ throughout}
+%\end{aligned}\]
+
 So, this equation has solutions $\solset{\umin3, 5}$.
 \end{boxex}
 
@@ -1043,16 +1464,39 @@ Don't be too quick with the ``no solutions'' talk, though. If we encounter the e
 Some folks like to use the notation ``plus/minus'' in situations that involve absolute value. For example, writing ``$\pm6$'' with the little stacked-up plus and minus signs to stand for ``$6 \OR \umin6$''. We recommend avoiding $\pm$ notation when solving equations.
 
 Here's why. See if you can spot the error in the following work.
-\[\begin{aligned}
-\abs{x - 5} &= 12\\
-x-5 &= \pm12\\
-x &= \pm17
-&& \text{\quad APOE: add 5 to both sides}\\
-\end{aligned}\]
+
+\begin{commwork}
+\abs{x - 5} &=& 12
+\\
+x-5 &=& \pm12
+\\
+x &=& \pm17
+& APOE: add 5 to both sides
+\end{commwork}
+
+%\[\begin{aligned}
+%\abs{x - 5} &= 12\\
+%x-5 &= \pm12\\
+%x &= \pm17
+%&& \text{\quad APOE: add 5 to both sides}\\
+%\end{aligned}\]
+
 And so, $\solset{17, \umin17}$. This work looks reasonable, but let's check the two solutions.
-\[\abs{17 - 5} \overset{?}{=} 12 \implies \abs{12} \overset{?}{=} 12 \implies 12 \overset{\checkmark}{=} 12\]
-\[\abs{\umin17 - 5} \overset{?}{=} 12 \implies \abs{\umin22} \overset{?}{=} 12 \implies 22 \neq 12\]
-So, using the $\pm$ notation has led us to get one correct solution and one incorrect solution for the equation! This is why we recommend writing out the word ``or'' explicitly, or breaking into two separate equations.
+
+\[\begin{array}{clclc}
+\abs{17 - 5} \overset{?}{=} 12
+&\implies& \abs{12} \overset{?}{=} 12
+&\implies& 12 \overset{\checkmark}{=} 12
+\\
+\abs{\umin17 - 5} \overset{?}{=} 12
+&\implies& \abs{\umin22} \overset{?}{=} 12
+&\implies& 22 \neq 12
+\end{array}\]
+
+%\[\abs{17 - 5} \overset{?}{=} 12 \implies \abs{12} \overset{?}{=} 12 \implies 12 \overset{\checkmark}{=} 12\]
+%\[\abs{\umin17 - 5} \overset{?}{=} 12 \implies \abs{\umin22} \overset{?}{=} 12 \implies 22 \neq 12\]
+
+So, using the $\pm$ notation has led us to get one correct solution and one incorrect solution for the equation! This is why we recommend either writing out the word ``or'' explicitly or breaking into two separate equations.
 
 (By the way, the correct solution is $\solset{17, \umin7}$. Try working out the problem again using a more reliable technique. Can you see exactly where the work using $\pm$ went astray?)
 \end{boxwarn}
@@ -1076,7 +1520,7 @@ There are lots of ways to approach problems like this: educated guessing-and-che
 On Halloween night, Hildegaard and Ingvar (Bob and Yeardleigh's parents) had 200 candies in their trick-or-treat bowl. They gave 5 candies to each kid who came to their door, and at the end of the night they had 10 candies left. How many kids came trick-or-treating?
 \end{boxexplore}
 
-The key in word problems like this is first to identify the unknown in the problem. We choose a variable to stand in for the unknown, and write an equation based on the other information given in the problem.
+The key in word problems like this is first to identify the unknown in the problem. We choose a variable to stand in for the unknown and write an equation based on the other information given in the problem.
 
 In our example, the unknown is ``how many kids came trick-or-treating'', so let's use $k$ to represent the number of kids. Hildegaard and Ingvar gave 5 candies to every kid, so they gave away $5k$ candies. They started with 200 and gave away $5k$. Giving away suggests subtraction, so they were left with $200-5k$ candies at the end of the night. The problem tells us that they had 10 candies let over, so:
 \[200-5k = 10.\]
@@ -1088,31 +1532,46 @@ Here's a second example. ``Consecutive integer problems'' are a clever type of m
 
 What does it mean to have three consecutive integers? Consecutive means ``in an unbroken sequence'', so three consecutive integers are three integers in a row, such as $4, 5, 6$.
 
-Let $N$ represent the smallest of the three consecutive integers. Then, the next integer is $N+1$, and the integer after that is $N+2$. The problem says their sum is 39. So we have
-\[\begin{aligned}
-N + (N+1) + (N+2) &=  39\\
-3N + 3 &= 39
-&& \text{\quad combine like terms}\\
-3N &= 36
-&& \text{\quad SPOE}\\
-N &= 12
-&& \text{\quad DPOE}\\
-\end{aligned}\]
+Let $N$ represent the smallest of the three consecutive integers. Then, the next integer is $N+1$, and the integer after that is $N+2$. The problem says their sum is 39. So we have:
+
+\begin{commwork}
+N + (N+1) + (N+2) &=&  39
+\\
+3N + 3 &=& 39
+& combine like terms
+\\
+3N &=& 36
+& SPOE
+\\
+N &=& 12
+& DPOE
+\end{commwork}
+
+%\[\begin{aligned}
+%N + (N+1) + (N+2) &=  39\\
+%3N + 3 &= 39
+%&& \text{\quad combine like terms}\\
+%3N &= 36
+%&& \text{\quad SPOE}\\
+%N &= 12
+%&& \text{\quad DPOE}\\
+%\end{aligned}\]
+
 At this point, many students would be tempted to draw a box around their answer and call it a day. After all, we solved the equation, right? But, look back at the question: it asks us to find the \textit{numbers}, plural. Our answer to the question should list all three of the numbers!
 
 What did we actually compute when we solved the equation? We chose $N$ to represent the smallest of the three consecutive integers, and that's 12. So, the full answer is that the three integers are 12, 13, and 14. (A quick check shows that these three do, in fact, add up to 39.)
 
 The moral of the story here is always to check that we are answering the question that has been asked. This step is a helpful way to avoid giving an irrelevant or incomplete solution.
 
-Finally, when it comes to stating the solution to a word problem, we don't usually use set notation. A handy rule of thumb is to think about how we'd say the answer out loud to someone. When we solve an equation with no context, we'd probably say ``The solution is 4.'' Set notation is appropriate, since the answer is just a number, $\solset{4}$.
+Finally, when it comes to stating the solution to a word problem, we don't usually use set notation. A handy rule of thumb is to think about how we'd say the answer out loud to someone. When we solve an equation with no context, we'd probably say: ``The solution is 4.'' Set notation is appropriate, since the answer is just a number, $\solset{4}$.
 
-On the other hand, if we were answering a word problem that asked how many pounds of cream cheese Bob ate, we'd say ``Bob ate 4 pounds of cream cheese.'' When the context of the problem implies a unit on the answer (pounds, dollars, goats, miles per hour), we write the answer and the unit rather than use solution set notation: 4 pounds of cream cheese.
+On the other hand, if we were answering a word problem that asked how many pounds of cream cheese Bob ate, we'd say: ``Bob ate 4 pounds of cream cheese.'' When the context of the problem implies a unit on the answer (pounds, dollars, goats, miles per hour), we write the answer and the unit rather than use solution set notation: 4 pounds of cream cheese.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Transforming formulas}
 \label{sec:transformingformulas}
 
-In all of the examples in this chapter so far, we have solved equations and found the value of an unknown. In this section, we'll discuss a different use the field axioms and the properties of equality.
+In all of the examples in this chapter so far, we have solved equations and found the value of an unknown. In this section, we'll discuss a different use of the field axioms and the properties of equality.
 
 In the past, you may have learned a formula for the area of a triangle. If we have a triangle with base of length $b$ and height $h$, then its area $A$ has a tidy little formula.
 \begin{center}
@@ -1142,17 +1601,35 @@ Transforming a formula means to isolate a specific variable, even though the oth
 Transform the triangle area formula, $A = \frac{1}{2}bh$, to isolate $h$.
 
 \exsoln\ We'll start with the given formula, and then apply the properties of equality to get $h$ by itself on one side of the equal sign.
-\[\begin{aligned}
-A &= \frac{1}{2}bh \\[1ex]
-2 \cdot A &= 2 \cdot \frac{1}{2} bh
-&& \quad\text{MPOE, to eliminate the fraction}\\[1ex]
-2A &= bh
-&& \quad\text{simplify on the righthand side}\\[1ex]
-\frac{2 A}{b} &= \frac{bh}{b}
-&& \quad\text{DPOE, to isolate $h$}\\[1ex]
-\frac{2 A}{b} &= h
-&& \quad\text{simplify on the righthand side: mission accomplished!}\\[1ex]
-\end{aligned}\]
+
+\begin{commwork}
+A &=& \frac{1}{2}bh
+\\[\fracspace]
+2 \cdot A &=& 2 \cdot \frac{1}{2} bh
+& MPOE, to eliminate the fraction
+\\[\fracspace]
+2A &=& bh
+& simplify on the righthand side
+\\[\fracspace]
+\frac{2 A}{b} &=& \frac{bh}{b}
+& DPOE, to isolate $h$
+\\[\fracspace]
+\frac{2 A}{b} &=& h
+& simplify on the righthand side: mission accomplished!
+\end{commwork}
+
+%\[\begin{aligned}
+%A &= \frac{1}{2}bh \\[1ex]
+%2 \cdot A &= 2 \cdot \frac{1}{2} bh
+%&& \quad\text{MPOE, to eliminate the fraction}\\[1ex]
+%2A &= bh
+%&& \quad\text{simplify on the righthand side}\\[1ex]
+%\frac{2 A}{b} &= \frac{bh}{b}
+%&& \quad\text{DPOE, to isolate $h$}\\[1ex]
+%\frac{2 A}{b} &= h
+%&& \quad\text{simplify on the righthand side: mission accomplished!}\\[1ex]
+%\end{aligned}\]
+
 So, our transformed formula expresses the height of a triangle in terms of its area and the length of a base: \[h = \frac{2A}{b}\]
 \end{boxex}
 
@@ -1160,36 +1637,68 @@ This is a skill used in science (especially physics) and higher levels of mathem
 
 \addtodoitem{Remember: Since we moved transforming formulas before the linear equations formulae, we should add a bit about transforming standard from later.}
 
-Even though our answers won't be just a number, they should be simplified as much as possible, for instance we must avoid fractions-in-fractions. Parentheses, too, can lead to tricky situations. It often pays to formulate a plan before rushing to work.
+Even though our answers won't be just a number, they should be simplified as much as possible. For instance we must avoid fractions-in-fractions. Parentheses, too, can lead to tricky situations. It often pays to formulate a plan before rushing to work.
 
 \begin{boxex}
-$P = 2( w + d )$ for $w$
+Transform the equation $P = 2( w + d )$ to isolate $w$.
 
 \exsoln\ Sometimes we have to distribute, other times it is easier to avoid it all together. Compare the two options below.
 
 Option 1: Avoiding the distributive property
-\[\begin{aligned}
-P &= 2(w + d)\\
-\tfrac{P}{2} &= w - d
-&&\quad\text{DPOE}\\
-\tfrac{P}{2} - d &= w
-&&\quad\text{SPOE}\\
-\end{aligned}\]
+
+\begin{commwork}
+P &=& 2(w + d)
+\\[\fracspace]
+\frac{P}{2} &=& w - d
+& DPOE
+\\[\fracspace]
+\frac{P}{2} - d &=& w
+& SPOE
+\end{commwork}
+
+%\[\begin{aligned}
+%P &= 2(w + d)\\
+%\tfrac{P}{2} &= w - d
+%&&\quad\text{DPOE}\\
+%\tfrac{P}{2} - d &= w
+%&&\quad\text{SPOE}\\
+%\end{aligned}\]
 
 Option 2: Distributive property first
-\[\begin{aligned}
-P &= 2(w + d)\\
-P &= 2w + 2d
-&&\quad\text{distributive property}\\
-P - 2d &= 2w
-&&\quad\text{SPOE}\\
-\tfrac{P - 2d}{2}&= w
-&&\quad\text{DPOE}\\
-\tfrac{P}{2} - \tfrac{2d}{2}&= w
-&&\quad\text{undo fraction subtraction}\\
-\tfrac{P}{2} - d&= w
-&&\quad\text{write second fraction in lowest terms}\\
-\end{aligned}\]
+
+\begin{commwork}
+P &=& 2(w + d)
+\\
+P &=& 2w + 2d
+& distributive property
+\\
+P - 2d &=& 2w
+& SPOE
+\\[\fracspace]
+\frac{P - 2d}{2}&=& w
+& DPOE
+\\[\fracspace]
+\frac{P}{2} - \frac{2d}{2} &=& w
+& undo fraction subtraction
+\\[\fracspace]
+\frac{P}{2} - d &=& w
+& write second fraction in lowest terms
+\end{commwork}
+
+%\[\begin{aligned}
+%P &= 2(w + d)\\
+%P &= 2w + 2d
+%&&\quad\text{distributive property}\\
+%P - 2d &= 2w
+%&&\quad\text{SPOE}\\
+%\tfrac{P - 2d}{2}&= w
+%&&\quad\text{DPOE}\\
+%\tfrac{P}{2} - \tfrac{2d}{2}&= w
+%&&\quad\text{undo fraction subtraction}\\
+%\tfrac{P}{2} - d&= w
+%&&\quad\text{write second fraction in lowest terms}\\
+%\end{aligned}\]
+
 \end{boxex}
 
 In the previous example, the second approach is a bit more work. The distributive property can't always be avoided though, as we saw back in \cref{ex:dist}. So, it pays to be observant and do a bit of thinking before we start crunching the numbers.
@@ -1207,115 +1716,219 @@ Surprisingly, we can use the axioms given in \cref{sec:equivalence} to explain o
 \subsubsection{Multiplication by zero}
 
 We know that $a \cdot 0 = 0$, but there's no axiom stating this. That's because we can explain multiplication by zero using the axioms that we already have. Consider this argument, where we state the property that we used to transform each line:
-\[\begin{aligned}
-0 + 0 &= 0
-&& \quad\text{identity property of addition}
+
+\begin{commwork}
+0 + 0 &=& 0
+& identity property of addition
 \\
-a\cdot(0+0) &= a\cdot0
-&& \quad\text{MPOE: multiply both sides by $a$}
+a\cdot(0+0) &=& a\cdot0
+& MPOE: multiply both sides by $a$
 \\
-a\cdot0 + a\cdot0 &= a\cdot0
-&& \quad\text{distribuive property on left-hand side}
+a\cdot0 + a\cdot0 &=& a\cdot0
+& distribuive property on left-hand side
 \\
-a\cdot0 &= 0
-&& \quad\text{SPOE: subtract $a\cdot0$ from both sides}
-\end{aligned}\]
+a\cdot0 &=& 0
+& SPOE: subtract $a\cdot0$ from both sides
+\end{commwork}
+
+%\[\begin{aligned}
+%0 + 0 &= 0
+%&& \quad\text{identity property of addition}
+%\\
+%a\cdot(0+0) &= a\cdot0
+%&& \quad\text{MPOE: multiply both sides by $a$}
+%\\
+%a\cdot0 + a\cdot0 &= a\cdot0
+%&& \quad\text{distribuive property on left-hand side}
+%\\
+%a\cdot0 &= 0
+%&& \quad\text{SPOE: subtract $a\cdot0$ from both sides}
+%\end{aligned}\]
+
 In the end, we used only the given axioms and the properties of equality to demonstrate that any number times 0 is zero. We don't need an axiom for this rule, because we can \textit{build it} from the given set of axioms!
 
 \subsubsection{Multiplication and negative numbers: Property \#1}
 
 We are given an axiom stating that $1 \cdot a = a$ (that's the identity property of multiplication). But, we have no axiom stating that $\umin1 \cdot a = \umin a$. It turns out that we don't need one:
-\[\begin{aligned}
-1 + \umin1 &= 0
-&& \quad\text{inverse property of addition}
+
+\begin{commwork}
+1 + \umin1 &=& 0
+& inverse property of addition
 \\
-a\cdot(1+\umin1) &= a\cdot0
-&& \quad\text{MPOE: multiply both sides by $a$}
+a\cdot(1+\umin1) &=& a\cdot0
+& MPOE: multiply both sides by $a$
 \\
-a\cdot1 + a\cdot\umin1 &= a\cdot0
-&& \quad\text{distribuive property on left-hand side}
+a\cdot1 + a\cdot\umin1 &=& a\cdot0
+& distribuive property on left-hand side
 \\
-a + a\cdot\umin1 &= 0
-&& \quad\text{simplifications: $a\cdot1 = a$ and $a\cdot0 = 0$}
+a + a\cdot\umin1 &=& 0
+& simplifications: $a\cdot1 = a$ and $a\cdot0 = 0$
 \\
-a\cdot\umin1 &= \umin a
-&& \quad\text{SPOE: subtract $a$ from both sides}
-\end{aligned}\]
+a\cdot\umin1 &=& \umin a
+& SPOE: subtract $a$ from both sides
+\end{commwork}
+
+%\[\begin{aligned}
+%1 + \umin1 &= 0
+%&& \quad\text{inverse property of addition}
+%\\
+%a\cdot(1+\umin1) &= a\cdot0
+%&& \quad\text{MPOE: multiply both sides by $a$}
+%\\
+%a\cdot1 + a\cdot\umin1 &= a\cdot0
+%&& \quad\text{distribuive property on left-hand side}
+%\\
+%a + a\cdot\umin1 &= 0
+%&& \quad\text{simplifications: $a\cdot1 = a$ and $a\cdot0 = 0$}
+%\\
+%a\cdot\umin1 &= \umin a
+%&& \quad\text{SPOE: subtract $a$ from both sides}
+%\end{aligned}\]
+
 We could apply the commutative property of multiplication on the left-hand side, if we want, to have the new rule $\umin1 \cdot a = \umin a$.
 
 \subsubsection{Multiplication and negative numbers: Property \#2}
 Another fundamental result that seems obvious is that if we take the ``double negative'' of a number, we get back to the original number. In other words, the opposite of the opposite of $a$ is $a$ itself: $\umin(\umin a) = a$.
 
 Consider this: we know that $a + \umin a = 0$ (that's the inverse property of addition). We know that $\umin a$ also has an additive inverse: $\umin a + \umin(\umin a) = 0$. Since these are both equal to 0, they are equal to each other. So:
-\[\begin{aligned}
-a + \umin a &= \umin a + \umin(\umin a)
-&& \quad\text{both equal 0, so they equal each other}
+
+\begin{commwork}
+a + \umin a &=& \umin a + \umin(\umin a)
+& both equal 0, so they equal each other
 \\
-a &= \umin(\umin a)
-&& \quad\text{SPOE: subtract $\umin a$ from both sides!}
-\end{aligned}\]
+a &=& \umin(\umin a)
+& SPOE: subtract $\umin a$ from both sides!
+\end{commwork}
+
+%\[\begin{aligned}
+%a + \umin a &= \umin a + \umin(\umin a)
+%&& \quad\text{both equal 0, so they equal each other}
+%\\
+%a &= \umin(\umin a)
+%&& \quad\text{SPOE: subtract $\umin a$ from both sides!}
+%\end{aligned}\]
 
 \subsubsection{Multiplication and negative numbers: Property \#3}
 We can use the axioms to explain why the product of a negative number and a positive number is negative. Let $a$ and $b$ be positive numbers:
-\[\begin{aligned}
-a \cdot 0 &= 0
-&& \quad\text{multiplication by zero}
+
+\begin{commwork}
+a \cdot 0 &=& 0
+& multiplication by zero
 \\
-a \cdot (b + \umin b) &= 0
-&& \quad\text{rewrite 0 using the additive inverse property}
+a \cdot (b + \umin b) &=& 0
+& rewrite 0 using the additive inverse property
 \\
-a \cdot b + a \cdot \umin b &= 0
-&& \quad\text{distributive property}
+a \cdot b + a \cdot \umin b &=& 0
+& distributive property
 \\
-a \cdot \umin b &= \umin (a \cdot b)
-&& \quad\text{SPOE: subtract $a \cdot b$ from both sides}
-\end{aligned}\]
+a \cdot \umin b &=& \umin (a \cdot b)
+& SPOE: subtract $a \cdot b$ from both sides
+\end{commwork}
+
+%\[\begin{aligned}
+%a \cdot 0 &= 0
+%&& \quad\text{multiplication by zero}
+%\\
+%a \cdot (b + \umin b) &= 0
+%&& \quad\text{rewrite 0 using the additive inverse property}
+%\\
+%a \cdot b + a \cdot \umin b &= 0
+%&& \quad\text{distributive property}
+%\\
+%a \cdot \umin b &= \umin (a \cdot b)
+%&& \quad\text{SPOE: subtract $a \cdot b$ from both sides}
+%\end{aligned}\]
+
 So, if we have ``the opposite of $a$'' times $b$, the result is the opposite of the product of $a$ and $b$.
 
 \subsubsection{Multiplication and negative numbers: Property \#4}
 We can use property \#3 to prove that the product of two negative numbers is positive. Let $a$ and $b$ be positive numbers:
-\[\begin{aligned}
-\umin a \cdot 0 &= 0
-&& \quad\text{multiplication by zero}
+
+\begin{commwork}
+\umin a \cdot 0 &=& 0
+& multiplication by zero
 \\
-\umin a \cdot (b + \umin b) &= 0
-&& \quad\text{rewrite 0 using the additive inverse property}
+\umin a \cdot (b + \umin b) &=& 0
+& rewrite 0 using the additive inverse property
 \\
-\umin a \cdot b + \umin a \cdot \umin b &= 0
-&& \quad\text{distributive property}
+\umin a \cdot b + \umin a \cdot \umin b &=& 0
+& distributive property
 \\
-\umin (a \cdot b) + \umin a \cdot \umin b &= 0
-&& \quad\text{property \#3}
+\umin (a \cdot b) + \umin a \cdot \umin b &=& 0
+& property \#3
 \\
-\umin a \cdot \umin b &= a\cdot b
-&& \quad\text{APOE: add $a\cdot b$ to both sides!}
-\end{aligned}\]
+\umin a \cdot \umin b &=& a\cdot b
+& APOE: add $a\cdot b$ to both sides!
+\end{commwork}
+
+%\[\begin{aligned}
+%\umin a \cdot 0 &= 0
+%&& \quad\text{multiplication by zero}
+%\\
+%\umin a \cdot (b + \umin b) &= 0
+%&& \quad\text{rewrite 0 using the additive inverse property}
+%\\
+%\umin a \cdot b + \umin a \cdot \umin b &= 0
+%&& \quad\text{distributive property}
+%\\
+%\umin (a \cdot b) + \umin a \cdot \umin b &= 0
+%&& \quad\text{property \#3}
+%\\
+%\umin a \cdot \umin b &= a\cdot b
+%&& \quad\text{APOE: add $a\cdot b$ to both sides!}
+%\end{aligned}\]
+
 So, the two products are the same! The product of two negative numbers is the same as the product of their opposites (that is, their positive partners).
 
 \subsubsection{Mind blown!}
 We've been taking the properties of equality for granted, but \textit{even the properties of equality} can be derived from the field axioms. The POEs are the properties that allow us to make a cancellation, for example taking \[x + 4 = 10\] and thinking about it as \[x + 4 = 6 + 4.\] We can cancel the 4 from both sides and get $x = 6$ (we call this SPOE, the subtraction property of equality). Suppose we have real numbers $a$, $b$, and $c$, and we know that $a+c = b+c$. Then, consider this chain of reasoning:
-\[\begin{aligned}
-a &= a + 0
-&& \quad\text{additive identity property}
+
+\begin{commwork}
+a &=& a + 0
+& additive identity property
 \\
-&= a + (c + \umin c)
-&& \quad\text{rewrite 0 using the additive inverse property}
+&=& a + (c + \umin c)
+& rewrite 0 using the additive inverse property
 \\
-&= (a + c) + \umin c
-&& \quad\text{associative property of addition}
+&=& (a + c) + \umin c
+& associative property of addition
 \\
-&= (b + c) + \umin c
-&& \quad\text{substitution: we assumed that $a+c = b+c$}
+&=& (b + c) + \umin c
+& substitution: we assumed that $a+c = b+c$
 \\
-&= b + (c + \umin c)
-&& \quad\text{associative property of addition}
+&=& b + (c + \umin c)
+& associative property of addition
 \\
-&= b + 0
-&& \quad\text{additive inverse property}
+&=& b + 0
+& additive inverse property
 \\
-&= b
-&& \quad\text{additive identity property}
-\end{aligned}\]
+&=& b
+& additive identity property
+\end{commwork}
+
+%\[\begin{aligned}
+%a &= a + 0
+%&& \quad\text{additive identity property}
+%\\
+%&= a + (c + \umin c)
+%&& \quad\text{rewrite 0 using the additive inverse property}
+%\\
+%&= (a + c) + \umin c
+%&& \quad\text{associative property of addition}
+%\\
+%&= (b + c) + \umin c
+%&& \quad\text{substitution: we assumed that $a+c = b+c$}
+%\\
+%&= b + (c + \umin c)
+%&& \quad\text{associative property of addition}
+%\\
+%&= b + 0
+%&& \quad\text{additive inverse property}
+%\\
+%&= b
+%&& \quad\text{additive identity property}
+%\end{aligned}\]
+
 What does this tell us? Notice that we started our equation with $a$ and ended up with $b$. This means $a=b$. Altogether, we have shown that if we know $a+c = b+c$, then it must be that $a = b$. That's one of our POEs!
 
 In the end, we have been able to used the field axioms to prove that other fundamental properties hold true. Don't worry if it feels overwhelming at first. This section has gotten into some pretty abstract territory! Let these ideas sink in and read through this section again later. It takes time for our brains to incorporate challenging ideas.
