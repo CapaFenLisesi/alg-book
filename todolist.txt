@@ -1,11 +1,10 @@
-[Krumbliverse] Section 1.1. Bob is not so great at math.
-[TODO] Section 1.2. Change commented work in this chapter to the commwork format.
-[TODO] Section 1.3. Link to extended exploration: Mystery numbers
-[Krumbliverse] Section 1.3. Bob weighs cheese.
-[TODO] Section 1.5. Link to extended exploration: Evil mystery numbers
-[TODO] Section 1.6. Link to extended exploration: Super evil mystery numbers
-[TODO] Section 1.7. Link to extended exploration: Dreadful mystery numbers
-[TODO] Section 1.8. Link to extended exploration: Mixed bag o' problems
-[Krumbliverse] Section 1.8. Ingvar and Hildegaard, parents, at Halloween.
-[TODO] Section 1.8. Remember: Since we moved transforming formulas before the linear equations formulae, we should add a bit about transforming standard from later.
-[TODO] Section 1.8. fix example numbering here
+[TODO] Section 1.1. Link to extended exploration: Multiply and conquer
+[Krumbliverse] Section 1.1. YeardleighCorp genetic engineers develop super-hamster.
+[Krumbliverse] Section 1.2. Bob owns a lot of Spam.
+[Krumbliverse] Section 1.2. YeardleighCorp cryptozoologists conduct chupacabra study.
+[TODO] Section 1.3. Link to extended exploration: Direct variation
+[Krumbliverse] Section 1.3. Yeardleigh travles to India in search of new flavors, exchanges money.
+[TODO] Section 1.3. Graphs and visuals for DV
+[TODO] Section 1.4. Link to extended exploration: Teeter-totter nickels
+[Krumbliverse] Section 1.4. Francois plants an herb garden.
+[TODO] Section 1.4. asymptote in I.V. section

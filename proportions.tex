@@ -3,7 +3,7 @@
 
 \chapquote{Give me the place to stand, and I shall move the earth.}{Archimedes, Ancient Greek mathematician and philosopher}
 
-A key concept in pre-algebra mathematics is proportionality. The ideas of ratio, proportion, and percent are probably familiar to you, and you likely have solved proportions in your mathematical career so far.
+A key concept in pre-algebra mathematics is proportionality. The ideas of ratio, proportion, and percent are probably familiar to you, and you likely have already solved proportions in your mathematical career.
 
 In this chapter we will apply the tools and techniques we learned in \cref{ch:equations} to some of these familiar contexts. Then we will take proportionality to the ``algebra level'' by exploring the concepts of direct and inverse variation.
 
@@ -15,7 +15,7 @@ Mathematicians, like Yeardleigh's team of gourmet chefs, won't use tools, techni
 
 Case in point: solving proportions. Many of us have been taught a mysterious method called ``cross multiplication'' as a means of solving a proportion. Unless we can explain it's inner workings -- Where does it come from? Why does it give us the correct answer? -- then the technique must be considered off-limits.
 
-We'll explain so-called cross-multiplication in this chapter, and explore alternative (easier) methods of handling proportions.
+We'll explain so-called cross-multiplication in this chapter and explore alternative (easier) methods of handling proportions.
 
 %\begin{boxexplore}[Extended exploration: Multiply and conquer]
 %\addtodoitem{Click here to visit the extended exploration: Multiply and Conquer}
@@ -43,15 +43,23 @@ An equation stating that two ratios are equal.
 Proportions are just equations, and so we don't need any special techniques like ``cross-multiplication'' to solve them. We can use the trusty properties of equality, just as we do with any other equation.
 
 \begin{boxex}
-Solve for $x$: $\dfrac{x}{15}=\dfrac{44}{60}$
+Solve for $x$: $\dfrac{x}{24}=\dfrac{44}{96}$
 
-\exsoln\ Our suggestion is not to think of the left side as a fraction at all. Think of it as $x$ divided by 15. That's just a Level 1 linear equation! We need to get rid of the ``divide by 15'' and so we multiply both sides by 15.
-\[\begin{aligned}
-15\cdot\frac{x}{15} &= 15\cdot\frac{44}{60}\\[2ex]
-\cancel{15}\cdot\frac{x}{\cancel{15}} &= \cancel{15}\cdot\frac{44}{\cancel{15}\cdot4}\\[2ex]
-x&=11
-\end{aligned}\]
-After a bit of simplifying, we have isolated $x$ with just one application of MPOE.
+\exsoln\ Our suggestion is not to think of the left side as a fraction at all. Think of it as $x$ divided by 24. That's just a Level 1 linear equation! We need to get rid of the ``divide by 24'' and so we multiply both sides by 24.
+%
+\begin{commwork}
+\frac{x}{24} &=& \frac{44}{96}
+\\[\fracspace]
+24\cdot\frac{x}{24} &=& 24\cdot\frac{44}{96}
+& MPOE: multiply both sides by 24
+\\[\fracspace]
+\bcancel{24}\cdot\frac{x}{\bcancel{24}} &=& \bcancel{24}\cdot\frac{44}{\bcancel{24}\cdot4}
+& simplify
+\\[\fracspace]
+x &=& 11
+\end{commwork}
+%
+After a bit of fraction-simplifying, we have isolated $x$ with just one application of MPOE.
 \end{boxex}
 
 We call this approach ``clear the denominator''. Of course, it's not the only way to solve a proportion, and not always the easiest way.\footnote{You may have learned other approaches for solving proportions, and that's a good thing! One very handy approach is to scale up (or down) one (or both) of the ratios so that they have a common numerator or denominator: another application of the identity property of multiplication!}
@@ -68,13 +76,23 @@ The startup exploration problem says that a 15-ounce superhamster can carry a 40
 \exsoln\ Let's write a proportion comparing the ratio of weight to carrying capacity, and let us use $P$ to represent the amount that the teenage can carry, in pounds. Then we have: \[\frac{15 \text{ ounces}}{40 \text{ ounces}} = \frac{120 \text{ pounds}}{P \text{ pounds}}\]
 
 We wrote these ratios as ``weight/carrying capacity'', but of course we could also  have written the ratios as ``carrying capacity/weight''. So, one solution approach is to take the reciprocal of both sides. That will put the unknown conveniently in the numerator!
-\[\begin{aligned}
-\frac{40 \text{ ounces}}{15 \text{ ounces}} &= \frac{P \text{ pounds}}{120 \text{ pounds}}
-\\[2ex]
-120\cdot\frac{40}{15} &= 120\cdot\frac{P}{120}
-\\[2ex]
-320 &= P
-\end{aligned}\]
+%
+\begin{commwork}
+\frac{40 \text{ ounces}}{15 \text{ ounces}} &=& \frac{P \text{ pounds}}{120 \text{ pounds}}
+\\[\fracspace]
+120\cdot\frac{40}{15} &=& 120\cdot\frac{P}{120}
+\\[\fracspace]
+320 &=& P
+\end{commwork}
+
+%\[\begin{aligned}
+%\frac{40 \text{ ounces}}{15 \text{ ounces}} &= \frac{P \text{ pounds}}{120 \text{ pounds}}
+%\\[2ex]
+%120\cdot\frac{40}{15} &= 120\cdot\frac{P}{120}
+%\\[2ex]
+%320 &= P
+%\end{aligned}\]
+
 So, a 120-pound teenage of superhamster strength could carry 320 pounds of food. For comparison, according to the US census, the average American ate approximately 257 pounds of fruit in 2009 (including fresh fruit, dried fruit, and fruit juice). So this teenager could carry 25\% more fruit than they would typically eat in a year.
 \end{boxex}
 
@@ -90,56 +108,99 @@ Before we move on, the maneuver we made in the last example --- taking the recip
 Is ``take the reciprocal of both sides'' a property of equality? In other words, if we know that $a = b$, do we know for sure that $\frac{1}{a} = \frac{1}{b}$ is always true?
 
 The fact that $a$ and $b$ end up in the denominator of a fraction means that we must require that $a$ and $b$ are non-zero at the start. If $a$ and $b$ are both non-zero, then we can use DPOE with both numbers.
-\[\begin{aligned}
-a &= b
-&&\text{\quad We assume that this is true, and that $a$ and $b$ are non-zero}
-\\[2ex]
-\frac{a}{a} &= \frac{b}{a}
-&&\text{\quad DPOE, using $a$}
-\\[2ex]
-1 &= \frac{b}{a}
-&&\text{\quad Simplify}
-\\[2ex]
-\frac{1}{b} &= \frac{b}{a\cdot b}
-&&\text{\quad DPOE, using $b$}
-\\[2ex]
-\frac{1}{b} &= \frac{\bcancel{b}}{a\cdot \bcancel{b}}
-&&\text{\quad Cancel the common factor}
-\\[2ex]
-\frac{1}{b} &= \frac{1}{a}
-&&\text{\quad Voil\`a}
-\end{aligned}\]
+%
+\begin{commwork}
+a &=& b
+& assume that this is true, and that $a$ and $b$ are non-zero
+\\[\fracspace]
+\frac{a}{a} &=& \frac{b}{a}
+& DPOE: divide both sides by $a$
+\\[\fracspace]
+1 &=& \frac{b}{a}
+& simplify
+\\[\fracspace]
+\frac{1}{b} &=& \frac{b}{a\cdot b}
+& DPOE: divide both sides by $b$
+\\[\fracspace]
+\frac{1}{b} &=& \frac{\bcancel{b}}{a\cdot \bcancel{b}}
+& cancel the common factor
+\\[\fracspace]
+\frac{1}{b} &=& \frac{1}{a}
+& voil\`a!
+\end{commwork}
+
+%\[\begin{aligned}
+%a &= b
+%&&\text{\quad We assume that this is true, and that $a$ and $b$ are non-zero}
+%\\[2ex]
+%\frac{a}{a} &= \frac{b}{a}
+%&&\text{\quad DPOE, using $a$}
+%\\[2ex]
+%1 &= \frac{b}{a}
+%&&\text{\quad Simplify}
+%\\[2ex]
+%\frac{1}{b} &= \frac{b}{a\cdot b}
+%&&\text{\quad DPOE, using $b$}
+%\\[2ex]
+%\frac{1}{b} &= \frac{\bcancel{b}}{a\cdot \bcancel{b}}
+%&&\text{\quad Cancel the common factor}
+%\\[2ex]
+%\frac{1}{b} &= \frac{1}{a}
+%&&\text{\quad Voil\`a}
+%\end{aligned}\]
+
 So, in the end, if two numbers (both nonzero) are equal, then we know that their reciprocals are equal as well. ``Take the reciprocal of both sides'' is a property of equality.
 \end{boxdef}
 
-Of course, we might be faced with numerators and denominators that are more complicated. Here's an example with variables on both sides of the equation. Our approach is to use MPOE to clear \textit{both of the denominators}.
+Of course, we might be faced with numerators and denominators that are more complicated. Here's an example with variables on both sides of the equation.
 
 \begin{boxex}
 Solve for $x$: $\dfrac{x+1}{2}=\dfrac{x+2}{5}$
 
-\exsoln\
-\[\begin{aligned}
-\dfrac{x+1}{2} &=\dfrac{x+2}{5}
-\\[2ex]
-\bcancel{2}\cdot5\cdot\left(\frac{x+1}{\bcancel{2}}\right) &=
+\exsoln\ Our approach is to use MPOE to clear \textit{both of the denominators}.
+%
+\begin{commwork}
+\dfrac{x+1}{2} &=& \dfrac{x+2}{5}
+\\[\fracspace]
+\bcancel{2}\cdot5\cdot\left(\frac{x+1}{\bcancel{2}}\right) &=&
 2\cdot\cancel{5}\cdot\left(\frac{x+2}{\cancel{5}}\right)
-&&\quad\text{MPOE two times!}
-\\[2ex]
-5(x+1) &= 2(x+2)
+& MPOE two times!
+\\[\fracspace]
+5(x+1) &=& 2(x+2)
 \\
-5x+5 &= 2x+4
-&&\quad\text{distributive property}
+5x+5 &=& 2x+4
+& distributive property
 \\
-3x &= 1
-&&\quad\text{SPOE two times!}
-\\[2ex]
-x &= \dfrac{1}{3}
-&&\quad\text{DPOE}
-\end{aligned}\]
+3x &=& 1
+& SPOE two times!
+\\[\fracspace]
+x &=& \dfrac{1}{3}
+& DPOE
+\end{commwork}
+
+%\[\begin{aligned}
+%\dfrac{x+1}{2} &=\dfrac{x+2}{5}
+%\\[2ex]
+%\bcancel{2}\cdot5\cdot\left(\frac{x+1}{\bcancel{2}}\right) &=
+%2\cdot\cancel{5}\cdot\left(\frac{x+2}{\cancel{5}}\right)
+%&&\quad\text{MPOE two times!}
+%\\[2ex]
+%5(x+1) &= 2(x+2)
+%\\
+%5x+5 &= 2x+4
+%&&\quad\text{distributive property}
+%\\
+%3x &= 1
+%&&\quad\text{SPOE two times!}
+%\\[2ex]
+%x &= \dfrac{1}{3}
+%&&\quad\text{DPOE}
+%\end{aligned}\]
+
 To write our answer in set notation, we have $\solset{\frac{1}{3}}$.
 \end{boxex}
 
-The previous example may give you some insight into how cross-multiplication works, and might come in handy when working on the problems and exercises.
+The previous example may give you some insight into how cross-multiplication works!
 
 \begin{boxwarn}
 Solve: $\dfrac{x+2}{5} = \dfrac{7}{6}$
@@ -154,7 +215,7 @@ Note that this is the same kind of structure as \[ 4(x+2) = 16\] Here we have to
 \section{Applications of proportional reasoning}
 \label{sec:probsolvwithprops}
 
-Proportional reasoning encompasses a key set of skills that are important to have in your problem solving toolbox. In this section we'll discuss a few of the classic ways that ratio and proportion show up in problem solving contexts.
+Proportional reasoning encompasses a key set of skills that are important to have in your problem-solving toolbox. In this section we'll discuss a few of the classic ways that ratio and proportion show up in problem-solving contexts.
 
 \subsection{Percent}
 
@@ -164,13 +225,13 @@ Proportional reasoning encompasses a key set of skills that are important to hav
 Bob is counting cans of Spam in his pantry. For every 3 cans of ``low-sodium'' Spam, he has 5 cans of Spam with the usual (higher) amount of sodium. What percent of the Spam in his pantry is low-sodium? 
 \end{boxexplore}
 
-Break the word ``percent'' into its component parts, ``per cent'', and think about what each part means. The word ``cent'' indicates 100 (there are 100 {\em} cents in a dollar, and 100 years in a \textit{cent}ury), while the word ``per'' indicates that we are making a comparison (earning \$10 \textit{per} hour at a job means you earn \$10 for every hour that you work).
+Break the word ``percent'' into its component parts, ``per cent'', and think about what each part means. The word ``cent'' indicates 100 (there are 100 {\em} cents in a dollar and 100 years in a \textit{cent}ury), while the word ``per'' indicates that we are making a comparison (earning \$10 \textit{per} hour at a job means you earn \$10 for every hour that you work).
 
-Putting the words back together, percent means ``per 100'' or ``for every 100''. When we write a percent as 75\%, or say out loud ``seventy-five percent'', we're really mean ``75 per 100'' or ``75 out of 100''. We could write the decimal 0.75, or the fraction $\frac{75}{100}$.
+Putting the words back together, percent means ``per 100'' or ``for every 100''. When we write a percent as 75\%, or say out loud ``seventy-five percent'', we really mean ``75 per 100'' or ``75 out of 100''. We could write the decimal 0.75, or the fraction $\frac{75}{100}$.
 
 The fraction $\frac{75}{100}$ isn't in lowest terms, so we could write instead: \[\frac{3}{4} = \frac{75}{100}\]
 Proportion is the heart of percent, and percent problems are all really about the percent proportion: \[\frac{\text{part}}{\text{whole}} = \frac{\text{percent}}{100}\]
-So given a percent question, we just have to ask ourselves which pieces of the percent proportion we know, and which we are trying to find.
+So given a percent question, we just have to ask ourselves which pieces of the percent proportion we know and which we are trying to find.
 
 \begin{boxex}
 Write proportions that could be used to solve each of the following:
@@ -186,7 +247,7 @@ Write proportions that could be used to solve each of the following:
 
 	\item \onerowex{$\dfrac{50}{75}=\dfrac{x}{100}$}{Here we are asked for the percent. The other information has to be untangled a bit, but we can see that 75 is the whole and 50 is the part.}
 
-	\item \onerowex{$\dfrac{15}{x}=\dfrac{15}{100}$}{We're given the percent again, only this time the question asks ``of what number'', indicating that we're seeking the whole. The unknown ends up in the denominator, but that's no problem if we remember to reciprocalize!}
+	\item \onerowex{$\dfrac{15}{x}=\dfrac{25}{100}$}{We're given the percent again, only this time the question asks ``of what number'', indicating that we're seeking the whole. The unknown ends up in the denominator, but that's no problem if we remember to reciprocalize!}
 \end{enumerate}
 \end{boxex}
 
@@ -196,7 +257,7 @@ Which means 37.5\% of the cans in Bob's pantry are ``low-sodium''.
 
 \subsection{Probability}
 
-Questions about chance and probability are very often just proportional reasoning questions in fancy clothes. We won't get into much detail about probability in this course, except to hit some of the highlights.
+Questions about chance and probability are very often just proportional reasoning questions in fancy clothes. We won't get into much detail about probability in this course except to hit some of the highlights.
 
 \begin{boxexplore}[1d12]
 Suppose we were to roll a standard 12-sided die (with faces showing the numbers 1--12) 1000 times. How many times would we expect to roll a prime number?
@@ -210,7 +271,7 @@ The sample space of a probability experiment is the set of all possible outcomes
 
 Generally speaking, the probability of a certain desired outcome occurring in an experiment is the ratio \[\frac{\text{number of ways the desired outcome can occur}}{\text{number of outcomes in the sample space}}\]
 
-This probability $\frac{5}{12}$ tells us that if we threw the die 12 times and wrote down the numbers, we'd expect to see approximately 5 prime numbers among our data. To predict how many prime numbers we might see when throwing the die 1000 times, we set up a proportion. Let $p$ be the number of primes we expect in 1000 trials. \[\frac{5\text{ primes}}{12\text{ trials}} = \frac{p\text{ primes}}{1000\text{ trials}}\] Solving for $p$, we see that $p\approx417$. So, we predict 417-ish primes in 1000 trials.\footnote{Of course, nothing is guaranteed when it comes to probability experiments. It could be that we get \textit{1000} prime numbers! It's not very likely that this could happen, in fact it's practically impossible. In smaller experiments --- throwing the die 50 times, say --- it's quite likely that we'd get many more (or many less) than the 20 or some primes we would expect in that case.}
+This probability $\frac{5}{12}$ tells us that if we threw the die 12 times and wrote down the numbers, we'd expect to see approximately 5 prime numbers among our data. To predict how many prime numbers we might see when throwing the die 1000 times, we set up a proportion. Let $p$ be the number of primes we expect in 1000 trials. \[\frac{5\text{ primes}}{12\text{ trials}} = \frac{p\text{ primes}}{1000\text{ trials}}\] Solving for $p$, we see that $p\approx417$. So, we predict 417-ish primes in 1000 trials.\footnote{Of course, nothing is guaranteed when it comes to probability experiments. It could be that we get \textit{1000} prime numbers! It's not very likely that this could happen, in fact it's practically impossible. In smaller experiments --- throwing the die 50 times, say --- it's quite likely that we'd get many more (or many fewer) than the 20 or so primes we would expect.}
 
 \begin{boxexplore}[2d6]
 Suppose we were to roll \textit{two} standard 6-sided dice and add the two numbers. If we perform this experiment 1000 times, how many times would we expect to roll a prime number?
@@ -235,17 +296,17 @@ Determining the sample space for this experiment requires a bit of thinking. It 
 
 From the table we can see that there are, for instance, four ways to roll a 9. With a bit of counting in the table, we can see that there are 15 cells that contain a prime number (out of 36 cells total). So, the probability of rolling a prime number in this experiment is $\frac{15}{36}$. We set up and solve our proportion: \[\frac{15}{36} = \frac{p}{1000} \quad\implies\quad p\approx417.\] In 1000 trials, then, we would expect to see approximately 417 prime numbers when rolling two 6-sided dice and finding their sum.\footnote{Isn't it interesting that the probability of rolling a prime number on a single 12-sided die is the same as rolling a prime number on a pair of 6-sided dice? Is this a coincidence, or is there a mathematical connection between these two probabilities that suggests why they are the same?}
 
-The examples above discuss \textit{theoretical probability}. We were working in a ``perfect world'' and basing our predictions and conclusions on properties of the dice. The alternative would have been to conduct an experiment and then use the data from that experiment to predict the outcome of future experiments. We call that \textit{experimental probability}, and an example from that department will close out this section.
+The examples above discuss \textit{theoretical probability}. We were working in a ``perfect world'' scenario and basing our predictions and conclusions on properties of the dice. The alternative would have been to conduct an experiment and then use the data from that experiment to predict the outcome of future experiments. We call that \textit{experimental probability}, and an example from that department will close out this section.
 
 \subsection{Experimental data}
 
-In an ongoing project about goat safety, cryptozoologists at YeardleighCorp Labs have proposed a study of the hunting behavior of the chupacabra.\footnote{Cryptozoology (which comes from the Greek ``crypto'', meaning ``hidden'', and ``zoology'', the study of animals) is a pseudoscience (the prefix ``pseudo'' means ``false'') based on the study of animals that have not been proven to exist. The ``animals'' in question are called ``cryptids''. Famous cryptids include the Loch Ness monster, bigfoot, the yeti, and the chupacabra. The chupacabra, Spanish for ``goat sucker'' is, allegedly, a creature that attacks and drinks the blood of livestock, especially goats.} The ``scientists'' plan to release a chupacabra into the hills around YeardleighCorp Labs, and then study the impact on the local wild goat population.
+In an ongoing project about goat safety, cryptozoologists at YeardleighCorp Labs have proposed a study of the hunting behavior of the chupacabra.\footnote{Cryptozoology (which comes from the Greek ``crypto'', meaning ``hidden'', and ``zoology'', the study of animals) is a pseudoscience (the prefix ``pseudo'' means ``false'') based on the study of animals that have not been proven to exist. The ``animals'' in question are called ``cryptids''. Famous cryptids include the Loch Ness monster, bigfoot, the yeti, and the chupacabra. The chupacabra, Spanish for ``goat sucker'' is, allegedly, a creature that attacks and drinks the blood of livestock, especially goats.} The ``scientists'' plan to release a chupacabra into the hills around YeardleighCorp Labs and then study the impact on the local wild goat population.
 
 \kverse{YeardleighCorp cryptozoologists conduct chupacabra study.}
 
 Before the study can begin, the scientists need to estimate the existing population of goats. It's clearly impossible to actually count all of the wild goats, so to make an estimate the biologists propose to use the \textit{capture-recapture} (or \textit{capture-mark-recapture}) process.
 
-First, they will capture a sample of goats and mark them with ear tags. Then these tagged goats will be released and allowed to mingle with all the untagged goats. The biologists will wait a few weeks for the goats to mix thoroughly, then capture second sample of goats.
+First, they will capture a sample of goats and mark them with ear tags. Then these tagged goats will be released and allowed to mingle with all the untagged goats. The biologists will wait a few weeks for the goats to mix thoroughly, then capture a second sample of goats.
 
 The assumption is that the proportion of ``tagged goats to total goats \textit{in the second sample}'' is the same as the proportion of ``tagged goats to total goats \textit{in the study area}''. (A second assumption is that the population remains constant during this process.) Solving the resulting proportion will give an estimate for the number of goats in the study area.
 
@@ -255,18 +316,20 @@ Suppose this team of cryptozoologists initially captures and tags 25 goats, then
 \bigskip\inlineex{Solution:} Our assumption is that the ratio of \textit{tagged goats} to \textit{all goats} represented by the second sample is equivalent to the ratio for the whole population. Originally, 25 goats were tagged. Then the second sample of 100 contained 6 tagged goats. So, we can estimate the total population as follows:
 \[\frac{6\text{ tagged in second sample}}{100\text{ total in second sample}} = \frac{25\text{ tagged in population}}{g \text{ total in population}}\]
 Solving the proportion:
-\[\begin{aligned}
-\frac{6}{100} &= \frac{25}{g}
-\\[2ex]
-\frac{100}{6} &= \frac{g}{25}
-&&\quad\text{take reciprocal of both sides}
-\\[2ex]
-\frac{100}{6} \cdot 25 &= \frac{g}{25} \cdot 25
-&&\quad\text{MPOE}
-\\[2ex]
-417 &\approx g
-\end{aligned}\]
-Based on the data, a reasonable estimate is that there are approximately 417 goats in the study area.
+%
+\begin{commwork}
+\frac{6}{100} &=& \frac{25}{g}
+\\[\fracspace]
+\frac{100}{6} &=& \frac{g}{25}
+& take reciprocal of both sides
+\\[\fracspace]
+\frac{100}{6} \cdot 25 &=& \frac{g}{25} \cdot 25
+& MPOE
+\\[\fracspace]
+417 &\approx& g
+\end{commwork}
+
+Based on the data, a reasonable estimate is that there are approximately 417 goats in the study area. Recall that the symbol $\approx$ means ``approximately equal to''.
 \end{boxex}
 
 There is a great deal more that could be said about probability, some of which you have probably seen before. There are other ways to represent a sample space  (like a tree diagram), there are other kinds of experiments in which certain events influence other events (you may recall that it sometimes matters whether or not you ``put the marble back into the bag'')\ldots\ but for now, we just wish to mention the aspects of probability include a taste of proportional reasoning.
@@ -296,7 +359,7 @@ How many rupees will Yeardleigh get for exchanging 250 USD? How much is 22\,500 
 
 When scientists begin to understand a phenomenon, like a law of physics, it's often quite helpful to understand it in terms of a relationship: how one quantity changes with respect to another.
 
-For example: The greater the mass of an object, the greater the gravitational force acting on that object.\footnote{When the masses of the two objects are very different (for example, if we are comparing your mass to the mass of the Earth), then the larger object's mass dominates the interaction. The equation describing this relationship is part of Isaac Newton's ``Law of Universal Gravitation''. It states that any two bodies in the universe attract each other with a force that is directly proportional to the product of their masses and inversely proportional to the square of the distance between them.} We say that the force varies directly with mass. There is an equation that describes this relationship, but the key idea is that the force acting on an object due to gravity is directly proportional to the object's mass.
+For example: The greater the mass of an object, the greater the gravitational force acting on that object.\footnote{When the masses of the two objects are very different (for example, if we are comparing your mass to the mass of the Earth), the larger object's mass dominates the interaction. The equation describing this relationship is part of Isaac Newton's ``Law of Universal Gravitation''. It states that any two bodies in the universe attract each other with a force that is directly proportional to the product of their masses and inversely proportional to the square of the distance between them.} We say that the force varies directly with mass. There is an equation that describes this relationship, but the key idea is that the force acting on an object due to gravity is directly proportional to the object's mass.
 
 \begin{boxdef}[Direct variation]
 The variables $x$ and $y$ are said to be \gls{directly proportional} if their values have a constant ratio. In other words, $\frac{y}{x} = k$, where $k$ is a constant called the \gls{constant of variation}.
@@ -322,7 +385,7 @@ If we let $y$ represent the number of rupees, and $x$ represent the number of do
 
 The family of direct variations is a subset of the family of linear functions, in the same way that the integers $\Z$ are a subset of the rational numbers $\Q$.
 
-\begin{center}
+\begin{figure}
 \begin{tikzpicture}
 	\draw[rounded corners=8pt] (0,0) rectangle (6,4);
 	\draw (3,3.625) node {all functions};
@@ -331,17 +394,41 @@ The family of direct variations is a subset of the family of linear functions, i
 	\draw (3,1.25) circle[x radius=1.5cm, y radius=0.75cm];
 	\draw (3,1.25) node {direct variations};
 \end{tikzpicture}
-\end{center}
+\label{fig:dvvenn}
+\caption{Relationship between the sets of direct variations and linear functions.}
+\end{figure}
 
-Every direct variation is a linear function, but not every linear function is a direct variation. What makes direct variation ``special''?
+Every direct variation is a linear function, but not every linear function is a direct variation.\footnote{A diagram like the one shown in \cref{fig:dvvenn} is called a \textit{Venn diagram}, named after the English philosopher John Venn. Venn diagrams are helpful for visualizing relationships between sets. In some cases, certain sets are completely contained within one another. In other cases, sets overlap on partially. How might we represent the relationships between the sets $\N$, $\Z$, $\Q$, and $\R$ from \cref{ch:numbers}? How might we draw a Venn diagram to show the relationships between the sets of parallelograms, rectangles, rhombuses, and squares?} What makes direct variation ``special''?
 
 \subsubsection{Graph of direct variation}
 
 This is the easiest way to spot a direct variation. It must be a straight line that goes through the origin. That's it, really! Since every direct variation is of the form $y=kx$, it's quite easy to see that when $x=0$, we have $y = k\cdot0 = 0$. So the point $(0,0)$ is always on the graph of a direct variation. This makes sense in the context of the startup exploration: if Yeardleigh exchanges 0 dollars, she gets back 0 rupees.
 
+%\resizeplot{0}{0}{50}{50}
+\begin{center}
+\begin{tikzpicture}
+	\begin{axis}[
+			clip=false,
+			width=0.625\linewidth,
+			height=0.625\linewidth,
+			axis lines = middle,
+			axis line style={thick, ->, shorten >=-10pt, shorten <=-10pt},
+			xlabel={\large Dollars},
+			ylabel={\large Rupees},
+			grid=both,
+%			xlabel near ticks,
+%			minor xtick={-300,-270,...,300},
+%			ylabel near ticks,
+			ytick={-300,-240,...,300},
+	]
+	\addplot[algcurve, green!50!black, domain=-5:5] {60*\x};
+	\end{axis}
+\end{tikzpicture}
+\end{center}
+
 \subsubsection{Equation of direct variation}
 
-The equation of a direct variation will be of the form $y = kx$. It seems simple enough, but trickiest thing that might come up here is if we encounter an equation which, at first glance, doesn't appear to be a direct variation but which, with a little manipulation (using the POEs), can be transformed into a direct variation.
+The equation of a direct variation will be of the form $y = kx$. It seems simple enough, but the trickiest thing that might come up here is if we encounter an equation which, at first glance, doesn't appear to be a direct variation but which, with a little manipulation (using the POEs), can be transformed into a direct variation.
 
 \begin{boxex}
 Which of the following rules show that $x$ and $y$ are directly proportional? If a rule is a direct variation, state the constant of variation.
@@ -369,7 +456,7 @@ The lesson here is: if we can transform and equation using the POEs into and equ
 
 \subsubsection{Data table of direct variation}
 
-Up until this point, we have studied techniques for identifying a table of data (or a sequence) as linear, exponential, or quadratic. We've always been given tables that count sequentially through $x$-values $(0, 1, 2, 3, \dotsc)$. As we study the different types of functions in more depth, we will be able to identify functions from tables which aren't sequential, or which jump around.
+Up until this point, we have studied techniques for identifying a table of data (or a sequence) as linear, exponential, or quadratic. We've always been given tables that count sequentially through $x$-values $(0, 1, 2, 3, \dotsc)$. As we study the different types of functions in more depth, we will be able to identify functions from tables which aren't sequential or which jump around.
 
 For directly proportional relationships, we should be able to recognize not just that they are ``linear'', but that they are specifically ``direct variation''. The test for a direct variation goes back to the defining characteristic of a direct variation: the fact that $\frac{y}{x}$ is constant.
 
@@ -406,7 +493,7 @@ Table (b) does not represent a direct variation. The first and last rows have th
 
 The ratio $\frac{y}{x}$ has to be the same for all points, otherwise we do not have a direct variation. This is one of the things that makes a direct variation special. A table can still be linear and not be a direct variation: there are lots of straight lines that \textit{do not} go through the origin! In \cref{ch:linear} we will learn a different way to determine whether a table of data represents a (generic) linear function.
 
-Here's one more example of the kind of question we might encounter about direct variation.
+Here's one more example of the kind of question associated with direct variation.
 
 \begin{boxex}
 Find the missing value in each case: (a) A direct variation includes the points $(16, -2)$ and $(x, 4)$. Determine the value of $x$. (b) A different direct variation includes the points $(6, 30)$ and $(-10, y)$. Determine the value of $y$.
@@ -417,10 +504,9 @@ Find the missing value in each case: (a) A direct variation includes the points 
 Let's use a different approach to solve part (b). Knowing one point is enough to write the equation for the direct variation. We know that the point $(6,30)$ is on the direct variation, and so \[k = \frac{y}{x} = \frac{30}{6} = 5.\] Therefore, we have the equation $y = 5x$. We can then substitute $-10$ for $x$ and solve to discover that $y=-50$.
 \end{boxex}
 
-A final note: Technically, we can write all of these ratio with $x$ over $y$ and find the answers we are looking for. The reason we stick so closely to ``$y$ over $x$'' is the relationship that this quantity has to the unit rate in the problem. Plus, we want the notation that we use with direct variations to be consistent with the notation we use with linear functions generally.\footnote{We will meet a very important ratio called \textit{rate of change} in the next chapter. In this ratio we set the change in the independent variable over the change in the dependent variable.}
+A final note: Technically, we can write all of these ratio with $x$ over $y$ and find the answers we are looking for. The reason we stick so closely to ``$y$ over $x$'' is the relationship that this quantity has to the unit rate in the problem. Plus, we want the notation that we use with direct variations to be consistent with the notation we use with linear functions generally. For example, we will soon meet a very important ratio called \textit{rate of change} in which we set the change in the independent variable over the change in the dependent variable.
 
 \addtodoitem{Graphs and  visuals for DV}
-
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \section{Inverse variation}
@@ -432,7 +518,7 @@ A final note: Technically, we can write all of these ratio with $x$ over $y$ and
 \addtodoitem{Link to extended exploration: Teeter-totter nickels}
 
 \begin{boxexplore}[Herb garden]
-Fran\c{c}ois has enough mulch to plant an herb garden covering 24 square meters. Plus, he has whole barn full of snap-together fencing units that are each 1-meter long. How many different herb gardens can Fran\c{c}ois create, if he wants to use all the mulch and surround the garden with a rectangular fence?
+Fran\c{c}ois has enough mulch to plant an herb garden covering 24 square meters. Plus, he has a whole barn full of snap-together fencing units that are each 1-meter long. How many different herb gardens can Fran\c{c}ois create if he wants to use all the mulch and surround the garden with a rectangular fence?
 \end{boxexplore} %% End of startup exploration
 
 \kverse{Francois plants an herb garden.}
@@ -601,7 +687,7 @@ Not being able to have an $x$ or $y$ value of zero does very interesting things 
 %	\end{tikzpicture}
 %\end{center}
 
-Notice a few things: First, we can see from the graph that this is not an exponential relationship. Although the portion of the graph in the first quadrant might look exponential, when we plug in negative input values we get different behavior that we'd expect from an exponential.
+Notice a few things: First, we can see from the graph that this is not an exponential relationship. Although the portion of the graph in the first quadrant might look exponential, when we plug in negative input values we get different behavior that we'd expect from an exponential relationship.
 
 Secondly, the graph is in two disconnected pieces, and since it never crosses the $x$- or $y$-axis, it appears entirely in the first and third quadrants. It appears in those particular quadrants because of the defining feature of inverse variation: $x$ and $y$ have a constant product.
 
@@ -655,6 +741,6 @@ Inverse variation graphs do have something in common with exponential functions:
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \chaptersummary
 
-In this chapter we started in familiar territory: writing and solving proportions. We quickly progressed into a more ``algebraic zone'', though, by extending the idea of proportionality to the idea of variation.
+In this chapter we started in familiar territory: writing and solving proportions. We quickly progressed into a more ``algebraic zone'' by extending the idea of proportionality to the idea of variation.
 
-We also saw how a directly proportional relationship gives rise to a linear function: the direct variation. We'll take this idea and run with it in the next chapter: Why should we be limited to straight lines that go through the origin, when we can learn to desrcibe straight lines in general? Onward!
+We also saw how a directly proportional relationship gives rise to a linear function: the direct variation. We'll take this idea and run with it in the next chapter: Why should we be limited to straight lines that go through the origin when we can learn to desrcibe straight lines in general? Onward!
