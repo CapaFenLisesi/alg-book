@@ -46,10 +46,7 @@
 [TODO] Section 7.5. Link to extended exploration: Parallel and perpendicular
 [Krumbliverse] Section 8.1. Yeardleigh creates t-shirts in a marketing campaign.
 [TODO] Section 8.1. Visuals of the various solutions types.
-[TODO] Section 8.2. Solving systems by graphing needs work.
-[TODO] Section 8.5. Systems: The word problems in this chapter should all connect into one story, IMHO... perhaps advancing the overall story.
-[Krumbliverse] Section 8.5. Many opportunities in the systems chapter...
-[TODO] Section 8.5. Systems: Some pictures of the word problems would be helpful.
+[TODO] Section 8.5. Adjust year of YCorp takeover of Cheeseville Zoo.
 [TODO] Section 9.3. Startup exploration on solving inequalities?
 [TODO] Section 9.5. Startup exploration on systems of inequalities
 [Krumbliverse] Section 9.6. YeardleighCorp subsidiary, Evil Vegan Applicances, manufactures solar-poweder soymilk makers. Yeardleigh manipulates production to increase customer demand.

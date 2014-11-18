@@ -14,11 +14,15 @@ In this chapter we will learn a set of techniques for understanding how function
 Mathematics has many applications to the sciences, medicine, business, and economics. Often, though, we have to ``translate'' some problem in the real world so that it can be interpreted mathematically. It is usually necessary to break down the situation into a set of variables and equations, then look at them all together and see how they interact with each other. Doing this is called \inlinedef{mathematical modeling}.
 \index{mathematical modeling}
 
-We can model the financials of a business, weather patterns, transportation infrastructure, airline schedules, missile guidance systems, factory efficiency -- and many other phenomena -- in this way.
+In this way we can model the financials of a business, weather patterns, transportation infrastructure, airline schedules, missile guidance systems, factory efficiency, and many other phenomena.
 
-\begin{boxexplore}[{I} $\varheart$ {Y}eardleigh{C}orp]
-Yeardleigh is a good business woman. She realizes that in order to grow her business, she must brand her corporation by selling things like t-shirts with her company logo on it. She spends \$270 on a design. Since she plans on printing a huge number of shirts, she finds a supplier who will sell her blank cotton shirts in a variety of sizes and colors for \$3.00 per shirt, and a printer who will print the logo in full color for \$1.50 per shirt. If Yeardleigh decides to sell the shirts for \$12.00 each, how many shirts must Yeardleigh sell before she can start making a profit on t-shirt sales?
+\begin{boxexplore}[{I} $\varheart$ {C}heeseville {Z}oo]
+After YeardleighCorp took over and renovated the failing Cheeseville Zoo, Yeardleigh launched a marketing campaign to announce the grand reopening. She spent \$270 on a t-shirt design. For production, she found a supplier who sold her blank cotton shirts in a variety of sizes and colors for \$3.00 per shirt, and a printer who would print the logo in full color for \$1.50 per shirt. If Yeardleigh sold the shirts for \$12.00 each, how many would she have to sell before she started to make a profit on t-shirt sales?
 \end{boxexplore}
+
+%\begin{boxexplore}[{I} $\varheart$ {Y}eardleigh{C}orp]
+%Yeardleigh is a good business woman. She realizes that in order to grow her business, she must brand her corporation by selling things like t-shirts with her company logo on it. She spends \$270 on a design. Since she plans on printing a huge number of shirts, she finds a supplier who will sell her blank cotton shirts in a variety of sizes and colors for \$3.00 per shirt, and a printer who will print the logo in full color for \$1.50 per shirt. If Yeardleigh decides to sell the shirts for \$12.00 each, how many shirts must Yeardleigh sell before she can start making a profit on t-shirt sales?
+%\end{boxexplore}
 
 \kverse{Yeardleigh creates t-shirts in a marketing campaign.}
 
@@ -35,7 +39,7 @@ A set of two or more equations with the same variables is called a \gls{system o
 
 %Real graphic designers charge much more than \$270. Real businesses have hundreds, thousands, even millions of variables and just as many constraints/limits. The goal is always to maximize profits and be more efficient. You can't always just use one equation to do all of this. It is often easier to break down the situation into smaller equations and look at them all together and see how they interact with each other. Doing this is called ``modeling.'' You can model businesses, weather patterns, transportation infrastructure, airline schedules, missile guidance systems, how to run refineries in the most efficient way, etc. in this manner.
 
-In the startup exploration, the amount of money Yeardleigh earns will depend on how many t-shirts she buys and sells. So, suppose we let $x$, the independent variable, represent the number of t-shirts. Then we let $y$, the dependent variable, represent the amount of money that those t-shirts cost (or that they generate for the company).
+In the startup exploration, the amount of money Yeardleigh earns will depend on how many t-shirts she buys and sells. So, suppose we let $x$, the independent variable, represent the number of t-shirts. If we let $y$, the dependent variable, represent the amount of money, then we can write two equations: one that describes the how much the t-shirts cost, and another that describes how much money the t-shirts generate for the company.
 
 Yeadrleigh earns \$12.00 for every t-shirt she sells, so one equation involved with the scenario is \[y = 12.00x \qquad\text{Yeardleigh's income equation}.\] She has already spent \$270 on her design, and every t-shirt she prints costs an additional \$4.50 (that's \$3.00 for the shirt and \$1.50 for printing). So, another equation in the scenario is \[y = 270 + 4.50x\qquad\text{Yeardleigh's cost equation}.\]
 
@@ -180,9 +184,9 @@ y 	&= -\tfrac{1}{5}x\\
 The given point works for the first equation, but not for the second. To be a solution, the point has to satisfy both equations, so no, the point $(-1,5)$ is not a solution to System B.
 \end{boxex}
 
-\subsection{Writing the solutions}
+\subsection{Writing solutions}
 
-When we were solving equations -- meaning one equation at a time -- we use set notation to record our solutions. Since the solution to a system involves two numbers, we have to be mindful about how we write our answers.
+When we were solving equations (meaning one equation at a time) we used set notation to record our solutions. Since the solution to a system involves two numbers, we have to be mindful about how we write our answers.
 
 Two cases are pretty straightforward. If the system has a unique point as its solution, we can write that point as the solution set. For example, the solution to System A in the previous example is $\solset{(-1,5)}$. Note that we've just enclosed the point $(-1,5)$ inside the curly braces to show that the set includes that point.
 
@@ -211,54 +215,67 @@ The different approaches have pros and cons, and you may find that you prefer a 
 \section{Solving by graphing}
 \label{sec:sysgraphing}
 
-\addtodoitem{Solving systems by graphing needs work.}
+We solved the startup exploration at the start of \cref{sec:sysintro} by graphing two equations on the same set of axes. That's the idea behind this solution technique. We graph the two lines given in our system on the same set of axes, and then we look to see how the two lines interact.
 
-We solved the startup exploration at the start of $\cref{sec:sysintro}$ by graphing two equations on the same set of axes. That's the idea behind this solution technique.
+\begin{figure}
+\begin{minipage}[t]{\textwidth/3}
+\centering
 
-Graphing is easy with the right technology.
+\resizeplot{-5}{-5}{5}{5}
+\begin{tikzpicture}
+	\begin{axis}[standard, fullsize]
+		\addplot[algcurve, blue, domain=-3.5:1.5] {2*\x+2};
+		\addplot[algcurve, red, domain=-5:5] {-0.25*\x-2.5};
+	\end{axis}
+\end{tikzpicture}
 
-Graphing on the calculator is actually a good way to check your answer, not the only one though.
+One solution.
+\end{minipage}%
+%
+\begin{minipage}[t]{\textwidth/3}
+\centering
 
-However, you might not be able to get the exact answer if it is fractional. Don't become dependent on graphing. Some are actually solved easier and more accurately algebraically. Also, if you are prone to type things in wrong, you may have a problem. Scale can also be an issue. I'm not going to solve Yeardleigh's t-shirt problem via graphing.
+\resizeplot{-5}{-5}{5}{5}
+\begin{tikzpicture}
+	\begin{axis}[standard, fullsize]
+		\addplot[algcurve, blue, domain=-3.5:1.5] {2*\x+2};
+		\addplot[algcurve, red, domain=0.5:5] {2*\x-6};
+	\end{axis}
+\end{tikzpicture}
 
-Things to be careful of:
-a. Be careful if you have to convert the equation from one form into another, like standard into slope-intercept
-b. Don't rely on ``trace'' if it appears that the answer is fractional.
-Technique: If you are given a word problem, write it as a system of equations. Then, graph the equations to find any intersection points. You can either graph by hand or with a graphing calculator. Your work is the graph. The answer is the intersection point!
+No solution:\\parallel lines.
+\end{minipage}%
+%
+\begin{minipage}[t]{\textwidth/3}
+\centering
 
+\resizeplot{-5}{-5}{5}{5}
+\begin{tikzpicture}
+	\begin{axis}[standard, fullsize]
+		\addplot[algcurve, blue, domain=-3.5:1.5] {2*\x+2};
+		\addplot[algcurve, red, dashed, domain=-3.5:1.5] {2*\x+2};
+	\end{axis}
+\end{tikzpicture}
 
-a.
-Graphing By Hand: Use graph paper. You can't use the short-cut way of graphing standard form either. The points will be ``nice'' if you are asked to graph by hand. Remember that the graph is not the answer. It is the work. This means that it doesn't need to be a high quality graph. Your answer is the intersection point.
+Infinitely many solutions:\\the two lines are the same.
+\end{minipage}
+\end{figure}
 
-b. Graphing By Calculator: They have to be in function form for the graphing calculators that we have in class. The ``trace'' function is pretty useless as I expect exact answers. You should look at the table to find exact answers. On the table you will notice that the solution will show up as 1 x-value with the same y-value for the two equations.
+We graphed quite a few lines in the previous chapter, and all of those skills come into play now. When graphing by hand, it's always a good idea to use graph paper but remember that the graph itself is not the answer. The graph is the work that helps us to find the solution to the system. This means that we don't always need to create a ``high quality graph''. Of course, the graph must be of high-enough quality that you can accurately find the intersection point!
 
-Example 2
-Problem: Solve these systems by graphing. If a system has infinite solutions, give one point that will satisfy the system.
- y=1x 3+ (a)  3
-(b) y=x y=5x
-(c) y=1 y=x
-(d) 2x+y=3 (e) 3x−y=7 x−2y=4 y=3x 7−
- y=1x 3 −  3
+Solving by graphing can be made easier with the right technology, though technology also imposes some restrictions. If you graph using a calculator or an online graphing tool, the equation may have to be in a $y=$ form (either slope-intercept form or point-slope form). Also, technology might not help if the answers don't come out ``nice''. It may be hard to identify some rational and irrational numbers from the decimal that we get as output form the calculator!
 
-Solution:
- If you graph with the calculator, the equation has to be in function notation (either slope-intercept or point-slope). IF you do use a calculator, you must sketch a graph to show your work. If you do not use a calculator, you have to make sure to graph very precisely, using graph paper. If I ask you to solve with graphing, I will try to make sure your solutions are integers. If not, approximate them.
-(a) S = Null Set (lines are parallel) (b) S = \{(0,0)\}
-(c) S = \{(1,1)\}
-(d) S = \{(2, -1)\}
-(e) Any point on the line y = 3x-7, examples (0, -7); (1, -4) in set notation, the solution looks like
-S=$\forall$(x,y)$\in$ 3x− y= 7 . \{\}
+These restrictions are avoided with the algebraic methods we will learn for solving a system (in the upcoming sections). Still, graphing will often come in handy as one good way to check our answers.
 
-Please remember, I want you to think about the problem and map out your strategy before you jump right into the work. If you can determine, upon inspection, that lines are parallel, or if you transform some of the equations and notice that they are parallel or the same line, you don't have to do all of the work of graphing the lines (or in the future substitution or elimination). Just write the solution set and a little statement like ``upon inspection, the lines are parallel'' or ``the same line''.
+%%b. Graphing By Calculator: They have to be in function form for the graphing calculators that we have in class. The ``trace'' function is pretty useless as I expect exact answers. You should look at the table to find exact answers. On the table you will notice that the solution will show up as 1 x-value with the same y-value for the two equations.
 
-
-\subsection{Finding an intersection point using a calculator}
-
-When finding an intersection point using a calculator, we can use the \calculator{trace} function on the calculator. But, \calculator{trace} can only give us a decimal approximation, and this could be a problem for some solutions. (For example, a solution that is not whole numbers or a fraction with ``convenient'' denominator.)
-
-Using \calculator{trace} is good for approximating a solution, but then we can use an alternative way: looking at the table. Here, we can search the table for a place where \calculator{y1} and \calculator{y2} are the same for a particular value of \calculator{x}.
-
-For the t-shirt example, go to the \calculator{table} screen on your calculator, and scroll to where \calculator{x} is 36. You should see that both \calculator{y1} and \calculator{y2} are 432. This will be how the intersection point will show up in a table.
-
+%%\subsection{Finding an intersection point using a calculator}
+%%
+%%When finding an intersection point using a calculator, we may be tempted to use the \calculator{trace} function. But, \calculator{trace} can only give us a decimal approximation, and this could be a problem for some solutions. (For example, a solution that does not have whole number coordinates.)
+%%
+%%Using \calculator{trace} is good for approximating a solution, but then we can use an alternative way: looking at the table. Here, we can search the table for a place where \calculator{y1} and \calculator{y2} are the same for a particular value of \calculator{x}.
+%%
+%%For the t-shirt example, go to the \calculator{table} screen on your calculator, and scroll to where \calculator{x} is 36. You should see that both \calculator{y1} and \calculator{y2} are 432. This will be how the intersection point will show up in a table.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Solving by substitution}
@@ -267,10 +284,10 @@ For the t-shirt example, go to the \calculator{table} screen on your calculator,
 \begin{boxexplore}[Ugly graphing]
 Solve the following system by graphing.
 \[\twosystem{y=\frac{1}{3}x-4}{y=5x-6}\]
-What are the challenges that arise when solving this system by graphing?
+What are the challenges that arise when solving this system graphically?
 \end{boxexplore}
 
-The challenge we uncover in the startup exploration is that the intersection point does not have integer coordinates. The $x$-coordinate is between 0 and 1, and the $y$-coordinate is between $-3$ and $-4$, but beyond that the going is pretty rough even using graphing technology (since the decimal values of the intersection point are not all that pretty).
+The challenge we uncover in the startup exploration is that the intersection point does not have integer coordinates. The $x$-coordinate is between 0 and 1, and the $y$-coordinate is between $-3$ and $-4$, but beyond that it is quite hard to find an exact intersection, even using graphing technology (since the decimal values of the intersection point are not all that ``nice'').
 
 \resizeplot{-3}{-8}{7}{1}
 \begin{center}
@@ -629,241 +646,324 @@ Substituting $y=-2$ into the second of the original equations, we get $3x + 5(-2
 \section{Applications of systems}
 \label{sec:sysapplications}
 
-\addtodoitem{Systems: The word problems in this chapter should all connect into one story, IMHO... perhaps advancing the overall story.}
-\kverse{Many opportunities in the systems chapter...}
-
-``A train leaves New York traveling south at 180 miles per hour\ldots'' If you were to read that sentence out loud in a room full of adults, you might cause some folks to start sweating and mumbling nervously to themselves. People all over the world, for generations, have been scarred by algebra word problems.
-
-But, word problems have a bad reputation.
+``A train leaves New York traveling south at 180 miles per hour\ldots'' If you were to read that sentence out loud in a room full of adults, you might cause some folks to start sweating and mumbling nervously to themselves. People all over the world, for generations, have been scarred by algebra word problems. But, word problems have a bad reputation.
 
 Yes, word problems require us to ponder a bit, decipher the information we're given, and stumble around as we figure out how to proceed. But this is the process of problem solving! The algebra skills we have learned so far, along with a little determination and creativity, will serve us well as we tackle these algebra classics.
 
-We discuss several kinds of problems below. Our general pattern is this: We'll think about the unknown quantities and relevant facts given in the problem. We'll choose variables to represent the unknowns and model the situation using equations. (Drawing pictures and making charts might help!) Then, we'll solve the equations and check to ensure your answer makes sense.
+We discuss several kinds of problems below. Our general strategy is this: We'll think about the unknown quantities and relevant facts given in the problem. We'll choose variables to represent the unknowns and model the situation using equations. (Drawing pictures and making charts might help!) Then, we'll solve the equations and check to ensure our answer makes sense.
 
-As we go along, and as you work on various assignments, remember to think back over these examples. If you have solved a similar problem before, that will give you a place to start when faced with something new.
+A final thought before we get started: When we encounter a new problem it can be helpful to think back over our earlier work. If we have solved a similar problem before, that can often give us ideas about a good place to start when faced with something new.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Two unknowns, two facts}
+\subsection{Two unknowns, two facts}
 
-The first examples we did with substitution and elimination are of this type. We are given two unknowns and two different facts about them. The facts usually have different units, which hint at what two equations you need to write for your model.
+The first examples we did with substitution and elimination are of this type. We are given two unknowns and two different facts about them. The facts usually have different units, which hint at the two equations we need to write for our model.
 
-One way to approach this type of problem is by creating a table to organize the data.
+%One way to approach this type of problem is by creating a table to organize the data.
 
-\begin{boxex}[Evil entertainment\ldots Eviltainment?]
-Yeardleigh receives a shipment of entertainment centers, the basic model weighing 30 kilograms each and the deluxe weighing 50 kilograms each, has a total weight of 880 kilograms. If there are 20 centers altogether, how many weigh 50 kilograms?
+%Yeardleigh receives a shipment of entertainment centers, the basic model weighing 30 kilograms each and the deluxe weighing 50 kilograms each, has a total weight of 880 kilograms. If there are 20 centers altogether, how many weigh 50 kilograms?
+
+\begin{boxex}
+Ticket prices at the Cheeseville Zoo were quite a bit cheaper years ago. In 1995, the zoo charged \$8 for each adult ticket and \$4 for each child ticket. On one particularly fateful day, the zoo sold 3505 tickets and collected exactly \$18,940. How many of each type of ticket were sold on that day?
 \end{boxex}
 
-The two unknowns are the number of 30kg and 50kg centers. One set of facts has to do with quantity, the other has to do with the weight. We make these into which are rows and columns in the table. I added ``total'' columns and rows. Let's use $T$ to represent the number of 30kg centers, and $F$ to represent the number of 50kg centers.
+The two unknowns in this problem are the number of adult tickets and the number of child tickets. The two facts are the total number of tickets sold and the total amount of money that those tickets cost. Let's use $A$ to represent the number of adult tickets and $C$ to represent the number of child tickets that were sold on this fateful day at the zoo.
 
-\begin{center}
-\begin{tabular}{r|ccc}
-				& Number of centers	& Weight per unit	& Total Weight\\\hline
-30kg centers	& $T$					& 30				& $30T$\\
-50kg centers	& $F$					& 50				& $50F$\\
-Combined		& $20$					& --				& $880$\\
-\end{tabular}
-\end{center}
+%The two unknowns are the number of 30kg and 50kg centers. One set of facts has to do with quantity, the other has to do with the weight. We make these into which are rows and columns in the table. I added ``total'' columns and rows. Let's use $T$ to represent the number of 30kg centers, and $F$ to represent the number of 50kg centers.
 
-Once the table is set up, out two equations are there in the second and fourth columns.
-\[
-\left\{%
-\begin{aligned}
-&T+F=20\\
-&30T + 50F = 880
-\end{aligned}
-\right.
-\] 
+%\begin{center}
+%\begin{tabular}{r|ccc}
+%				& Number of centers	& Weight per unit	& Total Weight\\\hline
+%30kg centers	& $T$					& 30				& $30T$\\
+%50kg centers	& $F$					& 50				& $50F$\\
+%Combined		& $20$					& --				& $880$\\
+%\end{tabular}
+%\end{center}
+
+%Once the table is set up, out two equations are there in the second and fourth columns.
+%\[
+%\left\{%
+%\begin{aligned}
+%&T+F=20\\
+%&30T + 50F = 880
+%\end{aligned}
+%\right.
+%\] 
+%We can now solve this system using our favorite method. It looks like a good candidate for elimination! (Why?)
+
+The fact about the total number of tickets sold tells us that one equation is
+\[A+C=3505.\]
+We add up the numbers of adult tickets and child tickets to find the total number of tickets that were sold. Using the other fact about the total cost of the tickets, we write the equation
+\[8A+4C=18940.\]
+In the second equation, the term $8A$ is the amount of money that the zoo makes from the adult tickets alone, since each adult ticket costs \$8. The term $4C$ is the total cost of all the child tickets. The sum of these two values is the total amount of money that was collected.
+
 We can now solve this system using our favorite method. It looks like a good candidate for elimination! (Why?)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Mixture problems}
+\subsection{Mixture problems}
 
-The type of mixture problem we have previously solved were very straight forward. Every number we needed was given to us directly in the problem. This is a different type of problem. There is information in the problem that is not directly stated that we will have to infer. This is where the table is really helpful.
+Mixture problems ask us to combine things that have different properties to create something new, with its own unique properties. Sometimes, we have to do a bit of clever thinking in order to determine information that is not directly stated in the problem. One helpful approach is to organize the given facts into a table.
 
-\begin{boxex}[Evil trail mix]
-YeardleighCorp opens health food stores, which sell an Evil Trail Mix of raisins and roasted nuts. Raisins sell for \$3.50 per kg, and roasted nuts sell for \$4.75 per kg. How many kg of each should be mixed to make 20 kg of Evil Trail Mix worth \$4.00 per kg?
+%The type of mixture problem we have previously solved were very straight forward. Every number we needed was given to us directly in the problem. This is a different type of problem. There is information in the problem that is not directly stated that we will have to infer. This is where the table is really helpful.
+
+%YeardleighCorp opens health food stores, which sell an Evil Trail Mix of raisins and roasted nuts. Raisins sell for \$3.50 per kg, and roasted nuts sell for \$4.75 per kg. How many kg of each should be mixed to make 20 kg of Evil Trail Mix worth \$4.00 per kg?
+
+\begin{boxex}
+On this fateful day at the Cheeseville Zoo, zookeeper Florence Erlenmeyer was mixing ripe bananas and roasted crickets to make her secret-recipe monkey chow.\footnote{Seven out of eight monkeys prefer Florence the zookeeper's secret-recipe monkey chow to the leading commercial brand of monkey chow, ``Primate Crunch''.} Bananas cost \$3.50 per kilogram and crickets cost \$4.75 per kilogram. How many kilograms of each ingredient did Florence mix together if the result was 20 kilograms of monkey chow worth \$4.00 per kilogram?
 \end{boxex}
 
-Our unknowns are number of kg of raisins (let's call that $R$) and number of kg of nuts (let's call that $N$). We also have the prices of each ingredient per kg, but nothing about a total cost.
+%Our unknowns are number of kg of raisins (let's call that $R$) and number of kg of nuts (let's call that $N$). We also have the prices of each ingredient per kg, but nothing about a total cost.
+
+Our unknowns are the number of kiolgrams of bananas (let's call that $B$) and the number of kilograms of roasted crickets (let's call that $C$). We are given the prices of each ingredient per kilogram, but nothing about a total cost. Finding the total cost isn't that challenging though: all we have to do is multiply!
 
 \begin{center}
 \begin{tabular}{r|ccc}
-				& Amount (kg)			& Unit price			& Total price\\\hline
-Raisins			& $R$					& 3.50				& $3.50R$\\
-Nuts			& $N$					& 4.75				& $4.75N$\\
-Mixture			& 20					& 4.00				& {\color{red} ??}\\
+				& Amount (kg)			& Unit price (\$)			& Total price (\$)\\\hline
+Bananas			& $B$					& 3.50				& $3.50B$\\
+Crickets			& $C$					& 4.75				& $4.75C$\\
+Mixture			& 20					& 4.00				& 80\\
 \end{tabular}
 \end{center}
 
-How can we figure out total cost? Well, look at that row of the table: 20 kg of Evil Trail Mix at \$4.00 per kg = \$80 worth of trail mix! We can calculate this value, even though that information is not given directly in the problem. Sneaky!
+%\begin{center}
+%\begin{tabular}{r|ccc}
+%				& Amount (kg)			& Unit price			& Total price\\\hline
+%Raisins			& $R$					& 3.50				& $3.50R$\\
+%Nuts			& $N$					& 4.75				& $4.75N$\\
+%Mixture			& 20					& 4.00				& {\color{red} ??}\\
+%\end{tabular}
+%\end{center}
 
-\[
-\left\{%
-\begin{aligned}
-&R+N=20\\
-&3.50R + 4.75N = {\color{red} 80}
-\end{aligned}
-\right.
-\]
+The last row of the table shows that if Florence the zookeeper makes 20 kg of monkey chow worth\$4.00 per kilogram, then she has $20 \cdot 4.00 = \$80.00$ worth of monkey chow. The other rows in the table are using this same multiplication even though they each include a variable.
 
-And now, we can solve the system. Once again, this looks like a job for elimination. (Why?)
+We now have our system of equations:
+\[\twosystem{B+C=20}{3.50B + 4.75C = 80}\]
+Once again, this looks like a job for elimination. (Why?)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{RTD: Same direction}
+\subsection{Work problems}
 
-Rate-time-distance problems (RTD for short) come in a variety of flavors. In ``same direction'' RTD problems, the travelers are -- surprise! -- going in the same direction. The often involve a ``race'' of some kind where someone gets a head start, and our task is to determine when someone catches up or passes the other.
+Very often in a work problem, a group of workers split up a job. Working on their own, it might take different workers different amounts of time to finish the job. Our task might be to figure out how long the job will take if several workers cooperate.
 
-It will be helpful to draw a simple picture at the start to understand how the problem is set up. Many times, there is something not directly stated that is important to the solution, but which you can figure out from the situation. The picture can help you with that.
+A helpful way to think about problems like this is to try and identify the ``work rate'' of the various participants. If it takes someone 3 days to paint an apartment, their work rate for painting is ``one third of an apartment per day''.
 
-\begin{boxex}[Same direction]
-At 5:00 pm Bob leaves the Chtulhu-Chip factory driving 25 miles per hour. At 5:30, Yeardleigh leaves the Cthulhu-Chip factory and follows the same route, driving 40 miles per hour. At what time does Yeardleigh pass Bob?
+%Ivan can chop a cord of wood* in 4 days, and his father, Fran\c{c}ois, can chop a cord of wood in 2 days. How long will it take them to split a cord of wood if they work together? (One cord, which is a unit of measure of volume for firewood in the US and Canada, is about 128 cubic feet\ldots but that's not really important to this problem.)
+
+\begin{boxex}
+For quality assurance purposes, Florence the zookeeper preferred to buy live crickets and toast them herself. By hand she could roast a crate of live crickets in 4 hours. She had recently invested in a Toast-O-Matic\textsuperscript{TM} cricket roaster which could toast a crate of crickets in 2 hours. How long would it take to toast three crates of crickets if both Florence and the machine work simultaneously?
 \end{boxex}
 
-The problem is asks when Yeardleigh will pass Bob. In order to know when she will pass, we need to know when they have gone exactly the same amount of distance from the factory (this is the moment she passes him). So we'll write two distance equations, one for Bob and one for Yeardleigh, and compare them to try and figure out at what time their distances from the factories are equal.
+If we think of the ``job'' as ``toasting one crate of crickets'', then Florence's work rate is ``1 job in 4 hours'', or ``$\frac{1}{4}$ job per hour''. Similarly, the Toast-O-Matic's work rate is ``$\frac{1}{2}$ job per hour''.
 
-\addtodoitem{Systems: Some pictures of the word problems would be helpful.}
-
-Our table columns are -- naturally enough -- rate, time, and distance. The rows deal with the people driving. The problem asks a ``when'' question, so we must be solving for time. Let's use $t$ to represent the amount of time Bob has been driving, in hours.
-
-Note that we didn't make the variable represent actual time ``on the clock''. (Why not? What challenges would that introduce into the mathematics?)
-
-Yeardleigh started 30 minutes later, which means she has 30 minutes less travel time than Bob. Note that we have to be careful about units: 30 minutes is $1/2$ of an hour. Since the speeds are in miles \textit{per hour}, it makes sense to work in hours: $t-\frac{1}{2}$. If we want to use $t – 30$ instead, we can\ldots but we'll have to also convert the given speeds into miles \textit{per minute}.
+The unknown in this scenario is the amount of time that it will take them to finish the job if they work together. Let's use $t$ to represent this unknown amount of time. If our two workers each work for $t$ hours, Florence will complete $\frac{1}{4}t$ jobs and the Toast-O-Matic will complete $\frac{1}{2}t$ jobs.
 
 \begin{center}
 \begin{tabular}{r|ccc}
-				& Rate (mph)			& Time (hours)		& Distance (miles)\\\hline
-Bob				& 25					& $t$				& $25t$\\
-Yeardleigh		& 40					& $t - \frac{1}{2}$	& $40\left(t - \frac{1}{2}\right)$\\
+	& Work rate		& Work time		& Jobs done\\\hline
+Florence
+	& $\frac{1}{4}$	& $t$			& $\frac{1}{4}t$\\
+Toast-O-Matic
+	& $\frac{1}{2}$	& $t$			& $\frac{1}{2}t$\\
 \end{tabular}
 \end{center}
 
+We want to know how long it takes them to toast three crates of crickets. In other words, how long it takes them to complete ``3 jobs''. This gives us the equation:
 \[
-\left\{%
-\begin{aligned}
-&d = 25t\\
-&d = 40\left(t-\frac{1}{2}\right)
-\end{aligned}
-\right.
+\frac{t}{4} + \frac{t}{2} = 3
 \]
+Note that when we approached the problem in this way, we get a single linear equation rather than a system!
 
-Solving this system (substitution looks like a good choice!) will give us a value for $t$. What does that value represent? How can we use it to determine when (on the clock) Yeardleigh will pas Bob?
+%If we think of the ``job'' as ``chopping one cord of wood'', then Ivan's work rate is ``1 job in 4 days'', or ``$\frac{1}{4}$ job per day''. Similarly, Fran\c{c}ois's work rate is ``$\frac{1}{2}$ job per day''. When the two guys work together, they will finish the job in some amount of time. Let's call that $t$. The rows in our table are for the individual workers.
+%
+%\begin{center}
+%\begin{tabular}{r|ccc}
+%				& Work rate				& Work time			& Amount done\\\hline
+%Ivan				& $\frac{1}{4}$			& $t$					& $\frac{t}{4}$\\
+%Fran\c{c}ois		& $\frac{1}{2}$			& $t$					& $\frac{t}{2}$\\
+%\end{tabular}
+%\end{center}
+%
+%Together, they complete 1 whole job (they chop one whole cord of wood). This gives us the equation:
+%\[
+%\frac{t}{4} + \frac{t}{2} = 1
+%\]
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{RTD: Opposite directions}
+\subsection{Rate, time, distance}
 
-Here we might have travelers starting from the same location and traveling away from one another (in which case you usually are asked to determine when they will be a certain distance apart). Or, we might have travelers who are coming from two distinct locations and moving towards each other (in which we are usually asked to figure out when or where they will meet).
+``Rate, time, distance'' problems (RTD for short) come in a variety of flavors. Sometimes the participants are moving in the same direction, sometimes in opposite directions. Sometimes one of the participants has a head start, other times the participants begin moving at the same moment. Sometimes the participants start in the same location, sometimes they start in different locations\ldots
 
-A common mistake with this second type is assuming that the travelers will meet at exactly the half-way point. They don't necessarily. It depends on when they leave and speed at which they traveling!
+These variations can combine to produce some confusing problems, but don't panic! Many times, drawing a simple picture at the start will help us to understand how the problem is set up. If there is important information that is not directly stated in the problem, a picture can help us to find it.
 
-\begin{boxex}[Opposite directions]
-Yeardleigh hamster-naps Feta and holds her for ransom. The twins agree to meet in a neutral location. Bob and Yeardleigh each set out at noon from points 60 km apart and drive toward each other, meeting at 1:30pm. Bob's speed was 4 km/h greater than Yeardleigh's. How fast was each of them driving?
+\begin{boxex}
+Florence the zookeeper's office was 500 feet from the entrance to the Monkey Island attraction. On this fateful morning, she loaded a fresh batch of monkey chow into a wheelbarrow and began walking on the path to Monkey Island at a speed of 4 feet per second. At precisely the same moment, Captain Snuggles, the zoo's 350-pound gorilla, escaped from Monkey Island and began running toward the zookeeper along the same path at a speed of 26 feet per second. How long did it take Florence and Captain Snuggles to meet along the path?
 \end{boxex}
 
-We could choose either Bob's speed or Yeardleigh's speed as the reference point. Let's use Yeardleigh's speed and call it $v$ (for velocity). Then, Bob's speed is 4 km/h greater than that.
+In this problem, we have two participants who start moving at the same time but in different locations. They move toward each other (at different speeds) until they meet in the middle somewhere.
 
-\begin{center}
-\begin{tabular}{r|ccc}
-				& Rate (mph)			& Time (hours)		& Distance (miles)\\\hline
-Yeardleigh		& $v$					& $1.5$				& $1.5v$\\
-Bob				& $v+4$				& $1.5$				& $1.5(v+4)$\\
-\end{tabular}
-\end{center}
+A common mistake with this type of situation is assuming that the travelers will meet at exactly the half-way point. This will not always true! In this case, for instance Captain Snuggles moves much faster than Florence the zookeeper, and so they will meet closer to Florence's end of the path.
 
-Now, to figure out how to make that table into some helpful equations. Since we have one variable, we only need one equation. The missing key component is that the distance Bob and Yeardleigh traveled together is 60 km, which gives us the extra piece of the puzzle: The two distances add up to 60 km:
-\[
-1.5v + 1.5(v+4) = 60
-\]
+We might represent this with a very simple drawing:
+\begin{center}%{figure}
+\begin{tikzpicture}
+	\draw[|-|] (0,0) -- node[below]{path: 500 feet} (5,0);
+	\draw[dotted] (3.5,1) -- (3.5,0);
+	% gorilla
+	\draw[red, very thick, ->] (0,0.5) -- (3.5,0.5);
+	\fill[red] (0,0.5) circle[radius=0.1cm] node[above left]{Captain Snuggles};
+	% zookeeper
+	\draw[blue, very thick, ->] (5,0.5) -- (3.5,0.5);
+	\fill[blue] (5,0.5) circle[radius=0.1cm] node[above right]{Florence};
+\end{tikzpicture}
+\end{center}%{figure}
+
+The problem asks a question about time, so let's use $t$ to represent the time (in seconds) it takes for the two travelers to meet.
+
+What else do we know from the problem? We have the speeds that both of the characters are moving.\footnote{We are also given the weight of the gorilla, although this is just a distraction and not important to the problem.} Florence moves at a speed of 4 feet per second, so in $t$ seconds she can travel $4t$ feet. Captain Snuggles can travel $26t$ feet in $t$ seconds. So, we can update our picture:
+\begin{center}%{figure}
+\begin{tikzpicture}
+	\draw[|-|] (0,0) -- node[below]{path: 500 feet} (5,0);
+	\draw[dotted] (3.5,1) -- (3.5,0);
+	% gorilla
+	\draw[red, very thick, ->] (0,0.5) -- node[above]{$26t$} (3.5,0.5);
+	\fill[red] (0,0.5) circle[radius=0.1cm] node[above left]{Captain Snuggles};
+	% zookeeper
+	\draw[blue, very thick, ->] (5,0.5) -- node[above]{$4t$} (3.5,0.5);
+	\fill[blue] (5,0.5) circle[radius=0.1cm] node[above right]{Florence};
+\end{tikzpicture}
+\end{center}%{figure}
+
+From the drawing we can see that the combined distance that the two characters travel must be exactly 500 feet! So, we have our equation:
+\[26t + 4t = 500\]
+Again, we've got just a single linear equation and not a system. Who would have thought that such a complicated-looking problem would have a relatively simple mathematical representation!
+
+%The problem is asks when Yeardleigh will pass Bob. In order to know when she will pass, we need to know when they have gone exactly the same amount of distance from the factory (this is the moment she passes him). So we'll write two distance equations, one for Bob and one for Yeardleigh, and compare them to try and figure out at what time their distances from the factories are equal.
+%
+%Our table columns are -- naturally enough -- rate, time, and distance. The rows deal with the people driving. The problem asks a ``when'' question, so we must be solving for time. Let's use $t$ to represent the amount of time Bob has been driving, in hours.
+%
+%Note that we didn't make the variable represent actual time ``on the clock''. (Why not? What challenges would that introduce into the mathematics?)
+%
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{RTD: Roundtrip}
-``Round trip'' means that someone travels from a given location to some other location and back again, as in the following example.
 
-\begin{boxex}[Round trip]
-Yeardleigh uses the ransom money from hamster-napping Feta to go on an evil ski trip. An evil ski lift carries Yeardleigh up the slope at the rate of 6 km/h, and then she skies back down the same slope at 34 km/h. The round trip takes 30 minutes. How long is the ski slope, and much time does it take Yeardlight to ski down it?
+\subsubsection{A trickier RTD problem}
+
+\begin{boxex}
+Florence the zookeeper, sadly, found herself on the business end of a hungry gorilla. Luckily, this occurred just outside the security hut, where the zoo's security squad witnessed the terrifying (but non-fatal) mauling. When they sounded the alarm, Captain Snuggles fled toward the zoo's entrance. The security squad gave chase along the same route 30 seconds later, after arming their tranquilizer guns and mounting their bicycles.
+
+Captain Snuggles ran at 18 miles per hour. The security team cycled at 25 miles per hour, which was just fast enough: they reached the zoo entrance at the same moment as the gorilla and tranquilized him into submission. How much time elapsed between the sounding of the alarm and the tranquilizing of the gorilla? How far was the security hut from the zoo entrance?
 \end{boxex}
 
-Let's let $t$ represent the amount of time that Yeardleigh spends skiing. The whole trip takes 30 minutes (that's $\frac{1}{2}$ hour, remember to watch out for the units!) so her time on the chair lift is $\frac{1}{2} - t$. Here we chop the total time into two pieces using one variable, just like we did with distance in the last problem.
+Since the security squad started 30 seconds later, they have 30 seconds less travel time than Captain Snuggles. If we let $t$ represent the amount of time that Captain Snuggles is running (in seconds), then the security squad is chasing for $t-30$ seconds.
 
-\begin{center}
-\begin{tabular}{r|ccc}
-				& Rate (km/h)			& Time (hours)		& Distance (km)\\\hline
-On the ski lift	& $6$					& $\frac{1}{2}-t$	& $6\left(\frac{1}{2}-t\right)$\\
-Skiing			& $34$					& $t$				& $34t$\\
-\end{tabular}
-\end{center}
+Even though Captain Snuggles has a head start, the security squad reaches the entrance at the same time as the gorilla because of their greater speed. So, both parties travel the same distance $d$.
 
-In a round trip problem, the traveler goes over the same path twice. So, the distance that Yeardleigh travels on the ski lift, is the same as when she is skiing. We don't know what that distance is (yet!) but we know the two distances in our table above are the same. So, our equation is:
+Now, we have to be careful about units! The speeds in this problem are given in \emph{miles per hour}, and the time difference is given in \emph{seconds}. So, we could be careful to keep our units aligned. Let's use a little dimensional analysis (from \cref{ch:proportions}) to convert the speeds to ``feet per second''.\footnote{Alternatively, we could let $t$ represent time in minutes, and then convert the given speeds to distance \textit{per minute}. In that case, the security team would be in pursuit for $t=\frac{1}{2}$ minutes, since 30 seconds is half of one minute.}
 \[
-6\left(\frac{1}{2} - t\right) = 34t
+\begin{array}{r >{\displaystyle}l}
+\text{Captain Snuggles:\quad}
+&
+\frac{18 \text{ miles}}{\text{hour}}
+\cdot
+\frac{5280 \text{ feet}}{\text{mile}}
+\cdot
+\frac{1 \text{ hour}}{3600 \text{ seconds}}
+=
+\frac{26.4 \text{ feet}}{\text{second}}
+\\[\fracspace]
+\text{Security Squad:\quad}
+&
+\frac{25 \text{ miles}}{\text{hour}}
+\cdot
+\frac{5280 \text{ feet}}{\text{mile}}
+\cdot
+\frac{1 \text{ hour}}{3600 \text{ seconds}}
+=
+\frac{36.\overline{6} \text{ feet}}{\text{second}}
+\end{array}
 \]
 
-Solve this, and we'll get the amount of time she was skiing. Then, we can use this time, together with her skiing speed, to figure out the distance traveled.
+If we let $d$ represent the distance (in feet) from the security hut to the zoo entrance, then we can write an equation to describe the motion of Captain Snuggles:
+\[d = 26.4t.\]
+We can also model the motion of the security squad. Our formula shows both the different speed, and the fact that they start 30 seconds late:
+\[d=36.\overline{6}(t-30).\]
+These two equations comprise our system. Since we know that the security team and the gorilla arrive at the zoo at the same moment, we know that they travel the same amount of distance. In other words, $d$ is the same for both travelers. Substitution looks like a good choice for solving this system! (Can you explain why?)
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Uniform motion in a current}
+%
+%\begin{center}
+%\begin{tabular}{r|ccc}
+%				& Rate (mph)			& Time (hours)		& Distance (miles)\\\hline
+%Bob				& 25					& $t$				& $25t$\\
+%Yeardleigh		& 40					& $t - \frac{1}{2}$	& $40\left(t - \frac{1}{2}\right)$\\
+%\end{tabular}
+%\end{center}
+%
+%\[
+%\left\{%
+%\begin{aligned}
+%&d = 25t\\
+%&d = 40\left(t-\frac{1}{2}\right)
+%\end{aligned}
+%\right.
+%\]
+%
+%Solving this system (substitution looks like a good choice!) will give us a value for $t$. What does that value represent? How can we use it to determine when (on the clock) Yeardleigh will pas Bob?
 
-Don't let that complicated-sounding name fool you, problems of this type are not that complicated to solve.
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+\subsection{Motion in a current}
+
+%Don't let that complicated-sounding name fool you, problems of this type are not that complicated to solve.
 
 Have you ever tried to walk \textit{up} the \textit{down} escalator at the mall? (Be honest!) When you walk down the down elevator -- that is, when you walk in the same direction that the escalator is moving -- the motion of the escalator helps you to go faster than if you were just walking down regular stairs. On the other hand, if you try walk in the wrong direction on an escalator, the motion of the escalator will make you go slower than you would walk on regular stairs.
 
 This is the idea of motion in a current. When you go ``with the current'' (or ``downstream'', if you're floating on a river) the current adds to your usual rate of motion. Going ``against the current'' (or ``upstream''), the current reduces your usual rate of motion.
 
-\begin{boxex}[Motion in a current]
-Bob decides to go on vacation. He takes a day trip on a river boat. The boat travels 60 km upstream (against the current) in 5 hours. The boat travels the same distance downstream in 3 hours. What is the rate of the boat in still water? What is the rate of the river's current?
+%Bob decides to go on vacation. He takes a day trip on a river boat. The boat travels 60 km upstream (against the current) in 5 hours. The boat travels the same distance downstream in 3 hours. What is the rate of the boat in still water? What is the rate of the river's current?
+
+\begin{boxex}
+Bob and Yeardleigh were at the Cheeseville Zoo on a school field trip at the time of the mauling. When the alarm sounded, they both ran towards the escalators leading up the side of Mount Ploom toward the aviary. Yeardleigh, of course, ran up the up escalator. Bob, in a panic (and, well, because he's Bob), ran up the down escalator.
+
+Yeardleigh reached the top in 19 seconds and Bob reached the top 23 seconds later. If the escalators are each 213 feet long, how fast were the twins running? How fast were the escalators moving? (Assume that the twins run at the same speed, and the two escalators move at the same speed.)
 \end{boxex}
 
-Notive that Bob makes a round trip journey. So, the distance upstream is the same as the distance downstream. We don't know the speed of the water or the speed of the boat. So, let's let $b$ represent the speed of the boat, and $c$ represent the speed of the current.
+In this problem, we don't know either of the speeds. So, let's use $r$ to represent the running speed of the twins and $e$ to represent the moving speed of the escalators.
 
-The boat goes $b-c$ km/hour upstream, because the current is taking away from how fast the boat can go. The boat will go $b+c$ km/hour downstream, because the current will help the boat go faster!
+When Yeardleigh runs with the help of the escalator, she attains a speed of $r+e$. Bob, on the other hand, has his overall speed reduced by the movment of the escalator and moves at a speed of $r-e$.
 
 \begin{center}
 \begin{tabular}{r|ccc}
-				& Rate (km/h)			& Time (hours)		& Distance (km)\\\hline
-Upstream		& $b-c$				& 5					& 60\\
-Downstream	& $b+c$				& 3					& 60\\
+	& Rate (ft/sec)			& Time (sec)		& Distance (ft)\\\hline
+Yeardleigh	& $r+e$		& 19			& 213\\
+Bob			& $r-e$			& 42			& 213\\
 \end{tabular}
 \end{center}
+Be sure to read carefully! Notice that the problem says Bob reaches the top 23 seconds \emph{later} than Yeardleigh. That means the trip takes him $19+23=42$ seconds. 
 
-Our system is:
+%Notice that Bob makes a round trip journey. So, the distance upstream is the same as the distance downstream. We don't know the speed of the water or the speed of the boat. So, let's let $b$ represent the speed of the boat, and $c$ represent the speed of the current.
+%
+%The boat goes $b-c$ km/hour upstream, because the current is taking away from how fast the boat can go. The boat will go $b+c$ km/hour downstream, because the current will help the boat go faster!
+%
+%\begin{center}
+%\begin{tabular}{r|ccc}
+%				& Rate (km/h)			& Time (hours)		& Distance (km)\\\hline
+%Upstream		& $b-c$				& 5					& 60\\
+%Downstream	& $b+c$				& 3					& 60\\
+%\end{tabular}
+%\end{center}
+%
+Given this setup, our system is:
 \[
 \left\{%
 \begin{aligned}
-&5(b-c) = 60\\
-&3(b+c) = 60
+&19(r+e) = 213\\
+&42(r-e) = 213
 \end{aligned}
 \right.
 \]
-
 To solve this, we'll need the distributive property and the elimination method!
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection*{Work problems}
-
-In a work problem, a group of workers split up a job. The key is knowing that everyone does a fraction of the job, and that all together they complete one whole job. We will use an equation very similar to DRT:\[\text{work rate } \times { time } = \text{ work done}.\]
-The ``work rate'' we will think of ``number of jobs per unit of time''. If it takes me 3 days to paint an apartment, my work rate for painting is ``one third of an apartment per day''.
-
-Take a whack at this example:
-
-\begin{boxex}[Work]
-Ivan can chop a cord of wood* in 4 days, and his father, Fran\c{c}ois, can chop a cord of wood in 2 days. How long will it take them to split a cord of wood if they work together?
-
-(One cord, which is a unit of measure of volume for firewood in the US and Canada, is about 128 cubic feet\ldots but that's not really important to this problem.)
-\end{boxex}
-
-If we think of the ``job'' as ``chopping one cord of wood'', then Ivan's work rate is ``1 job in 4 days'', or ``$\frac{1}{4}$ job per day''. Similarly, Fran\c{c}ois's work rate is ``$\frac{1}{2}$ job per day''. When the two guys work together, they will finish the job in some amount of time. Let's call that $t$. The rows in our table are for the individual workers.
-
-\begin{center}
-\begin{tabular}{r|ccc}
-				& Work rate				& Work time			& Amount done\\\hline
-Ivan				& $\frac{1}{4}$			& $t$					& $\frac{t}{4}$\\
-Fran\c{c}ois		& $\frac{1}{2}$			& $t$					& $\frac{t}{2}$\\
-\end{tabular}
-\end{center}
-
-Together, they complete 1 whole job (they chop one whole cord of wood). This gives us the equation:
-\[
-\frac{t}{4} + \frac{t}{2} = 1
-\]
 
 % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
 \chaptersummary
@@ -871,3 +971,9 @@ Together, they complete 1 whole job (they chop one whole cord of wood). This giv
 We learned a number of techniques in this section for writing and solving systems of linear equations -- graphing, substitution, and elimination -- and we now have all three approaches in our algebraic toolbox. Each of the techniques has its advantages and disadvantages, but together they make a powerful collection.
 
 In the next chapter we will broaden our algebraic vocabulary, so to speak, by dropping the requirement that we always talk about \textit{equations}, or systems of \textit{equations}. Equality is important (in mathematics and in life), but we all know that things are not always in perfect balance. Onward!
+
+\bigskip
+\begin{boxcheese}
+Florence the zookeeper made a full recovery, and Captain Snuggles successfully completed an anger management course and was reintroduced to the Cheeseville Zoo community. Unfortunately, the day's events were a public relations nightmare for the zoo. Annual attendance declined exponentially until 2003, at which point the zoo was purchased by YeardleighCorp.
+\addtodoitem{Adjust year of YCorp takeover of Cheeseville Zoo.}
+\end{boxcheese}
