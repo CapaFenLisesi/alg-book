@@ -1,0 +1,309 @@
+%%%\documentclass[oneside, openany]{book}
+%%%\usepackage[english]{babel}
+
+% Partial inclusion, for piecewise development
+%\includeonly{titlepage, numbers}
+
+\usepackage{floatrow}			% this automatically centers all floats
+\floatplacement{table}{hbtp}		% all tables are given the [hbtp] option
+\floatplacement{figure}{hbtp}	% all figures are given the [hbtp] option
+
+\usepackage{wallpaper}			% to tile background image on cover page
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+% Custom table commands
+\usepackage{jermer_tables}
+
+% Custom mathematics commands
+\usepackage{jermer_math}
+
+% Environment for formatting commented work
+\usepackage{algnom_commwork}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%
+% Callout boxes
+%
+\usepackage{algnom_boxes}
+
+% Enable formatting for one-line examples
+\usepackage{enumitem}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%
+% Graphs
+%
+\usepackage{algnom_graphs}
+
+% Enable fractal drawing
+\usepackage{tikz}
+\usetikzlibrary{patterns}
+\usetikzlibrary{decorations.fractals}
+\usetikzlibrary{lindenmayersystems}
+
+\usepackage[autoplay, loop]{animate}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%
+% Font selection
+%
+\RequirePackage[T1]{fontenc}
+\RequirePackage{cmbright}
+
+% Special inline formatting for the name ''Algebranomicon'
+\newcommand{\algebranomicon}{\textcolor{black}{$\mathfrak{Algebranomicon}$}}
+
+% Special inline formatting for calculator commands
+\newcommand{\calculator}[1]{\texttt{#1}}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%
+% Page layout, margins, line spacing
+%
+\usepackage[letterpaper, margin=1in]{geometry}
+
+% Set line spacing to 1.5
+\usepackage{setspace}
+\onehalfspacing
+
+% At paragraph break use blank line w/ no indentation 
+\usepackage{parskip}
+
+% Restore the paragraph skip length inside minipages
+\setlength{\parskip}{\bigskipamount}
+\makeatletter
+	\newcommand{\@minipagerestore}{\setlength{\parskip}{\medskipamount}}
+\makeatother
+
+% Enable custom page headers and footers
+\usepackage{fancyhdr}
+\setlength{\headheight}{15pt}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%
+% Formatting chapter and section titles
+%
+\usepackage{titlesec}
+
+% Start sections on a new page, except for the first section of a new chapter
+\usepackage{etoolbox}
+\newtoggle{afterpart}
+\pretocmd{\section}
+{
+	\iftoggle{afterpart}
+	{\global\togglefalse{afterpart}}	% we're after a part
+	{\clearpage}						% we're not immediately after a part
+}{}{}
+\pretocmd{\chapter}
+{
+	\clearpage						% do a page break
+	\global\toggletrue{afterpart}		% tell \section we're just after a part
+}{}{}
+
+% Draw horizontal rule under section titles
+\newcommand{\trule}{\color{black!25}\titlerule[1pt]}
+
+\titleformat{\section}
+	{\normalfont\bfseries\Large}
+	{\thesection}{1em}{}[\trule]
+
+% Enable fancy formatting for chapter quotes
+\usepackage{epigraph}
+
+% Command to wrap epigraph commands.
+% Usage: \chapquote{quote}{author}
+\newcommand{\chapquote}[2]{
+	\epigraphhead[50]{\epigraph{#1}{\textit{#2}}}
+}
+
+% Adjust epigraph rule color
+\makeatletter
+\renewcommand{\@epirule}
+	{\color{black!25}\rule[.5ex]{\epigraphwidth}{\epigraphrule}}
+\makeatother
+
+% Command for consistent formatting of "chapter summary" section
+\newcommand{\chaptersummary}{\subsection*{>> Chapter summary <<}}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%
+% Footnotes
+%
+\usepackage[hang,bottom]{footmisc}
+
+% Footnote hanging indent
+\setlength{\footnotemargin}{1em}
+
+% Space between two footnotes
+\setlength{\footnotesep}{3ex}
+
+% Space between text and notes -- Note sure if this is needed?
+\setlength{\skip\footins}{5ex}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%
+% Cross references
+%
+\usepackage[hidelinks]{hyperref}
+
+% Formatting hyperlinks
+%\usepackage{hyperref}
+%\hypersetup{
+%	colorlinks   = true,	%Colours links instead of ugly boxes
+%	urlcolor     = blue,	%Colour for external hyperlinks
+%	linkcolor    = blue,	%Colour of internal links
+%	citecolor   = red		%Colour of citations
+%}
+
+\usepackage{cleveref}
+\providecommand\phantomsection{}
+
+% Custom labels for clever references to "examples"
+\crefname{counterExample}{example}{examples}
+\Crefname{counterExample}{Example}{Examples}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%
+% Glossary and index
+%
+% Enable glossary creation
+\usepackage[nonumberlist, nopostdot]{glossaries}
+\setglossarystyle{listhypergroup}
+\renewcommand*{\glshypernavsep}{ $\cdot$ }
+\makeglossaries
+
+% Enable index creation
+\usepackage{makeidx}
+\makeindex
+
+% Commands to create simultaneous glossary-index entries
+% Good idea? Bad idea?
+\let\oldgls\gls
+\renewcommand*{\gls}[1]{\inlinedef{\oldgls{#1}}\index{#1}}
+
+\let\oldGls\Gls
+\renewcommand*{\Gls}[1]{\inlinedef{\oldGls{#1}}\index{#1}}
+
+\let\oldglspl\glspl
+\renewcommand*{\glspl}[1]{\inlinedef{\oldglspl{#1}}\index{#1}}
+
+\let\oldGlspl\Glspl
+\renewcommand*{\Glspl}[1]{\inlinedef{\oldGlspl{#1}}\index{#1}}
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%
+% To-do lists
+%
+\newcommand{\addtodoitem}[1]
+{%
+	% Add item to the file 'todolist.txt'
+	\immediate\write\outputstream{[TODO] Section \thesection. #1}
+}
+
+\newcommand{\kverse}[1]
+{%
+	% Add item to the file 'todolist.txt'
+	\immediate\write\outputstream{[Krumbliverse] Section \thesection. #1}
+}
+
+%%% From this line below, kept in "algebranomicon.tex"
+
+%%%
+%%%\newcommand{\chaptercopyright}{
+%%%\ifdefined\indchap
+%%%		\vfill This is the note that we'll put at the end of each chapter.  
+%%%\else
+%%%\fi
+%%%}
+%%%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%%%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%%%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%%%% 
+%%%% DOCUMENT
+%%%%
+%%%\begin{document}
+%%%
+%%%% Open output stream for to-do list
+%%%\newwrite\outputstream
+%%%\immediate\openout\outputstream=todolist.txt
+%%%
+%%%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%%%% 
+%%%% TITLE & COPYRIGHT
+%%%%
+%%%\include{titlepage}
+%%%
+%%%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%%%% 
+%%%% FRONT MATTER
+%%%%
+%%%\frontmatter
+%%%\pagestyle{plain}
+%%%
+%%%\include{frontmatter}
+%%%
+%%%%% Table of contents
+%%%%\setcounter{tocdepth}{1}
+%%%%\tableofcontents
+%%%%
+%%%%% Acknowledgements
+%%%%\include{acknowledgements}
+%%%%
+%%%%% Introduction
+%%%%%\cleardoublepage
+%%%%%\phantomsection
+%%%%%\addcontentsline{toc}{chapter}{Introduction}
+%%%%\include{introduction}
+%%%
+%%%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%%%% 
+%%%% MAIN DOCUMENT
+%%%%
+%%%\mainmatter
+%%%\pagestyle{fancy}
+%%%
+%%%\lhead{}
+%%%\rhead{\leftmark}
+%%%\cfoot{\thepage}
+%%%
+%%%\include{glossary}
+%%%
+%%%% Numbered chapters
+%%%\include{ch01_numbers}
+%%%\include{ch02_sequences}
+%%%%\include{ch03_graphs}
+%%%%\include{ch04_functions}
+%%%%\include{ch05_equations}
+%%%%\include{ch06_proportions}
+%%%%\include{ch07_linear}
+%%%%\include{ch08_systems}
+%%%%\include{ch09_inequalities}
+%%%%\include{ch10_expofunc}
+%%%%\include{ch11_expoexpr}
+%%%%\include{ch12_quadeq}
+%%%%\include{ch13_radicals}
+%%%%\include{ch14_quadfunc}
+%%%%\include{ch15_polynomials}
+%%%%\include{ch16_factoring}
+%%%
+%%%% Appendices
+%%%\appendix
+%%%\newcounter{primeHctr}
+%%%\include{appA_primes}
+%%%
+%%%% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+%%%% 
+%%%% BACK MATTER
+%%%%
+%%%\backmatter
+%%%\pagestyle{plain}
+%%%
+%%%\include{backmatter}
+%%%
+%%%\clearpage
+%%%
+%%%% Close output stream for to-do list
+%%%\immediate\closeout\outputstream
+%%%
+%%%\end{document}

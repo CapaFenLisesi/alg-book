@@ -1,0 +1,930 @@
+\chapter{Sequences}
+\label{ch:sequences}
+
+\chapquote{A mathematician, like a painter or a poet, is a maker of patterns.}{G. H. Hardy, British mathematician}
+
+In \cref{ch:numbers} we reviewed some key ideas from arithmetic. Arithmetic involves the manipulation of numbers via certain operations (like addition and multiplication). In algebra, on the other hand, we often use symbols to replace numbers. This can be disorienting at first, but it is useful because it allows us to speak about relationships and patterns involving numbers, rather than specific numbers.
+
+Given a few numbers that form a pattern, for example, we can use algebraic symbols to describe all of the numbers that fit the given pattern -- even though there may be \textit{infinitely many} numbers that fit the pattern! Since patterns lie at the heart of algebra, they are the focus of this chapter.
+
+\newif\iffractals
+% true = print fractals
+% false = omit fractals, for quicker compilation
+\fractalstrue
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Sequences and recursion}
+\label{sec:recursion}
+
+\begin{boxexplore}[Communicating a pattern]
+As children, the twins Bob and Yeardleigh Krumbli (great-great-great-grandchildren of Knut and Jorunn) liked to play a kind of guessing game. One would think of a number pattern and try to communicate it to the other using as little information as possible.
+
+Predict the next few numbers in the number pattern shown below.
+\[2, 5, 8, 11, 14, 17, \dotsc\]
+How would you describe this pattern to a partner who could not see it? Could you communicate the pattern \textit{without simply listing the numbers}? What's the minimum amount of information you could give so that your partner could recreate the pattern?
+\end{boxexplore}
+\kverse{Bob and Yeardleigh play number guessing games as children.}
+
+Informally, we call this a number pattern. Mathematically speaking, an ordered list of numbers like this is called a \gls{sequence}. Each of the numbers in the list is called a \gls{term} of the sequence.
+
+%In \cref{ch:numbers}, we mentioned the notion of a \gls{set}, as in ``the set of rational numbers''. And the descriptions of a set and a sequence may sound similar. The differences are that sets are unordered, and may not have repeated elements. Sequences have a specific order, and elements (terms) in a sequence can repeat.
+
+Sequences often have patterns within them. Perhaps when thinking about how you'd describe this sequence to a partner, you thought of a rule based on ``adding 3''. (Do you see how this applies to the given pattern?)
+
+But ``add 3'' is not enough to recreate the sequence. Consider the sequence: $1, 4, 7, 10, 13, \dotsc$. And what about $\umin10, \umin7, \umin4, \umin1, 2, \dotsc$? The phrase ``add 3'' also applies to these sequences, even though they are different from the sequence in the startup exploration.
+
+To distinguish these different sequences, we must include the starting value in our description. We can describe the original sequence clearly and unambiguously by saying something like: ``Start with 2, then add 3 to each resulting value.''
+
+When describing the pattern of a sequence, we are really describing how to generate the sequence from scratch. To do that, we have to answer these two questions: First, where does the sequence begin? Second, what must we do to the \textit{current} term to find the \textit{next} term of the sequence? This is called the \gls{recursive} description of the sequence.
+
+\begin{boxdef}[Recursive]
+Describes a procedure that is applied over and over again, starting with a number or a geometric figure, to produce a sequence of numbers or figures.
+\end{boxdef}
+
+As the definition says, we can start a recursive procedure with a number or a geometric figure. In what comes next, we'll explore sequences by studying geometric figures called \glspl{fractal}.
+
+\begin{boxdef}[Fractal]
+A geometric figure that has undergone infinitely many applications of a recursive procedure, and which exhibits the property of self-similarity.
+\end{boxdef}
+
+Fractal geometry is often called ``the geometry of nature''. If we look around the natural world, it is not like we see a lot of perfectly straight lines, rigid rectangles, and regular pentagons. But, the growth of a tree can be described using a recursive procedure: grow towards the sun for a bit, branch off at an angle, repeat. Trees exhibit self-similarity: If we break off a branch from a tree and stick it in the ground, looks just like a little tree!
+
+Clouds, coastlines, mountains, trees, 
+\href{https://www.google.com/search?q="romanesco+broccoli"&tbm=isch}{Romanesco broccoli}, 
+the folds of your brain, your vascular system, your bronchial tubes, the lining of your small intestines\ldots\ all of these are a kind of fractal.\footnote{In 1968, Hungarian biologist Aristid Lindenmayer developed a method for writing recursive rules that could be used to model the growth of algae. Called ``Lindenmayer systems'' or ``L-systems'' today, these methods have been used to model more complex organisms, as well as purely mathematical structures.} Technically speaking, natural fractals only have their recursive procedure applied a limited number of times (we say the procedure has a limited number of \textit{iterations}) so they aren't true mathematical fractals. A mathematical fractal undergoes an infinite number of iterations.\footnote{Fractals may play an interesting role later on in your study of mathematics, for example the Mandelbrot set is a fractal that involves the complex numbers. Do an internet search for ``Mandelbrot set'' and check out the pictures!}
+
+Our first fractal will be a famous fractal that was first studied by Polish mathematician Wac{\l}aw Sierpi\'nski.
+
+%\begin{boxexplore}[Extended exploration: {S}ierpi\'nski's triangle]
+%\addtodoitem{Click here to visit the extended exploration: Sierpi\'nski's triangle}
+%\end{boxexplore}
+\addtodoitem{Link to extended exploration: Sierpinski's triangle}
+
+\begin{boxexplore}[{S}ierpi\'nski's carpet]
+To draw Sierpi\'nski's carpet, we begin with a square called ``stage 0''. We subdivide this square into nine congruent sub-squares and remove the one in the center. We repeat the process with each of the remaining sub-squares. Stages 0 through 3 of the fractal are shown below.
+
+\begin{center}
+% 1st minipage, stage 0
+\begin{minipage}{0.24\linewidth}
+	\centering
+	\begin{tikzpicture}[scale=0.75]
+	\fill [black] (0,0) rectangle (3,3);
+	\end{tikzpicture}
+	\par Stage 0
+\end{minipage}
+% 2nd minipage, stage 1
+\begin{minipage}{0.24\linewidth}
+	\centering
+		\begin{tikzpicture}[scale=0.75]
+	\fill [black] (0,0) rectangle (3,3);
+	\draw [explorecolorbg, very thin] (1,0) -- (1,3);
+	\draw [explorecolorbg, very thin] (2,0) -- (2,3);
+	\draw [explorecolorbg, very thin] (0,1) -- (3,1);
+	\draw [explorecolorbg, very thin] (0,2) -- (3,2);
+	\fill [explorecolorbg] (1,1) rectangle (2,2);
+	\end{tikzpicture}
+	\par Stage 1
+\end{minipage}
+% 3rd minipage, stage 2
+\begin{minipage}{0.24\linewidth}
+	\centering
+	\begin{tikzpicture}[scale=0.25]
+	\foreach \x in {0,3,6}{%
+		\foreach \y in {0,3,6}{%
+			\fill [black] (\x,\y) rectangle (\x+3,\y+3);
+			\fill [explorecolorbg] (\x+1,\y+1) rectangle (\x+2,\y+2);
+		}
+		\fill [explorecolorbg] (3,3) rectangle (6,6);
+	}
+	\end{tikzpicture}
+	\par Stage 2
+\end{minipage}
+% 4th minipage, stage 3
+\begin{minipage}{0.24\linewidth}
+	\centering
+	\begin{tikzpicture}[scale=0.083]
+	\foreach \Ox in {0,9,18}{%
+		\foreach \Oy in {0,9,18}{%
+			%% INNER LOOP
+			\foreach \x in {0,3,6}{%
+				\foreach \y in {0,3,6}{%
+					\fill [black] (\Ox+\x,\Oy+\y) rectangle (\Ox+\x+3,\Oy+\y+3);
+					\fill [explorecolorbg] (\Ox+\x+1,\Oy+\y+1) rectangle (\Ox+\x+2,\Oy+\y+2);
+			}
+				\fill [explorecolorbg] (\Ox+3,\Oy+3) rectangle (\Ox+6,\Oy+6);
+			}
+		}
+		\fill [explorecolorbg] (9,9) rectangle (18,18);
+	}
+	\end{tikzpicture}
+	\par Stage 3
+\end{minipage}
+\end{center}
+
+There is one solid square in stage 0, and there are eight (smaller) solid squares in stage 1. How many of the smallest solid squares are there in stage 2? What about stage 3?
+\end{boxexplore} %% End of Sierpinski's carpet
+ 
+\subsection{Algebra of {S}ierpi\'nski's carpet}
+
+Sierpi\'nski's carpet generates some interesting sequences of numbers. For example, if we consider the number of (smallest) squares at each stage of the fractal. We have one square in stage 0 and eight squares in stage 1.
+
+To create stage 2, we divide each of the eight stage-one squares into 9 pieces and then remove the center square. So each of the eight squares from stage 1 turns into eight new, tiny squares in stage 2. So there are $8\cdot8 = 64$ tiny squares in stage 2. To create stage 3, each of these sixty-four tiny squares becomes 8 super-tiny squares, so there are $64 \cdot 8 = 512$ super-tiny squares in stage 3. Together, we have a sequence that begins:
+\[1, 8, 64, 512, \dotsc\]
+What is a recursive rule for this sequence? The sequence starts with 1, and then to go from one number to the next, we multiply by 8. So, that's our rule: ``start with 1, multiply the previous value by 8''. In other words, to find the next term in the sequence, take the previous term (the last term in the sequence that we know) and multiply by 8.
+
+We can use this rule to generate the next few terms of our sequence, but watch out! We quickly end up with a lot of teeny squares, and you don't want to get any on your shoes. \[1,~ 8,~ 64,~ 512,~ 4096,~ 32\,768,~ 262\,144,~ 2\,097\,152,~ 16\,777\,216,~ \dotsc\]
+
+We can always write a recursive rule as a sentence, as we did above. Another way to capture a recursive procedure is using a ``now-next'' rule, sometimes called a ``start-now-next'' rule. For example, the now-next rule for the number of squares is: ``START~=~1, NEXT~=~NOW $\cdot$ 8''. It's pretty obvious that the first part of the rule says where to start. The second part of the rule says: ``To find the \textit{next} number in the pattern, we take the number we have \textit{now} and multiply by 8.''
+
+\subsection{Recursive rules and formulas}
+\index{recursive formula}
+\index{formula!recursive}
+
+Recursive rules are easy to write in sentence form, and now-next equations are nice and succinct, but there is a more mathematical way. We are going to write what we call a \textit{recursive formula}.
+ 
+We usually use the letter $a$ with a subscript to represent a specific term of the sequence. So, $a_1$ represents the first term of the sequence, $a_2$ represents the second term of the sequence, and $a_{98}$ would represent the 98th term of the sequence.
+
+For example: given the sequence $4, 12, 36, 108, \dotsc$, we have:
+\[\begin{aligned}
+a_1 &= 4\\
+a_2 &= 12\\
+a_3 &= 36\\
+a_4 &= 108\\
+\end{aligned}\]
+We can write the recursive rule either as ``start with 4, multiply the previous term by 3'', or ``START~=~4, NEXT~=~NOW~$\cdot$~3''. Here's how we can translate this into a recursive formula.
+
+``Start with 4'' means that the first term of the sequence is 4. We write \[a_1~=~4,\] since $a_1$ represents the first term of the sequence. This is just like ``START~=~4'' in the now-next rule.
+
+To translate ``NEXT~=~NOW~$\cdot$~3'', we use $a_n$ to represent any old term of the sequence. Given that, we write $a_{n+1}$ to represent the \textit{next} term in the sequence. (Can you explain why?) So, we have the recursive step: \[a_{n+1}=a_n\cdot3.\]
+
+A note about notation: When multiplying a number and a letter, we usually write the number first and we don't usually write a multiplication symbol in between.\footnote{More on working with letters, or variables, in \cref{ch:graphs}.} So, we have created the recursive formula: \[\begin{array}{c}a_1=4 \\ a_{n+1}=3a_n\end{array}\]
+
+\begin{boxex}
+Write the recursive formula for the sequence $1, 5, 25, 125, 625, \dotsc$.
+
+\exsoln\ With a little exploration, we see that the sentence version of this rule is ``Start with 1, multiply previous by 5'', and the now-next version is ``START~=~1, NEXT~=~NOW~$\cdot$~5''. So, we have the recursive formula: $a_1 = 1, ~~ a_{n+1}=5a_n$.
+\end{boxex}
+ 
+\begin{boxex}
+Write out the first five terms of the sequence generated by each rule.
+
+\begin{enumerate}
+\item ``Start with 128, multiply previous by $\frac{1}{2}$''
+
+\exsoln\ The rule states clearly that the first term is 128, no trouble. Then, to find the second term, we multiply the first term by $\frac{1}{2}$, that means $128 \cdot \frac{1}{2} = 64$. To find the third term, we multiply the second term by one-half: $64 \cdot \frac{1}{2} = 32$. We repeat for the next few terms, which gives:\[128, 64, 32, 16, 8, \dotsc\]
+
+\item $a_1 = 12, ~~ a_{n+1} = \umin2\cdot a_n$
+
+\exsoln\ The first term is $a_1$, and the formula says that's 12. Then, to find $a_2$, the second term, we have \[a_2 = \umin2 \cdot a_1 = \umin2 \cdot 12 = \umin24.\] We continue to multiply by $\umin2$ each step of the way and get:\[12, \umin24, 48, \umin96, 192, \dotsc\]
+\end{enumerate}
+\end{boxex}
+
+Recursive rules and formulas are handy for describing a sequence, but suppose we want to skip around and find random terms of the sequence. In this situation, the recursive rule is the worst possible rule to have!
+
+For example, how could we find the value of $a_{1000}$, the 1000th term in the sequence, given the rule $a_1 = 4, ~~ a_{n+1} = 3 \cdot a_n$ ? The rule tells us that $a_{1000} = 3 \cdot a_{999}$. But, what's $a_{999}$?
+
+Well, $a_{999} = 3 \cdot a_{998}$ But, what's $a_{998}$?
+
+Hmm. $a_{998} = 3 \cdot a_{997}$\ldots\ but\ldots\ oh boy. Can you see the problem here?
+
+If we want to skip around and find random terms in a sequence, it's much easier to use a different kind of formula called an \textit{apparent} or \textit{explicit formula}. More on those in the next section!
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Geometric sequences}
+\label{sec:geometricseq}
+
+We are going to continue our study of sequences by looking at another fractal. In 1904, Swedish mathematician Helge von Koch first described several variants of a fractal that has since come to be known as a Koch curve.
+
+%\begin{boxexplore}[Extended exploration: {K}och curve, triangular version]
+%\addtodoitem{Click here to visit the extended exploration: Koch curve}
+%\end{boxexplore}
+\addtodoitem{Link to extended exploration: Koch curve, triangular version}
+
+\begin{boxexplore}[{K}och curve, square version]
+We begin in stage 0 with a line segment of length 1. To create stage 1, we alter the segment as follows: cut it into three pieces, and replace the center piece with three sides of a square. We repeat the process for each line segment in the previous figure to create stages 2 and 3.
+
+\begin{center}
+% Definitions
+\def\wid{3cm}%
+\pgfdeclarelindenmayersystem{SquareKoch}{
+	\symbol{F}{\pgflsystemdrawforward}
+	\rule{F -> F+F-F-F+F}
+}%
+% 1st minipage, stage 0
+\begin{minipage}[b]{0.24\linewidth}
+\centering
+\def\level{0}
+\tikzset{
+	l-system={step=\wid/(3^(\level)), order=\level, angle=90}
+}%
+\begin{tikzpicture}
+	\draw (0,0) l-system
+	[l-system={SquareKoch, axiom=F},fill=none];
+	\fill[fill=none] (3.49,0) -- (3.5,0);
+\end{tikzpicture}
+\par Stage 0
+\end{minipage}
+% 2nd minipage, stage 1
+\begin{minipage}[b]{0.24\linewidth}
+\centering
+\def\level{1}
+\tikzset{
+	l-system={step=\wid/(3^(\level)), order=\level, angle=90}
+}%
+\begin{tikzpicture}
+	\draw (0,0) l-system
+	[l-system={SquareKoch, axiom=F},fill=none];
+	\fill[fill=none] (3.49,0) -- (3.5,0);
+\end{tikzpicture}
+\par Stage 1
+\end{minipage}
+% 3rd minipage, stage 2
+\begin{minipage}[b]{0.24\linewidth}
+\centering
+\def\level{2}
+\tikzset{
+	l-system={step=\wid/(3^(\level)), order=\level, angle=90}
+}%
+\begin{tikzpicture}
+	\draw (0,0) l-system
+	[l-system={SquareKoch, axiom=F},fill=none];
+	\fill[fill=none] (3.49,0) -- (3.5,0);
+\end{tikzpicture}
+\par Stage 2
+\end{minipage}
+% 4th minipage, stage 3
+\begin{minipage}[b]{0.24\linewidth}
+\centering
+\def\level{3}
+\tikzset{
+	l-system={step=\wid/(3^(\level)), order=\level, angle=90}
+}%
+\begin{tikzpicture}
+	\draw (0,0) l-system
+	[l-system={SquareKoch, axiom=F},fill=none];
+	\fill[fill=none] (3.49,0) -- (3.5,0);
+\end{tikzpicture}
+\par Stage 3
+\end{minipage}
+\end{center}
+
+Write a recursive formula describing the number of segments in each stage of the fractal.
+\end{boxexplore} %% End of Koch curve
+
+\subsection{Algebra of the {K}och curve}
+
+The Koch curves are beautiful things, at once incredibly simple and incredibly complex. As the square-based version above grows, each line segment is replaced by five shorter segments. The recursive rule is ``start with 1, multiply the previous value by 5''.
+
+To compute the number of segments in each stage, we might organize our work in a list like this:
+\[\begin{aligned}
+1 & \quad\text{ segment in stage 0}
+\\
+(1) \cdot 5 & \quad\text{ segments in stage 1}
+\\
+(1 \cdot 5) \cdot 5 & \quad\text{ segments in stage 2}
+\\
+(1 \cdot 5 \cdot 5) \cdot 5 & \quad\text{ segments in stage 3}
+\\
+(1 \cdot 5 \cdot 5 \cdot 5) \cdot 5 & \quad\text{ segments in stage 4}
+\\
+(1 \cdot 5 \cdot 5 \cdot 5 \cdot 5) \cdot 5 & \quad\text{ segments in stage 5}
+\end{aligned}\]
+We can use a bit of shorthand, and write this repeated multiplication using an exponent.
+
+\[\begin{aligned}
+1 =5^0& \quad\text{ segment in stage 0}
+\\
+1 \cdot 5 =5^1& \quad\text{ segments in stage 1}
+\\
+1 \cdot 5 \cdot 5 =5^2& \quad\text{ segments in stage 2}
+\\
+1 \cdot 5 \cdot 5 \cdot 5 =5^3& \quad\text{ segments in stage 3}
+\\
+1 \cdot 5 \cdot 5 \cdot 5 \cdot 5 =5^4& \quad\text{ segments in stage 4}
+\\
+1 \cdot 5 \cdot 5 \cdot 5 \cdot 5 \cdot 5 =5^5& \quad\text{ segments in stage 5}
+\end{aligned}\]
+Notice that the exponent is equal to the stage number. This ``5 to a power'' notation works even for stage 0, since since $5^{0} = 1$.
+
+So, if we want to know how many segments are in stage 8 of the fractal, we can use this pattern to predict that there will be $1\cdot 5^8$ segments. If we let $x$ represent the stage number, then stage $x$ of the fractal will have $5^x$ segments.
+
+We have discovered a way of calculating the number of segments that is \textit{not} recursive, because it doesn't rely on our knowing any of the previous terms! Instead, to produce the value of a certain term, all we need is the \textit{number of the term}. We can compute the number of line segments in stage $x$ without having to know anything about the stages that came before it.
+
+\subsection{Explicit formulas for sequences}
+\index{apparent formula}
+\index{explicit formula}
+\index{formula!explicit}
+
+In our discussion of fractals, we have always described the first image as ``stage 0'' of the fractal. But, when we write out a sequence, the first term is, well, the \textit{first} term (not the \textit{zero}th term).\footnote{In some scientific disciplines, it is customary to start counting with zero: for example, in computer science. Jason, one of the authors of the \algebranomicon, is a computer scientist by training and thinks this way. Jason also prefers to include 0 as one of the natural numbers. Patty, the other author of the \algebranomicon, is a mathematician by training and prefers to start counting at 1.} In other words, the same pattern of values may have a slightly different numbering, depending on whether we're describing stages of a fractal or terms in a sequence.
+
+\begin{center}\begin{tabular}{rC{0.75cm}C{0.75cm}C{0.75cm}C{0.75cm}}
+Value & {1} & {5} & {25} & {125}
+\\\hline
+Fractal Stage Number & 0 & 1 & 2 & 3
+\\
+Sequence Term Number & 1 & 2 & 3 & 4
+\end{tabular}\end{center}
+
+So, if we want to write a recursive formula for the terms of a sequence, we have to make a little adjustment:
+\[\begin{aligned}
+a_1 &\quad= 1 &= 5^0
+\\
+a_2 &\quad= 5 &= 5^1
+\\
+a_3 &\quad= 25 &= 5^2
+\\
+a_4 &\quad= 125 &= 5^3
+\end{aligned}
+\]
+Can you see the relationship between the subscript and the exponent? If we let $a_n$ represents any term of the sequence, then our rule is:
+\[a_n = 5^{n-1}\]
+Rules of this kind are called apparent formulas or explicit formulas. One benefit of rules like this is that if we want to know, say, the number of segments in the curve at stage 1904, we can compute simply:
+\[a_{1904} = 5^{1903}\]
+By the way, this number is enormous. It's more than 1300 digits long!
+
+\begin{boxex}
+Write explicit formulas for these other features of the Koch curve: the length of one segment and the total length of the curve.
+
+\exsoln\ \textit{Length of one segment.} Each segment in a certain stage is one-third the length of the segment in the stage before. So, the sequence generated by the length of one segment in each stage is
+\[\left(\frac{1}{3}\right)^0,
+~~ \left(\frac{1}{3}\right)^1,
+~~ \left(\frac{1}{3}\right)^2,
+~ \dotsc ~
+\qquad\text{and so we have}\quad
+a_n = \left(\frac{1}{3}\right)^{n-1}.\]
+
+\textit{Total length of the curve.} Since we know the number of segments and the length of each segment, we can multiply to find the total length of the curve. We have \[\left(\frac{5}{3}\right)^0,
+~~ \left(\frac{5}{3}\right)^1,
+~~ \left(\frac{5}{3}\right)^2,
+~ \dotsc ~
+\qquad\text{and so we have}\quad
+a_n = \left(\frac{5}{3}\right)^{n-1}.\]
+\end{boxex}
+
+Note that we're putting these fractions in parentheses! Our notation has to match our intentions and in this case we want to show that the \textit{whole fraction} is being raised to a given power.
+
+\begin{boxex}
+What if the stage 0 figure had been a segment of length 7, rather than length 1? How would that change our formula?
+
+\exsoln\ The number of segments would not change, but the length of each segment (and the total length of the curve) would! The new sequence for the length of one segment would be generated as follows:
+\begin{commwork}
+7
+&=& 7\left(\frac{1}{3}\right)^{0}
+& length of one segment in stage 0
+\\[\fracspace]
+7 \left(\frac{1}{3}\right)
+&=& 7\left(\frac{1}{3}\right)^{1}
+& length of one segment in stage 1
+\\[\fracspace]
+7 \left(\frac{1}{3}\right)\left(\frac{1}{3}\right)
+&=& 7\left(\frac{1}{3}\right)^{2}
+& length of one segment in stage 2
+\\[\fracspace]
+7 \left(\frac{1}{3}\right) \left(\frac{1}{3}\right) \left(\frac{1}{3}\right)
+&=& 7\left(\frac{1}{3}\right)^{3}
+& length of one segment in stage 3
+\end{commwork}%
+
+Again we can use an exponent to simplify the repeated multiplication of $\frac{1}{3}$.
+%The recursive formula for this procedure would be ``start at 7, multiply the previous term by one-third'', or $a_1 = 7,~ a_{n+1} = \frac{1}{3} \cdot a_n$.
+%The length of the fractal at stage $x$ is $7 \cdot \left(\frac{1}{3}\right)^{x}$ units long.
+This generates the sequence
+\[7\left(\frac{1}{3}\right)^0,
+~~ 7\left(\frac{1}{3}\right)^1,
+~~ 7\left(\frac{1}{3}\right)^2,
+~ \dotsc\]
+If we let $n$ represent the term number, then the recursive formula for this sequence is \[a_n = 7 \left(\frac{1}{3}\right)^{n-1}.\]
+\end{boxex}
+
+\subsection{Geometric sequences}
+
+So far, all of our sequences have had recursive rules like ``start with $A$, multiply the previous term by $B$''. Sequences with recursive rules of this type are called \glspl{geometric sequence}. Geometric sequences belong to the family of \textit{exponential relationships}, because the apparent formula has a variable in the exponent.
+
+To generate the next term of a geometric sequence, we multiply the previous term by a fixed value. This fixed value is sometimes called, naturally enough, the \textit{constant multiplier}. More often, it is called the \gls{common ratio}.
+
+\begin{boxdef}[Geometric sequence]
+A sequence in which the ratio between each pair of successive terms is constant. The constant ratio is often called the \textit{common ratio}. Geometric sequences are exponential relationships.
+\end{boxdef}
+
+%Where does the phrase ``constant ratio'' come from?
+
+\begin{boxex}
+Determine whether or not the sequence $4, 12, 36, 108, \dotsc$ is a geometric sequence.
+
+\exsoln\ If this is a geometric sequence, then it must have a rule of the form ``start with $A$, multiply the previous term by $B$''? Let's check.
+
+To go from 4 to 12, we multiply by $\frac{12}{4} = 3$.
+
+To go from 12 to 36, we multiply by $\frac{36}{12} = 3$. Looking good so far!
+
+To go from 36 to 108, we multiply by $\frac{108}{36} = 3$. Nice! Based on the four terms given, the sequence is geometric.
+
+Now, look at what we did to determine this: we created ratios of successive terms, and found that they were all the same. \[\frac{12}{4} = \frac{36}{12} = \frac{108}{36} = 3\] So, the \textit{common ratio} for this sequence is 3.
+\end{boxex}
+
+\begin{boxex}
+Write recursive and explicit formulas for the geometric sequence $32, 24, 18, 13\tfrac{1}{2}, \dotsc$.
+
+\exsoln\ To get from 32 to 24, our first instinct might be to subtract: $32 - 8 = 24$. But, we're told in the problem that this is a \textit{geometric} sequence, and that means that the recursive rule involves multiplication, not subtraction.
+
+How can we get from 32 to 24 using multiplication? The constant multiplier must be less than one. (Can you explain why?) We can divide to find what it is: \[\frac{24}{32} = \frac{3}{4}\]
+So, $\frac{3}{4}$ is a good candidate for the constant ratio of the sequence. Let's check the other terms to see if we're right. We multiply 24 by $\frac{3}{4}$ to see if that gives us the next term in the sequence: \[24 \cdot\frac{3}{4} = \frac{24}{1}\cdot\frac{3}{4} = \frac{\bcancel{4} \cdot 6}{1}\cdot\frac{3}{\bcancel{4}} = \frac{6}{1}\cdot\frac{3}{1} = 18 \qquad\text{Check!}\]
+Now see if 18 times $\frac{3}{4}$ gives the next term:
+\[18 \cdot\frac{3}{4} = \frac{18}{1}\cdot\frac{3}{4} = \frac{\bcancel{2} \cdot 9}{1}\cdot\frac{3}{\bcancel{2} \cdot 2} = \frac{9}{1}\cdot\frac{3}{2} = \frac{27}{2} = 13\tfrac{1}{2} \qquad\text{Check!}\]
+So, we have found the correct constant multiplier based on the information we were given. The recursive formula is
+\[a_1 = 32, ~~ a_{n+1} = \frac{3}{4} \cdot a_n,\] and the explicit formula is
+\[a_n = 32 \cdot \left( \frac{3}{4} \right)^{n-1}.\]
+\end{boxex}
+
+If we look back over the explicit rules for the sequences in this section, we might notice that the formulas have a formula of their own! In other words, the apparent rule for a geometric sequence always has a certain structure, which we summarize here.
+
+\begin{boxdef}[Apparent formula for a geometric sequence]
+Given a geometric sequence with first term $a_1$ and common ratio $r$, in other words, a sequence of the form \[a_1~,~~ a_1 r~,~~ a_1 r^2~,~~ a_1 r^3~,~~ \dotsc\]
+The apparent or explicit formula for the sequence is: \[a_n = a_1 r^{n-1}.\]
+\end{boxdef}
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\section{Arithmetic sequences}
+\label{sec:arithmeticseq}
+
+Not all sequences are geometric sequences, of course. Let's explore some other types of sequences.
+
+%\begin{boxexplore}[Extended exploration: Squares, triangles, segments]
+%\addtodoitem{Click here to visit the extended exploration: Squares, triangles, segments}
+%\end{boxexplore}
+\addtodoitem{Link to extended exploration: Squares, triangles, segments}
+
+\begin{boxexplore}[Tile pattern \#1]
+The pictures below represent stages 1, 2, 3, and 4 for a pattern of square tiles.
+
+\begin{center}
+% 1st minipage, stage 1
+\begin{minipage}[b]{0.24\linewidth}
+	\centering
+	\begin{tikzpicture}[scale=0.65]
+		\draw [ultra thick, explorecolorbg, fill=black] (1,0) rectangle (2,1);
+		\draw [ultra thick, explorecolorbg, fill=black] (0,0) rectangle (1,1);
+		\draw [ultra thick, explorecolorbg, fill=black] (2,0) rectangle (3,1);
+		\draw [ultra thick, explorecolorbg, fill=black] (1,1) rectangle (2,2);
+	\end{tikzpicture}
+	\par Stage 1
+\end{minipage}
+% 2nd minipage, stage 2
+\begin{minipage}[b]{0.24\linewidth}
+	\centering
+	\begin{tikzpicture}[scale=0.65]
+		\draw [ultra thick, explorecolorbg, fill=black] (1,0) rectangle (2,1);
+		\draw [ultra thick, explorecolorbg, fill=black] (0,0) rectangle (1,1);
+		\draw [ultra thick, explorecolorbg, fill=black] (2,0) rectangle (3,1);
+		\draw [ultra thick, explorecolorbg, fill=black] (1,1) rectangle (2,2);
+		\draw [ultra thick, explorecolorbg, fill=black] (0,1) rectangle (1,2);
+		\draw [ultra thick, explorecolorbg, fill=black] (2,1) rectangle (3,2);
+		\draw [ultra thick, explorecolorbg, fill=black] (1,2) rectangle (2,3);
+	\end{tikzpicture}
+	\par Stage 2
+\end{minipage}
+% 3rd minipage, stage 3
+\begin{minipage}[b]{0.24\linewidth}
+	\centering
+	\begin{tikzpicture}[scale=0.65]
+		\draw [ultra thick, explorecolorbg, fill=black] (1,0) rectangle (2,1);
+		\draw [ultra thick, explorecolorbg, fill=black] (0,0) rectangle (1,1);
+		\draw [ultra thick, explorecolorbg, fill=black] (2,0) rectangle (3,1);
+		\draw [ultra thick, explorecolorbg, fill=black] (1,1) rectangle (2,2);
+		\draw [ultra thick, explorecolorbg, fill=black] (0,1) rectangle (1,2);
+		\draw [ultra thick, explorecolorbg, fill=black] (2,1) rectangle (3,2);
+		\draw [ultra thick, explorecolorbg, fill=black] (1,2) rectangle (2,3);
+		\draw [ultra thick, explorecolorbg, fill=black] (0,2) rectangle (1,3);
+		\draw [ultra thick, explorecolorbg, fill=black] (2,2) rectangle (3,3);
+		\draw [ultra thick, explorecolorbg, fill=black] (1,3) rectangle (2,4);
+	\end{tikzpicture}
+	\par Stage 3
+\end{minipage}
+% 4th minipage, stage 4
+\begin{minipage}[b]{0.24\linewidth}
+	\centering
+	\begin{tikzpicture}[scale=0.65]
+		\draw [ultra thick, explorecolorbg, fill=black] (1,0) rectangle (2,1);
+		\draw [ultra thick, explorecolorbg, fill=black] (0,0) rectangle (1,1);
+		\draw [ultra thick, explorecolorbg, fill=black] (2,0) rectangle (3,1);
+		\draw [ultra thick, explorecolorbg, fill=black] (1,1) rectangle (2,2);
+		\draw [ultra thick, explorecolorbg, fill=black] (0,1) rectangle (1,2);
+		\draw [ultra thick, explorecolorbg, fill=black] (2,1) rectangle (3,2);
+		\draw [ultra thick, explorecolorbg, fill=black] (1,2) rectangle (2,3);
+		\draw [ultra thick, explorecolorbg, fill=black] (0,2) rectangle (1,3);
+		\draw [ultra thick, explorecolorbg, fill=black] (2,2) rectangle (3,3);
+		\draw [ultra thick, explorecolorbg, fill=black] (1,3) rectangle (2,4);
+		\draw [ultra thick, explorecolorbg, fill=black] (0,3) rectangle (1,4);
+		\draw [ultra thick, explorecolorbg, fill=black] (2,3) rectangle (3,4);
+		\draw [ultra thick, explorecolorbg, fill=black] (1,4) rectangle (2,5);
+	\end{tikzpicture}
+	\par Stage 4
+\end{minipage}
+\end{center}
+
+Draw pictures representing stages 5 and 6 in the pattern. Write a sentence or two to describe the pattern in the pictures. What would the stage 0 figure look like?
+
+Write out the sequence for the number of tiles at each stage (starting with stage 1). Write a recursive rule to describe your sequence. How is this rule different from the rules in \cref{sec:geometricseq}?
+\end{boxexplore} %% End of tile pattern
+
+The number of tiles in each stage of the pattern creates the sequence \[4, 7, 10, 13, 16, 19, \dotsc\] We might write recursive rules that go something like ``start with 4, add 3 to the previous term'', or ``START~=~4, NEXT~=~NOW~+~3''. The fact that we're adding in the rule is a clear difference from the rules we saw when studying geometric sequences.
+
+%The tile pattern in the warm up problem is different from the patterns in the last two sections because the rule is about \textit{adding} at each stage of the pattern, not multiplying. 
+
+Sequences like these are called \glspl{arithmetic sequence}.\footnote{A word about pronunciation. The branch of mathematics that deals with calculations and operations on numbers is called ``arithmetic''. When used as a noun in this way, the word is pronounced with the emphasis on the second syllable: $a \cdot RITH \cdot me \cdot tic$. The sequences we're talking about in this section are ``arithmetic sequences''. When the word is used as an adjective, the emphasis is on the third syllable: $a \cdot rith \cdot ME \cdot tic$.} Instead of having a common ratio, these sequences have a \gls{common difference}. Arithmetic sequences belong to the family of \textit{linear relationships}.
+
+\begin{boxdef}[Arithmetic sequence]
+A sequence in which the difference between each pair of successive terms is constant. The constant difference is called the \textit{common difference}, usually denoted $d$. Arithmetic sequences are linear relationships.
+\end{boxdef}
+
+\begin{boxex}
+Verify that the given sequence is arithmetic and write a recursive formula for it: $12, 17, 22, 27, \dotsc$
+
+\exsoln\ In order for a sequence to be arithmetic, we must add the same quantity as we go from term to term. We can check this by subtracting (which is why the thing we add is called a ``common difference''). So, let's check: \[\begin{aligned}17-12 &= 5\\22-17 &= 5\\27-22 &= 5\end{aligned}\]
+Check! This is an arithmetic sequence with a common difference of 5.
+
+To write the recursive formula we know that the common difference is added to the current term in order to find the next term. We also know the first term. So: \[a_1 = 12, ~~ a_{n+1} = a_n + 5\]
+is the recursive formula for the sequence.
+\end{boxex}
+
+\subsection{Explicit formulas for arithmetic sequences}
+
+Of course, we can write an apparent or explicit formula (that is, a non-recursive formula) for an arithmetic sequence. Consider the sequence from the startup exploration: $4, 7, 10, 13, \dotsc$ We know where each of the terms come from:
+\[\begin{aligned}
+a_1 &= 4
+\\
+a_2 &= (4) + 3
+\\
+a_3 &= (4 + 3) + 3
+\\
+a_4 &= (4 + 3 + 3) + 3
+\\
+a_5 &= (4 + 3 + 3 + 3) + 3
+\end{aligned}\]
+Notice the repeated addition of 3. This is a case where we can reinterpret repeated addition as multiplication:
+\[\begin{aligned}
+a_1 &= 4 				&= 4 + 3\cdot0 
+\\
+a_2 &= 4 +3			&= 4 + 3\cdot1
+\\
+a_3 &= 4 +3 +3			&= 4 + 3\cdot2
+\\
+a_4 &= 4 +3 +3 +3		&= 4 + 3\cdot3
+\\
+a_5 &= 4 +3 +3 +3 +3	&= 4 + 3\cdot4
+\end{aligned}\]
+Notice now that these multiplications are 3 times ``one less than the stage number''! Therefore, we can write \[a_n = 4 + 3 (n-1)\]
+
+As we did with geometric sequences, we can summarize the general form of the explicit rule for an arithmetic sequence:
+
+\begin{boxdef}[Apparent formula for an arithmetic sequence]
+Given an arithmetic sequence with first term $a_1$ and common difference $d$, in other words, a sequence of the form \[a_1~,~~ a_1 + d~,~~ a_1 + 2d~,~~ a_1 + 3d~,~~ \dotsc\] The apparent or explicit formula for the sequence is: \[a_n = a_1 + (n-1) \ast d.\]
+\end{boxdef}
+
+\subsection{Using stage zero}
+
+There is another way to write the apparent rule for an arithmetic sequence. We can use this approach when we know (or can find) the ``zeroth'' term. Then, we interpret the stage 1 figure not as the \textit{start}, but rather as though we are joining a sequence that is ``already in progress''.
+
+For example, in the tile sequence from the startup exploration, to find the stage 0 figure we have to ``back up a step''. Since the pattern goes forward by adding 3, to back up one step we must subtract 3. So, the stage 0 figure is just 1 square tile.
+
+\begin{center}\begin{tabular}{C{1cm}C{1cm}|L{3cm}L{2cm}|L{3cm}L{2cm}}
+\text{Stage}&\text{Value} & \text{Start with stage 1?} && \text{Start with stage 0?} &
+\\\hline
+1 & 4
+& 4 & =4 + 3(0)
+& 1+3 & =1 + 3(1)
+\\
+2 & 7
+& 4+3 & =4 + 3(1)
+& 1+3+3 & =1 + 3(2)
+\\
+3 & 10
+& 4+3+3 & =4 + 3(2)
+& 1+3+3+3 & =1 + 3(3)
+\\
+4 & 13
+& 4+3+3+3 & =4 + 3(3)
+& 1+3+3+3+3 & =1 + 3(4)
+\\
+\end{tabular}\end{center}
+
+One benefit of this new rule is that we find ourselves multiplying the constant difference by the term number itself (as opposed to multiplying by one less than the term number). In other words, we can write the apparent rule as follows:
+
+\begin{boxdef}[Apparent formula for an arithmetic sequence (zero version)]
+Given an arithmetic sequence with first term $a_1$ and common difference $d$, we can write the apparent or explicit formula for the sequence is \[a_n = a_0 + n \ast d\] Where $a_0$ represents the ``zeroth'' term of the sequence (the term that comes before the first term).
+\end{boxdef}
+
+In later chapters, we will explore in more detail the connections between the ``stage 1 version'' and the ``stage 0 version'' of the rule for arithmetic sequences, and we will learn techniques for writing ``stage 0 versions'' of the rules for geometric sequences.
+
+\begin{boxex}
+Write a stage zero version of the explicit rule for the arithmetic sequence: $43, 35, 27, 19, \dotsc$
+
+\exsoln\ This sequence is decreasing, so we must be adding a negative number in the rule. In other words, the common difference must be negative. Subtracting neighboring terms, we can find that the common difference is $\umin8$.
+
+To write a zero-based rule, we have to know the zeroth term, and to find that we have to back up from the first term. So, we have $a_0 = 43 - \umin8 = 43 + 8 = 51$. This value makes sense: Since the sequence is decreasing, the zero term should be larger than the first term.
+
+Knowing the common difference and the zero term, we can write a zero-based explicit rule:
+\begin{commwork}
+a_n
+&=& a_0 + n \ast d 
+\\
+&=& 51 + n \ast \umin8 
+\\
+&=& 51 + \umin8n
+\end{commwork}
+\end{boxex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Other types of sequences}
+\label{sec:otherseq}
+
+\begin{boxexplore}[Tile pattern \#2]
+The pictures below represent stages 1, 2, 3, and 4 for a new pattern of square tiles.
+
+\begin{center}
+	\begin{tikzpicture}[scale=0.65]
+		\foreach \y in {0,...,2} {
+		\draw [ultra thick, explorecolorbg, fill=black] (0,\y) rectangle (1,\y+1);
+		}
+		\draw (0.5, -1) node{Stage 1};
+%
+	\begin{scope}[xshift = 4cm]
+		\foreach \y in {0,...,3} {
+		\draw [ultra thick, explorecolorbg, fill=black] (0,\y) rectangle (1,\y+1);
+		\draw [ultra thick, explorecolorbg, fill=black] (1,\y) rectangle (2,\y+1);
+		}
+		\draw (1, -1) node{Stage 2};
+	\end{scope}
+%
+	\begin{scope}[xshift = 9cm]
+		\foreach \y in {0,...,4} {
+		\draw [ultra thick, explorecolorbg, fill=black] (0,\y) rectangle (1,\y+1);
+		\draw [ultra thick, explorecolorbg, fill=black] (1,\y) rectangle (2,\y+1);
+		\draw [ultra thick, explorecolorbg, fill=black] (2,\y) rectangle (3,\y+1);
+		}
+		\draw (1.5, -1) node{Stage 3};
+	\end{scope}
+%
+	\begin{scope}[xshift = 15cm]
+		\foreach \y in {0,...,5} {
+		\draw [ultra thick, explorecolorbg, fill=black] (0,\y) rectangle (1,\y+1);
+		\draw [ultra thick, explorecolorbg, fill=black] (1,\y) rectangle (2,\y+1);
+		\draw [ultra thick, explorecolorbg, fill=black] (2,\y) rectangle (3,\y+1);
+		\draw [ultra thick, explorecolorbg, fill=black] (3,\y) rectangle (4,\y+1);
+		}
+		\draw (2, -1) node{Stage 4};
+	\end{scope}
+\end{tikzpicture}
+\end{center}
+
+Draw pictures representing stages 5 and 6 in the pattern. Write a sentence or two to describe the pattern in the pictures. What would the Stage 0 figure look like?
+
+Write out the sequence for the number of tiles at each stage (starting with stage 1). Write a recursive rule to describe your sequence. How is this rule different from the rules in the last few sections?
+\end{boxexplore} %% End of tile pattern
+
+These sequences are a bit harder to work with! The figures in the startup exploration generate the sequence: \[3, 8, 15, 24, 35, 48, \dotsc\]
+
+Is this sequence geometric? Let's check for a common ratio: the ratio between the first two terms is $\frac{8}{3}$, and the ratio between the next two terms is $\frac{15}{8}$. Those are different ratios, since if we write them with a common denominator, we have $\frac{8}{3}=\frac{64}{24}$ and $\frac{15}{8}=\frac{45}{24}$. So, the sequence is \textit{not geometric}.
+
+Is the sequence arithmetic? Let's check for a common difference:
+\[\begin{aligned}
+8-3 &=5\\
+15-8 &=7\\
+24-15 &=9\\
+35-24 &=11\\
+48-35 &=13\\
+\end{aligned}\]
+The sequence does not have a common difference, so it is \textit{not arithmetic}. But take a look at those differences! The differences have a pattern of their own: They go up by 2 every time. In other words, the differences form an arithmetic sequence! It's a sequence within a sequence! The turducken of sequences!\footnote{This sequence-in-a-sequence stuff can get pretty involved. Here, we found an arithmetic sequence in the \textit{differences} between the terms in our quadratic sequence. But why not build the sequence $1, 4, 12, 27, 51, \dotsc$, in which the sequence of differences is our quadratic sequence! Of course we could keep building sequences like this for as long as we wanted. This isn't just a turducken, it's a \textit{r\^oti sans pareil}! That's French for ``roast without equal'', a dish that which calls for 17 different birds, each one stuffed into the body cavity of the next. In the years since the dish was first proposed in 1807 by the French gastronomist Grimod de La Reyni\'ere, several of the birds called for in the recipe have become endangered species.}
+
+To describe this sequence with a recursive rule, we'll need to give the starting value, as usual: ``start with 3". Then, we must describe the pattern in the differences: in this case, we're adding consecutive odd numbers (starting with 5). So, one way to express this recursive rule is ``start with 3, add consecutive odd numbers (starting with 5) to the previous term''. Note that we kind of sneak in two starting places: one for the start of the sequence (3, in this case) and one for the start of the sequence of numbers that are being added on (5, in this case). Tricky!
+
+Sequences that exhibit this pattern are called \textit{quadratic sequences} and they belong to the family of \textit{quadratic relationships}. We'll study quadratic relationships in depth starting in \cref{ch:quadeq}.
+
+\begin{boxex}
+Verify that the given sequence is quadratic, and write a recursive rule: $1, 4, 10, 19, 31, 46, \dotsc$.
+
+\exsoln\ In order for a sequence to be quadratic the differences between successive terms must form an arithmetic sequence. Let's check:
+\[\begin{aligned}
+4-1 &= 3\\
+10-4 &= 6\\
+19-10 &= 9\\
+31-19 &= 12\\
+46-31 &= 15
+\end{aligned}\]
+The differences are: $3, 6, 9, 12,\,15, \dotsc$, and that's an arithmetic sequence with common difference 3. So, yes, the original sequence is quadratic.
+
+Now let's try to write a recursive rule (in sentences). Clearly, we start with 1. Then, we add consecutive multiples of three, starting with 3. So, our rule is ``start with 1, add consecutive multiples of three (starting with 3) to the previous term''.
+\end{boxex}
+
+At this point, our goal is just to recognize that these sequences are neither arithmetic nor geometric, but follow a different kind of pattern. Writing the formulas for them can be quite challenging -- but our brains grow when we stretch them around new ideas! Let's give it a shot.
+
+
+\subsection{(;,;) Recursive formulas for quadratic sequences}
+%
+\tcbset{%
+		colframe=othercolor			,%
+		colback=othercolorbg			,%
+		fonttitle=\bfseries}
+\begin{tcolorbox}[title={Extension sections}]
+Sections marked with the Cthulhu (;,;) emoticon, like this one, are extension sections that might be a bit more intense than the norm. We encourage you to explore the concepts, but don't feel discouraged if you find the material challenging.
+
+Your math brain grows when you think about hard questions, so that kind of thinking is valuable, even if the concepts aren't completely clear right away. As your algebra skills develop over time, you can hopefully return to these extension sections with more confidence.
+\end{tcolorbox}
+
+In the last section, we looked at the sequence, which came from a rectangular pattern of tiles: \[3, 8, 15, 24, 35, \dotsc\]
+We wrote the recursive rule in sentences: ``start with 3, add consecutive odd numbers (starting with 5) to the previous term''. Can we translate this into a recursive formula?
+
+The first step is easy: $a_1 = 3$. Hooray for small victories!
+
+In order to describe the recursive step, we need to describe the sequence of differences: $5, 7, 9, 11, \dotsc$. Since this is an arithmetic sequence, we know how to write its explicit rule. Let's use the symbol $b$, so we don't get our sequences confused. Then this sequence is {\color{blue!90!black}$b_n = 5 + (n-1)\cdot 2$} or, if we use a zero-based rule, {\color{blue!90!black}$b_n = 3 + n\cdot 2$}.
+
+Let's try and put these together:
+\[\begin{array}{l@{\quad}l@{\quad}l@{\quad}l}
+a_1 &= 3\\
+a_2 &= 8	&=  a_1 + 5		&= a_1 + {\color{blue!90!black}b_1}\\
+a_3 &= 15	&= a_2 + 7		&= a_2 + {\color{blue!90!black}b_2}\\
+a_4 &= 24	&= a_3 + 9		&= a_3 + {\color{blue!90!black}b_3}\\
+a_5 &= 35	&= a_4 + 11	&= a_4 + {\color{blue!90!black}b_4}
+\end{array}\]
+
+So, our recursive step is that $a_{n+1} = a_n + {\color{blue!90!black}b_n}$. Since we have an explicit formula for the $b_n$'s, we can replace that part with their explicit rule! Altogether we have:
+\[a_1 = 3, ~~ a_{n+1} = a_n + {\color{blue!90!black}3 + n\cdot 2}\]
+How can we check to see if we're right? One way is to use the rule to try and re-generate the sequence. Our rule states that $a_1 = 3$. To find $a_2$, we can use the rule with $n=1$ and $n+1 = 2$:
+\[a_2 = a_1 + 3 + 1 \cdot 2 = 3 + 3 + 1 \cdot 2 = 3 + 3 + 2 = 8.\]
+Then, we can take one step forward and apply the rule again. Now, $n=2$ and $n+1 = 3$:
+\[a_3 = a_2 + 3 + 2 \cdot 2 = 8 + 3 + 2 \cdot 2 = 8 + 3 + 4 = 15.\]
+Let's go one more step and try $n=3$ and $n+1=4$:
+\[a_4 = a_3 + 3 + 3 \cdot 2 = 15 + 3 + 3 \cdot 2 = 15 + 3 + 6 = 24.\]
+Phew! It pays to be patient when working out a convoluted rule like this, but in the end, we can see that our rule is behaving as intended!
+
+\begin{boxex}
+Write a recursive rule for the quadratic sequence: $1, 4, 9, 16, 25, \dotsc$.
+
+\exsoln\ A bit of tinkering leads us to the rule ``start with 1, add consecutive odd numbers (starting with 3) to the previous term''. So $a_1 = 1$.
+
+How do we write the apparent formula for the odd number pattern? The common difference is 2, and the pattern starts at 3, so $b_n = 3 + (n-1)\cdot2$ is the apparent formula for the differences.
+
+Putting the pieces together:
+\[\begin{array}{l@{\quad}l@{\quad}l@{\quad}l}
+a_1 &= 1\\
+a_2 &= 4	&= a_1 + 3		&= a_1 + b_1\\
+a_3 &= 9	&= a_2 + 5		&= a_2 + b_2\\
+a_4 &= 16	&= a_3 + 7		&= a_3 + b_3\\
+a_5 &= 25	&= a_4 + 9		&= a_4 + b_4
+\end{array}\]
+
+So, again, we have $a_{n+1} = a_n + b_n$. Then, we can replace the $b_n$ with the apparent formula we created for the sequence of differences:
+\[a_1 = 1, ~~ a_{n+1} = a_n + 3 + (n-1)\cdot 2.\]
+If we would rather use a zero-based rule for the pattern in the differences, we could write:
+\[a_1 = 1, ~~ a_{n+1} = a_n + 1 + n \cdot 2.\]
+Note that even though these two rules look quite different, they are equivalent ways of describing the sequence. In later chapters, we will learn techniques that will help us to explain why these two different-looking rules give us the same result.
+\end{boxex}
+
+
+\subsection{(;,;) Explicit formulas for quadratic sequences}
+
+It seems only proper to discuss a method for writing a non-recursive formula for a quadratic sequence.
+
+There are, in fact, multiple methods for writing rules like this. There is a way that requires knowledge of calculus, there is a method that uses a \textit{system of equations} (more on those in \cref{ch:systems}), there is the not-so-efficient method of guess and check, and so on. Most of these require knowledge of the structure of a quadratic relationship which (seeing as how we're only here in \cref{ch:sequences}) we haven't discussed yet.
+
+But, there is a clever approach that requires a bit of pattern-hunting and detective work. It doesn't always work out nicely, but it's the approach we'll explore here to get a feel for things.
+
+Let us once again consider the sequence $1, 4, 9, 16, 25, \dotsc$. You might have recognized these numbers are the \glspl{perfect square}. That name comes from the idea that we can view these numbers as the areas of squares, as shown in \cref{fig:perfsq}. The first number is the area of a 1-by-1 square, the second is the area of a 2-by-2 square, then a 3-by-3 square, and so on. Knowing this, we can write any term of the sequence: $a_n = n \cdot n$.
+
+\begin{figure}
+\centering
+\begin{tikzpicture}[scale=0.35]
+	\draw [ultra thick, white, fill=black] (0,0) rectangle (1,1);
+
+	\begin{scope}[xshift=3cm]
+	\foreach \x in {0,...,1}
+	\foreach \y in {0,...,1}
+	\draw [ultra thick, white, fill=black] (\x,\y) rectangle (\x+1,\y+1);
+	\end{scope}
+
+	\begin{scope}[xshift=7cm]
+	\foreach \x in {0,...,2}
+	\foreach \y in {0,...,2}
+	\draw [ultra thick, white, fill=black] (\x,\y) rectangle (\x+1,\y+1);
+	\end{scope}
+
+	\begin{scope}[xshift=12cm]
+	\foreach \x in {0,...,3}
+	\foreach \y in {0,...,3}
+	\draw [ultra thick, white, fill=black] (\x,\y) rectangle (\x+1,\y+1);
+	\end{scope}
+
+	\begin{scope}[xshift=18cm]
+	\foreach \x in {0,...,4}
+	\foreach \y in {0,...,4}
+	\draw [ultra thick, white, fill=black] (\x,\y) rectangle (\x+1,\y+1);
+	\end{scope}
+\end{tikzpicture}
+\caption{Perfect squares}
+\label{fig:perfsq}
+\end{figure}%
+
+With other quadratic sequences, we can sometimes crack the code if we think about areas of rectangles. We'll look for pairs of integers that could give us the areas we're after, and then look for arithmetic sequences among those integers. The next thing you know, we'll have a non-recursive formula for the quadratic!
+
+Let's go back to the other example we've been studying, the sequence $3, 8, 15, 24, 35, \dotsc$. This sequence came from the tile pattern at the start of \cref{sec:otherseq}. Go back and take another look at those pictures. What do you notice?
+
+\begin{table}
+\begin{tabular}{c|c|c}
+Stage		& Number of Squares		& Dimensions of Rectangle	\\\hline
+1			& 3							& $1 \times 3$		\\
+2			& 8							& $2 \times 4$		\\
+3			& 15						& $3 \times 5$		\\
+4			& 24						& $4 \times 6$		\\
+\end{tabular}
+\end{table}%
+
+In stage $n$, the size of the rectangle is $n$ units tall and $(n+2)$ units wide! So, we can use those two values to write an explicit formula:
+\[a_n = n \cdot (n+2)\]
+How cool is that?
+
+\begin{boxex}
+Write a non-recursive formula to generate the sequence $6, 12, 20, 30, 42, \dotsc$.
+
+\exsoln\ It's not obvious how rectangles are related to these numbers, but if we assume we're looking for rectangles with integer side lengths, then there are a limited number of options.
+
+For example, if the first number represents the area of a rectangle with integer side lengths, then it could be either a $1\times6$ rectangle or a $2\times3$ rectangle. Let's organize the different options in a table:
+
+\begin{center}
+\begin{tabular}{c|c|llll}
+Stage		& Value		& \multicolumn{4}{l}{Possible Rectangles}
+\\\hline
+1			& 6			& $1 \times 6$
+						& or\quad $2 \times 3$
+						& ~
+\\
+2			& 12		& $1 \times 12$
+						& or\quad $2 \times 6$
+						& or\quad $3 \times 4$
+\\
+3			& 20		& $1 \times 20$
+						& or\quad $2 \times 10$
+						& or\quad $4 \times 5$
+\\
+4			& 30		& $1 \times 30$
+						& or\quad $2 \times 15$
+						& or\quad $3 \times 10$
+						& or\quad $5 \times 6$
+\\
+5			& 42		& $1 \times 42$
+						& or\quad $2 \times 21$
+						& or\quad $3 \times 14$
+						& or\quad $6 \times 7$
+\\
+\end{tabular}
+\end{center}
+
+Now comes the detective work. We are looking for patterns in the factors as they progress through the terms. We've highlighted the key patterns below.
+
+\begin{center}
+\begin{tabular}{c|c|llll}
+Stage		& Value		& \multicolumn{4}{l}{Possible Rectangles}
+\\\hline
+1			& 6			& $1 \times 6$
+						& or\quad $\colorbox{yellow!95!black}{2} \times \colorbox{green!95!black}{3}$
+						& ~
+\\
+2			& 12		& $1 \times 12$
+						& or\quad $2 \times 6$
+						& or\quad $\colorbox{yellow!95!black}{3} \times \colorbox{green!95!black}{4}$
+\\
+3			& 20		& $1 \times 20$
+						& or\quad $2 \times 10$
+						& or\quad $\colorbox{yellow!95!black}{4} \times \colorbox{green!95!black}{5}$
+\\
+4			& 30		& $1 \times 30$
+						& or\quad $2 \times 15$
+						& or\quad $3 \times 10$
+						& or\quad $\colorbox{yellow!95!black}{5} \times \colorbox{green!95!black}{6}$
+\\
+5			& 42		& $1 \times 42$
+						& or\quad $2 \times 21$
+						& or\quad $3 \times 14$
+						& or\quad $\colorbox{yellow!95!black}{6} \times \colorbox{green!95!black}{7}$
+\end{tabular}
+\end{center}
+
+Notice that the first set of factors (in yellow) form the arithmetic sequence $2, 3, 4, 5, \dotsc$, and the second set (in green) form the arithmetic sequence $3, 4, 5, 6, \dotsc$.
+
+The yellow sequence is always one more than the term number. The green sequence is always two more than the term number. So, we have our explicit formula! \[a_n = (n+1)\cdot(n+2)\]
+\end{boxex}
+
+If these last two sections felt a bit overwhelming, don't worry. After we have some more algebraic tools in our toolbox, we'll return to quadratic relationships and describe them in more detail.
+
+
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+\chaptersummary
+
+In this chapter we explored and extended the idea of a number pattern with the result that we can now identify and describe certain kinds of patterns in detail. Already we have met the three key ``families'' of mathematical relationships that are at the heart of Algebra 1.
+
+The linear family, represented in this chapter by the idea of an arithmetic sequence, will become our focus starting in \cref{ch:equations}. The exponential family, represented in this chapter by the geomertic sequences, will be our focus in \cref{ch:expofunc,,ch:expoexpr}. Quadratic sequences and the quadratic family will be in the spotlight starting in chapter \cref{ch:quadeq}.
+
+Before we get into the individual families, though, we have a few more tools to add to our algebraic toolbox. Onward!
+
+\chaptercopyright
