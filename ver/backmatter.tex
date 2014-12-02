@@ -1,0 +1,25 @@
+%
+% Back matter for the Algebranomicon
+%
+
+%\chapter{Back Matter}
+%Glossary, bibliography, and index removed during editing process.
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Glossary}
+%\glossarystyle{listhypergroup}
+\glsaddall
+\printglossaries
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{plain}
+\nocite{*} %%% include all references, even those not cited
+\bibliography{algbookrefs}
+
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{Index}
+\printindex
